@@ -10,5 +10,5 @@ if [ -n "$DATADIR" ]; then
         openresty-webhook
 else
     echo "You should set variable DATADIR first."
-    echo "Notice that DATADIR/site is what shows to end user."
+    echo "Notice that DATADIR/ is just what shows to end user."
 fi
