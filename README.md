@@ -1,3 +1,7 @@
-```
-docker run -p 8000:8000 -v `realpath .`/conf.d:/etc/nginx/conf.d openresty/openresty:alpine
-```
+# openresty-webhook
+
+A simple Docker image with:
+
+- Nginx serving static files (without `/.git`).
+- A webhook (`/webhook/pull`) that compliant with GitHub Webhook, and can be configured to automatically `git pull` after you push to specific repository.
+
