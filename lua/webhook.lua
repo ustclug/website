@@ -3,7 +3,6 @@ local h = ngx.req.get_headers()
 signature = h["X-Hub-Signature"]
 
 if signature ~= os.getenv('GITHUB_WEBHOOK_SECRET') then
-    -- Modify it to your secret token!
     ngx.exit(403)
 end
 
