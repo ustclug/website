@@ -24,7 +24,7 @@ if hmac ~= signature then
     ngx.exit(ngx.HTTP_FORBIDDEN)
 end
 
-local handle = io.popen("git -C /data pull")
+local handle = io.popen("git -C /data remote update && git -C /data reset --hard \"$(git -C /data rev-parse --abbrev-ref --symbolic-full-name '@{u}')\"")
 local result = handle:read("*a")
 handle:close()
 
