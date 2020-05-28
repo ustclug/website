@@ -1,0 +1,5 @@
+title: "LUG @ USTC New Website (Beta)"
+repository: "ustclug/website-beta"
+theme: "minima"
+url: "https://beta.ustclug.org"
+baseurl: ""
