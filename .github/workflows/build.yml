@@ -1,0 +1,50 @@
+name: build
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-ruby@v1
+      with:
+        ruby-version: 2.7
+    - name: Setup cache for Bundler
+      id: cache
+      uses: actions/cache@v1
+      with:
+        path: vendor/bundle
+        key: ${{ runner.os }}-bundler-2.7-${{ hashFiles('Gemfile') }}
+        restore-keys: |
+          ${{ runner.os }}-bundler-2.7-
+    - name: Install dependencies
+      run: |
+        bundle install --path=vendor/bundle
+        bundle clean
+    - name: Prepare build
+      run: |
+        git clone --depth=1 --branch=gh-pages --single-branch --no-checkout \
+          "https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" \
+          _site
+    - name: Build site
+      run: |
+        bundle exec jekyll build --trace --profile
+        : > _site/.nojekyll
+        echo -n 'beta.ustclug.org' > _site/CNAME
+      env:
+        JEKYLL_ENV: production
+        JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Deploy to GitHub Pages
+      run: |
+        CINFO="$(git log -1 --pretty="%an: [%h] %s")"
+        pushd _site/ &>/dev/null
+        git add -A
+        git -c user.name=GitHub -c user.email=noreply@github.com commit \
+          -m "Auto deploy from GitHub Actions build ${GITHUB_RUN_NUMBER}" \
+          -m "$CINFO"
+        git push
+        popd &>/dev/null
