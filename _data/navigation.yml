@@ -1,0 +1,11 @@
+main:
+  - title: "Home"
+    url: /
+  - title: "News"
+    url: "https://news.ustclug.org/"
+  - title: "Planet"
+    url: "https://planet.ustclug.org/"
+  - title: 'GitHub' # <i class="fa fas fa-xs fa-external-link-alt"></i>'
+    url: "https://github.com/ustclug"
+  - title: "Mirrors"
+    url: "https://mirrors.ustc.edu.cn/"
