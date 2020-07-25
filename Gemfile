@@ -19,6 +19,7 @@ group :jekyll_plugins do
   gem 'jekyll-seo-tag'
   gem 'jekyll-include-cache'
 
+  gem 'jekyll-data'
   gem 'jekyll-environment-variables'
   gem 'jekyll-tidy'
   gem 'jekyll-last-modified'
