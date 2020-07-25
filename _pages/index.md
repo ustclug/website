@@ -1,5 +1,9 @@
 ---
 title: "LUG @ USTC"
 excerpt: ""
-layout: splash
+permalink: /
+sidebar:
+  nav: wiki
 ---
+
+前方施工

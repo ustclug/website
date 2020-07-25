@@ -9,3 +9,35 @@ main:
     url: "https://github.com/ustclug"
   - title: "Mirrors"
     url: "https://mirrors.ustc.edu.cn/"
+
+wiki:
+  - title: LUG @ USTC
+    children:
+      - title: LUG 首页
+        url: /
+      - title: LUG 新闻
+        url: 'https://news.ustclug.org/'
+      - title: 友情链接
+        url: /wiki/links/
+      - title: 开源软件镜像
+        url: /wiki/mirrors/
+  - title: 活动
+    children:
+      - title: LUG 活动
+        url: /wiki/lug/events/
+      - title: 每周小聚
+        url: /wiki/lug/events/weeklyparty/
+      - title: 邮件列表
+        url: /wiki/lug/events/mailinglist/
+      - title: LUG 书库
+        url: /wiki/lug/book/
+      - title: LUG 财务
+        url: 'https://news.ustclug.org/finance/'
+  - title: 资源
+    children:
+      - title: Linux 文摘
+        url: /wiki/linux_digest/
+      - title: 资源导航
+        url: /wiki/lug/resources/
+      - title: 服务器新闻
+        url: 'https://servers.ustclug.org/'
