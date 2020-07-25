@@ -33,7 +33,7 @@ q.term(term, {  usePipeline: false, editDistance: 1, boost: 1 })
 });
 resultdiv.empty();
 resultdiv.prepend('
-<p class="results__found">'+result.length+' Result(s) found</p>
+<p class="results__found">'+result.length+' 条记录匹配</p>
 ');
 for (var item in result) {
 var ref = result[item].ref;
