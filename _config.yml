@@ -142,7 +142,7 @@ footer:
 
 
 # Reading Files
-include: []
+include: ["_pages"]
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -210,11 +210,9 @@ pagination: # jekyll-paginate-v2 settings
 timezone: "Asia/Shanghai" # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
-# Plugins (previously gems:)
-# plugins: now in Gemfile
-
-# mimic GitHub Pages with --safe
-# whitelist: null
+collections:
+  wiki:
+    output: true
 
 
 # Archives
@@ -244,14 +242,6 @@ jekyll-archives:
   permalinks:
     category: /categories/:name/
     tag: /tags/:name/
-
-
-# HTML Compression
-# - https://jch.penibelst.de/
-compress_html:
-  clippings: all
-  ignore:
-    envs: development
 
 
 # Defaults
