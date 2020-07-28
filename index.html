@@ -10,14 +10,15 @@
     <meta charset="utf-8">
     <!-- begin _includes/seo.html -->
     <title>LUG @ USTC - LUG @ USTC</title>
-    <meta name="description" content="Under construction!">
+    <meta name="description" content="中国科学技术大学 Linux 用户协会">
     <meta name="author" content="USTCLUG">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="zh_CN">
     <meta property="og:site_name" content="LUG @ USTC">
     <meta property="og:title" content="LUG @ USTC">
     <meta property="og:url" content="https://beta.ustclug.org//">
-    <meta property="og:description" content="Under construction!">
+    <meta property="og:description" content="中国科学技术大学 Linux 用户协会">
+    <meta property="og:image" content="https://image.ibugone.com/lug/lug-splash-1.jpg">
     <link rel="canonical" href="https://beta.ustclug.org//">
     <script type="application/ld+json">
       {
@@ -37,7 +38,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=507870b">
+    <link rel="stylesheet" href="/assets/css/main.css?v=8eef716">
     <!--[if IE]>
       <style>
         /* old IE unsupported flexbox fixes */
@@ -56,7 +57,7 @@
     <!-- insert favicons. use https://realfavicongenerator.net/ -->
     <!-- end custom head snippets -->
   </head>
-  <body class="layout--single">
+  <body class="layout--splash">
     <nav class="skip-links">
       <h2 class="screen-reader-text">Skip links</h2>
       <ul>
@@ -72,6 +73,7 @@
       <div class="masthead__inner-wrap">
         <div class="masthead__menu">
           <nav id="site-nav" class="greedy-nav">
+            <a class="site-logo" href="/"><img src="https://news.ustclug.org/images/logo.png" alt=""></a>
             <a class="site-title" href="/">
               LUG @ USTC
             </a>
@@ -102,71 +104,70 @@
       </div>
     </div>
     <div class="initial-content">
-      <div id="main" role="main">
-        <div class="sidebar sticky">
-          <nav class="nav__list">
-            <input id="ac-toc" name="accordion-toc" type="checkbox" />
-            <label for="ac-toc">切换菜单</label>
-            <ul class="nav__items">
-              <li>
-                <span class="nav__sub-title">LUG @ USTC</span>
-                <ul>
-                  <li><a href="/" class="active">LUG 首页</a></li>
-                  <li><a href="https://news.ustclug.org/">LUG 新闻</a></li>
-                  <li><a href="/wiki/links/">友情链接</a></li>
-                  <li><a href="/wiki/mirrors/">开源软件镜像</a></li>
-                </ul>
-              </li>
-              <li>
-                <span class="nav__sub-title">活动</span>
-                <ul>
-                  <li><a href="/wiki/lug/events/">LUG 活动</a></li>
-                  <li><a href="/wiki/lug/events/weeklyparty/">每周小聚</a></li>
-                  <li><a href="/wiki/lug/events/mailinglist/">邮件列表</a></li>
-                  <li><a href="/wiki/lug/book/">LUG 书库</a></li>
-                  <li><a href="https://news.ustclug.org/finance/">LUG 财务</a></li>
-                </ul>
-              </li>
-              <li>
-                <span class="nav__sub-title">资源</span>
-                <ul>
-                  <li><a href="/wiki/linux_digest/">Linux 文摘</a></li>
-                  <li><a href="/wiki/lug/resources/">资源导航</a></li>
-                  <li><a href="https://servers.ustclug.org/">服务器新闻</a></li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
+      <div class="page__hero--overlay"
+  style=" background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://image.ibugone.com/lug/lug-splash-1.jpg');"
+>
+        <div class="wrapper">
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            LUG @ USTC
+          </h1>
+          <p class="page__lead">中国科学技术大学 Linux 用户协会
+          </p>
         </div>
-        <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+      </div>
+      <div id="main" role="main">
+        <article class="splash" itemscope itemtype="https://schema.org/CreativeWork">
           <meta itemprop="headline" content="LUG @ USTC">
-          <meta itemprop="description" content="">
-          <meta itemprop="dateModified" content="2020-07-29T00:12:49+08:00">
-          <div class="page__inner-wrap">
-            <header>
-              <h1 id="page-title" class="page__title" itemprop="headline">LUG @ USTC
-              </h1>
-            </header>
-            <section class="page__content" itemprop="text">
-              <aside class="sidebar__right ">
-                <nav class="toc">
-                  <header>
-                    <h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4>
-                  </header>
-                </nav>
-              </aside>
-              <p>前方施工</p>
-            </section>
-            <footer class="page__meta">
-              <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-07-29">July 29, 2020</time></p>
-            </footer>
-            <section class="page__share">
-              <h4 class="page__share-title">分享</h4>
-              <a href="https://twitter.com/intent/tweet?text=LUG+%40+USTC%20https%3A%2F%2Fbeta.ustclug.org%2F%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbeta.ustclug.org%2F%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
-              <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fbeta.ustclug.org%2F%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
-            </section>
-          </div>
+          <meta itemprop="description" content="中国科学技术大学 Linux 用户协会">
+          <meta itemprop="dateModified" content="2020-07-29T01:59:04+08:00">
+          <section class="page__content" itemprop="text">
+            <div class="feature__wrapper">
+              <div class="feature__item">
+                <div class="archive__item">
+                  <div class="archive__item-teaser">
+                    <img src="https://image.ibugone.com/lug/lug-wiki-1.jpg" alt="Knowledge" />
+                  </div>
+                  <div class="archive__item-body">
+                    <h2 class="archive__item-title">Wiki</h2>
+                    <div class="archive__item-excerpt">
+                      <p>LUG @ USTC 的 Wiki</p>
+                    </div>
+                    <p><a href="/wiki/" class="btn btn--primary"><i class="fas fa-lightbulb"></i> 查看</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="feature__item">
+                <div class="archive__item">
+                  <div class="archive__item-teaser">
+                    <img src="https://image.ibugone.com/lug/lug-news-1.jpg" alt="News" />
+                  </div>
+                  <div class="archive__item-body">
+                    <h2 class="archive__item-title">新闻</h2>
+                    <div class="archive__item-excerpt">
+                      <p>LUG @ USTC 的新闻</p>
+                    </div>
+                    <p><a href="/news/" class="btn btn--primary"><i class="fas fa-book-reader"></i> 查看</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="feature__item">
+                <div class="archive__item">
+                  <div class="archive__item-teaser">
+                    <img src="https://image.ibugone.com/lug/lug-planet-1.jpg" alt="Planets" />
+                  </div>
+                  <div class="archive__item-body">
+                    <h2 class="archive__item-title">LUG Planet</h2>
+                    <div class="archive__item-excerpt">
+                      <p>LUG @ USTC 的社团博客</p>
+                    </div>
+                    <p><a href="https://stackoverflow.com/users/5958455/ibug" class="btn btn--primary"><i class="fas fa-star"></i> 查看</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h1 id="前方施工">前方施工</h1>
+            <p>TaoKY Strong!</p>
+          </section>
         </article>
       </div>
     </div>
