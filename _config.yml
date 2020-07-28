@@ -215,6 +215,12 @@ collections:
   wiki:
     output: true
     permalink: /:collection/:path/
+  news:
+    output: true
+    permalink: /:collection/:year/:month/:name/
+  planet:
+    output: true
+    permalink: /:collection/:year/:month/:name/
 
 
 relative_links:

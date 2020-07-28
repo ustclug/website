@@ -2,9 +2,9 @@ main:
   - title: "Wiki"
     url: /wiki/
   - title: "News"
-    url: "https://news.ustclug.org/"
+    url: /news/
   - title: "Planet"
-    url: "https://planet.ustclug.org/"
+    url: /planet/
   - title: 'GitHub' # <i class="fa fas fa-xs fa-external-link-alt"></i>'
     url: "https://github.com/ustclug"
   - title: "Mirrors"
