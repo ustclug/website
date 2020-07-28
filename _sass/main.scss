@@ -1,5 +1,18 @@
 @import "splash";
 
+// Page header
+
+.page__hero--overlay {
+  text-align: center;
+}
+
+.page__lead {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Left sidebar
+
 .sidebar {
   li {
     line-height: 2;
