@@ -6,6 +6,5 @@ pagination:
   enabled: true
   collection: planet
 header:
-  overlay_image: https://image.ibugone.com/lug/lug-splash-1.jpg
-  overlay_filter: 0.2
+  overlay_image: https://image.ibugone.com/lug/lug-planet-2.jpg
 ---
