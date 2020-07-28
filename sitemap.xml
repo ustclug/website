@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
+      <loc>https://beta.ustclug.org//news/2020/03/2020-03-15-linux101-online/</loc>
+      <lastmod>2020-03-15T00:00:00+08:00</lastmod>
+    </url>
+    <url>
       <loc>https://beta.ustclug.org//wiki/</loc>
-      <lastmod>2020-07-29T00:32:11+08:00</lastmod>
+      <lastmod>2020-07-29T00:46:58+08:00</lastmod>
     </url>
     <url>
       <loc>https://beta.ustclug.org//wiki/intro/</loc>
-      <lastmod>2020-07-29T00:32:11+08:00</lastmod>
+      <lastmod>2020-07-29T00:46:58+08:00</lastmod>
     </url>
     <url>
       <loc>https://beta.ustclug.org//wiki/lug/events/sfd/</loc>
-      <lastmod>2020-07-29T00:32:11+08:00</lastmod>
+      <lastmod>2020-07-29T00:46:58+08:00</lastmod>
     </url>
     <url>
       <loc>https://beta.ustclug.org//</loc>
       <lastmod>2020-07-29T00:12:49+08:00</lastmod>
+    </url>
+    <url>
+      <loc>https://beta.ustclug.org//news/</loc>
+      <lastmod>2020-07-29T00:45:54+08:00</lastmod>
     </url>
   </urlset>
