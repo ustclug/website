@@ -5,6 +5,12 @@ var store = [{
 "url": "https://beta.ustclug.org//news/2020/03/2020-03-15-linux101-online/",
 "teaser": null
 },{
+"title": "Hello! LUG Planet",
+"excerpt":"欢迎大家来到 LUG Planet！这是一个刚刚被发现的新星球，百废待兴。本文是 LUG Planet 的说明书，在你入驻之前，不妨先驻足欣赏一下这片风景。:-)  ","categories": [],
+"tags": [],
+"url": "https://beta.ustclug.org//planet/2018/08/2018-08-08-hello-lug-planet/",
+"teaser": null
+},{
 "title": "中国科学技术大学 Linux 用户协会",
 "excerpt":"中国科学技术大学 Linux 用户协会（科大 LUG）是由在校的 GNU/Linux 爱好者发起并组成的全校性群众团体，是一个以推广自由软件文化、宣传自由软件价值为目的的协会组织。了解更多  ","categories": [],
 "tags": [],
