@@ -16,7 +16,7 @@ wiki:
       - title: LUG 首页
         url: /
       - title: LUG 新闻
-        url: 'https://news.ustclug.org/'
+        url: /news/
       - title: 友情链接
         url: /wiki/links/
       - title: 开源软件镜像
