@@ -1,1 +1,2 @@
-Sitemap: https://beta.ustclug.org//sitemap.xml
+User-Agent: *
+Disallow: /
