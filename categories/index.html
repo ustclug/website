@@ -9,16 +9,16 @@
   <head>
     <meta charset="utf-8">
     <!-- begin _includes/seo.html -->
-    <title>LUG @ USTC - LUG @ USTC</title>
+    <title>Posts by Category - LUG @ USTC</title>
     <meta name="description" content="Under construction!">
     <meta name="author" content="USTCLUG">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="zh_CN">
     <meta property="og:site_name" content="LUG @ USTC">
-    <meta property="og:title" content="LUG @ USTC">
-    <meta property="og:url" content="https://beta.ustclug.org//">
+    <meta property="og:title" content="Posts by Category">
+    <meta property="og:url" content="https://beta.ustclug.org//categories/">
     <meta property="og:description" content="Under construction!">
-    <link rel="canonical" href="https://beta.ustclug.org//">
+    <link rel="canonical" href="https://beta.ustclug.org//categories/">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -56,7 +56,7 @@
     <!-- insert favicons. use https://realfavicongenerator.net/ -->
     <!-- end custom head snippets -->
   </head>
-  <body class="layout--single">
+  <body class="layout--categories">
     <nav class="skip-links">
       <h2 class="screen-reader-text">Skip links</h2>
       <ul>
@@ -104,70 +104,34 @@
     <div class="initial-content">
       <div id="main" role="main">
         <div class="sidebar sticky">
-          <nav class="nav__list">
-            <input id="ac-toc" name="accordion-toc" type="checkbox" />
-            <label for="ac-toc">切换菜单</label>
-            <ul class="nav__items">
-              <li>
-                <span class="nav__sub-title">LUG @ USTC</span>
-                <ul>
-                  <li><a href="/" class="active">LUG 首页</a></li>
-                  <li><a href="https://news.ustclug.org/">LUG 新闻</a></li>
-                  <li><a href="/wiki/links/">友情链接</a></li>
-                  <li><a href="/wiki/mirrors/">开源软件镜像</a></li>
-                </ul>
-              </li>
-              <li>
-                <span class="nav__sub-title">活动</span>
-                <ul>
-                  <li><a href="/wiki/lug/events/">LUG 活动</a></li>
-                  <li><a href="/wiki/lug/events/weeklyparty/">每周小聚</a></li>
-                  <li><a href="/wiki/lug/events/mailinglist/">邮件列表</a></li>
-                  <li><a href="/wiki/lug/book/">LUG 书库</a></li>
-                  <li><a href="https://news.ustclug.org/finance/">LUG 财务</a></li>
-                </ul>
-              </li>
-              <li>
-                <span class="nav__sub-title">资源</span>
-                <ul>
-                  <li><a href="/wiki/linux_digest/">Linux 文摘</a></li>
-                  <li><a href="/wiki/lug/resources/">资源导航</a></li>
-                  <li><a href="https://servers.ustclug.org/">服务器新闻</a></li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-          <meta itemprop="headline" content="LUG @ USTC">
-          <meta itemprop="description" content="">
-          <meta itemprop="dateModified" content="2020-07-29T00:12:49+08:00">
-          <div class="page__inner-wrap">
-            <header>
-              <h1 id="page-title" class="page__title" itemprop="headline">LUG @ USTC
-              </h1>
-            </header>
-            <section class="page__content" itemprop="text">
-              <aside class="sidebar__right ">
-                <nav class="toc">
-                  <header>
-                    <h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4>
-                  </header>
-                </nav>
-              </aside>
-              <p>前方施工</p>
-            </section>
-            <footer class="page__meta">
-              <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-07-29">July 29, 2020</time></p>
-            </footer>
-            <section class="page__share">
-              <h4 class="page__share-title">分享</h4>
-              <a href="https://twitter.com/intent/tweet?text=LUG+%40+USTC%20https%3A%2F%2Fbeta.ustclug.org%2F%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbeta.ustclug.org%2F%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
-              <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fbeta.ustclug.org%2F%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
-            </section>
+          <div itemscope itemtype="https://schema.org/Person">
+            <div class="author__content">
+              <h3 class="author__name" itemprop="name">USTCLUG</h3>
+              <div class="author__bio" itemprop="description">
+              </div>
+            </div>
+            <div class="author__urls-wrapper">
+              <button class="btn btn--inverse">关注</button>
+              <ul class="author__urls social-icons">
+                <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+                  <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">USTC</span>
+                </li>
+                <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+              </ul>
+            </div>
           </div>
-        </article>
+        </div>
+        <div class="archive">
+          <h1 id="page-title" class="page__title">Posts by Category</h1>
+          <ul class="taxonomy__index">
+          </ul>
+        </div>
       </div>
     </div>
     <div id="footer" class="page__footer">
