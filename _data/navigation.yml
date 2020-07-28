@@ -1,6 +1,6 @@
 main:
-  - title: "Home"
-    url: /
+  - title: "Wiki"
+    url: /wiki/
   - title: "News"
     url: "https://news.ustclug.org/"
   - title: "Planet"

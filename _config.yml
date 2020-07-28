@@ -210,9 +210,15 @@ pagination: # jekyll-paginate-v2 settings
 timezone: "Asia/Shanghai" # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
+collections_dir: pages
 collections:
   wiki:
     output: true
+    permalink: /:collection/:path/
+
+
+relative_links:
+  collections: true
 
 
 # Archives
@@ -251,5 +257,14 @@ defaults:
       path: ""
     values:
       layout: single
+      toc: true
+      toc_label: 目录
       share: true
       related: true
+  - scope:
+      path: ""
+      type: wiki
+    values:
+      excerpt: false
+      sidebar:
+        nav: wiki
