@@ -13,6 +13,7 @@ group :jekyll_plugins do
   gem 'jekyll-sitemap'
   gem 'jekyll-relative-links'
   gem 'jekyll-optional-front-matter'
+  gem 'jekyll-titles-from-headings'
   gem 'jekyll-github-metadata' if ENV['CI'] == 'true'
 
   gem 'jekyll-redirect-from'

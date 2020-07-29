@@ -225,6 +225,11 @@ collections:
 
 relative_links:
   collections: true
+titles_from_headings:
+  strip_title: true
+  collections: true
+optional_front_matter:
+  remove_originals: true
 footer_scripts: [/assets/js/main.min.js]
 
 

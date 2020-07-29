@@ -1,5 +1,3 @@
----
-title: Software Freedom Day
----
+# Software Freedom Day
 
 placeholder
