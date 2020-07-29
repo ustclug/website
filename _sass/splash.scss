@@ -1,2 +1,16 @@
 body.layout--splash {
+  .feature__wrapper {
+    text-align: center;
+  }
+
+  .feature__item {
+    width: span(4 of 12);
+    margin-left: gutter(of 12);
+    float: left;
+
+    &:nth-child(3n + 1) {
+      clear: both;
+      margin-left: 0;
+    }
+  }
 }

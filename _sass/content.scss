@@ -1,0 +1,90 @@
+.lug-nav {
+  width: 100%;
+  display: flex;
+  margin: 1rem auto;
+
+  .nav-left {
+    width: auto;
+    flex: 1 0 auto;
+
+    @include breakpoint($medium) {
+      flex-grow: 0;
+    }
+  }
+
+  .nav-right {
+    display: flex;
+    flex: 1 1 auto;
+    margin-left: 1rem;
+
+    .description {
+      min-width: 0;
+      min-height: 0;
+      overflow: hidden;
+      margin: 1em;
+      flex: 1 1 auto;
+
+      p {
+        margin: 0;
+      }
+
+      display: none;
+      @include breakpoint($medium) {
+        display: block;
+      }
+    }
+
+    .link-group {
+      flex-basis: auto;
+      width: 100%;
+
+      @include breakpoint($medium) {
+        width: auto;
+      }
+    }
+  }
+
+  .nav-left,
+  .nav-right {
+    background-color: #eee;
+  }
+}
+
+.link-group {
+  display: block;
+  width: auto;
+  height: 100%;
+
+  @include breakpoint($medium) {
+    min-width: 15rem;
+  }
+
+  .link-group-row {
+    width: 100%;
+    display: flex;
+
+    a {
+      flex: 1 0 0;
+      color: #666;
+      display: inline-block;
+      text-align: center;
+      margin: 1rem auto;
+      transition: color 0.3s ease;
+      font-size: 0.8rem;
+
+      &:hover {
+        color: #2196f3;
+      }
+
+      span {
+        display: block;
+        margin-top: 0.5em;
+        font-size: 1.2em;
+
+        @include breakpoint($medium) {
+          font-size: 1em;
+        }
+      }
+    }
+  }
+}

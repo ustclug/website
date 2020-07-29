@@ -225,6 +225,7 @@ collections:
 
 relative_links:
   collections: true
+footer_scripts: [/assets/js/main.min.js]
 
 
 # Archives

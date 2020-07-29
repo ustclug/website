@@ -1,6 +1,16 @@
 @import "home";
 @import "splash";
 
+// HTML base
+
+html {
+	box-sizing: border-box;
+	font-size: 14px;
+	@include breakpoint($medium) { font-size: 16px; }
+	@include breakpoint($large) { font-size: 18px; }
+	@include breakpoint($x-large) { font-size: 20px; }
+}
+
 // Page header
 
 .page__hero--overlay {
@@ -11,6 +21,12 @@
 .page__lead {
   margin-left: auto;
   margin-right: auto;
+}
+
+// Page content
+
+.page__content {
+  @import "content";
 }
 
 // Left sidebar
