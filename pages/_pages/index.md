@@ -39,7 +39,7 @@ feature_row:
         <a href="https://git.lug.ustc.edu.cn/"><i class="fab fa-gitlab fa-5x" aria-hidden="true"></i><span>GitLab</span></a>
       </div>
       <div class="link-group-row">
-        <a href="https://library.ustclug.org/"><i class="fas fa-book fa-5x" aria-hidden="true"></i><span>LUG书库</span></a>
+        <a href="https://library.ustclug.org/"><i class="fas fa-book fa-5x" aria-hidden="true"></i><span>LUG 书库</span></a>
         <a href="{{ "/wiki/lug/services" | relative_url }}"><i class="fas fa-chevron-circle-right fa-5x" aria-hidden="true"></i><span>更多服务</span></a>
       </div>
     </div>

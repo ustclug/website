@@ -1,6 +1,5 @@
 ---
-title: "Posts by Tag"
+title: 按标签归类
 permalink: /tags/
 layout: tags
-author_profile: true
 ---
