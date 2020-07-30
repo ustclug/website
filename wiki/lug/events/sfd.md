@@ -1,3 +1,0 @@
-# Software Freedom Day
-
-placeholder
