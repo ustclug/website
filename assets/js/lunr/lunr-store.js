@@ -12,7 +12,7 @@ var store = [{
 "teaser": null
 },{
 "title": "中国科学技术大学 Linux 用户协会",
-"excerpt":"中国科学技术大学 Linux 用户协会（科大 LUG）是由在校的 GNU/Linux 爱好者发起并组成的全校性群众团体，是一个以推广自由软件文化、宣传自由软件价值为目的的协会组织。了解更多  ","categories": [],
+"excerpt":"中国科学技术大学 Linux 用户协会（科大 LUG）是由在校的 GNU/Linux 爱好者发起并组成的全校性群众团体，是一个以推广自由软件文化、宣传自由软件价值为目的的协会组织。  了解更多  ","categories": [],
 "tags": [],
 "url": "https://beta.ustclug.org//wiki/",
 "teaser": null
@@ -33,5 +33,11 @@ var store = [{
 "excerpt":"合作伙伴 烧饼博客 Coding 云端开发平台 深度操作系统 Xtom 中国科学技术大学图书馆 中国科学技术大学网络信息中心 中国科学技术大学信息安全俱乐部 姊妹社团 清华大学 TUNA 协会 开源社区 瀚海星云 BBS Linux 讨论区 Arch Linux 中文社区 Fedora 中文社区 开源工场 各地 LUG 地区 邮件列表 Homepage 上海 Shanghai Linux User Group SHLUG 北京 Beijing GNU/Linux User Group BJLUG 成都 Chengdu Linux User Group CDLUG 重庆 Chongqing Linux...","categories": [],
 "tags": [],
 "url": "https://beta.ustclug.org//wiki/lug/links/",
+"teaser": null
+},{
+"title": "LUG 负责人",
+"excerpt":"公共联系方式 联系我们 主要负责人 代号 职务 姓名 邮箱 CEO 执行会长 袁一玮 - - 执行副会长 高泽豫 - - 执行副会长 李缙 - CTO 技术部部长 明宇龙 - - 技术部副部长 罗丽薇 - CFO 财务部部长 邱子悦 - COO 运营部部长 罗丽薇 - CPO 资产部部长 胡清宇 - MSC MSC 事务 陈泳融 - - 团支书 胡清宇 - - 社长...","categories": [],
+"tags": [],
+"url": "https://beta.ustclug.org//wiki/lug/person-in-charge/",
 "teaser": null
 }]
