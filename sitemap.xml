@@ -2,39 +2,39 @@
   <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
       <loc>https://beta.ustclug.org//news/2020/03/2020-03-15-linux101-online/</loc>
-      <lastmod>2020-03-15T00:00:00+08:00</lastmod>
+      <lastmod>2020-07-31T14:03:52+08:00</lastmod>
     </url>
     <url>
       <loc>https://beta.ustclug.org//planet/2018/08/2018-08-08-hello-lug-planet/</loc>
-      <lastmod>2018-08-08T00:00:00+08:00</lastmod>
+      <lastmod>2020-07-31T14:03:52+08:00</lastmod>
     </url>
     <url>
       <loc>https://beta.ustclug.org//wiki/</loc>
-      <lastmod>2020-07-31T04:16:15+08:00</lastmod>
+      <lastmod>2020-07-31T14:03:52+08:00</lastmod>
     </url>
     <url>
       <loc>https://beta.ustclug.org//wiki/intro/</loc>
-      <lastmod>2020-07-31T04:16:15+08:00</lastmod>
+      <lastmod>2020-07-31T14:03:52+08:00</lastmod>
     </url>
     <url>
       <loc>https://beta.ustclug.org//wiki/lug/events/sfd/</loc>
-      <lastmod>2020-07-31T04:16:15+08:00</lastmod>
+      <lastmod>2020-07-31T14:03:52+08:00</lastmod>
     </url>
     <url>
       <loc>https://beta.ustclug.org//wiki/lug/links/</loc>
-      <lastmod>2020-07-31T04:16:15+08:00</lastmod>
+      <lastmod>2020-07-31T14:03:52+08:00</lastmod>
     </url>
     <url>
       <loc>https://beta.ustclug.org//categories/</loc>
-      <lastmod>2020-07-29T15:43:19+08:00</lastmod>
+      <lastmod>2020-07-31T14:03:52+08:00</lastmod>
     </url>
     <url>
       <loc>https://beta.ustclug.org//</loc>
-      <lastmod>2020-07-29T15:43:19+08:00</lastmod>
+      <lastmod>2020-07-31T14:03:52+08:00</lastmod>
     </url>
     <url>
       <loc>https://beta.ustclug.org//tags/</loc>
-      <lastmod>2020-07-29T15:43:19+08:00</lastmod>
+      <lastmod>2020-07-31T14:03:52+08:00</lastmod>
     </url>
     <url>
       <loc>https://beta.ustclug.org//tags/linux-101/</loc>
@@ -44,10 +44,10 @@
     </url>
     <url>
       <loc>https://beta.ustclug.org//news/</loc>
-      <lastmod>2020-07-29T02:13:08+08:00</lastmod>
+      <lastmod>2020-07-31T14:03:52+08:00</lastmod>
     </url>
     <url>
       <loc>https://beta.ustclug.org//planet/</loc>
-      <lastmod>2020-07-29T02:20:00+08:00</lastmod>
+      <lastmod>2020-07-31T14:03:52+08:00</lastmod>
     </url>
   </urlset>
