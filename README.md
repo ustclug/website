@@ -5,8 +5,8 @@
 ## 本地预览与构建
 
 1. 安装 Ruby 开发环境（略）
-2. 运行 `bundle install --path=vendor/bundle`
-3. 如果需要预览，运行 `bundle exec jekyll serve`，此时即可在 <http://localhost:4000/> 预览网站
+2. 运行 `bundle install --path=vendor/bundle` 以安装依赖的软件包
+3. 运行 `bundle exec jekyll serve`，此时即可在 <http://localhost:4000/> 预览网站
 4. 编译整个网站的命令为
 
     ```shell
@@ -19,4 +19,4 @@
 
 ## 许可
 
-本仓库以 [CC BY-NC-SA 4.0](LICENSE.md) 许可协议开源。
+本仓库及本网站以 [CC BY-NC-SA 4.0](LICENSE.md) 许可协议开源。

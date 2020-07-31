@@ -33,6 +33,16 @@ wiki:
         url: /wiki/lug/book/
       - title: LUG 财务
         url: 'https://news.ustclug.org/finance/'
+  - title: 联系
+    children:
+      - title: LUG 负责人
+        url: /wiki/lug/person-in-charge/
+      - title: 联系我们
+        url: /wiki/lug/contact/
+      - title: 加入我们
+        url: /wiki/lug/contribute/
+      - title: 捐赠我们
+        url: /wiki/lug/finance/donate/
   - title: 资源
     children:
       - title: Linux 文摘
