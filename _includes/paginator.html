@@ -1,13 +1,13 @@
 {% if paginator.total_pages > 1 %}
 <nav class="pagination">
-  {% assign first_page_path = paginator.first_page_path | default: site.paginate_path | replace: 'page:num', '' | replace: '//', '/' | relative_url %}
+  {% assign first_page_path = paginator.first_page_path | default: site.paginate_path | replace: 'page:num', '' | replace: '//', '/' | remove: 'index.html' | relative_url %}
   <ul>
     {% comment %} Link for previous page {% endcomment %}
     {% if paginator.previous_page %}
       {% if paginator.previous_page == 1 %}
         <li><a href="{{ first_page_path }}">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</a></li>
       {% else %}
-        <li><a href="{{ paginator.previous_page_path | relative_url | replace: 'index.html', '' }}">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</a></li>
+        <li><a href="{{ paginator.previous_page_path | relative_url | remove: 'index.html' }}">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</a></li>
       {% endif %}
     {% else %}
       <li><a href="#" class="disabled"><span aria-hidden="true">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</span></a></li>
@@ -46,9 +46,9 @@
 
     {% for trail in paginator.page_trail %}
       {% if page.url == trail.path %}
-        <li><a href="{{ trail.path | relative_url | replace: 'index.html', '' }}" class="disabled current">{{ trail.num }}</a></li>
+        <li><a href="{{ trail.path | relative_url | remove: 'index.html' }}" class="disabled current">{{ trail.num }}</a></li>
       {% else %}
-        <li><a href="{{ trail.path | relative_url | replace: 'index.html', '' }}">{{ trail.num }}</a></li>
+        <li><a href="{{ trail.path | relative_url | remove: 'index.html' }}">{{ trail.num }}</a></li>
       {% endif %}
     {% endfor %}
 
@@ -61,13 +61,13 @@
       {% if paginator.page == paginator.total_pages %}
         <li><a href="#" class="disabled current">{{ paginator.page }}</a></li>
       {% else %}
-        <li><a href="{{ paginator.last_page_path | relative_url | replace: 'index.html', '' }}">{{ paginator.total_pages }}</a></li>
+        <li><a href="{{ paginator.last_page_path | relative_url | remove: 'index.html' }}">{{ paginator.total_pages }}</a></li>
       {% endif %}
     {% endunless %}
 
     {% comment %} Link next page {% endcomment %}
     {% if paginator.next_page %}
-      <li><a href="{{ paginator.next_page_path | relative_url | replace: 'index.html', '' }}">{{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}</a></li>
+      <li><a href="{{ paginator.next_page_path | relative_url | remove: 'index.html' }}">{{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}</a></li>
     {% else %}
       <li><a href="#" class="disabled"><span aria-hidden="true">{{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}</span></a></li>
     {% endif %}

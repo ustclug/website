@@ -29,7 +29,7 @@ teaser                   : # path of fallback teaser image, e.g. "/assets/images
 logo                     : "https://static.beta.ustclug.org/logo.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : # true, false (default)
-words_per_minute         : 200
+words_per_minute         : 350
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
@@ -281,3 +281,15 @@ defaults:
       related: false
       sidebar:
         nav: wiki
+  - scope:
+      path: ""
+      type: news
+    values:
+      show_date: true
+      read_time: true
+  - scope:
+      path: ""
+      type: planet
+    values:
+      show_date: true
+      read_time: true
