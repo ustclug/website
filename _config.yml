@@ -202,12 +202,9 @@ pagination: # jekyll-paginate-v2 settings
   per_page: 5
   permalink: '/:num/'
   title: ':title - :num / :max'
-  limit: 0
-  sort_field: date
-  sort_reverse: true
   trail:
-    before: 3
-    after: 3
+    before: 2
+    after: 2
 timezone: "Asia/Shanghai" # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
