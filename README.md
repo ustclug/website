@@ -2,6 +2,12 @@
 
 **前方施工**
 
+## 添加与修改页面
+
+本网站采用 [Minimal Mistakes 主题](https://mmistakes.github.io/minimal-mistakes/)，各自定义项目参见主题的文档。
+
+添加新页面（Wiki / News / Planet）请分别在 `pages/_wiki`，`pages/_news`，`pages/_planet` 中参考 `_template.md`。
+
 ## 本地预览与构建
 
 1. 安装 Ruby 开发环境（略）
