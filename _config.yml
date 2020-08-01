@@ -202,6 +202,8 @@ pagination: # jekyll-paginate-v2 settings
   per_page: 5
   permalink: '/:num/'
   title: ':title - :num / :max'
+  sort_field: date
+  sort_reverse: true
   trail:
     before: 2
     after: 2
