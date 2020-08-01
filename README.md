@@ -8,6 +8,12 @@
 
 添加新页面（Wiki / News / Planet）请分别在 `pages/_wiki`，`pages/_news`，`pages/_planet` 中参考 `_template.md`。
 
+请将图片上传至 [website-static 仓库](https://github.com/ustclug/website-static)，并使用如下格式引用：
+
+```markdown
+![图片的 alt 文字]({{ site.static_url }}/path/to/image.jpg)
+```
+
 ## 本地预览与构建
 
 1. 安装 Ruby 开发环境（略）
