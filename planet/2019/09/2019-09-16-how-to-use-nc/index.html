@@ -37,7 +37,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=25ea11c">
+    <link rel="stylesheet" href="/assets/css/main.css?v=76db1cb">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
     <!--[if IE]>
       <style>
@@ -159,7 +159,7 @@
               <h3 id="windows">Windows</h3>
               <p>直接双击，你会看到一个窗口一扫而过——这是正常现象。你需要使用「命令提示符」或者「PowerShell」来访问这个程序。</p>
               <p>Windows 10 中，你可以使用资源管理器 -&gt; 文件来在你存放 <code class="language-plaintext highlighter-rouge">nc</code> 的目录中打开命令提示符或 PowerShell。</p>
-              <p><img src="https://planet.ustclug.org/wp-content/uploads/2019/09/explorer-1024x510.png" alt="img" />在 Windows 资源管理器中打开命令提示符或 PowerShell</p>
+              <p><img src="https://static.beta.ustclug.org/planet/explorer-1024x510.png" alt="img" />在 Windows 资源管理器中打开命令提示符或 PowerShell</p>
               <p>或者，你也可以在开始菜单 -&gt; Windows 系统中打开命令提示符，或者在开始菜单 -&gt; Windows PowerShell 中打开 PowerShell，然后使用 <code class="language-plaintext highlighter-rouge">cd</code> 命令转移到对应的目录：输入 <code class="language-plaintext highlighter-rouge">cd 文件夹名</code> 可以让你转移到对应的文件夹，输入 <code class="language-plaintext highlighter-rouge">cd ..</code> 可以让你转移到上面一层目录。使用 <code class="language-plaintext highlighter-rouge">dir</code> 命令，可以显示当前目录下所有文件。同时，使用 Tab 键可以帮助你补全名称。</p>
               <p>当跳转到你存放 <code class="language-plaintext highlighter-rouge">nc</code> 的文件夹后：</p>
               <ul>
@@ -167,7 +167,7 @@
                 <li>如果你使用的是命令提示符（黑色背景），输入 <code class="language-plaintext highlighter-rouge">ncat</code>（根据 <code class="language-plaintext highlighter-rouge">nc</code> 对应的名称不同而不同）。</li>
               </ul>
               <p>当显示以下内容时，说明你成功运行了它。</p>
-              <p><img src="https://planet.ustclug.org/wp-content/uploads/2019/09/cmdncat-1024x596.png" alt="img" />成功运行 <code class="language-plaintext highlighter-rouge">ncat</code></p>
+              <p><img src="https://static.beta.ustclug.org/planet/cmdncat-1024x596.png" alt="img" />成功运行 <code class="language-plaintext highlighter-rouge">ncat</code></p>
               <h3 id="linux--macos">Linux &amp; macOS</h3>
               <p>打开「终端」，输入 <code class="language-plaintext highlighter-rouge">nc</code>。</p>
               <div class="language-plaintext highlighter-rouge">
@@ -185,7 +185,7 @@ usage: nc [-46AacCDdEFhklMnOortUuvz] [-K tc] [-b boundif] [-i interval] [-p sour
               <p>我们可以使用 <code class="language-plaintext highlighter-rouge">nc</code>，尝试一次与网页服务器的连接，以百度为例。</p>
               <p>输入 <code class="language-plaintext highlighter-rouge">nc www.baidu.com 80</code>（或者 <code class="language-plaintext highlighter-rouge">ncat www.baidu.com 80</code>，或者 <code class="language-plaintext highlighter-rouge">./ncat www.baidu.com 80</code>，请根据以上的介绍自行修改），程序会等待你的输入。</p>
               <p>输入 <code class="language-plaintext highlighter-rouge">GET / HTTP/1.0</code>。这表示，我们使用 <code class="language-plaintext highlighter-rouge">HTTP/1.0</code> 这个协议版本，用 <code class="language-plaintext highlighter-rouge">GET</code> 的方式请求根 <code class="language-plaintext highlighter-rouge">/</code>。输入两下回车，代表我们的 HTTP 请求完成。如果你的网络畅通，百度的网页服务器会立刻返回大量信息，可以自行搜索，了解它们的含义。现在，你成功（在不使用浏览器的情况下）完成了一次与百度网站的连接！</p>
-              <p><img src="https://planet.ustclug.org/wp-content/uploads/2019/09/nc-1024x596.png" alt="img" />Success!</p>
+              <p><img src="https://static.beta.ustclug.org/planet/nc-1024x596.png" alt="img" />Success!</p>
               <p>如果你成功了，那么你可以开始愉快地完成我们的题目了！</p>
             </section>
             <footer class="page__meta">

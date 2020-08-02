@@ -37,7 +37,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=25ea11c">
+    <link rel="stylesheet" href="/assets/css/main.css?v=76db1cb">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
     <!--[if IE]>
       <style>
@@ -155,16 +155,16 @@
               <p>就让我们来看一看吧。</p>
               <h2 id="概览">概览</h2>
               <ul>
-                <li><img src="https://planet.ustclug.org/wp-content/uploads/2019/09/box.jpg" alt="img" /></li>
-                <li><img src="https://planet.ustclug.org/wp-content/uploads/2019/09/box-bottom.jpg" alt="img" /></li>
-                <li><img src="https://planet.ustclug.org/wp-content/uploads/2019/09/box-open-1024x768.jpg" alt="img" /></li>
+                <li><img src="https://static.beta.ustclug.org/planet/box.jpg" alt="img" /></li>
+                <li><img src="https://static.beta.ustclug.org/planet/box-bottom.jpg" alt="img" /></li>
+                <li><img src="https://static.beta.ustclug.org/planet/box-open-1024x768.jpg" alt="img" /></li>
               </ul>
               <p>新的树莓派 4 装在了类似 3B+ 的包装中，包装正面是树莓派 4 的红底白线的结构图，与本体大小相同。与树莓派 3B 不同的是，3B+ 和 4 都没有用防静电袋包好。当然，这不是什么问题。</p>
               <p>它的结构与前几代类似，不过有一些明显的变化。比如说，你肯定会最先注意到那几个 USB 3.0 接口——因为它们是蓝色的。在你观察那几个接口的同时，你很可能也注意到了，有可能是因为千兆网口的升级的缘故，以太网接口换了位置。</p>
               <ul>
-                <li><img src="https://planet.ustclug.org/wp-content/uploads/2019/09/overview.jpg" alt="img" /></li>
-                <li><img src="https://planet.ustclug.org/wp-content/uploads/2019/09/overview-usb.jpg" alt="img" /></li>
-                <li><img src="https://planet.ustclug.org/wp-content/uploads/2019/09/overview-side-ports.jpg" alt="img" /></li>
+                <li><img src="https://static.beta.ustclug.org/planet/overview.jpg" alt="img" /></li>
+                <li><img src="https://static.beta.ustclug.org/planet/overview-usb.jpg" alt="img" /></li>
+                <li><img src="https://static.beta.ustclug.org/planet/overview-side-ports.jpg" alt="img" /></li>
               </ul>
               <p>有一些小接口，即供电口和视频输出，也有一些变化。树莓派 4 现在需要一根 Type-C 线供电，并且需求提升到了 5V / 3A。目前尚且不知树莓派 4 是否支持类似于高通快充或者 USB PD 这样的快充技术，但是从用户反馈来看，是没有的。旧款上标准大小的 HDMI 也被 micro-HDMI 口替换——而且变成了两个：它们都支持 4K 60fps 输出，而且可以同时输出！尽管我打算把树莓派当无头（无显示的）服务器来用，用树莓派配桌面环境的人可能会喜欢这个特性。</p>
               <p>内存条也从树莓派的背面移到了正面，现在在 SoC 旁边。SoC 长得和 3B+ 的一样，但是内部却完全不同。Wi-Fi 屏蔽罩和天线没有变化，另外在千兆网口的前面又多出了一个额外的芯片。</p>
@@ -243,7 +243,7 @@
               </table>
               <p>在我买到 3B+ 之后，我就把 3B 卖（给了译者），所以那个树莓派 3B 就没法参与接下来的评测了。（译者注：那个 3B 现在被我放在家里吃灰……对不起……）</p>
               <h2 id="我的设置">我的设置</h2>
-              <p><img src="https://planet.ustclug.org/wp-content/uploads/2019/09/rpis-powered.jpg" alt="img" /></p>
+              <p><img src="https://static.beta.ustclug.org/planet/rpis-powered.jpg" alt="img" /></p>
               <p>正如你看到的那样，两个树莓派都是无头的服务器，只连接了电源和以太网。你可能在疑惑，为什么它们看起来这么诡异，这是因为我所在的实验室有很多标称 5V / 6A 的电源供应线，所以我就拿了一个来通过 GPIO 给这两个树莓派供电。这两个树莓派峰值标称 5V / 2.5A 和 5V / 3A，所以一根供电线就够了。</p>
               <blockquote>
                 <p>警告：除非你有稳定的供电，请不要使用 GPIO 给树莓派供电。手机充电器不能作为电源供应，你永远都不应该用手机充电器通过 GPIO 供电给树莓派。</p>
@@ -260,7 +260,7 @@ sysbench --test=cpu --num-threads=8 run
 </code></pre>
                 </div>
               </div>
-              <p><img src="https://planet.ustclug.org/wp-content/uploads/2019/09/sysbench-cpu.png" alt="img" />SysBench CPU 性能，单位为秒，越低越好</p>
+              <p><img src="https://static.beta.ustclug.org/planet/sysbench-cpu.png" alt="img" />SysBench CPU 性能，单位为秒，越低越好</p>
               <p>如表中显示的那样，在 CPU 性能方面，树莓派 4 相比 3B+ 而言有巨大提升，在所有情况中都少花了 19.3% 的时间。</p>
               <h3 id="sysbench-内存测试">SysBench 内存测试</h3>
               <p>内存测试有点复杂，并且我发现了一些意料之外的结果。</p>
@@ -274,12 +274,12 @@ sysbench --test=memory --memory-block-size=1M --memory-total-size=2G --memory-op
 </code></pre>
                 </div>
               </div>
-              <p><img src="https://planet.ustclug.org/wp-content/uploads/2019/09/sysbench-memory.png" alt="img" />SysBench 内存性能，单位为每秒指令数，越高越好</p>
+              <p><img src="https://static.beta.ustclug.org/planet/sysbench-memory.png" alt="img" />SysBench 内存性能，单位为每秒指令数，越高越好</p>
               <p>新的 DDR4 内存竟然比老古董 DDR2 内存慢，而且在多线程情况下差距进一步拉大了！唯一一点合理的是，当单个块大小到 1 MiB 的时候，树莓派 4 要小幅好于 3B+。</p>
               <p>一件有意思的事情是，我没有包含“1 MiB Read MT”（1 MiB 单块，读取，多线程）这一列。SysBench 在两块树莓派上都给我返回了超过 200 GB/s 的结果，有时候结果还高达 500 GB/s。这显然太滑稽了，所以我直接忽略了那个结果。</p>
               <h3 id="fio-microsd-卡速度测试">FIO microSD 卡速度测试</h3>
               <p>此测试结果依赖于 microSD 卡本身，所以我拿出了我拥有的最快的 SD 卡：Lexar 667x 128 GB microSD 卡，外观类似下面这张图：</p>
-              <p><img src="https://planet.ustclug.org/wp-content/uploads/2019/09/microsd-card-1024x752.jpg" alt="img" /></p>
+              <p><img src="https://static.beta.ustclug.org/planet/microsd-card-1024x752.jpg" alt="img" /></p>
               <p>我使用 <code class="language-plaintext highlighter-rouge">fio</code> 作为磁盘（microSD 卡）I/O 性能测试工具。因为我更熟悉 Crystal DiskMark，我调整了 <code class="language-plaintext highlighter-rouge">fio</code> 的参数，以与其一致。</p>
               <div class="language-plaintext highlighter-rouge">
                 <div class="highlight">
@@ -295,7 +295,7 @@ sysbench --test=memory --memory-block-size=1M --memory-total-size=2G --memory-op
 </code></pre>
                 </div>
               </div>
-              <p><img src="https://planet.ustclug.org/wp-content/uploads/2019/09/fio-microsd.png" alt="img" />MicroSD 性能，单位为 MB/s，越高越好</p>
+              <p><img src="https://static.beta.ustclug.org/planet/fio-microsd.png" alt="img" />MicroSD 性能，单位为 MB/s，越高越好</p>
               <p>从结果来看，树莓派 4 的性能有巨大提升，在许多测试中都比 3B+ 快出 50%。这可能是树莓派 4 最有用的更新，因为性能的瓶颈几乎都在缓慢的磁盘 I/O 上。</p>
               <h3 id="p7zip-基准测试">p7zip 基准测试</h3>
               <p>7-zip 有个自带的基准测试工具，当然 <code class="language-plaintext highlighter-rouge">p7zip</code>（7-zip 的 POSIX 移植）也有。我使用这个工具来测试树莓派的压缩与解压性能。</p>
@@ -306,7 +306,7 @@ sysbench --test=memory --memory-block-size=1M --memory-total-size=2G --memory-op
 </code></pre>
                 </div>
               </div>
-              <p><img src="https://planet.ustclug.org/wp-content/uploads/2019/09/p7zip.png" alt="img" />p7zip 基准测试，越高越好</p>
+              <p><img src="https://static.beta.ustclug.org/planet/p7zip.png" alt="img" />p7zip 基准测试，越高越好</p>
               <p>如<a href="https://sevenzip.osdn.jp/chm/cmdline/commands/bench.htm">此帮助文档</a>所言，压缩更依赖于内存的吞吐量与延迟，这可能是两块树莓派间在压缩测试中差距增大的原因。总之，树莓派 4 在 p7zip 测试中有 1/3 的性能提升。</p>
               <h3 id="openssl-速度测试">OpenSSL 速度测试</h3>
               <p>OpenSSL 是目前最流行的密码学软件库，它也包含了一个内置的速度测试。结果是在所有块大小中最快的那个——在 4 个测试中大小都是 16,384 字节。</p>
@@ -319,12 +319,12 @@ openssl speed -evp sha256
 </code></pre>
                 </div>
               </div>
-              <p><img src="https://planet.ustclug.org/wp-content/uploads/2019/09/openssl.png" alt="img" />OpenSSL 基准测试，单位为 MB/s，越高越好</p>
+              <p><img src="https://static.beta.ustclug.org/planet/openssl.png" alt="img" />OpenSSL 基准测试，单位为 MB/s，越高越好</p>
               <h3 id="网络速度测试">网络速度测试</h3>
               <p>树莓派 4 将 300 Mbps 以太网升级到了真正的千兆网口，如果你打算用它来当离线下载器或者 NAS 的话，这是极好的。这里我跑了两个测试，看看网络究竟如何。</p>
               <h4 id="curl-文件下载测试">CURL 文件下载测试</h4>
               <p>这项测试非常简单：使用 cURL 从局域网机器下载文件，查看速度。</p>
-              <p><img src="https://planet.ustclug.org/wp-content/uploads/2019/09/cURL.png" alt="img" />cURL 下载速度，单位为 MB/s，越高越好</p>
+              <p><img src="https://static.beta.ustclug.org/planet/cURL.png" alt="img" />cURL 下载速度，单位为 MB/s，越高越好</p>
               <p>结果不如预想那么好：树莓派 4 没能跑出千兆的速度，而我旁边的 x86 Linux 盒子就做到了。</p>
               <h4 id="nginx-性能测试">NGINX 性能测试</h4>
               <p>另一个常见的场景是：使用 NGINX 提供网页服务（对不起，这里没有 Apache 的位置）。我在两块树莓派上都安装了 NGINX，设置了 <code class="language-plaintext highlighter-rouge">access_log off</code>，并在我的 x86 盒子上使用 Siege 4.0.4 对树莓派服务器进行基准测试。</p>
@@ -335,7 +335,7 @@ siege -c 25 -r 400 [host]
 </code></pre>
                 </div>
               </div>
-              <p><img src="https://planet.ustclug.org/wp-content/uploads/2019/09/nginx.png" alt="img" />NGINX 性能，单位为请求数每秒，越高越好</p>
+              <p><img src="https://static.beta.ustclug.org/planet/nginx.png" alt="img" />NGINX 性能，单位为请求数每秒，越高越好</p>
               <p>在 CPU 性能与网络速度的双重提升下，新的树莓派 4 速度接近 3B+ 的两倍。如果你想用树莓派搭个网站的话，这是个好消息。</p>
               <h3 id="应用程序性能">应用程序性能</h3>
               <p>我选择了两个我最熟悉的编程语言环境：Python 和 Ruby（我对 Node 不熟）来进行测试。</p>
@@ -355,7 +355,7 @@ siege -c 25 -r 400 [host]
                 </div>
               </div>
               <p>Ruby 测试就简单很多：使用 Jekyll 构建<a href="https://ibugone.com/">我的站点</a>，查看消耗的时间。</p>
-              <p><img src="https://planet.ustclug.org/wp-content/uploads/2019/09/python-ruby.png" alt="img" />应用程序性能，单位为秒，越低越好</p>
+              <p><img src="https://static.beta.ustclug.org/planet/python-ruby.png" alt="img" />应用程序性能，单位为秒，越低越好</p>
               <p>Ruby 测试比 Python 测试更加均衡，因为它主要测试的是纯计算性能，结果 Ruby 测试中性能差距就要小一些。</p>
               <p>不过等等，这不代表树莓派 4 对大型的 Python 或者 Ruby 项目来说是个好的选择。相同的测试在我的 x86 盒子（i7-8850H, 32 GB DDR4, NVMe SSD）上<strong>快了 10 倍</strong>，其仅使用 5 秒运行 Python 脚本，4 秒构建我的 Jekyll 站点。毕竟，你不能期望一个只卖 55 美元的板子能够有毁天灭地的性能，不是吗？</p>
               <h3 id="usb-io-性能">USB I/O 性能</h3>
@@ -368,7 +368,7 @@ siege -c 25 -r 400 [host]
 </code></pre>
                 </div>
               </div>
-              <p><img src="https://planet.ustclug.org/wp-content/uploads/2019/09/fio-usb.png" alt="img" />USB 速度，单位为 MB/s，越高越好</p>
+              <p><img src="https://static.beta.ustclug.org/planet/fio-usb.png" alt="img" />USB 速度，单位为 MB/s，越高越好</p>
               <p>结果很棒！升级后的 USB 3.0 接口，即使没有跑到最高速，也比前代树莓派高出很多。但在享受高速 USB 之前，再让我强调一次：请特别关注你的 USB 外设，特别是那些有点儿耗电的设备，像机械硬盘和 SSD。如果电力得以保证，利用那两个高速 USB 接口对于 NAS 或者其他存储扩展来说好处多多。</p>
               <h2 id="总结">总结</h2>
               <p>在体验过 3B 到 3B+ 的小小提升后，新的树莓派 4 对于大多数树莓派爱好者来说，都是一场盛宴。价格不变，即使你已经有个 3B+，树莓派 4 也可以说是必买的。尽管在供电和散热上有缺点，如果你不插太多外设，不在树莓派上放太多重型任务的话，也没什么关系。</p>
