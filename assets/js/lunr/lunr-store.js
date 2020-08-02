@@ -329,6 +329,18 @@ var store = [{
 "url": "https://beta.ustclug.org//planet/2018/08/2018-08-08-hello-lug-planet/",
 "teaser": null
 },{
+"title": "nc 是什么？",
+"excerpt":"nc/ncat 是 netcat 的缩写，它可以读写 TCP 与 UDP 端口——或许你看不懂这句话，这没有关系。简单地说，它可以在字符界面下，让你和服务器沟通交流。 一般来说，有很多题目都会要求你使用 nc 连接到他们的服务器，并且进行交互，获得 flag。 如何安装 nc？ nc 命令在 macOS 中是自带的，在 Linux 中一般自带，或是可以使用相应的软件包管理器安装（如在 Debian/Ubuntu 中这个包名叫 netcat）。 当然，如果你在看这篇手册，你的操作系统很有可能是 Windows。它不自带 nc，尽管可以用 WSL 或者虚拟机的方式解决，但是如果你觉得这样太麻烦了，也有另外一些方法。 使用静态链接的 ncat 程序 前往 https://github.com/andrew-d/static-binaries/blob/master/binaries/windows/x86/ncat.exe 下载此程序。我们也在这里提供了一份。下载下来即可。 ncat.zip 下载 注：nc/ncat 事实上是两个不同的程序，但在我们接下来的使用上，基本没有区别。ncat 是由 Nmap 项目开发的“重置版的 Netcat”。 我的杀毒软件报毒！ 这是 virustotal 的检测结果：https://www.virustotal.com/gui/file/d0baada87420dd7c2e63d0dd3248749c06b53806d3021863c4fa659608053a8a/detection 如果你不相信此来源，也可以下载 nmap（一个网络探测、扫描工具），它会附带一个 ncat。 如何使用...","categories": ["Tech Tutorial"],
+"tags": ["hackergame","netcat"],
+"url": "https://beta.ustclug.org//planet/2019/09/2019-09-16-how-to-use-nc/",
+"teaser": null
+},{
+"title": "【译稿】树莓派 4 评测与基准测试：与树莓派 3B+ 相比的改进",
+"excerpt":"原文地址：https://ibugone.com/blog/2019/09/raspberry-pi-4-review-benchmark/，作者为 @iBug 同学。以下为翻译部分。 前段时间，我终于拿到了自己心念的树莓派 4（4 GB 的型号），之后我就忍不住试了试，看看它在报道中提到的改进与提升究竟是什么样子的。 我自己的树莓派 3B+ 有个外壳，所以这次购买树莓派 4 的同时，我也订了个铝制的外壳，以减轻发热给树莓派带来的压力。与之前的外壳不同的是，它还配备了两个小风扇，能够大幅度提高散热效率。 就让我们来看一看吧。 概览 新的树莓派 4 装在了类似 3B+ 的包装中，包装正面是树莓派 4 的红底白线的结构图，与本体大小相同。与树莓派 3B 不同的是，3B+ 和 4 都没有用防静电袋包好。当然，这不是什么问题。 它的结构与前几代类似，不过有一些明显的变化。比如说，你肯定会最先注意到那几个 USB 3.0 接口——因为它们是蓝色的。在你观察那几个接口的同时，你很可能也注意到了，有可能是因为千兆网口的升级的缘故，以太网接口换了位置。 有一些小接口，即供电口和视频输出，也有一些变化。树莓派 4 现在需要一根 Type-C 线供电，并且需求提升到了 5V / 3A。目前尚且不知树莓派 4 是否支持类似于高通快充或者 USB PD 这样的快充技术，但是从用户反馈来看，是没有的。旧款上标准大小的 HDMI 也被 micro-HDMI 口替换——而且变成了两个：它们都支持 4K 60fps 输出，而且可以同时输出！尽管我打算把树莓派当无头（无显示的）服务器来用，用树莓派配桌面环境的人可能会喜欢这个特性。...","categories": ["Technology","Translation"],
+"tags": ["树莓派"],
+"url": "https://beta.ustclug.org//planet/2019/09/2019-09-17-raspberry-4/",
+"teaser": null
+},{
 "title": "中国科学技术大学 Linux 用户协会",
 "excerpt":"中国科学技术大学 Linux 用户协会（科大 LUG）是由在校的 GNU/Linux 爱好者发起并组成的全校性群众团体，是一个以推广自由软件文化、宣传自由软件价值为目的的协会组织。  了解更多  ","categories": [],
 "tags": [],

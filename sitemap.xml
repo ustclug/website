@@ -221,24 +221,32 @@
       <lastmod>2018-08-08T00:00:00+08:00</lastmod>
     </url>
     <url>
+      <loc>https://beta.ustclug.org//planet/2019/09/2019-09-16-how-to-use-nc/</loc>
+      <lastmod>2019-09-16T00:00:00+08:00</lastmod>
+    </url>
+    <url>
+      <loc>https://beta.ustclug.org//planet/2019/09/2019-09-17-raspberry-4/</loc>
+      <lastmod>2019-09-17T00:00:00+08:00</lastmod>
+    </url>
+    <url>
       <loc>https://beta.ustclug.org//wiki/</loc>
-      <lastmod>2020-08-02T00:01:59+08:00</lastmod>
+      <lastmod>2020-08-02T18:16:47+08:00</lastmod>
     </url>
     <url>
       <loc>https://beta.ustclug.org//wiki/intro/</loc>
-      <lastmod>2020-08-02T00:01:59+08:00</lastmod>
+      <lastmod>2020-08-02T18:16:47+08:00</lastmod>
     </url>
     <url>
       <loc>https://beta.ustclug.org//wiki/lug/events/sfd/</loc>
-      <lastmod>2020-08-02T00:01:59+08:00</lastmod>
+      <lastmod>2020-08-02T18:16:47+08:00</lastmod>
     </url>
     <url>
       <loc>https://beta.ustclug.org//wiki/lug/links/</loc>
-      <lastmod>2020-08-02T00:01:59+08:00</lastmod>
+      <lastmod>2020-08-02T18:16:47+08:00</lastmod>
     </url>
     <url>
       <loc>https://beta.ustclug.org//wiki/lug/person-in-charge/</loc>
-      <lastmod>2020-08-02T00:01:59+08:00</lastmod>
+      <lastmod>2020-08-02T18:16:47+08:00</lastmod>
     </url>
     <url>
       <loc>https://beta.ustclug.org//categories/</loc>
@@ -373,6 +381,15 @@
       <loc>https://beta.ustclug.org//tags/linux-101/</loc>
     </url>
     <url>
+      <loc>https://beta.ustclug.org//tags/hackergame/</loc>
+    </url>
+    <url>
+      <loc>https://beta.ustclug.org//tags/netcat/</loc>
+    </url>
+    <url>
+      <loc>https://beta.ustclug.org//tags/%E6%A0%91%E8%8E%93%E6%B4%BE/</loc>
+    </url>
+    <url>
       <loc>https://beta.ustclug.org//categories/lug%E6%B4%BB%E5%8A%A8/</loc>
     </url>
     <url>
@@ -398,6 +415,15 @@
     </url>
     <url>
       <loc>https://beta.ustclug.org//categories/lug-%E6%B4%BB%E5%8A%A8/</loc>
+    </url>
+    <url>
+      <loc>https://beta.ustclug.org//categories/tech-tutorial/</loc>
+    </url>
+    <url>
+      <loc>https://beta.ustclug.org//categories/technology/</loc>
+    </url>
+    <url>
+      <loc>https://beta.ustclug.org//categories/translation/</loc>
     </url>
     <url>
       <loc>https://beta.ustclug.org//news/</loc>
