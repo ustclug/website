@@ -329,6 +329,18 @@ var store = [{
 "url": "https://beta.ustclug.org//planet/2018/08/2018-08-08-hello-lug-planet/",
 "teaser": null
 },{
+"title": "PXE 是什么",
+"excerpt":"预启动执行环境（Preboot eXecution Environment，PXE，也被称为预执行环境)提供了一种使用网络接口（Network Interface）启动计算机的机制。这种机制让计算机的启动可以不依赖本地数据存储设备（如硬盘）或本地已安装的操作系统。——摘自 Archwiki PXE 原理介绍 PXE 协议是由 Intel 设计的，它可以使计算机通过网络启动。协议分为 client 和 server 两端，PXE client 在网卡的 ROM 中，当计算机引导时，BIOS 把 PXE client 调入内存执行，并显示出命令菜单，经用户选择后，PXE client 将放置在远端的操作系统通过网络下载到本地运行。 PXE 可以通过网络直接启动一些 Live Linux，或者调用 Linux Installer，GParted 等工具，较使用 U 盘启动更加方便快捷，有多种工具，Live 系统等可供用户挑选，在紧急维护情况下也有很大的作用。 例子：图书馆查询机 图书馆内的图书查询机就是用 PXE 启动的，启动镜像叫 liims，里面包含了一个以图书馆透明计算系统为主页的浏览器（主页包括了图书查询，邮箱登录，学习空间预约等功能），还有瀚海星云的 telnet 客户端和彩虹猫，用户也可以自己启动一个虚拟机，用 PXE 启动进入查询系统。 PXE 怎么用 使用条件 电脑最好内置有 PXE Boot...","categories": ["Technology"],
+"tags": ["PXE"],
+"url": "https://beta.ustclug.org//planet/2018/10/2018-10-07-pxe-intro/",
+"teaser": null
+},{
+"title": "一个 NFS 的简介",
+"excerpt":"NFS（网络文件系统，Network File System）是一个分布式的文件系统，可以用于在局域网中共享文件。它通常运用在 Unix 与类 Unix 操作系统中。对于 Linux 服务器之间的文件共享来说，NFS 相比于其他的方案（如 Samba）更加方便，性能也更好。对于应用程序来说，NFS 也是透明的。 简单配置 NFS 我们以两台 Debian 10 的机器为例[^1]简单配置 NFS 服务端。其余的发行版可以查询各自的手册以获取详细信息。 在绝大多数情况下，NFS 支持已经安装在 Linux 内核中。我们可以使用以下命令安装内核态的 NFS 服务器实现： sudo apt install nfs-kernel-server （如果有兼容 NFSv2 和 NFSv3 的需求，需要安装 portmap） 出于安全性的考虑[^2]，我们假设 NFS 共享的根目录是 /srv/nfs4。 如果需要共享的目录在其他位置，可以使用 bind mount 的方式挂载上去。（当然，对于简单的配置来说，不这样做问题也不大） mount --bind 实际放置文件的目录 /srv/nfs/your_folder_name 编辑 /etc/exports，设置共享文件夹的位置、允许访问的...","categories": ["Technology"],
+"tags": ["NFS"],
+"url": "https://beta.ustclug.org//planet/2019/08/2019-08-28-nfs-intro/",
+"teaser": null
+},{
 "title": "nc 是什么？",
 "excerpt":"nc/ncat 是 netcat 的缩写，它可以读写 TCP 与 UDP 端口——或许你看不懂这句话，这没有关系。简单地说，它可以在字符界面下，让你和服务器沟通交流。 一般来说，有很多题目都会要求你使用 nc 连接到他们的服务器，并且进行交互，获得 flag。 如何安装 nc？ nc 命令在 macOS 中是自带的，在 Linux 中一般自带，或是可以使用相应的软件包管理器安装（如在 Debian/Ubuntu 中这个包名叫 netcat）。 当然，如果你在看这篇手册，你的操作系统很有可能是 Windows。它不自带 nc，尽管可以用 WSL 或者虚拟机的方式解决，但是如果你觉得这样太麻烦了，也有另外一些方法。 使用静态链接的 ncat 程序 前往 https://github.com/andrew-d/static-binaries/blob/master/binaries/windows/x86/ncat.exe 下载此程序。我们也在这里提供了一份。下载下来即可。 ncat.zip 下载 注：nc/ncat 事实上是两个不同的程序，但在我们接下来的使用上，基本没有区别。ncat 是由 Nmap 项目开发的“重置版的 Netcat”。 我的杀毒软件报毒！ 这是 virustotal 的检测结果：https://www.virustotal.com/gui/file/d0baada87420dd7c2e63d0dd3248749c06b53806d3021863c4fa659608053a8a/detection 如果你不相信此来源，也可以下载 nmap（一个网络探测、扫描工具），它会附带一个 ncat。 如何使用...","categories": ["Tech Tutorial"],
 "tags": ["hackergame","netcat"],
