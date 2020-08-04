@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.19.3 by Michael Rose
+  Minimal Mistakes Jekyll Theme 4.20.1 by Michael Rose
   Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
@@ -39,7 +39,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=11b50d2">
+    <link rel="stylesheet" href="/assets/css/main.css?v=e67379d">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
     <!--[if IE]>
       <style>
@@ -61,11 +61,11 @@
   </head>
   <body class="layout--home">
     <nav class="skip-links">
-      <h2 class="screen-reader-text">Skip links</h2>
+      <h2 class="screen-reader-text">跳转链接</h2>
       <ul>
-        <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
-        <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
-        <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+        <li><a href="#site-nav" class="screen-reader-shortcut">转到主导航栏</a></li>
+        <li><a href="#main" class="screen-reader-shortcut">转到内容</a></li>
+        <li><a href="#footer" class="screen-reader-shortcut">转到底部</a></li>
       </ul>
     </nav>
     <!--[if lt IE 9]>
@@ -118,82 +118,124 @@
       <div id="main" role="main">
         <div class="archive">
           <h3 class="archive__subtitle">最新文章</h3>
-          <div class="list__item">
-            <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-              <h2 class="archive__item-title" itemprop="headline">
-                <a href="/news/2020/05/2020-05-26-servers-down/" rel="permalink">近期部分服务中断通知（已修复）
-                </a>
-              </h2>
-              <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i>
-                少于 1 分钟阅读
-              </p>
-              <p class="archive__item-excerpt" itemprop="description">2020-06-05 10:27 Update 5
-              </p>
-            </article>
-          </div>
-          <div class="list__item">
-            <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-              <h2 class="archive__item-title" itemprop="headline">
-                <a href="/news/2020/03/2020-03-15-linux101-online/" rel="permalink">Linux 101 第一课在线上顺利举行
-                </a>
-              </h2>
-              <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i>
-                1 分钟阅读
-              </p>
-              <p class="archive__item-excerpt" itemprop="description">Linux 101 第一课在线上顺利举行
-              </p>
-            </article>
-          </div>
-          <div class="list__item">
-            <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-              <h2 class="archive__item-title" itemprop="headline">
-                <a href="/news/2020/01/2020-01-06-server-down/" rel="permalink">服务器宕机通知（已恢复）
-                </a>
-              </h2>
-              <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i>
-                少于 1 分钟阅读
-              </p>
-              <p class="archive__item-excerpt" itemprop="description">2020-01-07 Update 3
-              </p>
-            </article>
-          </div>
-          <div class="list__item">
-            <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-              <h2 class="archive__item-title" itemprop="headline">
-                <a href="/news/2019/12/2019-12-15-hackergame-2019/" rel="permalink">中国科学技术大学第六届信息安全大赛圆满结束
-                </a>
-              </h2>
-              <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i>
-                2 分钟阅读
-              </p>
-              <p class="archive__item-excerpt" itemprop="description">2019 年 10 月 22 日中午 12:00，网站提交答案的窗口关闭，也宣布着第六届信息安全大赛落下帷幕。
-              </p>
-            </article>
-          </div>
-          <div class="list__item">
-            <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-              <h2 class="archive__item-title" itemprop="headline">
-                <a href="/news/2019/09/2019-09-28-2019-sfd-ustc/" rel="permalink">2019 软件自由日中国科大站
-                </a>
-              </h2>
-              <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i>
-                2 分钟阅读
-              </p>
-              <p class="archive__item-excerpt" itemprop="description">2019 年 9 月 21 日下午，2019 年软件自由日（SFD）中国科大站活动在西区 3C102 教室顺利举办。
-              </p>
-            </article>
+          <div class="entries-list">
+            <div class="list__item">
+              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                <h2 class="archive__item-title no_toc" itemprop="headline">
+                  <a href="/news/2020/05/2020-05-26-servers-down/" rel="permalink">近期部分服务中断通知（已修复）
+                  </a>
+                </h2>
+                <p class="page__meta">
+                  <span class="post__meta-date">
+                    <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                    <time datetime="2020-05-26T23:00:00+08:00">May 26, 2020</time>
+                  </span>
+                  <span class="post__meta-sep"></span>
+                  <span class="post__meta-read-time">
+                    <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+                    少于 1 分钟阅读
+                  </span>
+                </p>
+                <p class="archive__item-excerpt" itemprop="description">2020-06-05 10:27 Update 5
+                </p>
+              </article>
+            </div>
+            <div class="list__item">
+              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                <h2 class="archive__item-title no_toc" itemprop="headline">
+                  <a href="/news/2020/03/2020-03-15-linux101-online/" rel="permalink">Linux 101 第一课在线上顺利举行
+                  </a>
+                </h2>
+                <p class="page__meta">
+                  <span class="post__meta-date">
+                    <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                    <time datetime="2020-03-15T00:00:00+08:00">March 15, 2020</time>
+                  </span>
+                  <span class="post__meta-sep"></span>
+                  <span class="post__meta-read-time">
+                    <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+                    1 分钟阅读
+                  </span>
+                </p>
+                <p class="archive__item-excerpt" itemprop="description">Linux 101 第一课在线上顺利举行
+                </p>
+              </article>
+            </div>
+            <div class="list__item">
+              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                <h2 class="archive__item-title no_toc" itemprop="headline">
+                  <a href="/news/2020/01/2020-01-06-server-down/" rel="permalink">服务器宕机通知（已恢复）
+                  </a>
+                </h2>
+                <p class="page__meta">
+                  <span class="post__meta-date">
+                    <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                    <time datetime="2020-01-06T23:34:34+08:00">January 6, 2020</time>
+                  </span>
+                  <span class="post__meta-sep"></span>
+                  <span class="post__meta-read-time">
+                    <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+                    少于 1 分钟阅读
+                  </span>
+                </p>
+                <p class="archive__item-excerpt" itemprop="description">2020-01-07 Update 3
+                </p>
+              </article>
+            </div>
+            <div class="list__item">
+              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                <h2 class="archive__item-title no_toc" itemprop="headline">
+                  <a href="/news/2019/12/2019-12-15-hackergame-2019/" rel="permalink">中国科学技术大学第六届信息安全大赛圆满结束
+                  </a>
+                </h2>
+                <p class="page__meta">
+                  <span class="post__meta-date">
+                    <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                    <time datetime="2019-12-15T22:43:00+08:00">December 15, 2019</time>
+                  </span>
+                  <span class="post__meta-sep"></span>
+                  <span class="post__meta-read-time">
+                    <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+                    2 分钟阅读
+                  </span>
+                </p>
+                <p class="archive__item-excerpt" itemprop="description">2019 年 10 月 22 日中午 12:00，网站提交答案的窗口关闭，也宣布着第六届信息安全大赛落下帷幕。
+                </p>
+              </article>
+            </div>
+            <div class="list__item">
+              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                <h2 class="archive__item-title no_toc" itemprop="headline">
+                  <a href="/news/2019/09/2019-09-28-2019-sfd-ustc/" rel="permalink">2019 软件自由日中国科大站
+                  </a>
+                </h2>
+                <p class="page__meta">
+                  <span class="post__meta-date">
+                    <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                    <time datetime="2019-09-28T15:22:10+08:00">September 28, 2019</time>
+                  </span>
+                  <span class="post__meta-sep"></span>
+                  <span class="post__meta-read-time">
+                    <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+                    2 分钟阅读
+                  </span>
+                </p>
+                <p class="archive__item-excerpt" itemprop="description">2019 年 9 月 21 日下午，2019 年软件自由日（SFD）中国科大站活动在西区 3C102 教室顺利举办。
+                </p>
+              </article>
+            </div>
           </div>
           <nav class="pagination">
             <ul>
-              <li><a href="#" class="disabled"><span aria-hidden="true">向前</span></a></li>
-              <li><a href="/news/" class="disabled current">1</a></li>
+              <li><a href="#" class="disabled"><span aria-hidden="true">上一页</span></a></li>
+              <li><a href="/news/">1</a></li>
               <li><a href="/news/2/">2</a></li>
               <li><a href="/news/3/">3</a></li>
               <li><a href="/news/4/">4</a></li>
               <li><a href="/news/5/">5</a></li>
               <li><a href="#" class="disabled">&hellip;</a></li>
               <li><a href="/news/11/">11</a></li>
-              <li><a href="/news/2/">向后</a></li>
+              <li><a href="/news/2/">下一页</a></li>
             </ul>
           </nav>
         </div>
