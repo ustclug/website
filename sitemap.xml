@@ -237,24 +237,28 @@
       <lastmod>2019-09-17T00:00:00+08:00</lastmod>
     </url>
     <url>
+      <loc>https://beta.ustclug.org//planet/2020/08/2020-8-6-keeping-account-with-beancount/</loc>
+      <lastmod>2020-08-06T00:00:00+08:00</lastmod>
+    </url>
+    <url>
       <loc>https://beta.ustclug.org//wiki/</loc>
-      <lastmod>2020-08-05T02:12:18+08:00</lastmod>
+      <lastmod>2020-08-07T01:05:22+08:00</lastmod>
     </url>
     <url>
       <loc>https://beta.ustclug.org//wiki/intro/</loc>
-      <lastmod>2020-08-05T02:12:18+08:00</lastmod>
+      <lastmod>2020-08-07T01:05:22+08:00</lastmod>
     </url>
     <url>
       <loc>https://beta.ustclug.org//wiki/lug/events/sfd/</loc>
-      <lastmod>2020-08-05T02:12:18+08:00</lastmod>
+      <lastmod>2020-08-07T01:05:22+08:00</lastmod>
     </url>
     <url>
       <loc>https://beta.ustclug.org//wiki/lug/links/</loc>
-      <lastmod>2020-08-05T02:12:18+08:00</lastmod>
+      <lastmod>2020-08-07T01:05:22+08:00</lastmod>
     </url>
     <url>
       <loc>https://beta.ustclug.org//wiki/lug/person-in-charge/</loc>
-      <lastmod>2020-08-05T02:12:18+08:00</lastmod>
+      <lastmod>2020-08-07T01:05:22+08:00</lastmod>
     </url>
     <url>
       <loc>https://beta.ustclug.org//categories/</loc>
@@ -401,6 +405,12 @@
       <loc>https://beta.ustclug.org//tags/%E6%A0%91%E8%8E%93%E6%B4%BE/</loc>
     </url>
     <url>
+      <loc>https://beta.ustclug.org//tags/beancount/</loc>
+    </url>
+    <url>
+      <loc>https://beta.ustclug.org//tags/ecard/</loc>
+    </url>
+    <url>
       <loc>https://beta.ustclug.org//categories/lug%E6%B4%BB%E5%8A%A8/</loc>
     </url>
     <url>
@@ -435,6 +445,9 @@
     </url>
     <url>
       <loc>https://beta.ustclug.org//categories/translation/</loc>
+    </url>
+    <url>
+      <loc>https://beta.ustclug.org//categories/ustc/</loc>
     </url>
     <url>
       <loc>https://beta.ustclug.org//news/</loc>
@@ -482,6 +495,10 @@
     </url>
     <url>
       <loc>https://beta.ustclug.org//planet/</loc>
+      <lastmod>2020-07-29T02:20:00+08:00</lastmod>
+    </url>
+    <url>
+      <loc>https://beta.ustclug.org//planet/2/</loc>
       <lastmod>2020-07-29T02:20:00+08:00</lastmod>
     </url>
   </urlset>
