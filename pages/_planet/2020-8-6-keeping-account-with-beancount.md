@@ -9,8 +9,6 @@ tags:
 - eCard
 ---
 
-# 使用 Beancount 进行记账并自动记录一卡通消费
-
 本文首发于 <https://charlesliu7.github.io/blackboard/2019/07/24/beancount/>
 
 偶尔看到了复式记账这个概念，对精细记账的我而言很受用，选择 Beancount 这样的开源工具的原因莫过于账本数据完全由自己掌握，而不是被各大 APP
