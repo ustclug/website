@@ -115,7 +115,7 @@ comments:
 
 **预定链接：**
 
-[http://www.teeker.com/openstore](http://www.teeker.com/openstore)（我们真的有5种颜色，第一个类里有5种颜色，你好好找找！）
+<http://www.teeker.com/openstore>（我们真的有5种颜色，第一个类里有5种颜色，你好好找找！）
 
 **特别说明（一定要看）：**
 
@@ -147,7 +147,7 @@ B）如果你在科大，在TEEKER网站预定时候，直接选 中科大Linux�
 
 | 支付宝账户名称 | 姓名 | 验证特点 |
 |----|----|----|
-| cuihao.leo@gmail.com | 崔灏 | 头像标有“`panda photography`“字样 |
+| cuihao.leo@gmail.com | 崔灏 | 头像标有“`panda photography`”字样 |
 
 因为很重要所以说三遍，转账之后才能算完成预定（因为TEEKER那边我们没法区别是真预定还是刷票233)
 
@@ -177,4 +177,4 @@ B）如果你在科大，在TEEKER网站预定时候，直接选 中科大Linux�
 
 以上只是解释为什么我们版衫定价为50元，希望大家理解。
 
-快来订购吧！[http://www.teeker.com/openstore](http://www.teeker.com/openstore)
+快来订购吧！<http://www.teeker.com/openstore>
