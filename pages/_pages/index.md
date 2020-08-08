@@ -1,11 +1,15 @@
 ---
 title: "LUG @ USTC"
 excerpt: "中国科学技术大学 Linux 用户协会"
+tagline: "中国科学技术大学 Linux 用户协会"
 permalink: /
 layout: splash
 header:
-  overlay_image: https://image.ibugone.com/lug/lug-splash-1.jpg
-  overlay_filter: 0.2
+  overlay_image: "https://image.ibugone.com/lug/lug-sunshine-1.jpg"
+  overlay_filter: 0.4
+  actions:
+    - label: 了解更多
+      url: /wiki/intro/
 feature_row:
   - image_path: "https://image.ibugone.com/lug/lug-wiki-1.jpg"
     #image_caption: ""
