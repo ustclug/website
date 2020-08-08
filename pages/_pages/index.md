@@ -1,11 +1,15 @@
 ---
 title: "LUG @ USTC"
 excerpt: "中国科学技术大学 Linux 用户协会"
+tagline: "中国科学技术大学 Linux 用户协会"
 permalink: /
 layout: splash
 header:
-  overlay_image: https://image.ibugone.com/lug/lug-splash-1.jpg
-  overlay_filter: 0.2
+  overlay_image: "https://image.ibugone.com/lug/lug-splash-1.jpg"
+  overlay_filter: 0.25
+  actions:
+    - label: 了解更多
+      url: /wiki/intro/
 feature_row:
 
   + image_path: "https://image.ibugone.com/lug/lug-wiki-1.jpg"
@@ -56,7 +60,11 @@ feature_row:
   <div class="nav-right">
 
     <div class="description">
-      <p>中国科学技术大学 Linux 用户协会是由中国科学技术大学在校的 GNU/Linux 爱好者发起并组成的团体，旨在联合科大的 GNU/Linux 使用者，搭建信息交流共享的平台，宣传自由软件的价值，提高自由软件社区文化氛围，推广自由软件的应用。<br><a href="{{ "/wiki/intro" | relative_url }}">了解更多</a></p>
+      <p>
+      中国科学技术大学 Linux 用户协会是由中国科学技术大学在校的 GNU/Linux 爱好者发起并组成的团体，旨在联合科大的 GNU/Linux 使用者，搭建信息交流共享的平台，宣传自由软件的价值，提高自由软件社区文化氛围，推广自由软件的应用。
+      <!--br>
+      <a href="{{ "/wiki/intro" | relative_url }}">了解更多</a-->
+      </p>
     </div>
     <div class="link-group">
       <div class="link-group-row">

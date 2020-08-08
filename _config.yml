@@ -25,7 +25,7 @@ static_url               : "https://static.beta.ustclug.org"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "ustclug/website-beta" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : "https://static.beta.ustclug.org/logo-white.svg" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+logo                     : "https://ftp.lug.ustc.edu.cn/misc/LUG.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : # true, false (default)
 words_per_minute         : 350
@@ -270,6 +270,8 @@ defaults:
       toc_label: 目录
       share: true
       related: true
+      header:
+        show_overlay_excerpt: false
   - scope:
       path: ""
       type: wiki
@@ -284,6 +286,9 @@ defaults:
       type: news
     values:
       show_date: true
+      header:
+        overlay_image: https://image.ibugone.com/lug/lug-splash-1.jpg
+        overlay_filter: 0.2
   - scope:
       read_time: true
       path: ""
@@ -292,3 +297,6 @@ defaults:
       author_profile: true
       show_date: true
       read_time: true
+      header:
+        overlay_image: https://image.ibugone.com/lug/lug-planet-2.jpg
+        overlay_filter: 0.2

@@ -19,18 +19,11 @@ html {
   }
 }
 
-// Common colors
-
-.masthead,
-.page__footer {
-  background: linear-gradient(to left, #45a247, #283c86);
-  color: $masthead-link-color;
-}
-
 // Top nav bar
 
 .masthead {
   border-bottom: none;
+  background: $background-color;
 
   .masthead__menu {
     .greedy-nav {
@@ -48,6 +41,18 @@ html {
 .page__hero--overlay {
   text-align: center;
   margin-bottom: 1em;
+
+  /*
+  .page__title {
+    text-shadow: none;
+    color: #023692; //mix($primary-color, darkgreen, 60%);
+  }
+
+  .page__meta {
+    text-shadow: none;
+    color: $text-color;
+  }
+  */
 }
 
 .page__lead {
