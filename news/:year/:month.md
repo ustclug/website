@@ -32,36 +32,36 @@ tags: ""
 
 项目产出要求：**以下要求不需要全部达到，选择感兴趣的方向即可**
 
-* 调整页面结构，与 Nginx FancyIndex 结合，提供美观的文件列表页面
-* 改进页面功能，提供准确的仓库最近更新时间（可以参考 status 页面）
-  + 为了得到准确的更新时间，需要能够与多种同步后端结合，包括科大镜像站目前使用的镜像同步工具 Yuki，以及传统的 crontab + 同步脚本的方式
-* 与帮助页面更好的结合，例如
-  + 自动为新的帮助页添加首页上的链接
-* 提升易用性，例如
-  + 提供一个各大发行版的软件源配置生成器，方便用户快速切换软件源
-* 美化页面，例如
-  + 使用响应式设计在不同平台上都能提供良好的显示效果
-  + 提供对深色模式的支持
-* 前端工程化，提高可维护性，例如
-  + 使用 Sass 或 LESS 重构 CSS 结构
-  + 使用 Vue.js 实现前端模板和（部分）动态页面效果
-  + 分离获取更新时间等仓库信息的这部分逻辑，更方便与其他数据源对接
-* 改善部署文档，方便其他需要的镜像站部署
+- 调整页面结构，与 Nginx FancyIndex 结合，提供美观的文件列表页面
+- 改进页面功能，提供准确的仓库最近更新时间（可以参考 status 页面）
+  - 为了得到准确的更新时间，需要能够与多种同步后端结合，包括科大镜像站目前使用的镜像同步工具 Yuki，以及传统的 crontab + 同步脚本的方式
+- 与帮助页面更好的结合，例如
+  - 自动为新的帮助页添加首页上的链接
+- 提升易用性，例如
+  - 提供一个各大发行版的软件源配置生成器，方便用户快速切换软件源
+- 美化页面，例如
+  - 使用响应式设计在不同平台上都能提供良好的显示效果
+  - 提供对深色模式的支持
+- 前端工程化，提高可维护性，例如
+  - 使用 Sass 或 LESS 重构 CSS 结构
+  - 使用 Vue.js 实现前端模板和（部分）动态页面效果
+  - 分离获取更新时间等仓库信息的这部分逻辑，更方便与其他数据源对接
+- 改善部署文档，方便其他需要的镜像站部署
 
 项目技术要求：
 
-* 熟练一种方便灵活的编程语言及该语言常用的模板框架，例如
-  + Python 和 Jinja2
-  + Ruby 和 ERB
-* 或者熟悉一种静态网站生成器的使用，例如
-  + Jekyll
-  + Hugo
-* 熟悉 web 纯前端开发
+- 熟练一种方便灵活的编程语言及该语言常用的模板框架，例如
+  - Python 和 Jinja2
+  - Ruby 和 ERB
+- 或者熟悉一种静态网站生成器的使用，例如
+  - Jekyll
+  - Hugo
+- 熟悉 web 纯前端开发
 
 相关的开源软件仓库列表：
 
-* <https://git.lug.ustc.edu.cn/mirrors/mirrors-index>
-* <https://github.com/ustclug/yuki>
+- <https://git.lug.ustc.edu.cn/mirrors/mirrors-index>
+- <https://github.com/ustclug/yuki>
 
 License: [GNU GPLv2](https://git.lug.ustc.edu.cn/mirrors/mirrors-index/-/blob/master/LICENSE)
 
@@ -78,29 +78,26 @@ License: [GNU GPLv2](https://git.lug.ustc.edu.cn/mirrors/mirrors-index/-/blob/ma
 合作导师联系方式（选填）：暂无。
 
 项目产出要求：**以下要求不需要全部达到，选择感兴趣的方向即可**
-
-  + 在不影响安全性和可靠性的前提下，用 Django REST Framework 重构后端，用现代前端工具链（Yarn、webpack 等）重构前端
-  + 增加自动测试、Docker 化部署、持续集成等工具
-  + 通过重构去除代码中写死的规则，如登录方式、参赛组列表、每个参赛组需要收集的个人信息
-  + 改正一些不正确的业务模型，如：
+  - 在不影响安全性和可靠性的前提下，用 Django REST Framework 重构后端，用现代前端工具链（Yarn、webpack 等）重构前端
+  - 增加自动测试、Docker 化部署、持续集成等工具
+  - 通过重构去除代码中写死的规则，如登录方式、参赛组列表、每个参赛组需要收集的个人信息
+  - 改正一些不正确的业务模型，如：
       - 题目应该支持打开链接、下载源代码、下载文件等操作，而不是只能打开一个 URL
       - 用户组、用户属性和权限的模型需要重新设计
       - 比赛应该有尚未开始、正在进行、暂停、结束等多种状态，而不是只有开/关两种
-  + 增加一些新功能，如：
+  - 增加一些新功能，如：
       - 让出题、导入题目、审查题目、修改题目等操作更容易
       - 所有操作保留历史记录以便审计和回滚
       - 支持动态分数题目
       - 支持 I18N
 
 项目技术要求：
-
-  + 熟练使用 Python 和 Django
-  + 了解前后端开发和运维全过程
-  + 会避免常见的 web 安全漏洞
+  - 熟练使用 Python 和 Django
+  - 了解前后端开发和运维全过程
+  - 会避免常见的 web 安全漏洞
 
 相关的开源软件仓库列表：
-
-  + <https://github.com/ustclug/hackergame>
+  - <https://github.com/ustclug/hackergame>
 
 License: [MIT](https://github.com/ustclug/hackergame/blob/master/LICENSE)
 
@@ -125,29 +122,28 @@ License: [MIT](https://github.com/ustclug/hackergame/blob/master/LICENSE)
 合作导师联系方式（选填）：暂无。
 
 项目产出要求：
-
-  + 基于现有的对象存储实现进行修改，支持以上提到的部分特性，包括：
+  - 基于现有的对象存储实现进行修改，支持以上提到的部分特性，包括：
     - 坏盘更新元数据，删除对应文件，平滑过渡
     - 平衡各个磁盘的读负载，避免负载集中在同一块磁盘上
     - SSD 加速读请求（可选）
-  + 测量下游的 rsync 同步为对象存储方案带来的性能影响。（可选）
-  + 服务器集群（可选）
+  - 测量下游的 rsync 同步为对象存储方案带来的性能影响。（可选）
+  - 服务器集群（可选）
     - 使用单副本的方式，一旦磁盘故障，在下次成功同步之前，将会出现镜像不完整的问题。此时可以从集群中的其他节点获取数据。
     - 镜像分级。对于不重要的镜像（或目录），可以在多个节点之间共享一个副本，从而提高可用空间，为更多镜像服务。
 
 项目技术要求：
 
-  + 熟悉任何一种高性能的编程语言
-  + 能够阅读并理解现有对象存储的实现，以提出改进方案
-  + 对文件系统的实现有一定了解
+  - 熟悉任何一种高性能的编程语言
+  - 能够阅读并理解现有对象存储的实现，以提出改进方案
+  - 对文件系统的实现有一定了解
 
 相关的开源软件仓库列表：
 
-  + <https://www.openio.io> (开源对象存储实现)
-  + <https://github.com/minio/minio> (开源对象存储实现)
-  + <https://github.com/openstack/swift> (开源对象存储实现)
-  + <https://rclone.org/> (S3 API fuse 实现)
-  + <https://github.com/kahing/goofys/> (S3 API fuse 实现)
+  - <https://www.openio.io> (开源对象存储实现)
+  - <https://github.com/minio/minio> (开源对象存储实现)
+  - <https://github.com/openstack/swift> (开源对象存储实现)
+  - <https://rclone.org/> (S3 API fuse 实现)
+  - <https://github.com/kahing/goofys/> (S3 API fuse 实现)
 
 License: 与指定修改的开源对象存储实现相同。
 
@@ -168,20 +164,17 @@ License: 与指定修改的开源对象存储实现相同。
 合作导师联系方式（选填）：暂无。
 
 项目产出要求：
-
-* 实现 rsync 反向代理
-  + 解析 rsync 握手协议
-  + 处理不同协议版本号间的兼容性
-* 支持透明代理特性（可选）
+- 实现 rsync 反向代理
+	- 解析 rsync 握手协议
+	- 处理不同协议版本号间的兼容性
+- 支持透明代理特性（可选）
 
 项目技术要求：
-
-* 对网络编程有一定了解
-* 能够阅读并理解 rsync 工具源代码，理解其协议
+- 对网络编程有一定了解
+- 能够阅读并理解 rsync 工具源代码，理解其协议
 
 相关的开源软件仓库列表：
-
-* https://git.samba.org/?p=rsync.git (原版 rsync)
-* https://github.com/tuna/rsync (TUNA 实现的 rsync，缓存元数据在内存中以减少磁盘开销。科大镜像站目前亦使用此版本的 rsync 为下游提供服务。)
+- https://git.samba.org/?p=rsync.git (原版 rsync)
+- https://github.com/tuna/rsync (TUNA 实现的 rsync，缓存元数据在内存中以减少磁盘开销。科大镜像站目前亦使用此版本的 rsync 为下游提供服务。)
 
 License: 自定，[OSI 组织认证的开源协议](https://opensource.org/licenses)即可。注意：如果计划在完成项目时使用 rsync 的源代码，则协议需要使用 [GNU GPLv3](https://www.gnu.org/licenses/gpl-3.0.html)。
