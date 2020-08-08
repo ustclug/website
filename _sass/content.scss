@@ -1,5 +1,28 @@
 // This file is imported within a { .page__content } block
 
+h1 {
+  font-size: 2em;
+  margin-top: 2em;
+}
+
+h2 {
+  font-size: 1.67em;
+  margin-top: 1em;
+}
+
+h3 {
+  font-size: 1.33em;
+  margin-top: 1em;
+}
+
+h4 {
+  font-size: 1.17em;
+}
+
+h5 {
+  font-size: 1.08em;
+}
+
 .lug-nav {
   width: 100%;
   display: flex;
