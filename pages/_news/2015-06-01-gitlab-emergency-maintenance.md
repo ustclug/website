@@ -3,9 +3,7 @@ title: GitLab服务器紧急维护通知
 author: Gao, Yifan
 date: '2015-06-01 18:49:53 +0800'
 categories:
-
-* LUG服务
-
+- LUG服务
 tags: []
 comments: []
 ---

@@ -3,22 +3,18 @@ title: 2010年LUG服务器维护计划研讨会
 author: Stephen
 date: '2010-10-19 00:37:50 +0800'
 categories:
-
-* LUG会议
-
+- LUG会议
 tags:
-
-* PXE
-* LUG
-* Meeting
-
+- PXE
+- LUG
+- Meeting
 comments: []
 ---
 2010年10月15日晚上，LUG在科大西区图书馆组织了服务器维护小组第一次例会，会议由LUG协会现任副会长张成同学主持，集中讨论了发展现有网络服务的计划。20余位LUG志愿者参加了本次会议。
 
 ![会议现场](https://ftp.lug.ustc.edu.cn/wp-content/gallery/2010-lug-pxe-dev-meeting/img_8131.jpg)
 
-张成首先介绍了现在学校linux 用户协会服务器现状，包括debian, oss, pxe, freeshell, lug.ustc等服务器的配置、历史介绍等。然后张成详细介绍了本学期服务器维护小组的工作计划，包括oss/debian系统和服务的更新以及pxe服务的改造构想。
+张成首先介绍了现在学校linux 用户协会服务器现状，包括debian,oss,pxe,freeshell,lug.ustc等服务器的配置、历史介绍等。然后张成详细介绍了本学期服务器维护小组的工作计划，包括oss/debian系统和服务的更新以及pxe服务的改造构想。
 
 ![张成介绍服务器现状](https://ftp.lug.ustc.edu.cn/wp-content/gallery/2010-lug-pxe-dev-meeting/img_8126.jpg)
 

@@ -3,53 +3,40 @@ title: mirrors.ustc.edu.cn开张啦！
 author: Stephen
 date: '2011-04-14 01:55:12 +0800'
 categories:
-
-* LUG活动
-
+- LUG活动
 tags:
-
-* LUG
-* mirrors.ustc.edu.cn
-
+- LUG
+- mirrors.ustc.edu.cn
 comments:
-
-* id: 36
-
+- id: 36
   author: 我是一块月饼
   author_email: yezigao0427@163.com
   author_url: ''
   date: '2011-12-03 00:05:50 +0800'
   date_gmt: '2011-12-02 16:05:50 +0800'
   content: "请问mirrors.ustc.edu是什么?\r\n\r\n为什么我下载firefox的时候会出现firefox setup 8.0.1 exe.
-
     from mirrors.ustc.edu.cn?\r\n\r\n谢谢你的解答"
-
-* id: 37
-
+- id: 37
   author: redsky0802
   author_email: redsky0802@gmail.com
   author_url: ''
   date: '2011-12-03 01:10:56 +0800'
   date_gmt: '2011-12-02 17:10:56 +0800'
   content: 你好，mirrors.ustc.edu.cn是科大开源软件镜像站，这里有包括firefox在内的大量开源软件的镜像。你下载firefox的时候，有可能会从多个镜像中选择一个最近或者最快的镜像站点下载。
-
-* id: 48
-
+- id: 48
   author: Aenon
   author_email: s.sn.giraffe@gmail.com
   author_url: http://aenon.co.cc
   date: '2011-12-19 10:10:50 +0800'
   date_gmt: '2011-12-19 02:10:50 +0800'
   content: "你好，mirrors.ustc.edu.cn 是中科大Linux用户组维护的开源软件镜像，其中包括了 Mozilla 的软件源。\r\n\r\nFirefox
-
     会根据你的ip自动选择最近的镜像站点，所以你可能会从这里下载到firefox. 无论从哪个镜像下载，下载下来的文件内容是一样的。"
-
 ---
 经过大半周的迁移和新脚本的测试，现在mirrors.ustc.edu.cn已经基本稳定了。
 
 新机器的域名：
 
-``` 
+```
 IPv4/v6: mirrors.ustc.edu.cn  （能解析出教育网/电信/v6地址）
 v4only:  mirrors4.ustc.edu.cn （能解析出教育网/电信地址）
 v6only:  mirrors6.ustc.edu.cn
@@ -57,7 +44,7 @@ v6only:  mirrors6.ustc.edu.cn
 
 有些地方（比如我测试的合肥长宽），DNS会解析出电信地址，但使用教育网地址访问更快，这时可以通过修改hosts指定强制使用教育网地址访问。
 
-``` 
+```
 教育网ip：202.38.95.110
 电  信ip：202.141.160.110
 v6  地址：2001:da8:d800:95::110

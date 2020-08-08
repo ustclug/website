@@ -3,26 +3,18 @@ title: Blog 服务器宕机
 author: Boyuan Yang
 date: '2014-12-18 09:20:22 +0800'
 categories:
-
-* LUG服务
-
+- LUG服务
 tags:
-
-* server
-
+- server
 comments:
-
-* id: 978
-
+- id: 978
   author: wkm
   author_email: info@wangkaimin.com
   author_url: ''
   date: '2014-12-18 19:33:32 +0800'
   date_gmt: '2014-12-18 11:33:32 +0800'
   content: 从凌晨到现在也没恢复，一天了。
-
-* id: 1057
-
+- id: 1057
   author: Yifan Gao
   author_email: lug@yfgao.com
   author_url: ''

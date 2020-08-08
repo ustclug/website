@@ -3,28 +3,23 @@ title: LUG部分服务恢复情况
 author: Boyuan Yang
 date: '2015-08-18 16:09:52 +0800'
 categories:
-
-* LUG服务
-
+- LUG服务
 tags:
-
-* USTC_LUG
-* server
-
+- USTC_LUG
+- server
 comments: []
 ---
-
 ### mirrors.ustc.edu.cn
 
 科大开源软件镜像服务正常。
 
 ### lug.ustc.edu.cn
 
-目前正常运行的服务包括 LUG Wiki、 `lug.ustc.edu.cn/sites/*` 。即日起 LUG 博客（https://lug.ustc.edu.cn/blog/）恢复服务。
+目前正常运行的服务包括 LUG Wiki、`lug.ustc.edu.cn/sites/*`。即日起 LUG 博客（https://lug.ustc.edu.cn/blog/）恢复服务。
 
-LUG FTP 尚未正式恢复。如有迫切需求，请使用 `ftp://backup.ustclug.org` ，使用方法与先前 LUG FTP 相同。
+LUG FTP 尚未正式恢复。如有迫切需求，请使用 `ftp://backup.ustclug.org`，使用方法与先前 LUG FTP 相同。
 
-9.3 补充：LUG FTP 现已回复。请使用 `ftp://ftp.lug.ustc.edu.cn` 。现在 LUG FTP 部署在 donut 机器上。
+9.3 补充：LUG FTP 现已回复。请使用`ftp://ftp.lug.ustc.edu.cn`。现在 LUG FTP 部署在 donut 机器上。
 
 ### freeshell.ustc.edu.cn
 

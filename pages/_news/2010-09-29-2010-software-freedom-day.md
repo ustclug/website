@@ -3,27 +3,19 @@ title: 2010年自由软件日（合肥站）
 author: Stephen
 date: '2010-09-29 00:45:36 +0800'
 categories:
-
-* LUG活动
-
+- LUG活动
 tags:
-
-* USTC_LUG
-* SFD
-
+- USTC_LUG
+- SFD
 comments:
-
-* id: 20
-
+- id: 20
   author: Johnny
   author_email: johnnywei316@gmail.com
   author_url: http://www.ywbeta.com
   date: '2011-09-23 08:47:26 +0800'
   date_gmt: '2011-09-23 00:47:26 +0800'
-  content: 你好, 请问中科大的lug订阅地址是什么? I'd like to subscribe your mailing list :-)
-
-* id: 47
-
+  content: 你好,请问中科大的lug订阅地址是什么?I'd like to subscribe your mailing list :-)
+- id: 47
   author: Aenon
   author_email: s.sn.giraffe@gmail.com
   author_url: http://aenon.co.cc

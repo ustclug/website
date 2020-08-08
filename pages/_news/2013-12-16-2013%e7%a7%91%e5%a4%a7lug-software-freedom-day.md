@@ -3,13 +3,9 @@ title: 2013科大LUG Linux User Party
 author: Guangyu Zhang
 date: '2013-12-16 22:26:34 +0800'
 categories:
-
-* LUG活动
-
+- LUG活动
 tags:
-
-* Linux User Party
-
+- Linux User Party
 comments: []
 ---
 2013年12月1日，中国科学技术大学校学生Linux用户协会在科大西区活动中心学术报告厅举办了一年一度的Linux User Party。

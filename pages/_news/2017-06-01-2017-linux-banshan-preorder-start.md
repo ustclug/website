@@ -3,14 +3,10 @@ title: 2017 Linux 板版衫预订开始！
 author: Boyuan Yang
 date: '2017-06-01 09:20:27 +0800'
 categories:
-
-* LUG活动
-
+- LUG活动
 tags: []
 comments:
-
-* id: 1801
-
+- id: 1801
   author: 郝伟
   author_email: dolem.hao@gmail.com
   author_url: ''

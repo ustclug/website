@@ -1,12 +1,10 @@
 ---
 title: 中国科学技术大学第五届信息安全大赛圆满结束
-image: https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2019.01.03_Hackergame_%E9%A2%81%E5%A5%96/DSC_0494. JPG
+image: https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2019.01.03_Hackergame_%E9%A2%81%E5%A5%96/DSC_0494.JPG
 author: sirius1242
 date: '2019-01-05 14:47:29 +0800'
 categories:
-
-* LUG活动
-
+- LUG活动
 tags: []
 ---
 
@@ -16,12 +14,12 @@ tags: []
 
 经过赛后主办方的统计，最终确定了获奖名单，并为校内参赛的同学颁奖。2019 年 1 月 3 日晚，第五届信息安全大赛颁奖仪式在西区举行，校内冠军邓龙荣获一等奖，付佳伟、莫子铭、徐一凡、贺泉、杨荣琛五位选手获得二等奖，还有王若麟等二十五位选手获得三等奖。此外还专门设置了面向大一新生的新生特别奖两名，分别为高泽豫和林焕承，面向女生的 Ada 奖一名，获奖者为林元芃。
 
-![](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2019.01.03_Hackergame_%E9%A2%81%E5%A5%96/DSC_0479. JPG)
-![](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2019.01.03_Hackergame_%E9%A2%81%E5%A5%96/DSC_0486. JPG)
-![](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2019.01.03_Hackergame_%E9%A2%81%E5%A5%96/DSC_0494. JPG)
-![](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2019.01.03_Hackergame_%E9%A2%81%E5%A5%96/DSC_0497. JPG)
-![](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2019.01.03_Hackergame_%E9%A2%81%E5%A5%96/DSC_0512. JPG)
-![](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2019.01.03_Hackergame_%E9%A2%81%E5%A5%96/DSC_0517. JPG)
+![](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2019.01.03_Hackergame_%E9%A2%81%E5%A5%96/DSC_0479.JPG)
+![](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2019.01.03_Hackergame_%E9%A2%81%E5%A5%96/DSC_0486.JPG)
+![](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2019.01.03_Hackergame_%E9%A2%81%E5%A5%96/DSC_0494.JPG)
+![](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2019.01.03_Hackergame_%E9%A2%81%E5%A5%96/DSC_0497.JPG)
+![](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2019.01.03_Hackergame_%E9%A2%81%E5%A5%96/DSC_0512.JPG)
+![](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2019.01.03_Hackergame_%E9%A2%81%E5%A5%96/DSC_0517.JPG)
 
 自2014年起，科大信息安全大赛已经连续举办了五届，往届比赛均顺利进行，规模盛大，影响甚广。第五届信息安全大赛由中国科学技术大学网络空间安全学院、中国科学技术大学校团委、中国科学技术大学管指委主办，中国科学技术大学学生 Linux 用户协会、中国科学技术大学微软学生俱乐部等承办，并由南京大学微软学生俱乐部、湖南大学微软学生俱乐部等协办。本次比赛相比之前规模更大，参与人员更多，并邀请了更多国内高校参赛，旨在给国内高校的同学们提供一个学习交流的平台。并延续了往届的优良传统，努力结合科大特色，坚持向新生倾斜的原则，控制题目难度梯度，强调引导和教育工作。
 

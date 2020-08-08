@@ -3,17 +3,13 @@ title: 'Fwd: 读书笔记：关于维护服务器的一些技巧'
 author: sNullp
 date: '2011-04-28 18:15:09 +0800'
 categories:
-
-* 读书笔记
-
+- 读书笔记
 tags:
-
-* nginx
-* linux server
-* php
-* mysql
-* reading notes
-
+- nginx
+- linux server
+- php
+- mysql
+- reading notes
 comments: []
 ---
 寒假读了三本书《[LINUX SERVER HACKS 卷二](http://book.douban.com/subject/2006913/)》《[实战Nginx：取代Apache的高性能Web服务器](http://book.douban.com/subject/4251875/)》《[Linux服务器性能调整](http://book.douban.com/subject/4027746/)》，简单地了解了些linux服务器维护和管理上的技巧。现在就分别简要谈谈我在读这三本书时的感受吧。

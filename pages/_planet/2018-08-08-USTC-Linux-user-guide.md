@@ -2,13 +2,9 @@
 title: "USTC Linux 用户生存指南"
 author: mk
 categories: 
-
-* Experience
-
+- Experience
 tags: 
-
-* Courses
-
+- Courses
 ---
 
 本指南指导中科大 Linux 用户如何使用 Linux 完成各门课程。

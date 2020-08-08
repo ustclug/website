@@ -3,13 +3,9 @@ title: "“Linux让一切变得简单”活动"
 author: boj
 date: '2013-04-22 18:10:33 +0800'
 categories:
-
-* LUG活动
-
+- LUG活动
 tags:
-
-* USTC_LUG
-
+- USTC_LUG
 comments: []
 ---
 2013年4月21日下午，科大LUG与计算机学院学生会合办的“Linux让一切变得简单”活动在3121教室举行。

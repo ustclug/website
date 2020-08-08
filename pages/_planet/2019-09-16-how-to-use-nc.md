@@ -2,14 +2,10 @@
 title: "萌新入门手册：如何使用 nc/ncat？"
 author: "taoky"
 categories: 
-
-* Tech Tutorial
-
+- Tech Tutorial
 tags: 
-
-* hackergame
-* netcat
-
+- hackergame
+- netcat
 ---
 
 ## `nc` 是什么？
@@ -18,11 +14,11 @@ tags:
 
 一般来说，有很多题目都会要求你使用 `nc` 连接到他们的服务器，并且进行交互，获得 flag。
 
-## 如何安装 `nc` ？
+## 如何安装 `nc`？
 
 `nc` 命令在 macOS 中是自带的，在 Linux 中一般自带，或是可以使用相应的软件包管理器安装（如在 Debian/Ubuntu 中这个包名叫 netcat）。
 
-当然，如果你在看这篇手册，你的操作系统很有可能是 Windows。它不自带 `nc` ，尽管可以用 WSL 或者虚拟机的方式解决，但是如果你觉得这样太麻烦了，也有另外一些方法。
+当然，如果你在看这篇手册，你的操作系统很有可能是 Windows。它不自带 `nc`，尽管可以用 WSL 或者虚拟机的方式解决，但是如果你觉得这样太麻烦了，也有另外一些方法。
 
 ### 使用静态链接的 `ncat` 程序
 
@@ -30,15 +26,15 @@ tags:
 
 [ncat.zip 下载](https://planet.ustclug.org/wp-content/uploads/2019/09/ncat.zip)
 
-*注： `nc` / `ncat` 事实上是两个不同的程序，但在我们接下来的使用上，基本没有区别。 `ncat` 是由 Nmap 项目开发的“重置版的 Netcat”。*
+*注：`nc`/`ncat` 事实上是两个不同的程序，但在我们接下来的使用上，基本没有区别。`ncat` 是由 Nmap 项目开发的“重置版的 Netcat”。*
 
 #### 我的杀毒软件报毒！
 
 这是 virustotal 的检测结果：<https://www.virustotal.com/gui/file/d0baada87420dd7c2e63d0dd3248749c06b53806d3021863c4fa659608053a8a/detection>
 
-如果你不相信此来源，也可以下载 `nmap` （一个网络探测、扫描工具），它会附带一个 `ncat` 。
+如果你不相信此来源，也可以下载 `nmap`（一个网络探测、扫描工具），它会附带一个 `ncat`。
 
-## 如何使用 `nc` ?
+## 如何使用 `nc`?
 
 ### Windows
 
@@ -52,18 +48,18 @@ Windows 10 中，你可以使用资源管理器 -> 文件来在你存放 `nc` �
 
 当跳转到你存放 `nc` 的文件夹后：
 
-* 如果你使用的是 PowerShell（蓝色背景），输入 `./ncat` （根据 `nc` 对应的名称不同而不同）。
-* 如果你使用的是命令提示符（黑色背景），输入 `ncat` （根据 `nc` 对应的名称不同而不同）。
+- 如果你使用的是 PowerShell（蓝色背景），输入 `./ncat`（根据 `nc` 对应的名称不同而不同）。
+- 如果你使用的是命令提示符（黑色背景），输入 `ncat`（根据 `nc` 对应的名称不同而不同）。
 
 当显示以下内容时，说明你成功运行了它。
 
-{% include figure image_path="https://static.beta.ustclug.org/planet/cmdncat-1024x596.png" caption="成功运行 `ncat` " %}
+{% include figure image_path="https://static.beta.ustclug.org/planet/cmdncat-1024x596.png" caption="成功运行 `ncat`" %}
 
 ### Linux & macOS
 
-打开「终端」，输入 `nc` 。
+打开「终端」，输入 `nc`。
 
-``` 
+```
 $ nc
 usage: nc [-46AacCDdEFhklMnOortUuvz] [-K tc] [-b boundif] [-i interval] [-p source_port] [--apple-delegate-pid pid] [--apple-delegate-uuid uuid]
 	  [-s source_ip_address] [-w timeout] [-X proxy_version]
@@ -76,11 +72,11 @@ usage: nc [-46AacCDdEFhklMnOortUuvz] [-K tc] [-b boundif] [-i interval] [-p sour
 
 在我们使用浏览器上网的时候，我们和服务器使用了 HTTP 协议进行连接。关于 HTTP 协议的更多细节，你需要自己上网搜索。一般来说，默认是 80 端口。
 
-我们可以使用 `nc` ，尝试一次与网页服务器的连接，以百度为例。
+我们可以使用 `nc`，尝试一次与网页服务器的连接，以百度为例。
 
-输入 `nc www.baidu.com 80` （或者 `ncat www.baidu.com 80` ，或者 `./ncat www.baidu.com 80` ，请根据以上的介绍自行修改），程序会等待你的输入。
+输入 `nc www.baidu.com 80`（或者 `ncat www.baidu.com 80`，或者 `./ncat www.baidu.com 80`，请根据以上的介绍自行修改），程序会等待你的输入。
 
-输入 `GET / HTTP/1.0` 。这表示，我们使用 `HTTP/1.0` 这个协议版本，用 `GET` 的方式请求根 `/` 。输入两下回车，代表我们的 HTTP 请求完成。如果你的网络畅通，百度的网页服务器会立刻返回大量信息，可以自行搜索，了解它们的含义。现在，你成功（在不使用浏览器的情况下）完成了一次与百度网站的连接！
+输入 `GET / HTTP/1.0`。这表示，我们使用 `HTTP/1.0` 这个协议版本，用 `GET` 的方式请求根 `/`。输入两下回车，代表我们的 HTTP 请求完成。如果你的网络畅通，百度的网页服务器会立刻返回大量信息，可以自行搜索，了解它们的含义。现在，你成功（在不使用浏览器的情况下）完成了一次与百度网站的连接！
 
 {% include figure image_path="https://static.beta.ustclug.org/planet/nc-1024x596.png" caption="Success!" %}
 

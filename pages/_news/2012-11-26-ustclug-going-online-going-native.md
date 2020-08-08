@@ -3,53 +3,39 @@ title: 科大 LUG Linux User Party 活动成功举行
 author: Aenon
 date: '2012-11-26 00:21:14 +0800'
 categories:
-
-* LUG活动
-
+- LUG活动
 tags:
-
-* Linux User Party
-
+- Linux User Party
 comments:
-
-* id: 223
-
+- id: 223
   author: moper
   author_email: i@moper.me
   author_url: http://moper.me/
   date: '2012-11-29 22:08:00 +0800'
   date_gmt: '2012-11-29 14:08:00 +0800'
   content: 看起来好精彩~
-
-* id: 224
-
+- id: 224
   author: Aenon SUN
   author_email: s.sn.giraffe@gmail.com
   author_url: http://aenon.me/
   date: '2012-12-16 13:42:00 +0800'
   date_gmt: '2012-12-16 05:42:00 +0800'
   content: 嗯，可惜時間太長了。
-
-* id: 229
-
+- id: 229
   author: moper
   author_email: i@moper.me
   author_url: http://moper.me/
   date: '2013-04-03 18:02:00 +0800'
   date_gmt: '2013-04-03 10:02:00 +0800'
   content: 中科大真好，博客都能看出来了~
-
-* id: 230
-
+- id: 230
   author: Aenon SUN
   author_email: s.sn.giraffe@gmail.com
   author_url: http://aenon.me/
   date: '2013-04-03 20:24:00 +0800'
   date_gmt: '2013-04-03 12:24:00 +0800'
   content: 挖坟啊
-
-* id: 239
-
+- id: 239
   author: riaqn
   author_email: qzs123@gmail.com
   author_url: ''
