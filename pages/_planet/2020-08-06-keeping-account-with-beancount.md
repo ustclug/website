@@ -1,7 +1,6 @@
 ---
 title: 使用 Beancount 进行记账并自动记录一卡通消费
-author: Xenon
-date: 2020-8-6
+author: xenon
 categories: 
 - USTC
 tags: 
