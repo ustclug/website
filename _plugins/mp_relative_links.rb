@@ -1,5 +1,3 @@
-# Source: https://github.com/jekyll/jekyll/commit/76b55f814670968e1a6836d1933ab42f8654497c
-
 module JekyllRelativeLinks
   class Generator
     def path_from_root(relative_path, url_base)
