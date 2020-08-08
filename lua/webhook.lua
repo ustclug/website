@@ -1,31 +1,55 @@
-local h = ngx.req.get_headers()
-
-signature = h["X-Hub-Signature"]
-
-if signature == nil then
-    ngx.exit(ngx.HTTP_FORBIDDEN)
+if ngx.req.get_method() ~= "POST" then
+    ngx.exit(ngx.HTTP_METHOD_NOT_ALLOWED)
 end
 
-for k, v in string.gmatch(signature, "(%w+)=(%w+)") do
-    -- expect 'sha1=xxxxxxxxx'
-    signature = v
+local map = {
+    html = {"WEBHOOK_SECRET_HTML", "gh-pages", "/var/www/html"},
+    static = {"WEBHOOK_SECRET_STATIC", "master", "/var/www/static"}
+}
+
+local hook = string.sub(ngx.var.uri, 1, string.len("/_webhook/github/"))
+local envvar = map[hook][1]
+local ref = map[hook][2]
+local path = map[hook][3]
+
+signature = ngx.req.get_headers()["X-Hub-Signature"]
+
+if signature == nil then
+    ngx.status = 403
+    ngx.say("Missing signature")
+    ngx.exit(ngx.HTTP_OK)
+end
+
+signature = string.match(signature, "sha1=(%w+)")
+if signature == nil then
+    ngx.status = 400
+    ngx.say("Invalid signature")
+    ngx.exit(ngx.HTTP_OK)
 end
 
 ngx.req.read_body()
 local data = ngx.req.get_body_data()
 if data == nil then
-    ngx.exit(ngx.HTTP_BAD_REQUEST)
+    ngx.status = 400
+    ngx.say("Missing body")
+    ngx.exit(ngx.HTTP_OK)
 end
 
 local str = require "resty.string"
 local hmac = str.to_hex(ngx.hmac_sha1(os.getenv('GITHUB_WEBHOOK_SECRET'), data))
 
 if hmac ~= signature then
-    ngx.exit(ngx.HTTP_FORBIDDEN)
+    ngx.status = 403
+    ngx.say("Bad signature")
+    ngx.exit(ngx.HTTP_OK)
 end
 
-local handle = io.popen("git -C /data remote update && git -C /data reset --hard \"$(git -C /data rev-parse --abbrev-ref --symbolic-full-name '@{u}')\"")
-local result = handle:read("*a")
-handle:close()
+local cjson = require "cjson"
+local body_json = cjson.decode(data)
+if body_json["ref"] ~= "refs/heads/" .. ref then
+    ngx.say("Not interested in this ref")
+    ngx.exit(ngx.HTTP_OK)
+end
 
-ngx.say(result)
+os.execute("cd '" .. path .. "'; git remote update && git reset --hard \"$(git rev-parse --abbrev-ref --symbolic-full-name '@{u}')\"")
+ngx.say("OK")
