@@ -38,7 +38,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=c32fdf2">
+    <link rel="stylesheet" href="/assets/css/main.css?v=323ec0a">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
     <!--[if IE]>
       <style>
@@ -106,6 +106,34 @@
     </div>
     <div class="initial-content">
       <div id="main" role="main">
+        <div class="sidebar sticky">
+          <div itemscope itemtype="https://schema.org/Person">
+            <div class="author__avatar">
+              <img src="https://static.beta.ustclug.org/logo.png" alt="USTCLUG" itemprop="image">
+            </div>
+            <div class="author__content">
+              <h3 class="author__name" itemprop="name">USTCLUG</h3>
+              <div class="author__bio" itemprop="description">
+                <p>中国科学技术大学 Linux 用户协会</p>
+              </div>
+            </div>
+            <div class="author__urls-wrapper">
+              <button class="btn btn--inverse">关注</button>
+              <ul class="author__urls social-icons">
+                <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+                  <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">USTC</span>
+                </li>
+                <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+              </ul>
+            </div>
+          </div>
+        </div>
         <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
           <meta itemprop="headline" content="Hello! LUG Planet">
           <meta itemprop="description" content="欢迎大家来到 LUG Planet！这是一个刚刚被发现的新星球，百废待兴。本文是 LUG Planet 的说明书，在你入驻之前，不妨先驻足欣赏一下这片风景。:-)">

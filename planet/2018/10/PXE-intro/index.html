@@ -37,7 +37,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=c32fdf2">
+    <link rel="stylesheet" href="/assets/css/main.css?v=323ec0a">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
     <!--[if IE]>
       <style>
@@ -105,6 +105,25 @@
     </div>
     <div class="initial-content">
       <div id="main" role="main">
+        <div class="sidebar sticky">
+          <div itemscope itemtype="https://schema.org/Person">
+            <div class="author__content">
+              <h3 class="author__name" itemprop="name"></h3>
+            </div>
+            <div class="author__urls-wrapper">
+              <button class="btn btn--inverse">关注</button>
+              <ul class="author__urls social-icons">
+                <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+              </ul>
+            </div>
+          </div>
+        </div>
         <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
           <meta itemprop="headline" content="PXE 是什么">
           <meta itemprop="description" content="PXE 是什么">
