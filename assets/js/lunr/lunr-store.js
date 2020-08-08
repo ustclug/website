@@ -324,7 +324,7 @@ var store = [{
 "teaser": null
 },{
 "title": "Hello! LUG Planet",
-"excerpt":"欢迎大家来到 LUG Planet！这是一个刚刚被发现的新星球，百废待兴。本文是 LUG Planet 的说明书，在你入驻之前，不妨先驻足欣赏一下这片风景。:-)  ","categories": [],
+"excerpt":"欢迎大家来到 LUG Planet！这是一个刚刚被发现的新星球，百废待兴。本文是 LUG Planet 的说明书，在你入驻之前，不妨先驻足欣赏一下这片风景。😀 LUG Planet 是什么？ LUG Planet 是…… 由 USTCLUG 负责运营和管理的群体博客。 目标读者与参与者： USTCLUG 会员； 认同 USTCLUG 理念的同好； 希望积极参加 USTCLUG 线上活动的朋友。 主要话题为 USTCLUG 社团的活动覆盖范围： UNIX、Linux 及自由/开源软件； Windows, Microsoft 新技术； 信息安全； 这些技术与 USTC 的碰撞与融合。 LUG Planet 是精神上的 Linux 文摘 计划的延续。我们认可这个群策群力式的知识汇集的理念，但使用更方便和更自由的形式，从而鼓励大家能更积极地参与到这个项目中来。 订阅我们 你可以做一个默默潜水的读者，也可以在评论区与作者激辩，或者亲自成为写作者。但无论如何，你一定非常关注 LUG Planet 的动态。所以我们提供了多种方式确保你能得到及时的通知： RSS 订阅（推荐）。由 LUG...","categories": [],
 "tags": [],
 "url": "https://beta.ustclug.org//planet/2018/08/hello-lug-planet/",
 "teaser": null
