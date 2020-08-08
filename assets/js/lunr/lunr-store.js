@@ -356,7 +356,7 @@ var store = [{
 "title": "使用 Beancount 进行记账并自动记录一卡通消费",
 "excerpt":"本文首发于 https://charlesliu7.github.io/blackboard/2019/07/24/beancount/ 偶尔看到了复式记账这个概念，对精细记账的我而言很受用，选择 Beancount 这样的开源工具的原因莫过于账本数据完全由自己掌握，而不是被各大 APP 所保管。本文从一次个人实践的角度来说明一下复式记账的使用。 本篇文章是一个从零开始的个人实践记录，涵盖 文件组织- &gt;基本账本书写-&gt;爬取一卡通数据并自动记录，供同样使用 Beancount 的同学做参考，但此实践并不一定完全合乎其他人的使用习惯，如果有其它记录策略也是可以的。本文内容基于读者对复式记账和 Beancount 语法有一定了解的情况下撰写的，关于复式记账的概念和一些诸多基本功能介绍，可以参考阅读以下文章： 文本记账综述、复式记账开源工具比较 Beancount复式记账（一）：为什么 开始！ 安装使用 Beancount 是一个 Python 实现的开源工具，在本地即可运行，首先从 PyPI 获取： pip install beancount fava 其中 beancount 是核心包，包含核心的命令行工具；fava 是网页可视化工具。 这里有一个fava 示例账本 ，对应的 Beancount 源代码可以在 Bitbucket 上下载。 本文的示例账本以及可视化可以在该仓库查看。 克隆该仓库，在命令行中使用 fava main.beancout。 $ fava main.beancout Running Fava on http://localhost:5000...","categories": ["USTC"],
 "tags": ["Beancount","eCard"],
-"url": "https://beta.ustclug.org//planet/2020/08/2020-8-6-keeping-account-with-beancount/",
+"url": "https://beta.ustclug.org//planet/2020/08/2020-08-06-keeping-account-with-beancount/",
 "teaser": null
 },{
 "title": "中国科学技术大学 Linux 用户协会",
