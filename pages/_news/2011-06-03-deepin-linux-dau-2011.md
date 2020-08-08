@@ -3,20 +3,28 @@ title: Deepin Linux DAU '2011大会花絮
 author: Stephen
 date: '2011-06-03 10:36:40 +0800'
 categories:
-- LUG活动
+
+* LUG活动
+
 tags:
-- deepin
-- Linux
-- 花絮
+
+* deepin
+* Linux
+* 花絮
+
 comments:
-- id: 210
+
+* id: 210
+
   author: moper
   author_email: i@moper.me
   author_url: ''
   date: '2012-07-20 02:09:00 +0800'
   date_gmt: '2012-07-19 18:09:00 +0800'
   content: 其实留言可以换一个插件吧，这个插件感觉很不好用的说，还不如wp原带的，求交流，http://moper.me
-- id: 225
+
+* id: 225
+
   author: Aenon SUN
   author_email: s.sn.giraffe@gmail.com
   author_url: http://aenon.me/
@@ -34,7 +42,7 @@ comments:
 
 去会场的路上，大家在开玩笑。前几天某校长在武大被扔鞋，这次我们请来了比较有争议的袁教授，而且此次会议有很多武大的学生参加，会不会也被扔鞋？要不我们自己安排个人来扔鞋吧，还得安排两拨，互扔，炒作气氛！呵呵，just a joke!
 
-这次会议在君宜王朝大酒店举行，可能前期的沟通不是特别好，在布置会场时碰到了些问题，不过对会议影响不大。最“惊险”的算是那个无线话筒吧，似乎耗电量很大，现场试了一下，就掉了一格电（共三格）了，当时担心会不会讲到一半就没声了。还好，六位嘉宾演讲时，都没出问题，在提问阶段，第二个人开始，话筒就没声了T.T……
+这次会议在君宜王朝大酒店举行，可能前期的沟通不是特别好，在布置会场时碰到了些问题，不过对会议影响不大。最“惊险”的算是那个无线话筒吧，似乎耗电量很大，现场试了一下，就掉了一格电（共三格）了，当时担心会不会讲到一半就没声了。还好，六位嘉宾演讲时，都没出问题，在提问阶段，第二个人开始，话筒就没声了T. T……
 
 晚上嘉宾自由交流会上，袁教授发完一个长长的言后，就耷拉脑袋了。我和Hiweed坐在他旁边，都以为他睡着了，后来有个人讲完话后，袁教授突然接话了！原来他没睡着，就是闭幕养神:-) 袁教授其实很可爱，年纪这么大，依然很有激情。对国内开源事业的发展也很关心，这次大会刚回去，就联系与永中的曹参见面，讨论Deepin与永中合作的事，看袁教授最近几天的博文，他对此事一直很上心。
 
@@ -238,8 +246,8 @@ comments:
 
 以下是一些特邀嘉宾对此次大会的报导：
 
-- [Linux Deepin武汉技术交流会后记](http://www.bentutu.com/2011/06/linux-deepin-dau-2011-note/)（笨兔兔）
-- [Linux Deepin 2011开发者和用户大会实录](http://news.mydrivers.com/1/195/195039.htm)（驱动之家）
-- (http://www.ownlinux.cn/2011/05/28/ownlinux-linux-deepin-2011.html)（OwnLinux.cn）
-- [国产Linux发行版面临的机遇和挑战](http://os.51cto.com/art/201106/266358.htm)（51CTO）
-- [武汉Deepin DAU会议见闻](http://basiccoder.com/wuhan-deepin-linux-meeting-info.html)（basic coder）
+* [Linux Deepin武汉技术交流会后记](http://www.bentutu.com/2011/06/linux-deepin-dau-2011-note/)（笨兔兔）
+* [Linux Deepin 2011开发者和用户大会实录](http://news.mydrivers.com/1/195/195039.htm)（驱动之家）
+* (http://www.ownlinux.cn/2011/05/28/ownlinux-linux-deepin-2011.html)（OwnLinux.cn）
+* [国产Linux发行版面临的机遇和挑战](http://os.51cto.com/art/201106/266358.htm)（51CTO）
+* [武汉Deepin DAU会议见闻](http://basiccoder.com/wuhan-deepin-linux-meeting-info.html)（basic coder）

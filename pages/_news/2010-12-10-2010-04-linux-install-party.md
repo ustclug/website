@@ -3,11 +3,15 @@ title: 2010年4月 Linux Install Party
 author: Stephen
 date: '2010-12-10 00:15:47 +0800'
 categories:
-- LUG活动
+
+* LUG活动
+
 tags:
-- Linux User Party
-- Linux Install Party
-- PXE
+
+* Linux User Party
+* Linux Install Party
+* PXE
+
 comments: []
 ---
 

@@ -3,18 +3,24 @@ title: 2014 Linux User Party 暨 Freeshell 用户交流会
 author: jenny42
 date: '2014-12-09 17:52:41 +0800'
 categories:
-- LUG活动
+
+* LUG活动
+
 tags:
-- news
-- LUP
+
+* news
+* LUP
+
 comments:
-- id: 988
-  author: 10.7-12.19 生活总结 | Jenny&#039;s Life
+
+* id: 988
+
+  author: 10.7-12.19 生活总结 | Jenny&#039; s Life
   author_email: ''
   author_url: https://jenny42.com/2014/12/12-19-life-overview/
   date: '2014-12-20 14:11:16 +0800'
   date_gmt: '2014-12-20 06:11:16 +0800'
-  content: "[&#8230;] 新闻稿：2014 Linux User Party 暨 Freeshell 用户交流会 [&#8230;]"
+  content: "[&#8230; ] 新闻稿：2014 Linux User Party 暨 Freeshell 用户交流会 [&#8230; ]"
 ---
 2014 Linux User Party 暨 Freeshell 用户交流会，于今年12月7日（周日）14时30分，在西活学术报告厅成功举行。
 
@@ -26,10 +32,10 @@ comments:
 
 本次活动由会长大人张荣葳亲自主持，并有幸请来了 4 位讲者：
 
-- 科大云框架设计者 王硕博士 —— 《什么是云计算》
-- LUG资深会员 高一凡同学 —— 《Docker 的简介与进阶》
-- iCard作者 王译锋 —— 《现场计算来宾学霸指数》
-- LUG活跃会员 阴钰 —— 《部署一个网页聊天室》
+* 科大云框架设计者 王硕博士 —— 《什么是云计算》
+* LUG资深会员 高一凡同学 —— 《Docker 的简介与进阶》
+* iCard作者 王译锋 —— 《现场计算来宾学霸指数》
+* LUG活跃会员 阴钰 —— 《部署一个网页聊天室》
 
 ![会长大人正在十分投入地主持活动](https://ftp.lug.ustc.edu.cn/wp-content/uploads/2014/12/QQ图片20141209181251.jpg)
 

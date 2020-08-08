@@ -41,14 +41,14 @@ LUG 的所有活动均依照 [社团章程](http://ftp.ustclug.org/社团管理/
 | 2019-08-31    | 19:30-20:30 | 西区 3C110                 | [新生活力课程：Hello, linux!](https://ftp.lug.ustc.edu.cn/活动/2019.08.31_新生活力课程/slides/) |
 | 2019-07-12~14 | -           | 西区 3C104                 | [AOSCC](http://ftp.lug.ustc.edu.cn/活动/2019.07.12-14_AOSCC/) |
 | 2019-05-26    | 19:30-21:00 | 西图 303                   | [换届大会](http://ftp.ustclug.org/会议/2019.05.26_换届大会/) |
-| 2019-05-26    | 14:00-15:30 | 西区 3A102                 | [Linux 101 第五课](http://ftp.ustclug.org/活动/2019.春_Linux101/Slides/Linux101 05.pdf) |
-| 2019-05-12    | 14:00-15:30 | 西区 3C104                 | [Linux 101 第四课](http://ftp.ustclug.org/活动/2019.春_Linux101/Slides/Linux101 04.pdf) |
+| 2019-05-26    | 14:00-15:30 | 西区 3A102                 | [Linux 101 第五课](http://ftp.ustclug.org/活动/2019. 春_Linux101/Slides/Linux101 05.pdf) |
+| 2019-05-12    | 14:00-15:30 | 西区 3C104                 | [Linux 101 第四课](http://ftp.ustclug.org/活动/2019. 春_Linux101/Slides/Linux101 04.pdf) |
 | 2019-05-04    | 18:00-20:00 | 线下                       | Linux User Dinner                                            |
 | 2019-04-21    | 14:30-15:00 | 西区 3C104                 | 全员大会                                                     |
-| 2019-04-14    | 14:00-16:00 | 西区 3C104                 | [Linux 101 第三课](http://ftp.ustclug.org/活动/2019.春_Linux101/Slides/Linux101 03.pdf) |
+| 2019-04-14    | 14:00-16:00 | 西区 3C104                 | [Linux 101 第三课](http://ftp.ustclug.org/活动/2019. 春_Linux101/Slides/Linux101 03.pdf) |
 | 2019-04-05    | 9:00-16:00  | 蜀山森林公园               | 大蜀山春游                                                   |
-| 2019-03-24    | 14:00-16:00 | 西区 3C104                 | [Linux 101 第二课](http://ftp.ustclug.org/活动/2019.春_Linux101/Slides/Linux101 02.pdf) |
-| 2019-03-10    | 14:00-17:30 | 西区 3C101                 | [Linux 101 第一课 ](http://ftp.ustclug.org/活动/2019.春_Linux101/Slides/Linux101 01.pdf)& Linux Install Party |
+| 2019-03-24    | 14:00-16:00 | 西区 3C104                 | [Linux 101 第二课](http://ftp.ustclug.org/活动/2019. 春_Linux101/Slides/Linux101 02.pdf) |
+| 2019-03-10    | 14:00-17:30 | 西区 3C101                 | [Linux 101 第一课 ](http://ftp.ustclug.org/活动/2019. 春_Linux101/Slides/Linux101 01.pdf)& Linux Install Party |
 | 2019-01-03    | 19:30-20:30 | 西区 3A109                 | [Hackergame 颁奖仪式](http://ftp.ustclug.org/活动/2019.01.03_Hackergame_颁奖/) |
 | 2018-12-21    | 18:00-20:30 | 线下                       | LUD (Linux User Dinner)                                      |
 | 2018-11-29    | 21:00-22:00 | 西图活动室 206             | 社团发展讨论会                                               |
@@ -149,10 +149,10 @@ LUG 的所有活动均依照 [社团章程](http://ftp.ustclug.org/社团管理/
 
 ## 从哪里知道LUG活动
 
-- [LUG邮件列表](/wiki/lug/mailinglist)
-- 瀚海星云 BBS Linux 版
-- QQ 群公告
-- QQ 公众号及微信公众号
-- Telegram 群聊
-- 短信通知
-- 如果是大活动，当然还有遍布东西区的海报啦~
+* [LUG邮件列表](/wiki/lug/mailinglist)
+* 瀚海星云 BBS Linux 版
+* QQ 群公告
+* QQ 公众号及微信公众号
+* Telegram 群聊
+* 短信通知
+* 如果是大活动，当然还有遍布东西区的海报啦~

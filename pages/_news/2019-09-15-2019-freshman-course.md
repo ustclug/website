@@ -1,10 +1,12 @@
 ---
 title: 2019 秋季学期新生活力课程
-image: https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2019.08.31_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E7%A8%8B/photo/DSC_0458.JPG
+image: https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2019.08.31_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E7%A8%8B/photo/DSC_0458. JPG
 author: taoky
 date: '2019-09-15 12:00:00 +0800'
 categories:
-- LUG活动
+
+* LUG活动
+
 tags: []
 comments: []
 ---
@@ -13,17 +15,17 @@ comments: []
 
 新生活力课程面向入学不久的大一新生。第一次新生活力课程以 Linux 为主题，上半场是由李文睿同学主讲的《Hello, Linux》，他从 Linux 的发行版、日常使用以及命令行等方面对 Linux 操作系统进行简单介绍，希望能够让同学们通过本次讲座了解 Linux；下半场是龚平同学的《Why learn Linux?》讲座，他从现今 Linux 应用情况，结合科大同学未来的学校生活和工作情况，介绍 Linux 系统的重要地位以及学习 Linux 的趣味性，希望能够激发同学们学习 Linux 的乐趣。
 
-![](http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2019.08.31_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E7%A8%8B/photo/DSC_0445.JPG)
+![](http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2019.08.31_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E7%A8%8B/photo/DSC_0445. JPG)
 
-![](http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2019.08.31_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E7%A8%8B/photo/DSC_0460.JPG)
+![](http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2019.08.31_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E7%A8%8B/photo/DSC_0460. JPG)
 
 考虑到大部分科大新生都还没接触过 Linux 系统，我们专门将一台笔记本安装了 Linux 系统，带去课堂，给大家实机展示，并鼓励大家上手操作。讲座结束的提问环节，大家非常积极踊跃，提出了一系列不仅仅关于 Linux 还有将来四年的学习生活的问题。讲座结束，还有许多同学意犹未尽，希望可以进一步了解什么是 Linux，什么的是自由软件精神，并且希望能稍微了解 Linux 用户协会，我们就带他们去参观 Linux 用户协会的活动室。在活动室中，我们详细回答了关于 Linux 的种种问题。有一位对 Linux 特别感兴趣的同学从现场借走一本关于 Linux 的书籍。直到晚上 10 点左右，所有人才离开 LUG 活动室。
 
 第二次新生活力课程以网络资源与信息安全为主题。上半场为由高泽豫同学带来的《让大学生活效率腾飞：常用网络资源介绍》。他介绍了中科大校内使用过的网络资源和一些校外的免费或者付费资源，帮助新生可以快速的使用学校的基础服务设施，提高学习工作生活效率。讲座下半场是陶柯宇同学的《日常生活的信息安全》。陶柯宇同学给大家科普了一些基础的网络知识，介绍了常见的信息安全漏洞，并提供了一系列防治措施，希望提高同学们网络风险的防范意识。特别是在万物互联，万物智能的物联网时代，网络风险的防范意识给格外的重要。同时，此次新生活力课程由于少院同学因院系安排无法参加，我们设置了直播与录播。
 
-![](http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2019.09.07_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E7%A8%8B/photo/DSC_0697.JPG)
+![](http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2019.09.07_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E7%A8%8B/photo/DSC_0697. JPG)
 
-![](http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2019.09.07_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E7%A8%8B/photo/DSC_0716.JPG)
+![](http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2019.09.07_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E7%A8%8B/photo/DSC_0716. JPG)
 
 最终，本次新生活力课程圆满结束，感谢校团委，校学生社团管理指导委员会和计算机科学与技术学院团委的支持！
 

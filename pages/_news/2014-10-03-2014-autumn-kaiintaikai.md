@@ -3,40 +3,54 @@ title: 2014 秋季学期会员大会
 author: cuihao
 date: '2014-10-03 11:40:51 +0800'
 categories:
-- LUG活动
+
+* LUG活动
+
 tags:
-- LUG
-- news
+
+* LUG
+* news
+
 comments:
-- id: 246
+
+* id: 246
+
   author: 御宅暴君
   author_email: acgtyrant@gmail.com
   author_url: http://acgtyrant.com
   date: '2014-10-04 17:32:58 +0800'
   date_gmt: '2014-10-04 09:32:58 +0800'
   content: "祝 2014 秋季学期会员大会 举办圆满结束！\r\n\r\nPS: 清一色的男人……= ="
-- id: 247
+
+* id: 247
+
   author: cuihao
   author_email: cuihao.leo@gmail.com
   author_url: http://cuihao.tk/
   date: '2014-10-04 19:12:49 +0800'
   date_gmt: '2014-10-04 11:12:49 +0800'
   content: 仔细找找！
-- id: 248
+
+* id: 248
+
   author: 御宅暴君
   author_email: acgtyrant@gmail.com
   author_url: http://acgtyrant.com
   date: '2014-10-04 19:14:15 +0800'
   date_gmt: '2014-10-04 11:14:15 +0800'
   content: 有注意到，但基本可以忽略。
-- id: 249
+
+* id: 249
+
   author: hosiet
   author_email: 073plan@gmail.com
   author_url: ''
   date: '2014-10-05 10:43:00 +0800'
   date_gmt: '2014-10-05 02:43:00 +0800'
   content: 有滋有味…
-- id: 250
+
+* id: 250
+
   author: jenny42
   author_email: changchongning@gmail.com
   author_url: ''

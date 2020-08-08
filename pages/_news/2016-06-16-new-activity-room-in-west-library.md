@@ -3,11 +3,15 @@ title: 西区图书馆新活动室启用
 author: Boyuan Yang
 date: '2016-06-16 15:28:55 +0800'
 categories:
-- LUG活动
+
+* LUG活动
+
 tags:
-- LUG
-- USTC_LUG
-- news
+
+* LUG
+* USTC_LUG
+* news
+
 comments: []
 ---
 2016年6月16日，LUG西区新活动室启用，并成为今后唯一的社团活动室。一部分LUG成员在当日早上从东区图书馆605老活动室与东图一楼将大部分活动材料与各类物品搬迁到了西区活动室。

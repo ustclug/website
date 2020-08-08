@@ -11,7 +11,7 @@ USTC LUG started the maintenance of the well-known Debian archive mirror <https:
 
 In recognition of its excellent performance, USTC LUG was awarded the Outstanding Association of USTC in May 2011. USTC LUG was also ranked as a “Four Star” Student Association of USTC in 2012, 2013 and 2014. In 2015, 2016, 2017 and 2018, USTC LUG was ranked as a “Five Star” Student Association of USTC.
 
-If you have any problem, please email us at lug &lt;at&gt; ustc.edu.cn.
+If you have any problem, please email us at lug &lt; at&gt; ustc.edu.cn.
 
 ## Special Events
 
@@ -31,8 +31,8 @@ Since October 2011, we hold a meeting named [Weekly Party](/wiki/lug/events/week
 
 ## Network Services
 
-- [Open-Source Software Mirrors](/wiki/lug/services/mirrors)
-- [Network Boot Service (PXE)](/wiki/lug/services/pxe)
-- [GitLab (Self-hosted Git repository hosting service)](/wiki/lug/services/gitlab)
+* [Open-Source Software Mirrors](/wiki/lug/services/mirrors)
+* [Network Boot Service (PXE)](/wiki/lug/services/pxe)
+* [GitLab (Self-hosted Git repository hosting service)](/wiki/lug/services/gitlab)
 
 You can find us [here](/wiki/lug/contact).

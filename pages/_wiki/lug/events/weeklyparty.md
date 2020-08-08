@@ -5,17 +5,17 @@
 
 **我们曾经……**
 
-- 我们曾经苦于学习 Linux 无门，
-- 我们发现很棒的工具却难于上手，
-- 我们想分享自己的心得却无人理会，
-- 我们曾经四处询问却处处碰壁。
+* 我们曾经苦于学习 Linux 无门，
+* 我们发现很棒的工具却难于上手，
+* 我们想分享自己的心得却无人理会，
+* 我们曾经四处询问却处处碰壁。
 
 **每周小聚！**
 
-- 每周我们选定一个主题和一位主持，
-- 与您一同分享使用 Linux 的心得体会，
-- 群策群力解决令人抓耳挠腮的问题，
-- 共同发扬 GNU 文化，提高 Linux 水平。 自 2011 年 10 月起，每个周末都有每周小聚活动，由一位同学做技术分享演讲，欢迎所有师生参与。具体时间、地点和内容会在周四发到邮件列表和瀚海星云BBS Notice/Linux 版上。
+* 每周我们选定一个主题和一位主持，
+* 与您一同分享使用 Linux 的心得体会，
+* 群策群力解决令人抓耳挠腮的问题，
+* 共同发扬 GNU 文化，提高 Linux 水平。 自 2011 年 10 月起，每个周末都有每周小聚活动，由一位同学做技术分享演讲，欢迎所有师生参与。具体时间、地点和内容会在周四发到邮件列表和瀚海星云BBS Notice/Linux 版上。
 
 如果您希望讨论某个主题或主持小聚，欢迎加入 [LUG 邮件列表](/wiki/lug/mailinglist)
 
@@ -27,9 +27,13 @@
 
 **主讲人请注意：**
 
-- 毋忘上传 slides，越早越好(在愿意分享 slides 的前提下)![FIXME](/wiki/lib/images/smileys/fixme.gif) slides 的版权问题？
-- 在 BBS Linux 发通知时，注意打上 LUG 标签
-- 尽早编辑本 wiki，活动时间以本 wiki 为准
+* 毋忘上传 slides，越早越好(在愿意分享 slides 的前提下)
+
+![FIXME](/wiki/lib/images/smileys/fixme.gif)
+
+ slides 的版权问题？
+* 在 BBS Linux 发通知时，注意打上 LUG 标签
+* 尽早编辑本 wiki，活动时间以本 wiki 为准
 
 ## Time Table
 
@@ -46,11 +50,11 @@
 
 | 时间             | 主持   | 地点       | 主题                                   | 讲稿                                                         |
 | :--------------- | :----- | :--------- | :------------------------------------- | :----------------------------------------------------------- |
-| 2019-12-07 14:30 | 曾明亮 | 西区 3A110 | How Org-mode Changed My Life           | [slides](https://ftp.lug.ustc.edu.cn/weekly_party/2019.12.07_How_Org-mode_Changed_My_Life/) [video](https://ftp.lug.ustc.edu.cn/活动/2019.秋_小聚集锦/2019.12.07/video/) |
+| 2019-12-07 14:30 | 曾明亮 | 西区 3A110 | How Org-mode Changed My Life           | [slides](https://ftp.lug.ustc.edu.cn/weekly_party/2019.12.07_How_Org-mode_Changed_My_Life/) [video](https://ftp.lug.ustc.edu.cn/活动/2019. 秋_小聚集锦/2019.12.07/video/) |
 | 2019-12-01 14:30 | 蔡文韬 | 西区 3A110 | 预测执行攻击及其补丁                   | [notes](https://etsai.site/spectres-and-meltdown/) [slides](https://ftp.lug.ustc.edu.cn/weekly_party/2019.12.01_Spectre_And_Meltdown/Spectre And Meltdown.pdf) |
 | 2019-11-24 14:30 | 彭定澜 | 西区 3A110 | C++ 黑魔法：模板元编程和编译期编程技术 | [slides](https://ftp.lug.ustc.edu.cn/weekly_party/2019.11.24_TMP/TMP.pdf) |
 | 2019-11-17 14:30 | 李文睿 | 西区 3A110 | LaTeX 使用简介及经验分享               | [slides](https://ftp.lug.ustc.edu.cn/weekly_party/2019.11.17_LaTeX/) |
-| 2019-09-17 17:30 | 张震   | 西区 3A311 | 构建系统、惰性求值与增量计算           | [slides](https://ftp.lug.ustc.edu.cn/活动/2019.秋_小聚集锦/2019.09.17/slides/computation-talk.pdf) [video](https://ftp.lug.ustc.edu.cn/活动/2019.秋_小聚集锦/2019.09.17/video/video.mp4) |
+| 2019-09-17 17:30 | 张震   | 西区 3A311 | 构建系统、惰性求值与增量计算           | [slides](https://ftp.lug.ustc.edu.cn/活动/2019. 秋_小聚集锦/2019.09.17/slides/computation-talk.pdf) [video](https://ftp.lug.ustc.edu.cn/活动/2019. 秋_小聚集锦/2019.09.17/video/video.mp4) |
 
 ### Spring 2019
 
@@ -105,7 +109,11 @@
 
 | 日期       | 主持   | 主题                          | 讲稿                                                         |
 | :--------- | :----- | :---------------------------- | :----------------------------------------------------------- |
-| 2016-12-18 | 庄思源 | 高性能计算                    | ![FIXME](/wiki/lib/images/smileys/fixme.gif) |
+| 2016-12-18 | 庄思源 | 高性能计算                    | 
+
+![FIXME](/wiki/lib/images/smileys/fixme.gif)
+
+ |
 | 2016-12-11 | 杨博远 | Reproducible Builds in Debian | [reproducible_builds_in_debian.pdf](/wiki/_media/lug/reproducible_builds_in_debian.pdf) |
 | 2016-12-04 | 张震   | g Summer of Code              | [PDF](/wiki/lib/exe/fetch.php?tok=123777&media=https%3A%2F%2Fftp.lug.ustc.edu.cn%2Fweekly_party%2F2016.12.04_GSoC_Intro%2FGSoC-zhen.pdf) |
 | 2016-11-13 | 高一凡 | Hello OpenPGP                 | [PDF](/wiki/lib/exe/fetch.php?tok=8a53e0&media=http%3A%2F%2Fftp.lug.ustc.edu.cn%2Fweekly_party%2F2016.11.13_hello_openpgp%2FHelloOpenPGP.pdf) |
@@ -114,8 +122,16 @@
 
 | 日期       | 主持   | 主题            | 讲稿                                                         | 视频                                                         |
 | :--------- | :----- | :-------------- | :----------------------------------------------------------- | :----------------------------------------------------------- |
-| 2016-05-02 | 王子博 | 树莓派智能小车  | ![FIXME](/wiki/lib/images/smileys/fixme.gif) |                                                              |
-| 2016-04-17 | 张光宇 | Python 异步编程 | ![FIXME](/wiki/lib/images/smileys/fixme.gif) |                                                              |
+| 2016-05-02 | 王子博 | 树莓派智能小车  | 
+
+![FIXME](/wiki/lib/images/smileys/fixme.gif)
+
+ |                                                              |
+| 2016-04-17 | 张光宇 | Python 异步编程 | 
+
+![FIXME](/wiki/lib/images/smileys/fixme.gif)
+
+ |                                                              |
 | 2016-04-03 | 高一凡 | Hello Docker II | [HelloDocker2.pdf](/wiki/lib/exe/fetch.php?tok=6efb1d&media=http%3A%2F%2Fftp.lug.ustc.edu.cn%2Fweekly_party%2F2016.04.03_hello_docker_2%2FHelloDocker2.pdf) |                                                              |
 | 2016-03-27 | 崔灏   | 密码学的故事    | [Text](/wiki/lib/exe/fetch.php?tok=58dcd1&media=http%3A%2F%2Fftp.lug.ustc.edu.cn%2Fweekly_party%2F2016.03.27_cryptography%2Fslides.md) | [World Without Java](http://www.bilibili.com/video/av4199916/) |
 
@@ -123,7 +139,11 @@
 
 | 日期       | 主持   | 主题                             | 讲稿                                                         |
 | :--------- | :----- | :------------------------------- | :----------------------------------------------------------- |
-| 2015-12-12 | 郑子涵 | Advanced C Programming           | ![FIXME](/wiki/lib/images/smileys/fixme.gif) |
+| 2015-12-12 | 郑子涵 | Advanced C Programming           | 
+
+![FIXME](/wiki/lib/images/smileys/fixme.gif)
+
+ |
 | 2015-11-22 | 张光宇 | 初识 MongoDB                     | [PDF](/wiki/lib/exe/fetch.php?tok=90b173&media=http%3A%2F%2Fftp.lug.ustc.edu.cn%2Fweekly_party%2F2015.11.22_mongodb%2Fslides.pdf) |
 | 2015-11-15 | 杨博远 | Meet With Linux                  | [PDF](/wiki/lib/exe/fetch.php?tok=efe9f9&media=http%3A%2F%2Fftp.lug.ustc.edu.cn%2Fweekly_party%2F2015.11.15_meet_with_linux%2Fmeet_with_linux.pdf) |
 | 2015-11-07 | 崔灏   | 操作系统的引导——从BIOS/MBR到UEFI | 作者的SSD炸了                                                |
@@ -136,7 +156,11 @@
 | 日期       | 主持   | 主题                    | 讲稿                                                         |
 | :--------- | :----- | :---------------------- | :----------------------------------------------------------- |
 | 2015-05-23 | 高一凡 | Hello Bitcoin           | [Slides](/wiki/lib/exe/fetch.php?tok=f2c339&media=http%3A%2F%2Fftp.lug.ustc.edu.cn%2Fweekly_party%2F2015.05.23_hello_bitcoin%2FHelloBitcoin.pdf) |
-| 2015-05-16 | 李博杰 | 白帽子大赛，黑客不神秘  | ![FIXME](/wiki/lib/images/smileys/fixme.gif) |
+| 2015-05-16 | 李博杰 | 白帽子大赛，黑客不神秘  | 
+
+![FIXME](/wiki/lib/images/smileys/fixme.gif)
+
+ |
 | 2015-04-18 | 杨博远 | 永远的 autotools （一） | [Slides](/wiki/lib/exe/fetch.php?tok=3cabad&media=http%3A%2F%2Fftp.lug.ustc.edu.cn%2Fweekly_party%2F2015.04.18_Autotools%2Flugweekly_foreverAutotools_1.ppt) |
 | 2015-04-12 | 王译锋 | 静态博客实践            | [Slides](/wiki/lib/exe/fetch.php?tok=973bd0&media=http%3A%2F%2Fftp.lug.ustc.edu.cn%2Fweekly_party%2F2015.04.12_Hexo%2F%e9%9d%99%e6%80%81%e5%8d%9a%e5%ae%a2%e5%ae%9e%e8%b7%b5.pdf) |
 
@@ -164,9 +188,17 @@
 | 第4课：认识各种各样的文件      | 张光宇 | [Slides](/wiki/lib/exe/fetch.php?tok=843ad8&media=https%3A%2F%2Flug.ustc.edu.cn%2FOpenCourse%2FLesson4%2Flesson4.pdf) | [Video](/OpenCourse/Lesson4/lesson4.mp4) |
 | 第5课：bash基础                | 张荣葳 | [Slides](/wiki/lib/exe/fetch.php?tok=bfdb3a&media=https%3A%2F%2Flug.ustc.edu.cn%2FOpenCourse%2FLesson5%2Flesson5.pdf) | [Video](/OpenCourse/Lesson5/lesson5.mp4) |
 | 第6课：Linux网络管理介绍       | 贾明皓 | [Slides](/wiki/lib/exe/fetch.php?tok=5886bb&media=https%3A%2F%2Flug.ustc.edu.cn%2FOpenCourse%2FLesson6%2Flinux_network_introduction.pdf) | [Video](/OpenCourse/Lesson6/lesson6.mp4) |
-| 第7课：如何高效地找东西        | 张荣葳 | ![FIXME](/wiki/lib/images/smileys/fixme.gif) | ![FIXME](/wiki/lib/images/smileys/fixme.gif) |
+| 第7课：如何高效地找东西        | 张荣葳 | 
+
+![FIXME](/wiki/lib/images/smileys/fixme.gif) | ![FIXME](/wiki/lib/images/smileys/fixme.gif)
+
+ |
 | 第8课：软件的安装与管理入门    | 杨博远 | [Slides](/wiki/lib/exe/fetch.php?tok=63a7ff&media=https%3A%2F%2Flug.ustc.edu.cn%2FOpenCourse%2FLesson8%2Flesson8.pdf) | [Video](/OpenCourse/Lesson8/lesson8.mp4) |
-| 第9课：正则表达式基础          | 张恒若 | ![FIXME](/wiki/lib/images/smileys/fixme.gif) | [Video](/OpenCourse/Lesson9/lesson9.mp4) |
+| 第9课：正则表达式基础          | 张恒若 | 
+
+![FIXME](/wiki/lib/images/smileys/fixme.gif) | [Video](/OpenCourse/Lesson9/lesson9.mp4)
+
+ |
 
 ### Fall 2013
 
@@ -211,9 +243,17 @@
 
 | 日期       | 主持   | 主题                     | 简介                                                | 讲稿                                                         |
 | :--------- | :----- | :----------------------- | :-------------------------------------------------- | :----------------------------------------------------------- |
-| 2012-05-27 | 李喵喵 | HTML5                    | Lightweight JavaScript AVG Backport & Customization | ![FIXME](/wiki/lib/images/smileys/fixme.gif) |
+| 2012-05-27 | 李喵喵 | HTML5                    | Lightweight JavaScript AVG Backport & Customization | 
+
+![FIXME](/wiki/lib/images/smileys/fixme.gif)
+
+ |
 | 2012-05-20 | 李博杰 | 用git进行版本控制        | git基本操作及其原理 git object hash，历史穿梭       | [slides](http://home.ustc.edu.cn/~boj/lug/git-lecture.pdf)   |
-| 2012-04-22 | 顾昊   | 正则表达式               | 正则表达式语法 在sed、grep、python中的应用          | ![FIXME](/wiki/lib/images/smileys/fixme.gif) |
+| 2012-04-22 | 顾昊   | 正则表达式               | 正则表达式语法 在sed、grep、python中的应用          | 
+
+![FIXME](/wiki/lib/images/smileys/fixme.gif)
+
+ |
 | 2012-04-14 | 郭家华 | iptables                 | iptables原理 封包过滤、NAT转发、指定出口IP          | [slides](/~guo/doc/iptables.pdf)       |
 | 2012-04-08 | 祝元宠 | 用vim进行C++开发         | vim与gdb等的整合 vim插件与资源，vim键盘图           | [Vim笔记](/wiki/redsky/vim_note)      |
 | 2012-04-01 | 沈达   | BreAk SHell, touch linux | Bash Scripting 如何使用文档和搜索来解决问题         | [slides](/~sadhen/lug_bash.pdf)        |
@@ -225,7 +265,7 @@
 | :--------- | :----- | :--------------- | :---------------------------------------------- | :----------------------------------------------------------- |
 | 2011-12-24 | 李喵喵 | Jquery & Ajax    | jQuery选择器、DOM、事件、动画                   | [slides](/~boj/web_dev/HappyDemo/jquery.html) |
 | 2011-12-18 | 李博杰 | JavaScript       | JS基本语法，HTML DOM                            | –                                                            |
-| 2011-12-10 | 李博杰 | 动态网站架构设计 | Discuz!X 的目录结构、运行流程 模板与缓存机制    | –                                                            |
+| 2011-12-10 | 李博杰 | 动态网站架构设计 | Discuz! X 的目录结构、运行流程 模板与缓存机制    | –                                                            |
 | 2011-12-03 | 李博杰 | 关系数据模型设计 | 数据库表结构的设计模式                          | [slides](/~boj/web_dev/10-RDBMS.pdf)   |
 | 2011-11-26 | 李博杰 | PHP              | PHP的I/O、对象与数据库                          | [slides](/~boj/web_dev/09-PHP(2).pdf)  |
 | 2011-11-19 | 李喵喵 | 前端实战         | 网页设计原则与实战                              | [slides](/~boj/web_dev/designdoc.pdf)  |

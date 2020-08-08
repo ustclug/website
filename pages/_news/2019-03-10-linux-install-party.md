@@ -4,7 +4,9 @@ image: https://ftp.lug.ustc.edu.cn/photo/small/DSC_0392.JPG
 author: sirius1242
 date: '2019-03-14 21:04:29 +0800'
 categories:
-- LUG活动
+
+* LUG活动
+
 tags: []
 ---
 

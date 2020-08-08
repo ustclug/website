@@ -7,6 +7,6 @@ Linux User Party 在于为不同层次的 Linux 用户提供一个交流的平�
 
 ## 历史活动
 
-- [2014 Linux User Party 暨 Freeshell 用户交流会](/news/2014/12/2014-linux-user-party/)
-- [2013科大LUG Linux User Party](/news/2013/12/2013科大lug-software-freedom-day/)
-- [2012科大LUG Linux User Party](/news/2012/11/ustclug-going-online-going-native/)
+* [2014 Linux User Party 暨 Freeshell 用户交流会](/news/2014/12/2014-linux-user-party/)
+* [2013科大LUG Linux User Party](/news/2013/12/2013科大lug-software-freedom-day/)
+* [2012科大LUG Linux User Party](/news/2012/11/ustclug-going-online-going-native/)

@@ -5,24 +5,24 @@
 
 ## 合作伙伴
 
-- [烧饼博客](https://sb.sb/)
-- [Coding 云端开发平台](https://coding.net/)
-- [深度操作系统](http://www.deepin.org/)
-- [Xtom](https://xtom.com/)
-- [中国科学技术大学图书馆](http://lib.ustc.edu.cn/)
-- [中国科学技术大学网络信息中心](http://ustcnet.ustc.edu.cn/)
-- [中国科学技术大学信息安全俱乐部](http://sec.ustc.edu.cn/)
+* [烧饼博客](https://sb.sb/)
+* [Coding 云端开发平台](https://coding.net/)
+* [深度操作系统](http://www.deepin.org/)
+* [Xtom](https://xtom.com/)
+* [中国科学技术大学图书馆](http://lib.ustc.edu.cn/)
+* [中国科学技术大学网络信息中心](http://ustcnet.ustc.edu.cn/)
+* [中国科学技术大学信息安全俱乐部](http://sec.ustc.edu.cn/)
 
 ## 姊妹社团
 
-- [清华大学 TUNA 协会](https://www.tuna.moe/)
+* [清华大学 TUNA 协会](https://www.tuna.moe/)
 
 ## 开源社区
 
-- [瀚海星云 BBS Linux 讨论区](http://bbs.ustc.edu.cn/cgi/bbsdoc?board=Linux)
-- [Arch Linux 中文社区](http://bbs.archlinuxcn.org/)
-- [Fedora 中文社区](http://www.fdzh.org/)
-- [开源工场](https://openingsource.org/)
+* [瀚海星云 BBS Linux 讨论区](http://bbs.ustc.edu.cn/cgi/bbsdoc?board=Linux)
+* [Arch Linux 中文社区](http://bbs.archlinuxcn.org/)
+* [Fedora 中文社区](http://www.fdzh.org/)
+* [开源工场](https://openingsource.org/)
 
 ## 各地 LUG
 
@@ -42,8 +42,8 @@
 
 ## 企业链接
 
-- [江苏龙芯梦兰科技股份有限公司](http://www.lemote.com/)
-- [中标软件](http://www.cs2c.com.cn/)
-- [华恒科技](http://www.hhcn.com/)
-- [谋智中国](http://mozilla.com.cn/)
-- [上海恒为信息科技有限公司](http://www.embedway.com/)
+* [江苏龙芯梦兰科技股份有限公司](http://www.lemote.com/)
+* [中标软件](http://www.cs2c.com.cn/)
+* [华恒科技](http://www.hhcn.com/)
+* [谋智中国](http://mozilla.com.cn/)
+* [上海恒为信息科技有限公司](http://www.embedway.com/)

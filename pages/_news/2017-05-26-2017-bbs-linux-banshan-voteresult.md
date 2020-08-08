@@ -3,17 +3,23 @@ title: 2017 Linux 板版衫投票结果公示
 author: Boyuan Yang
 date: '2017-05-26 11:42:28 +0800'
 categories:
-- LUG活动
+
+* LUG活动
+
 tags: []
 comments:
-- id: 1792
+
+* id: 1792
+
   author: Jian
   author_email: striver.jane@yahoo.com
   author_url: ''
   date: '2017-05-26 13:38:08 +0800'
   date_gmt: '2017-05-26 05:38:08 +0800'
   content: 期待…
-- id: 1794
+
+* id: 1794
+
   author: DingZhiGang
   author_email: ding@a.com
   author_url: ''

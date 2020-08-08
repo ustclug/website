@@ -18,15 +18,15 @@ pxe.ustc.edu.cn 由中国科大图书馆、网络中心和学生 Linux 用户协
 
 如果您的机器是 UEFI 模式启动的、UEFI 固件带有网络支持，并已经安装有 GRUB2，则可以在 GRUB 命令行中直接加载网络启动菜单：
 
-```
+``` 
 insmod efinet http
 net_bootp
 configfile (http,202.38.93.94)/boot2/menu/root.menu
 ```
 
-也可以制作一个 EFI 可执行文件，放在U盘中方便部署。在 Linux 系统中，把前面的命令行保存到文件 `grub.cfg`，然后运行命令：
+也可以制作一个 EFI 可执行文件，放在U盘中方便部署。在 Linux 系统中，把前面的命令行保存到文件 `grub.cfg` ，然后运行命令：
 
-```shell
+``` shell
 grub-mkstandalone --compress=xz -O x86_64-efi --locales= --fonts= --themes= -o grub.efi "boot/grub/grub.cfg=./grub.cfg"
 ```
 
@@ -34,7 +34,7 @@ grub-mkstandalone --compress=xz -O x86_64-efi --locales= --fonts= --themes= -o g
 
 还可以接着用下面命令制作一个 FAT 软盘镜像，有些服务器的 IPMI 支持远程加载软盘镜像，这样就可以方便地远程维护服务器了：
 
-```shell
+``` shell
 truncate -s 1474560 floppy.img
 mformat -f 1440 :: -i floppy.img
 mmd '::/EFI' '::/EFI/BOOT' -i floppy.img
@@ -45,7 +45,7 @@ mcopy grub.efi '::/EFI/BOOT/bootx64.efi' -i floppy.img
 
 用 [iPXE](https://ipxe.org/) 脚本或者命令行模式执行以下命令：
 
-```
+``` 
 dhcp
 set 210:string http://202.38.93.94/boot/tftp/
 chain ${210:string}pxelinux.0
@@ -57,7 +57,7 @@ chain ${210:string}pxelinux.0
 
 仅支持传统 PXE 启动，现在已不再更新。
 
-```
+``` 
 dhcp //如果已经获取到了地址则请忽略
 set 210:string http://202.38.93.94/boot/tftp/ 
 chain ${210:string}lpxelinux.0
