@@ -1,314 +1,314 @@
 var store = [{
-"title": "2010年自由软件日（合肥站）",
-"excerpt":"2010年9月18日在中国科大西区3112教室，中国科学技术大学 Linux User Group(USTC@LUG) 组织了以“人人为我，我为人人”为主题的自由软件日活动，本次活动得到了龙芯梦兰、龙芯俱乐部、中标软件、中科红旗、中国开源软件推进联盟等公司、开源社区，以及合肥工业大学，安徽大学等兄弟院校的大力支持。100多名中国科大、安徽大学、合肥工业大学等高校的在校学生及校友以及合肥地区开源爱好者参加了本次活动。      活动由 LUG 协会现任会长王鹏主持，他首先对自由软件日合肥站的活动流程以及科大 LUG、合肥 LUG 的情况做了具体介绍。在 UBUNTU 创始人给中国开源爱好者的视频播放中，2010 年自由软件日合肥站的活动正式开幕了。      科大网络中心的张焕杰老师首先为大家带来了《Linux在科大校园网络建设中的应用》的专题报告。张焕杰老师是科大92级计算系学生，后来留校在网络信息中心任职，主要工作之一是负责管理科大校园网，他也是国内当年有名的中科大 Linux 三剑客之一。张老师精彩的报告之后开始了休息以及游戏互动环节，在回答了组织方准备的关于自由软件和 Linux 的小问题后，同学们领取了丰厚的奖品。在这中间还穿插了中科红旗 Qomo1.0 社区版发布，中标软件体验有奖征文活动启示等环节，活动中气氛热烈。   休息之后是我们的自由主题演讲活动，一些同学做了开源软件使用相关的技术分享报告，同学们就一些常见问题进行了互动交流。   主题演讲活动之后，进行了现场短信投票，赵希明同学题为《Linux下的日常工作和娱乐》的报告当选为当天最受欢迎的自由主题演讲。之后进行了抽奖环节，若干名参与者成为了当天的幸运观众，并获得了收音机，小玩具等奖品。活动从下午 2:30 一直持续到下午 6:00. 会后举行了 Linux User Dinner(LUD), 在 LUD 中，LUG 的志愿者们就我校 PXE 系统今后的发展，以及结合我校网络环境将要开发的项目进行了讨论与规划。                       ","categories": ["LUG活动"],
-"tags": ["USTC_LUG","SFD"],
-"url": "https://beta.ustclug.org//news/2010/09/2010-software-freedom-day/",
+"title": null,
+"excerpt":"2010年9月18日在中国科大西区3112教室，中国科学技术大学 Linux User Group(USTC@LUG) 组织了以“人人为我，我为人人”为主题的自由软件日活动，本次活动得到了龙芯梦兰、龙芯俱乐部、中标软件、中科红旗、中国开源软件推进联盟等公司、开源社区，以及合肥工业大学，安徽大学等兄弟院校的大力支持。100多名中国科大、安徽大学、合肥工业大学等高校的在校学生及校友以及合肥地区开源爱好者参加了本次活动。      活动由 LUG 协会现任会长王鹏主持，他首先对自由软件日合肥站的活动流程以及科大 LUG、合肥 LUG 的情况做了具体介绍。在 UBUNTU 创始人给中国开源爱好者的视频播放中，2010 年自由软件日合肥站的活动正式开幕了。      科大网络中心的张焕杰老师首先为大家带来了《Linux在科大校园网络建设中的应用》的专题报告。张焕杰老师是科大92级计算系学生，后来留校在网络信息中心任职，主要工作之一是负责管理科大校园网，他也是国内当年有名的中科大 Linux 三剑客之一。张老师精彩的报告之后开始了休息以及游戏互动环节，在回答了组织方准备的关于自由软件和 Linux 的小问题后，同学们领取了丰厚的奖品。在这中间还穿插了中科红旗 Qomo1.0 社区版发布，中标软件体验有奖征文活动启示等环节，活动中气氛热烈。   休息之后是我们的自由主题演讲活动，一些同学做了开源软件使用相关的技术分享报告，同学们就一些常见问题进行了互动交流。   主题演讲活动之后，进行了现场短信投票，赵希明同学题为《Linux下的日常工作和娱乐》的报告当选为当天最受欢迎的自由主题演讲。之后进行了抽奖环节，若干名参与者成为了当天的幸运观众，并获得了收音机，小玩具等奖品。活动从下午 2:30 一直持续到下午 6:00. 会后举行了 Linux User Dinner(LUD), 在 LUD 中，LUG 的志愿者们就我校 PXE 系统今后的发展，以及结合我校网络环境将要开发的项目进行了讨论与规划。                       ","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2010-09-29-2010-software-freedom-day/",
 "teaser": null
 },{
-"title": "2010年LUG服务器维护计划研讨会",
-"excerpt":"2010年10月15日晚上，LUG在科大西区图书馆组织了服务器维护小组第一次例会，会议由LUG协会现任副会长张成同学主持，集中讨论了发展现有网络服务的计划。20余位LUG志愿者参加了本次会议。      张成首先介绍了现在学校linux 用户协会服务器现状，包括debian,oss,pxe,freeshell,lug.ustc等服务器的配置、历史介绍等。然后张成详细介绍了本学期服务器维护小组的工作计划，包括oss/debian系统和服务的更新以及pxe服务的改造构想。      活动计划介绍完之后，大家讨论了活动计划的具体开展方案，各位志愿者根据自己的兴趣爱好、以及服务器维护工作量大小等因素选择加入各个服务器的维护小组。各小组由现在的维护者担任组长，负责组织培训，活动通知等工作。 最后，张成同学做了pxe网络服务的专题讲座。pxe维护小组的同学以及其他感兴趣的同学认真听取了本次讲座。      本次活动从19:00持续到22:30，会议中大家进行了热烈讨论，积极要求参与到服务器的各项维护工作中，为本学年服务器维护工作的开展打下了一个良好的开端。会后部分志愿者还到活动室对将来需要用到的测试服务器等进行了实地考察。  ","categories": ["LUG会议"],
-"tags": ["PXE","LUG","Meeting"],
-"url": "https://beta.ustclug.org//news/2010/10/2010-lug-server-dev-meeting/",
+"title": null,
+"excerpt":"2010年10月15日晚上，LUG在科大西区图书馆组织了服务器维护小组第一次例会，会议由LUG协会现任副会长张成同学主持，集中讨论了发展现有网络服务的计划。20余位LUG志愿者参加了本次会议。      张成首先介绍了现在学校linux 用户协会服务器现状，包括debian, oss, pxe, freeshell, lug.ustc等服务器的配置、历史介绍等。然后张成详细介绍了本学期服务器维护小组的工作计划，包括oss/debian系统和服务的更新以及pxe服务的改造构想。      活动计划介绍完之后，大家讨论了活动计划的具体开展方案，各位志愿者根据自己的兴趣爱好、以及服务器维护工作量大小等因素选择加入各个服务器的维护小组。各小组由现在的维护者担任组长，负责组织培训，活动通知等工作。 最后，张成同学做了pxe网络服务的专题讲座。pxe维护小组的同学以及其他感兴趣的同学认真听取了本次讲座。      本次活动从19:00持续到22:30，会议中大家进行了热烈讨论，积极要求参与到服务器的各项维护工作中，为本学年服务器维护工作的开展打下了一个良好的开端。会后部分志愿者还到活动室对将来需要用到的测试服务器等进行了实地考察。  ","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2010-10-19-2010-lug-server-dev-meeting/",
 "teaser": null
 },{
-"title": "2010年4月 Linux Install Party",
-"excerpt":"   Linux Install Party是中国科学技术大学Linux用户协会一年一度举办的活动，主旨在于推广和安装Linux，宣传和鼓励开源和自由软件精神。本次Linux Install Party主题是“草根低碳”。“草根”反映Linux目前已经逐渐平民化的特征，人们往往以为Linux是一个很高深的东西，这次party就是要把Linux带到同学们的身边。“低碳”反映了Linux创新的安装方式，以往安装Linux需要刻录光盘，费时费力不环保，这次party将宣传USB安装和网络安装的方法。本次活动可以让同学们亲身“无痛”体验到Linux，同时获得Linux的相关知识，并在安装Linux环节有专人指导。   由于活动之前通过海报、横幅、bbs进站画面等多种途径的宣传，再加上Mozilla中国、中标软件等公司以及中国开源软件推进联盟的鼎力支持，以及校学生广告艺术协会等兄弟协会和合肥工业大学等兄弟院校同学的大力帮助，本次活动于2010年11月21日在3121教室成功举办，现场200名左右的同学和校友以及开软件软爱好者参加了活动。   本次活动由顾昊同学主持。在活动中，科大计算机系本科的张昊翀同学首先给大家详细介绍了Linux安装的相关知识，包括发行版的选择和如何分区。另外他还向大家介绍了grub的一些知识，例如如何设置默认启动项，如何修复grub以及如何删除grub并修复windows启动项。   紧跟着是趣味问答环节，该环节送出了Mozilla中国、中标软件等公司以及中国开源软件推进联盟赞助的礼物。该环节问了一些很有趣的问题，例如“列举5个以上Linux发行版”、“列举5个以上窗口管理器”、“一块硬盘最多能有几个主分区，为什么？”等等问题。同学们回答踊跃，现场气氛很热烈。   接着科大计算机系研究生张成同学给大家介绍并演示了PXE系统。张成同学现场显示了knoppix、中标普华、ubuntu、mint等操作系统，介绍了如何通过pxe安装linux，并展望了通过pxe建立全校无盘系统的愿景。   之后由祝元宠同学给大家带来了各个Linux发行版的简要介绍。接着便是活动的安装环节，有二十多位同学携带了笔记本电脑现场安装了Linux。同学们十分积极，气氛很热烈，活动从下午两点半持续到了五点半。之后有十几名热心志愿者参加了LUD（Linux User Dinner）聚餐，就Linux社区讨论了许多问题和展望，增进了技术和感情。   活动结束后一周，很多同学发帖询问Linux安装的相关问题，在bbs的Linux版掀起了一个安装Linux的小高潮。   以下是活动现场的照片：                          ","categories": ["LUG活动"],
-"tags": ["Linux User Party","Linux Install Party","PXE"],
-"url": "https://beta.ustclug.org//news/2010/12/2010-04-linux-install-party/",
+"title": null,
+"excerpt":"   Linux Install Party是中国科学技术大学Linux用户协会一年一度举办的活动，主旨在于推广和安装Linux，宣传和鼓励开源和自由软件精神。本次Linux Install Party主题是“草根低碳”。“草根”反映Linux目前已经逐渐平民化的特征，人们往往以为Linux是一个很高深的东西，这次party就是要把Linux带到同学们的身边。“低碳”反映了Linux创新的安装方式，以往安装Linux需要刻录光盘，费时费力不环保，这次party将宣传USB安装和网络安装的方法。本次活动可以让同学们亲身“无痛”体验到Linux，同时获得Linux的相关知识，并在安装Linux环节有专人指导。   由于活动之前通过海报、横幅、bbs进站画面等多种途径的宣传，再加上Mozilla中国、中标软件等公司以及中国开源软件推进联盟的鼎力支持，以及校学生广告艺术协会等兄弟协会和合肥工业大学等兄弟院校同学的大力帮助，本次活动于2010年11月21日在3121教室成功举办，现场200名左右的同学和校友以及开软件软爱好者参加了活动。   本次活动由顾昊同学主持。在活动中，科大计算机系本科的张昊翀同学首先给大家详细介绍了Linux安装的相关知识，包括发行版的选择和如何分区。另外他还向大家介绍了grub的一些知识，例如如何设置默认启动项，如何修复grub以及如何删除grub并修复windows启动项。   紧跟着是趣味问答环节，该环节送出了Mozilla中国、中标软件等公司以及中国开源软件推进联盟赞助的礼物。该环节问了一些很有趣的问题，例如“列举5个以上Linux发行版”、“列举5个以上窗口管理器”、“一块硬盘最多能有几个主分区，为什么？”等等问题。同学们回答踊跃，现场气氛很热烈。   接着科大计算机系研究生张成同学给大家介绍并演示了PXE系统。张成同学现场显示了knoppix、中标普华、ubuntu、mint等操作系统，介绍了如何通过pxe安装linux，并展望了通过pxe建立全校无盘系统的愿景。   之后由祝元宠同学给大家带来了各个Linux发行版的简要介绍。接着便是活动的安装环节，有二十多位同学携带了笔记本电脑现场安装了Linux。同学们十分积极，气氛很热烈，活动从下午两点半持续到了五点半。之后有十几名热心志愿者参加了LUD（Linux User Dinner）聚餐，就Linux社区讨论了许多问题和展望，增进了技术和感情。   活动结束后一周，很多同学发帖询问Linux安装的相关问题，在bbs的Linux版掀起了一个安装Linux的小高潮。   以下是活动现场的照片：                          ","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2010-12-10-2010-04-linux-install-party/",
 "teaser": null
 },{
-"title": "mirrors.ustc.edu.cn开张啦！",
-"excerpt":"经过大半周的迁移和新脚本的测试，现在mirrors.ustc.edu.cn已经基本稳定了。 新机器的域名： IPv4/v6: mirrors.ustc.edu.cn  （能解析出教育网/电信/v6地址） v4only:  mirrors4.ustc.edu.cn （能解析出教育网/电信地址） v6only:  mirrors6.ustc.edu.cn 有些地方（比如我测试的合肥长宽），DNS会解析出电信地址，但使用教育网地址访问更快，这时可以通过修改hosts指定强制使用教育网地址访问。 教育网ip：202.38.95.110 电  信ip：202.141.160.110 v6  地址：2001:da8:d800:95::110 支持的访问方式： http/ftp/rsync 提供的服务： 原debian.ustc.edu.cn和oss.ustc.edu.cn提供的镜像服务基本上都迁移过来了，除fedora/ubuntu-partner外。fedora正在进行同步，ubuntu-partner也会在近几天同步过来。 原centos.ustc.edu.cn提供的centos/epel/linux-2.6.git也已经迁移过来了。 需要注意的修改： debian.ustc.edu.cn和oss.ustc.edu.cn两个域名已经设置为mirrors.ustc.edu.cn的别名，大多数镜像的相对地址没有改变，所以大家基本上不需要对原有设置进行修改（如sources.list），可以继续正常使用。但是以下镜像用户请注意： gentoo用户，原portage地址： rsync://oss.ustc.edu.cn/pub/gentoo-portage 已经调整为： rsync://mirrors.ustc.edu.cn/gentoo-portage cygwin用户，原cygwin源地址： http://oss.ustc.edu.cn/cygwin/cygwin/ 已经调整为： http://mirrors.ustc.edu.cn/cygwin/ 原ubuntu cdimage地址： http://debian.ustc.edu.cn/ubuntu-cd 已经调整为： http://mirrors.ustc.edu.cn/ubuntu-releases 原fedora linux地址： http://oss.ustc.edu.cn/fedora/ 已经调整为： http://mirrors.ustc.edu.cn/fedora/linux/ centos.ustc用户，请修改自己的CentOS-Base.repo和epel.repo，将文件中的域名 centos.ustc.edu.cn 修改为 mirrors.ustc.edu.cn linux-2.6.git用户，请修改origin地址： git remote set-url origin git://mirrors.ustc.edu.cn/linux-2.6.git 使用帮助： 大多数镜像的使用帮助已经完成，大家在对应的目录下，如： http://mirrors.ustc.edu.cn/ubuntu/ 点击页面上方（标题下方）的使用说明链接，可以打开其对应的帮助信息，如如何设置sources.list文件。或者也可以直接打开 http://mirrors.ustc.edu.cn/mirror-help/.html 在首页上点击使用说明链接，点击其中对应的源的链接，也可以跳转查看相应的帮助。 由于人手不够，有些源还没有使用帮助信息，也欢迎大家帮忙写了，发送给我们。 状态监控： 在首页点击页面上方的同步状态链接，可以查看当前各镜像的同步状态，包括成功与否/上游源/镜像体积等。大家如果知道更好（更新、更快）的上游源，请联系我们。 如果同步出现故障，服务器的管理员会收到邮件通知，以尽快处理，所以大家看到状态监控页面中有显示同步失败的条目时，无需联系我们。 如果同步状态上显示同步正常，但实际使用过程中发现镜像有问题，请联系我们。 联系方式： 我们的邮箱：mirrors@ustc.edu.cn 鸣谢： 感谢中国科学技术大学、网络信息中心的支持，特别感谢jameszhang老师为我们提供服务器！...","categories": ["LUG活动"],
-"tags": ["LUG","mirrors.ustc.edu.cn"],
-"url": "https://beta.ustclug.org//news/2011/04/mirrors-ustc-edu-cn-comes/",
+"title": null,
+"excerpt":"经过大半周的迁移和新脚本的测试，现在mirrors.ustc.edu.cn已经基本稳定了。 新机器的域名： IPv4/v6: mirrors.ustc.edu.cn  （能解析出教育网/电信/v6地址） v4only:  mirrors4.ustc.edu.cn （能解析出教育网/电信地址） v6only:  mirrors6.ustc.edu.cn 有些地方（比如我测试的合肥长宽），DNS会解析出电信地址，但使用教育网地址访问更快，这时可以通过修改hosts指定强制使用教育网地址访问。 教育网ip：202.38.95.110 电  信ip：202.141.160.110 v6  地址：2001:da8:d800:95::110 支持的访问方式： http/ftp/rsync 提供的服务： 原debian.ustc.edu.cn和oss.ustc.edu.cn提供的镜像服务基本上都迁移过来了，除fedora/ubuntu-partner外。fedora正在进行同步，ubuntu-partner也会在近几天同步过来。 原centos.ustc.edu.cn提供的centos/epel/linux-2.6.git也已经迁移过来了。 需要注意的修改： debian.ustc.edu.cn和oss.ustc.edu.cn两个域名已经设置为mirrors.ustc.edu.cn的别名，大多数镜像的相对地址没有改变，所以大家基本上不需要对原有设置进行修改（如sources.list），可以继续正常使用。但是以下镜像用户请注意： gentoo用户，原portage地址： rsync://oss.ustc.edu.cn/pub/gentoo-portage 已经调整为： rsync://mirrors.ustc.edu.cn/gentoo-portage cygwin用户，原cygwin源地址： http://oss.ustc.edu.cn/cygwin/cygwin/ 已经调整为： http://mirrors.ustc.edu.cn/cygwin/ 原ubuntu cdimage地址： http://debian.ustc.edu.cn/ubuntu-cd 已经调整为： http://mirrors.ustc.edu.cn/ubuntu-releases 原fedora linux地址： http://oss.ustc.edu.cn/fedora/ 已经调整为： http://mirrors.ustc.edu.cn/fedora/linux/ centos.ustc用户，请修改自己的CentOS-Base.repo和epel.repo，将文件中的域名 centos.ustc.edu.cn 修改为 mirrors.ustc.edu.cn linux-2.6.git用户，请修改origin地址： git remote set-url origin git://mirrors.ustc.edu.cn/linux-2.6.git 使用帮助： 大多数镜像的使用帮助已经完成，大家在对应的目录下，如： http://mirrors.ustc.edu.cn/ubuntu/ 点击页面上方（标题下方）的使用说明链接，可以打开其对应的帮助信息，如如何设置sources.list文件。或者也可以直接打开 http://mirrors.ustc.edu.cn/mirror-help/.html 在首页上点击使用说明链接，点击其中对应的源的链接，也可以跳转查看相应的帮助。 由于人手不够，有些源还没有使用帮助信息，也欢迎大家帮忙写了，发送给我们。 状态监控： 在首页点击页面上方的同步状态链接，可以查看当前各镜像的同步状态，包括成功与否/上游源/镜像体积等。大家如果知道更好（更新、更快）的上游源，请联系我们。 如果同步出现故障，服务器的管理员会收到邮件通知，以尽快处理，所以大家看到状态监控页面中有显示同步失败的条目时，无需联系我们。 如果同步状态上显示同步正常，但实际使用过程中发现镜像有问题，请联系我们。 联系方式： 我们的邮箱：mirrors@ustc.edu.cn 鸣谢： 感谢中国科学技术大学、网络信息中心的支持，特别感谢jameszhang老师为我们提供服务器！...","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2011-04-14-mirrors-ustc-edu-cn-comes/",
 "teaser": null
 },{
-"title": "Color my desktop,Color my life!",
-"excerpt":"4月6日，已经连续多次跳票的Gnome 3终于在大家的翘首企盼中发布了，为了庆祝这件开源社区令人振奋的盛事。中国科大LUG(Linux User Group)特联合北京GUG(Gnome User Group)以及合肥LUG,联合举办Linux 技术沙龙暨Gnome 3发布活动。本次活动获得了中标软件公司的大力支持，并同时很荣幸的邀请到了北京Gnome用户组的李震宁主席参加。      Linux技术沙龙是中国科学技术大学Linux用户协会定期举办的活动，主旨在于推广Linux技术 ，宣传和鼓励开源和自由软件精神。本次Linux技术沙龙主题是“探秘Gnome 3.0”。不了解Linux的人往 往以为Linux是一个很古板的东西，图形化界面很不美观，难以摆脱粗糙风格。“Gnome ”是一种Linux一种桌面环境，以往安装Linux的Gnome1.0与Gnome2.0环境界面，不支持多点触控，操作较为费力，对于习惯windows的用户来说，最不习惯的就是Gnome的单点操作。这次技术沙龙就是要把将宣传千呼万唤始出来的“Gnome 3.0”，也将Gnome 3.0带到同学们的身边。本次活动可以让同学们亲身体验到Gnome 3.0的华丽特效与便捷操作，同时获得Linux与Gnome的相关知识。   由于活动之前通过海报、横幅、bbs进站画面等多种途径的宣传，再加上中标软件公司的鼎力支持，以及合肥工业大学等兄弟院校同学的大力帮助，本次活动于2011年4月16日在3124教室成功举办，现场200名左右的同学和校友以及开软件软爱好者参加了活动。   本次活动由LUG@USTC王鹏会长同学主持。在活动中，北京GUG（Gnome User Group）主席李震宁先生首先给大家详细介绍了Gnome 环境的相关特性，包括Gnome的诞生经过。另外他还向大家介绍了Gnome的一些知识，紧跟着是趣味问答环节，送出中标软件公司赞助的礼物。该环节问了一些很有趣的问题，例如“为什么Gnome的图标为脚印？”、“列举5个以上窗口管理器？”、“什么是GTK？”等等问题。同学们回答踊跃，现场气氛很热烈，回答的同学就能获取一份小礼品。   LUG的祝元宠同学给大家介绍并演示了Gnome 3.0环境。祝元宠同学现场演示了linux在Gnome环境下的新特性，如无限度多窗口功能，绚丽切换窗口功能，多点触控功能等等新特性。同学们均深深体会到了Gnome 3.0令人震撼的华丽和亲和。   科大计算机系研究生，LUG CTO张成同学绍了现在学校linux 用户协会服务器现状，包括科大linux用户协会的创办历史，以及学校LUG资金来源，debian, oss, pxe, freeshell, lug.ustc等服务器的配置。然后张成详细介绍了本学期服务器维护小组的工作计划，包括oss/debian系统和服务的更新以及pxe服务的改造构想，并展望了通过pxe建立全校无盘系统的愿景。   接下来赵希明同学为大家介绍了Linux新手在学习中应该注意的问题,赵希明用风趣幽默的介绍指出了newbie应该遵守的社区礼仪以及在出现问题的时候应该怎样获得帮助。   活动最后由北京GUG主席李震宁先生与王鹏同学给大家进行了抽奖环节，若干名参与者成为了当天的幸运观众，并获得了收音机、文化衫、小玩具等奖品。整个技术沙龙中同学们十分积极，气氛很热烈，活动从下午两点半持续到了五点半。之后有十几名热心志愿者参加了LUD（Linux User Dinner）聚餐，就Linux社区讨论了许多问题和展望，增进了技术和感情。   在活动后的LUD(Linux User Dinner)上同学们对北京GUG主席的到来，以及中标公司长期以来对LUG@USTC的支持表示感谢，李主席与志愿者们共进晚餐。餐会上商讨并同时宣布HFGUG(Hefei Gnome User Group)(筹) 成立,王鹏担任筹委会主任。HFGUG(筹)的成立必将为开源软件特别是Gnome桌面在合肥乃至全国的推广做出自己的贡献。   下面是活动现场的一些照片:                          ","categories": ["LUG活动"],
-"tags": ["gnome3","Linux User Party"],
-"url": "https://beta.ustclug.org//news/2011/04/gnome3-launch-party/",
+"title": "Color my desktop, Color my life!",
+"excerpt":"4月6日，已经连续多次跳票的Gnome 3终于在大家的翘首企盼中发布了，为了庆祝这件开源社区令人振奋的盛事。中国科大LUG(Linux User Group)特联合北京GUG(Gnome User Group)以及合肥LUG, 联合举办Linux 技术沙龙暨Gnome 3发布活动。本次活动获得了中标软件公司的大力支持，并同时很荣幸的邀请到了北京Gnome用户组的李震宁主席参加。      Linux技术沙龙是中国科学技术大学Linux用户协会定期举办的活动，主旨在于推广Linux技术 ，宣传和鼓励开源和自由软件精神。本次Linux技术沙龙主题是“探秘Gnome 3.0”。不了解Linux的人往 往以为Linux是一个很古板的东西，图形化界面很不美观，难以摆脱粗糙风格。“Gnome ”是一种Linux一种桌面环境，以往安装Linux的Gnome1.0与Gnome2.0环境界面，不支持多点触控，操作较为费力，对于习惯windows的用户来说，最不习惯的就是Gnome的单点操作。这次技术沙龙就是要把将宣传千呼万唤始出来的“Gnome 3.0”，也将Gnome 3.0带到同学们的身边。本次活动可以让同学们亲身体验到Gnome 3.0的华丽特效与便捷操作，同时获得Linux与Gnome的相关知识。   由于活动之前通过海报、横幅、bbs进站画面等多种途径的宣传，再加上中标软件公司的鼎力支持，以及合肥工业大学等兄弟院校同学的大力帮助，本次活动于2011年4月16日在3124教室成功举办，现场200名左右的同学和校友以及开软件软爱好者参加了活动。   本次活动由LUG@USTC王鹏会长同学主持。在活动中，北京GUG（Gnome User Group）主席李震宁先生首先给大家详细介绍了Gnome 环境的相关特性，包括Gnome的诞生经过。另外他还向大家介绍了Gnome的一些知识，紧跟着是趣味问答环节，送出中标软件公司赞助的礼物。该环节问了一些很有趣的问题，例如“为什么Gnome的图标为脚印？”、“列举5个以上窗口管理器？”、“什么是GTK？”等等问题。同学们回答踊跃，现场气氛很热烈，回答的同学就能获取一份小礼品。   LUG的祝元宠同学给大家介绍并演示了Gnome 3.0环境。祝元宠同学现场演示了linux在Gnome环境下的新特性，如无限度多窗口功能，绚丽切换窗口功能，多点触控功能等等新特性。同学们均深深体会到了Gnome 3.0令人震撼的华丽和亲和。   科大计算机系研究生，LUG CTO张成同学绍了现在学校linux 用户协会服务器现状，包括科大linux用户协会的创办历史，以及学校LUG资金来源，debian, oss, pxe, freeshell, lug.ustc等服务器的配置。然后张成详细介绍了本学期服务器维护小组的工作计划，包括oss/debian系统和服务的更新以及pxe服务的改造构想，并展望了通过pxe建立全校无盘系统的愿景。   接下来赵希明同学为大家介绍了Linux新手在学习中应该注意的问题, 赵希明用风趣幽默的介绍指出了newbie应该遵守的社区礼仪以及在出现问题的时候应该怎样获得帮助。   活动最后由北京GUG主席李震宁先生与王鹏同学给大家进行了抽奖环节，若干名参与者成为了当天的幸运观众，并获得了收音机、文化衫、小玩具等奖品。整个技术沙龙中同学们十分积极，气氛很热烈，活动从下午两点半持续到了五点半。之后有十几名热心志愿者参加了LUD（Linux User Dinner）聚餐，就Linux社区讨论了许多问题和展望，增进了技术和感情。   在活动后的LUD(Linux User Dinner)上同学们对北京GUG主席的到来，以及中标公司长期以来对LUG@USTC的支持表示感谢，李主席与志愿者们共进晚餐。餐会上商讨并同时宣布HFGUG(Hefei Gnome User Group)(筹) 成立, 王鹏担任筹委会主任。HFGUG(筹)的成立必将为开源软件特别是Gnome桌面在合肥乃至全国的推广做出自己的贡献。   下面是活动现场的一些照片:                          ","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2011-04-16-gnome3-launch-party/",
 "teaser": null
 },{
-"title": "Fwd: 读书笔记：关于维护服务器的一些技巧",
-"excerpt":"寒假读了三本书《LINUX SERVER HACKS 卷二》《实战Nginx：取代Apache的高性能Web服务器》《Linux服务器性能调整》，简单地了解了些linux服务器维护和管理上的技巧。现在就分别简要谈谈我在读这三本书时的感受吧。   一：《LINUX SERVER HACKS 卷二》   首先，这不是一本工具书，而是一本经验集。书内都是很巧妙的一节一节的linux服务器维护技巧，主要目的是提高维护linux是的速度和鲁棒性。说实话，我不是很习惯这种模式的书，因为如果带着问题去读这本书，读完后还是问题，而本不是关心的部分，读完后也很快就忘了。   简言之，我懂这本书里得到的信息有：   一：linux非常灵活，特别是结合NFS以及远程终端，可以做非常有想象力的事情。   二：在复杂的连线环境中记得使用screen   三：脚本可以做几乎任何维护性质的事，而且事情的解决方案往往比你想得简单。   四：注意uid，gid重用可能带来的问题   五：Google万岁   二：《Linux服务器性能调整》   这本书翻译的不是很好，文法晦涩，而且介绍的东西偏深，很多是探讨内核级的优化。感觉看得不是很明白，简单写写吧。   一：关于服务器文件系统的选择：ReiserFS鲁棒性很好，而且对小文件有最佳性能。XFS针对大型文件有最佳性能。   二：一块硬盘上读取外侧磁道的速度要快于内侧磁道，所以分区是可以考虑这点将序号小的分区分配给经常读写的目录。譬如分区时第一个为swap，第二个/var，再者/usr，最后才是根和/home   三：mount文件系统时带上noatime可以提高一些性能。   四：文件系统在创建的时候可以调教一些参数优化性能   五：各类监控/tweak工具：hdparam, iostats, top, vmstat   三：《实战Nginx：取代Apache的高性能Web服务器》   这本书灌水的内容比较多，内容实际上也就是作者博客上的一些应用技巧的整理，可以总结的不多，因为按部就班的做就行了。   从书中看，nginx的性能优于apache，而且在反向代理方面特别有优势，这是它的亮点。Nginx虽然支持rewrite，自我感觉还是蛮好用的，但是不兼容apache的.htaccess，使用时需注意。   Nginx的组件高度模块化，可定制性比较强，具体可在使用时疯狂google。   对于使用php+mysql的场合，注意php使用fastcgi的方式启动，性能貌似比传统cgi要高不少，估计和apache的module差不多   书中没有提到什么值得一提的优化，具体实践的时候多google好了。对于硬件环境不好的服务器，减少nginx工作进程，打开gzip压缩和缓存，为php安装加速器并为低配置环境优化，数据库（例如mysql）在配置时减少内存占用上限。选择myisam而不是innodb。   简言之，这本书最大的作用就是让nginx变得平易近人大家都可尝试了。  ","categories": ["读书笔记"],
-"tags": ["nginx","linux server","php","mysql","reading notes"],
-"url": "https://beta.ustclug.org//news/2011/04/2011-winter-reading-notes/",
+"title": null,
+"excerpt":"寒假读了三本书《LINUX SERVER HACKS 卷二》《实战Nginx：取代Apache的高性能Web服务器》《Linux服务器性能调整》，简单地了解了些linux服务器维护和管理上的技巧。现在就分别简要谈谈我在读这三本书时的感受吧。   一：《LINUX SERVER HACKS 卷二》   首先，这不是一本工具书，而是一本经验集。书内都是很巧妙的一节一节的linux服务器维护技巧，主要目的是提高维护linux是的速度和鲁棒性。说实话，我不是很习惯这种模式的书，因为如果带着问题去读这本书，读完后还是问题，而本不是关心的部分，读完后也很快就忘了。   简言之，我懂这本书里得到的信息有：   一：linux非常灵活，特别是结合NFS以及远程终端，可以做非常有想象力的事情。   二：在复杂的连线环境中记得使用screen   三：脚本可以做几乎任何维护性质的事，而且事情的解决方案往往比你想得简单。   四：注意uid，gid重用可能带来的问题   五：Google万岁   二：《Linux服务器性能调整》   这本书翻译的不是很好，文法晦涩，而且介绍的东西偏深，很多是探讨内核级的优化。感觉看得不是很明白，简单写写吧。   一：关于服务器文件系统的选择：ReiserFS鲁棒性很好，而且对小文件有最佳性能。XFS针对大型文件有最佳性能。   二：一块硬盘上读取外侧磁道的速度要快于内侧磁道，所以分区是可以考虑这点将序号小的分区分配给经常读写的目录。譬如分区时第一个为swap，第二个/var，再者/usr，最后才是根和/home   三：mount文件系统时带上noatime可以提高一些性能。   四：文件系统在创建的时候可以调教一些参数优化性能   五：各类监控/tweak工具：hdparam, iostats, top, vmstat   三：《实战Nginx：取代Apache的高性能Web服务器》   这本书灌水的内容比较多，内容实际上也就是作者博客上的一些应用技巧的整理，可以总结的不多，因为按部就班的做就行了。   从书中看，nginx的性能优于apache，而且在反向代理方面特别有优势，这是它的亮点。Nginx虽然支持rewrite，自我感觉还是蛮好用的，但是不兼容apache的.htaccess，使用时需注意。   Nginx的组件高度模块化，可定制性比较强，具体可在使用时疯狂google。   对于使用php+mysql的场合，注意php使用fastcgi的方式启动，性能貌似比传统cgi要高不少，估计和apache的module差不多   书中没有提到什么值得一提的优化，具体实践的时候多google好了。对于硬件环境不好的服务器，减少nginx工作进程，打开gzip压缩和缓存，为php安装加速器并为低配置环境优化，数据库（例如mysql）在配置时减少内存占用上限。选择myisam而不是innodb。   简言之，这本书最大的作用就是让nginx变得平易近人大家都可尝试了。  ","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2011-04-28-2011-winter-reading-notes/",
 "teaser": null
 },{
-"title": "Debian中国官方镜像：ftp.cn.debian.org",
-"excerpt":"祝贺mirrors.ustc.edu.cn成为Debian中国官方镜像！此前，中国大陆debian镜像与主镜像延迟达24小时以上，现在，ftp.cn.debian.org直接从syncproxy.wna.debian.org接受推送更新，其延迟降到6小时以内。此外，另一国内主力镜像anheng.com从ftp.cn.debian.org接受推送，延迟也在10小时以内。mirrors.sohu.com亦开始从ftp.cn.debian.org同步。   Debian用户使用帮助   使用当前稳定版Debian Squeeze的用户，请使用以下内容替换/etc/apt/sources.list   deb http://ftp.cn.debian.org/debian squeeze main deb-src http://ftp.cn.debian.org/debian squeeze main deb http://ftp.cn.debian.org/debian squeeze-updates main deb-src http://ftp.cn.debian.org/debian squeeze-updates main deb http://mirrors.ustc.edu.cn/debian-security/ squeeze/updates main deb-src http://mirrors.ustc.edu.cn/debian-security/ squeeze/updates main   其他版本用户请参考Debian使用帮助。   镜像同步帮助   Debian Archive   请使用官方推荐的ftpsync脚本进行同步，脚本中有很详细的注释说明。如果有问题，请联系我们。   Debian CD   如果您已经同步了Debain Archive，那么推荐您使用jigdo来同步，这可以节省很多流量和时间，平均每个CD的ISO仅需不到1分钟。这里有使用说明，同步脚本在这里可以下载到。   推送同步   为了尽可能减少与Debian主服务器的延迟，推荐您接受我们的推送。每次ftp.cn.debian.org同步完成后，会主动告知下游源，激活下游源的同步脚本。要接受推送同步，请下载我们的pubkey，并保存到运行同步脚本的用户的~/.ssh/authorized_keys中：   wget -O- http://mirrors.ustc.edu.cn/~stephen/debianpush.pub &gt;&gt; ~/.ssh/authorized_keys   然后发邮件告知您的服务器地址、ssh端口以及用户。   联系方式   如果您对我们的服务器有任何建议或者意见，以及使用中碰到任何问题，都可以联系我们，我们的邮箱是：mirrors AT ustc.edu.cn.  ","categories": ["LUG活动"],
-"tags": ["mirrors.ustc.edu.cn","debian","ftp.cn.debian.org"],
-"url": "https://beta.ustclug.org//news/2011/05/ftp-cn-debian-org-comes/",
+"title": null,
+"excerpt":"祝贺mirrors.ustc.edu.cn成为Debian中国官方镜像！此前，中国大陆debian镜像与主镜像延迟达24小时以上，现在，ftp.cn.debian.org直接从syncproxy.wna.debian.org接受推送更新，其延迟降到6小时以内。此外，另一国内主力镜像anheng.com从ftp.cn.debian.org接受推送，延迟也在10小时以内。mirrors.sohu.com亦开始从ftp.cn.debian.org同步。 Debian用户使用帮助 使用当前稳定版Debian Squeeze的用户，请使用以下内容替换 /etc/apt/sources.list deb http://ftp.cn.debian.org/debian squeeze main deb-src http://ftp.cn.debian.org/debian squeeze main deb http://ftp.cn.debian.org/debian squeeze-updates main deb-src http://ftp.cn.debian.org/debian squeeze-updates main deb http://mirrors.ustc.edu.cn/debian-security/ squeeze/updates main deb-src http://mirrors.ustc.edu.cn/debian-security/ squeeze/updates main 其他版本用户请参考Debian使用帮助。 镜像同步帮助 Debian Archive 请使用官方推荐的ftpsync脚本进行同步，脚本中有很详细的注释说明。如果有问题，请联系我们。 Debian CD 如果您已经同步了Debain Archive，那么推荐您使用jigdo来同步，这可以节省很多流量和时间，平均每个CD的ISO仅需不到1分钟。这里有使用说明，同步脚本在这里可以下载到。 推送同步 为了尽可能减少与Debian主服务器的延迟，推荐您接受我们的推送。每次ftp.cn.debian.org同步完成后，会主动告知下游源，激活下游源的同步脚本。要接受推送同步，请下载我们的pubkey，并保存到运行同步脚本的用户的 ~/.ssh/authorized_keys 中： wget -O- http://mirrors.ustc.edu.cn/~stephen/debianpush.pub &gt;&gt; ~/.ssh/authorized_keys 然后发邮件告知您的服务器地址、ssh端口以及用户。 联系方式 如果您对我们的服务器有任何建议或者意见，以及使用中碰到任何问题，都可以联系我们，我们的邮箱是：mirrors...","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2011-05-05-ftp-cn-debian-org-comes/",
 "teaser": null
 },{
-"title": "Linux版版聚",
-"excerpt":"                                                                                            ","categories": ["LUG活动"],
-"tags": ["版聚","BBS"],
-"url": "https://beta.ustclug.org//news/2011/05/linux-e7-89-88-e7-89-88-e8-81-9a/",
+"title": null,
+"excerpt":"                                                                                            ","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2011-05-11-linux-e7-89-88-e7-89-88-e8-81-9a/",
 "teaser": null
 },{
-"title": "定制PXE Live系统",
-"excerpt":"现在已经有上百中Linux发行版，很多发行版都提供了通过PXE启动的Live系统。在科大校园网网络启动服务上，我们部署了很多发行版的Live系统，例如Ubuntu、Debian、Deepin、BackTrack、Knoppix等，既给一些需要维护系统的同学带来了极大的便利，也使得那些未接触过Linux的同学可以“无痛”体验各发行版，并决定哪一款发行版更符合自己的口味。然而，随着校园网的发展，大家的需求也变得更加多样化。各发行版的Linux系统已经不能满足大家的需求，因此我们需要自己定制一些系统，以满足在学校中各个场合的需求。 发行版Live系统的限制 发行版提供的Live系统具有这些限制： 数据易失。Live系统启动后所有的修改都保存在内存中，重启系统后所有修改都丢失了。 预装软件少。Live系统只预装了很少的软件，不足以日常办公的需求，即使作为体验系统也偏少 各使用场合的需求 目前在校园网中，大家对系统的需求有这些： 体验系统。对于Linux新手，要决定是否使用一个系统，一次体验是不够的，需要长期的使用，因此需要能够保存一些对系统的修改，如新装的软件、修改的配置文件、一些用户数据 公共机房的系统，需要安装所有常用的软件 个人移动办公使用的系统，需要能够将一些个人数据存放在网络上 因此，我们希望能够定自己定制Live系统，以满足各使用场合的需求。 使用Debian Live定制系统 在各发行版中，Debian提供了定制Live系统的工具，Debian Live。Debian Live的文档中有非常详细的介绍。简化后的步骤为： sudo apt-get install live-build mkdir live-system &amp;&amp; cd live-system lb config sudo lb build 其中，在config前可以自己修改config脚本来对Live系统的一些属性进行定制，例如Live的类型（ISO/PXE/HDD等）、Live系统使用的源、安装的软件等。在build系统之后也可以chroot到目标系统中进行进一步的定制。这篇文章中有一个稍微详细的定制步骤。使用live build可以定制debian，也可以定制ubuntu。 然而，这个方法仍然比较麻烦，定制者需要完全从头定制一个系统，并且不能复用一些其他人已经定制过的系统。因此我们推荐选择一个最接近使用需求的系统，在这个系统的基础之上进行进一步定制，而定制步骤也会简洁很多。 基于Linux Deepin定制Live系统 通过观察容易发现，Ubuntu, Deepin, BackTrack等Live系统都使用相似的方法进行封装，因此基于这些系统进行定制的方法基本相同。而Deepin的中国本地化做的最好，也最接近校园网中的各种需求，因此我们选择基于该系统进行定制。 首先观察一下这个Live系统的结构： $ ls -R .: casper DeepWin.exe isolinux md5sum.txt preseed README.diskdefines ./casper:...","categories": ["经验分享","USTC网络启动服务"],
-"tags": ["PXE","deepin","live"],
-"url": "https://beta.ustclug.org//news/2011/05/customize-pxe-live-system/",
+"title": null,
+"excerpt":"现在已经有上百中Linux发行版，很多发行版都提供了通过PXE启动的Live系统。在科大校园网网络启动服务上，我们部署了很多发行版的Live系统，例如Ubuntu、Debian、Deepin、BackTrack、Knoppix等，既给一些需要维护系统的同学带来了极大的便利，也使得那些未接触过Linux的同学可以“无痛”体验各发行版，并决定哪一款发行版更符合自己的口味。然而，随着校园网的发展，大家的需求也变得更加多样化。各发行版的Linux系统已经不能满足大家的需求，因此我们需要自己定制一些系统，以满足在学校中各个场合的需求。 发行版Live系统的限制 发行版提供的Live系统具有这些限制： 数据易失。Live系统启动后所有的修改都保存在内存中，重启系统后所有修改都丢失了。 预装软件少。Live系统只预装了很少的软件，不足以日常办公的需求，即使作为体验系统也偏少 各使用场合的需求 目前在校园网中，大家对系统的需求有这些： 体验系统。对于Linux新手，要决定是否使用一个系统，一次体验是不够的，需要长期的使用，因此需要能够保存一些对系统的修改，如新装的软件、修改的配置文件、一些用户数据 公共机房的系统，需要安装所有常用的软件 个人移动办公使用的系统，需要能够将一些个人数据存放在网络上 因此，我们希望能够定自己定制Live系统，以满足各使用场合的需求。 使用Debian Live定制系统 在各发行版中，Debian提供了定制Live系统的工具，Debian Live。Debian Live的文档中有非常详细的介绍。简化后的步骤为： sudo apt-get install live-build mkdir live-system &amp;&amp; cd live-system lb config sudo lb build 其中，在config前可以自己修改config脚本来对Live系统的一些属性进行定制，例如Live的类型（ISO/PXE/HDD等）、Live系统使用的源、安装的软件等。在build系统之后也可以 chroot 到目标系统中进行进一步的定制。这篇文章中有一个稍微详细的定制步骤。使用live build可以定制debian，也可以定制ubuntu。 然而，这个方法仍然比较麻烦，定制者需要完全从头定制一个系统，并且不能复用一些其他人已经定制过的系统。因此我们推荐选择一个最接近使用需求的系统，在这个系统的基础之上进行进一步定制，而定制步骤也会简洁很多。 基于Linux Deepin定制Live系统 通过观察容易发现，Ubuntu, Deepin, BackTrack等Live系统都使用相似的方法进行封装，因此基于这些系统进行定制的方法基本相同。而Deepin的中国本地化做的最好，也最接近校园网中的各种需求，因此我们选择基于该系统进行定制。 首先观察一下这个Live系统的结构： $ ls -R .: casper DeepWin.exe isolinux md5sum.txt preseed...","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2011-05-24-customize-pxe-live-system/",
 "teaser": null
 },{
-"title": "Deepin Linux DAU '2011大会花絮",
-"excerpt":"2011年5月28日，我有幸受邀代表中科大LUG前往武汉参加了Deepin Linux开发者和用户大会。此行遇见了很多开源界的知名牛人，收获颇多。由于许多Linux站点都已经对此次会议有十分详细的报导，因此我就不再赘述具体的会议过程，而是更多的介绍些花絮吧。   一些花絮   这次大会主办方是Deepin研发团队，主办方接客非常热情周到。由于火车时刻不是很凑巧，当天赶去无法赶上会议，因此提前一天晚上便到了，当天晚上我被安排跟Hiweed住在一个房间。晚上，刘总（Deepin）、欣姐还有Hiweed与我聊了很多，主要聊了科大LUG在高校推广方面的努力和计划，以及我个人的一些想法，另外刘总也跟我聊了Deepin的发展计划。聊天开始时，Deepin说我们的域名可能有问题了，结果晚上他们刚回去，就发现deepin的域名都无法解析了……现在新的域名已经生效（http://www.linuxdeepin.net/），网站部分内容还没有完全迁移完成，论坛将从深度的其他内容独立出来，并将在近期上线。   第二天早上，跟Hiweed吃早饭的时候，小白（BJGUG负责人）到了，他吃过简单的早餐，就去一所中学了，与学校的老师讨论学校教育中使用开源软件的事。现在有许多中小学的计算机启蒙教育中都开始用开源软件了，很让人振奋 :-)   去会场的路上，大家在开玩笑。前几天某校长在武大被扔鞋，这次我们请来了比较有争议的袁教授，而且此次会议有很多武大的学生参加，会不会也被扔鞋？要不我们自己安排个人来扔鞋吧，还得安排两拨，互扔，炒作气氛！呵呵，just a joke!   这次会议在君宜王朝大酒店举行，可能前期的沟通不是特别好，在布置会场时碰到了些问题，不过对会议影响不大。最“惊险”的算是那个无线话筒吧，似乎耗电量很大，现场试了一下，就掉了一格电（共三格）了，当时担心会不会讲到一半就没声了。还好，六位嘉宾演讲时，都没出问题，在提问阶段，第二个人开始，话筒就没声了T.T……   晚上嘉宾自由交流会上，袁教授发完一个长长的言后，就耷拉脑袋了。我和Hiweed坐在他旁边，都以为他睡着了，后来有个人讲完话后，袁教授突然接话了！原来他没睡着，就是闭幕养神:-) 袁教授其实很可爱，年纪这么大，依然很有激情。对国内开源事业的发展也很关心，这次大会刚回去，就联系与永中的曹参见面，讨论Deepin与永中合作的事，看袁教授最近几天的博文，他对此事一直很上心。   交流会结束后，我们几个年轻人（yanting, Hiweed, Deepin等）出去吃烧烤，随心所欲的聊天。yanting和Hiweed都是很活跃、很有想法、很会闯的人，我的性格跟他们很像，因此听他们讲故事的时候，共鸣很强，感触很深。Deepin跟这它的团队一样很年轻，我相信也同样会很有想法、很有活力！   第二天我受邀去武大参观了他们自强网的工作室和机房。同时也交流了一下两校在推广Linux时的优势和障碍。武大的学生课余时间相对较多，自强网完全由学生来维护，但他们的资源（网络带宽、服务器配置等）有限。科大有着很好的Linux使用的环境，网络条件也非常好，但是大多数学生的课余时间较少。   下午赶去火车站时，由于宾馆在市中心最堵的路段，半天都没打到的，正愁会误点赶不到火车站时，一个小“摩的”（加引号是因为不是摩托车，而是电瓶车，但我想不出用什么词好了 :-P）来了，不到20分钟就赶到火车站了。“摩的”小哥自我介绍说是武大食堂的，下午没事做，就出来转转，能赚点钱就赚一点，要过日子阿。小哥很热情，收的钱也不多（应该比打的便宜），很开心 :-)   会场照片   这些是会场上的一些照片。（大家能否给我推荐个显示图片的插件？可以显示图片总数和当前图片编号的？）                                                                                                                                                                                                                                                                                          相关报导   以下是一些特邀嘉宾对此次大会的报导：      Linux Deepin武汉技术交流会后记（笨兔兔）   Linux Deepin 2011开发者和用户大会实录（驱动之家）   (http://www.ownlinux.cn/2011/05/28/ownlinux-linux-deepin-2011.html)（OwnLinux.cn）   国产Linux发行版面临的机遇和挑战（51CTO）   武汉Deepin DAU会议见闻（basic coder）  ","categories": ["LUG活动"],
-"tags": ["deepin","Linux","花絮"],
-"url": "https://beta.ustclug.org//news/2011/06/deepin-linux-dau-2011/",
+"title": null,
+"excerpt":"2011年5月28日，我有幸受邀代表中科大LUG前往武汉参加了Deepin Linux开发者和用户大会。此行遇见了很多开源界的知名牛人，收获颇多。由于许多Linux站点都已经对此次会议有十分详细的报导，因此我就不再赘述具体的会议过程，而是更多的介绍些花絮吧。   一些花絮   这次大会主办方是Deepin研发团队，主办方接客非常热情周到。由于火车时刻不是很凑巧，当天赶去无法赶上会议，因此提前一天晚上便到了，当天晚上我被安排跟Hiweed住在一个房间。晚上，刘总（Deepin）、欣姐还有Hiweed与我聊了很多，主要聊了科大LUG在高校推广方面的努力和计划，以及我个人的一些想法，另外刘总也跟我聊了Deepin的发展计划。聊天开始时，Deepin说我们的域名可能有问题了，结果晚上他们刚回去，就发现deepin的域名都无法解析了……现在新的域名已经生效（http://www.linuxdeepin.net/），网站部分内容还没有完全迁移完成，论坛将从深度的其他内容独立出来，并将在近期上线。   第二天早上，跟Hiweed吃早饭的时候，小白（BJGUG负责人）到了，他吃过简单的早餐，就去一所中学了，与学校的老师讨论学校教育中使用开源软件的事。现在有许多中小学的计算机启蒙教育中都开始用开源软件了，很让人振奋 :-)   去会场的路上，大家在开玩笑。前几天某校长在武大被扔鞋，这次我们请来了比较有争议的袁教授，而且此次会议有很多武大的学生参加，会不会也被扔鞋？要不我们自己安排个人来扔鞋吧，还得安排两拨，互扔，炒作气氛！呵呵，just a joke!   这次会议在君宜王朝大酒店举行，可能前期的沟通不是特别好，在布置会场时碰到了些问题，不过对会议影响不大。最“惊险”的算是那个无线话筒吧，似乎耗电量很大，现场试了一下，就掉了一格电（共三格）了，当时担心会不会讲到一半就没声了。还好，六位嘉宾演讲时，都没出问题，在提问阶段，第二个人开始，话筒就没声了T. T……   晚上嘉宾自由交流会上，袁教授发完一个长长的言后，就耷拉脑袋了。我和Hiweed坐在他旁边，都以为他睡着了，后来有个人讲完话后，袁教授突然接话了！原来他没睡着，就是闭幕养神:-) 袁教授其实很可爱，年纪这么大，依然很有激情。对国内开源事业的发展也很关心，这次大会刚回去，就联系与永中的曹参见面，讨论Deepin与永中合作的事，看袁教授最近几天的博文，他对此事一直很上心。   交流会结束后，我们几个年轻人（yanting, Hiweed, Deepin等）出去吃烧烤，随心所欲的聊天。yanting和Hiweed都是很活跃、很有想法、很会闯的人，我的性格跟他们很像，因此听他们讲故事的时候，共鸣很强，感触很深。Deepin跟这它的团队一样很年轻，我相信也同样会很有想法、很有活力！   第二天我受邀去武大参观了他们自强网的工作室和机房。同时也交流了一下两校在推广Linux时的优势和障碍。武大的学生课余时间相对较多，自强网完全由学生来维护，但他们的资源（网络带宽、服务器配置等）有限。科大有着很好的Linux使用的环境，网络条件也非常好，但是大多数学生的课余时间较少。   下午赶去火车站时，由于宾馆在市中心最堵的路段，半天都没打到的，正愁会误点赶不到火车站时，一个小“摩的”（加引号是因为不是摩托车，而是电瓶车，但我想不出用什么词好了 :-P）来了，不到20分钟就赶到火车站了。“摩的”小哥自我介绍说是武大食堂的，下午没事做，就出来转转，能赚点钱就赚一点，要过日子阿。小哥很热情，收的钱也不多（应该比打的便宜），很开心 :-)   会场照片   这些是会场上的一些照片。（大家能否给我推荐个显示图片的插件？可以显示图片总数和当前图片编号的？）                                                                                                                                                                                                                                                                                          相关报导   以下是一些特邀嘉宾对此次大会的报导：      Linux Deepin武汉技术交流会后记（笨兔兔）   Linux Deepin 2011开发者和用户大会实录（驱动之家）   (http://www.ownlinux.cn/2011/05/28/ownlinux-linux-deepin-2011.html)（OwnLinux.cn）   国产Linux发行版面临的机遇和挑战（51CTO）   武汉Deepin DAU会议见闻（basic coder）  ","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2011-06-03-deepin-linux-dau-2011/",
 "teaser": null
 },{
-"title": "中科大Linux文化衫开始接受预定啦！",
-"excerpt":"1、圆领样式   此次文化衫主题为Linux 20周年。正面图案分男版和女版，图案分别如下：   男版： http://staff.ustc.edu.cn/~jhqi/LinuxTee2011/front_1.6.0.png   女版： http://staff.ustc.edu.cn/~jhqi/LinuxTee2011/front_1.6.1.png   背面图案为科大维护的服务器历史，男版女版相同，图案如下：   http://staff.ustc.edu.cn/~jhqi/LinuxTee2011/back_1.1.png   2、翻领样式   由于许多网友要求提供翻领样式，因此今年也提供翻领样式，翻领的正面图案是将圆领的背面图案放在左前胸，将圆领的正面图案放到后背。效果如下图的最后一行：   http://staff.ustc.edu.cn/~jhqi/LinuxTee2011/polo_sample_1.png   3、价格   圆领的价格为：￥45   翻领的价格为：￥60   需要邮寄的，需要额外支付￥20邮费。   （科大在校师生、校友请到瀚海星云Linux版回帖预定，价格有优惠哦！）   前20位预定的友人，我们将在邮寄文化衫时附赠一张GNOME3体验光盘。   4、预定方式以及支付方式   您可以通过支付宝向我们支付费用。   我们的支付宝帐号为：lug@ustc.edu.cn，支付流程：                  登录支付宝–&gt;“我的支付宝”–&gt;“我的生活助手”–&gt;“我要付款”–&gt;在“对方支付宝账户”里输入lug@ustc.edu.cn即可。在备注中留下您的姓名，并且向lug@ustc.edu.cn发送一封邮件，标题为”预定文化衫–您的姓名”，内容为您选择的版式（男/女       圆领/翻领）、身高、手机号和详细的收货地址，我们将在24小时内回复您的邮件，表明我们已经收到您的付款和预定。           6、时间安排   本次预定从发本日志起到2011年6月11日晚23时59分结束预定。结束预定后，我们立即联系商家开始制作版衫，并争取一周内完成并开始发放，预计6月18日可以开始发放工作。发放方式到时候再发日志说明。  ","categories": ["LUG活动"],
-"tags": ["BBS"],
-"url": "https://beta.ustclug.org//news/2011/06/linux-tshirt-2011/",
+"title": null,
+"excerpt":"1、圆领样式   此次文化衫主题为Linux 20周年。正面图案分男版和女版，图案分别如下：   男版： http://staff.ustc.edu.cn/~jhqi/LinuxTee2011/front_1.6.0.png   女版： http://staff.ustc.edu.cn/~jhqi/LinuxTee2011/front_1.6.1.png   背面图案为科大维护的服务器历史，男版女版相同，图案如下：   http://staff.ustc.edu.cn/~jhqi/LinuxTee2011/back_1.1.png   2、翻领样式   由于许多网友要求提供翻领样式，因此今年也提供翻领样式，翻领的正面图案是将圆领的背面图案放在左前胸，将圆领的正面图案放到后背。效果如下图的最后一行：   http://staff.ustc.edu.cn/~jhqi/LinuxTee2011/polo_sample_1.png   3、价格   圆领的价格为：￥45   翻领的价格为：￥60   需要邮寄的，需要额外支付￥20邮费。   （科大在校师生、校友请到瀚海星云Linux版回帖预定，价格有优惠哦！）   前20位预定的友人，我们将在邮寄文化衫时附赠一张GNOME3体验光盘。   4、预定方式以及支付方式   您可以通过支付宝向我们支付费用。   我们的支付宝帐号为：lug@ustc.edu.cn，支付流程：                  登录支付宝–&gt;“我的支付宝”–&gt;“我的生活助手”–&gt;“我要付款”–&gt;在“对方支付宝账户”里输入lug@ustc.edu.cn即可。在备注中留下您的姓名，并且向lug@ustc.edu.cn发送一封邮件，标题为”预定文化衫–您的姓名”，内容为您选择的版式（男/女       圆领/翻领）、身高、手机号和详细的收货地址，我们将在24小时内回复您的邮件，表明我们已经收到您的付款和预定。           6、时间安排   本次预定从发本日志起到2011年6月11日晚23时59分结束预定。结束预定后，我们立即联系商家开始制作版衫，并争取一周内完成并开始发放，预计6月18日可以开始发放工作。发放方式到时候再发日志说明。  ","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2011-06-05-linux-tshirt-2011/",
 "teaser": null
 },{
-"title": "Linux Install Party又来了，就在本周日！",
-"excerpt":"Linux Install Party，一个人人都可以参加的linux盛会，Let’s Introduce   Perfection.   如果你是新手，在这里，你可以接触到linux最新鲜的感觉，了解基础并且好用的   linux知识，获得他人的帮助，与linux进行亲密接触！   如果你是高人，在这里，你可以认识志同道合的朋友，交流linux里好玩的技巧和鲜为人   知的秘密，帮助和当年的你一样的初学者，多么有成就感！   Linux Install Party，就在本周日下午2:00，3112教室。   Linux User Group   life, love, linux  ","categories": ["LUG活动"],
-"tags": ["Linux Install Party"],
-"url": "https://beta.ustclug.org//news/2011/12/linux-install-party2011/",
+"title": null,
+"excerpt":"Linux Install Party，一个人人都可以参加的linux盛会，Let’s Introduce   Perfection.   如果你是新手，在这里，你可以接触到linux最新鲜的感觉，了解基础并且好用的   linux知识，获得他人的帮助，与linux进行亲密接触！   如果你是高人，在这里，你可以认识志同道合的朋友，交流linux里好玩的技巧和鲜为人   知的秘密，帮助和当年的你一样的初学者，多么有成就感！   Linux Install Party，就在本周日下午2:00，3112教室。   Linux User Group   life,  love,  linux  ","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2011-12-02-linux-install-party2011/",
 "teaser": null
 },{
-"title": "软件自由日 SFD 2012 合肥站活动（附带网上直播地址）",
-"excerpt":"SFD 就是传说中的软件自由日（Software Freedom Day），今年的合肥站庆祝活动将在本周六（9月15日）于中国科学技术大学举办。这是一个推广和宣传自由/开源软件的全球性庆祝活动，合肥是全球282个活动举办地之一。 这里有精彩的讲座： 科大LUG前CTO张成师兄将让我们了解自由软件在企业中的应用原来如此多娇 这里有好玩&amp;有用的软件： Linux 上有什么好玩的小游戏？ 小小浏览器不就是上网吗？能玩出什么名堂？ 放音乐、看视频，mplayer是何方神圣？ 如何画函数图像、分析实验数据？ 如何使用虚拟机体验不同的 Linux 发行版？ 如何用 latex 排版出专业的文章？ 开源集成开发环境 Eclipse，听说很强大？ 如何使用科大 FTP 和主页空间？ 大家一定会问：这么多东西，能讲完吗？我们的形式将不局限于讲座，而是展示+体验 :) 现场将有若干展台，专题讲座结束后，大家可以在不同展台之间自由体验、交流，共同体验各种自由软件的魅力。像不像一个自由软件展览会？ 这里有给力的奖品： 有 Meego USB Hub、Meego 电脑包、红旗和自由软件日的文化衫、Ubuntu 贴纸…… 还有 Linux Deepin 12.06, Qomo等 Linux 发行版的官方光碟，一共有80张，在多功能厅门口发放，先到先得哦~ 承办者：中国科学技术大学 Linux 用户协会 时间：    2012年9月15日上午9:30 地点：    中国科学技术大学西区学生活动中心三楼多功能厅 （31.839339,117.253636）...","categories": ["LUG活动"],
-"tags": ["LUG","USTC_LUG","SFD"],
-"url": "https://beta.ustclug.org//news/2012/09/sfd-2012-hefei-ustc/",
+"title": null,
+"excerpt":"SFD 就是传说中的软件自由日（Software Freedom Day），今年的合肥站庆祝活动将在本周六（9月15日）于中国科学技术大学举办。这是一个推广和宣传自由/开源软件的全球性庆祝活动，合肥是全球282个活动举办地之一。 这里有精彩的讲座： 科大LUG前CTO张成师兄将让我们了解自由软件在企业中的应用原来如此多娇 这里有好玩&amp; 有用的软件： Linux 上有什么好玩的小游戏？ 小小浏览器不就是上网吗？能玩出什么名堂？ 放音乐、看视频，mplayer是何方神圣？ 如何画函数图像、分析实验数据？ 如何使用虚拟机体验不同的 Linux 发行版？ 如何用 latex 排版出专业的文章？ 开源集成开发环境 Eclipse，听说很强大？ 如何使用科大 FTP 和主页空间？ 大家一定会问：这么多东西，能讲完吗？我们的形式将不局限于讲座，而是展示+体验 :) 现场将有若干展台，专题讲座结束后，大家可以在不同展台之间自由体验、交流，共同体验各种自由软件的魅力。像不像一个自由软件展览会？ 这里有给力的奖品： 有 Meego USB Hub、Meego 电脑包、红旗和自由软件日的文化衫、Ubuntu 贴纸…… 还有 Linux Deepin 12.06, Qomo等 Linux 发行版的官方光碟，一共有80张，在多功能厅门口发放，先到先得哦~ 承办者：中国科学技术大学 Linux 用户协会 时间：    2012年9月15日上午9:30 地点：    中国科学技术大学西区学生活动中心三楼多功能厅...","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2012-09-14-sfd-2012-hefei-ustc/",
 "teaser": null
 },{
-"title": "科大 LUG Linux User Party 活动成功举行",
-"excerpt":"高速发展的互联网改变着人类的生活方式，而基于Linux的Web技术支撑起了当今互联网的大厦。“Let’s Build – Building the Next-generation Web &amp; Architecture”的大标题投影在东区水上报告厅，2012年11月24日下午，科大LUG以“Going Online, Going Native”为主题的Linux User Party活动举行。Guide to Node.js，Linux高性能计算集群，iptables灵活网络配置，LUG Services项目启动……内容充实的讲座持续了四个小时，从不同角度讲述了Linux在Web Services、科学计算和我们生活中的应用，描绘了LUG Services的美丽蓝图。 首先演讲的是《Node.js开发指南》作者、清华大学开源软件镜像维护者、清华大学学生郭家宝。JavaScript技术的进化伴随着多家互联网企业的兴衰，Node.js是目前最流行的将JavaScript用于后端的框架。以往Web开发常常是前后端在不同的编程语言中重复写同样逻辑的代码，而在Node.js中这样的问题得以缓解。 不同于多数后端技术，Node.js采用了事件驱动的非阻塞编程模型，这使得Node.js可以在单线程中达到其他语言中需要多线程才能达到的CPU利用率。借助V8引擎的执行效率，JavaScript已经成为最快的脚本语言之一；再加上异步并发的编程模型，用Node.js可以实现很高性能的Web服务器，尤其适合需要进行“服务器推”的WebSocket类应用。 Node.js强大的性能背后隐藏着编程和调试的困难，例如通过回调函数来进行控制流传递的编程范式。为此，郭家宝发起了开源项目Continuation.js，通过编译将嵌套的回调函数平面化，简化顺序逻辑在Node.js中的实现。 演讲结束后，同学们提出了“现有系统是否应该换用Node.js”、“为什么现在Web开发用的更多是PHP”、“Node.js是否对系统资源消耗很多，是否对硬件配置有较高要求”等很多有趣的问题，郭家宝一一作答，希望我们以更开放的心态迎接新技术。每位提问的观众都收到了一份Ubuntu的精美礼品。 第二个演讲的是科大超算中心李会民老师。2012年世界排名前500的超级计算机中，运行Linux的占90%以上，只有一两台运行的是Windows系统，Linux在高性能计算领域占据统治地位。这场讲座带领我们从Linux这个自由的集市中寻找到合适的工具，让身边的计算资源发挥作用。 短短的一个小时，李会民老师以较快的语速，全面讲解了高性能计算集群： 各计算节点要共享文件，有NFS网络文件系统； 主机账号信息要集中管理，有NIS网络信息服务； 集群要快速安装Linux，以PXE网络启动为基础的kickstart网络安装工具很实用； 集群之间时间要同步，有NTP时间服务器； 集群节点之间要通信，SSH可以用key无密码登录； 要同时管理多台机器，有pdsh这个并行shell和交互式脚本语言expect； 要自动化运行复杂任务，有作业调度系统TORQUE； 要监控系统性能，有集群监控软件Ganglia； 内网服务器要访问外网，有iptables。 并行计算的基本原理，MPI和OpenMP编程框架、GPGPU计算； 还有磁盘配额、编译环境的配置…… 接下来又是一个很多人争着举手发言的互动问答环节。针对一台机器能不能部署高性能计算的疑问，李会民老师说，除了kickstart网络安装之外，上述工具都可以在单台机器上使用，而且其中涉及的技术在日常Linux使用和运维中也是有用的。 利用五分钟的中场休息时间，李喵喵介绍了Linux Deepin这个对新手友好的Linux发行版，并现场发放Linux Deepin赠送的安装光盘。 第三个演讲的是科大Linux用户协会CTO郭家华同学。 科大网络通是什么原理？同学们好奇地抬起了头，”数据包传送过程“显得不再枯燥了。 想与同桌共享网络通？用iptables进行数据包转发； 那么与整个机房共享网络通呢？有网络地址转换（NAT）； 让外网访问内网端口提供的服务，可以用端口映射； 要端口映射到任意计算机，SNAT和DNAT可以配合使用。 特别值得一提的是，演讲所用slides中的网络拓扑结构图是用graphviz画的，图形清晰明了。 活动的压轴环节是LUG网络服务系统介绍与展望。 李喵喵首先介绍了即将发布的USTC Blog服务。尽管社会化媒体层出不穷，但博客仍然是信噪比最高的内容发布平台。在博客中，我们可以发表个人心情，可以制作图片展，可以彰显技术经验，可以作为推广媒体，博客的形式永不过时。USTC...","categories": ["LUG活动"],
-"tags": ["Linux User Party"],
-"url": "https://beta.ustclug.org//news/2012/11/ustclug-going-online-going-native/",
+"title": null,
+"excerpt":"高速发展的互联网改变着人类的生活方式，而基于Linux的Web技术支撑起了当今互联网的大厦。“Let’s Build – Building the Next-generation Web &amp; Architecture”的大标题投影在东区水上报告厅，2012年11月24日下午，科大LUG以“Going Online, Going Native”为主题的Linux User Party活动举行。Guide to Node.js，Linux高性能计算集群，iptables灵活网络配置，LUG Services项目启动……内容充实的讲座持续了四个小时，从不同角度讲述了Linux在Web Services、科学计算和我们生活中的应用，描绘了LUG Services的美丽蓝图。 首先演讲的是《Node.js开发指南》作者、清华大学开源软件镜像维护者、清华大学学生郭家宝。JavaScript技术的进化伴随着多家互联网企业的兴衰，Node.js是目前最流行的将JavaScript用于后端的框架。以往Web开发常常是前后端在不同的编程语言中重复写同样逻辑的代码，而在Node.js中这样的问题得以缓解。 不同于多数后端技术，Node.js采用了事件驱动的非阻塞编程模型，这使得Node.js可以在单线程中达到其他语言中需要多线程才能达到的CPU利用率。借助V8引擎的执行效率，JavaScript已经成为最快的脚本语言之一；再加上异步并发的编程模型，用Node.js可以实现很高性能的Web服务器，尤其适合需要进行“服务器推”的WebSocket类应用。 Node.js强大的性能背后隐藏着编程和调试的困难，例如通过回调函数来进行控制流传递的编程范式。为此，郭家宝发起了开源项目Continuation.js，通过编译将嵌套的回调函数平面化，简化顺序逻辑在Node.js中的实现。 演讲结束后，同学们提出了“现有系统是否应该换用Node.js”、“为什么现在Web开发用的更多是PHP”、“Node.js是否对系统资源消耗很多，是否对硬件配置有较高要求”等很多有趣的问题，郭家宝一一作答，希望我们以更开放的心态迎接新技术。每位提问的观众都收到了一份Ubuntu的精美礼品。 第二个演讲的是科大超算中心李会民老师。2012年世界排名前500的超级计算机中，运行Linux的占90%以上，只有一两台运行的是Windows系统，Linux在高性能计算领域占据统治地位。这场讲座带领我们从Linux这个自由的集市中寻找到合适的工具，让身边的计算资源发挥作用。 短短的一个小时，李会民老师以较快的语速，全面讲解了高性能计算集群： 各计算节点要共享文件，有NFS网络文件系统； 主机账号信息要集中管理，有NIS网络信息服务； 集群要快速安装Linux，以PXE网络启动为基础的kickstart网络安装工具很实用； 集群之间时间要同步，有NTP时间服务器； 集群节点之间要通信，SSH可以用key无密码登录； 要同时管理多台机器，有pdsh这个并行shell和交互式脚本语言expect； 要自动化运行复杂任务，有作业调度系统TORQUE； 要监控系统性能，有集群监控软件Ganglia； 内网服务器要访问外网，有iptables。 并行计算的基本原理，MPI和OpenMP编程框架、GPGPU计算； 还有磁盘配额、编译环境的配置…… 接下来又是一个很多人争着举手发言的互动问答环节。针对一台机器能不能部署高性能计算的疑问，李会民老师说，除了kickstart网络安装之外，上述工具都可以在单台机器上使用，而且其中涉及的技术在日常Linux使用和运维中也是有用的。 利用五分钟的中场休息时间，李喵喵介绍了Linux Deepin这个对新手友好的Linux发行版，并现场发放Linux Deepin赠送的安装光盘。 第三个演讲的是科大Linux用户协会CTO郭家华同学。 科大网络通是什么原理？同学们好奇地抬起了头，”数据包传送过程“显得不再枯燥了。 想与同桌共享网络通？用iptables进行数据包转发； 那么与整个机房共享网络通呢？有网络地址转换（NAT）； 让外网访问内网端口提供的服务，可以用端口映射； 要端口映射到任意计算机，SNAT和DNAT可以配合使用。 特别值得一提的是，演讲所用slides中的网络拓扑结构图是用graphviz画的，图形清晰明了。 活动的压轴环节是LUG网络服务系统介绍与展望。 李喵喵首先介绍了即将发布的USTC Blog服务。尽管社会化媒体层出不穷，但博客仍然是信噪比最高的内容发布平台。在博客中，我们可以发表个人心情，可以制作图片展，可以彰显技术经验，可以作为推广媒体，博客的形式永不过时。USTC...","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2012-11-26-ustclug-going-online-going-native/",
 "teaser": null
 },{
-"title": "“Linux让一切变得简单”活动",
-"excerpt":"2013年4月21日下午，科大LUG与计算机学院学生会合办的“Linux让一切变得简单”活动在3121教室举行。      李博杰首先带来了《OS和网络从这里走来》(slides)，从UNIX操作系统的诞生、兴起讲到AT&amp;T的封闭与UNIX的分裂，再到GNU计划和Linux的诞生，回顾了这段波澜壮阔的操作系统进化史。目前，Linux垄断了高性能计算，并被互联网公司广泛采用，以Linux为主阵地的黑客文化还孕育了自由编程语言、开源硬件。从浏览器发展史和User-Agent的乱象，引出Web开放的趋势。最后，用《大教堂与集市》分析了Linux成功的原因。   在随后的互动环节中，回答出问题的两名同学获得了U盘。      接下来是郭家华的《Linux让你更懂计算机》(slides)。首先，他以娴熟的操作演示了从硬盘中恢复被删除的数据，将硬盘MBR的结构、“设备即文件”的概念和一些瑞士军刀式的Linux命令融入其中。然后，他演示了用tcpdump等抓包工具分析网络状况。最后，他以acm.ustc.edu.cn评测系统为例讲解了传统程序限制方法的“不靠谱”和用ptrace拦截系统调用的沙盒原理。听众们在膜拜技术之余，还体会到Linux工具庖丁解牛般的强大。      接下来沈达为我们带来了《可爱的Python》(slides)。首先，他简短地介绍了Python的优雅特征、编程思想和一些好玩的应用。随后由听众提出问题，他来回答。科学计算中Python和Fortran的比较，从程序语言角度Python和C的比较，Web开发中Python是否合适……沈达将“程序语言的选择一方面是需求，一方面是兴趣”的观点融入互动问答，从多个角度诠释了黑客文化。   在最后的互动环节中，回答出问题的一名同学和最先提出问题的两名同学获得了U盘。活动在大家热烈的讨论中成功结束。   本次活动的所有slides   本次活动的所有照片  ","categories": ["LUG活动"],
-"tags": ["USTC_LUG"],
-"url": "https://beta.ustclug.org//news/2013/04/linux-make-everything-easy/",
+"title": null,
+"excerpt":"2013年4月21日下午，科大LUG与计算机学院学生会合办的“Linux让一切变得简单”活动在3121教室举行。      李博杰首先带来了《OS和网络从这里走来》(slides)，从UNIX操作系统的诞生、兴起讲到AT&amp;T的封闭与UNIX的分裂，再到GNU计划和Linux的诞生，回顾了这段波澜壮阔的操作系统进化史。目前，Linux垄断了高性能计算，并被互联网公司广泛采用，以Linux为主阵地的黑客文化还孕育了自由编程语言、开源硬件。从浏览器发展史和User-Agent的乱象，引出Web开放的趋势。最后，用《大教堂与集市》分析了Linux成功的原因。   在随后的互动环节中，回答出问题的两名同学获得了U盘。      接下来是郭家华的《Linux让你更懂计算机》(slides)。首先，他以娴熟的操作演示了从硬盘中恢复被删除的数据，将硬盘MBR的结构、“设备即文件”的概念和一些瑞士军刀式的Linux命令融入其中。然后，他演示了用tcpdump等抓包工具分析网络状况。最后，他以acm.ustc.edu.cn评测系统为例讲解了传统程序限制方法的“不靠谱”和用ptrace拦截系统调用的沙盒原理。听众们在膜拜技术之余，还体会到Linux工具庖丁解牛般的强大。      接下来沈达为我们带来了《可爱的Python》(slides)。首先，他简短地介绍了Python的优雅特征、编程思想和一些好玩的应用。随后由听众提出问题，他来回答。科学计算中Python和Fortran的比较，从程序语言角度Python和C的比较，Web开发中Python是否合适……沈达将“程序语言的选择一方面是需求，一方面是兴趣”的观点融入互动问答，从多个角度诠释了黑客文化。   在最后的互动环节中，回答出问题的一名同学和最先提出问题的两名同学获得了U盘。活动在大家热烈的讨论中成功结束。   本次活动的所有slides   本次活动的所有照片  ","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2013-04-22-linux-make-everything-easy/",
 "teaser": null
 },{
-"title": "2013 LUG换届会议",
-"excerpt":"2013年4月28日晚上，LUG在活动室召开了换届会议。LUG新老会员齐聚一堂，商定了LUG下届主要负责人，一起讨论了LUG发展大计。      首先是自我介绍。接下来现任会长、副会长、前任会长分别介绍了一年来的感受与对新一年的期望。然后统计每个人的年级、感兴趣的方向，其间大家纷纷对LUG发展出谋划策，气氛热烈。   在活动方面，大家认为，LUG应该把眼光放到全校，更加关注东区，面向 Linux User，为同学们解决实际需求；而不是成为 Linux Developer Group，昨天考物理、今天维护服务器。在网络服务方面，黄若山提出做贴近普通用户的服务，做得更专业并实现盈利，不过大家认为学校学习紧张，没有时间全力投入；李喵喵再次提出了服务整合和“硬又黑”导航条的设想。      经过反复协商，大家一致推选2010级物理学院的张光宇为新任会长，并依据大家的意愿分配了CTO（技术）、COO（运营）、CPO（资产）、CNO（外联）、CFO（财务）、CIO（宣传）。新一届主要负责人中，2009级1人，2010级1人，2011级2人，2012级2人；计算机学院4人，少年班学院1人，物理学院1人（CIO孙金鹿除外），梯队较为合理。         换届之后，讨论了即将举办的 Ubuntu &amp; Debian Release Party，下半学期的“USTC 主页大赛”（blog 大赛），LUG 十周年宣传册等。   最后，现任CTO郭家华宣布 Mirrors Lab 成立，并为大家开帐号。   参加此次会议的有祝元宠、顾昊、李喵喵、童献、黄若山、李博杰、郭家华、张光宇、沈达、黄震宇、张荣葳、朱晟菁，还有一位妹子。   本次会议的照片在 LUG FTP 的“会议”目录中。  ","categories": ["LUG会议"],
-"tags": ["Meeting","USTC_LUG"],
-"url": "https://beta.ustclug.org//news/2013/04/lug/",
+"title": null,
+"excerpt":"2013年4月28日晚上，LUG在活动室召开了换届会议。LUG新老会员齐聚一堂，商定了LUG下届主要负责人，一起讨论了LUG发展大计。      首先是自我介绍。接下来现任会长、副会长、前任会长分别介绍了一年来的感受与对新一年的期望。然后统计每个人的年级、感兴趣的方向，其间大家纷纷对LUG发展出谋划策，气氛热烈。   在活动方面，大家认为，LUG应该把眼光放到全校，更加关注东区，面向 Linux User，为同学们解决实际需求；而不是成为 Linux Developer Group，昨天考物理、今天维护服务器。在网络服务方面，黄若山提出做贴近普通用户的服务，做得更专业并实现盈利，不过大家认为学校学习紧张，没有时间全力投入；李喵喵再次提出了服务整合和“硬又黑”导航条的设想。      经过反复协商，大家一致推选2010级物理学院的张光宇为新任会长，并依据大家的意愿分配了CTO（技术）、COO（运营）、CPO（资产）、CNO（外联）、CFO（财务）、CIO（宣传）。新一届主要负责人中，2009级1人，2010级1人，2011级2人，2012级2人；计算机学院4人，少年班学院1人，物理学院1人（CIO孙金鹿除外），梯队较为合理。         换届之后，讨论了即将举办的 Ubuntu &amp; Debian Release Party，下半学期的“USTC 主页大赛”（blog 大赛），LUG 十周年宣传册等。   最后，现任CTO郭家华宣布 Mirrors Lab 成立，并为大家开帐号。   参加此次会议的有祝元宠、顾昊、李喵喵、童献、黄若山、李博杰、郭家华、张光宇、沈达、黄震宇、张荣葳、朱晟菁，还有一位妹子。   本次会议的照片在 LUG FTP 的“会议”目录中。  ","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2013-04-29-lug/",
 "teaser": null
 },{
-"title": "2013科大LUG Linux User Party",
-"excerpt":"2013年12月1日，中国科学技术大学校学生Linux用户协会在科大西区活动中心学术报告厅举办了一年一度的Linux User Party。   本次活动主要面向校内学生进行宣传，不仅在在宣传方式上覆盖了大部分常用方式，而且首次推出并免费赠送Linux协会纪念胸章，由此吸引了许多同学的参加。活动总共到场大约70人。         此次活动我们有幸邀请到了科大高性能计算方面的安虹老师，为大家分享Linux系统在高性能计算领域的应用。在演讲结束之后，现场的参与者踊跃地提出自己的疑问，并与 安虹老师交流自己的一些想法。      接着，副会长张荣葳同学为我们介绍Graphviz软件的一些入门知识。      然后是Linux用户协会的陈张同学带我们一起了解了电脑从按开关到见到Linux桌面的细节，在场同学纷纷表收获丰富。   接下来由张光宇同学介绍Linux用户协会比较知名的一个服务：Freeshell。为大家讲解Freeshell的功能和简单用法。   最后，在同学们激烈的讨论中，本次Linux User Party 圆满结束。  ","categories": ["LUG活动"],
-"tags": ["Linux User Party"],
-"url": "https://beta.ustclug.org//news/2013/12/2013-e7-a7-91-e5-a4-a7lug-software-freedom-day/",
+"title": null,
+"excerpt":"2013年12月1日，中国科学技术大学校学生Linux用户协会在科大西区活动中心学术报告厅举办了一年一度的Linux User Party。   本次活动主要面向校内学生进行宣传，不仅在在宣传方式上覆盖了大部分常用方式，而且首次推出并免费赠送Linux协会纪念胸章，由此吸引了许多同学的参加。活动总共到场大约70人。         此次活动我们有幸邀请到了科大高性能计算方面的安虹老师，为大家分享Linux系统在高性能计算领域的应用。在演讲结束之后，现场的参与者踊跃地提出自己的疑问，并与 安虹老师交流自己的一些想法。      接着，副会长张荣葳同学为我们介绍Graphviz软件的一些入门知识。      然后是Linux用户协会的陈张同学带我们一起了解了电脑从按开关到见到Linux桌面的细节，在场同学纷纷表收获丰富。   接下来由张光宇同学介绍Linux用户协会比较知名的一个服务：Freeshell。为大家讲解Freeshell的功能和简单用法。   最后，在同学们激烈的讨论中，本次Linux User Party 圆满结束。  ","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2013-12-16-2013-e7-a7-91-e5-a4-a7lug-software-freedom-day/",
 "teaser": null
 },{
-"title": "2013 Software Freedom Day 合肥站",
-"excerpt":"2013年9月21日下午2：30，中国科学技术大学校 Linux 用户协会在合肥市与全球几百所高校和组织一道，举办了 2013 年软件自由日庆祝活动。 本次活动邀请到了上海 Linux User Group 负责人姚欣宇。他同时也是项目托管平台 GitCafe 的创始人兼 Team Leader。他这次为我们带来的话题是 Git 入门介绍。姚欣宇并不是第一次参加我们协会的活动，在2011年的 Linux User Party，我们也曾邀请姚欣宇来为我们分享他的 Linux 经历。 活动的另外一位嘉宾是少年班学院的杨国鑫同学。他是 OpenSUSE 中文社区的活跃成员，同时是OpenSUSE Guide 中文版的作者。他这次为我们带来的话题是 OpenSUSE 使用经验。 在企业赞助方面，我们得到了如下赞助： Linux Deepin 公司赞助的200张光盘 CrossWeaver 公司赞助的20枚价值128元的 CrossOver 正版序列号 GitCafe 公司赞助的20个马克杯 作为合肥唯一的 SFD 活动，我们在活动之前还联系了安徽大学、合肥工业大学等兄弟院校，让这些学校的 Linux 协会、学生会帮忙进行宣传。 本次活动选择西区学术报告厅为活动场地，大约130人参与了我们的活动，现场气氛热烈。 为了能让参与者们加深对各种自由软件的了解，我们精心制作了展板、学习资料等供大家学习。图为现场门口发放学习资料的场景。 首先由上海 Linux User Group 负责人姚欣宇为我们带来《Git简明入门》：...","categories": ["LUG活动"],
-"tags": ["LUG","USTC_LUG","SFD"],
-"url": "https://beta.ustclug.org//news/2014/08/2013-software-freedom-day-e5-90-88-e8-82-a5-e7-ab-99/",
+"title": null,
+"excerpt":"2013年9月21日下午2：30，中国科学技术大学校 Linux 用户协会在合肥市与全球几百所高校和组织一道，举办了 2013 年软件自由日庆祝活动。 本次活动邀请到了上海 Linux User Group 负责人姚欣宇。他同时也是项目托管平台 GitCafe 的创始人兼 Team Leader。他这次为我们带来的话题是 Git 入门介绍。姚欣宇并不是第一次参加我们协会的活动，在2011年的 Linux User Party，我们也曾邀请姚欣宇来为我们分享他的 Linux 经历。 活动的另外一位嘉宾是少年班学院的杨国鑫同学。他是 OpenSUSE 中文社区的活跃成员，同时是OpenSUSE Guide 中文版的作者。他这次为我们带来的话题是 OpenSUSE 使用经验。 在企业赞助方面，我们得到了如下赞助： Linux Deepin 公司赞助的200张光盘 CrossWeaver 公司赞助的20枚价值128元的 CrossOver 正版序列号 GitCafe 公司赞助的20个马克杯 作为合肥唯一的 SFD 活动，我们在活动之前还联系了安徽大学、合肥工业大学等兄弟院校，让这些学校的 Linux 协会、学生会帮忙进行宣传。 本次活动选择西区学术报告厅为活动场地，大约130人参与了我们的活动，现场气氛热烈。 为了能让参与者们加深对各种自由软件的了解，我们精心制作了展板、学习资料等供大家学习。图为现场门口发放学习资料的场景。 首先由上海 Linux User Group 负责人姚欣宇为我们带来《Git简明入门》：...","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2014-08-25-2013-software-freedom-day-e5-90-88-e8-82-a5-e7-ab-99/",
 "teaser": null
 },{
-"title": "2014年8月 SFD 工作规划暨新学期 LUG 工作会议",
-"excerpt":"2014年8月30日下午2：30，一部分 LUG 活跃会员在东区活动室聚会，讨论即将到来的 SFD 活动的安排事项以及其它 LUG 的工作事项。与会人员包括：张荣葳、杨博远、崔灏、张光宇、朱晟菁、李子天、 高一凡、罗秀哲。 一.  SFD 相关 SFD 活动定于9月20日，是开学后第三周的周六。 1. 形式 嘉宾演讲+其他演讲者演讲+自由软件展示与自由讨论。往年与今年的活动形式都类似这样。 张光宇提出：应当安排使得演讲人数增加，相应的每人的演讲时间压缩。一小时的演讲时间太长，容易导致对某项演讲不感兴趣的同学中途离场。 因此希望：出更多的演讲人数，话题相应增多，从而维持自始至终参与活动的人数。 需做：多找演讲者。应大于等于5人。 预期效果：中场休息时间更多。 需做：中场休息时间可以放合作伙伴的宣传内容；与会的同学们私下交流的机会更多。 2. 嘉宾 刘世伟先生，从事 MIPS 开发。 演讲内容以 FOSS 相关为主，演讲包括在平日工作中对自由软件的使用。 需做：之后应当加强与嘉宾联系。 3. 校内 需要找演讲者。邮件列表，SNS，BBS 需做：由杨博远发帖发邮件进行。 各位也需要私下联系一些人做演讲。 例子：对 Ruby 的介绍演讲。 张光宇：可以考虑做/找网站：在线注册提交演讲的网站（有这样的网站才能有人提交申请，想让人发邮件申请还是不太好。） 例如：Pentabarf：debian conf 所使用的平台。管理会议与event等。ruby依赖？自己搭建。 也可考虑强制提交演讲者写 abstract（投稿时） 演讲：谁想讲就讲，25min+10min 讨论 4. 时间安排 工作应当按照以下的步骤来： 确定演讲者和内容—&gt;定出时间表–&gt;给嘉宾定火车票等。...","categories": ["LUG会议"],
-"tags": ["Software Freedom Day","USTC_LUG","news"],
-"url": "https://beta.ustclug.org//news/2014/08/2014-e5-b9-b48-e6-9c-88-sfd-e5-b7-a5-e4-bd-9c-e8-a7-84-e5-88-92-e6-9a-a8-e6-96-b0-e5-ad-a6-e6-9c-9f-lug-e5-b7-a5-e4-bd-9c-e4-bc-9a-e8-ae-ae/",
+"title": null,
+"excerpt":"2014年8月30日下午2：30，一部分 LUG 活跃会员在东区活动室聚会，讨论即将到来的 SFD 活动的安排事项以及其它 LUG 的工作事项。与会人员包括：张荣葳、杨博远、崔灏、张光宇、朱晟菁、李子天、 高一凡、罗秀哲。 一.  SFD 相关 SFD 活动定于9月20日，是开学后第三周的周六。 1. 形式 嘉宾演讲+其他演讲者演讲+自由软件展示与自由讨论。往年与今年的活动形式都类似这样。 张光宇提出：应当安排使得演讲人数增加，相应的每人的演讲时间压缩。一小时的演讲时间太长，容易导致对某项演讲不感兴趣的同学中途离场。 因此希望：出更多的演讲人数，话题相应增多，从而维持自始至终参与活动的人数。 需做：多找演讲者。应大于等于5人。 预期效果：中场休息时间更多。 需做：中场休息时间可以放合作伙伴的宣传内容；与会的同学们私下交流的机会更多。 2. 嘉宾 刘世伟先生，从事 MIPS 开发。 演讲内容以 FOSS 相关为主，演讲包括在平日工作中对自由软件的使用。 需做：之后应当加强与嘉宾联系。 3. 校内 需要找演讲者。邮件列表，SNS，BBS 需做：由杨博远发帖发邮件进行。 各位也需要私下联系一些人做演讲。 例子：对 Ruby 的介绍演讲。 张光宇：可以考虑做/找网站：在线注册提交演讲的网站（有这样的网站才能有人提交申请，想让人发邮件申请还是不太好。） 例如：Pentabarf：debian conf 所使用的平台。管理会议与event等。ruby依赖？自己搭建。 也可考虑强制提交演讲者写 abstract（投稿时） 演讲：谁想讲就讲，25min+10min 讨论 4. 时间安排 工作应当按照以下的步骤来： 确定演讲者和内容—&gt;定出时间表–&gt;给嘉宾定火车票等。...","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2014-08-31-2014-e5-b9-b48-e6-9c-88-sfd-e5-b7-a5-e4-bd-9c-e8-a7-84-e5-88-92-e6-9a-a8-e6-96-b0-e5-ad-a6-e6-9c-9f-lug-e5-b7-a5-e4-bd-9c-e4-bc-9a-e8-ae-ae/",
 "teaser": null
 },{
-"title": "2014自由软件日中国科大站",
-"excerpt":"SFD自由软件日是一个关于自由软件和开源软件的全球性庆祝活动。9月20日下午，2014 自由软件日中国科大站活动与全世界190个活动站点一道正式拉开序幕。此次活动宣传充分，准备到位，吸引了许多Linux爱好者们参加。   下午2时，活动在东区图书馆四楼学术报告厅准时召开。活动有幸邀请到了北京龙芯俱乐部核心成员刘世伟先生。校网络信息中心副主任张焕杰老师出席了活动。活动由大一新生张静宁同学主持。      维护网络繁忙的开源软件镜像站有什么挑战？Linux用户协会副会长崔灏同学为大家带来演讲《Mirrors是怎样炼成的》。有了mirrors镜像站，在学校使用Linux的同学们就可以以极高的速度获取到使用系统所必需的软件。为了应对高并发所带来的磁盘压力，mirrors服务器上采用了冗余磁盘阵列技术以同时保障数据访问速度与安全性。通过这个演讲，同学们初步了解到了mirrors服务器的运行机理，窥探到了协会技术工作的冰山一角。   接下来我们的特邀嘉宾北京龙芯俱乐部核心成员刘世伟先生为大家带来展示《在Linux下开发PCB》。在几乎一切均以电子化的当今世界，集成电路已成为我们生活的基础。目前主流PCB开发流程均有闭源的商业软件参与，刘先生展示的gEDA软件使大家眼前一亮。原来集成电路开发也可以开源！      说起数学计算软件，大家脑海中首先浮现的会是Matlab、Mathematica等闭源软件。数学计算能不能开源？Linux用户协会资深会员阴钰为大家带来演讲《Sage：集大成者》。Sage整合了目前流行的各种开源计算库，并给它们提供了一套统一的Python接口。Sage的功能非常丰富，符号计算、数值分析、组合数学、统计分析，应有尽有，只有想不到，没有做不到。不少同学对其表示出极大兴趣。      智能手机操作系统并非仅有Android、iOS、Windows Phone三种。新兴力量在开源界不可小觑。Linux用户协会前会长张光宇同学的《Firefox OS 移动应用开发入门》在移动领域为大家带来了新奇的体验。有了Firefox OS，编写移动端应用程序不需要什么高深的知识。只要会写现代网页，一款移动应用即可新鲜出炉。   互联网上信息瞬息万变，无数的黑客觊觎着用户的个人隐私。面对如此，我们唯有用技术武装自己。Linux用户协会会长张荣葳为大家带来演讲《比安全更安全——GnuPG简介》。GnuPG使用经典的非对称加密算法，有效地防止数据在非安全信道传输的过程中被窃取。与基于CA绝对可信性的SSL/TLS不同，GnuPG实现的PGP使用信任网来推断一份公钥是否属于它所声称的实体。许多同学表示对网状的信任关系有兴趣。      在第二个演讲结束以及全部演讲结束时，我们有抽奖环节。在演讲后提问以及抽到幸运数字的听众均获得了由合作公司赞助的小奖品一份。      感谢Mozilla、CSDN、Deepin与SegmentFault公司对活动的大力支持。最后，活动在大家热烈的讨论中成功结束。  ","categories": ["LUG活动"],
-"tags": ["Software Freedom Day","SFD","news"],
-"url": "https://beta.ustclug.org//news/2014/09/2014-sfd/",
+"title": null,
+"excerpt":"SFD自由软件日是一个关于自由软件和开源软件的全球性庆祝活动。9月20日下午，2014 自由软件日中国科大站活动与全世界190个活动站点一道正式拉开序幕。此次活动宣传充分，准备到位，吸引了许多Linux爱好者们参加。   下午2时，活动在东区图书馆四楼学术报告厅准时召开。活动有幸邀请到了北京龙芯俱乐部核心成员刘世伟先生。校网络信息中心副主任张焕杰老师出席了活动。活动由大一新生张静宁同学主持。      维护网络繁忙的开源软件镜像站有什么挑战？Linux用户协会副会长崔灏同学为大家带来演讲《Mirrors是怎样炼成的》。有了mirrors镜像站，在学校使用Linux的同学们就可以以极高的速度获取到使用系统所必需的软件。为了应对高并发所带来的磁盘压力，mirrors服务器上采用了冗余磁盘阵列技术以同时保障数据访问速度与安全性。通过这个演讲，同学们初步了解到了mirrors服务器的运行机理，窥探到了协会技术工作的冰山一角。   接下来我们的特邀嘉宾北京龙芯俱乐部核心成员刘世伟先生为大家带来展示《在Linux下开发PCB》。在几乎一切均以电子化的当今世界，集成电路已成为我们生活的基础。目前主流PCB开发流程均有闭源的商业软件参与，刘先生展示的gEDA软件使大家眼前一亮。原来集成电路开发也可以开源！      说起数学计算软件，大家脑海中首先浮现的会是Matlab、Mathematica等闭源软件。数学计算能不能开源？Linux用户协会资深会员阴钰为大家带来演讲《Sage：集大成者》。Sage整合了目前流行的各种开源计算库，并给它们提供了一套统一的Python接口。Sage的功能非常丰富，符号计算、数值分析、组合数学、统计分析，应有尽有，只有想不到，没有做不到。不少同学对其表示出极大兴趣。      智能手机操作系统并非仅有Android、iOS、Windows Phone三种。新兴力量在开源界不可小觑。Linux用户协会前会长张光宇同学的《Firefox OS 移动应用开发入门》在移动领域为大家带来了新奇的体验。有了Firefox OS，编写移动端应用程序不需要什么高深的知识。只要会写现代网页，一款移动应用即可新鲜出炉。   互联网上信息瞬息万变，无数的黑客觊觎着用户的个人隐私。面对如此，我们唯有用技术武装自己。Linux用户协会会长张荣葳为大家带来演讲《比安全更安全——GnuPG简介》。GnuPG使用经典的非对称加密算法，有效地防止数据在非安全信道传输的过程中被窃取。与基于CA绝对可信性的SSL/TLS不同，GnuPG实现的PGP使用信任网来推断一份公钥是否属于它所声称的实体。许多同学表示对网状的信任关系有兴趣。      在第二个演讲结束以及全部演讲结束时，我们有抽奖环节。在演讲后提问以及抽到幸运数字的听众均获得了由合作公司赞助的小奖品一份。      感谢Mozilla、CSDN、Deepin与SegmentFault公司对活动的大力支持。最后，活动在大家热烈的讨论中成功结束。  ","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2014-09-23-2014-sfd/",
 "teaser": null
 },{
-"title": "2014 秋季学期会员大会",
-"excerpt":"2014 社团招新业已结束，为了让新生更好地了解社团情况、增进社员间相互交流，Linux 用户协会于 2014 年 9 月 26 日晚在西区 3A203 教室举行会员大会，邀请所有新会员参加。   晚7时，大会开始。会长张荣葳代表 Linux 用户协会热情欢迎到会的新会员。      副会长杨博远同学详尽介绍了社团的发展历史、活动概括以及技术成就。他有姿有味的讲解吸引了台下所有人的目光！      第三位登场的是分管技术的副会长崔灏同学。杨博远同学的介绍已经非常详尽了，没事做的崔灏同学就带着大家“参观”了一下由协会维护的各个站点和网络服务，包括科大开源镜像站、科大 Blog、图书馆查询机系统等。      接下来，会长张荣葳同学介绍了到场了的本届和往届协会负责人，其中包括：现任 CPO 张恒若、现任 CIO 尤淼、2013 届会长张光宇、2012 届会长李博杰。      大会现场气氛热烈，欢笑声不断，展现了 Linux 社区的和谐与快乐。   大会后，依然有许多新会员踊跃地向协会负责人提问问题。最后，协会还组织新成员参观了 LUG 在西区和东区的活动室。  ","categories": ["LUG活动"],
-"tags": ["LUG","news"],
-"url": "https://beta.ustclug.org//news/2014/10/2014-autumn-kaiintaikai/",
+"title": null,
+"excerpt":"2014 社团招新业已结束，为了让新生更好地了解社团情况、增进社员间相互交流，Linux 用户协会于 2014 年 9 月 26 日晚在西区 3A203 教室举行会员大会，邀请所有新会员参加。   晚7时，大会开始。会长张荣葳代表 Linux 用户协会热情欢迎到会的新会员。      副会长杨博远同学详尽介绍了社团的发展历史、活动概括以及技术成就。他有姿有味的讲解吸引了台下所有人的目光！      第三位登场的是分管技术的副会长崔灏同学。杨博远同学的介绍已经非常详尽了，没事做的崔灏同学就带着大家“参观”了一下由协会维护的各个站点和网络服务，包括科大开源镜像站、科大 Blog、图书馆查询机系统等。      接下来，会长张荣葳同学介绍了到场了的本届和往届协会负责人，其中包括：现任 CPO 张恒若、现任 CIO 尤淼、2013 届会长张光宇、2012 届会长李博杰。      大会现场气氛热烈，欢笑声不断，展现了 Linux 社区的和谐与快乐。   大会后，依然有许多新会员踊跃地向协会负责人提问问题。最后，协会还组织新成员参观了 LUG 在西区和东区的活动室。  ","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2014-10-03-2014-autumn-kaiintaikai/",
 "teaser": null
 },{
-"title": "2014 Linux User Party 暨 Freeshell 用户交流会",
-"excerpt":"2014 Linux User Party 暨 Freeshell 用户交流会，于今年12月7日（周日）14时30分，在西活学术报告厅成功举行。 本次活动以 “Freeshell 用户交流会” 为主题。Freeshell 上线于 2013 年 1 月，是科大 LUG 利用少院的废旧服务器搭建的 Linux 虚拟机（VPS）平台，供科大师生免费使用，可以用于开发网络服务、搭建个人主页、挂机编译、跑实验程序等等。 本次活动由会长大人张荣葳亲自主持，并有幸请来了 4 位讲者： 科大云框架设计者 王硕博士 —— 《什么是云计算》 LUG资深会员 高一凡同学 —— 《Docker 的简介与进阶》 iCard作者 王译锋 —— 《现场计算来宾学霸指数》 LUG活跃会员 阴钰 —— 《部署一个网页聊天室》 本次活动有近百名同学参加。主办方 LUG 的小伙伴们更是精心准备了奖品，现场还有小零食可以吃。 近年来云计算的概念越来越火，云计算是继1980年代大型计算机到客户端-服务器的大转变之后的又一种巨变。中国科大云是校网络中心一项给科大师生提供虚拟机的服务。而王硕博士以一个科大云框架设计者的角度，给我们介绍了云计算的特点以及科大云搭建过程中用到的技术。他指出，云计算主要提供强大的计算能力和海量的存储能力，并具有可靠性、可扩展性和灵活性的优点。而科大云搭建过程中的关键技术讲解更是十分专业。 第二位讲者的演讲主题——Docker 是一个开源项目，诞生于 2013 年初。Docker 项目的目标是实现轻量级的操作系统虚拟化解决方案。高一凡同学对 Docker...","categories": ["LUG活动"],
-"tags": ["news","LUP"],
-"url": "https://beta.ustclug.org//news/2014/12/2014-linux-user-party/",
+"title": null,
+"excerpt":"2014 Linux User Party 暨 Freeshell 用户交流会，于今年12月7日（周日）14时30分，在西活学术报告厅成功举行。 本次活动以 “Freeshell 用户交流会” 为主题。Freeshell 上线于 2013 年 1 月，是科大 LUG 利用少院的废旧服务器搭建的 Linux 虚拟机（VPS）平台，供科大师生免费使用，可以用于开发网络服务、搭建个人主页、挂机编译、跑实验程序等等。 本次活动由会长大人张荣葳亲自主持，并有幸请来了 4 位讲者： 科大云框架设计者 王硕博士 —— 《什么是云计算》 LUG资深会员 高一凡同学 —— 《Docker 的简介与进阶》 iCard作者 王译锋 —— 《现场计算来宾学霸指数》 LUG活跃会员 阴钰 —— 《部署一个网页聊天室》 本次活动有近百名同学参加。主办方 LUG 的小伙伴们更是精心准备了奖品，现场还有小零食可以吃。 近年来云计算的概念越来越火，云计算是继1980年代大型计算机到客户端-服务器的大转变之后的又一种巨变。中国科大云是校网络中心一项给科大师生提供虚拟机的服务。而王硕博士以一个科大云框架设计者的角度，给我们介绍了云计算的特点以及科大云搭建过程中用到的技术。他指出，云计算主要提供强大的计算能力和海量的存储能力，并具有可靠性、可扩展性和灵活性的优点。而科大云搭建过程中的关键技术讲解更是十分专业。 第二位讲者的演讲主题——Docker 是一个开源项目，诞生于 2013 年初。Docker 项目的目标是实现轻量级的操作系统虚拟化解决方案。高一凡同学对 Docker...","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2014-12-09-2014-linux-user-party/",
 "teaser": null
 },{
-"title": "Blog 服务器宕机",
-"excerpt":"由于维护人员失误与遭受攻击，Blog 服务器于2014年12月18日凌晨宕机，已基本恢复服务。   受影响的服务包括 lug vpn，freeshell 网页前端，freeshell HTTP 反向代理，ssh.freeshell.ustc.edu.cn，部分校内网站 HTTP 反向代理，ustc blog 服务，字体代理服务，自建递归 DNS 服务，archive.lug.ustc.edu.cn，lug 官方邮箱邮件转发等。freeshell 各个计算节点未受影响。   我们近日将在 servers.blog.ustc.edu.cn 上给出一份本次宕机的技术细节。由于时间仓促，如果您发现有哪些服务仍然存在 Bug，请及时向我们反映。   给您带来的不便，敬请谅解。  ","categories": ["LUG服务"],
-"tags": ["server"],
-"url": "https://beta.ustclug.org//news/2014/12/blog-server-down/",
+"title": null,
+"excerpt":"由于维护人员失误与遭受攻击，Blog 服务器于2014年12月18日凌晨宕机，已基本恢复服务。   受影响的服务包括 lug vpn，freeshell 网页前端，freeshell HTTP 反向代理，ssh.freeshell.ustc.edu.cn，部分校内网站 HTTP 反向代理，ustc blog 服务，字体代理服务，自建递归 DNS 服务，archive.lug.ustc.edu.cn，lug 官方邮箱邮件转发等。freeshell 各个计算节点未受影响。   我们近日将在 servers.blog.ustc.edu.cn 上给出一份本次宕机的技术细节。由于时间仓促，如果您发现有哪些服务仍然存在 Bug，请及时向我们反映。   给您带来的不便，敬请谅解。  ","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2014-12-18-blog-server-down/",
 "teaser": null
 },{
-"title": "2015 LUG社团换届会议",
-"excerpt":"2015年4月25日晚19时30分，校学生Linux用户协会于东区活动室（科大东区图书馆118室）召开了换届会议。   首先，2014-2015届社长张荣葳同学为我们简要总结了过去一年社团的发展与活动情况。过去一年里，社团组织过许多次有影响力的活动，如广场知识问答、自由软件日活动、Linux User Party、女生节特别活动、LaTeX专题讲座等，提升了社团影响力；也经历了许多变迁与挑战，如活动室迁移、各种服务器宕机事故等。期间，技术方面也取得了进步，如暑假期间对mirrors服务器的在线维护与修理，其它服务器的维护，cuihao, zhsj, gaoyifan 等技术骨干的努力，也诞生了一批基于freeshell的应用成果，如南七书库、icard、选课查询系统等，激发了同学们的编程热情，也对开源软件与开源精神作出了宣传与普及。LUG取得了一定的成就，挖掘出了一批有技术实力的新人，也吸取了各类教训与经验。展望未来，外部环境的变化带来了许多未知数，需要社团继续进行发展与改革。   会议第二部分进行了社长与副会长的更替与选举。上任会长张荣葳决定加入校社团管理指导委员会并卸任会长职位。张荣葳同学向到场同学介绍了社长与副社长的职务工作内容：社长应统筹规划社团发展，掌握社团历史，规划社团工作，分发工作，与管指委与团委进行联络（政治资源、资金、等等）。副社长应辅佐社长处理工作，进行事物分派并完成各种具体的工作。   上任副社长崔灏同学决定参选社长职务。崔灏同学作了竞选演讲，称自己作为副社长工作一年，比较了解社团工作；作为上一届CTO，技术水平较好，对服务器维护了解，有能力担任社长工作。   副社长职位上，崔天一、左格非、杨博远、张静宁四人参选。经过讨论，与会人员决定选出三位副社长。四位候选人均发表了竞选演讲。   之后进行了一人一票的选举投票，其结果如下：      选出崔灏同学担任新一届社长，张静宁、杨博远、左格非同学担任副社长。            图为崔灏同学发表就职感想。   第三部分讨论了社团各种O(“Officer”)的人选。经自我举荐，确定高一凡同学担任CTO职位，崔天一同学担任CFO，尤淼同学主动承担了整理 LUG Wiki 和 LUG FTP 的工作，其余人选待定。   之后，大家讨论了LUG近期的发展与工作事项，包括版衫制作与白帽子大赛的准备以及相关小聚的举办问题，气氛热烈。邓云天同学代表管指委对新一届领导人员就任表示祝贺，希望大家能够共同努力办好社团，使LUG更上一层楼。   与会人员包括崔灏、崔天一、邓云天、高一凡、何旭东、李博杰、沈达、王皓、于天泽、尤淼、杨博远、祝元宠、张恒若、左格非、朱晟菁、张荣葳、张静宁、郑子涵等（名单暂有遗漏，请联系 LUG 进行补充）。其中，邓云天委员助理作为校社团管理指导委员会的代表参会监督。      会后，相关人员还就感兴趣的问题进行了讨论。      本次会议照片上传至 LUG FTP “会议”文件夹中。  ","categories": ["LUG会议"],
-"tags": ["Meeting","USTC_LUG","news"],
-"url": "https://beta.ustclug.org//news/2015/04/2015-lug-election/",
+"title": null,
+"excerpt":"2015年4月25日晚19时30分，校学生Linux用户协会于东区活动室（科大东区图书馆118室）召开了换届会议。   首先，2014-2015届社长张荣葳同学为我们简要总结了过去一年社团的发展与活动情况。过去一年里，社团组织过许多次有影响力的活动，如广场知识问答、自由软件日活动、Linux User Party、女生节特别活动、LaTeX专题讲座等，提升了社团影响力；也经历了许多变迁与挑战，如活动室迁移、各种服务器宕机事故等。期间，技术方面也取得了进步，如暑假期间对mirrors服务器的在线维护与修理，其它服务器的维护，cuihao, zhsj, gaoyifan 等技术骨干的努力，也诞生了一批基于freeshell的应用成果，如南七书库、icard、选课查询系统等，激发了同学们的编程热情，也对开源软件与开源精神作出了宣传与普及。LUG取得了一定的成就，挖掘出了一批有技术实力的新人，也吸取了各类教训与经验。展望未来，外部环境的变化带来了许多未知数，需要社团继续进行发展与改革。   会议第二部分进行了社长与副会长的更替与选举。上任会长张荣葳决定加入校社团管理指导委员会并卸任会长职位。张荣葳同学向到场同学介绍了社长与副社长的职务工作内容：社长应统筹规划社团发展，掌握社团历史，规划社团工作，分发工作，与管指委与团委进行联络（政治资源、资金、等等）。副社长应辅佐社长处理工作，进行事物分派并完成各种具体的工作。   上任副社长崔灏同学决定参选社长职务。崔灏同学作了竞选演讲，称自己作为副社长工作一年，比较了解社团工作；作为上一届CTO，技术水平较好，对服务器维护了解，有能力担任社长工作。   副社长职位上，崔天一、左格非、杨博远、张静宁四人参选。经过讨论，与会人员决定选出三位副社长。四位候选人均发表了竞选演讲。   之后进行了一人一票的选举投票，其结果如下：      选出崔灏同学担任新一届社长，张静宁、杨博远、左格非同学担任副社长。            图为崔灏同学发表就职感想。   第三部分讨论了社团各种O(“Officer”)的人选。经自我举荐，确定高一凡同学担任CTO职位，崔天一同学担任CFO，尤淼同学主动承担了整理 LUG Wiki 和 LUG FTP 的工作，其余人选待定。   之后，大家讨论了LUG近期的发展与工作事项，包括版衫制作与白帽子大赛的准备以及相关小聚的举办问题，气氛热烈。邓云天同学代表管指委对新一届领导人员就任表示祝贺，希望大家能够共同努力办好社团，使LUG更上一层楼。   与会人员包括崔灏、崔天一、邓云天、高一凡、何旭东、李博杰、沈达、王皓、于天泽、尤淼、杨博远、祝元宠、张恒若、左格非、朱晟菁、张荣葳、张静宁、郑子涵等（名单暂有遗漏，请联系 LUG 进行补充）。其中，邓云天委员助理作为校社团管理指导委员会的代表参会监督。      会后，相关人员还就感兴趣的问题进行了讨论。      本次会议照片上传至 LUG FTP “会议”文件夹中。  ","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2015-04-30-2015-lug-election/",
 "teaser": null
 },{
-"title": "2015 瀚海星云BBS 板板衫方案",
-"excerpt":"版衫设计方案征集帖：   http://bbs.ustc.edu.cn/cgi/bbstcon?board=Linux&amp;file=M.1430644311.A   往届版衫方案：   https://lug.ustc.edu.cn/wiki/lug/banshan   活动流程：征集设计方案 → 投票确定设计方案 → 版衫预定 → 版衫发放   版衫方案   目前有3位同学投稿（zhaochi、ewind、JennyZhang @BBS）他们可以免费获得今年的版衫一件；现在，一共有7种设计方案，如下：   方案一   作者：zhaochi 图片：正面图      方案二   作者：JennyZhang 图片：正面、背面效果图，正面、背面图   github commit style               方案三   作者：ewind 图片：正面效果图      方案四   作者：ewind 图片：背面效果图      方案五   作者：ewind 图片：正面效果图      方案六   作者：ewind 图片：背面效果图      编者注：这个背面图打印的面积比较大，可能需要3个版….   方案七   作者：ewind 图片：正面效果图      投票链接   http://www.sojump.com/jq/5057174.aspx   关于底衫与订购商店   底衫由于选择的范围很大，质量价格各种因素很多，工作人员将尽量挑选好的底衫（就不投票决定了，因为目前也没有筛选出来）。底衫样式和颜色会在预定的时候给大家挑选，订购商店我们还在挑选中，有靠谱的、有经验的同学欢迎给我们推荐好的店铺。   欢迎回复本文吐槽。  ","categories": ["LUG活动"],
-"tags": ["版衫"],
-"url": "https://beta.ustclug.org//news/2015/05/2015-linux-user-group-banshan/",
+"title": null,
+"excerpt":"版衫设计方案征集帖：   http://bbs.ustc.edu.cn/cgi/bbstcon?board=Linux&amp;file=M.1430644311.A   往届版衫方案：   https://lug.ustc.edu.cn/wiki/lug/banshan   活动流程：征集设计方案 → 投票确定设计方案 → 版衫预定 → 版衫发放   版衫方案   目前有3位同学投稿（zhaochi、ewind、JennyZhang @BBS）他们可以免费获得今年的版衫一件；现在，一共有7种设计方案，如下：   方案一   作者：zhaochi 图片：正面图      方案二   作者：JennyZhang 图片：正面、背面效果图，正面、背面图   github commit style               方案三   作者：ewind 图片：正面效果图      方案四   作者：ewind 图片：背面效果图      方案五   作者：ewind 图片：正面效果图      方案六   作者：ewind 图片：背面效果图      编者注：这个背面图打印的面积比较大，可能需要3个版….   方案七   作者：ewind 图片：正面效果图      投票链接   http://www.sojump.com/jq/5057174.aspx   关于底衫与订购商店   底衫由于选择的范围很大，质量价格各种因素很多，工作人员将尽量挑选好的底衫（就不投票决定了，因为目前也没有筛选出来）。底衫样式和颜色会在预定的时候给大家挑选，订购商店我们还在挑选中，有靠谱的、有经验的同学欢迎给我们推荐好的店铺。   欢迎回复本文吐槽。  ","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2015-05-21-2015-linux-user-group-banshan/",
 "teaser": null
 },{
 "title": "投票结果",
-"excerpt":"这次版衫制作，征集到的设计方案 最后的投票结果是： (A) 方案一 5 票 约占 3% (B) 方案二 36 票 约占 23% (C) 方案三 43 票 约占 27% (D) 方案四 13 票 约占 8% (E) 方案五 11 票 约占 7% (F) 方案六 6 票 约占 4% (G) 方案七 22 票 约占 14% (H) 方案八：重制2010年版衫 16 票 约占 10%...","categories": ["LUG活动"],
-"tags": ["news","版衫"],
-"url": "https://beta.ustclug.org//news/2015/05/2015-linux-tshirt-voting-result-and-order/",
+"excerpt":"这次版衫制作，征集到的设计方案 最后的投票结果是： (A) 方案一 5 票 约占 3% (B) 方案二 36 票 约占 23% (C) 方案三 43 票 约占 27% (D) 方案四 13 票 约占 8% (E) 方案五 11 票 约占 7% (F) 方案六 6 票 约占 4% (G) 方案七 22 票 约占 14% (H) 方案八：重制2010年版衫 16 票 约占 10%...","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2015-05-29-2015-linux-tshirt-voting-result-and-order/",
 "teaser": null
 },{
-"title": "5月30日服务器宕机说明",
-"excerpt":"blog 服务器于5月30日凌晨起宕机。目前技术人员正在尝试修复，暂时没有修复 ETA。您的博客数据均有备份，暂时无需担心数据丢失问题。   宕机影响范围包括科大博客服务、Freeshell 控制节点与网络控制面板、LUG VPN 防污染DNS等。Freeshell 工作节点暂未受到影响，您仍然能够远程登录虚拟机。   其它服务器可能受到影响；我们正在评估影响范围与严重性。  ","categories": ["LUG服务"],
-"tags": [],
-"url": "https://beta.ustclug.org//news/2015/06/201406-server-fault-announce/",
+"title": null,
+"excerpt":"blog 服务器于5月30日凌晨起宕机。目前技术人员正在尝试修复，暂时没有修复 ETA。您的博客数据均有备份，暂时无需担心数据丢失问题。   宕机影响范围包括科大博客服务、Freeshell 控制节点与网络控制面板、LUG VPN 防污染DNS等。Freeshell 工作节点暂未受到影响，您仍然能够远程登录虚拟机。   其它服务器可能受到影响；我们正在评估影响范围与严重性。  ","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2015-06-01-201406-server-fault-announce/",
 "teaser": null
 },{
-"title": "GitLab服务器紧急维护通知",
-"excerpt":"接到用户反馈，无法git clone项目。   我们发现GitLab服务器文件系统损坏。   目前暂停了GitLab服务，正在紧急维护中。  ","categories": ["LUG服务"],
-"tags": [],
-"url": "https://beta.ustclug.org//news/2015/06/gitlab-emergency-maintenance/",
+"title": null,
+"excerpt":"接到用户反馈，无法git clone项目。   我们发现GitLab服务器文件系统损坏。   目前暂停了GitLab服务，正在紧急维护中。  ","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2015-06-01-gitlab-emergency-maintenance/",
 "teaser": null
 },{
 "title": "mirrors.ustc.edu.cn",
-"excerpt":"科大开源软件镜像服务正常。 lug.ustc.edu.cn 目前正常运行的服务包括 LUG Wiki、lug.ustc.edu.cn/sites/*。即日起 LUG 博客（https://lug.ustc.edu.cn/blog/）恢复服务。 LUG FTP 尚未正式恢复。如有迫切需求，请使用 ftp://backup.ustclug.org，使用方法与先前 LUG FTP 相同。 9.3 补充：LUG FTP 现已回复。请使用ftp://ftp.lug.ustc.edu.cn。现在 LUG FTP 部署在 donut 机器上。 freeshell.ustc.edu.cn 目前服务恢复面临技术问题：上游基于 3.10 内核和 CentOS 7 的 OpenVZ 部署方案仍不成熟，故当前处于等待上游开发的阶段，暂无恢复时间表。 8.21补充：如有熟练运用 OpenVZ 或了解内核调试相关技术，有能力且愿意协助项目解决 bug 的同学，欢迎投简历至 lug (at) ustc.edu.cn 了解并参与项目开发，感激不尽 9.3补充：目前 bug 修复有所进展，开发正缓慢进行。 blog.ustc.edu.cn 科大博客已恢复服务。如果使用出现问题，请向我们反映。 Time Machine Time Machine...","categories": ["LUG服务"],
-"tags": ["USTC_LUG","server"],
-"url": "https://beta.ustclug.org//news/2015/08/lug-service-restore-status/",
+"excerpt":"科大开源软件镜像服务正常。 lug.ustc.edu.cn 目前正常运行的服务包括 LUG Wiki、 lug.ustc.edu.cn/sites/* 。即日起 LUG 博客（https://lug.ustc.edu.cn/blog/）恢复服务。 LUG FTP 尚未正式恢复。如有迫切需求，请使用 ftp://backup.ustclug.org ，使用方法与先前 LUG FTP 相同。 9.3 补充：LUG FTP 现已回复。请使用 ftp://ftp.lug.ustc.edu.cn 。现在 LUG FTP 部署在 donut 机器上。 freeshell.ustc.edu.cn 目前服务恢复面临技术问题：上游基于 3.10 内核和 CentOS 7 的 OpenVZ 部署方案仍不成熟，故当前处于等待上游开发的阶段，暂无恢复时间表。 8.21补充：如有熟练运用 OpenVZ 或了解内核调试相关技术，有能力且愿意协助项目解决 bug 的同学，欢迎投简历至 lug (at) ustc.edu.cn 了解并参与项目开发，感激不尽 9.3补充：目前 bug 修复有所进展，开发正缓慢进行。 blog.ustc.edu.cn...","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2015-08-18-lug-service-restore-status/",
 "teaser": null
 },{
-"title": "LUG版衫制作手册",
-"excerpt":"上学期5月3日到6月15日制作了LUG 2015版衫，前后花了一个多月的时间，感觉做版衫真是一件十分耗费时间精力的大活动。第一次负责LUG版衫的制作，总结一下一个月的工作。主要流程如下，我们逐一讲解。 方案征集 → 版衫投票 → 协商定稿 → 版衫预定 → 统计制作 → 版衫发放 → 售后服务 方案征集 方案征集前一般要策划时间，一般我们都是毕业季做版衫，6月中旬前要把版衫发出去，需要提前一个半月开始准备。因此版衫征集，五月初就应该发帖了。 发帖要求：这是版衫制作的第一个贴子，需要介绍活动流程，让关注版衫制作的同学知道接下来都要发生什么。其次，发帖主要目的是征集版衫设计方案，因此需要写清设计要求、投稿方式、方案如何选择，另外给投稿者的奖励也十分必要，最后附上往届版衫设计图给大家开脑洞。 注意事项：要求投稿者提供版衫正反面，如果只提供正面图像，背面视为空白。 要做事情：BBS发帖，各种社交平台宣传 建议时间：建议版衫征集时间为14天 版衫投票 版衫方案征集结束后，应该尽快整理版衫方案，为投票做准备。征集到的方案，列出采纳的方案、作者、图片。选择一个投票平台进行投票，注意每个投票的方案都应该包含正反面（无论反面是否空白）。 要做的事情：整理版衫方案发帖，发起投票，各种社交平台宣传 建议时间：整理方案、制作投票时间1天，投票时间6天 卖家协商 版衫方案确定之后，需要尽快定稿。首先，我们需要寻找一家为我们制作版衫的卖家。并根据卖家的要求提供设计图文件，因此必不可少要和联系设计作者。因为，有时根据底衫颜色还需要提供不同颜色的图案，所需的图片大小等，都需要设计作者提供。 其实应该之前就开始寻找卖家，需要根据底衫样式、质量、价格、颜色、制作时间等因素综合考虑。 和卖家定稿之后，需要把大致价格定下来，因为版衫的最终价格和制作数量、印制板数也有关，这个只有等预定结束之后才知道。而预定之前又必须告诉同学们版衫多少钱。所以必须定价建议比卖家给我的价格高一些。这次卖家跟我说大概一件47块，我们定价50。但就社团全部的付出来说，建议定价再高10元，因为需要奖励版衫给投稿的人，也需要库存一些之后卖，多的钱可以作为社团经费。 要做的事情：寻找卖家、联系设计作者、与卖家协商好版衫定稿、定价 建议时间：多方联系到版衫定稿建议2天 版衫预定 在版衫预定发帖前，需要确定预定的方式。考虑到短信、邮件预定我们需要自己统计，建议采用发问卷、或者在线预定平台预定。因为具体每个预定都涉及到很多参数，如衣服尺码、颜色、款式、预订人姓名、联系方式、是否快递、地址等等。另外，我们是预定即付款，否则我们需要垫1万元左右。 由于版衫预定数量决定了版衫的制作量/销售量，我们需要重点宣传，因此需要制作海报、传单来提高预订数量。在预定期间，一定要多宣传，天天刷存在感。 另外，需要单独联系当初给版衫投稿的人，问他们预定信息。 发帖要求：我们把投票结果公布和版衫预定说明合在一个帖子里。首先我们需要在帖子里公开版衫投票的结果，具体的公布每个方案的得票数。然后，把和卖家商量好的版衫设计稿展示出来，有几种颜色，是否分男女款说明清楚。还需要说明预定方式、预定时间、付款方式、预计到货时间。 要做的事情：决定预定方式、发帖、各种社交平台宣传、做海报传单 建议时间：7天 统计制作 版衫预定结束后，需要和卖家确认各种颜色、尺码、款式制作的数量。除了已经预定的同学，我们还需要库存10-20件版衫下学期给卖给新生、或者作为活动奖品。库存的版衫颜色、尺码、款式可以参考预定的数据。此时需要交一定比例的预付金额，因此需要和买家确认最终的总价格。需要统计的可能会涉及各种预定信息，包括是否交钱。也要问清楚多少天可以拿到版衫。 确定后，版衫即投入制作。 需要做的事：统计预定信息、和卖家协商确认、付预定金额 建议时间：统计确定信息1天，版衫制作12天 版衫发放 版衫方法前必然是卖家把版衫寄过来，那么收快递的时候就要确认卖家是否寄了正确数量、款式的版衫。这次每件版衫上都贴有预订者姓名小纸条，是卖家已经贴好的。友情提示快递比较重，需要两三个人一起去取。遇到数量不对还需和卖家联系，建议版衫差不多全发出去之后再给卖家付尾款。 版衫发放前需要发帖，提前到发放点准备好版衫，领版衫需签收，2、3个人一起去发放即可。建议集中一个小时内发版衫，之后需要自行来活动室取。 要做的事情：收快递验货、发帖、宣传、发放版衫、付尾款 建议的时间：1天收快递验货，1天发放版衫。 售后服务 版衫发出去之后，总有人大小不合适什么的，让他们自行交换，因此在BBS上面发一个版衫问题反馈帖子，集中交流。...","categories": ["LUG活动"],
-"tags": ["版衫"],
-"url": "https://beta.ustclug.org//news/2015/09/lug-banshan-commission-guide/",
+"title": null,
+"excerpt":"上学期5月3日到6月15日制作了LUG 2015版衫，前后花了一个多月的时间，感觉做版衫真是一件十分耗费时间精力的大活动。第一次负责LUG版衫的制作，总结一下一个月的工作。主要流程如下，我们逐一讲解。 方案征集 → 版衫投票 → 协商定稿 → 版衫预定 → 统计制作 → 版衫发放 → 售后服务 方案征集 方案征集前一般要策划时间，一般我们都是毕业季做版衫，6月中旬前要把版衫发出去，需要提前一个半月开始准备。因此版衫征集，五月初就应该发帖了。 发帖要求：这是版衫制作的第一个贴子，需要介绍活动流程，让关注版衫制作的同学知道接下来都要发生什么。其次，发帖主要目的是征集版衫设计方案，因此需要写清设计要求、投稿方式、方案如何选择，另外给投稿者的奖励也十分必要，最后附上往届版衫设计图给大家开脑洞。 注意事项：要求投稿者提供版衫正反面，如果只提供正面图像，背面视为空白。 要做事情：BBS发帖，各种社交平台宣传 建议时间：建议版衫征集时间为14天 版衫投票 版衫方案征集结束后，应该尽快整理版衫方案，为投票做准备。征集到的方案，列出采纳的方案、作者、图片。选择一个投票平台进行投票，注意每个投票的方案都应该包含正反面（无论反面是否空白）。 要做的事情：整理版衫方案发帖，发起投票，各种社交平台宣传 建议时间：整理方案、制作投票时间1天，投票时间6天 卖家协商 版衫方案确定之后，需要尽快定稿。首先，我们需要寻找一家为我们制作版衫的卖家。并根据卖家的要求提供设计图文件，因此必不可少要和联系设计作者。因为，有时根据底衫颜色还需要提供不同颜色的图案，所需的图片大小等，都需要设计作者提供。 其实应该之前就开始寻找卖家，需要根据底衫样式、质量、价格、颜色、制作时间等因素综合考虑。 和卖家定稿之后，需要把大致价格定下来，因为版衫的最终价格和制作数量、印制板数也有关，这个只有等预定结束之后才知道。而预定之前又必须告诉同学们版衫多少钱。所以必须定价建议比卖家给我的价格高一些。这次卖家跟我说大概一件47块，我们定价50。但就社团全部的付出来说，建议定价再高10元，因为需要奖励版衫给投稿的人，也需要库存一些之后卖，多的钱可以作为社团经费。 要做的事情：寻找卖家、联系设计作者、与卖家协商好版衫定稿、定价 建议时间：多方联系到版衫定稿建议2天 版衫预定 在版衫预定发帖前，需要确定预定的方式。考虑到短信、邮件预定我们需要自己统计，建议采用发问卷、或者在线预定平台预定。因为具体每个预定都涉及到很多参数，如衣服尺码、颜色、款式、预订人姓名、联系方式、是否快递、地址等等。另外，我们是预定即付款，否则我们需要垫1万元左右。 由于版衫预定数量决定了版衫的制作量/销售量，我们需要重点宣传，因此需要制作海报、传单来提高预订数量。在预定期间，一定要多宣传，天天刷存在感。 另外，需要单独联系当初给版衫投稿的人，问他们预定信息。 发帖要求：我们把投票结果公布和版衫预定说明合在一个帖子里。首先我们需要在帖子里公开版衫投票的结果，具体的公布每个方案的得票数。然后，把和卖家商量好的版衫设计稿展示出来，有几种颜色，是否分男女款说明清楚。还需要说明预定方式、预定时间、付款方式、预计到货时间。 要做的事情：决定预定方式、发帖、各种社交平台宣传、做海报传单 建议时间：7天 统计制作 版衫预定结束后，需要和卖家确认各种颜色、尺码、款式制作的数量。除了已经预定的同学，我们还需要库存10-20件版衫下学期给卖给新生、或者作为活动奖品。库存的版衫颜色、尺码、款式可以参考预定的数据。此时需要交一定比例的预付金额，因此需要和买家确认最终的总价格。需要统计的可能会涉及各种预定信息，包括是否交钱。也要问清楚多少天可以拿到版衫。 确定后，版衫即投入制作。 需要做的事：统计预定信息、和卖家协商确认、付预定金额 建议时间：统计确定信息1天，版衫制作12天 版衫发放 版衫方法前必然是卖家把版衫寄过来，那么收快递的时候就要确认卖家是否寄了正确数量、款式的版衫。这次每件版衫上都贴有预订者姓名小纸条，是卖家已经贴好的。友情提示快递比较重，需要两三个人一起去取。遇到数量不对还需和卖家联系，建议版衫差不多全发出去之后再给卖家付尾款。 版衫发放前需要发帖，提前到发放点准备好版衫，领版衫需签收，2、3个人一起去发放即可。建议集中一个小时内发版衫，之后需要自行来活动室取。 要做的事情：收快递验货、发帖、宣传、发放版衫、付尾款 建议的时间：1天收快递验货，1天发放版衫。 售后服务 版衫发出去之后，总有人大小不合适什么的，让他们自行交换，因此在BBS上面发一个版衫问题反馈帖子，集中交流。...","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2015-09-13-lug-banshan-commission-guide/",
 "teaser": null
 },{
-"title": "2015软件自由日中国科大站",
-"excerpt":"2015年9月19日是第12个软件自由日。当日下午，中国科大学生 Linux 用户协会在西区活动中心学术报告厅举办了软件自由日科大站庆祝活动。共有超过100位科大及社会人士参加了本次活动。   这是协会连续第六年承办软件自由日中国科大站活动。本次活动中，我们很荣幸地邀请了两位嘉宾进行自由软件主题演讲，他们是在红帽中国从事内核工程师工作的科大校友叶超先生，和对科学数值计算有着丰富的了解的物院13级的罗秀哲同学。协会指导教师张焕杰老师和社团管指委的张荣葳同学也参加的本次活动。   下午2时许，活动还未开始，同学们就已经陆续进入会场西活学术报告厅。我们向参加活动的同学发放了 Linux 系统体验光盘、笔记本、贴纸等精美纪念品。同学们对于本次活动表现出了极大兴趣，不断有同学向工作人员了解演讲内容和活动流程详情。甚至有来自合肥其他兄弟院校的同学，也慕名来到科大参加本次活动。      下午2:30，学术报告厅已经几乎坐满，还有同学在源源不断地进入会场。在主持人张静宁和协会工作人员的组织下，活动正式开始。   叶超先生首先为科大同学带来了《从红帽工程师的角度看开源》主题演讲。他从开源的意义谈起，生动地解释了开源的精神和理念；又结合开源项目实例，展示了当前席卷软件业的开源潮流。最后，他结合自己的工作，解释了开源巨头红帽公司是如何同开源社区展开良好合作的。演讲中，叶超先生多次和同学们互动问答；演讲后，同学们更是不断积极地提问。现场气氛十分热烈。      中场休息时，我们播放了由协会前辈张成学长和李博杰学长拍摄的小短片。学长们对协会的发展做出了很大贡献，也对协会有着浓厚的感情。他们特意拍摄了这些短片，希望通过自己的解说帮助新成员了解校学生 Linux 用户协会这个大家庭。随后，协会副会长左格非同学为大家带来了《自由软件新闻吐槽》小演讲。十分钟的演讲中，他从几个著名开源软件发布的重大更新谈起，带领同学们纵览过去一年中自由软件的大事记。   接下来，罗秀哲同学带来了《Julia——科学计算的银弹》主题演讲。Julia 是一门新兴的高性能数值计算语言，也是一个蓬勃发展的自由软件项目。罗秀哲同学结合自己的科研经历，介绍了 Julia 的优势和发展前景，向同学们大力推广这一自由软件。他还表达了自己希望在科大乃至中国建立起 Julia 中文社区的想法，希望同学们发扬自由软件精神，为 Julia 的发展群策群力。最后，他邀请了同样是 Julia 语言活跃推广者的科大物院12级的徐浩同学来到台上，为同学们介绍了 Julia 的社区发展。现场气氛十分活跃。      两场演讲后，活动进入了尾声，但最后的抽奖活动又将现场气氛推向了一个新的高潮。我们安排了有趣的名片交换活动，每位参加者都事先收到了一张他人填写的名片。抽奖时，每位中奖者不仅收到一份自己的礼物，还要将另一份礼物亲自送给收到的名片上的同学。我们希望抽奖活动带给同学们的不仅仅是奖品，更是一份崭新的友谊。      活动结束后，徐浩同学还用自己的无人机为参加活动的同学拍摄了特别的合影。我们对徐浩同学别出心裁的彩蛋表示感谢。   本次活动受到了各大开源社区和企业的支持，中国科大学生 Linux 用户协会对这些单位的支持表示由衷的感谢（排名不分先后）：      云端开发平台 Coding 为活动提供了抱枕、图书、贴纸等精美纪念品；   Canonical 提供了 Ubuntu 主题的笔记本、贴纸等小纪念品；   红帽中国和 Fedora 中文社区提供了 Linux 系统体验光盘、奖品U盘、服饰等活动物资；   深度科技提供了U盘、图书等纪念品。  ","categories": ["LUG活动"],
-"tags": ["SFD"],
-"url": "https://beta.ustclug.org//news/2015/09/2015sfd/",
+"title": null,
+"excerpt":"2015年9月19日是第12个软件自由日。当日下午，中国科大学生 Linux 用户协会在西区活动中心学术报告厅举办了软件自由日科大站庆祝活动。共有超过100位科大及社会人士参加了本次活动。   这是协会连续第六年承办软件自由日中国科大站活动。本次活动中，我们很荣幸地邀请了两位嘉宾进行自由软件主题演讲，他们是在红帽中国从事内核工程师工作的科大校友叶超先生，和对科学数值计算有着丰富的了解的物院13级的罗秀哲同学。协会指导教师张焕杰老师和社团管指委的张荣葳同学也参加的本次活动。   下午2时许，活动还未开始，同学们就已经陆续进入会场西活学术报告厅。我们向参加活动的同学发放了 Linux 系统体验光盘、笔记本、贴纸等精美纪念品。同学们对于本次活动表现出了极大兴趣，不断有同学向工作人员了解演讲内容和活动流程详情。甚至有来自合肥其他兄弟院校的同学，也慕名来到科大参加本次活动。      下午2:30，学术报告厅已经几乎坐满，还有同学在源源不断地进入会场。在主持人张静宁和协会工作人员的组织下，活动正式开始。   叶超先生首先为科大同学带来了《从红帽工程师的角度看开源》主题演讲。他从开源的意义谈起，生动地解释了开源的精神和理念；又结合开源项目实例，展示了当前席卷软件业的开源潮流。最后，他结合自己的工作，解释了开源巨头红帽公司是如何同开源社区展开良好合作的。演讲中，叶超先生多次和同学们互动问答；演讲后，同学们更是不断积极地提问。现场气氛十分热烈。      中场休息时，我们播放了由协会前辈张成学长和李博杰学长拍摄的小短片。学长们对协会的发展做出了很大贡献，也对协会有着浓厚的感情。他们特意拍摄了这些短片，希望通过自己的解说帮助新成员了解校学生 Linux 用户协会这个大家庭。随后，协会副会长左格非同学为大家带来了《自由软件新闻吐槽》小演讲。十分钟的演讲中，他从几个著名开源软件发布的重大更新谈起，带领同学们纵览过去一年中自由软件的大事记。   接下来，罗秀哲同学带来了《Julia——科学计算的银弹》主题演讲。Julia 是一门新兴的高性能数值计算语言，也是一个蓬勃发展的自由软件项目。罗秀哲同学结合自己的科研经历，介绍了 Julia 的优势和发展前景，向同学们大力推广这一自由软件。他还表达了自己希望在科大乃至中国建立起 Julia 中文社区的想法，希望同学们发扬自由软件精神，为 Julia 的发展群策群力。最后，他邀请了同样是 Julia 语言活跃推广者的科大物院12级的徐浩同学来到台上，为同学们介绍了 Julia 的社区发展。现场气氛十分活跃。      两场演讲后，活动进入了尾声，但最后的抽奖活动又将现场气氛推向了一个新的高潮。我们安排了有趣的名片交换活动，每位参加者都事先收到了一张他人填写的名片。抽奖时，每位中奖者不仅收到一份自己的礼物，还要将另一份礼物亲自送给收到的名片上的同学。我们希望抽奖活动带给同学们的不仅仅是奖品，更是一份崭新的友谊。      活动结束后，徐浩同学还用自己的无人机为参加活动的同学拍摄了特别的合影。我们对徐浩同学别出心裁的彩蛋表示感谢。   本次活动受到了各大开源社区和企业的支持，中国科大学生 Linux 用户协会对这些单位的支持表示由衷的感谢（排名不分先后）：      云端开发平台 Coding 为活动提供了抱枕、图书、贴纸等精美纪念品；   Canonical 提供了 Ubuntu 主题的笔记本、贴纸等小纪念品；   红帽中国和 Fedora 中文社区提供了 Linux 系统体验光盘、奖品U盘、服饰等活动物资；   深度科技提供了U盘、图书等纪念品。  ","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2015-09-21-2015sfd/",
 "teaser": null
 },{
-"title": "2016 LUG社团换届会议",
-"excerpt":"2016年4月24日下午15时，校学生Linux用户协会于东区活动室(科大东区图书馆605室)召开了换届会议。   首先，为了活跃气氛，2015-2016届会长崔灏同学向大家展示了android 6.0的新功能：USB MIDI 输入，将手机接到电脑的虚拟键盘上之后弹出了优美的旋律。   步入正题，崔灏同学总结了过去一年的社团情况。比如举办了Linux Install Party，白帽子大赛，服务器遭受大规模攻击等等。然后由本届CTO高一凡同学总结了技术工作。在这一年中用捐赠获得的6台服务器中的4台搭建了Vmware vSphere集群并把许多服务(gitlab, mail, vpn, 防污染dns等)迁移到它上面，还有对一些服务进行了docker化(典型的是gitlab和lug ftp)。此外，仍有一些项目处于开发缓慢或停滞状态如vpn、统一认证、freeshell。   下一项内容，由崔灏同学介绍了今年的候选人政策。本年度社团换届要求社团换届先上报候选人名单，由管指委组织培训和考试，合格通过方能成为社团负责人。本社团共上报三名候选人但最终通过的只有崔天一一人。   为选举做准备，到场的每位同学都做了自我介绍，除了让大家进一步熟悉一下之外，还要交代个人愿意在下一学年中为社团做些什么，承担什么样的任务。每个人自我介绍完了之后现任会长还根据平时的接触补充了一些评价。            会议最后一项，进行选举，今年的选举形式有些变化，虽然只有一位候选人通过了管指委的考试，但并不能只指定一人作为负责人。所以这一次到场的每个人都是候选人。大家根据之前其他人的自我介绍对心目中下一任LUG负责人进行匿名投票。最后根据唱票结果，包括唯一被管指委方面承认的会长崔天一在内，会议共选出了4位负责人，分别是左格非、崔天一、曾键、郑子涵。之后当选的4位负责人分别发表了当选感言。按照惯例还应确定下一届的各种officer人选，经自我举荐和大家讨论确定了CTO由曾键担任、CFO由金孜达担任、CIO由崔天一担任。               与会人员包括杨博远、曾键、张光宇、李嘉豪、王子博、崔灏、郑子涵、左格非、朱沛俊、王子浩、崔天一、赵彦冰、张静宁、张振兴、徐弈、于天泽、高一凡、卢星、金孜达、张荣葳、何旭东、赵驰。以上名单来自会议签到。   其中张荣葳同学既是老会长又代表本届社团管指委员会分管委员参加。   会议记录感谢杨博远。   本次会议照片上传至 LUG FTP “会议”文件夹中。  ","categories": ["LUG会议"],
-"tags": ["USTC_LUG","换届","崔灏","左格非","曾键","郑子涵","金孜达"],
-"url": "https://beta.ustclug.org//news/2016/05/2016-lug-election/",
+"title": null,
+"excerpt":"2016年4月24日下午15时，校学生Linux用户协会于东区活动室(科大东区图书馆605室)召开了换届会议。   首先，为了活跃气氛，2015-2016届会长崔灏同学向大家展示了android 6.0的新功能：USB MIDI 输入，将手机接到电脑的虚拟键盘上之后弹出了优美的旋律。   步入正题，崔灏同学总结了过去一年的社团情况。比如举办了Linux Install Party，白帽子大赛，服务器遭受大规模攻击等等。然后由本届CTO高一凡同学总结了技术工作。在这一年中用捐赠获得的6台服务器中的4台搭建了Vmware vSphere集群并把许多服务(gitlab, mail, vpn, 防污染dns等)迁移到它上面，还有对一些服务进行了docker化(典型的是gitlab和lug ftp)。此外，仍有一些项目处于开发缓慢或停滞状态如vpn、统一认证、freeshell。   下一项内容，由崔灏同学介绍了今年的候选人政策。本年度社团换届要求社团换届先上报候选人名单，由管指委组织培训和考试，合格通过方能成为社团负责人。本社团共上报三名候选人但最终通过的只有崔天一一人。   为选举做准备，到场的每位同学都做了自我介绍，除了让大家进一步熟悉一下之外，还要交代个人愿意在下一学年中为社团做些什么，承担什么样的任务。每个人自我介绍完了之后现任会长还根据平时的接触补充了一些评价。            会议最后一项，进行选举，今年的选举形式有些变化，虽然只有一位候选人通过了管指委的考试，但并不能只指定一人作为负责人。所以这一次到场的每个人都是候选人。大家根据之前其他人的自我介绍对心目中下一任LUG负责人进行匿名投票。最后根据唱票结果，包括唯一被管指委方面承认的会长崔天一在内，会议共选出了4位负责人，分别是左格非、崔天一、曾键、郑子涵。之后当选的4位负责人分别发表了当选感言。按照惯例还应确定下一届的各种officer人选，经自我举荐和大家讨论确定了CTO由曾键担任、CFO由金孜达担任、CIO由崔天一担任。               与会人员包括杨博远、曾键、张光宇、李嘉豪、王子博、崔灏、郑子涵、左格非、朱沛俊、王子浩、崔天一、赵彦冰、张静宁、张振兴、徐弈、于天泽、高一凡、卢星、金孜达、张荣葳、何旭东、赵驰。以上名单来自会议签到。   其中张荣葳同学既是老会长又代表本届社团管指委员会分管委员参加。   会议记录感谢杨博远。   本次会议照片上传至 LUG FTP “会议”文件夹中。  ","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2016-05-02-2016-lug-election/",
 "teaser": null
 },{
-"title": "西区图书馆新活动室启用",
-"excerpt":"2016年6月16日，LUG西区新活动室启用，并成为今后唯一的社团活动室。一部分LUG成员在当日早上从东区图书馆605老活动室与东图一楼将大部分活动材料与各类物品搬迁到了西区活动室。      新的西区活动室仍然由图书馆提供，位于西区图书馆206室。具体地点在西区图书馆主楼二楼西北角，十分接近原308活动室。   16日早上，东区的同学们使用三轮车数次来回才将东区的活动物品与书库书籍搬到了西区。      同学们从早上工作至中午，将活动室打扫干净并对书籍进行上架、配置活动室有线和无线网络。到16日下午，活动室已经能正式投入使用。      历史上，LUG的活动室长期位于西区图书馆308室；前两年的数次搬迁均是西区图书馆的大规模重新装修计划的结果。经过数次辗转之后，LUG活动室重新回到了西区，在可以预期的将来，西区新活动室定能为LUG的活动提供更好的便利条件。   原东区活动室将于近日被收回。本次活动的原始照片存储在LUG FTP上。  ","categories": ["LUG活动"],
-"tags": ["LUG","USTC_LUG","news"],
-"url": "https://beta.ustclug.org//news/2016/06/new-activity-room-in-west-library/",
+"title": null,
+"excerpt":"2016年6月16日，LUG西区新活动室启用，并成为今后唯一的社团活动室。一部分LUG成员在当日早上从东区图书馆605老活动室与东图一楼将大部分活动材料与各类物品搬迁到了西区活动室。      新的西区活动室仍然由图书馆提供，位于西区图书馆206室。具体地点在西区图书馆主楼二楼西北角，十分接近原308活动室。   16日早上，东区的同学们使用三轮车数次来回才将东区的活动物品与书库书籍搬到了西区。      同学们从早上工作至中午，将活动室打扫干净并对书籍进行上架、配置活动室有线和无线网络。到16日下午，活动室已经能正式投入使用。      历史上，LUG的活动室长期位于西区图书馆308室；前两年的数次搬迁均是西区图书馆的大规模重新装修计划的结果。经过数次辗转之后，LUG活动室重新回到了西区，在可以预期的将来，西区新活动室定能为LUG的活动提供更好的便利条件。   原东区活动室将于近日被收回。本次活动的原始照片存储在LUG FTP上。  ","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2016-06-16-new-activity-room-in-west-library/",
 "teaser": null
 },{
-"title": "2016软件自由日中国科大站",
-"excerpt":"2016年9月15日下午，2016年软件自由日（SFD）中国科大站活动在西活学术报告厅成功举办。当天下午，虽然天公不作美，大雨倾盆，又适逢中秋佳节，仍有70余位同学冒雨赶来参加我们的活动，现场气氛热烈，效果良好。         本次活动我们有幸邀请到了来自Canonical的李彬工程师为我们介绍《Ubuntu和Gnome的桌面环境》，Linux用户协会执行会长左格非同学为大家介绍了《开源通信软件协议》和《出国网络加速服务的实现》，深受在场同学的欢迎。   不到2:30分，同学们便冒着大雨赶到会场，在场工作人员为大家准备了各类开源软件纪念品供大家自行领取，此外，活动当天还为大家提供了月饼，在场的同学们共度中秋佳节。   2:30分，活动正式开始，左格非同学首先登场作题为《开源通信软件的加密》的介绍。左格非同学先介绍了Telegram软件及其安全、非商业化等特点。接着，左格非分别介绍Telegram在正常通信和私密通信时所使用的协议。从非对称密钥谈起，逐步深入，提到消息的识别，防止重放攻击等内容。在场同学认真倾听。接着，左格非介绍了GPG的基本原理，同时为大家介绍了LUG提供的新服务——GPG Key Server。接下来，同学们踊跃提问，现场氛围十分热烈。      在5分钟的茶歇后，由Canonical的李彬工程师为大家介绍《Ubuntu和Gnome的桌面环境》。李彬工程师从一张涵盖多个开源软件LOGO的图开始，娓娓道来桌面环境的历史与未来发展。接着，李彬现场演示了在Gnome环境下开发插件的方法。最后，演讲在热烈的掌声中结束。      5分钟的茶歇时间，大家围在李彬工程师身旁，争相试用Ubuntu手机和平板电脑。座位被围得水泄不通。      下一场报告是左格非同学为大家介绍“出国网络加速服务的实现”。左格非同学从最普通的socks代理开始，逐步深入，介绍了GRE隧道，kcp tunnel等最新技术。接着，左格非同学介绍了用户访问控制的实现——Freeradius，其提供了认证、授权、计费的功能。然后，左格非介绍了多种用户接入VPN技术——PPTP, L2TP/IPSEC, OpenVPN, IKEv2，并比较了他们之间的优劣。最后，左格非介绍了LUG VPN服务的申请和管理办法。   活动结束后，部分Linux用户协会成员自发的组织了中秋晚宴活动，和嘉宾一起共度中秋佳节。   本次活动参与者同往年相比较少，主要由于时间选择不当。中秋节许多同学有其它安排，时间冲突，以后再选时间要把类似的因素考虑进去。这三场演讲有深有浅，取材于大家经常使用的软件，能吸引大家的兴趣。另外活动的纪念品发放了不少，宣传Ubuntu，Fedora，Deepin的效果也不错。   感谢以下单位对本次活动的大力支持：      Canonical提供了笔记本、马克杯、贴纸等纪念品   Fedora中文社区提供了Linux体验光盘，徽章，贴纸   深度科技提供了手提袋、贴纸、安装光盘和U盘  ","categories": ["LUG活动"],
-"tags": [],
-"url": "https://beta.ustclug.org//news/2016/09/2016-sfd-ustc/",
+"title": null,
+"excerpt":"2016年9月15日下午，2016年软件自由日（SFD）中国科大站活动在西活学术报告厅成功举办。当天下午，虽然天公不作美，大雨倾盆，又适逢中秋佳节，仍有70余位同学冒雨赶来参加我们的活动，现场气氛热烈，效果良好。         本次活动我们有幸邀请到了来自Canonical的李彬工程师为我们介绍《Ubuntu和Gnome的桌面环境》，Linux用户协会执行会长左格非同学为大家介绍了《开源通信软件协议》和《出国网络加速服务的实现》，深受在场同学的欢迎。   不到2:30分，同学们便冒着大雨赶到会场，在场工作人员为大家准备了各类开源软件纪念品供大家自行领取，此外，活动当天还为大家提供了月饼，在场的同学们共度中秋佳节。   2:30分，活动正式开始，左格非同学首先登场作题为《开源通信软件的加密》的介绍。左格非同学先介绍了Telegram软件及其安全、非商业化等特点。接着，左格非分别介绍Telegram在正常通信和私密通信时所使用的协议。从非对称密钥谈起，逐步深入，提到消息的识别，防止重放攻击等内容。在场同学认真倾听。接着，左格非介绍了GPG的基本原理，同时为大家介绍了LUG提供的新服务——GPG Key Server。接下来，同学们踊跃提问，现场氛围十分热烈。      在5分钟的茶歇后，由Canonical的李彬工程师为大家介绍《Ubuntu和Gnome的桌面环境》。李彬工程师从一张涵盖多个开源软件LOGO的图开始，娓娓道来桌面环境的历史与未来发展。接着，李彬现场演示了在Gnome环境下开发插件的方法。最后，演讲在热烈的掌声中结束。      5分钟的茶歇时间，大家围在李彬工程师身旁，争相试用Ubuntu手机和平板电脑。座位被围得水泄不通。      下一场报告是左格非同学为大家介绍“出国网络加速服务的实现”。左格非同学从最普通的socks代理开始，逐步深入，介绍了GRE隧道，kcp tunnel等最新技术。接着，左格非同学介绍了用户访问控制的实现——Freeradius，其提供了认证、授权、计费的功能。然后，左格非介绍了多种用户接入VPN技术——PPTP, L2TP/IPSEC, OpenVPN, IKEv2，并比较了他们之间的优劣。最后，左格非介绍了LUG VPN服务的申请和管理办法。   活动结束后，部分Linux用户协会成员自发的组织了中秋晚宴活动，和嘉宾一起共度中秋佳节。   本次活动参与者同往年相比较少，主要由于时间选择不当。中秋节许多同学有其它安排，时间冲突，以后再选时间要把类似的因素考虑进去。这三场演讲有深有浅，取材于大家经常使用的软件，能吸引大家的兴趣。另外活动的纪念品发放了不少，宣传Ubuntu，Fedora，Deepin的效果也不错。   感谢以下单位对本次活动的大力支持：      Canonical提供了笔记本、马克杯、贴纸等纪念品   Fedora中文社区提供了Linux体验光盘，徽章，贴纸   深度科技提供了手提袋、贴纸、安装光盘和U盘  ","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2016-09-27-2016-sfd-ustc/",
 "teaser": null
 },{
-"title": "LUG带同学们走进神秘的网络中心机房",
-"excerpt":"2016年10月23日上午，校学生Linux用户协会组织协会的同学们参观了校网络中心和超算中心。23日9点整，就有40人等待在东区第五教学楼门口等待出发。      本次活动由协会的负责人带队，兵分两路，交叉参观。一路先行参观网络中心，接着与另一路交换，参观超算中心。   校网络信息中心坐落于第五教学楼东北角，一座紧邻着居民区的低调的小楼里。刚带领同学们走进网络中心的楼，就遇见了为我们介绍，带领我们参观的热情的张焕杰老师。   同学们呈扇形围绕在张老师身边，张老师亲切的为我们讲解了网络中心的职能，网络中心所进行的信息化建设，校园网的结构，以及对技术进行了探讨。         接着，张老师打开网络中心服务器机房的大门，同学们蜂拥而入，进入网络中心。张老师介绍说，学校的核心交换机就是下面这个CISCO设备      接着，张老师爆出惊人内幕“学校十多个G的出口流量全是从四台服务器上流过的，其中一台自07年以来就没有down过。”围绕在张老师身旁，张老师为我们详细介绍了机房的布置结构，其供电，网络等设施。接着，张老师与我们详细探讨了网络通的实现方法，以及西区频繁断网的原因——供电不足、电三楼空调设备老旧和其解决方法。      参观完网络中心，就和另一路同学互换，步行进入一个就在学霸们脚下但不惹人注目的地方——东区图书馆一楼参观超算中心。   超算中心李会民副主任早就等待在超算中心的门口等待着一行人的到来。刚一到，李老师便热情的给我们介绍起了超算中心的职能、超算中心机房的结构等内容，同学们认真听讲解。      接着，李老师为我们现场演示了服务器的维修，同学们亲自上阵，“友好“的练习了对服务器风扇、CPU等部件的更换。      最重要的当然是走进机房了，在李老师的带领下，同学们走入机房对超算机群进行了参观。      最后，由衷的感谢张焕杰老师和李会民老师带领我们参观网络中心和超算中心。  ","categories": ["LUG活动"],
-"tags": ["LUG","USTC_LUG","网络中心","超算中心","服务器","网络通","李会民","张焕杰"],
-"url": "https://beta.ustclug.org//news/2016/10/visiting_network_center/",
+"title": null,
+"excerpt":"2016年10月23日上午，校学生Linux用户协会组织协会的同学们参观了校网络中心和超算中心。23日9点整，就有40人等待在东区第五教学楼门口等待出发。      本次活动由协会的负责人带队，兵分两路，交叉参观。一路先行参观网络中心，接着与另一路交换，参观超算中心。   校网络信息中心坐落于第五教学楼东北角，一座紧邻着居民区的低调的小楼里。刚带领同学们走进网络中心的楼，就遇见了为我们介绍，带领我们参观的热情的张焕杰老师。   同学们呈扇形围绕在张老师身边，张老师亲切的为我们讲解了网络中心的职能，网络中心所进行的信息化建设，校园网的结构，以及对技术进行了探讨。         接着，张老师打开网络中心服务器机房的大门，同学们蜂拥而入，进入网络中心。张老师介绍说，学校的核心交换机就是下面这个CISCO设备      接着，张老师爆出惊人内幕“学校十多个G的出口流量全是从四台服务器上流过的，其中一台自07年以来就没有down过。”围绕在张老师身旁，张老师为我们详细介绍了机房的布置结构，其供电，网络等设施。接着，张老师与我们详细探讨了网络通的实现方法，以及西区频繁断网的原因——供电不足、电三楼空调设备老旧和其解决方法。      参观完网络中心，就和另一路同学互换，步行进入一个就在学霸们脚下但不惹人注目的地方——东区图书馆一楼参观超算中心。   超算中心李会民副主任早就等待在超算中心的门口等待着一行人的到来。刚一到，李老师便热情的给我们介绍起了超算中心的职能、超算中心机房的结构等内容，同学们认真听讲解。      接着，李老师为我们现场演示了服务器的维修，同学们亲自上阵，“友好“的练习了对服务器风扇、CPU等部件的更换。      最重要的当然是走进机房了，在李老师的带领下，同学们走入机房对超算机群进行了参观。      最后，由衷的感谢张焕杰老师和李会民老师带领我们参观网络中心和超算中心。  ","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2016-10-25-visiting_network_center/",
 "teaser": null
 },{
-"title": "2017 Linux 板版衫设计方案征集",
-"excerpt":"又是一年毕业季～ Linux 板 &amp; USTC LUG 版衫企划启动啦！   跟往年一样，首先征集设计方案。5月底将通过投票选出最受欢迎的设计方案，并启动预订。6月份毕业生离校前完成版衫制作和发放。   设计要求      主题：Linux 与自由软件，体现瀚海星云 Linux 板或 USTC LUG 特色   底色：不限，建议至少包含白色、灰色设计方案   图案：正面或双面图案（可设袖标），提交图案分辨率不低于 300DPI，并附简单效果图说明图案位置。   授权：投稿作品默认以 CC BY-SA 4.0 协议发布。如果选择其他授权，则应确保作品可以在 CC BY-SA 协议下再发布。   可以参考一下往年的版衫设计方案。   投稿方式      方式１：回复瀚海星云 BBS 的征集贴，以附件形式附上设计图   方式２：发邮件至 lug@ustc.edu.cn，标题「2017 版衫设计方案投稿」   方案选择   若方案多于1种，则通过投票来选出最终方案。投票将在方案征集后一周进行。   奖励      被选中方案的设计者可免费获得两件 2017 Linux 板版衫。   得票前6名的其他未选中方案，设计者可免费获得一件 2017 Linux 板版衫。   征集时间   即日起至北京时间 5月14日（周日）23:59:59。  ","categories": ["LUG活动"],
-"tags": ["LUG","版衫"],
-"url": "https://beta.ustclug.org//news/2017/05/2017-bbs-linux-banshan/",
+"title": null,
+"excerpt":"又是一年毕业季～ Linux 板 &amp; USTC LUG 版衫企划启动啦！   跟往年一样，首先征集设计方案。5月底将通过投票选出最受欢迎的设计方案，并启动预订。6月份毕业生离校前完成版衫制作和发放。   设计要求      主题：Linux 与自由软件，体现瀚海星云 Linux 板或 USTC LUG 特色   底色：不限，建议至少包含白色、灰色设计方案   图案：正面或双面图案（可设袖标），提交图案分辨率不低于 300DPI，并附简单效果图说明图案位置。   授权：投稿作品默认以 CC BY-SA 4.0 协议发布。如果选择其他授权，则应确保作品可以在 CC BY-SA 协议下再发布。   可以参考一下往年的版衫设计方案。   投稿方式      方式１：回复瀚海星云 BBS 的征集贴，以附件形式附上设计图   方式２：发邮件至 lug@ustc.edu.cn，标题「2017 版衫设计方案投稿」   方案选择   若方案多于1种，则通过投票来选出最终方案。投票将在方案征集后一周进行。   奖励      被选中方案的设计者可免费获得两件 2017 Linux 板版衫。   得票前6名的其他未选中方案，设计者可免费获得一件 2017 Linux 板版衫。   征集时间   即日起至北京时间 5月14日（周日）23:59:59。  ","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2017-05-01-2017-bbs-linux-banshan/",
 "teaser": null
 },{
-"title": "2017 Linux 板版衫候选方案公布与投票",
-"excerpt":"2017年Linux板版衫设计方案出炉啦！经过一周的征集，本次共获得了两份投稿的设计方案，将通过投票决定最终制作的版衫样式。   BBS 投票页面联动：点我前往   候选方案展示   版衫候选设计方案详细图片请见LUG FTP 页面（https://ftp.lug.ustc.edu.cn/%E7%89%88%E8%A1%AB/2017banshan/voting/）。   方案一：Kernel Panic                     方案二：Simple and Stupid      背面样式与方案一相同。     投票参与方式      填写问卷星问卷进行投票：http://tp.sojump.cn/jq/14217611.aspx；   在瀚海星云BBS上回复帖子进行投票；   两个途径将会合并计票，请勿重复投票。   投票截止时间：2017年5月25日23时59分（北京时间）     常见问题   颜色选择？   当年设计（方案一、方案二）暂定白、蓝、黑。往年版衫复刻需要根据具体设计重新配定颜色。   订购开始日期？   投票结束后会开始着手联系厂家制作并搜集订购信息。   版衫何时能到手？   应当在7月之前，我们会争取在毕业生离校前完成。   我不是科大学生/教工，可否投票？   只要您有购买的意愿，可以的。   我不在合肥，版衫国内快递订购是否可能？   有可能，可能性较大。   我不在境内，版衫跨境订购是否可能？   有可能，可能性较小。   定价？   与具体生产厂家相关，但一般不会超过50元/件。  ","categories": ["LUG活动"],
-"tags": ["LUG","版衫"],
-"url": "https://beta.ustclug.org//news/2017/05/2017-bbs-linux-banshan-voting/",
+"title": null,
+"excerpt":"2017年Linux板版衫设计方案出炉啦！经过一周的征集，本次共获得了两份投稿的设计方案，将通过投票决定最终制作的版衫样式。   BBS 投票页面联动：点我前往   候选方案展示   版衫候选设计方案详细图片请见LUG FTP 页面（https://ftp.lug.ustc.edu.cn/%E7%89%88%E8%A1%AB/2017banshan/voting/）。   方案一： Kernel Panic                     方案二： Simple and Stupid      背面样式与方案一相同。     投票参与方式      填写问卷星问卷进行投票：http://tp.sojump.cn/jq/14217611.aspx；   在瀚海星云BBS上回复帖子进行投票；   两个途径将会合并计票，请勿重复投票。   投票截止时间：2017年5月25日23时59分（北京时间）     常见问题   颜色选择？   当年设计（方案一、方案二）暂定白、蓝、黑。往年版衫复刻需要根据具体设计重新配定颜色。   订购开始日期？   投票结束后会开始着手联系厂家制作并搜集订购信息。   版衫何时能到手？   应当在7月之前，我们会争取在毕业生离校前完成。   我不是科大学生/教工，可否投票？   只要您有购买的意愿，可以的。   我不在合肥，版衫国内快递订购是否可能？   有可能，可能性较大。   我不在境内，版衫跨境订购是否可能？   有可能，可能性较小。   定价？   与具体生产厂家相关，但一般不会超过50元/件。  ","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2017-05-17-2017-bbs-linux-banshan-voting/",
 "teaser": null
 },{
-"title": "2017 Linux 板版衫投票结果公示",
-"excerpt":"经统计，2017年版衫投票结果如下：                  方案名       问卷票数       BBS票数       合计                       方案一       48       4       52                 方案二       34       0       34                 2010年重制       13       7       20                 2015年重制       5       1       6                 2012年重制       3       0       3                 2011年重制       4       0       4                 2008年重制       0       0       0                 2007年重制       2       0       2                 总计       109       12       121           根据以上情况，今年将按照方案一进行制作。具体预订登记方法将稍后发布。  ","categories": ["LUG活动"],
-"tags": [],
-"url": "https://beta.ustclug.org//news/2017/05/2017-bbs-linux-banshan-voteresult/",
+"title": null,
+"excerpt":"经统计，2017年版衫投票结果如下：                  方案名       问卷票数       BBS票数       合计                       方案一       48       4       52                 方案二       34       0       34                 2010年重制       13       7       20                 2015年重制       5       1       6                 2012年重制       3       0       3                 2011年重制       4       0       4                 2008年重制       0       0       0                 2007年重制       2       0       2                 总计       109       12       121           根据以上情况，今年将按照方案一进行制作。具体预订登记方法将稍后发布。  ","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2017-05-26-2017-bbs-linux-banshan-voteresult/",
 "teaser": null
 },{
-"title": "2017 Linux 板版衫预订开始！",
-"excerpt":"经过紧张的投票，我们决定使用方案１作为今年版衫。   BBS相同文章联动：点我   预订方法   即日起，我们将开始版衫预订工作，为版衫制作筹集足够的资金。   科大的同学预计6月18日前可以收到货。校外同学请准确填写快递地址。   定价   版衫定价：50元（一口价）   自提不收运费，快递运费到付   截止日期   截止日期：2017-6-6 23:59   预订方法      转账到支付宝帐号 crtmike (At) hotmail.com 姓名：马凯；头像为浑天仪。建议备注姓名+手机号以便追溯！   填写表单 https://t.cn/RSfG5md 如果购买多件烦请分别多次填写！   预订说明      目前暂定在T社（tshe.com）制作版衫。底衫如无意外会在 https://www.tshe.com/styles/2 和 https://www.tshe.com/styles/4 两款底衫中选择一种。我们会选择单件50元以内最好的棉质底衫制作版衫；   出于成本考虑，每种颜色订单数大于10件才会制作；   如订单无效或未制作，转账将在6月20日前原路返还；   如单件价格低于50元，结余资金将作为 USTC LUG 社团经费，公开使用情况。   如果有其他问题，请咨询：   LUG 邮箱： lug (at) ustc.edu.cn   负责人QQ： 515166698   设计图展示                    ","categories": ["LUG活动"],
-"tags": [],
-"url": "https://beta.ustclug.org//news/2017/06/2017-linux-banshan-preorder-start/",
+"title": null,
+"excerpt":"经过紧张的投票，我们决定使用方案１作为今年版衫。   BBS相同文章联动：点我   预订方法   即日起，我们将开始版衫预订工作，为版衫制作筹集足够的资金。   科大的同学预计6月18日前可以收到货。校外同学请准确填写快递地址。   定价   版衫定价：50元（一口价）   自提不收运费，快递运费到付   截止日期   截止日期：2017-6-6 23:59   预订方法      转账到支付宝帐号 crtmike (At) hotmail.com 姓名：马凯；头像为浑天仪。建议备注姓名+手机号以便追溯！   填写表单 https://t.cn/RSfG5md 如果购买多件烦请分别多次填写！   预订说明      目前暂定在T社（tshe.com）制作版衫。底衫如无意外会在 https://www.tshe.com/styles/2 和 https://www.tshe.com/styles/4 两款底衫中选择一种。我们会选择单件50元以内最好的棉质底衫制作版衫；   出于成本考虑，每种颜色订单数大于10件才会制作；   如订单无效或未制作，转账将在6月20日前原路返还；   如单件价格低于50元，结余资金将作为 USTC LUG 社团经费，公开使用情况。   如果有其他问题，请咨询：   LUG 邮箱： lug (at) ustc.edu.cn   负责人QQ： 515166698   设计图展示                    ","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2017-06-01-2017-linux-banshan-preorder-start/",
 "teaser": null
 },{
-"title": "LUG LOGO 征集活动",
-"excerpt":"中国科学技术大学校学生 Linux 用户协会（简称 LUG）拟更换社团 LOGO，现采用征集活动的形式向全校师生，校友及所有开源社区的朋友征集 LOGO 设计方案，欢迎大家积极参与！ 设计理念 LOGO 对于 LUG 的校内和校外形象有着重要的作用，它将用于以下用途： 网站图标； 帐号头像； 宣传海报； 幻灯片； 版衫和其他周边； 对外合作 等。 LUG 作为包容开放的技术类社团，设计作品可以参考以下方面（不要求全部满足）： 体现自由软件精神； 契合自由软件社区氛围； 具有时代感和较强的艺术表现力； 表现 LUG 的社团风格、特色、历史积淀。 LOGO 要求简明，清晰，辨识度高，设计方案不得侵犯他人著作权。 提交内容 参加征集的作品可以是 PNG，JPG 等位图格式，也可以是矢量图格式或 PSD 等格式。也可以是简笔画，表现自己的创意即可。作品提交时还应附上对作品的设计解释。 注意：经评选后，最终选定的一等奖作品要求能够提供成品矢量图或者 PSD 文件，包括透明背景，深色背景，以及浅色背景三个版本，并至少有一个与 USTCLUG 文字搭配使用的示例，但成品的制作可以在征集活动结束后完成。 奖励办法 一等奖 1 名：数位板或移动硬盘（二选一或选择其他等值奖品），和印有新 LOGO 的一系列定制周边（版衫，水杯，贴纸，鼠标垫，徽章，钥匙链）；设计作品作为 LUG 的 LOGO 使用，并在...","categories": ["LUG活动"],
-"tags": [],
-"url": "https://beta.ustclug.org//news/2018/05/lug-logo-collect/",
+"title": null,
+"excerpt":"中国科学技术大学校学生 Linux 用户协会（简称 LUG）拟更换社团 LOGO，现采用征集活动的形式向全校师生，校友及所有开源社区的朋友征集 LOGO 设计方案，欢迎大家积极参与！ 设计理念 LOGO 对于 LUG 的校内和校外形象有着重要的作用，它将用于以下用途： 网站图标； 帐号头像； 宣传海报； 幻灯片； 版衫和其他周边； 对外合作 等。 LUG 作为包容开放的技术类社团，设计作品可以参考以下方面（不要求全部满足）： 体现自由软件精神； 契合自由软件社区氛围； 具有时代感和较强的艺术表现力； 表现 LUG 的社团风格、特色、历史积淀。 LOGO 要求简明，清晰，辨识度高，设计方案不得侵犯他人著作权。 提交内容 参加征集的作品可以是 PNG，JPG 等位图格式，也可以是矢量图格式或 PSD 等格式。也可以是简笔画，表现自己的创意即可。作品提交时还应附上对作品的设计解释。 注意：经评选后，最终选定的一等奖作品要求能够提供成品矢量图或者 PSD 文件，包括透明背景，深色背景，以及浅色背景三个版本，并至少有一个与 USTCLUG 文字搭配使用的示例，但成品的制作可以在征集活动结束后完成。 奖励办法 一等奖 1 名：数位板或移动硬盘（二选一或选择其他等值奖品），和印有新 LOGO 的一系列定制周边（版衫，水杯，贴纸，鼠标垫，徽章，钥匙链）；设计作品作为 LUG 的 LOGO 使用，并在...","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2018-05-09-lug-logo-collect/",
 "teaser": null
 },{
-"title": "服务器宕机通知",
-"excerpt":"2018-06-16 UPDATE3: 目前以下服务已经恢复正常： 主页 (wiki)：https://lug.ustc.edu.cn/ （已恢复） 代码托管平台：https://git.ustclug.org/ （已恢复，建议用户切换新地址：git.lug.ustc.edu.cn） LUG FTP：https://ftp.lug.ustc.edu.cn/ （已恢复） 反向代理：*.proxy.ustclug.org （已恢复） 如果您使用上述服务时遇到问题，请向我们反馈。 2018-06-15 UPDATE2: 目前以下服务已经恢复正常： 主页 (wiki)：https://lug.ustc.edu.cn/ （已恢复） 代码托管平台：https://git.ustclug.org/ （已恢复，建议用户切换新地址：git.lug.ustc.edu.cn） LUG FTP：https://ftp.lug.ustc.edu.cn/ （已恢复） 由于网络架构的变化，部分服务需要您的 DNS 缓存过期后得到新的解析结果才能生效，这依赖于您的网络环境，您也可以尝试手动刷新缓存。维护期间服务的稳定性有下降，这是正常现象，如果您在使用中持续遇到问题，请联系我们。 从数据备份中恢复数据并没有计划中的这么一帆风顺，我们仍在努力恢复受影响的各项服务，接下来的工作计划是按照以下顺序继续恢复服务： 反向代理：*.proxy.ustclug.org 网络加速服务：vpn.ustclug.org VPN 在线申请系统：https://getvpn.ustclug.org/ 轻量级网络加速服务：https://light.ustclug.org/ 给您带来的不便敬请谅解。 2018-06-14 UPDATE1: 初步的调查结果显示，此次宕机事件原因是虚拟机宿主机 3 号节点上的一块年代久远的硬盘因为老化或其他原因出现问题，导致该节点上运行的虚拟机全部宕机，并且导致该节点也无法被虚拟机集群控制，其上运行的虚拟机亦无法直接的迁移。 目前的修复方案是从我们的数据备份中恢复重要的服务到没有受影响的节点上重新运行，恢复备份和重建原有的网络环境还需要一段时间，给您带来的不便敬请谅解。 今天早些时候（2018-06-14 00:40 左右），由于我们的虚拟机宿主机 3 号节点的某些问题，LUG 内网包括网关与统一认证在内的部分关键服务器宕机，进而导致一部分服务不能正常提供，我们已经知悉并且开始处理这些问题。 以下服务因为此事件暂时不能正常运行，正在抢修中： 代码托管平台：https://git.ustclug.org/ （已恢复）...","categories": ["LUG服务器"],
-"tags": [],
-"url": "https://beta.ustclug.org//news/2018/06/server-down/",
+"title": null,
+"excerpt":"2018-06-16 UPDATE3: 目前以下服务已经恢复正常： 主页 (wiki)：https://lug.ustc.edu.cn/ （已恢复） 代码托管平台：https://git.ustclug.org/ （已恢复，建议用户切换新地址：git.lug.ustc.edu.cn） LUG FTP：https://ftp.lug.ustc.edu.cn/ （已恢复） 反向代理：*.proxy.ustclug.org （已恢复） 如果您使用上述服务时遇到问题，请向我们反馈。 2018-06-15 UPDATE2: 目前以下服务已经恢复正常： 主页 (wiki)：https://lug.ustc.edu.cn/ （已恢复） 代码托管平台：https://git.ustclug.org/ （已恢复，建议用户切换新地址：git.lug.ustc.edu.cn） LUG FTP：https://ftp.lug.ustc.edu.cn/ （已恢复） 由于网络架构的变化，部分服务需要您的 DNS 缓存过期后得到新的解析结果才能生效，这依赖于您的网络环境，您也可以尝试手动刷新缓存。维护期间服务的稳定性有下降，这是正常现象，如果您在使用中持续遇到问题，请联系我们。 从数据备份中恢复数据并没有计划中的这么一帆风顺，我们仍在努力恢复受影响的各项服务，接下来的工作计划是按照以下顺序继续恢复服务： 反向代理：*.proxy.ustclug.org 网络加速服务：vpn.ustclug.org VPN 在线申请系统：https://getvpn.ustclug.org/ 轻量级网络加速服务：https://light.ustclug.org/ 给您带来的不便敬请谅解。 2018-06-14 UPDATE1: 初步的调查结果显示，此次宕机事件原因是虚拟机宿主机 3 号节点上的一块年代久远的硬盘因为老化或其他原因出现问题，导致该节点上运行的虚拟机全部宕机，并且导致该节点也无法被虚拟机集群控制，其上运行的虚拟机亦无法直接的迁移。 目前的修复方案是从我们的数据备份中恢复重要的服务到没有受影响的节点上重新运行，恢复备份和重建原有的网络环境还需要一段时间，给您带来的不便敬请谅解。 今天早些时候（2018-06-14 00:40 左右），由于我们的虚拟机宿主机 3 号节点的某些问题，LUG 内网包括网关与统一认证在内的部分关键服务器宕机，进而导致一部分服务不能正常提供，我们已经知悉并且开始处理这些问题。 以下服务因为此事件暂时不能正常运行，正在抢修中： 代码托管平台：https://git.ustclug.org/ （已恢复）...","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2018-06-14-server-down/",
 "teaser": null
 },{
-"title": "2018 秋季学期新生活力课程",
-"excerpt":"2018 年 8 月 25 号（星期六）晚，中国科学技术大学学生 Linux 用户协会（简称“协会”）在我校西校区 3A306 教室开展了本学期第一次新生活力课程，约 100 名同学参与了本次活动。   协会的本次新生活力课程主要面向面向才入学的大一新生，以“让大学生活效率腾飞：常用网络资源介绍”和“Linux：你所知道的与不知道的 ”为主题。前者主要介绍中科大校内的实用网络资源和一些校外的一些免费或付费资源，以帮助新生尽快提高学习效率, 享受网络带来的便捷，后者通过对 Linux 和一些优秀桌面应用的介绍，为大家揭下 Linux 的神秘面纱，让大家看到一个更有趣的 Linux。      第一部分由社团 COO 任正行同学主讲。课程中介绍的网络资源将包括校内上网途径，学校购买的 Windows / Linux / macOS 下的各种正版软件，图书馆资源，论文数据库等;还有自助打印，GitLab，一卡通系统，中国最大的开源软件镜像站等服务。         中场休息时协会 CEO 何纪言解答大家的问题，并且简单介绍了我们协会的主题，日常活动，维护的服务，交流方式等。      第二部分是协会 VP 李文睿同学主讲。讲解了 Linux 是一套开源，自由，强大，有趣的操作系统，1991 年由芬兰大学生 Linus 开发，由于其开源的特性，任何人都可以对其作出贡献。Linux 出现近 30 年，现在早已广泛应用在各个领域。      台下的同学们认真的听讲，不时提出问题与主讲人互动。期间协会副会长马凯同学还解答了大家关于邮件列表的问题，协会副会长曾明亮还为大家解答了电脑选购的部分疑问。      本次活动我们还为新生同学们提供了自助饮料和纸杯。   活动结束后大家主动清理了教室并带走垃圾，本次新生活力课程圆满结束，感谢校团委，校学生社团管理指导委员会和计算机科学与技术学院团委的支持！   活动照片和讲稿：LUG FTP  ","categories": ["活动"],
-"tags": [],
-"url": "https://beta.ustclug.org//news/2018/08/freshman-course/",
+"title": null,
+"excerpt":"2018 年 8 月 25 号（星期六）晚，中国科学技术大学学生 Linux 用户协会（简称“协会”）在我校西校区 3A306 教室开展了本学期第一次新生活力课程，约 100 名同学参与了本次活动。   协会的本次新生活力课程主要面向面向才入学的大一新生，以“让大学生活效率腾飞：常用网络资源介绍”和“Linux：你所知道的与不知道的 ”为主题。前者主要介绍中科大校内的实用网络资源和一些校外的一些免费或付费资源，以帮助新生尽快提高学习效率, 享受网络带来的便捷，后者通过对 Linux 和一些优秀桌面应用的介绍，为大家揭下 Linux 的神秘面纱，让大家看到一个更有趣的 Linux。      第一部分由社团 COO 任正行同学主讲。课程中介绍的网络资源将包括校内上网途径，学校购买的 Windows / Linux / macOS 下的各种正版软件，图书馆资源，论文数据库等; 还有自助打印，GitLab，一卡通系统，中国最大的开源软件镜像站等服务。         中场休息时协会 CEO 何纪言解答大家的问题，并且简单介绍了我们协会的主题，日常活动，维护的服务，交流方式等。      第二部分是协会 VP 李文睿同学主讲。讲解了 Linux 是一套开源，自由，强大，有趣的操作系统，1991 年由芬兰大学生 Linus 开发，由于其开源的特性，任何人都可以对其作出贡献。Linux 出现近 30 年，现在早已广泛应用在各个领域。      台下的同学们认真的听讲，不时提出问题与主讲人互动。期间协会副会长马凯同学还解答了大家关于邮件列表的问题，协会副会长曾明亮还为大家解答了电脑选购的部分疑问。      本次活动我们还为新生同学们提供了自助饮料和纸杯。   活动结束后大家主动清理了教室并带走垃圾，本次新生活力课程圆满结束，感谢校团委，校学生社团管理指导委员会和计算机科学与技术学院团委的支持！   活动照片和讲稿：LUG FTP  ","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2018-08-26-freshman-course/",
 "teaser": null
 },{
-"title": "LUG LOGO 征集结果",
-"excerpt":"感谢同学们和开源社区的朋友们对我们 LOGO 征集活动的支持！     经过一段时间的征集和评选，我们得到了如下 LOGO 征集活动的结果：             一等奖 : Archlinuxcn 成员张盛宇            二等奖 : 崔灏，严鲸鲸            三等奖 : 薛瑞，蔡文韬，王若晖，王瑞，鲁吴越       在选出一等奖后，我们与获得一等奖的张盛宇先生进行了一系列关于 LOGO 细节修正的讨论，最后决定出了我们的 LOGO：                                                原版       带文字           LOGO 下载地址：logo.zip   根据我们的奖励办法，获得上述奖项的同学将获得印有新 LOGO 的定制周边等奖品，新 LOGO 已经选出，周边等奖品正在制作中，请获得奖品的同学耐心等待，奖品制作出之后我们会联系大家。  ","categories": ["LUG活动"],
-"tags": [],
-"url": "https://beta.ustclug.org//news/2018/09/lug-logo-collect-result/",
+"title": null,
+"excerpt":"感谢同学们和开源社区的朋友们对我们 LOGO 征集活动的支持！     经过一段时间的征集和评选，我们得到了如下 LOGO 征集活动的结果：             一等奖 : Archlinuxcn 成员张盛宇            二等奖 : 崔灏，严鲸鲸            三等奖 : 薛瑞，蔡文韬，王若晖，王瑞，鲁吴越       在选出一等奖后，我们与获得一等奖的张盛宇先生进行了一系列关于 LOGO 细节修正的讨论，最后决定出了我们的 LOGO：                                                                                                      原版       带文字           LOGO 下载地址：logo.zip   根据我们的奖励办法，获得上述奖项的同学将获得印有新 LOGO 的定制周边等奖品，新 LOGO 已经选出，周边等奖品正在制作中，请获得奖品的同学耐心等待，奖品制作出之后我们会联系大家。  ","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2018-09-08-lug-logo-collect-result/",
 "teaser": null
 },{
-"title": "2018 软件自由日中国科大站",
-"excerpt":"2018 年 9 月 15 日下午，2018 年软件自由日（SFD）中国科大站活动在西校区 3C103 教室成功举办。 本次活动我们有幸邀请到了来自 Linux foundation 的 Xu DiXing 和中国科学技术大学网络信息中心的张焕杰老师。Xu DiXing 为我们介绍了《A Hands-On Tutorial on using fabric-sdk-py and writing your first dapp with fabric》，张老师也做了《科大网络原理和 IPV6 介绍》，Linux用户协会副会长马凯同学为大家介绍了《我已阅读并同意：软件许可证简介》，深受在场同学的欢迎。 不到2:30分，同学们便陆续赶到会场，在场工作人员为大家准备了 LUG 徽章等一些纪念品供大家自行领取。 2:30 分，活动正式开始，LUG CEO 何纪言同学先介绍了今年软件自由日的日程安排，赞助本次软件自由日的组织和闪电演讲的报名等。之后由中国科学技术大学网络信息中心的张焕杰老师给我们带来《科大网络原理和 IPV6 介绍》的讲座。张老师的讲座分中国科大校园网络简介，安徽省教育科研网简介，及校园网 IPV6 应用于管理三部分。在讲座中张老师还提及，校园网是没有防火墙的，但通过 IP 黑名单系统等措施使得校园网还是非常安全。由于讲座有很多相关校园网的问题，讲座结束后，很多同学积极提问，张老师也相应地作出了回答。 张老师的演讲结束后，由 Linux foundation 的 Xu...","categories": ["LUG活动"],
-"tags": [],
-"url": "https://beta.ustclug.org//news/2018/09/2018-sfd-ustc/",
+"title": null,
+"excerpt":"2018 年 9 月 15 日下午，2018 年软件自由日（SFD）中国科大站活动在西校区 3C103 教室成功举办。 本次活动我们有幸邀请到了来自 Linux foundation 的 Xu DiXing 和中国科学技术大学网络信息中心的张焕杰老师。Xu DiXing 为我们介绍了《A Hands-On Tutorial on using fabric-sdk-py and writing your first dapp with fabric》，张老师也做了《科大网络原理和 IPV6 介绍》，Linux用户协会副会长马凯同学为大家介绍了《我已阅读并同意：软件许可证简介》，深受在场同学的欢迎。 不到2:30分，同学们便陆续赶到会场，在场工作人员为大家准备了 LUG 徽章等一些纪念品供大家自行领取。 2:30 分，活动正式开始，LUG CEO 何纪言同学先介绍了今年软件自由日的日程安排，赞助本次软件自由日的组织和闪电演讲的报名等。之后由中国科学技术大学网络信息中心的张焕杰老师给我们带来《科大网络原理和 IPV6 介绍》的讲座。张老师的讲座分中国科大校园网络简介，安徽省教育科研网简介，及校园网 IPV6 应用于管理三部分。在讲座中张老师还提及，校园网是没有防火墙的，但通过 IP 黑名单系统等措施使得校园网还是非常安全。由于讲座有很多相关校园网的问题，讲座结束后，很多同学积极提问，张老师也相应地作出了回答。 张老师的演讲结束后，由 Linux foundation 的 Xu...","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2018-09-15-2018-sfd-ustc/",
 "teaser": null
 },{
-"title": "中国科学技术大学第五届信息安全大赛圆满结束",
-"excerpt":"2018年10月16日中午，随着分针滴答滴答地与时针在12点处重合，网站提交答案的窗口关闭，也宣布着第五届信息安全大赛落下帷幕。   本次比赛中，共有4000多人次线上报名参赛，2600多人至少完成了一道题，参与人员涵盖校内外，分别来自于清华大学、北京大学、中国科学院大学等91所国内高校，以及几所海外高校。其中来自清华大学的同学获得总榜的第一名，最终以6750分结束比赛，中国科学技术大本科生选手邓龙以总分4050分获得校内榜第一，总榜第十的好成绩。本次比赛校内参加人数众多，共计 424 名本科生参与，139 名研究生博士生参与。   经过赛后主办方的统计，最终确定了获奖名单，并为校内参赛的同学颁奖。2019 年 1 月 3 日晚，第五届信息安全大赛颁奖仪式在西区举行，校内冠军邓龙荣获一等奖，付佳伟、莫子铭、徐一凡、贺泉、杨荣琛五位选手获得二等奖，还有王若麟等二十五位选手获得三等奖。此外还专门设置了面向大一新生的新生特别奖两名，分别为高泽豫和林焕承，面向女生的 Ada 奖一名，获奖者为林元芃。           自2014年起，科大信息安全大赛已经连续举办了五届，往届比赛均顺利进行，规模盛大，影响甚广。第五届信息安全大赛由中国科学技术大学网络空间安全学院、中国科学技术大学校团委、中国科学技术大学管指委主办，中国科学技术大学学生 Linux 用户协会、中国科学技术大学微软学生俱乐部等承办，并由南京大学微软学生俱乐部、湖南大学微软学生俱乐部等协办。本次比赛相比之前规模更大，参与人员更多，并邀请了更多国内高校参赛，旨在给国内高校的同学们提供一个学习交流的平台。并延续了往届的优良传统，努力结合科大特色，坚持向新生倾斜的原则，控制题目难度梯度，强调引导和教育工作。   本次比赛的题目在具有一定教育意义的同时也不失趣味性。题目“猫咪问答”让参赛选手在做题的过程中了解了科大的一些建校历史和 60 周年校庆知识，也向外校的选手宣传了科大；而有趣的“黑曜石浏览器”一题更是在知乎引起了热议。   赛后承办方组织参赛选手于网上 https://github.com/ustclug/hackergame2018-writeups 撰写了题目解答，并可在 https://hack2018.lug.ustc.edu.cn/ 上继续查看题目和提交。  ","categories": ["LUG活动"],
-"tags": [],
-"url": "https://beta.ustclug.org//news/2019/01/hackergame-awards/",
+"title": null,
+"excerpt":"2018年10月16日中午，随着分针滴答滴答地与时针在12点处重合，网站提交答案的窗口关闭，也宣布着第五届信息安全大赛落下帷幕。   本次比赛中，共有4000多人次线上报名参赛，2600多人至少完成了一道题，参与人员涵盖校内外，分别来自于清华大学、北京大学、中国科学院大学等91所国内高校，以及几所海外高校。其中来自清华大学的同学获得总榜的第一名，最终以6750分结束比赛，中国科学技术大本科生选手邓龙以总分4050分获得校内榜第一，总榜第十的好成绩。本次比赛校内参加人数众多，共计 424 名本科生参与，139 名研究生博士生参与。   经过赛后主办方的统计，最终确定了获奖名单，并为校内参赛的同学颁奖。2019 年 1 月 3 日晚，第五届信息安全大赛颁奖仪式在西区举行，校内冠军邓龙荣获一等奖，付佳伟、莫子铭、徐一凡、贺泉、杨荣琛五位选手获得二等奖，还有王若麟等二十五位选手获得三等奖。此外还专门设置了面向大一新生的新生特别奖两名，分别为高泽豫和林焕承，面向女生的 Ada 奖一名，获奖者为林元芃。           自2014年起，科大信息安全大赛已经连续举办了五届，往届比赛均顺利进行，规模盛大，影响甚广。第五届信息安全大赛由中国科学技术大学网络空间安全学院、中国科学技术大学校团委、中国科学技术大学管指委主办，中国科学技术大学学生 Linux 用户协会、中国科学技术大学微软学生俱乐部等承办，并由南京大学微软学生俱乐部、湖南大学微软学生俱乐部等协办。本次比赛相比之前规模更大，参与人员更多，并邀请了更多国内高校参赛，旨在给国内高校的同学们提供一个学习交流的平台。并延续了往届的优良传统，努力结合科大特色，坚持向新生倾斜的原则，控制题目难度梯度，强调引导和教育工作。   本次比赛的题目在具有一定教育意义的同时也不失趣味性。题目“猫咪问答”让参赛选手在做题的过程中了解了科大的一些建校历史和 60 周年校庆知识，也向外校的选手宣传了科大；而有趣的“黑曜石浏览器”一题更是在知乎引起了热议。   赛后承办方组织参赛选手于网上 https://github.com/ustclug/hackergame2018-writeups 撰写了题目解答，并可在 https://hack2018.lug.ustc.edu.cn/ 上继续查看题目和提交。  ","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2019-01-03-hackergame-awards/",
 "teaser": null
 },{
-"title": "Linux 101 第一课暨 Linux 安装聚会成功举办",
-"excerpt":"2019 年 3 月 10 日下午，由中国科大学生 Linux 用户协会承办的 Linux 101 第一课暨 Linux 安装聚会活动在西区 3C101 教室顺利举行。 在中国科大，同学们的学习和科研生活中都要广泛地接触 Linux 系统。Linux 101 是中科大 Linux 用户协会成员面向全校开设的长期课程，课程以应用角度出发，带领大家从零开始了解开源 Linux 系统并学会初步应用。Linux 安装聚会是多人集体安装 Linux 的线下活动，旨在由经验丰富的 Linux 用户帮助新手快速且“无痛”地完成 Linux 操作系统的安装。 下午 14:00，何纪言同学对同学们简单地介绍了 Linux 101 以及 Linux 用户协会，之后由李嘉豪同学作了“Linux 101 序–遇见 Linux”的演讲，也就是 Linux 101 第一课。在演讲中，李嘉豪同学介绍了什么是 Linux，它的发展历史，以及一些自由软件相关的知识，并进行了 WSL 和 Ubuntu 虚拟机的演示。 下午...","categories": ["LUG活动"],
-"tags": [],
-"url": "https://beta.ustclug.org//news/2019/03/linux-install-party/",
+"title": null,
+"excerpt":"2019 年 3 月 10 日下午，由中国科大学生 Linux 用户协会承办的 Linux 101 第一课暨 Linux 安装聚会活动在西区 3C101 教室顺利举行。 在中国科大，同学们的学习和科研生活中都要广泛地接触 Linux 系统。Linux 101 是中科大 Linux 用户协会成员面向全校开设的长期课程，课程以应用角度出发，带领大家从零开始了解开源 Linux 系统并学会初步应用。Linux 安装聚会是多人集体安装 Linux 的线下活动，旨在由经验丰富的 Linux 用户帮助新手快速且“无痛”地完成 Linux 操作系统的安装。 下午 14:00，何纪言同学对同学们简单地介绍了 Linux 101 以及 Linux 用户协会，之后由李嘉豪同学作了“Linux 101 序–遇见 Linux”的演讲，也就是 Linux 101 第一课。在演讲中，李嘉豪同学介绍了什么是 Linux，它的发展历史，以及一些自由软件相关的知识，并进行了 WSL 和 Ubuntu 虚拟机的演示。 下午...","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2019-03-10-linux-install-party/",
 "teaser": null
 },{
-"title": "2019 Linux 板版衫设计方案征集",
-"excerpt":"又是一年毕业季～ Linux 板 &amp; USTC LUG 版衫企划启动啦！ 跟往年一样，首先征集设计方案。4月底将通过投票选出最受欢迎的设计方案，并启动预订。6月份毕业生离校前完成版衫制作和发放。 设计要求 主题：Linux 与自由软件，体现瀚海星云 Linux 板或 USTC LUG 特色 底色：不限，建议至少包含白色、灰色设计方案 图案：正面或双面图案（可设袖标），提交图案分辨率不低于 300DPI，并附简单效果图说明图案位置。 授权：投稿作品默认以 CC BY-SA 4.0 协议发布。如果选择其他授权，则应确保作品可以在 CC BY-SA 协议下再发布。 可以参考一下往年的版衫设计方案。 投稿方式 方式１：回复瀚海星云 BBS 的征集贴，以附件形式附上设计图 方式２：发邮件至 lug@ustc.edu.cn，标题「2019 版衫设计方案投稿」 方案选择 若方案多于1种，则通过投票来选出最终方案。投票将在方案征集后一周进行。 奖励 被选中方案的设计者可免费获得两件 2019 Linux 板版衫。 得票前6名的其他未选中方案，设计者可免费获得一件 2019 Linux 板版衫。 征集时间 即日起至北京时间 4月28日（周日）23:59:59。 参考...","categories": ["LUG活动"],
-"tags": ["LUG","版衫"],
-"url": "https://beta.ustclug.org//news/2019/04/2019-bbs-linux-banshan/",
+"title": null,
+"excerpt":"又是一年毕业季～ Linux 板 &amp; USTC LUG 版衫企划启动啦！ 跟往年一样，首先征集设计方案。4月底将通过投票选出最受欢迎的设计方案，并启动预订。6月份毕业生离校前完成版衫制作和发放。 设计要求 主题：Linux 与自由软件，体现瀚海星云 Linux 板或 USTC LUG 特色 底色：不限，建议至少包含白色、灰色设计方案 图案：正面或双面图案（可设袖标），提交图案分辨率不低于 300DPI，并附简单效果图说明图案位置。 授权：投稿作品默认以 CC BY-SA 4.0 协议发布。如果选择其他授权，则应确保作品可以在 CC BY-SA 协议下再发布。 可以参考一下往年的版衫设计方案。 投稿方式 方式１：回复瀚海星云 BBS 的征集贴，以附件形式附上设计图 方式２：发邮件至 lug@ustc.edu.cn，标题「2019 版衫设计方案投稿」 方案选择 若方案多于1种，则通过投票来选出最终方案。投票将在方案征集后一周进行。 奖励 被选中方案的设计者可免费获得两件 2019 Linux 板版衫。 得票前6名的其他未选中方案，设计者可免费获得一件 2019 Linux 板版衫。 征集时间 即日起至北京时间 4月28日（周日）23:59:59。 参考...","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2019-04-06-2019-bbs-linux-banshan/",
 "teaser": null
 },{
-"title": "2019 Linux 版衫预订开始",
-"excerpt":"经过版衫方案投票结果（2019 Linux 板版衫候选方案公布与投票），我们最终确定了 2019 Linux 版衫样式，并从即日起开始接受预定。 经过统计，包括微信公众号、BBS 等渠道所有投票中，方案二 Style 1 以 25.7% 的票数位居第一，恭喜设计者陈同学，也非常感谢其他投稿的同学。 我们与作者和供应商 T 社（tshe.com）沟通后决定制作黑色，白色，蓝色三种底色版本，效果图如下： 黑色版： 白色版： 蓝色版： （前印花宽 19.4cm，高 25cm，距离领口 8cm；后印花宽 15cm，高 10.9cm，离领口 8cm） 预定说明 版衫定价：50.00 元/件 付款方式：支付宝转账（详见预定表单） 预定截止时间：2019 年 6 月 21 日 23:59:59 (UTC+8) 注意事项： 在校同学可以在到货之后自提，时间不限（如：暑期和下学期）。不在校的同学请填写准确的邮寄地址，我们将在收到版衫后统一以快递到付寄出（预计 6 月 27 日，较晚预订的同学可能会晚些收到）； 预定和付款同时进行，请在填写表单后尽快完成支付宝转账，备注信息填写预定者手机号； 如订单无效或未制作，付款将全额原路返还； 如需预定不同尺码，请多次填写表单； 出于成本考虑，每种颜色订单数大于 10 件才会制作；...","categories": ["LUG活动"],
-"tags": ["LUG","版衫"],
-"url": "https://beta.ustclug.org//news/2019/06/2019-bbs-linux-banshan-preorder-start/",
+"title": null,
+"excerpt":"经过版衫方案投票结果（2019 Linux 板版衫候选方案公布与投票），我们最终确定了 2019 Linux 版衫样式，并从即日起开始接受预定。 经过统计，包括微信公众号、BBS 等渠道所有投票中，方案二 Style 1 以 25.7% 的票数位居第一，恭喜设计者陈同学，也非常感谢其他投稿的同学。 我们与作者和供应商 T 社（tshe.com）沟通后决定制作黑色，白色，蓝色三种底色版本，效果图如下： 黑色版： 白色版： 蓝色版： （前印花宽 19.4cm，高 25cm，距离领口 8cm；后印花宽 15cm，高 10.9cm，离领口 8cm） 预定说明 版衫定价：50.00 元/件 付款方式：支付宝转账（详见预定表单） 预定截止时间：2019 年 6 月 21 日 23:59:59 (UTC+8) 注意事项： 在校同学可以在到货之后自提，时间不限（如：暑期和下学期）。不在校的同学请填写准确的邮寄地址，我们将在收到版衫后统一以快递到付寄出（预计 6 月 27 日，较晚预订的同学可能会晚些收到）； 预定和付款同时进行，请在填写表单后尽快完成支付宝转账，备注信息填写预定者手机号； 如订单无效或未制作，付款将全额原路返还； 如需预定不同尺码，请多次填写表单； 出于成本考虑，每种颜色订单数大于 10 件才会制作；...","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2019-06-12-2019-bbs-linux-banshan-preorder-start/",
 "teaser": null
 },{
-"title": "2019 秋季学期新生活力课程",
-"excerpt":"2019 年 8 月 31 日与 9 月 7 日，USTCLUG 在西校区的 3A110 教室开展了本学期的新生活力课程。 新生活力课程面向入学不久的大一新生。第一次新生活力课程以 Linux 为主题，上半场是由李文睿同学主讲的《Hello, Linux》，他从 Linux 的发行版、日常使用以及命令行等方面对 Linux 操作系统进行简单介绍，希望能够让同学们通过本次讲座了解 Linux；下半场是龚平同学的《Why learn Linux?》讲座，他从现今 Linux 应用情况，结合科大同学未来的学校生活和工作情况，介绍 Linux 系统的重要地位以及学习 Linux 的趣味性，希望能够激发同学们学习 Linux 的乐趣。 考虑到大部分科大新生都还没接触过 Linux 系统，我们专门将一台笔记本安装了 Linux 系统，带去课堂，给大家实机展示，并鼓励大家上手操作。讲座结束的提问环节，大家非常积极踊跃，提出了一系列不仅仅关于 Linux 还有将来四年的学习生活的问题。讲座结束，还有许多同学意犹未尽，希望可以进一步了解什么是 Linux，什么的是自由软件精神，并且希望能稍微了解 Linux 用户协会，我们就带他们去参观 Linux 用户协会的活动室。在活动室中，我们详细回答了关于 Linux 的种种问题。有一位对 Linux 特别感兴趣的同学从现场借走一本关于 Linux 的书籍。直到晚上...","categories": ["LUG活动"],
-"tags": [],
-"url": "https://beta.ustclug.org//news/2019/09/2019-freshman-course/",
+"title": null,
+"excerpt":"2019 年 8 月 31 日与 9 月 7 日，USTCLUG 在西校区的 3A110 教室开展了本学期的新生活力课程。 新生活力课程面向入学不久的大一新生。第一次新生活力课程以 Linux 为主题，上半场是由李文睿同学主讲的《Hello, Linux》，他从 Linux 的发行版、日常使用以及命令行等方面对 Linux 操作系统进行简单介绍，希望能够让同学们通过本次讲座了解 Linux；下半场是龚平同学的《Why learn Linux?》讲座，他从现今 Linux 应用情况，结合科大同学未来的学校生活和工作情况，介绍 Linux 系统的重要地位以及学习 Linux 的趣味性，希望能够激发同学们学习 Linux 的乐趣。 考虑到大部分科大新生都还没接触过 Linux 系统，我们专门将一台笔记本安装了 Linux 系统，带去课堂，给大家实机展示，并鼓励大家上手操作。讲座结束的提问环节，大家非常积极踊跃，提出了一系列不仅仅关于 Linux 还有将来四年的学习生活的问题。讲座结束，还有许多同学意犹未尽，希望可以进一步了解什么是 Linux，什么的是自由软件精神，并且希望能稍微了解 Linux 用户协会，我们就带他们去参观 Linux 用户协会的活动室。在活动室中，我们详细回答了关于 Linux 的种种问题。有一位对 Linux 特别感兴趣的同学从现场借走一本关于 Linux 的书籍。直到晚上...","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2019-09-15-2019-freshman-course/",
 "teaser": null
 },{
-"title": "2019 软件自由日中国科大站",
-"excerpt":"2019 年 9 月 21 日下午，2019 年软件自由日（SFD）中国科大站活动在西区 3C102 教室顺利举办。 本次活动我们邀请到了校友沈达以及王子博同学和刘紫檀同学为我们带来了精彩的演讲。其中沈达为我们介绍了《GNU TeXmacs: A Free Scientific Editing Platform》，王子博为我们介绍了《开源密码管理器 KeePass》，刘紫檀为我们介绍了《从 Makefile 到 Conan：手把手教你构建 C/C++ 项目》。 在活动开始前同学们陆续到达会场。LUG 为大家提供了一些徽章、贴纸等纪念品以及食物，供大家自行领取。 下午 2:30 活动正式开始。首先是由 LUG 的执行会长陶柯宇同学为大家介绍软件自由日、USTCLUG、本场软件自由日的日程安排，以及闪电演讲等事项。 在简短的介绍后就是校友沈达为大家带来《GNU TeXmacs: A Free Scientific Editing Platform》。TeXmacs 是一个为编写优雅美观的科技类文档而制作的编辑器，有 TeX 和 Emacs 的特点。沈达向大家介绍了 TeXmacs 的一些特性，例如方便的快捷键、导入导出 TeX 格式、调用其他数学计算程序的计算结果、使用 kbd-map 自定义宏等，并且介绍了 TeXmacs 的未来规划，以及他为改进 TeXmacs...","categories": ["LUG活动"],
-"tags": [],
-"url": "https://beta.ustclug.org//news/2019/09/2019-sfd-ustc/",
+"title": null,
+"excerpt":"2019 年 9 月 21 日下午，2019 年软件自由日（SFD）中国科大站活动在西区 3C102 教室顺利举办。 本次活动我们邀请到了校友沈达以及王子博同学和刘紫檀同学为我们带来了精彩的演讲。其中沈达为我们介绍了《GNU TeXmacs: A Free Scientific Editing Platform》，王子博为我们介绍了《开源密码管理器 KeePass》，刘紫檀为我们介绍了《从 Makefile 到 Conan：手把手教你构建 C/C++ 项目》。 在活动开始前同学们陆续到达会场。LUG 为大家提供了一些徽章、贴纸等纪念品以及食物，供大家自行领取。 下午 2:30 活动正式开始。首先是由 LUG 的执行会长陶柯宇同学为大家介绍软件自由日、USTCLUG、本场软件自由日的日程安排，以及闪电演讲等事项。 在简短的介绍后就是校友沈达为大家带来《GNU TeXmacs: A Free Scientific Editing Platform》。TeXmacs 是一个为编写优雅美观的科技类文档而制作的编辑器，有 TeX 和 Emacs 的特点。沈达向大家介绍了 TeXmacs 的一些特性，例如方便的快捷键、导入导出 TeX 格式、调用其他数学计算程序的计算结果、使用 kbd-map 自定义宏等，并且介绍了 TeXmacs 的未来规划，以及他为改进 TeXmacs...","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2019-09-28-2019-sfd-ustc/",
 "teaser": null
 },{
-"title": "中国科学技术大学第六届信息安全大赛圆满结束",
-"excerpt":"2019 年 10 月 22 日中午 12:00，网站提交答案的窗口关闭，也宣布着第六届信息安全大赛落下帷幕。 经统计，在本次比赛中，总共有 2682 人注册，1904 人至少完成了一题。比赛期间所有人合计提交了 17098 次 flag，其中约 57.44% 为正确的提交。本次比赛由吉林大学、南开大学、北京邮电大学、重庆大学、哈尔滨工业大学和东北大学的计算机技术类及信息安全类的社团协办，此外还有来自其他高校的同学参加比赛。其中昵称为 Merg1n 的同学获得总榜的第一名，最终以 6400 分结束比赛；中国科学技术大学的本科生选手邓龙以总分 4200 分获得校内榜（不含已毕业同学）第一，总榜第 15 的好成绩。本次比赛校内参加人数众多，共计 395 人参与，其中有 297 名本科生。 经过赛后主办方的统计，最终确定了获奖名单，并为校内参赛的同学颁奖。2019 年 12 月 15 日晚，第六届信息安全大赛颁奖仪式在西区 3A112 举行，校内冠军邓龙荣获一等奖，胡航瑞、高泽豫、李永强、陈翊辉、汪若辰五位选手获得二等奖，还有陈泳融等二十五位选手获得三等奖。此外还专门设置了面向大一新生的新生特别奖两名，分别为陈泳融和谢亦秦，面向女生的 Ada 奖一名，获奖者为李静雯。此外，还颁发了一血奖和分类奖。 自 2014 年起，科大信息安全大赛已经连续举办了六届，往届比赛均顺利进行，规模盛大，影响甚广。第六届信息安全大赛由中国科学技术大学网络空间安全学院、中国科学技术大学校团委、中国科学技术大学管指委主办，中国科学技术大学学生 Linux 用户协会、中国科学技术大学微软学生俱乐部、中国科学技术大学 NEBULA 战队等承办，并由南开大学创新技术俱乐部、北京邮电大学微软学生俱乐部等协办。本次比赛延续了往届的优良传统，努力结合科大特色，坚持向新生倾斜的原则，控制题目难度梯度，强调引导和教育工作。 本次比赛的题目分为 4 类，包含了综合技能、程序逆向与漏洞利用、密码学与数学和网站安全类题目，在具有一定教育意义的同时也不失趣味性。例如，“宇宙终极问题”一题的第一小题与 9 月份科学家得到的丢番图方程...","categories": ["LUG活动"],
-"tags": [],
-"url": "https://beta.ustclug.org//news/2019/12/hackergame-2019/",
+"title": null,
+"excerpt":"2019 年 10 月 22 日中午 12:00，网站提交答案的窗口关闭，也宣布着第六届信息安全大赛落下帷幕。 经统计，在本次比赛中，总共有 2682 人注册，1904 人至少完成了一题。比赛期间所有人合计提交了 17098 次 flag，其中约 57.44% 为正确的提交。本次比赛由吉林大学、南开大学、北京邮电大学、重庆大学、哈尔滨工业大学和东北大学的计算机技术类及信息安全类的社团协办，此外还有来自其他高校的同学参加比赛。其中昵称为 Merg1n 的同学获得总榜的第一名，最终以 6400 分结束比赛；中国科学技术大学的本科生选手邓龙以总分 4200 分获得校内榜（不含已毕业同学）第一，总榜第 15 的好成绩。本次比赛校内参加人数众多，共计 395 人参与，其中有 297 名本科生。 经过赛后主办方的统计，最终确定了获奖名单，并为校内参赛的同学颁奖。2019 年 12 月 15 日晚，第六届信息安全大赛颁奖仪式在西区 3A112 举行，校内冠军邓龙荣获一等奖，胡航瑞、高泽豫、李永强、陈翊辉、汪若辰五位选手获得二等奖，还有陈泳融等二十五位选手获得三等奖。此外还专门设置了面向大一新生的新生特别奖两名，分别为陈泳融和谢亦秦，面向女生的 Ada 奖一名，获奖者为李静雯。此外，还颁发了一血奖和分类奖。 自 2014 年起，科大信息安全大赛已经连续举办了六届，往届比赛均顺利进行，规模盛大，影响甚广。第六届信息安全大赛由中国科学技术大学网络空间安全学院、中国科学技术大学校团委、中国科学技术大学管指委主办，中国科学技术大学学生 Linux 用户协会、中国科学技术大学微软学生俱乐部、中国科学技术大学 NEBULA 战队等承办，并由南开大学创新技术俱乐部、北京邮电大学微软学生俱乐部等协办。本次比赛延续了往届的优良传统，努力结合科大特色，坚持向新生倾斜的原则，控制题目难度梯度，强调引导和教育工作。 本次比赛的题目分为 4 类，包含了综合技能、程序逆向与漏洞利用、密码学与数学和网站安全类题目，在具有一定教育意义的同时也不失趣味性。例如，“宇宙终极问题”一题的第一小题与 9 月份科学家得到的丢番图方程...","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2019-12-15-hackergame-2019/",
 "teaser": null
 },{
-"title": "服务器宕机通知（已恢复）",
-"excerpt":"2020-01-07 Update 3 代码托管平台 https://git.lug.ustc.edu.cn/ 已恢复正常。 2020-01-07 Update 2 以下服务目前仍有问题，正在抢修中： 代码托管平台：https://git.lug.ustc.edu.cn/ 目前正常的服务： 主页 (wiki)：https://lug.ustc.edu.cn/ LUG FTP：https://ftp.lug.ustc.edu.cn/ 反向代理：*.proxy.ustclug.org 网络加速服务：vpn.ustclug.org VPN 在线申请系统：https://getvpn.ustclug.org/ 轻量级网络加速服务：https://light.ustclug.org/ 服务器统一认证：ldap.ustclug.org 内网 VPN Ganglia 监控：https://status.ustclug.org/ LDAP 配置管理系统（GOSA2） 开源镜像站（HTTP 访问）：https://mirrors.ustc.edu.cn/ 开源镜像站（定时同步；rsync、FTP 访问；帮助页面）：https://mirrors.ustc.edu.cn/ 权威 DNS：ns-a.ustclug.org. ns-b.ustclug.org. ns-c.ustclug.org. 网络启动：pxe.ustc.edu.cn 图书馆透明计算系统 如果您使用上述服务时遇到问题，请向我们反馈。 2020-01-07 Update 1 目前，科大校园网络已经恢复正常，故障原因可见 http://bbs.ustc.edu.cn/cgi/bbstcon?board=USTCnet&amp;file=M.1578332007.A。 我们正在确认目前受到影响的服务范围。 由于科大校园网络的未知故障，LUG 的所有网络服务现在处于不稳定状态。受影响服务的恢复时间暂时无法确定，给您带来的不便敬请谅解！ USTCLUG 2020-01-06 23:34:34...","categories": ["LUG服务器"],
-"tags": [],
-"url": "https://beta.ustclug.org//news/2020/01/server-down/",
+"title": null,
+"excerpt":"2020-01-07 Update 3 代码托管平台 https://git.lug.ustc.edu.cn/ 已恢复正常。 2020-01-07 Update 2 以下服务目前仍有问题，正在抢修中： 代码托管平台：https://git.lug.ustc.edu.cn/ 目前正常的服务： 主页 (wiki)：https://lug.ustc.edu.cn/ LUG FTP：https://ftp.lug.ustc.edu.cn/ 反向代理：*.proxy.ustclug.org 网络加速服务：vpn.ustclug.org VPN 在线申请系统：https://getvpn.ustclug.org/ 轻量级网络加速服务：https://light.ustclug.org/ 服务器统一认证：ldap.ustclug.org 内网 VPN Ganglia 监控：https://status.ustclug.org/ LDAP 配置管理系统（GOSA2） 开源镜像站（HTTP 访问）：https://mirrors.ustc.edu.cn/ 开源镜像站（定时同步；rsync、FTP 访问；帮助页面）：https://mirrors.ustc.edu.cn/ 权威 DNS：ns-a.ustclug.org. ns-b.ustclug.org. ns-c.ustclug.org. 网络启动：pxe.ustc.edu.cn 图书馆透明计算系统 如果您使用上述服务时遇到问题，请向我们反馈。 2020-01-07 Update 1 目前，科大校园网络已经恢复正常，故障原因可见 http://bbs.ustc.edu.cn/cgi/bbstcon?board=USTCnet&amp;file=M.1578332007.A。 我们正在确认目前受到影响的服务范围。 由于科大校园网络的未知故障，LUG 的所有网络服务现在处于不稳定状态。受影响服务的恢复时间暂时无法确定，给您带来的不便敬请谅解！ USTCLUG 2020-01-06 23:34:34...","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2020-01-06-server-down/",
 "teaser": null
 },{
 "title": "Linux 101 第一课在线上顺利举行",
@@ -317,10 +317,10 @@ var store = [{
 "url": "https://beta.ustclug.org//news/2020/03/linux101-online/",
 "teaser": null
 },{
-"title": "近期部分服务中断通知（已修复）",
-"excerpt":"2020-06-05 10:27 Update 5 ESXi 主机所在网段网络不稳定的原因已经查明，与网段内 ARP 包相关。目前已经修复。 此外，反向代理于 2 日进行了一些调整，详情见 https://github.com/ustclug/discussions/issues/325#issuecomment-637319675。 2020-05-31 22:45 Update 4 间歇性的网络问题仍然存在，我们将继续排查问题。 2020-05-31 14:09 Update 3 在校园网路由清空了内部转发表后，目前 ESXi 主机已经运行 7 小时而未出现网络问题。我们仍在监测问题是否已经解决。 2020-05-30 16:15 Update 2 我们注意到 ESXi 主机再次出现了间歇性的网络问题。包括 git.lug.ustc.edu.cn 在内的服务受到影响。我们正在尝试排查问题。 2020-05-26 23:10 Update 1 git.lug.ustc.edu.cn 目前已经恢复。 近期 USTCLUG 的一部分网络服务出现中断，具体情况如下： *.proxy.ustclug.org（开源软件反向代理）与 servers.ustclug.org（服务器新闻站）的校外访问，24 日晚由于服务器月流量超额而暂停，具体情况见 https://github.com/ustclug/discussions/issues/325。在 6 月份服务恢复后，我们将对反代服务进行调整。...","categories": ["LUG服务器"],
-"tags": [],
-"url": "https://beta.ustclug.org//news/2020/05/servers-down/",
+"title": null,
+"excerpt":"2020-06-05 10:27 Update 5 ESXi 主机所在网段网络不稳定的原因已经查明，与网段内 ARP 包相关。目前已经修复。 此外，反向代理于 2 日进行了一些调整，详情见 https://github.com/ustclug/discussions/issues/325#issuecomment-637319675。 2020-05-31 22:45 Update 4 间歇性的网络问题仍然存在，我们将继续排查问题。 2020-05-31 14:09 Update 3 在校园网路由清空了内部转发表后，目前 ESXi 主机已经运行 7 小时而未出现网络问题。我们仍在监测问题是否已经解决。 2020-05-30 16:15 Update 2 我们注意到 ESXi 主机再次出现了间歇性的网络问题。包括 git.lug.ustc.edu.cn 在内的服务受到影响。我们正在尝试排查问题。 2020-05-26 23:10 Update 1 git.lug.ustc.edu.cn 目前已经恢复。 近期 USTCLUG 的一部分网络服务出现中断，具体情况如下： *.proxy.ustclug.org （开源软件反向代理）与 servers.ustclug.org （服务器新闻站）的校外访问，24 日晚由于服务器月流量超额而暂停，具体情况见 https://github.com/ustclug/discussions/issues/325。在...","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//news/2020/08/2020-05-26-servers-down/",
 "teaser": null
 },{
 "title": "Hello! LUG Planet",
@@ -329,40 +329,40 @@ var store = [{
 "url": "https://beta.ustclug.org//planet/2018/08/hello-lug-planet/",
 "teaser": null
 },{
-"title": "USTC Linux 用户生存指南",
-"excerpt":"本指南指导中科大 Linux 用户如何使用 Linux 完成各门课程。 注意：本指南目前仅包含部分计算机专业本科课程。欢迎其他同学贡献更多内容！ 程序设计 程序设计课程主要讲授 C 语言知识，而 C 语言本身就是用来 UNIX 的原生语言，所以不会有任何障碍。 建议使用 GCC 或 Clang 作为编译器，使用 GDB 作为调试器。可以选用任意一款文本编辑器（Vim、Emacs、Sublime、Atom、VSCode、gedit、Kate 等）或集成开发环境（如 CLion、Geany、KDevelop）。 兼容性：★★★★★ 数据结构 主要讲授数据结构及其C语言实现。和程序设计一样没有任何问题。 课本（严蔚敏版数据结构）分光盘版和无盘版。光盘内容为算法和数据结构的演示程序，仅支持 MS-DOS 和 Windows，其功能可完全由 VisuAlgo 替代。所以建议购买无盘版。 兼容性：★★★★★ 模拟与数字电路 旧开发板：Digilent Nexys 2 和 3 均有 Linux 工具，Xilinx ISE 也有 Linux 版本。笔者经验是 Xilinx ISE 可以正常使用。 新开发板：Xilinx...","categories": ["Experience"],
-"tags": ["Courses"],
-"url": "https://beta.ustclug.org//planet/2018/08/USTC-Linux-user-guide/",
+"title": null,
+"excerpt":"本指南指导中科大 Linux 用户如何使用 Linux 完成各门课程。 注意：本指南目前仅包含部分计算机专业本科课程。欢迎其他同学贡献更多内容！ 程序设计 程序设计课程主要讲授 C 语言知识，而 C 语言本身就是用来 UNIX 的原生语言，所以不会有任何障碍。 建议使用 GCC 或 Clang 作为编译器，使用 GDB 作为调试器。可以选用任意一款文本编辑器（Vim、Emacs、Sublime、Atom、VSCode、gedit、Kate 等）或集成开发环境（如 CLion、Geany、KDevelop）。 兼容性：★★★★★ 数据结构 主要讲授数据结构及其C语言实现。和程序设计一样没有任何问题。 课本（严蔚敏版数据结构）分光盘版和无盘版。光盘内容为算法和数据结构的演示程序，仅支持 MS-DOS 和 Windows，其功能可完全由 VisuAlgo 替代。所以建议购买无盘版。 兼容性：★★★★★ 模拟与数字电路 旧开发板：Digilent Nexys 2 和 3 均有 Linux 工具，Xilinx ISE 也有 Linux 版本。笔者经验是 Xilinx ISE 可以正常使用。 新开发板：Xilinx...","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//planet/2020/08/2018-08-08-USTC-Linux-user-guide/",
 "teaser": null
 },{
 "title": "PXE 是什么",
-"excerpt":"预启动执行环境（Preboot eXecution Environment，PXE，也被称为预执行环境)提供了一种使用网络接口（Network Interface）启动计算机的机制。这种机制让计算机的启动可以不依赖本地数据存储设备（如硬盘）或本地已安装的操作系统。——摘自 Archwiki PXE 原理介绍 PXE 协议是由 Intel 设计的，它可以使计算机通过网络启动。协议分为 client 和 server 两端，PXE client 在网卡的 ROM 中，当计算机引导时，BIOS 把 PXE client 调入内存执行，并显示出命令菜单，经用户选择后，PXE client 将放置在远端的操作系统通过网络下载到本地运行。 PXE 可以通过网络直接启动一些 Live Linux，或者调用 Linux Installer，GParted 等工具，较使用 U 盘启动更加方便快捷，有多种工具，Live 系统等可供用户挑选，在紧急维护情况下也有很大的作用。 例子：图书馆查询机 图书馆内的图书查询机就是用 PXE 启动的，启动镜像叫 liims，里面包含了一个以图书馆透明计算系统为主页的浏览器（主页包括了图书查询，邮箱登录，学习空间预约等功能），还有瀚海星云的 telnet 客户端和彩虹猫，用户也可以自己启动一个虚拟机，用 PXE 启动进入查询系统。 PXE 怎么用 使用条件 电脑最好内置有 PXE Boot...","categories": ["Technology"],
-"tags": ["PXE"],
-"url": "https://beta.ustclug.org//planet/2018/10/PXE-intro/",
+"excerpt":"预启动执行环境（Preboot eXecution Environment，PXE，也被称为预执行环境)提供了一种使用网络接口（Network Interface）启动计算机的机制。这种机制让计算机的启动可以不依赖本地数据存储设备（如硬盘）或本地已安装的操作系统。——摘自 Archwiki PXE 原理介绍 PXE 协议是由 Intel 设计的，它可以使计算机通过网络启动。协议分为 client 和 server 两端，PXE client 在网卡的 ROM 中，当计算机引导时，BIOS 把 PXE client 调入内存执行，并显示出命令菜单，经用户选择后，PXE client 将放置在远端的操作系统通过网络下载到本地运行。 PXE 可以通过网络直接启动一些 Live Linux，或者调用 Linux Installer，GParted 等工具，较使用 U 盘启动更加方便快捷，有多种工具，Live 系统等可供用户挑选，在紧急维护情况下也有很大的作用。 例子：图书馆查询机 图书馆内的图书查询机就是用 PXE 启动的，启动镜像叫 liims，里面包含了一个以图书馆透明计算系统为主页的浏览器（主页包括了图书查询，邮箱登录，学习空间预约等功能），还有瀚海星云的 telnet 客户端和彩虹猫，用户也可以自己启动一个虚拟机，用 PXE 启动进入查询系统。 PXE 怎么用 使用条件 电脑最好内置有 PXE Boot...","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//planet/2020/08/2018-10-07-PXE-intro/",
 "teaser": null
 },{
-"title": "一个 NFS 的简介",
-"excerpt":"NFS（网络文件系统，Network File System）是一个分布式的文件系统，可以用于在局域网中共享文件。它通常运用在 Unix 与类 Unix 操作系统中。对于 Linux 服务器之间的文件共享来说，NFS 相比于其他的方案（如 Samba）更加方便，性能也更好。对于应用程序来说，NFS 也是透明的。 简单配置 NFS 我们以两台 Debian 10 的机器为例1简单配置 NFS 服务端。其余的发行版可以查询各自的手册以获取详细信息。 在绝大多数情况下，NFS 支持已经安装在 Linux 内核中。我们可以使用以下命令安装内核态的 NFS 服务器实现： sudo apt install nfs-kernel-server （如果有兼容 NFSv2 和 NFSv3 的需求，需要安装 portmap） 出于安全性的考虑2，我们假设 NFS 共享的根目录是 /srv/nfs4。 如果需要共享的目录在其他位置，可以使用 bind mount 的方式挂载上去。（当然，对于简单的配置来说，不这样做问题也不大） mount --bind 实际放置文件的目录 /srv/nfs/your_folder_name 编辑 /etc/exports，设置共享文件夹的位置、允许访问的...","categories": ["Technology"],
-"tags": ["NFS"],
-"url": "https://beta.ustclug.org//planet/2019/08/NFS-intro/",
+"title": null,
+"excerpt":"NFS（网络文件系统，Network File System）是一个分布式的文件系统，可以用于在局域网中共享文件。它通常运用在 Unix 与类 Unix 操作系统中。对于 Linux 服务器之间的文件共享来说，NFS 相比于其他的方案（如 Samba）更加方便，性能也更好。对于应用程序来说，NFS 也是透明的。 简单配置 NFS 我们以两台 Debian 10 的机器为例1简单配置 NFS 服务端。其余的发行版可以查询各自的手册以获取详细信息。 在绝大多数情况下，NFS 支持已经安装在 Linux 内核中。我们可以使用以下命令安装内核态的 NFS 服务器实现： sudo apt install nfs-kernel-server （如果有兼容 NFSv2 和 NFSv3 的需求，需要安装 portmap ） 出于安全性的考虑2，我们假设 NFS 共享的根目录是 /srv/nfs4 。 如果需要共享的目录在其他位置，可以使用 bind mount 的方式挂载上去。（当然，对于简单的配置来说，不这样做问题也不大） mount --bind 实际放置文件的目录 /srv/nfs/your_folder_name...","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//planet/2020/08/2019-08-28-NFS-intro/",
 "teaser": null
 },{
 "title": "nc 是什么？",
-"excerpt":"nc/ncat 是 netcat 的缩写，它可以读写 TCP 与 UDP 端口——或许你看不懂这句话，这没有关系。简单地说，它可以在字符界面下，让你和服务器沟通交流。 一般来说，有很多题目都会要求你使用 nc 连接到他们的服务器，并且进行交互，获得 flag。 如何安装 nc？ nc 命令在 macOS 中是自带的，在 Linux 中一般自带，或是可以使用相应的软件包管理器安装（如在 Debian/Ubuntu 中这个包名叫 netcat）。 当然，如果你在看这篇手册，你的操作系统很有可能是 Windows。它不自带 nc，尽管可以用 WSL 或者虚拟机的方式解决，但是如果你觉得这样太麻烦了，也有另外一些方法。 使用静态链接的 ncat 程序 前往 https://github.com/andrew-d/static-binaries/blob/master/binaries/windows/x86/ncat.exe 下载此程序。我们也在这里提供了一份。下载下来即可。 ncat.zip 下载 注：nc/ncat 事实上是两个不同的程序，但在我们接下来的使用上，基本没有区别。ncat 是由 Nmap 项目开发的“重置版的 Netcat”。 我的杀毒软件报毒！ 这是 virustotal 的检测结果：https://www.virustotal.com/gui/file/d0baada87420dd7c2e63d0dd3248749c06b53806d3021863c4fa659608053a8a/detection 如果你不相信此来源，也可以下载 nmap（一个网络探测、扫描工具），它会附带一个 ncat。 如何使用...","categories": ["Tech Tutorial"],
-"tags": ["hackergame","netcat"],
-"url": "https://beta.ustclug.org//planet/2019/09/how-to-use-nc/",
+"excerpt":"nc/ncat 是 netcat 的缩写，它可以读写 TCP 与 UDP 端口——或许你看不懂这句话，这没有关系。简单地说，它可以在字符界面下，让你和服务器沟通交流。 一般来说，有很多题目都会要求你使用 nc 连接到他们的服务器，并且进行交互，获得 flag。 如何安装 nc ？ nc 命令在 macOS 中是自带的，在 Linux 中一般自带，或是可以使用相应的软件包管理器安装（如在 Debian/Ubuntu 中这个包名叫 netcat）。 当然，如果你在看这篇手册，你的操作系统很有可能是 Windows。它不自带 nc ，尽管可以用 WSL 或者虚拟机的方式解决，但是如果你觉得这样太麻烦了，也有另外一些方法。 使用静态链接的 ncat 程序 前往 https://github.com/andrew-d/static-binaries/blob/master/binaries/windows/x86/ncat.exe 下载此程序。我们也在这里提供了一份。下载下来即可。 ncat.zip 下载 注： nc / ncat 事实上是两个不同的程序，但在我们接下来的使用上，基本没有区别。 ncat 是由 Nmap 项目开发的“重置版的 Netcat”。 我的杀毒软件报毒！ 这是...","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//planet/2020/08/2019-09-16-how-to-use-nc/",
 "teaser": null
 },{
-"title": "【译稿】树莓派 4 评测与基准测试：与树莓派 3B+ 相比的改进",
-"excerpt":"原文地址：https://ibugone.com/blog/2019/09/raspberry-pi-4-review-benchmark/，作者为 @iBug 同学。以下为翻译部分。 前段时间，我终于拿到了自己心念的树莓派 4（4 GB 的型号），之后我就忍不住试了试，看看它在报道中提到的改进与提升究竟是什么样子的。 我自己的树莓派 3B+ 有个外壳，所以这次购买树莓派 4 的同时，我也订了个铝制的外壳，以减轻发热给树莓派带来的压力。与之前的外壳不同的是，它还配备了两个小风扇，能够大幅度提高散热效率。 就让我们来看一看吧。 概览 新的树莓派 4 装在了类似 3B+ 的包装中，包装正面是树莓派 4 的红底白线的结构图，与本体大小相同。与树莓派 3B 不同的是，3B+ 和 4 都没有用防静电袋包好。当然，这不是什么问题。 它的结构与前几代类似，不过有一些明显的变化。比如说，你肯定会最先注意到那几个 USB 3.0 接口——因为它们是蓝色的。在你观察那几个接口的同时，你很可能也注意到了，有可能是因为千兆网口的升级的缘故，以太网接口换了位置。 有一些小接口，即供电口和视频输出，也有一些变化。树莓派 4 现在需要一根 Type-C 线供电，并且需求提升到了 5V / 3A。目前尚且不知树莓派 4 是否支持类似于高通快充或者 USB PD 这样的快充技术，但是从用户反馈来看，是没有的。旧款上标准大小的 HDMI 也被 micro-HDMI 口替换——而且变成了两个：它们都支持 4K 60fps 输出，而且可以同时输出！尽管我打算把树莓派当无头（无显示的）服务器来用，用树莓派配桌面环境的人可能会喜欢这个特性。...","categories": ["Technology","Translation"],
-"tags": ["树莓派"],
-"url": "https://beta.ustclug.org//planet/2019/09/raspberry-4/",
+"title": null,
+"excerpt":"原文地址：https://ibugone.com/blog/2019/09/raspberry-pi-4-review-benchmark/，作者为 @iBug 同学。以下为翻译部分。 前段时间，我终于拿到了自己心念的树莓派 4（4 GB 的型号），之后我就忍不住试了试，看看它在报道中提到的改进与提升究竟是什么样子的。 我自己的树莓派 3B+ 有个外壳，所以这次购买树莓派 4 的同时，我也订了个铝制的外壳，以减轻发热给树莓派带来的压力。与之前的外壳不同的是，它还配备了两个小风扇，能够大幅度提高散热效率。 就让我们来看一看吧。 概览 新的树莓派 4 装在了类似 3B+ 的包装中，包装正面是树莓派 4 的红底白线的结构图，与本体大小相同。与树莓派 3B 不同的是，3B+ 和 4 都没有用防静电袋包好。当然，这不是什么问题。 它的结构与前几代类似，不过有一些明显的变化。比如说，你肯定会最先注意到那几个 USB 3.0 接口——因为它们是蓝色的。在你观察那几个接口的同时，你很可能也注意到了，有可能是因为千兆网口的升级的缘故，以太网接口换了位置。 有一些小接口，即供电口和视频输出，也有一些变化。树莓派 4 现在需要一根 Type-C 线供电，并且需求提升到了 5V / 3A。目前尚且不知树莓派 4 是否支持类似于高通快充或者 USB PD 这样的快充技术，但是从用户反馈来看，是没有的。旧款上标准大小的 HDMI 也被 micro-HDMI 口替换——而且变成了两个：它们都支持 4K 60fps 输出，而且可以同时输出！尽管我打算把树莓派当无头（无显示的）服务器来用，用树莓派配桌面环境的人可能会喜欢这个特性。...","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//planet/2020/08/2019-09-17-raspberry-4/",
 "teaser": null
 },{
-"title": "使用 Beancount 进行记账并自动记录一卡通消费",
-"excerpt":"本文首发于 https://charlesliu7.github.io/blackboard/2019/07/24/beancount/ 偶尔看到了复式记账这个概念，对精细记账的我而言很受用，选择 Beancount 这样的开源工具的原因莫过于账本数据完全由自己掌握，而不是被各大 APP 所保管。本文从一次个人实践的角度来说明一下复式记账的使用。 本篇文章是一个从零开始的个人实践记录，涵盖 文件组织 -&gt; 基本账本书写 -&gt; 爬取一卡通数据并自动记录，供同样使用 Beancount 的同学做参考，但此实践并不一定完全合乎其他人的使用习惯，如果有其它记录策略也是可以的。本文内容基于读者对复式记账和 Beancount 语法有一定了解的情况下撰写的，关于复式记账的概念和一些诸多基本功能介绍，可以参考阅读以下文章： 文本记账综述、复式记账开源工具比较 Beancount复式记账（一）：为什么 开始！ 安装使用 Beancount 是一个 Python 实现的开源工具，在本地即可运行，首先从 PyPI 获取： pip install beancount fava 其中 beancount 是核心包，包含核心的命令行工具；fava 是网页可视化工具。 这里有一个fava 示例账本 ，对应的 Beancount 源代码可以在 Bitbucket 上下载。 本文的示例账本以及可视化可以在该仓库查看。 克隆该仓库，在命令行中使用 fava main.beancout。 $ fava main.beancout Running...","categories": ["USTC"],
-"tags": ["Beancount","eCard"],
-"url": "https://beta.ustclug.org//planet/2020/08/keeping-account-with-beancount/",
+"title": null,
+"excerpt":"本文首发于 https://charlesliu7.github.io/blackboard/2019/07/24/beancount/ 偶尔看到了复式记账这个概念，对精细记账的我而言很受用，选择 Beancount 这样的开源工具的原因莫过于账本数据完全由自己掌握，而不是被各大 APP 所保管。本文从一次个人实践的角度来说明一下复式记账的使用。 本篇文章是一个从零开始的个人实践记录，涵盖 文件组织 -&gt; 基本账本书写 -&gt; 爬取一卡通数据并自动记录，供同样使用 Beancount 的同学做参考，但此实践并不一定完全合乎其他人的使用习惯，如果有其它记录策略也是可以的。本文内容基于读者对复式记账和 Beancount 语法有一定了解的情况下撰写的，关于复式记账的概念和一些诸多基本功能介绍，可以参考阅读以下文章： 文本记账综述、复式记账开源工具比较 Beancount复式记账（一）：为什么 开始！ 安装使用 Beancount 是一个 Python 实现的开源工具，在本地即可运行，首先从 PyPI 获取： pip install beancount fava 其中 beancount 是核心包，包含核心的命令行工具； fava 是网页可视化工具。 这里有一个fava 示例账本 ，对应的 Beancount 源代码可以在 Bitbucket 上下载。 本文的示例账本以及可视化可以在该仓库查看。 克隆该仓库，在命令行中使用 fava main.beancout 。 $ fava...","categories": [],
+"tags": null,
+"url": "https://beta.ustclug.org//planet/2020/08/2020-08-06-keeping-account-with-beancount/",
 "teaser": null
 },{
 "title": "中国科学技术大学 Linux 用户协会",
