@@ -217,10 +217,10 @@ collections:
     permalink: /:collection/:path/
   news:
     output: true
-    permalink: /:collection/:year/:month/:name/
+    permalink: /:collection/:year/:month/:title/
   planet:
     output: true
-    permalink: /:collection/:year/:month/:name/
+    permalink: /:collection/:year/:month/:title/
 
 
 relative_links:
