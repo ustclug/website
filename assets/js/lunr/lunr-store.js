@@ -383,6 +383,48 @@ var store = [{
 "url": "https://beta.ustclug.org//wiki/intro_english/",
 "teaser": null
 },{
+"title": "Linux 101",
+"excerpt":"Linux 101 活动在每年的春季学期举行，旨在帮助对 Linux 感兴趣的新手了解 Linux，学习 Linux。   举办过的 Linux 101 活动列表见 LUG 活动   历史活动      Linux 101 活动讲义   Linux 101 活动讲义仓库   历往 Linux 101 活动存档  ","categories": [],
+"tags": [],
+"url": "https://beta.ustclug.org//wiki/lug/events/101/",
+"teaser": null
+},{
+"title": "LUG日历",
+"excerpt":"目前使用Google 日历 ，如果您在国内访问遇到困难，请尝试使用 USTCLUG 提供的网络加速服务或者访问与此日历同步的 localendar 。   (活动的具体时间和地点可以通过点击活动查看详情获取）   也可将下面的 ics 地址加入其他日历软件中： ustclug.ics    ","categories": [],
+"tags": [],
+"url": "https://beta.ustclug.org//wiki/lug/events/calendar/",
+"teaser": null
+},{
+"title": "信息安全大赛",
+"excerpt":"科大信息安全大赛自 2014 年起已经连续举办六届，往届比赛均顺利举行，规模盛大，影响甚广。每年的比赛在新生入学季举行，向新生倾斜，赛前有动员会，对基础较薄弱的同学进行一些指导，比赛题目控制难度梯度，强调引导和教育作用，除常规奖项外并设立新生特别奖、Ada 奖等奖项鼓励同学们参加竞赛。考虑到同学们课业负担较重，比赛为期一周，在线上举行。   相关链接      中国科学技术大学第六届信息安全大赛（2019）   中国科学技术大学第五届信息安全大赛（2018）   中国科学技术大学第四届信息安全大赛（2017）  ","categories": [],
+"tags": [],
+"url": "https://beta.ustclug.org//wiki/lug/events/hackergame/",
+"teaser": null
+},{
+"title": "LUG 活动",
+"excerpt":"LUG 活动概述请移步 LUG首页。 LUG 的所有活动均依照 社团章程 开展。 欢迎订阅 LUG 日历。 2016 年及之后的活动不在这里重复记录小聚信息了，请移步每周小聚页面查看。 Latest Events 日期 时间 地点 内容 2020-06-07 14:30-15:45 线上直播 Linux 101 第七课 Video 2020-05-24 14:30-15:00 线上直播 Linux 101 第六课 Video 2020-05-20 19:30-22:00 线上会议 (Zoom) 社员代表大会暨换届大会 2020-05-03 14:30-15:30 线上直播 Linux 101 第五课 Video 2020-05-03 14:30-16:30 线上直播 Linux 101 第四课...","categories": [],
+"tags": [],
+"url": "https://beta.ustclug.org//wiki/lug/events/",
+"teaser": null
+},{
+"title": "Linux Install Party",
+"excerpt":"Linux Install Party 主旨在于推广和安装 Linux，宣传和鼓励开源和自由软件精神。活动可以让同学们亲身“无痛”体验 Linux 系统，在安装 Linux 环节有专人指导，同时可以交流了解 Linux 的相关知识。每次派对包含几个面向入门用户的讲座，手把手的安装，近距离的自由交流等环节。   历史活动      2010年Linux Install Party  ","categories": [],
+"tags": [],
+"url": "https://beta.ustclug.org//wiki/lug/events/lip/",
+"teaser": null
+},{
+"title": "Linux User Party",
+"excerpt":"Linux User Party 在于为不同层次的 Linux 用户提供一个交流的平台。每次活动都会请到一些有经验的资深用户分享相关的 Linux 使用经验，创造多种多样的交流方式与途径，为校内乃至整个合肥地区的 Linux 用户提供一个交流平台。   历史活动      2014 Linux User Party 暨 Freeshell 用户交流会   2013科大LUG Linux User Party   2012科大LUG Linux User Party  ","categories": [],
+"tags": [],
+"url": "https://beta.ustclug.org//wiki/lug/events/lup/",
+"teaser": null
+},{
+"title": "LUG 活动海报",
+"excerpt":"每周小聚展板模板      2015 白帽子信息安全竞赛      2015 LaTeX 讲座   2015_poster_clerk_ma.pdf   2014 Linux User Party     ","categories": [],
+"tags": [],
+"url": "https://beta.ustclug.org//wiki/lug/events/poster/",
+"teaser": null
+},{
 "title": "Software Freedom Day",
 "excerpt":"placeholder  ","categories": [],
 "tags": [],
