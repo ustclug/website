@@ -329,6 +329,12 @@ var store = [{
 "url": "https://beta.ustclug.org//planet/2018/08/hello-lug-planet/",
 "teaser": null
 },{
+"title": "USTC Linux 用户生存指南",
+"excerpt":"本指南指导中科大 Linux 用户如何使用 Linux 完成各门课程。 注意：本指南目前仅包含部分计算机专业本科课程。欢迎其他同学贡献更多内容！ 程序设计 程序设计课程主要讲授 C 语言知识，而 C 语言本身就是用来 UNIX 的原生语言，所以不会有任何障碍。 建议使用 GCC 或 Clang 作为编译器，使用 GDB 作为调试器。可以选用任意一款文本编辑器（Vim、Emacs、Sublime、Atom、VSCode、gedit、Kate 等）或集成开发环境（如 CLion、Geany、KDevelop）。 兼容性：★★★★★ 数据结构 主要讲授数据结构及其C语言实现。和程序设计一样没有任何问题。 课本（严蔚敏版数据结构）分光盘版和无盘版。光盘内容为算法和数据结构的演示程序，仅支持 MS-DOS 和 Windows，其功能可完全由 VisuAlgo 替代。所以建议购买无盘版。 兼容性：★★★★★ 模拟与数字电路 旧开发板：Digilent Nexys 2 和 3 均有 Linux 工具，Xilinx ISE 也有 Linux 版本。笔者经验是 Xilinx ISE 可以正常使用。 新开发板：Xilinx...","categories": ["Experience"],
+"tags": ["Courses"],
+"url": "https://beta.ustclug.org//planet/2018/08/USTC-Linux-user-guide/",
+"teaser": null
+},{
 "title": "PXE 是什么",
 "excerpt":"预启动执行环境（Preboot eXecution Environment，PXE，也被称为预执行环境)提供了一种使用网络接口（Network Interface）启动计算机的机制。这种机制让计算机的启动可以不依赖本地数据存储设备（如硬盘）或本地已安装的操作系统。——摘自 Archwiki PXE 原理介绍 PXE 协议是由 Intel 设计的，它可以使计算机通过网络启动。协议分为 client 和 server 两端，PXE client 在网卡的 ROM 中，当计算机引导时，BIOS 把 PXE client 调入内存执行，并显示出命令菜单，经用户选择后，PXE client 将放置在远端的操作系统通过网络下载到本地运行。 PXE 可以通过网络直接启动一些 Live Linux，或者调用 Linux Installer，GParted 等工具，较使用 U 盘启动更加方便快捷，有多种工具，Live 系统等可供用户挑选，在紧急维护情况下也有很大的作用。 例子：图书馆查询机 图书馆内的图书查询机就是用 PXE 启动的，启动镜像叫 liims，里面包含了一个以图书馆透明计算系统为主页的浏览器（主页包括了图书查询，邮箱登录，学习空间预约等功能），还有瀚海星云的 telnet 客户端和彩虹猫，用户也可以自己启动一个虚拟机，用 PXE 启动进入查询系统。 PXE 怎么用 使用条件 电脑最好内置有 PXE Boot...","categories": ["Technology"],
 "tags": ["PXE"],
@@ -336,7 +342,7 @@ var store = [{
 "teaser": null
 },{
 "title": "一个 NFS 的简介",
-"excerpt":"NFS（网络文件系统，Network File System）是一个分布式的文件系统，可以用于在局域网中共享文件。它通常运用在 Unix 与类 Unix 操作系统中。对于 Linux 服务器之间的文件共享来说，NFS 相比于其他的方案（如 Samba）更加方便，性能也更好。对于应用程序来说，NFS 也是透明的。 简单配置 NFS 我们以两台 Debian 10 的机器为例[^1]简单配置 NFS 服务端。其余的发行版可以查询各自的手册以获取详细信息。 在绝大多数情况下，NFS 支持已经安装在 Linux 内核中。我们可以使用以下命令安装内核态的 NFS 服务器实现： sudo apt install nfs-kernel-server （如果有兼容 NFSv2 和 NFSv3 的需求，需要安装 portmap） 出于安全性的考虑[^2]，我们假设 NFS 共享的根目录是 /srv/nfs4。 如果需要共享的目录在其他位置，可以使用 bind mount 的方式挂载上去。（当然，对于简单的配置来说，不这样做问题也不大） mount --bind 实际放置文件的目录 /srv/nfs/your_folder_name 编辑 /etc/exports，设置共享文件夹的位置、允许访问的...","categories": ["Technology"],
+"excerpt":"NFS（网络文件系统，Network File System）是一个分布式的文件系统，可以用于在局域网中共享文件。它通常运用在 Unix 与类 Unix 操作系统中。对于 Linux 服务器之间的文件共享来说，NFS 相比于其他的方案（如 Samba）更加方便，性能也更好。对于应用程序来说，NFS 也是透明的。 简单配置 NFS 我们以两台 Debian 10 的机器为例1简单配置 NFS 服务端。其余的发行版可以查询各自的手册以获取详细信息。 在绝大多数情况下，NFS 支持已经安装在 Linux 内核中。我们可以使用以下命令安装内核态的 NFS 服务器实现： sudo apt install nfs-kernel-server （如果有兼容 NFSv2 和 NFSv3 的需求，需要安装 portmap） 出于安全性的考虑2，我们假设 NFS 共享的根目录是 /srv/nfs4。 如果需要共享的目录在其他位置，可以使用 bind mount 的方式挂载上去。（当然，对于简单的配置来说，不这样做问题也不大） mount --bind 实际放置文件的目录 /srv/nfs/your_folder_name 编辑 /etc/exports，设置共享文件夹的位置、允许访问的...","categories": ["Technology"],
 "tags": ["NFS"],
 "url": "https://beta.ustclug.org//planet/2019/08/NFS-intro/",
 "teaser": null

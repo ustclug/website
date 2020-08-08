@@ -11,6 +11,7 @@
     <!-- begin _includes/seo.html -->
     <title>PXE 是什么 - LUG @ USTC</title>
     <meta name="description" content="PXE 是什么">
+    <meta name="author" content="sirius">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="zh_CN">
     <meta property="og:site_name" content="LUG @ USTC">
@@ -37,7 +38,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=717d5be">
+    <link rel="stylesheet" href="/assets/css/main.css?v=2309b54">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
     <!--[if IE]>
       <style>
@@ -107,8 +108,11 @@
       <div id="main" role="main">
         <div class="sidebar sticky">
           <div itemscope itemtype="https://schema.org/Person">
+            <div class="author__avatar">
+              <img src="https://secure.gravatar.com/avatar/782354af8f9b412af36a2f9fc2a3c890?s=256&d=identicon&r=g" alt="sirius" itemprop="image">
+            </div>
             <div class="author__content">
-              <h3 class="author__name" itemprop="name"></h3>
+              <h3 class="author__name" itemprop="name">sirius</h3>
             </div>
             <div class="author__urls-wrapper">
               <button class="btn btn--inverse">关注</button>
@@ -209,8 +213,12 @@ chain ${210:string}lpxelinux.0
               <p>另外 iPXE 也可以刻录到 usb 上，这样主机如果想用 PXE 就可以用 usb 启动 iPXE （如果主机自带的 PXE 比较弱），然后使用上面的命令进入 USTC PXE 了。 iPXE 的 usb 镜像可以从 http://boot.ipxe.org/ipxe.usb 下载，然后用 <code class="language-plaintext highlighter-rouge">dd if=ipxe.usb of=/dev/sdX </code>来刻录。</p>
               <p>下载 iso 作为虚拟光驱挂载在虚拟机上，从 CD 启动，</p>
               <h2 id="pxe-有什么">PXE 有什么</h2>
-              <p><img src="https://static.beta.ustclug.org/planet/2018-08-11-1720-ScreenShot.png" alt="img" />
-                PXE 的启动菜单</p>
+              <figure class="">
+                <img src="https://static.beta.ustclug.org/planet/2018-08-11-1720-ScreenShot.png" alt="" />
+                <figcaption>
+                  PXE 的启动菜单
+                </figcaption>
+              </figure>
               <h3 id="linux-安装工具">Linux 安装工具</h3>
               <ul>
                 <li>Ubuntu</li>
@@ -233,10 +241,17 @@ chain ${210:string}lpxelinux.0
               <p><img src="https://static.beta.ustclug.org/planet/2018-08-11-1733-ScreenShot-2.png" alt="img" /></p>
               <h3 id="实用工具">实用工具</h3>
               <ul>
-                <li>Hardware Detection Tools (hdt)</li>
+                <li>
+                  <p>Hardware Detection Tools (hdt)</p>
+                  <figure class="">
+                    <img src="https://static.beta.ustclug.org/planet/2018-08-11-1726-ScreenShot.png" alt="" />
+                    <figcaption>
+                      hdt 中的查看硬盘信息部分
+                    </figcaption>
+                  </figure>
+                </li>
               </ul>
-              <p><img src="https://static.beta.ustclug.org/planet/2018-08-11-1726-ScreenShot.png" alt="img" />
-                hdt 中的查看硬盘信息部分</p>
+              <p>&lt;/figure&gt;</p>
               <ul>
                 <li>PXE Knife</li>
                 <li>GParted Live</li>
@@ -286,7 +301,7 @@ chain ${210:string}lpxelinux.0
               <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fbeta.ustclug.org%2F%2Fplanet%2F2018%2F10%2FPXE-intro%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
             </section>
             <nav class="pagination">
-              <a href="/planet/2018/08/hello-lug-planet/" class="pagination--pager" title="Hello! LUG Planet
+              <a href="/planet/2018/08/USTC-Linux-user-guide/" class="pagination--pager" title="USTC Linux 用户生存指南
 ">上一页</a>
               <a href="/planet/2019/08/NFS-intro/" class="pagination--pager" title="一个 NFS 的简介
 ">下一页</a>
