@@ -383,6 +383,12 @@ var store = [{
 "url": "https://beta.ustclug.org//wiki/intro_english/",
 "teaser": null
 },{
+"title": "联系我们",
+"excerpt":"官方邮件地址 您可以向我们直接发送电子邮件。 参与邮件列表讨论（推荐） 点击此处了解详情 Telegram上的LUG 加群链接见 jointele.ustclug.org 的 DNS TXT 记录 BBS 上的 LUG 前往瀚海星云BBS Linux 版与我们讨论。 QQ群上的LUG 适合于即时性较强的讨论，较正式的讨论还请使用官方邮件列表。 QQ 群: 群号请查看 qq.ustclug.org 的 DNS TXT 记录。校内学生请联系管理员了解详情。 IRC上的LUG 网络：Freenode 频道：#ustc_lug 存档：/~sadhen/irc.html 历史存档：/~guo/irc/irclog.txt Fishroom 存档：https://fishroom.tuna.moe/log/ustclug/today 面对面交流 USTC LUG 在校内的活动室： 西区：西区图书馆 206 室 东区：东区图书馆 605 室（已搬迁） 你也可以在 LUG 举办的各类活动中找到 LUG 的成员并当面进行交流。 QQ...","categories": [],
+"tags": [],
+"url": "https://beta.ustclug.org//wiki/lug/contact/",
+"teaser": null
+},{
 "title": "Linux 101",
 "excerpt":"Linux 101 活动在每年的春季学期举行，旨在帮助对 Linux 感兴趣的新手了解 Linux，学习 Linux。   举办过的 Linux 101 活动列表见 LUG 活动   历史活动      Linux 101 活动讲义   Linux 101 活动讲义仓库   历往 Linux 101 活动存档  ","categories": [],
 "tags": [],
