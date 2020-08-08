@@ -1,0 +1,192 @@
+---
+layout: single
+title: 财务报告
+permalink: /finance/
+share: false
+---
+
+<style>
+    thead {
+        text-align: center !important;
+    }
+
+    .amount {
+        text-align: right;
+    }
+</style>
+<article id="donates">
+    <h2><a href="#donates">捐赠记录</a></h2>
+    <p>
+        捐赠方式请见 <a href="https://lug.ustc.edu.cn/wiki/lug/finance/donate">LUG 官网</a>。
+        本表记载 2018 年换届后的捐赠记录，根据 LUG 电子账册自动生成。
+        之前的记录见<a href="https://lug.ustc.edu.cn/wiki/lug/finance/donate_log">历史存档</a>。
+    </p>
+    <div>
+        <table class="pure-table pure-table-horizontal">
+            <thead>
+                <tr>
+                    <th>日期</th>
+                    <th>捐赠者</th>
+                    <th>数额</th>
+                    <th>用途</th>
+                </tr>
+            </thead>
+            <tbody v-if="records === undefined">
+                <tr>
+                    <td colspan="4">正在加载……</td>
+                </tr>
+            </tbody>
+            <tbody v-else>
+                <tr v-for="i in records">
+                    <td class="date">${i.date}</td>
+                    <td class="payee">${i.payee}</td>
+                    <td class="amount">${i.amount}</td>
+                    <td class="account">${i.account}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</article>
+<article id="servicefunds">
+    <h2><a href="#servicefunds">服务器维护专款</a></h2>
+    <p>
+        本表记载 2018 年换届后的服务器维护专款收支记录，根据 LUG 电子账册自动生成。
+        之前的记录见<a href="https://lug.ustc.edu.cn/wiki/lug/finance/start">历史存档</a>。
+        由于换届前的服务器维护专款支出情况记载不明，在此将 2018 年换届时的所有捐款余额均记为服务器维护专款。
+    </p>
+    <div>
+        <table class="pure-table pure-table-horizontal">
+            <thead>
+                <tr>
+                    <th>日期</th>
+                    <th>数额</th>
+                    <th>事由</th>
+                </tr>
+            </thead>
+            <tbody v-if="records === undefined">
+                <tr>
+                    <td colspan="3">正在加载……</td>
+                </tr>
+            </tbody>
+            <tbody v-else>
+                <tr v-for="i in records">
+                    <td class="date">${i.date}</td>
+                    <td class="amount">${i.amount}</td>
+                    <td class="payee">${i.payee}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</article>
+<article id="generalfunds">
+    <h2><a href="#generalfunds">通用经费</a></h2>
+    <p>
+        本表记载 2018 年换届后的通用经费收支记录，根据 LUG 电子账册自动生成。
+        之前的记录见<a href="https://lug.ustc.edu.cn/wiki/lug/finance/start">历史存档</a>。
+    </p>
+    <div>
+        <table class="pure-table pure-table-horizontal">
+            <thead>
+                <tr>
+                    <th>日期</th>
+                    <th>数额</th>
+                    <th>事由</th>
+                </tr>
+            </thead>
+            <tbody v-if="records === undefined">
+                <tr>
+                    <td colspan="3">正在加载……</td>
+                </tr>
+            </tbody>
+            <tbody v-else>
+                <tr v-for="i in records">
+                    <td class="date">${i.date}</td>
+                    <td class="amount">${i.amount}</td>
+                    <td class="payee">${i.payee}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</article>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script>
+    function getXMLHttpRequest() {
+        let xmlHttp = null;
+        try { xmlHttp = new XMLHttpRequest(); }
+        catch (e) {
+            try { xmlHttp = new ActiveXObject('Msxml2.XMLHTTP'); }
+            catch (e) { xmlHttp = new ActiveXObject('Microsoft.XMLHTTP'); }
+        }
+        return xmlHttp;
+    }
+    app_donates = new Vue({
+        el: '#donates',
+        delimiters: ['${', '}'],
+        data: {
+            records: undefined,
+        },
+        mounted: function () {
+            let xmlHttp = getXMLHttpRequest();
+            xmlHttp.open('GET', 'https://pages.ustclug.org/ledger/donates.txt');
+            xmlHttp.onreadystatechange = function () {
+                if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
+                    app_donates.records = [];
+                    let lines = xmlHttp.responseText.trim().split('\n');
+                    for (let i = 0; i < lines.length; i++) {
+                        let record = JSON.parse(lines[i]);
+                        if (record.payee.endsWith('捐款'))
+                            record.payee = record.payee.slice(0, -2).trim();
+                        if (record.account.startsWith('收入:捐赠:'))
+                            record.account = record.account.slice(6);
+                        app_donates.records.push(record);
+                    }
+                }
+            };
+            xmlHttp.send();
+        },
+    });
+    app_servicefunds = new Vue({
+        el: '#servicefunds',
+        delimiters: ['${', '}'],
+        data: {
+            records: undefined,
+        },
+        mounted: function () {
+            let xmlHttp = getXMLHttpRequest();
+            xmlHttp.open('GET', 'https://pages.ustclug.org/ledger/servicefunds.txt');
+            xmlHttp.onreadystatechange = function () {
+                if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
+                    app_servicefunds.records = [];
+                    let lines = xmlHttp.responseText.trim().split('\n');
+                    for (let i = 0; i < lines.length; i++) {
+                        let record = JSON.parse(lines[i]);
+                        app_servicefunds.records.push(record);
+                    }
+                }
+            };
+            xmlHttp.send();
+        },
+    });
+    app_generalfunds = new Vue({
+        el: '#generalfunds',
+        delimiters: ['${', '}'],
+        data: {
+            records: undefined,
+        },
+        mounted: function () {
+            let xmlHttp = getXMLHttpRequest();
+            xmlHttp.open('GET', 'https://pages.ustclug.org/ledger/generalfunds.txt');
+            xmlHttp.onreadystatechange = function () {
+                if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
+                    app_generalfunds.records = [];
+                    let lines = xmlHttp.responseText.trim().split('\n');
+                    for (let i = 0; i < lines.length; i++) {
+                        let record = JSON.parse(lines[i]);
+                        app_generalfunds.records.push(record);
+                    }
+                }
+            };
+            xmlHttp.send();
+        },
+    });
+</script>
