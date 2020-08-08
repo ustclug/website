@@ -38,7 +38,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=ae18f22">
+    <link rel="stylesheet" href="/assets/css/main.css?v=d1813c4">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
       <style>
@@ -232,14 +232,28 @@
       <footer>
         <!-- start custom footer snippets -->
         <!-- end custom footer snippets -->
-        <div class="page__footer-follow">
-          <ul class="social-icons">
-            <li><strong>关注:</strong></li>
-            <li><a href="https://github.com/ustclug" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
-            <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
-          </ul>
+        <div class="footer-row">
+          <div class="footer-block footer__about">
+            <p>中国科学技术大学 Linux 用户协会是由中国科学技术大学在校的 GNU/Linux 爱好者发起并组成的团体，旨在联合科大的 GNU/Linux
+              使用者，搭建信息交流共享的平台，宣传自由软件的价值，提高自由软件社区文化氛围，推广自由软件的应用。</p>
+          </div>
+          <div class="footer-block footer__contact">
+            <ul>
+              <li>
+                <a href="/wiki/intro/"><i class="fas fa-fw fa-address-card"></i> 关于我们</a>
+              </li>
+              <li>
+                <a href="/wiki/lug/contact/"><i class="fas fa-fw fa-phone-alt"></i> 联系我们</a>
+              </li>
+              <li>
+                <a href="/wiki/lug/contribute/"><i class="fas fa-fw fa-users"></i> 加入我们</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-block footer__logo">
+            <img src="https://ftp.lug.ustc.edu.cn/misc/logo-white.svg" width="33%" />
+          </div>
         </div>
-        <div class="page__footer-copyright">&copy; 2020 USTCLUG. 技术来自于 <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
       </footer>
     </div>
     <script src="/assets/js/main.min.js"></script>
