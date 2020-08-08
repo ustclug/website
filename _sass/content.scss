@@ -1,3 +1,8 @@
+// This file is imported within a { .page__content } block
+& {
+  line-height: 1;
+}
+
 .lug-nav {
   width: 100%;
   display: flex;
