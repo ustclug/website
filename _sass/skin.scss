@@ -1,0 +1,31 @@
+/* ==========================================================================
+   Theme skin
+   ========================================================================== */
+
+// Fonts
+$serif      : Baskerville, Georgia, "Liberation Serif", Times, "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
+$sans-serif : -apple-system, BlinkMacSystemFont, "Noto Sans", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", "Microsoft YaHei", Arial, sans-serif;
+$monospace  : Monaco, Consolas, "Lucida Console", monospace;
+
+// Sizes
+$x-large: 1440px;
+
+// Colors
+$background-color: #f3f6f6 !default;
+$text-color: #424a52 !default;
+$muted-text-color: #424a52 !default;
+$primary-color: #387767 !default;
+$border-color: mix(#fff, #3b4151, 75%) !default;
+$footer-background-color: #30e3ca !default;
+$link-color: #387767 !default;
+$masthead-link-color: white !default;
+$masthead-link-color-hover: white !default;
+$navicon-link-color-hover: mix(#fff, $text-color, 80%) !default;
+
+.page__footer {
+  color: #fff !important; // override
+}
+
+.page__footer-follow .social-icons .svg-inline--fa {
+  color: inherit;
+}

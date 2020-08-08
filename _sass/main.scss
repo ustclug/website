@@ -19,11 +19,27 @@ html {
   }
 }
 
+// Common colors
+
+.masthead,
+.page__footer {
+  background: linear-gradient(to left, #45a247, #283c86);
+  color: $masthead-link-color;
+}
+
 // Top nav bar
 
-.masthead__menu {
-  .greedy-nav {
-    background: white;
+.masthead {
+  border-bottom: none;
+
+  .masthead__menu {
+    .greedy-nav {
+      background: inherit;
+
+      a {
+        color: inherit;
+      }
+    }
   }
 }
 
@@ -40,6 +56,16 @@ html {
 }
 
 // Page content
+
+.page__inner-wrap {
+  header + .page__content {
+    margin-top: 1rem;
+  }
+
+  header .page__title {
+    font-size: 2em;
+  }
+}
 
 .page__content {
   @import "content";
