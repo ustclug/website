@@ -92,13 +92,12 @@ analytics:
     anonymize_ip         : # true, false (default)
 
 
-# Site Author
+# Site Author, this is the default
 author:
   name             : "USTCLUG"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : ""
+  avatar           : "https://static.beta.ustclug.org/logo.png"
+  bio              : "中国科学技术大学 Linux 用户协会"
   location         : "USTC"
-  email            :
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -286,10 +285,11 @@ defaults:
       type: news
     values:
       show_date: true
-      read_time: true
   - scope:
+      read_time: true
       path: ""
       type: planet
     values:
+      author_profile: true
       show_date: true
       read_time: true

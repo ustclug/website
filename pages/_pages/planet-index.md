@@ -1,5 +1,6 @@
 ---
 title: "LUG Planet"
+tagline: "A planet where ideas sparkle"
 permalink: /planet/
 layout: home
 pagination:
