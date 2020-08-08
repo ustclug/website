@@ -95,7 +95,7 @@ analytics:
 # Site Author, this is the default
 author:
   name             : "USTCLUG"
-  avatar           : "https://static.beta.ustclug.org/logo.png"
+  avatar           : "https://secure.gravatar.com/avatar/94c03bc620ea2cf7dc239ac0535cad8e?s=256&d=identicon&r=g"
   bio              : "中国科学技术大学 Linux 用户协会"
   location         : "USTC"
   links:

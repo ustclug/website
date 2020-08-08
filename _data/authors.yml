@@ -1,4 +1,21 @@
+admin:
+  name: USTCLUG
+  avatar: "https://secure.gravatar.com/avatar/94c03bc620ea2cf7dc239ac0535cad8e?s=256&d=identicon&r=g"
+  bio: "中国科学技术大学 Linux 用户协会"
+  location: "USTC"
+
+mk:
+  name: Kai Ma
+  avatar: "https://secure.gravatar.com/avatar/31f43a534603ab8cbb4ee043fe6b2d5f?s=256&d=identicon&r=g"
+
+sirius:
+  name: sirius
+  avatar: "https://secure.gravatar.com/avatar/782354af8f9b412af36a2f9fc2a3c890?s=256&d=identicon&r=g"
+
+taoky:
+  name: taoky
+  avatar: "https://secure.gravatar.com/avatar/6e349261285ec9c4a9b049d14793227f?s=256&d=identicon&r=g"
+
 xenon:
   name: Xenon
-  bio: ""
   avatar: "https://secure.gravatar.com/avatar/20700df7e498eee4c023090a0c2f3c04?s=256&d=identicon&r=g"

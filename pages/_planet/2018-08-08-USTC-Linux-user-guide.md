@@ -1,6 +1,6 @@
-​---
+---
 title: "USTC Linux 用户生存指南"
-author: "Kai Ma"
+author: mk
 categories: 
 - Experience
 tags: 
@@ -10,8 +10,6 @@ tags:
 本指南指导中科大 Linux 用户如何使用 Linux 完成各门课程。
 
 **注意：本指南目前仅包含部分计算机专业本科课程。**欢迎其他同学贡献更多内容！
-
-
 
 ## 程序设计
 

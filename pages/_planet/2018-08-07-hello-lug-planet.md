@@ -1,5 +1,6 @@
 ---
 title: Hello! LUG Planet
+author: admin
 categories: []
 tags: []
 ---
