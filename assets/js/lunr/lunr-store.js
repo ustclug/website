@@ -593,12 +593,6 @@ var store = [{
 "url": "https://beta.ustclug.org//wiki/lug/events/sfd/",
 "teaser": null
 },{
-"title": "LUG 活动",
-"excerpt":"LUG 活动概述请移步 LUG首页。 LUG 的所有活动均依照 社团章程 开展。 欢迎订阅 LUG 日历。 2016 年及之后的活动不在这里重复记录小聚信息了，请移步每周小聚页面查看。 Latest Events 日期 时间 地点 内容 2020-06-07 14:30-15:45 线上直播 Linux 101 第七课 Video 2020-05-24 14:30-15:00 线上直播 Linux 101 第六课 Video 2020-05-20 19:30-22:00 线上会议 (Zoom) 社员代表大会暨换届大会 2020-05-03 14:30-15:30 线上直播 Linux 101 第五课 Video 2020-05-03 14:30-16:30 线上直播 Linux 101 第四课...","categories": [],
-"tags": [],
-"url": "https://beta.ustclug.org//wiki/lug/events/",
-"teaser": null
-},{
 "title": "LUG 每周小聚",
 "excerpt":"我们曾经…… 我们曾经苦于学习 Linux 无门， 我们发现很棒的工具却难于上手， 我们想分享自己的心得却无人理会， 我们曾经四处询问却处处碰壁。 每周小聚！ 每周我们选定一个主题和一位主持， 与您一同分享使用 Linux 的心得体会， 群策群力解决令人抓耳挠腮的问题， 共同发扬 GNU 文化，提高 Linux 水平。 自 2011 年 10 月起，每个周末都有每周小聚活动，由一位同学做技术分享演讲，欢迎所有师生参与。具体时间、地点和内容会在周四发到邮件列表和瀚海星云BBS Notice/Linux 版上。 如果您希望讨论某个主题或主持小聚，欢迎加入 LUG 邮件列表 每周小聚的时间地点我们会通过 LUG 邮件列表、BBS Linux/Notice 版等处发出通知，请大家持续关注！ 每周小聚的资料在这里：https://ftp.lug.ustc.edu.cn/weekly_party/ Notice 主讲人请注意： 毋忘上传 slides，越早越好(在愿意分享 slides 的前提下) slides 的版权问题？ 在 BBS Linux 发通知时，注意打上 LUG 标签 尽早编辑本 wiki，活动时间以本...","categories": [],
 "tags": [],
