@@ -5,7 +5,7 @@
 
 2018 年换届后的财务报告由 LUG 电子账册自动生成，不再人工更新。本页面只为历史存档目的保留。 
 
-<https://news.ustclug.org/finance/>
+</wiki/lug/finance/>
 
 ## Debian/OSS服务器维护专款
 

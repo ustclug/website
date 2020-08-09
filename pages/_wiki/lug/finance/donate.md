@@ -5,7 +5,7 @@
 
 如果你喜欢 USTC LUG 并希望为协会发展提供经济上的援助，可以向我们捐赠。 
 
-为了准确记载捐赠情况、确保财务规范，捐赠后请 **务必向 donate@ustclug.org 发送邮件** 说明以下信息，并关注[财务报告](https://news.ustclug.org/finance/ "https://news.ustclug.org/finance/")中的记载是否及时、一致！ 
+为了准确记载捐赠情况、确保财务规范，捐赠后请 **务必向 donate@ustclug.org 发送邮件** 说明以下信息，并关注[财务报告](/wiki/lug/finance/ "/news/finance/")中的记载是否及时、一致！ 
 
   + 您捐款的 **日期** 、 **途径** 、 **金额**
 
