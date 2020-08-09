@@ -7,4 +7,4 @@
 
 随着我校网络设施的不断升级和发展，网络应用在科研工作和日常生活中发挥着日益重要的作用。同时，PXE相关的技术在这些年中也有了很大的发展，可以为大家提供更多更实用的服务。 
 
-[PXE 服务使用简介](../../server/pxe "server:pxe:start")
+[PXE 服务使用简介](/wiki/server/pxe "server:pxe:start")

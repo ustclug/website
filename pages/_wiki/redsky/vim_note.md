@@ -177,25 +177,25 @@ Vim的强大也体现在其搜索/替换的时候，能够使用强大的正则�
   + zencoding
 
   + …… 
-    - [上述插件原始文件的打包下载](../../../ftp.lug.ustc.edu.cn/_redsky/vim-scripts.tar "http://lug.ustc.edu.cn/~redsky/vim-scripts.tar.gz")，其实我更推荐大家到Vim官方网站上面去搜索这些插件，一边看着简介一边下载。
+    - [上述插件原始文件的打包下载](/.ustc.edu.cn/_redsky/vim-scripts.tar "http://lug.ustc.edu.cn/~redsky/vim-scripts.tar.gz")，其实我更推荐大家到Vim官方网站上面去搜索这些插件，一边看着简介一边下载。
 
 ## Vim配色方案
 
     - tango2: 
 
-![:-\)](../lib/images/smileys/icon_smile.gif) 可以与终端配色一致 / ![:-\(](../lib/images/smileys/icon_sad.gif)
+![:-\)](/wiki/lib/images/smileys/icon_smile.gif) 可以与终端配色一致 / ![:-\(](../lib/images/smileys/icon_sad.gif)
 
  深色背景下的紫色比较惨淡
 
     - eclipse： 
 
-![:-\)](../lib/images/smileys/icon_smile.gif) gvim下配色接近eclipse / ![:-\(](../lib/images/smileys/icon_sad.gif)
+![:-\)](/wiki/lib/images/smileys/icon_smile.gif) gvim下配色接近eclipse / ![:-\(](../lib/images/smileys/icon_sad.gif)
 
  终端下配色不好协调
 
     - solarized： 
 
-![:-\)](../lib/images/smileys/icon_smile.gif) 暖色调，可以调节背景，有配套的终端配色 / ![:-\(](../lib/images/smileys/icon_sad.gif)
+![:-\)](/wiki/lib/images/smileys/icon_smile.gif) 暖色调，可以调节背景，有配套的终端配色 / ![:-\(](../lib/images/smileys/icon_sad.gif)
 
  部分颜色与highlight插件配合后比较刺眼
 
@@ -211,7 +211,7 @@ Vim的强大也体现在其搜索/替换的时候，能够使用强大的正则�
 
 ## Vim资源列表
 
-[我的Vim配置文件](../../../ftp.lug.ustc.edu.cn/_redsky/vim-config.tar "http://lug.ustc.edu.cn/~redsky/vim-config.tar.gz")：包括.vimrc/.gvimrc/.vim/myVim，注意前面有“.”的是隐藏文件。配置文件里面已经补上了注释。 
+[我的Vim配置文件](/.ustc.edu.cn/_redsky/vim-config.tar "http://lug.ustc.edu.cn/~redsky/vim-config.tar.gz")：包括.vimrc/.gvimrc/.vim/myVim，注意前面有“.”的是隐藏文件。配置文件里面已经补上了注释。 
 
 [CoolShell：简明Vim练级攻略](http://coolshell.cn/articles/5426.html "http://coolshell.cn/articles/5426.html")
 

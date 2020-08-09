@@ -19,7 +19,7 @@ Arch Linux ARM 是针对ARM架构移植的 Arch Linux 发行版。您可以使�
 
 编辑 `/etc/pacman.d/mirrorlist` ，先注释掉里面的所有行，然后在文件的最顶端添加 
 
-[mirrorlist](../../_export/code/mirrors/help/mirrorlist435f-2?codeblock=0 "下载片段")
+[mirrorlist](/wiki/_export/code/mirrors/help/mirrorlist435f-2?codeblock=0 "下载片段")
 
     
     

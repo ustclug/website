@@ -16,7 +16,7 @@
 
 新建或修改 /etc/portage/repos.conf ： 
 
-[/etc/portage/repos.conf](../../_export/code/mirrors/help/repos435f.conf?codeblock=0 "下载片段")
+[/etc/portage/repos.conf](/wiki/_export/code/mirrors/help/repos435f.conf?codeblock=0 "下载片段")
 
     
     

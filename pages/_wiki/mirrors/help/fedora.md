@@ -19,7 +19,7 @@
 
 将以下保存为 fedora-ustc.repo 
 
-[fedora-ustc.repo](../../_export/code/mirrors/help/fedora-ustc435f.repo?codeblock=0 "下载片段")
+[fedora-ustc.repo](/wiki/_export/code/mirrors/help/fedora-ustc435f.repo?codeblock=0 "下载片段")
 
     
     
@@ -56,7 +56,7 @@
 
 将以下保存为 fedora-updates-ustc.repo 
 
-[fedora-updates-ustc.repo](../../_export/code/mirrors/help/fedora-updates-ustccc37.repo?codeblock=1 "下载片段")
+[fedora-updates-ustc.repo](/wiki/_export/code/mirrors/help/fedora-updates-ustccc37.repo?codeblock=1 "下载片段")
 
     
     

@@ -5,7 +5,7 @@
 
 这个脚本借助于<http://www.flvcd.com/>，分析各主流视频网站的视频地址，根据给定的视频网页地址，下载其中的视频。 
 
-[get-video.sh](../_export/code/scripts/get-video435f.sh?codeblock=0 "下载片段")
+[get-video.sh](/wiki/_export/code/scripts/get-video435f.sh?codeblock=0 "下载片段")
 
     
     
@@ -46,7 +46,7 @@
 
 如果不需要下载，也可以直接使用mplayer等播放器播放： 
 
-[play-video.sh](../_export/code/scripts/play-videoc273.sh?codeblock=2 "下载片段")
+[play-video.sh](/wiki/_export/code/scripts/play-videoc273.sh?codeblock=2 "下载片段")
 
     
     

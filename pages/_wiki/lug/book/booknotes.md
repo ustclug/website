@@ -29,8 +29,8 @@
 
 | 笔记                                                                                                                                                                             | 作者   |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------|
-| [《黑客与画家》读书笔记](../../user/sadhen/hackers_and_painters "user:sadhen:hackers_and_painters")                                                                              | sadhen |
-| [《鸟哥的 Linux 私房菜 -- 基础学习篇》读书笔记](../../linux_digest/reading_notes/zsj_niao_linux_sfc_basic_readnote "linux_digest:reading_notes:zsj_niao_linux_sfc_basic_readnote") | zsj    |
+| [《黑客与画家》读书笔记](/wiki/user/sadhen/hackers_and_painters "user:sadhen:hackers_and_painters")                                                                              | sadhen |
+| [《鸟哥的 Linux 私房菜 -- 基础学习篇》读书笔记](/wiki/linux_digest/reading_notes/zsj_niao_linux_sfc_basic_readnote "linux_digest:reading_notes:zsj_niao_linux_sfc_basic_readnote") | zsj    |
 
   
 
@@ -38,8 +38,8 @@
 
 | 笔记                                                                                                                                                              | 作者   |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------|
-| [来自王光远同学的emacs读书笔记](../../linux_digest/reading_notes/wang-guangyuan-emacs-read-digest "linux_digest:reading_notes:wang-guangyuan-emacs-read-digest") | 王光远  |
-| [Emacs读书笔记](../../user/sadhen/emacs "user:sadhen:emacs")                                                                                                  | sadhen |
+| [来自王光远同学的emacs读书笔记](/wiki/linux_digest/reading_notes/wang-guangyuan-emacs-read-digest "linux_digest:reading_notes:wang-guangyuan-emacs-read-digest") | 王光远  |
+| [Emacs读书笔记](/wiki/user/sadhen/emacs "user:sadhen:emacs")                                                                                                  | sadhen |
 
   
 
@@ -47,7 +47,7 @@
 
 | 笔记                                                                                                                            | 作者  |
 |---------------------------------------------------------------------------------------------------------------------------------|-------|
-| [手把手读书报告](../../linux_digest/reading_notes/ruoshan-lfs-read-notes "linux_digest:reading_notes:ruoshan-lfs-read-notes") | 黄若山 |
+| [手把手读书报告](/wiki/linux_digest/reading_notes/ruoshan-lfs-read-notes "linux_digest:reading_notes:ruoshan-lfs-read-notes") | 黄若山 |
 
   
 
@@ -55,7 +55,7 @@
 
 | 笔记                                                                                              | 作者 |
 |---------------------------------------------------------------------------------------------------|-----|
-| [ 《程序员的自我修养》读书笔记](../../user/boj/linkers-and-loaders "user:boj:linkers-and-loaders") | boj |
+| [ 《程序员的自我修养》读书笔记](/wiki/user/boj/linkers-and-loaders "user:boj:linkers-and-loaders") | boj |
 
   
 

@@ -7,7 +7,7 @@
 
 来源：[http://bbs.ustc.edu.cn/cgi/go?cgi=bbscon&bid=77&fn=M4CAEC63D](http://bbs.ustc.edu.cn/cgi/go?cgi=bbscon&bid=77&fn=M4CAEC63D "http://bbs.ustc.edu.cn/cgi/go?cgi=bbscon&bid=77&fn=M4CAEC63D")
 
-[wlt.sh](../_export/code/scripts/wlt435f.sh?codeblock=0 "下载片段")
+[wlt.sh](/wiki/_export/code/scripts/wlt435f.sh?codeblock=0 "下载片段")
 
     
     
@@ -50,7 +50,7 @@
 
 cURL 版本 
 
-[wlt.sh](../_export/code/scripts/wltcc37.sh?codeblock=1 "下载片段")
+[wlt.sh](/wiki/_export/code/scripts/wltcc37.sh?codeblock=1 "下载片段")
 
     
     
@@ -61,7 +61,7 @@ cURL 版本
 
 Wget 版本 
 
-[wlt.sh](../_export/code/scripts/wltc273.sh?codeblock=2 "下载片段")
+[wlt.sh](/wiki/_export/code/scripts/wltc273.sh?codeblock=2 "下载片段")
 
     
     
@@ -76,7 +76,7 @@ Wget 版本
 
 来源：[http://bbs.ustc.edu.cn/cgi/go?cgi=bbscon&bid=77&fn=M41770FCB](http://bbs.ustc.edu.cn/cgi/go?cgi=bbscon&bid=77&fn=M41770FCB "http://bbs.ustc.edu.cn/cgi/go?cgi=bbscon&bid=77&fn=M41770FCB")
 
-[wlt.pl](../_export/code/scripts/wlt4f98.pl?codeblock=3 "下载片段")
+[wlt.pl](/wiki/_export/code/scripts/wlt4f98.pl?codeblock=3 "下载片段")
 
     
     

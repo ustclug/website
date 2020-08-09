@@ -25,6 +25,6 @@
 
   + 在[LUG Gitlab](https://git.lug.ustc.edu.cn/ "https://git.lug.ustc.edu.cn") 与 [GitHub](https://github.com/ustclug "https://github.com/ustclug") 中为 LUG 项目贡献代码。
 
-  + 联系管理员以加入[服务器维护小组](../serveradm "serveradm:start")。
+  + 联系管理员以加入[服务器维护小组](/wiki/serveradm "serveradm:start")。
 
 我们的issue tracker: <https://github.com/ustclug/discussions>

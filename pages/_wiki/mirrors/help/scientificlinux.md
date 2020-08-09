@@ -11,7 +11,7 @@
 
 下载sl-ustc.repo放入/etc/yum.repo.d/中 
 
-[sl-ustc.repo](../../_export/code/mirrors/help/sl-ustc435f.repo?codeblock=0 "下载片段")
+[sl-ustc.repo](/wiki/_export/code/mirrors/help/sl-ustc435f.repo?codeblock=0 "下载片段")
 
     
     

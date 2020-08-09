@@ -9,7 +9,7 @@
 
 ### 什么时候借
 
-想要阅读的同学可以直接来活动室。活动室在西区图书馆，最好在[每周小聚](../events/weeklyparty "lug:events:weeklyparty")之后随我们一同前往，其他时间也可以[联系图书管理员](mailto:zyfwong@gmail.com "zyfwong@gmail.com")。 
+想要阅读的同学可以直接来活动室。活动室在西区图书馆，最好在[每周小聚](/wiki/lug/events/weeklyparty "lug:events:weeklyparty")之后随我们一同前往，其他时间也可以[联系图书管理员](mailto:zyfwong@gmail.com "zyfwong@gmail.com")。 
 
 ### 借阅手续简明版
 
@@ -63,7 +63,7 @@
 
   + **借阅流程**
 
-    1. 发邮件给书库管理员（目前的图书管理员是[sadhen](../../user/sadhen "user:sadhen:start")）预约要借的书目，约定时间前往活动室取书
+    1. 发邮件给书库管理员（目前的图书管理员是[sadhen](/wiki/user/sadhen "user:sadhen:start")）预约要借的书目，约定时间前往活动室取书
 
     2. 书库管理员编辑[借阅记录](borrow_book "lug:book:borrow_book")记录借阅信息，借阅信息包括借阅者姓名、联系方式（邮件或者手机至少一个）、借阅时间、应还时间等
 

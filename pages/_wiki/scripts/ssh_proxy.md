@@ -5,7 +5,7 @@
 
 这个脚本通过自动登录免费的ssh账户，实现自动的ssh代理， 绑定的端口为7070 
 
-[ssh_proxy.sh](../_export/code/scripts/ssh_proxy435f.sh?codeblock=0 "下载片段")
+[ssh_proxy.sh](/wiki/_export/code/scripts/ssh_proxy435f.sh?codeblock=0 "下载片段")
 
     
     
@@ -23,7 +23,7 @@
     echo "$PASSWORD" #打印密码，当服务器忙时，密码获取的字段是服务器忙的信息
     ssh.ex $HOST $USER $PASSWORD #利用expect实现自动登录
 
-[ssh_proxy.ex](../_export/code/scripts/ssh_proxycc37.ex?codeblock=1 "下载片段")
+[ssh_proxy.ex](/wiki/_export/code/scripts/ssh_proxycc37.ex?codeblock=1 "下载片段")
 
     
     

@@ -35,7 +35,7 @@ rsync- **部分** [为什么？](https://servers.ustclug.org/2014/08/mirrors-new
 
 ### 使用帮助
 
-请使用[开源镜像使用帮助列表](../../mirrors/help "https://lug.ustc.edu.cn/wiki/mirrors/help")，或点击主页源列表旁边的“Help”链接。 
+请使用[开源镜像使用帮助列表](/wiki/mirrors/help "https://lug.ustc.edu.cn/wiki/mirrors/help")，或点击主页源列表旁边的“Help”链接。 
 
 欢迎您协助我们更新使用帮助，请访问[ LUG 的 GitHub 项目](https://github.com/ustclug/mirrorhelp "https://github.com/ustclug/mirrorhelp")。我们对您的帮助表示感谢。 
 
@@ -49,7 +49,7 @@ rsync- **部分** [为什么？](https://servers.ustclug.org/2014/08/mirrors-new
 
 ### 服务器维护文档
 
-[mirrors.ustc.edu.cn](../../serveradm/mirrors "serveradm:mirrors")
+[mirrors.ustc.edu.cn](/wiki/serveradm/mirrors "serveradm:mirrors")
 
 ### 联系方式
 

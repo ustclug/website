@@ -77,4 +77,4 @@
 
 * * *
 
-[科大开源软件镜像服务简介](../../lug/services/mirrors "lug:services:mirrors")
+[科大开源软件镜像服务简介](/ug/services/mirrors "lug:services:mirrors")

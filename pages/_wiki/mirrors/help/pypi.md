@@ -21,7 +21,7 @@
 
 如： 
 
-[pip.conf](../../_export/code/mirrors/help/pipcc37.conf?codeblock=1 "下载片段")
+[pip.conf](/wiki/_export/code/mirrors/help/pipcc37.conf?codeblock=1 "下载片段")
 
     
     

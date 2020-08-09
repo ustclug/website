@@ -27,7 +27,7 @@ Debian 的默认源地址可能依情况而不同，请注意更改 httpredir.de
 
 也可以直接编辑，以 Jessie 为例，编辑 /etc/apt/sources.list 文件，在文件最前面添加以下条目 
 
-[sources.list](../../_export/code/mirrors/help/sources435f.list?codeblock=0 "下载片段")
+[sources.list](/wiki/_export/code/mirrors/help/sources435f.list?codeblock=0 "下载片段")
 
     
     

@@ -50,7 +50,7 @@ grub4dos仅由两部分组成：处于任意一个可访问分区根目录的grl
 
   + Windows：可使用grubinst_gui，可从<http://download.gna.org/grubutil/>下载。
 
-[![](../_media/greenwarm/grub4dos-installer.html)](../_detail/greenwarm/grub4dos-installerf38c?id=greenwarm%3Astart "greenwarm:grub4dos-installer.png")
+[![](/wiki/_media/greenwarm/grub4dos-installer.html)](../_detail/greenwarm/grub4dos-installerf38c?id=greenwarm%3Astart "greenwarm:grub4dos-installer.png")
 
   + Linux: 
 

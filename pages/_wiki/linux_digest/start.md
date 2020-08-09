@@ -18,15 +18,15 @@ permalink: /wiki/linux_digest/
 
 | 文章名称                                                                                                                                                       | 备注 |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|-----|
-| [《程序员的自我修养》读书笔记](../user/boj/linkers-and-loaders "user:boj:linkers-and-loaders")                                                                 |     |
+| [《程序员的自我修养》读书笔记](/wiki/user/boj/linkers-and-loaders "user:boj:linkers-and-loaders")                                                                 |     |
 | [读书笔记：关于维护服务器的一些技巧](reading_notes/snullp2011-winter-reading-notes "linux_digest:reading_notes:snullp2011-winter-reading-notes")               |     |
 | [手把手读书报告](reading_notes/ruoshan-lfs-read-notes "linux_digest:reading_notes:ruoshan-lfs-read-notes")                                                 |     |
 | [《鸟哥的 Linux 私房菜 -- 基础学习篇》读书笔记](reading_notes/zsj_niao_linux_sfc_basic_readnote "linux_digest:reading_notes:zsj_niao_linux_sfc_basic_readnote") |     |
 | [来自王光远同学的emacs读书笔记](reading_notes/wang-guangyuan-emacs-read-digest "linux_digest:reading_notes:wang-guangyuan-emacs-read-digest")                |     |
-| [《黑客与画家》读书笔记](../user/sadhen/hackers_and_painters "user:sadhen:hackers_and_painters")                                                              |     |
+| [《黑客与画家》读书笔记](/wiki/user/sadhen/hackers_and_painters "user:sadhen:hackers_and_painters")                                                              |     |
 
   
-另请参阅[读书笔记](../lug/book/booknotes "lug:book:booknotes")
+另请参阅[读书笔记](/wiki/lug/book/booknotes "lug:book:booknotes")
 
 #### 其它文章
 
@@ -47,23 +47,23 @@ permalink: /wiki/linux_digest/
 
 | 文章名称                                                                              | 作者      |
 |--------------------------------------------------------------------------------------|-----------|
-| [使用 chroot 编译 android](../user/sadhen/android "user:sadhen:android")         | sadhen    |
-| [对 GNU 和 Linux 的一些理解](../greenwarm/linux_summary "greenwarm:linux_summary") | greenwarm |
-| [认识 Linux 远程桌面控制](../greenwarm/remotedesktop "greenwarm:remotedesktop")   | greenwarm |
-| [Windows 下的开源及优秀免费软件](../greenwarm/win32free "greenwarm:win32free")     | greenwarm |
-| [虚拟化简介](../greenwarm/virtualization "greenwarm:virtualization")             | greenwarm |
-| [引导技术浅析——grub4dos 快速入门](../greenwarm "greenwarm:start")            | greenwarm |
-| [Linux 的多媒体支持](../greenwarm/multimedia "greenwarm:multimedia")              | greenwarm |
-| [Live Linux 发行版](../greenwarm/livedist "greenwarm:livedist")                  | greenwarm |
-| [Vim 笔记](../redsky/vim_note "redsky:vim_note")                                | redsky    |
-| [Emacs 笔记](../user/sadhen/emacs "user:sadhen:emacs")                          | sadhen    |
+| [使用 chroot 编译 android](/wiki/user/sadhen/android "user:sadhen:android")         | sadhen    |
+| [对 GNU 和 Linux 的一些理解](/wiki/greenwarm/linux_summary "greenwarm:linux_summary") | greenwarm |
+| [认识 Linux 远程桌面控制](/wiki/greenwarm/remotedesktop "greenwarm:remotedesktop")   | greenwarm |
+| [Windows 下的开源及优秀免费软件](/wiki/greenwarm/win32free "greenwarm:win32free")     | greenwarm |
+| [虚拟化简介](/wiki/greenwarm/virtualization "greenwarm:virtualization")             | greenwarm |
+| [引导技术浅析——grub4dos 快速入门](/wiki/greenwarm "greenwarm:start")            | greenwarm |
+| [Linux 的多媒体支持](/wiki/greenwarm/multimedia "greenwarm:multimedia")              | greenwarm |
+| [Live Linux 发行版](/wiki/greenwarm/livedist "greenwarm:livedist")                  | greenwarm |
+| [Vim 笔记](/wiki/redsky/vim_note "redsky:vim_note")                                | redsky    |
+| [Emacs 笔记](/wiki/user/sadhen/emacs "user:sadhen:emacs")                          | sadhen    |
 
   
 
 #### 参考页面
 
-  + [实用脚本集锦](../scripts "scripts")
+  + [实用脚本集锦](/wiki/scripts "scripts")
 
-  + [提问的智慧](../doc/smart-questions "doc:smart-questions")
+  + [提问的智慧](/wiki/doc/smart-questions "doc:smart-questions")
 
 你需要登录发表评论。 

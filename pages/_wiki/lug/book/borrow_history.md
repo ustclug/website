@@ -3,7 +3,7 @@
 
 # 借阅记录
 
-如欲借阅图书，请参阅[ 图书借阅管理制度](../borrow_book "http://lug.ustc.edu.cn/wiki/lug/borrow_book")。 
+如欲借阅图书，请参阅[ 图书借阅管理制度](/wiki/lug/borrow_book "http://lug.ustc.edu.cn/wiki/lug/borrow_book")。 
 
 ## 2020 年借阅记录
 
@@ -149,9 +149,9 @@ TCP/IP Illustrated Volume 1: The Protocols| 郑子涵| zzh1996@mail.ustc.edu.cn|
 | C语言程序设计                     | 老祝          |                           | 2012年12月31日 |               | 2015年（已还） | \-                                                                                                                                                                              |
 | 科技想要什么                      | boj           | bojieli AT gmail.com      | 2012-09-02    | 2012-11-02    | 不详（已还）   | \-                                                                                                                                                                              |
 | 人工智能                         | boj           | bojieli AT gmail.com      | 2012-12-04    | 2013-02-04    | 2013-06-23  | \-                                                                                                                                                                              |
-| 鸟哥(基础学习篇)                  | 朱晟菁         | zsj950618 AT gmail.com    | 2012-12-08    | 2013-02-08    | 2013年      | [鸟哥的_linux_私房菜_--_基础学习篇_读书笔记](../../linux_digest/reading_notes/zsj_niao_linux_sfc_basic_readnote "linux_digest:reading_notes:zsj_niao_linux_sfc_basic_readnote") |
+| 鸟哥(基础学习篇)                  | 朱晟菁         | zsj950618 AT gmail.com    | 2012-12-08    | 2013-02-08    | 2013年      | [鸟哥的_linux_私房菜_--_基础学习篇_读书笔记](/wiki/linux_digest/reading_notes/zsj_niao_linux_sfc_basic_readnote "linux_digest:reading_notes:zsj_niao_linux_sfc_basic_readnote") |
 | Node.js开发指南                  | 林太星         |                           | 2012-12-24    | 2013-02-24    | 2013-05-12  | \-                                                                                                                                                                              |
-| 《黑客与画家》                     | sadhen        | sadhen1992 AT gmail.com   | 2012-12-31    | 2013-03-01    | 2013-01-12  | [《黑客与画家》读书笔记](../../user/sadhen/hackers_and_painters "user:sadhen:hackers_and_painters")                                                                             |
+| 《黑客与画家》                     | sadhen        | sadhen1992 AT gmail.com   | 2012-12-31    | 2013-03-01    | 2013-01-12  | [《黑客与画家》读书笔记](/wiki/user/sadhen/hackers_and_painters "user:sadhen:hackers_and_painters")                                                                             |
 | 《Git权威指南》                    | sadhen        | sadhen1992 AT gmail.com   | 2012-12-31    | 2013-03-01    | 不详（已还）   | -                                                                                                                                                                               |
 | 失控: 全人类的最终命运和结局        | jxl           | jxl888@mail.ustc.edu.cn   | 2013-02-25    | 2013-04-25    | 2013-05-27  | \-                                                                                                                                                                              |
 
@@ -162,7 +162,7 @@ TCP/IP Illustrated Volume 1: The Protocols| 郑子涵| zzh1996@mail.ustc.edu.cn|
 | 书名                      | 借阅者                | 联系方式                              | 借阅日期    | 应还日期   | 归还日期   | 读书报告(链接)                                                                                                                                   |
 |---------------------------|----------------------|--------------------------------------|------------|-----------|-----------|------------------------------------------------------------------------------------------------------------------------------------------------|
 | 系统管理指南 Apache         | 张昊翀                | solomon DOT zhc AT gmail DOT com     | 2010.12.13 | 2011.2.16 | 2011.1.9  | [读书报告](http://goodchong.com/administering-apache-read-report/ "http://goodchong.com/administering-apache-read-report/")                     |
-| 学习GUN Emacs             | 王光远SA08006038      | ieee AT mail.ustc.edu.cn 13696544286 | 2011.1.6   | 2011.3.6  | 2011.3.3  | [读书报告](../../linux_digest/reading_notes/wang-guangyuan-emacs-read-digest "linux_digest:reading_notes:wang-guangyuan-emacs-read-digest") |
+| 学习GUN Emacs             | 王光远SA08006038      | ieee AT mail.ustc.edu.cn 13696544286 | 2011.1.6   | 2011.3.6  | 2011.3.3  | [读书报告](/wiki/linux_digest/reading_notes/wang-guangyuan-emacs-read-digest "linux_digest:reading_notes:wang-guangyuan-emacs-read-digest") |
 | 手把手教你构建自己的Linux系统 | 孙锡麟                | s.sn.giraffe AT gmail.com            | 2011.1.6   | 2011.3.6  | 2011.2.23 |                                                                                                                                                |
 | 《深入理解Linux内核》第三版    | 孙锡麟                | s.sn.giraffe AT gmail.com            | 2011.2.23  | 2011.4.23 | 2011.4.16 |                                                                                                                                                |
 | 手把手教你构建自己的Linux系统 | 黄若山                | ruoshan612 AT gmail.com              | 2011.2.25  | 2011.4.25 | 2011.4.25 |                                                                                                                                                |

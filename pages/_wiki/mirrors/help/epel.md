@@ -21,7 +21,7 @@
 
 下载下面的两个文件到/etc/yum.repos.d/ 
 
-[epel.repo](../../_export/code/mirrors/help/epel435f.repo?codeblock=0 "下载片段")
+[epel.repo](/wiki/_export/code/mirrors/help/epel435f.repo?codeblock=0 "下载片段")
 
     
     
@@ -53,7 +53,7 @@
     gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-6
     gpgcheck=1
 
-[epel-testing.repo](../../_export/code/mirrors/help/epel-testingcc37.repo?codeblock=1 "下载片段")
+[epel-testing.repo](/wiki/_export/code/mirrors/help/epel-testingcc37.repo?codeblock=1 "下载片段")
 
     
     

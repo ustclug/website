@@ -13,7 +13,7 @@
 
 ## 技术细节
 
-[图书馆查询机系统](../../serveradm/lib "serveradm:lib")
+[图书馆查询机系统](/wiki/serveradm/lib "serveradm:lib")
 
 [Github 项目](https://github.com/ustclug/liimstrap "https://github.com/ustclug/liimstrap")
 

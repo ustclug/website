@@ -33,7 +33,7 @@ ALL
 
 当然直接编辑 /etc/apt/sources.list 文件（需要使用 sudo）也可以，以 Ubuntu 16.04 为例，在文件最前面添加以下条目： 
 
-[sources.list](../../_export/code/mirrors/help/sources435f-4.list?codeblock=0 "下载片段")
+[sources.list](/wiki/_export/code/mirrors/help/sources435f-4.list?codeblock=0 "下载片段")
 
     
     

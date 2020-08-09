@@ -57,5 +57,5 @@ USTC LUG邮件列表所有帖子都永久存档、公开可见：
 
 原文： <http://www.catb.org/esr/faqs/smart-questions.html>
 
-中文版： [提问的智慧](../doc/smart-questions "doc:smart-questions")
+中文版： [提问的智慧](/wiki/doc/smart-questions "doc:smart-questions")
   *[HTML]: HyperText Markup Language

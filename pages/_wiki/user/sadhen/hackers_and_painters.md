@@ -23,7 +23,7 @@
 
 ### 哪种编程语言最好
 
-经常在邮件列表里面看到一群人，为了自己喜爱的编程语言争论。那么哪种语言最好呢？其实往往这些问题的提出者不怀好意，或者不知道如何[提问](../../doc/smart-questions "doc:smart-questions")？这种人通常被称为[ Troll](http://en.wikipedia.org/wiki/Troll_\(Internet\) "http://en.wikipedia.org/wiki/Troll_%28Internet%29")。  
+经常在邮件列表里面看到一群人，为了自己喜爱的编程语言争论。那么哪种语言最好呢？其实往往这些问题的提出者不怀好意，或者不知道如何[提问](/wiki/doc/smart-questions "doc:smart-questions")？这种人通常被称为[ Troll](http://en.wikipedia.org/wiki/Troll_\(Internet\) "http://en.wikipedia.org/wiki/Troll_%28Internet%29")。  
 
     
     

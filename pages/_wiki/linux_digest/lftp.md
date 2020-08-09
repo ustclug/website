@@ -11,7 +11,7 @@
 
 lftp启动后会一次读取/etc/lftp.conf、~/.lftprc和~/.lftp/rc。 通常我们将常用的设置写入~/.lftprc或者~/.lftp/rc中。 下面是一份lftprc的样例： 
 
-[.lftprc](../_export/code/linux_digest/435f.lftprc?codeblock=0 "下载片段")
+[.lftprc](/wiki/_export/code/linux_digest/435f.lftprc?codeblock=0 "下载片段")
 
     
     
@@ -67,14 +67,14 @@ lftp启动后会一次读取/etc/lftp.conf、~/.lftprc和~/.lftp/rc。 通常我
 
 科大的童鞋们都有一个300M的静态主页空间，很多人都会用这个空间来制作漂亮的个人主页，那你是怎么同步的呢？是不是每次都需要打开nautilus或者filezilla等工具一个个文件的复制呢？ 来看看用lftp的脚本同步吧。 
 
-[.bash_aliases](../_export/code/linux_digest/cc37.bash_aliases?codeblock=1 "下载片段")
+[.bash_aliases](/wiki/_export/code/linux_digest/cc37.bash_aliases?codeblock=1 "下载片段")
 
     
     
     
     alias update-homepage='lftp -f ~/.bin/update-homepage.lftp'
 
-[update-homepage.lftp](../_export/code/linux_digest/update-homepagec273.lftp?codeblock=2 "下载片段")
+[update-homepage.lftp](/wiki/_export/code/linux_digest/update-homepagec273.lftp?codeblock=2 "下载片段")
 
     
     
@@ -92,6 +92,6 @@ lftp启动后会一次读取/etc/lftp.conf、~/.lftprc和~/.lftp/rc。 通常我
     
     update-homepage
 
-即可完成同步工作。也可将lftp -f ~/.bin/update-homepage.lftp这条命令写入[crontab](../linux/crontab "linux:crontab")，每天自动同步。 
+即可完成同步工作。也可将lftp -f ~/.bin/update-homepage.lftp这条命令写入[crontab](/wiki/linux/crontab "linux:crontab")，每天自动同步。 
 
 你需要登录发表评论。 

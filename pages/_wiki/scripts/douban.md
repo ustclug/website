@@ -7,7 +7,7 @@
 
 针对网速慢的用户以及豆瓣电台的改动做了些修改～: D 
 
-[dbfm.pl](../_export/code/scripts/dbfm435f.pl?codeblock=0 "下载片段")
+[dbfm.pl](/wiki/_export/code/scripts/dbfm435f.pl?codeblock=0 "下载片段")
 
     
     
