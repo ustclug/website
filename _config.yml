@@ -143,6 +143,7 @@ footer:
 # Reading Files
 include: ["_pages"]
 exclude:
+  - ".*"
   - "*.sublime-project"
   - "*.sublime-workspace"
   - vendor

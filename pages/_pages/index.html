@@ -29,13 +29,11 @@ header:
     <div class="description">
       <p>
       中国科学技术大学 Linux 用户协会是由中国科学技术大学在校的 GNU/Linux 爱好者发起并组成的团体，旨在联合科大的 GNU/Linux 使用者，搭建信息交流共享的平台，宣传自由软件的价值，提高自由软件社区文化氛围，推广自由软件的应用。
-      <!--br>
-      <a href="{{ "/wiki/intro" | relative_url }}">了解更多</a-->
       </p>
     </div>
     <div class="link-group">
       <div class="link-group-row">
-        <a href="{{ "wiki/lug/events/calendar" | relative_url }}"><i class="fas fa-calendar-alt fa-5x" aria-hidden="true"></i><span>活动日历</span></a>
+        <a href="{{ "/wiki/lug/events/calendar" | relative_url }}"><i class="fas fa-calendar-alt fa-5x" aria-hidden="true"></i><span>活动日历</span></a>
         <a href="{{ "/wiki/lug/contact" | relative_url }}"><i class="fas fa-comments fa-5x" aria-hidden="true"></i><span>联系我们</span></a>
       </div>
       <div class="link-group-row">
@@ -45,3 +43,16 @@ header:
     </div>
   </div>
 </nav>
+
+<div class="archive-group">
+  <div class="archive-group__item">
+    <h3 class="archive__subtitle">
+      <a href="{{ "/news/" | relative_url }}">最新文章</a>
+    </h3>
+    {%- comment %} Combined news and planet {% endcomment -%}
+    {% assign posts = site.news | concat: site.planet | sort: 'date' | reverse %}
+    {% for post in posts limit: 5 %}
+      {% include archive-single.html %}
+    {% endfor %}
+  </div>
+</div>
