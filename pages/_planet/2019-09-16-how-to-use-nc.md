@@ -42,7 +42,7 @@ tags:
 
 Windows 10 中，你可以使用资源管理器 -> 文件来在你存放 `nc` 的目录中打开命令提示符或 PowerShell。
 
-{% include figure image_path="https://static.beta.ustclug.org/planet/explorer-1024x510.png" caption="在 Windows 资源管理器中打开命令提示符或 PowerShell" %}
+{% include figure image_path="/static/planet/explorer-1024x510.png" caption="在 Windows 资源管理器中打开命令提示符或 PowerShell" %}
 
 或者，你也可以在开始菜单 -> Windows 系统中打开命令提示符，或者在开始菜单 -> Windows PowerShell 中打开 PowerShell，然后使用 `cd` 命令转移到对应的目录：输入 `cd 文件夹名` 可以让你转移到对应的文件夹，输入 `cd ..` 可以让你转移到上面一层目录。使用 `dir` 命令，可以显示当前目录下所有文件。同时，使用 Tab 键可以帮助你补全名称。
 
@@ -53,7 +53,7 @@ Windows 10 中，你可以使用资源管理器 -> 文件来在你存放 `nc` �
 
 当显示以下内容时，说明你成功运行了它。
 
-{% include figure image_path="https://static.beta.ustclug.org/planet/cmdncat-1024x596.png" caption="成功运行 `ncat`" %}
+{% include figure image_path="/static/planet/cmdncat-1024x596.png" caption="成功运行 `ncat`" %}
 
 ### Linux & macOS
 
@@ -78,6 +78,6 @@ usage: nc [-46AacCDdEFhklMnOortUuvz] [-K tc] [-b boundif] [-i interval] [-p sour
 
 输入 `GET / HTTP/1.0`。这表示，我们使用 `HTTP/1.0` 这个协议版本，用 `GET` 的方式请求根 `/`。输入两下回车，代表我们的 HTTP 请求完成。如果你的网络畅通，百度的网页服务器会立刻返回大量信息，可以自行搜索，了解它们的含义。现在，你成功（在不使用浏览器的情况下）完成了一次与百度网站的连接！
 
-{% include figure image_path="https://static.beta.ustclug.org/planet/nc-1024x596.png" caption="Success!" %}
+{% include figure image_path="/static/planet/nc-1024x596.png" caption="Success!" %}
 
 如果你成功了，那么你可以开始愉快地完成我们的题目了！

@@ -11,7 +11,6 @@
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
 theme                    : "minimal-mistakes-jekyll"
-# remote_theme           : "mmistakes/minimal-mistakes"
 
 # Site Settings
 locale                   : "zh-CN"
@@ -20,10 +19,10 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "USTCLUG"
 description              : "Under construction!"
-url                      : "https://beta.ustclug.org/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-static_url               : "https://static.beta.ustclug.org"
+url                      : "https://lug.ustc.edu.cn/"
+static_url               : "https://lug.ustc.edu.cn/static"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "ustclug/website-beta" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "ustclug/website" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "https://ftp.lug.ustc.edu.cn/misc/LUG.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
@@ -46,12 +45,7 @@ comments:
   staticman:
     branch               : # "master"
     endpoint             : # "https://{your Staticman v3 API}/v3/entry/github/"
-reCaptcha:
-  siteKey                :
-  secret                 :
-atom_feed:
-  path                   : # blank (default) uses feed.xml
-search                   : # true, false (default)
+search                   : true # false (default)
 search_full_content      : # true, false (default)
 search_provider          : # lunr (default), algolia, google
 algolia:
