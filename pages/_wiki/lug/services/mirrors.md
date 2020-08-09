@@ -9,8 +9,8 @@
 
 我们将一如既往的做好镜像服务器的维护工作，争取为大家提供更新更好的服务，使参与维护的同学得到更好的锻炼。 
 
-[详细介绍](../../server/mirrors "server:mirrors:start")
+[详细介绍](/wiki/server/mirrors "server:mirrors:start")
 
 * * *
 
-[ mirrors 首页](http://mirrors.ustc.edu.cn/ "http://mirrors.ustc.edu.cn/") [科大源使用帮助](../../mirrors/help "mirrors:help")
+[ mirrors 首页](http://mirrors.ustc.edu.cn/ "http://mirrors.ustc.edu.cn/") [科大源使用帮助](/wiki/mirrors/help "mirrors:help")
