@@ -7,7 +7,10 @@ body.layout--home {
 .archive-group {
   display: flex;
   justify-content: space-around;
-  font-size: 0.9em;
+
+  @include breakpoint($large) {
+    font-size: 0.9em;
+  }
 }
 
 .archive-group__item {
@@ -16,7 +19,10 @@ body.layout--home {
 
   &:first-child {
     margin-left: 0;
-    max-width: 67%;
+
+    @include breakpoint($large) {
+      max-width: 67%;
+    }
   }
 
   .archive__subtitle a {
