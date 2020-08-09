@@ -1,0 +1,256 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.20.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="zh" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <!-- begin _includes/seo.html -->
+    <title>Docker 镜像使用帮助 - LUG @ USTC</title>
+    <meta name="description" content="Docker 镜像使用帮助">
+    <meta name="author" content="USTCLUG">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="LUG @ USTC">
+    <meta property="og:title" content="Docker 镜像使用帮助">
+    <meta property="og:url" content="https://beta.ustclug.org//wiki/mirrors/help/docker/">
+    <meta property="og:description" content="Docker 镜像使用帮助">
+    <meta property="article:published_time" content="2020-08-09T15:12:14+08:00">
+    <link rel="canonical" href="https://beta.ustclug.org//wiki/mirrors/help/docker/">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+      
+          "@type": "Person",
+          "name": "USTCLUG",
+          "url": "https://beta.ustclug.org//"
+      
+      }
+    </script>
+    <!-- end _includes/seo.html -->
+    <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="LUG @ USTC Feed">
+    <!-- https://t.co/dKP3o1e -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+    </script>
+    <!-- For all browsers -->
+    <link rel="stylesheet" href="/assets/css/main.css?v=c5a82c3">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" media="invalid" onload="this.media='all'">
+    <!--[if IE]>
+      <style>
+        /* old IE unsupported flexbox fixes */
+        .greedy-nav .site-title {
+          padding-right: 3em;
+        }
+        .greedy-nav button {
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 100%;
+        }
+      </style>
+    <![endif]-->
+    <!-- start custom head snippets -->
+    <!-- insert favicons. use https://realfavicongenerator.net/ -->
+    <!-- end custom head snippets -->
+  </head>
+  <body class="layout--single">
+    <nav class="skip-links">
+      <h2 class="screen-reader-text">跳转链接</h2>
+      <ul>
+        <li><a href="#site-nav" class="screen-reader-shortcut">转到主导航栏</a></li>
+        <li><a href="#main" class="screen-reader-shortcut">转到内容</a></li>
+        <li><a href="#footer" class="screen-reader-shortcut">转到底部</a></li>
+      </ul>
+    </nav>
+    <!--[if lt IE 9]>
+      <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+    <![endif]-->
+    <div class="masthead">
+      <div class="masthead__inner-wrap">
+        <div class="masthead__menu">
+          <nav id="site-nav" class="greedy-nav">
+            <a class="site-logo" href="/"><img src="https://ftp.lug.ustc.edu.cn/misc/LUG.png" alt=""></a>
+            <a class="site-title" href="/">
+              LUG @ USTC
+            </a>
+            <ul class="visible-links">
+              <li class="masthead__menu-item">
+                <a href="/wiki/">Wiki</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="/news/">News</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="/planet/">Planet</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="https://github.com/ustclug">GitHub</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="https://mirrors.ustc.edu.cn/">Mirrors</a>
+              </li>
+            </ul>
+            <button class="greedy-nav__toggle hidden" type="button">
+              <span class="visually-hidden">切换菜单</span>
+              <div class="navicon"></div>
+            </button>
+            <ul class="hidden-links hidden"></ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="initial-content">
+      <div id="main" role="main">
+        <div class="sidebar sticky">
+          <nav class="nav__list">
+            <input id="ac-toc" name="accordion-toc" type="checkbox" />
+            <label for="ac-toc">切换菜单</label>
+            <ul class="nav__items">
+              <li>
+                <span class="nav__sub-title">LUG @ USTC</span>
+                <ul>
+                  <li><a href="/">LUG 首页</a></li>
+                  <li><a href="/news/">LUG 新闻</a></li>
+                  <li><a href="/wiki/lug/links/">友情链接</a></li>
+                  <li><a href="/wiki/mirrors/">开源软件镜像</a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="nav__sub-title">活动</span>
+                <ul>
+                  <li><a href="/wiki/lug/events/">LUG 活动</a></li>
+                  <li><a href="/wiki/lug/events/weeklyparty/">每周小聚</a></li>
+                  <li><a href="/wiki/lug/mailinglist/">邮件列表</a></li>
+                  <li><a href="/wiki/lug/book/">LUG 书库</a></li>
+                  <li><a href="https://news.ustclug.org/finance/">LUG 财务</a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="nav__sub-title">联系</span>
+                <ul>
+                  <li><a href="/wiki/lug/person-in-charge/">LUG 负责人</a></li>
+                  <li><a href="/wiki/lug/contact/">联系我们</a></li>
+                  <li><a href="/wiki/lug/contribute/">加入我们</a></li>
+                  <li><a href="/wiki/lug/finance/donate/">捐赠我们</a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="nav__sub-title">资源</span>
+                <ul>
+                  <li><a href="/wiki/linux_digest/">Linux 文摘</a></li>
+                  <li><a href="/wiki/lug/resources/">资源导航</a></li>
+                  <li><a href="https://servers.ustclug.org/">服务器新闻</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+          <meta itemprop="headline" content="Docker 镜像使用帮助">
+          <meta itemprop="description" content="Docker 镜像使用帮助">
+          <meta itemprop="datePublished" content="2020-08-09T15:12:14+08:00">
+          <div class="page__inner-wrap">
+            <header>
+              <h1 id="page-title" class="page__title" itemprop="headline">Docker 镜像使用帮助
+              </h1>
+            </header>
+            <section class="page__content" itemprop="text">
+              <aside class="sidebar__right sticky">
+                <nav class="toc">
+                  <header>
+                    <h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4>
+                  </header>
+                  <ul class="toc__menu">
+                    <li><a href="#使用说明">使用说明</a></li>
+                  </ul>
+                </nav>
+              </aside>
+              <h2 id="使用说明">使用说明</h2>
+              <p>新版的 Docker 使用 /etc/docker/daemon.json（Linux） 或者 %programdata%\docker\config\daemon.json（Windows） 来配置 Daemon。</p>
+              <p>请在该配置文件中加入（没有该文件的话，请先建一个）：</p>
+              <div class="language-plaintext highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>{
+  "registry-mirrors": ["https://docker.mirrors.ustc.edu.cn"]
+}
+</code></pre>
+                </div>
+              </div>
+              <p>Docker Daemon configuration file 文档： <a href="https://docs.docker.com/engine/reference/commandline/dockerd/#/daemon-configuration-file">https://docs.docker.com/engine/reference/commandline/dockerd/#/daemon-configuration-file</a></p>
+              <p>Docker for Windows 文档: <a href="https://docs.docker.com/docker-for-windows/#/docker-daemon">https://docs.docker.com/docker-for-windows/#/docker-daemon</a></p>
+              <hr />
+              <p>以下是一些过时的配置方法</p>
+              <p>在 Docker 的启动参数中加入:</p>
+              <div class="language-plaintext highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>--registry-mirror=https://docker.mirrors.ustc.edu.cn
+</code></pre>
+                </div>
+              </div>
+              <p>Ubuntu 用户（包括使用 systemd 的 Ubuntu 15.04）可以修改 /etc/default/docker 文件，加入如下参数：</p>
+              <div class="language-plaintext highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>DOCKER_OPTS="--registry-mirror=https://docker.mirrors.ustc.edu.cn"
+</code></pre>
+                </div>
+              </div>
+              <p>其他 systemd 用户可以通过执行 sudo systemctl edit docker.service 来修改设置, 覆盖默认的启动参数:</p>
+              <div class="language-plaintext highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>[Service]
+ExecStart=
+ExecStart=/usr/bin/docker -d -H fd:// --registry-mirror=https://docker.mirrors.ustc.edu.cn
+</code></pre>
+                </div>
+              </div>
+            </section>
+            <footer class="page__meta">
+              <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-08-09T15:12:14+08:00">2020 年 8 月 9 日</time></p>
+            </footer>
+            <nav class="pagination">
+              <a href="/wiki/mirrors/help/debian/" class="pagination--pager" title="Debian镜像使用帮助
+">上一页</a>
+              <a href="/wiki/mirrors/help/dotdeb/" class="pagination--pager" title="Dotdeb镜像使用帮助
+">下一页</a>
+            </nav>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+        <!-- end custom footer snippets -->
+        <div class="footer-row">
+          <div class="footer-block footer__about">
+            <p>中国科学技术大学 Linux 用户协会是由中国科学技术大学在校的 GNU/Linux 爱好者发起并组成的团体，旨在联合科大的 GNU/Linux
+              使用者，搭建信息交流共享的平台，宣传自由软件的价值，提高自由软件社区文化氛围，推广自由软件的应用。</p>
+          </div>
+          <div class="footer-block footer__contact">
+            <ul>
+              <li>
+                <a href="/wiki/intro/"><i class="fas fa-fw fa-address-card"></i> 关于我们</a>
+              </li>
+              <li>
+                <a href="/wiki/lug/contact/"><i class="fas fa-fw fa-phone-alt"></i> 联系我们</a>
+              </li>
+              <li>
+                <a href="/wiki/lug/contribute/"><i class="fas fa-fw fa-users"></i> 加入我们</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-block footer__logo">
+            <img src="https://ftp.lug.ustc.edu.cn/misc/logo-white.svg" width="33%" />
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="/assets/js/main.min.js"></script>
+    <img src="https://static.beta.ustclug.org/USTC_logo.svg" style="position: fixed; bottom: -320px; left: -200px; opacity: 0.1; z-index: -100;" />
+  </body>
+</html>

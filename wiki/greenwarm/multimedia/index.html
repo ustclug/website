@@ -1,0 +1,338 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.20.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="zh" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <!-- begin _includes/seo.html -->
+    <title>Linux的多媒体支持 - LUG @ USTC</title>
+    <meta name="description" content="Linux的多媒体支持">
+    <meta name="author" content="USTCLUG">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="LUG @ USTC">
+    <meta property="og:title" content="Linux的多媒体支持">
+    <meta property="og:url" content="https://beta.ustclug.org//wiki/greenwarm/multimedia/">
+    <meta property="og:description" content="Linux的多媒体支持">
+    <meta property="article:published_time" content="2020-08-09T15:12:14+08:00">
+    <link rel="canonical" href="https://beta.ustclug.org//wiki/greenwarm/multimedia/">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+      
+          "@type": "Person",
+          "name": "USTCLUG",
+          "url": "https://beta.ustclug.org//"
+      
+      }
+    </script>
+    <!-- end _includes/seo.html -->
+    <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="LUG @ USTC Feed">
+    <!-- https://t.co/dKP3o1e -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+    </script>
+    <!-- For all browsers -->
+    <link rel="stylesheet" href="/assets/css/main.css?v=c5a82c3">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" media="invalid" onload="this.media='all'">
+    <!--[if IE]>
+      <style>
+        /* old IE unsupported flexbox fixes */
+        .greedy-nav .site-title {
+          padding-right: 3em;
+        }
+        .greedy-nav button {
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 100%;
+        }
+      </style>
+    <![endif]-->
+    <!-- start custom head snippets -->
+    <!-- insert favicons. use https://realfavicongenerator.net/ -->
+    <!-- end custom head snippets -->
+  </head>
+  <body class="layout--single">
+    <nav class="skip-links">
+      <h2 class="screen-reader-text">跳转链接</h2>
+      <ul>
+        <li><a href="#site-nav" class="screen-reader-shortcut">转到主导航栏</a></li>
+        <li><a href="#main" class="screen-reader-shortcut">转到内容</a></li>
+        <li><a href="#footer" class="screen-reader-shortcut">转到底部</a></li>
+      </ul>
+    </nav>
+    <!--[if lt IE 9]>
+      <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+    <![endif]-->
+    <div class="masthead">
+      <div class="masthead__inner-wrap">
+        <div class="masthead__menu">
+          <nav id="site-nav" class="greedy-nav">
+            <a class="site-logo" href="/"><img src="https://ftp.lug.ustc.edu.cn/misc/LUG.png" alt=""></a>
+            <a class="site-title" href="/">
+              LUG @ USTC
+            </a>
+            <ul class="visible-links">
+              <li class="masthead__menu-item">
+                <a href="/wiki/">Wiki</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="/news/">News</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="/planet/">Planet</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="https://github.com/ustclug">GitHub</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="https://mirrors.ustc.edu.cn/">Mirrors</a>
+              </li>
+            </ul>
+            <button class="greedy-nav__toggle hidden" type="button">
+              <span class="visually-hidden">切换菜单</span>
+              <div class="navicon"></div>
+            </button>
+            <ul class="hidden-links hidden"></ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="initial-content">
+      <div id="main" role="main">
+        <div class="sidebar sticky">
+          <nav class="nav__list">
+            <input id="ac-toc" name="accordion-toc" type="checkbox" />
+            <label for="ac-toc">切换菜单</label>
+            <ul class="nav__items">
+              <li>
+                <span class="nav__sub-title">LUG @ USTC</span>
+                <ul>
+                  <li><a href="/">LUG 首页</a></li>
+                  <li><a href="/news/">LUG 新闻</a></li>
+                  <li><a href="/wiki/lug/links/">友情链接</a></li>
+                  <li><a href="/wiki/mirrors/">开源软件镜像</a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="nav__sub-title">活动</span>
+                <ul>
+                  <li><a href="/wiki/lug/events/">LUG 活动</a></li>
+                  <li><a href="/wiki/lug/events/weeklyparty/">每周小聚</a></li>
+                  <li><a href="/wiki/lug/mailinglist/">邮件列表</a></li>
+                  <li><a href="/wiki/lug/book/">LUG 书库</a></li>
+                  <li><a href="https://news.ustclug.org/finance/">LUG 财务</a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="nav__sub-title">联系</span>
+                <ul>
+                  <li><a href="/wiki/lug/person-in-charge/">LUG 负责人</a></li>
+                  <li><a href="/wiki/lug/contact/">联系我们</a></li>
+                  <li><a href="/wiki/lug/contribute/">加入我们</a></li>
+                  <li><a href="/wiki/lug/finance/donate/">捐赠我们</a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="nav__sub-title">资源</span>
+                <ul>
+                  <li><a href="/wiki/linux_digest/">Linux 文摘</a></li>
+                  <li><a href="/wiki/lug/resources/">资源导航</a></li>
+                  <li><a href="https://servers.ustclug.org/">服务器新闻</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+          <meta itemprop="headline" content="Linux的多媒体支持">
+          <meta itemprop="description" content="Linux的多媒体支持">
+          <meta itemprop="datePublished" content="2020-08-09T15:12:14+08:00">
+          <div class="page__inner-wrap">
+            <header>
+              <h1 id="page-title" class="page__title" itemprop="headline">Linux的多媒体支持
+              </h1>
+            </header>
+            <section class="page__content" itemprop="text">
+              <aside class="sidebar__right sticky">
+                <nav class="toc">
+                  <header>
+                    <h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4>
+                  </header>
+                  <ul class="toc__menu">
+                    <li><a href="#多媒体文件结构介绍">多媒体文件结构介绍</a>
+                      <ul>
+                        <li><a href="#音视频流">音视频流</a></li>
+                        <li><a href="#文件容器">文件容器</a></li>
+                        <li><a href="#编码">编码</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#linux的多媒体框架">Linux的多媒体框架</a>
+                      <ul>
+                        <li><a href="#gstreamer">GStreamer</a></li>
+                        <li><a href="#xine">Xine</a></li>
+                        <li><a href="#mplayermencoder">Mplayer/Mencoder</a></li>
+                        <li><a href="#vlc">VLC</a></li>
+                        <li><a href="#xmms2">XMMS2</a></li>
+                        <li><a href="#ffmpeg">FFmpeg</a></li>
+                        <li><a href="#handbrake">HandBrake</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#linux的编解码器">Linux的编解码器</a>
+                      <ul>
+                        <li><a href="#神级的解码器libavcodec">神级的解码器libavcodec</a></li>
+                        <li><a href="#昔日王者的编码器xvid">昔日王者的编码器xvid</a></li>
+                        <li><a href="#前沿编码器x264">前沿编码器x264</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#解流与混流">解流与混流</a>
+                      <ul>
+                        <li><a href="#mkvtoolnix">mkvtoolnix</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#用mplayer看影片">用Mplayer看影片</a>
+                      <ul>
+                        <li><a href="#设置编解码器和输出设备">设置编解码器和输出设备</a></li>
+                        <li><a href="#设置字幕">设置字幕</a></li>
+                        <li><a href="#关闭屏幕保护">关闭屏幕保护</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#用ffmpeg录屏">用ffmpeg录屏</a></li>
+                    <li><a href="#用handbrake转码">用HandBrake转码</a></li>
+                  </ul>
+                </nav>
+              </aside>
+              <p>平时爱折腾多媒体方面的东西，对多媒体多少也有一点了解，下面分享一些Linux多媒体应用的见解，不足之处欢迎大家指正。</p>
+              <p>本文的组织如下：前面是对整体情况的一些介绍，后面就是具体的应用了。</p>
+              <h2 id="多媒体文件结构介绍">多媒体文件结构介绍</h2>
+              <h3 id="音视频流">音视频流</h3>
+              <p>音视频流是多媒体文件的核心数据。</p>
+              <h3 id="文件容器">文件容器</h3>
+              <p>音视频流封装在文件里的方式。</p>
+              <h3 id="编码">编码</h3>
+              <p>音视频流如果以原始编码的方式存储，将需占用巨大的空间，为此需要编码以达到压缩的目的。</p>
+              <h2 id="linux的多媒体框架">Linux的多媒体框架</h2>
+              <h3 id="gstreamer">GStreamer</h3>
+              <p>成熟，LGPL，因而被广泛使用。可以使用gstreamer-ffmpeg，还有gstreamer-pitfdll来使用Windows的Direct Show滤镜（win32codecs）。GNOME下有著名的前端Totem。</p>
+              <h3 id="xine">Xine</h3>
+              <p>另一个多媒体框架，GPL。曾经的亮点是可以wrapper Windows的DirectShow滤镜（win32codecs）。</p>
+              <h3 id="mplayermencoder">Mplayer/Mencoder</h3>
+              <p>完整的多媒体平台。Mplayer是一个播放器，Mencoder是一个非常有名的转码器，Windows下很多转码工具其实都是它的前端。因为Mplayer主要是作为一个播放器，所以其对影音源的读取能力很强，包括各种DVD和蓝光DVD。通常，即使你使用ffmpeg制作DVDRip，也需要使用Mplayer来先将影音流dump出来。</p>
+              <h3 id="vlc">VLC</h3>
+              <p>完整统一的多媒体平台。与Mplayer一样同时支持编解码和播放，同时对流媒体支持非常好，甚至用来在线播放ftp里的电影都非常稳定，可以作为流媒体服务器。 VLC提供了一个完整的框架，但是由于年纪轻，文档少，一些功能还有不稳定的因素，因此现在还不是最完美的方案，但我们有理由相信，也许将来VLC将成为主流的跨平台播放器。</p>
+              <h3 id="xmms2">XMMS2</h3>
+              <p>精炼的音频播放框架。命令行参数十分友好，而且是以后台daemon的方式运行，因此是个非常好的命令行音乐播放器。</p>
+              <h3 id="ffmpeg">FFmpeg</h3>
+              <p>通用的转码平台，大牛Fabrice Bellard发起的项目，libavcodec就是其中最重要的一个组件，实际上上边很多播放器强大的解码能力都是由此项目提供的。 ffmpeg可以支持copy，可以用来从影片里提取声音，或者切割多媒体文件。由于它是作为一个转码平台，能够输出许多容器格式，因此在提取和切割方面十分强大。</p>
+              <h3 id="handbrake">HandBrake</h3>
+              <p>针对视频收藏分享的转码平台，能够使用x264和xvid两种编码器，并最后封装成强大的mkv格式。各平台下都有相应的版本；GUI和CLI接口十分友好，参数设置方便，且可以从GUI生成命令行参数。</p>
+              <h2 id="linux的编解码器">Linux的编解码器</h2>
+              <h3 id="神级的解码器libavcodec">神级的解码器libavcodec</h3>
+              <p>FFmpeg中最重要的部分，对i386和arm指令集优化极高，遗憾地是现在对多核的支持还比较早期。</p>
+              <h3 id="昔日王者的编码器xvid">昔日王者的编码器xvid</h3>
+              <p>当年DVD Rip的事实标准格式。据说是MPEG4标准的一个实现，很多便携MP4都支持这种格式（通常是用avi封装）。</p>
+              <h3 id="前沿编码器x264">前沿编码器x264</h3>
+              <p>h264编码器的一个实现，现在几乎所有的高清电影都用这种格式和该编码器编码，将来应该会更加流行；普清视频也有用这种编码器编码，通常称为half cd，以提供较好的压缩率。 而且h264的软硬件解码已十分完善，很多显卡也支持h264硬件解码，同时也有可以接受的软件解码库。所以无论从压缩质量还是兼容性来说，都可以使用它来编码你的收藏视频。 ffmpeg和mencoder都有x264支持，只要在编译时开启了相应选项，就能直接在其中方便地使用x264。</p>
+              <h2 id="解流与混流">解流与混流</h2>
+              <h3 id="mkvtoolnix">mkvtoolnix</h3>
+              <p>MKV的推动者，最完美的MKV解决方案。可以从GUI生成命令行参数。</p>
+              <h2 id="用mplayer看影片">用Mplayer看影片</h2>
+              <p>Mplayer非常强大，不仅对ffmpeg的libavcodec支持非常好，还能调用各种外部的解码库；缺点是没有好用的GUI前端，Gnome Mplayer还不错，但是还是有些不足的细小地方，但是Mplayer的CLI是非常强大的。下面介绍~/.mplayer/config文件的配置。</p>
+              <p>顺便再提一个很shit的问题：如果你用的是A卡+fglrx的驱动，你需要使用gl模式的输出，原因如下：</p>
+              <p>Catalyst’s Xv implementation is broken (visual glitches, no vsync, wrong colors.) Xv with Catalyst is supposed to only have correct colors when you connect your card to a TV</p>
+              <p>无语了，不得不承认M$ PC机本来就不是为Linux设计的，在M$ PC机诞生之初，在M$ PC里装Linux是非法的。就好像现在刷路由器和手机一样，只不过现在只是保修没了而已。</p>
+              <h3 id="设置编解码器和输出设备">设置编解码器和输出设备</h3>
+              <div class="language-plaintext highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>vfm="ffmpeg"
+afm="ffmpeg"
+vo=xv
+ao=alsa
+</code></pre>
+                </div>
+              </div>
+              <h3 id="设置字幕">设置字幕</h3>
+              <div class="language-plaintext highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>fontconfig=yes
+font='WenQuanYi Micro Hei'
+# ass-hinting=0
+# ass-styles=
+sub-fuzziness=1
+slang=Chinese,chs,zh
+subfont-text-scale=2
+subfont-osd-scale=2
+subpos=95
+subcp='enca:zh:cp936'
+</code></pre>
+                </div>
+              </div>
+              <h3 id="关闭屏幕保护">关闭屏幕保护</h3>
+              <div class="language-plaintext highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>heartbeat-cmd="gnome-screensaver-command -p" 
+</code></pre>
+                </div>
+              </div>
+              <h2 id="用ffmpeg录屏">用ffmpeg录屏</h2>
+              <div class="language-plaintext highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>ffmpeg -f x11grab -q 2 -r 15
+</code></pre>
+                </div>
+              </div>
+              <h2 id="用handbrake转码">用HandBrake转码</h2>
+              <p>HandBrake本来主要是针对DVD收藏的，但由于其使用的解码前端是libavcodec，而现在libavcodec几乎已经支持所有格式，所以HandBrake已经可以作为一个通用的转码工具，输出编码是非常适合收藏的h264或xvid。我相机拍下来的影像都是用它来转码的。</p>
+              <p>HandBrake的操作是图形界面的，与普通的转码软件差不多，很容易适应，这里就不做赘述了。</p>
+            </section>
+            <footer class="page__meta">
+              <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-08-09T15:12:14+08:00">2020 年 8 月 9 日</time></p>
+            </footer>
+            <nav class="pagination">
+              <a href="/wiki/greenwarm/livedist/" class="pagination--pager" title="Live Linux 发行版
+">上一页</a>
+              <a href="/wiki/greenwarm/remotedesktop/" class="pagination--pager" title="认识Linux远程桌面控制
+">下一页</a>
+            </nav>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+        <!-- end custom footer snippets -->
+        <div class="footer-row">
+          <div class="footer-block footer__about">
+            <p>中国科学技术大学 Linux 用户协会是由中国科学技术大学在校的 GNU/Linux 爱好者发起并组成的团体，旨在联合科大的 GNU/Linux
+              使用者，搭建信息交流共享的平台，宣传自由软件的价值，提高自由软件社区文化氛围，推广自由软件的应用。</p>
+          </div>
+          <div class="footer-block footer__contact">
+            <ul>
+              <li>
+                <a href="/wiki/intro/"><i class="fas fa-fw fa-address-card"></i> 关于我们</a>
+              </li>
+              <li>
+                <a href="/wiki/lug/contact/"><i class="fas fa-fw fa-phone-alt"></i> 联系我们</a>
+              </li>
+              <li>
+                <a href="/wiki/lug/contribute/"><i class="fas fa-fw fa-users"></i> 加入我们</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-block footer__logo">
+            <img src="https://ftp.lug.ustc.edu.cn/misc/logo-white.svg" width="33%" />
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="/assets/js/main.min.js"></script>
+    <img src="https://static.beta.ustclug.org/USTC_logo.svg" style="position: fixed; bottom: -320px; left: -200px; opacity: 0.1; z-index: -100;" />
+  </body>
+</html>

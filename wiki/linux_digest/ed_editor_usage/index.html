@@ -1,0 +1,269 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.20.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="zh" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <!-- begin _includes/seo.html -->
+    <title>ed 文本编辑器使用笔记 - LUG @ USTC</title>
+    <meta name="description" content="ed 文本编辑器使用笔记">
+    <meta name="author" content="USTCLUG">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="LUG @ USTC">
+    <meta property="og:title" content="ed 文本编辑器使用笔记">
+    <meta property="og:url" content="https://beta.ustclug.org//wiki/linux_digest/ed_editor_usage/">
+    <meta property="og:description" content="ed 文本编辑器使用笔记">
+    <meta property="article:published_time" content="2020-08-09T15:12:14+08:00">
+    <link rel="canonical" href="https://beta.ustclug.org//wiki/linux_digest/ed_editor_usage/">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+      
+          "@type": "Person",
+          "name": "USTCLUG",
+          "url": "https://beta.ustclug.org//"
+      
+      }
+    </script>
+    <!-- end _includes/seo.html -->
+    <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="LUG @ USTC Feed">
+    <!-- https://t.co/dKP3o1e -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+    </script>
+    <!-- For all browsers -->
+    <link rel="stylesheet" href="/assets/css/main.css?v=c5a82c3">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" media="invalid" onload="this.media='all'">
+    <!--[if IE]>
+      <style>
+        /* old IE unsupported flexbox fixes */
+        .greedy-nav .site-title {
+          padding-right: 3em;
+        }
+        .greedy-nav button {
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 100%;
+        }
+      </style>
+    <![endif]-->
+    <!-- start custom head snippets -->
+    <!-- insert favicons. use https://realfavicongenerator.net/ -->
+    <!-- end custom head snippets -->
+  </head>
+  <body class="layout--single">
+    <nav class="skip-links">
+      <h2 class="screen-reader-text">跳转链接</h2>
+      <ul>
+        <li><a href="#site-nav" class="screen-reader-shortcut">转到主导航栏</a></li>
+        <li><a href="#main" class="screen-reader-shortcut">转到内容</a></li>
+        <li><a href="#footer" class="screen-reader-shortcut">转到底部</a></li>
+      </ul>
+    </nav>
+    <!--[if lt IE 9]>
+      <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+    <![endif]-->
+    <div class="masthead">
+      <div class="masthead__inner-wrap">
+        <div class="masthead__menu">
+          <nav id="site-nav" class="greedy-nav">
+            <a class="site-logo" href="/"><img src="https://ftp.lug.ustc.edu.cn/misc/LUG.png" alt=""></a>
+            <a class="site-title" href="/">
+              LUG @ USTC
+            </a>
+            <ul class="visible-links">
+              <li class="masthead__menu-item">
+                <a href="/wiki/">Wiki</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="/news/">News</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="/planet/">Planet</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="https://github.com/ustclug">GitHub</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="https://mirrors.ustc.edu.cn/">Mirrors</a>
+              </li>
+            </ul>
+            <button class="greedy-nav__toggle hidden" type="button">
+              <span class="visually-hidden">切换菜单</span>
+              <div class="navicon"></div>
+            </button>
+            <ul class="hidden-links hidden"></ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="initial-content">
+      <div id="main" role="main">
+        <div class="sidebar sticky">
+          <nav class="nav__list">
+            <input id="ac-toc" name="accordion-toc" type="checkbox" />
+            <label for="ac-toc">切换菜单</label>
+            <ul class="nav__items">
+              <li>
+                <span class="nav__sub-title">LUG @ USTC</span>
+                <ul>
+                  <li><a href="/">LUG 首页</a></li>
+                  <li><a href="/news/">LUG 新闻</a></li>
+                  <li><a href="/wiki/lug/links/">友情链接</a></li>
+                  <li><a href="/wiki/mirrors/">开源软件镜像</a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="nav__sub-title">活动</span>
+                <ul>
+                  <li><a href="/wiki/lug/events/">LUG 活动</a></li>
+                  <li><a href="/wiki/lug/events/weeklyparty/">每周小聚</a></li>
+                  <li><a href="/wiki/lug/mailinglist/">邮件列表</a></li>
+                  <li><a href="/wiki/lug/book/">LUG 书库</a></li>
+                  <li><a href="https://news.ustclug.org/finance/">LUG 财务</a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="nav__sub-title">联系</span>
+                <ul>
+                  <li><a href="/wiki/lug/person-in-charge/">LUG 负责人</a></li>
+                  <li><a href="/wiki/lug/contact/">联系我们</a></li>
+                  <li><a href="/wiki/lug/contribute/">加入我们</a></li>
+                  <li><a href="/wiki/lug/finance/donate/">捐赠我们</a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="nav__sub-title">资源</span>
+                <ul>
+                  <li><a href="/wiki/linux_digest/">Linux 文摘</a></li>
+                  <li><a href="/wiki/lug/resources/">资源导航</a></li>
+                  <li><a href="https://servers.ustclug.org/">服务器新闻</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+          <meta itemprop="headline" content="ed 文本编辑器使用笔记">
+          <meta itemprop="description" content="ed 文本编辑器使用笔记">
+          <meta itemprop="datePublished" content="2020-08-09T15:12:14+08:00">
+          <div class="page__inner-wrap">
+            <header>
+              <h1 id="page-title" class="page__title" itemprop="headline">ed 文本编辑器使用笔记
+              </h1>
+            </header>
+            <section class="page__content" itemprop="text">
+              <aside class="sidebar__right sticky">
+                <nav class="toc">
+                  <header>
+                    <h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4>
+                  </header>
+                  <ul class="toc__menu">
+                    <li><a href="#调用">调用</a></li>
+                    <li><a href="#一般使用">一般使用</a>
+                      <ul>
+                        <li><a href="#文字输入">文字输入</a></li>
+                        <li><a href="#导航">导航</a></li>
+                        <li><a href="#保存与退出">保存与退出</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+              </aside>
+              <p>昨晚抽风一般地想要学学 ed 究竟应该怎么用，于是花了十多分钟学习了一下基础用法，可以保证在紧急情况下“存活”。稍微整理一下自己学到的用法：</p>
+              <h2 id="调用">调用</h2>
+              <div class="language-plaintext highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>ed [file]
+</code></pre>
+                </div>
+              </div>
+              <h2 id="一般使用">一般使用</h2>
+              <p>如果是创建新文件的话，进入程序后除了光标什么都不会显示；如果是打开已有文件，那么会显示一行文件大小的字节数，然后光标到下一行等待用户输入。</p>
+              <p>ed 是基于行的文本编辑器，也就是说同时只能显示或编辑文件的某一行。和 Vi 类似，存在两种模式：输入模式和命令模式。默认打开文件后进入命令模式。</p>
+              <p>既然是基于行的编辑器，那么 ed 有一个“当前行”的概念，可以使用 n 查看之，会打印出当前所在行号。默认打开文件后自动跳转至文件末尾（也就是最后一行）。</p>
+              <p>在命令模式下输入编辑器不认识的命令，会回显一个问号 ? 表示输入错误。</p>
+              <h3 id="文字输入">文字输入</h3>
+              <p>切换至输入模式的命令如下：</p>
+              <div class="language-plaintext highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>a，在当前行的下一行开始插入文字；
+i，在当前行的上一行开始插入文字；
+c，抹除当前行的所有文字，重新输入。
+</code></pre>
+                </div>
+              </div>
+              <p>注意 c 命令的危险性。</p>
+              <p>切换至输入模式后，就请随意地打字吧，回车也会忠实地写入文件。缺点是没有办法修改回车符以前的输错的文字。如果想修改，必须退出当前的输入模式再尝试修改。</p>
+              <p>如果想退出输入模式，在新行输入 . 即可。就是英文句点。</p>
+              <h3 id="导航">导航</h3>
+              <p>以下导航命令应当在命令模式下使用。</p>
+              <div class="language-plaintext highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>直接输入行号并回车，跳转到对应行，并回显对应行的文字（不带行号）。
+输入回车，会跳转到下一行，并回显对应行的文字（不带行号）。
+输入 . ，会重复显示当前行的文字（不带行号）。
+输入 n，会回显当前行的文字（带行号）。
+</code></pre>
+                </div>
+              </div>
+              <h3 id="保存与退出">保存与退出</h3>
+              <p>在编辑已有文件的时候，输入 w 可以进行保存，回显新文件的字节大小。</p>
+              <p>在编辑新文件时，需要在 w 后接上文件名。回显相同。</p>
+              <p>按 q 可以退出编辑器。在没有保存文件的时候，则必须用 Q 强制退出。当然 ctrl+c 是没有用的。</p>
+              <hr />
+              <p>作者：hosiet</p>
+              <p>时间：2014-10-07</p>
+            </section>
+            <footer class="page__meta">
+              <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-08-09T15:12:14+08:00">2020 年 8 月 9 日</time></p>
+            </footer>
+            <nav class="pagination">
+              <a href="/wiki/linux_digest/crontab/" class="pagination--pager" title="crontab
+">上一页</a>
+              <a href="/wiki/linux_digest/expasy-ps_scan/" class="pagination--pager" title="ExPASy的ps_scan在linux下的简明配置指南
+">下一页</a>
+            </nav>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+        <!-- end custom footer snippets -->
+        <div class="footer-row">
+          <div class="footer-block footer__about">
+            <p>中国科学技术大学 Linux 用户协会是由中国科学技术大学在校的 GNU/Linux 爱好者发起并组成的团体，旨在联合科大的 GNU/Linux
+              使用者，搭建信息交流共享的平台，宣传自由软件的价值，提高自由软件社区文化氛围，推广自由软件的应用。</p>
+          </div>
+          <div class="footer-block footer__contact">
+            <ul>
+              <li>
+                <a href="/wiki/intro/"><i class="fas fa-fw fa-address-card"></i> 关于我们</a>
+              </li>
+              <li>
+                <a href="/wiki/lug/contact/"><i class="fas fa-fw fa-phone-alt"></i> 联系我们</a>
+              </li>
+              <li>
+                <a href="/wiki/lug/contribute/"><i class="fas fa-fw fa-users"></i> 加入我们</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-block footer__logo">
+            <img src="https://ftp.lug.ustc.edu.cn/misc/logo-white.svg" width="33%" />
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="/assets/js/main.min.js"></script>
+    <img src="https://static.beta.ustclug.org/USTC_logo.svg" style="position: fixed; bottom: -320px; left: -200px; opacity: 0.1; z-index: -100;" />
+  </body>
+</html>

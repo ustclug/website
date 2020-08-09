@@ -1,0 +1,1664 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.20.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="zh" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <!-- begin _includes/seo.html -->
+    <title>LUG@USTC 财务收支报告 - LUG @ USTC</title>
+    <meta name="description" content="LUG@USTC 财务收支报告">
+    <meta name="author" content="USTCLUG">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="LUG @ USTC">
+    <meta property="og:title" content="LUG@USTC 财务收支报告">
+    <meta property="og:url" content="https://beta.ustclug.org//wiki/lug/finance/archieve/">
+    <meta property="og:description" content="LUG@USTC 财务收支报告">
+    <meta property="article:published_time" content="2020-08-09T15:12:14+08:00">
+    <link rel="canonical" href="https://beta.ustclug.org//wiki/lug/finance/archieve/">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+      
+          "@type": "Person",
+          "name": "USTCLUG",
+          "url": "https://beta.ustclug.org//"
+      
+      }
+    </script>
+    <!-- end _includes/seo.html -->
+    <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="LUG @ USTC Feed">
+    <!-- https://t.co/dKP3o1e -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+    </script>
+    <!-- For all browsers -->
+    <link rel="stylesheet" href="/assets/css/main.css?v=c5a82c3">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" media="invalid" onload="this.media='all'">
+    <!--[if IE]>
+      <style>
+        /* old IE unsupported flexbox fixes */
+        .greedy-nav .site-title {
+          padding-right: 3em;
+        }
+        .greedy-nav button {
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 100%;
+        }
+      </style>
+    <![endif]-->
+    <!-- start custom head snippets -->
+    <!-- insert favicons. use https://realfavicongenerator.net/ -->
+    <!-- end custom head snippets -->
+  </head>
+  <body class="layout--single">
+    <nav class="skip-links">
+      <h2 class="screen-reader-text">跳转链接</h2>
+      <ul>
+        <li><a href="#site-nav" class="screen-reader-shortcut">转到主导航栏</a></li>
+        <li><a href="#main" class="screen-reader-shortcut">转到内容</a></li>
+        <li><a href="#footer" class="screen-reader-shortcut">转到底部</a></li>
+      </ul>
+    </nav>
+    <!--[if lt IE 9]>
+      <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+    <![endif]-->
+    <div class="masthead">
+      <div class="masthead__inner-wrap">
+        <div class="masthead__menu">
+          <nav id="site-nav" class="greedy-nav">
+            <a class="site-logo" href="/"><img src="https://ftp.lug.ustc.edu.cn/misc/LUG.png" alt=""></a>
+            <a class="site-title" href="/">
+              LUG @ USTC
+            </a>
+            <ul class="visible-links">
+              <li class="masthead__menu-item">
+                <a href="/wiki/">Wiki</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="/news/">News</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="/planet/">Planet</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="https://github.com/ustclug">GitHub</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="https://mirrors.ustc.edu.cn/">Mirrors</a>
+              </li>
+            </ul>
+            <button class="greedy-nav__toggle hidden" type="button">
+              <span class="visually-hidden">切换菜单</span>
+              <div class="navicon"></div>
+            </button>
+            <ul class="hidden-links hidden"></ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="initial-content">
+      <div id="main" role="main">
+        <div class="sidebar sticky">
+          <nav class="nav__list">
+            <input id="ac-toc" name="accordion-toc" type="checkbox" />
+            <label for="ac-toc">切换菜单</label>
+            <ul class="nav__items">
+              <li>
+                <span class="nav__sub-title">LUG @ USTC</span>
+                <ul>
+                  <li><a href="/">LUG 首页</a></li>
+                  <li><a href="/news/">LUG 新闻</a></li>
+                  <li><a href="/wiki/lug/links/">友情链接</a></li>
+                  <li><a href="/wiki/mirrors/">开源软件镜像</a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="nav__sub-title">活动</span>
+                <ul>
+                  <li><a href="/wiki/lug/events/">LUG 活动</a></li>
+                  <li><a href="/wiki/lug/events/weeklyparty/">每周小聚</a></li>
+                  <li><a href="/wiki/lug/mailinglist/">邮件列表</a></li>
+                  <li><a href="/wiki/lug/book/">LUG 书库</a></li>
+                  <li><a href="https://news.ustclug.org/finance/">LUG 财务</a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="nav__sub-title">联系</span>
+                <ul>
+                  <li><a href="/wiki/lug/person-in-charge/">LUG 负责人</a></li>
+                  <li><a href="/wiki/lug/contact/">联系我们</a></li>
+                  <li><a href="/wiki/lug/contribute/">加入我们</a></li>
+                  <li><a href="/wiki/lug/finance/donate/">捐赠我们</a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="nav__sub-title">资源</span>
+                <ul>
+                  <li><a href="/wiki/linux_digest/">Linux 文摘</a></li>
+                  <li><a href="/wiki/lug/resources/">资源导航</a></li>
+                  <li><a href="https://servers.ustclug.org/">服务器新闻</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+          <meta itemprop="headline" content="LUG@USTC 财务收支报告">
+          <meta itemprop="description" content="LUG@USTC 财务收支报告">
+          <meta itemprop="datePublished" content="2020-08-09T15:12:14+08:00">
+          <div class="page__inner-wrap">
+            <header>
+              <h1 id="page-title" class="page__title" itemprop="headline">LUG@USTC 财务收支报告
+              </h1>
+            </header>
+            <section class="page__content" itemprop="text">
+              <aside class="sidebar__right sticky">
+                <nav class="toc">
+                  <header>
+                    <h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4>
+                  </header>
+                  <ul class="toc__menu">
+                    <li><a href="#debianoss服务器维护专款">Debian/OSS服务器维护专款</a></li>
+                    <li><a href="#lug-活动经费">LUG 活动经费</a>
+                      <ul>
+                        <li><a href="#往年收支情况概览">往年收支情况概览</a></li>
+                        <li><a href="#2017-2018学年">2017-2018学年</a></li>
+                        <li><a href="#2016-2017学年">2016-2017学年</a></li>
+                        <li><a href="#2015-2016学年">2015-2016学年</a></li>
+                        <li><a href="#2014-2015学年">2014-2015学年</a></li>
+                        <li><a href="#2013年">2013年</a></li>
+                        <li><a href="#2012年">2012年</a></li>
+                        <li><a href="#2011年">2011年</a></li>
+                        <li><a href="#2010年">2010年</a></li>
+                        <li><a href="#2009年">2009年</a></li>
+                        <li><a href="#2009年之前">2009年之前</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+              </aside>
+              <p>2018 年换届后的财务报告由 LUG 电子账册自动生成，不再人工更新。本页面只为历史存档目的保留。</p>
+              <p><a href="https://news.ustclug.org/finance/">https://news.ustclug.org/finance/</a></p>
+              <h2 id="debianoss服务器维护专款">Debian/OSS服务器维护专款</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>时间</th>
+                    <th>收支类型</th>
+                    <th>数额（￥）</th>
+                    <th>原因</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2005</td>
+                    <td>收入</td>
+                    <td>3072.5</td>
+                    <td>科大Debian站募捐(其中50$按照当时汇率折合成人民币405.5元) <a href="donate_lookup" title="lug:finance:donate_lookup">捐赠情况查询»</a></td>
+                  </tr>
+                  <tr>
+                    <td>2005</td>
+                    <td>支出</td>
+                    <td>2620</td>
+                    <td>购买新主机</td>
+                  </tr>
+                  <tr>
+                    <td>2005</td>
+                    <td>支出</td>
+                    <td>70</td>
+                    <td>购买显卡(二手)</td>
+                  </tr>
+                  <tr>
+                    <td>2005</td>
+                    <td>支出</td>
+                    <td>260</td>
+                    <td>购买新UPS电源</td>
+                  </tr>
+                  <tr>
+                    <td>2005</td>
+                    <td>支出</td>
+                    <td>122.5</td>
+                    <td>转入活动经费</td>
+                  </tr>
+                  <tr>
+                    <td>2010年10月</td>
+                    <td>收入</td>
+                    <td>122.5</td>
+                    <td>由活动经费转入</td>
+                  </tr>
+                  <tr>
+                    <td>2011年1月</td>
+                    <td>收入</td>
+                    <td>303.11</td>
+                    <td>社区捐助 方式：支付宝</td>
+                  </tr>
+                  <tr>
+                    <td>当前结余（2013-01-05更新）</td>
+                    <td>-</td>
+                    <td>425.61</td>
+                    <td>-</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h2 id="lug-活动经费">LUG 活动经费</h2>
+              <h3 id="往年收支情况概览">往年收支情况概览</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th>时间段</th>
+                    <th>总收入</th>
+                    <th>总支出</th>
+                    <th>净收入</th>
+                    <th>期末结余</th>
+                    <th>备注</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2017.5-2018.4</td>
+                    <td>12042.00</td>
+                    <td>-10517.6</td>
+                    <td>1524.4</td>
+                    <td>5103.62</td>
+                    <td>马凯、王子博交接</td>
+                  </tr>
+                  <tr>
+                    <td>2016.5-2017.5</td>
+                    <td>2526.00</td>
+                    <td>-4761.18</td>
+                    <td>-2235.18</td>
+                    <td>3579.22</td>
+                    <td>金孜达、马凯交接</td>
+                  </tr>
+                  <tr>
+                    <td>2015.5-2016.5</td>
+                    <td>5150.00</td>
+                    <td>2181.30</td>
+                    <td>2968.70</td>
+                    <td>5814.40</td>
+                    <td>崔天一、金孜达交接</td>
+                  </tr>
+                  <tr>
+                    <td>2014.5-2015.4</td>
+                    <td>4750.00</td>
+                    <td>-5534.00</td>
+                    <td>-784.30</td>
+                    <td>2845.70</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>2013.10-2014.5</td>
+                    <td>遗失</td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                  </tr>
+                  <tr>
+                    <td>2013年下半年</td>
+                    <td>2050.00</td>
+                    <td>1647.00</td>
+                    <td>+403</td>
+                    <td>1724.30</td>
+                    <td>2015年后补</td>
+                  </tr>
+                  <tr>
+                    <td>2013年上半年</td>
+                    <td>2000.00</td>
+                    <td>1628.50</td>
+                    <td>+371.5</td>
+                    <td>1321.30</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>2012年下半年</td>
+                    <td>3785.00</td>
+                    <td>4960.20</td>
+                    <td>-1175.20</td>
+                    <td>949.80</td>
+                    <td>版衫垫付尚未结清</td>
+                  </tr>
+                  <tr>
+                    <td>2012年上半年</td>
+                    <td>1600.00</td>
+                    <td>1419.00</td>
+                    <td>+181.00</td>
+                    <td>2125.00</td>
+                    <td>服务器维护专款合并入活动经费</td>
+                  </tr>
+                  <tr>
+                    <td>2011年下半年</td>
+                    <td>5057.00</td>
+                    <td>5018.80</td>
+                    <td>+38.20</td>
+                    <td>1210.20</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>2011年上半年</td>
+                    <td>1369.00</td>
+                    <td>877.50</td>
+                    <td>+491.50</td>
+                    <td>1172.00</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>2010年下半年</td>
+                    <td>303.30</td>
+                    <td>735.60</td>
+                    <td>-432.30</td>
+                    <td>677.50</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>2010年上半年</td>
+                    <td>60.00</td>
+                    <td>145.00</td>
+                    <td>-85.00</td>
+                    <td>1109.80</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>2009年下半年</td>
+                    <td>250.00</td>
+                    <td>1030.20</td>
+                    <td>-780.20</td>
+                    <td>1194.80</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>2009年上半年</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>1975.00</td>
+                    <td>以前的财务记录不慎丢失</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="2017-2018学年">2017-2018学年</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th>时间</th>
+                    <th>收支类型</th>
+                    <th>数额（￥）</th>
+                    <th>经办人</th>
+                    <th>事由</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2017-5-29</td>
+                    <td>交接</td>
+                    <td>¥3579.22</td>
+                    <td>金孜达→马凯</td>
+                    <td>换届财务交接</td>
+                  </tr>
+                  <tr>
+                    <td>2017-6-24</td>
+                    <td>收入</td>
+                    <td>¥2680.00</td>
+                    <td>马凯，金孜达</td>
+                    <td>LIP与硬盘报销</td>
+                  </tr>
+                  <tr>
+                    <td>2017-6-27</td>
+                    <td>收入</td>
+                    <td>¥1052.00</td>
+                    <td>马凯，庄思源</td>
+                    <td>MSC经费转入</td>
+                  </tr>
+                  <tr>
+                    <td>2017-9-8</td>
+                    <td>支出</td>
+                    <td>¥-500.00</td>
+                    <td>马凯，崔灏，金孜达</td>
+                    <td>版衫销售净收入</td>
+                  </tr>
+                  <tr>
+                    <td>2017-9-12</td>
+                    <td>支出</td>
+                    <td>¥-75.00</td>
+                    <td>马凯，李嘉豪</td>
+                    <td>海报制作</td>
+                  </tr>
+                  <tr>
+                    <td>2017-9-13</td>
+                    <td>支出</td>
+                    <td>¥-245.00</td>
+                    <td>马凯，李嘉豪</td>
+                    <td>海报制作</td>
+                  </tr>
+                  <tr>
+                    <td>2017-09-13</td>
+                    <td>支出</td>
+                    <td>¥-114.00</td>
+                    <td>马凯，李嘉豪</td>
+                    <td>社团必要的运营管理经费</td>
+                  </tr>
+                  <tr>
+                    <td>2017-09-16</td>
+                    <td>支出</td>
+                    <td>¥-106.40</td>
+                    <td>马凯，李嘉豪</td>
+                    <td>SFD矿泉水</td>
+                  </tr>
+                  <tr>
+                    <td>2017-10-12</td>
+                    <td>支出</td>
+                    <td>¥-160.00</td>
+                    <td>马凯，王子博</td>
+                    <td>海报制作</td>
+                  </tr>
+                  <tr>
+                    <td>2017-10-26</td>
+                    <td>支出</td>
+                    <td>¥-690.00</td>
+                    <td>马凯，王子博</td>
+                    <td>GNOME Asia 交通费报销</td>
+                  </tr>
+                  <tr>
+                    <td>2017-10-31</td>
+                    <td>收入</td>
+                    <td>¥10.00</td>
+                    <td>马凯，金孜达</td>
+                    <td>等效捐款</td>
+                  </tr>
+                  <tr>
+                    <td>2017-11-7</td>
+                    <td>支出</td>
+                    <td>¥-215.20</td>
+                    <td>马凯，王子博</td>
+                    <td>活动室文件框、桌上书架、网线、交换机</td>
+                  </tr>
+                  <tr>
+                    <td>2017-12-29</td>
+                    <td>收入</td>
+                    <td>¥300.00</td>
+                    <td>马凯，李嘉豪</td>
+                    <td>SFD 报销</td>
+                  </tr>
+                  <tr>
+                    <td>2018-3-20</td>
+                    <td>支出</td>
+                    <td>¥-278.00</td>
+                    <td>马凯，王子博</td>
+                    <td>活动室收纳箱</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="2016-2017学年">2016-2017学年</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th>时间</th>
+                    <th>收支类型</th>
+                    <th>数额（￥）</th>
+                    <th>经办人</th>
+                    <th>事由</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2016-5-1</td>
+                    <td>交接</td>
+                    <td>¥5814.40</td>
+                    <td>崔天一→金孜达</td>
+                    <td>换届财务交接</td>
+                  </tr>
+                  <tr>
+                    <td>2016-5-4</td>
+                    <td>支出</td>
+                    <td>¥-140.00</td>
+                    <td>金孜达，崔灏</td>
+                    <td>“信任与安全”网络安全主题活动购买展架</td>
+                  </tr>
+                  <tr>
+                    <td>2016-5-25</td>
+                    <td>收入</td>
+                    <td>¥600.00</td>
+                    <td>金孜达</td>
+                    <td>“信任与安全”网络安全主题活动报销</td>
+                  </tr>
+                  <tr>
+                    <td>2016-8-29</td>
+                    <td>支出</td>
+                    <td>¥-150.00</td>
+                    <td>金孜达，左格非</td>
+                    <td>2016LUG社团活力课程</td>
+                  </tr>
+                  <tr>
+                    <td>2016-9-16</td>
+                    <td>收入</td>
+                    <td>¥100.00</td>
+                    <td>金孜达，王子阳</td>
+                    <td>LUG板衫购买</td>
+                  </tr>
+                  <tr>
+                    <td>2016-9-18</td>
+                    <td>支出</td>
+                    <td>¥-40.00</td>
+                    <td>金孜达，郑子涵</td>
+                    <td>招新传单</td>
+                  </tr>
+                  <tr>
+                    <td>2016-9-18</td>
+                    <td>支出</td>
+                    <td>¥-20.00</td>
+                    <td>金孜达，崔灏</td>
+                    <td>招新传单</td>
+                  </tr>
+                  <tr>
+                    <td>2016-9-18</td>
+                    <td>支出</td>
+                    <td>¥-225.00</td>
+                    <td>金孜达，左格非</td>
+                    <td>SFD海报</td>
+                  </tr>
+                  <tr>
+                    <td>2016-9-23</td>
+                    <td>支出</td>
+                    <td>¥-50.00</td>
+                    <td>金孜达</td>
+                    <td>SFD奖品光盘</td>
+                  </tr>
+                  <tr>
+                    <td>2016-9-27</td>
+                    <td>收入</td>
+                    <td>¥100.00</td>
+                    <td>金孜达，左格非</td>
+                    <td>LUG板衫购买</td>
+                  </tr>
+                  <tr>
+                    <td>2016-9-28</td>
+                    <td>支出</td>
+                    <td>¥-143.80</td>
+                    <td>金孜达</td>
+                    <td>印制书籍</td>
+                  </tr>
+                  <tr>
+                    <td>2016-10-2</td>
+                    <td>收入</td>
+                    <td>¥100.00</td>
+                    <td>金孜达，李博杰</td>
+                    <td>LUG版衫购买</td>
+                  </tr>
+                  <tr>
+                    <td>2016-10-7</td>
+                    <td>支出</td>
+                    <td>¥-131.30</td>
+                    <td>金孜达，崔天一</td>
+                    <td>月饼</td>
+                  </tr>
+                  <tr>
+                    <td>2016-10-24</td>
+                    <td>收入</td>
+                    <td>¥1, 326.00</td>
+                    <td>金孜达</td>
+                    <td>SFD报销</td>
+                  </tr>
+                  <tr>
+                    <td>2016-10-24</td>
+                    <td>支出</td>
+                    <td>¥-58.00</td>
+                    <td>金孜达，左格非</td>
+                    <td>USTC Mirror硬盘修复费用报销</td>
+                  </tr>
+                  <tr>
+                    <td>2016-12-22</td>
+                    <td>支出</td>
+                    <td>¥-399.00</td>
+                    <td>金孜达，高一凡</td>
+                    <td>Mirrors所需的MicroSD</td>
+                  </tr>
+                  <tr>
+                    <td>2016-12-22</td>
+                    <td>支出</td>
+                    <td>¥-916.68</td>
+                    <td>金孜达，高一凡</td>
+                    <td>Linode虚拟机与域名</td>
+                  </tr>
+                  <tr>
+                    <td>2016-12-26</td>
+                    <td>收入</td>
+                    <td>¥300.00</td>
+                    <td>金孜达</td>
+                    <td>社团活力课程财务报销</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="2015-2016学年">2015-2016学年</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th>时间</th>
+                    <th>收支类型</th>
+                    <th>数额（￥）</th>
+                    <th>经办人</th>
+                    <th>事由</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2015/5/1</td>
+                    <td>交接</td>
+                    <td>2845.70</td>
+                    <td>朱晟菁→崔天一</td>
+                    <td>换届财务交接</td>
+                  </tr>
+                  <tr>
+                    <td>2015/5/24</td>
+                    <td>支出</td>
+                    <td>-700.00</td>
+                    <td>崔天一，崔灏</td>
+                    <td>Latex讲座徽章报销，黑客比赛易拉宝报销，海报报销</td>
+                  </tr>
+                  <tr>
+                    <td>2015/5/27</td>
+                    <td>收入</td>
+                    <td>800.00</td>
+                    <td>崔天一</td>
+                    <td>CTF黑客大赛团委报销</td>
+                  </tr>
+                  <tr>
+                    <td>2015/6/10</td>
+                    <td>收入</td>
+                    <td>400.00</td>
+                    <td>崔天一，崔灏</td>
+                    <td>五星级社团奖金</td>
+                  </tr>
+                  <tr>
+                    <td>2015/9/3</td>
+                    <td>支出</td>
+                    <td>-15.00</td>
+                    <td>崔天一，张静宁</td>
+                    <td>开会买水果</td>
+                  </tr>
+                  <tr>
+                    <td>2015/9/3</td>
+                    <td>支出</td>
+                    <td>-131.00</td>
+                    <td>崔天一，张静宁</td>
+                    <td>SFD水果，零食，纸杯</td>
+                  </tr>
+                  <tr>
+                    <td>2015/10/19</td>
+                    <td>收入</td>
+                    <td>100.00</td>
+                    <td>崔天一</td>
+                    <td>招新报销</td>
+                  </tr>
+                  <tr>
+                    <td>2015/10/26</td>
+                    <td>收入</td>
+                    <td>1, 200.00</td>
+                    <td>崔天一，崔灏</td>
+                    <td>SFD自由软件日团委报销</td>
+                  </tr>
+                  <tr>
+                    <td>2015/10/26</td>
+                    <td>支出</td>
+                    <td>-200.00</td>
+                    <td>崔天一，崔灏</td>
+                    <td>SFD徽章200枚</td>
+                  </tr>
+                  <tr>
+                    <td>2015/10/26</td>
+                    <td>支出</td>
+                    <td>-160.00</td>
+                    <td>崔天一，崔灏</td>
+                    <td>SFD海报</td>
+                  </tr>
+                  <tr>
+                    <td>2015/10/26</td>
+                    <td>支出</td>
+                    <td>-100.00</td>
+                    <td>崔天一，崔灏</td>
+                    <td>SFD名片</td>
+                  </tr>
+                  <tr>
+                    <td>2015/10/26</td>
+                    <td>支出</td>
+                    <td>-25.00</td>
+                    <td>崔天一，崔灏</td>
+                    <td>SFD奖品光盘</td>
+                  </tr>
+                  <tr>
+                    <td>2015/10/26</td>
+                    <td>支出</td>
+                    <td>-100.00</td>
+                    <td>崔天一，崔灏</td>
+                    <td>SFD招新海报10张</td>
+                  </tr>
+                  <tr>
+                    <td>2016/1/3</td>
+                    <td>支出</td>
+                    <td>-300.00</td>
+                    <td>崔天一，崔灏</td>
+                    <td>Linux Install Party海报12*25</td>
+                  </tr>
+                  <tr>
+                    <td>2016/1/3</td>
+                    <td>支出</td>
+                    <td>-8.00</td>
+                    <td>崔天一，崔灏</td>
+                    <td>Linux Install Party打印费</td>
+                  </tr>
+                  <tr>
+                    <td>2016/1/3</td>
+                    <td>支出</td>
+                    <td>-8.00</td>
+                    <td>崔天一，崔灏</td>
+                    <td>Linux Install Party租三轮</td>
+                  </tr>
+                  <tr>
+                    <td>2016/1/3</td>
+                    <td>支出</td>
+                    <td>-175.30</td>
+                    <td>崔天一，崔灏</td>
+                    <td>Linux Install Party U盘*10</td>
+                  </tr>
+                  <tr>
+                    <td>2016/1/3</td>
+                    <td>支出</td>
+                    <td>-54.80</td>
+                    <td>崔天一，崔灏</td>
+                    <td>Linux Install Party奖品光盘</td>
+                  </tr>
+                  <tr>
+                    <td>2016/1/3</td>
+                    <td>支出</td>
+                    <td>-204.20</td>
+                    <td>崔天一，崔灏</td>
+                    <td>印制LATEX python文档等书籍</td>
+                  </tr>
+                  <tr>
+                    <td>2016/1/3</td>
+                    <td>收入</td>
+                    <td>2, 000.00</td>
+                    <td>崔天一</td>
+                    <td>Linux Install Party 团委报销</td>
+                  </tr>
+                  <tr>
+                    <td>2016/1/3</td>
+                    <td>收入</td>
+                    <td>600.00</td>
+                    <td>崔天一</td>
+                    <td>SFD优秀项目团委奖励（未入账）</td>
+                  </tr>
+                  <tr>
+                    <td>2016/4/24</td>
+                    <td>收入</td>
+                    <td>50.00</td>
+                    <td>崔灏、杨肇峰</td>
+                    <td>2015板衫购买</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="2014-2015学年">2014-2015学年</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th>时间</th>
+                    <th>收支类型</th>
+                    <th>数额（￥）</th>
+                    <th>经办人</th>
+                    <th>事由</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2014/6/8</td>
+                    <td>交接</td>
+                    <td>3, 630.00</td>
+                    <td>童献→朱晟菁</td>
+                    <td>换届财务交接</td>
+                  </tr>
+                  <tr>
+                    <td>2014/6/8</td>
+                    <td>支出</td>
+                    <td>-550.00</td>
+                    <td>朱晟菁，李子天</td>
+                    <td>Linux入门公开课：海报100，结业证书200；Linux趣味问答：u盘250</td>
+                  </tr>
+                  <tr>
+                    <td>2014/6/30</td>
+                    <td>收入</td>
+                    <td>200.00</td>
+                    <td>朱晟菁，张荣葳</td>
+                    <td> </td>
+                  </tr>
+                  <tr>
+                    <td>2014/8/21</td>
+                    <td>支出</td>
+                    <td>-280.00</td>
+                    <td>朱晟菁，张光宇</td>
+                    <td>Linux入门公开课：海报280</td>
+                  </tr>
+                  <tr>
+                    <td>2014/8/21</td>
+                    <td>支出</td>
+                    <td>-200.00</td>
+                    <td>朱晟菁</td>
+                    <td>2014/9招新海报10张</td>
+                  </tr>
+                  <tr>
+                    <td>2014/9/24</td>
+                    <td>支出</td>
+                    <td>-826.80</td>
+                    <td>朱晟菁，张荣葳</td>
+                    <td>SFD报销，详见表格2014SFD</td>
+                  </tr>
+                  <tr>
+                    <td>2014/10/10</td>
+                    <td>收入</td>
+                    <td>1, 500.00</td>
+                    <td>朱晟菁</td>
+                    <td>SFD团委报销</td>
+                  </tr>
+                  <tr>
+                    <td>2014/10/10</td>
+                    <td>收入</td>
+                    <td>50.00</td>
+                    <td>朱晟菁</td>
+                    <td>招新团委报销</td>
+                  </tr>
+                  <tr>
+                    <td>2014/10/22</td>
+                    <td>收入</td>
+                    <td>300.00</td>
+                    <td>朱晟菁，张荣葳</td>
+                    <td>Mozilla报销</td>
+                  </tr>
+                  <tr>
+                    <td>2014/11/10</td>
+                    <td>支出</td>
+                    <td>-65.90</td>
+                    <td>朱晟菁，崔颢</td>
+                    <td>活动室插线板一个</td>
+                  </tr>
+                  <tr>
+                    <td>2014/12/10</td>
+                    <td>支出</td>
+                    <td>-385.50</td>
+                    <td>朱晟菁，张荣葳</td>
+                    <td>LUP 零食 85.5 + 海报 300</td>
+                  </tr>
+                  <tr>
+                    <td>2014/12/10</td>
+                    <td>支出</td>
+                    <td>-346.00</td>
+                    <td>朱晟菁，李博杰</td>
+                    <td>LUP U盘 2个</td>
+                  </tr>
+                  <tr>
+                    <td>2014/12/12</td>
+                    <td>收入</td>
+                    <td>1, 200.00</td>
+                    <td>朱晟菁，张荣葳</td>
+                    <td>LUP 报销</td>
+                  </tr>
+                  <tr>
+                    <td>2015/1/1</td>
+                    <td>支出</td>
+                    <td>-1, 058.00</td>
+                    <td>朱晟菁</td>
+                    <td>购买2T西部数据绿盘*2</td>
+                  </tr>
+                  <tr>
+                    <td>2015/1/4</td>
+                    <td>支出</td>
+                    <td>-15.00</td>
+                    <td>朱晟菁，李博杰</td>
+                    <td>2015-1-4 LUD</td>
+                  </tr>
+                  <tr>
+                    <td>2015/3/5</td>
+                    <td>支出</td>
+                    <td>-45.00</td>
+                    <td>朱晟菁，左格非</td>
+                    <td>3月7日女生节活动宣传单，1.5*30</td>
+                  </tr>
+                  <tr>
+                    <td>2015/3/6</td>
+                    <td>支出</td>
+                    <td>-113.40</td>
+                    <td>朱晟菁，张静宁</td>
+                    <td>3月7日女生节小礼品106.4，活动室垃圾桶7.00</td>
+                  </tr>
+                  <tr>
+                    <td>2015/3/7</td>
+                    <td>支出</td>
+                    <td>-233.70</td>
+                    <td>朱晟菁，李博杰</td>
+                    <td>3月7日女生节 食物（61.7+21）、水果（27）、礼品（116）、打印（8）</td>
+                  </tr>
+                  <tr>
+                    <td>2015/3/18</td>
+                    <td>支出</td>
+                    <td>-300.00</td>
+                    <td>朱晟菁，左格非，曾键</td>
+                    <td>Latex讲座海报30张</td>
+                  </tr>
+                  <tr>
+                    <td>2015/3/21</td>
+                    <td>支出</td>
+                    <td>-20.00</td>
+                    <td>朱晟菁</td>
+                    <td>3月21日 LUD</td>
+                  </tr>
+                  <tr>
+                    <td>2015/4/6</td>
+                    <td>支出</td>
+                    <td>-657.00</td>
+                    <td>朱晟菁，张荣葳</td>
+                    <td>Latex讲座：火车票399 + 住宿158 + 打印（为了凑发票，打印招新传单）120</td>
+                  </tr>
+                  <tr>
+                    <td>2015/4/6</td>
+                    <td>支出</td>
+                    <td>-99.00</td>
+                    <td>朱晟菁，左格非</td>
+                    <td>活动室钥匙40 + HDMI转VGA线59</td>
+                  </tr>
+                  <tr>
+                    <td>2015/4/7</td>
+                    <td>支出</td>
+                    <td>-339.00</td>
+                    <td>朱晟菁</td>
+                    <td>购买1T希捷硬盘</td>
+                  </tr>
+                  <tr>
+                    <td>2015/4/8</td>
+                    <td>收入</td>
+                    <td>1, 500.00</td>
+                    <td>朱晟菁，张荣葳</td>
+                    <td>Latex讲座报销</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="2013年">2013年</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th>时间</th>
+                    <th>收支类型</th>
+                    <th>数额（￥）</th>
+                    <th>经办人</th>
+                    <th>事由</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2013-03-25</td>
+                    <td>支出</td>
+                    <td>136.80</td>
+                    <td>boj</td>
+                    <td>LUG小聚用无线路由器</td>
+                  </tr>
+                  <tr>
+                    <td>2013-03-31</td>
+                    <td>支出</td>
+                    <td>107.70</td>
+                    <td>boj</td>
+                    <td>LUG书库购置书籍</td>
+                  </tr>
+                  <tr>
+                    <td>2013-04-01</td>
+                    <td>支出</td>
+                    <td>158.00</td>
+                    <td>boj</td>
+                    <td>LUG娘征集活动奖励U盘</td>
+                  </tr>
+                  <tr>
+                    <td>2013-04-21</td>
+                    <td>支出</td>
+                    <td>109.00</td>
+                    <td>sadhen</td>
+                    <td>计算机学院讲座印海报</td>
+                  </tr>
+                  <tr>
+                    <td>2013-04-21</td>
+                    <td>支出</td>
+                    <td>210.00</td>
+                    <td>pudh</td>
+                    <td>计算机学院讲座奖品U盘</td>
+                  </tr>
+                  <tr>
+                    <td>2013-06-03</td>
+                    <td>支出</td>
+                    <td>240.00</td>
+                    <td>zgy</td>
+                    <td>ubuntu/debian releaseparty海报</td>
+                  </tr>
+                  <tr>
+                    <td>2013-06-03</td>
+                    <td>支出</td>
+                    <td>270.00</td>
+                    <td>zgy</td>
+                    <td>lug宣传用展板</td>
+                  </tr>
+                  <tr>
+                    <td>2013-06-03</td>
+                    <td>支出</td>
+                    <td>300.00</td>
+                    <td>zgy</td>
+                    <td>奖品</td>
+                  </tr>
+                  <tr>
+                    <td>2013-06-03</td>
+                    <td>支出</td>
+                    <td>56.00</td>
+                    <td>黄震宇</td>
+                    <td>活动用水</td>
+                  </tr>
+                  <tr>
+                    <td>2013-06-03</td>
+                    <td>支出</td>
+                    <td>41.00</td>
+                    <td>zgy</td>
+                    <td>嘉宾交通费</td>
+                  </tr>
+                  <tr>
+                    <td>2013-06-03</td>
+                    <td>收入</td>
+                    <td>2000.00</td>
+                    <td>zgy, vastuniverse</td>
+                    <td>团委报销，除去给boj, zgy</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>垫付的钱后，协会入账现金750.00<br />
+                2013-09-15| 支出| 80.00| zgy| 招新海报<br />
+                2013-09-15| 支出| 360.00| zgy| 展板<br />
+                2013-09-21| 支出| 332.00| zgy| 嘉宾交通费<br />
+                2013-09-21| 支出| 128.00| zgy| 嘉宾招待费<br />
+                2013-09-21| 支出| 175.00| 朱晟菁| 易拉宝<br />
+                2013-09-21| 支出| 104.00| 张荣葳| 传单、学习资料<br />
+                2013-09-21| 支出| 108.00| 张光宇| 矿泉水<br />
+                2013-09-21| 支出| 360.00| 张光宇| 奖品U盘<br />
+                2013-09-30| 收入| 50.00| 张光宇| 团委报销<br />
+                2013-09-30| 收入| 2000.00| 张光宇| 团委报销</p>
+              <h3 id="2012年">2012年</h3>
+              <p>2012年下半年：（帐目未结清的在“事由”处注有 <img src="../../lib/images/smileys/fixme.gif" alt="FIXME" /> ）</p>
+              <table>
+                <thead>
+                  <tr>
+                    <th>时间</th>
+                    <th>收支类型</th>
+                    <th>数额（￥）</th>
+                    <th>经办人</th>
+                    <th>事由</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2012-06</td>
+                    <td>支出</td>
+                    <td>1500.00</td>
+                    <td>ljsabc</td>
+                    <td>板衫垫付（因在换届后，计入下半年）<img src="../../lib/images/smileys/fixme.gif" alt="FIXME" /></td>
+                  </tr>
+                  <tr>
+                    <td>2012-09-03</td>
+                    <td>支出</td>
+                    <td>100.00</td>
+                    <td>ljsabc</td>
+                    <td>LUG招新宣传单</td>
+                  </tr>
+                  <tr>
+                    <td>2012-09-10</td>
+                    <td>支出</td>
+                    <td>150.00</td>
+                    <td>ljsabc</td>
+                    <td>SFD海报</td>
+                  </tr>
+                  <tr>
+                    <td>2012-09-14</td>
+                    <td>支出</td>
+                    <td>82.00</td>
+                    <td>czluck</td>
+                    <td>SFD现场插排</td>
+                  </tr>
+                  <tr>
+                    <td>2012-09-14</td>
+                    <td>支出</td>
+                    <td>72.00</td>
+                    <td>boj</td>
+                    <td>SFD现场矿泉水</td>
+                  </tr>
+                  <tr>
+                    <td>2012-09-14</td>
+                    <td>支出</td>
+                    <td>80.00</td>
+                    <td>czluck</td>
+                    <td>SFD现场糖果食品</td>
+                  </tr>
+                  <tr>
+                    <td>2012-09-14</td>
+                    <td>支出</td>
+                    <td>50.00</td>
+                    <td>tux, boj</td>
+                    <td>SFD搬运显示器租三轮</td>
+                  </tr>
+                  <tr>
+                    <td>2012-09-15</td>
+                    <td>支出</td>
+                    <td>170.00</td>
+                    <td>boj</td>
+                    <td>SFD嘉宾火车票</td>
+                  </tr>
+                  <tr>
+                    <td>2012-09-15</td>
+                    <td>支出</td>
+                    <td>290.00</td>
+                    <td>boj</td>
+                    <td>SFD嘉宾住宿费</td>
+                  </tr>
+                  <tr>
+                    <td>2012-09-15</td>
+                    <td>支出</td>
+                    <td>40.00</td>
+                    <td>boj</td>
+                    <td>SFD嘉宾出租车费</td>
+                  </tr>
+                  <tr>
+                    <td>2012-09-15</td>
+                    <td>支出</td>
+                    <td>60.00</td>
+                    <td>ljsabc</td>
+                    <td>Linux入门资料</td>
+                  </tr>
+                  <tr>
+                    <td>2012-09-15</td>
+                    <td>收入</td>
+                    <td>100.00</td>
+                    <td>-</td>
+                    <td>covariant捐赠</td>
+                  </tr>
+                  <tr>
+                    <td>2012-09-15</td>
+                    <td>收入</td>
+                    <td>100.00</td>
+                    <td>-</td>
+                    <td>stephen捐赠</td>
+                  </tr>
+                  <tr>
+                    <td>2012-09-21</td>
+                    <td>收入</td>
+                    <td>1200.00</td>
+                    <td>boj</td>
+                    <td>SFD团委报销</td>
+                  </tr>
+                  <tr>
+                    <td>2012-09-21</td>
+                    <td>收入</td>
+                    <td>50.00</td>
+                    <td>boj</td>
+                    <td>学期初招新报销</td>
+                  </tr>
+                  <tr>
+                    <td>2012-11-17</td>
+                    <td>支出</td>
+                    <td>192.00</td>
+                    <td>ljsabc</td>
+                    <td>LUP海报</td>
+                  </tr>
+                  <tr>
+                    <td>2012-11-17</td>
+                    <td>支出</td>
+                    <td>40.00</td>
+                    <td>ljsabc</td>
+                    <td>LUP传单</td>
+                  </tr>
+                  <tr>
+                    <td>2012-11-24</td>
+                    <td>支出</td>
+                    <td>229.00</td>
+                    <td>boj</td>
+                    <td>LUP嘉宾住宿费</td>
+                  </tr>
+                  <tr>
+                    <td>2012-11-24</td>
+                    <td>支出</td>
+                    <td>830.00</td>
+                    <td>boj</td>
+                    <td>LUP嘉宾往返机票</td>
+                  </tr>
+                  <tr>
+                    <td>2012-11-24</td>
+                    <td>支出</td>
+                    <td>60.00</td>
+                    <td>tux, boj</td>
+                    <td>LUP接送嘉宾出租车</td>
+                  </tr>
+                  <tr>
+                    <td>2012-12-04</td>
+                    <td>支出</td>
+                    <td>755.90</td>
+                    <td>boj</td>
+                    <td>LUG书库添置图书</td>
+                  </tr>
+                  <tr>
+                    <td>2012-12-07</td>
+                    <td>收入</td>
+                    <td>2100.00</td>
+                    <td>boj</td>
+                    <td>LUP报销</td>
+                  </tr>
+                  <tr>
+                    <td>2012-12-10</td>
+                    <td>支出</td>
+                    <td>259.30</td>
+                    <td>boj</td>
+                    <td>LUG书库添置图书</td>
+                  </tr>
+                  <tr>
+                    <td>2012-12-21</td>
+                    <td>收入</td>
+                    <td>235.00</td>
+                    <td>boj</td>
+                    <td>LUG每周小聚报销</td>
+                  </tr>
+                  <tr>
+                    <td>当前结余</td>
+                    <td>-</td>
+                    <td>949.80</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>2012年上半年：</p>
+              <table>
+                <thead>
+                  <tr>
+                    <th>时间</th>
+                    <th>收支类型</th>
+                    <th>数额（￥）</th>
+                    <th>经办人</th>
+                    <th>事由</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2012-05</td>
+                    <td>支出</td>
+                    <td>295.00</td>
+                    <td>redsky</td>
+                    <td>LIP奖品U盘（5个）</td>
+                  </tr>
+                  <tr>
+                    <td>2012-05</td>
+                    <td>支出</td>
+                    <td>910.00</td>
+                    <td>redsky</td>
+                    <td>LUG书库添置图书</td>
+                  </tr>
+                  <tr>
+                    <td>2012-05</td>
+                    <td>支出</td>
+                    <td>96.00</td>
+                    <td>ljsabc</td>
+                    <td>LIP宣传海报</td>
+                  </tr>
+                  <tr>
+                    <td>2012-05</td>
+                    <td>支出</td>
+                    <td>118.00</td>
+                    <td>czluck</td>
+                    <td>LIP插排</td>
+                  </tr>
+                  <tr>
+                    <td>2012-05</td>
+                    <td>收入</td>
+                    <td>1400.00</td>
+                    <td>boj</td>
+                    <td>LIP报销</td>
+                  </tr>
+                  <tr>
+                    <td>2012-05</td>
+                    <td>收入</td>
+                    <td>200.00</td>
+                    <td>boj</td>
+                    <td>四星级社团奖励</td>
+                  </tr>
+                  <tr>
+                    <td>2012-06-08</td>
+                    <td>交接</td>
+                    <td>2125.00</td>
+                    <td>pic→Thomas(高浩渊→童献)</td>
+                    <td>换届交接</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="2011年">2011年</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th>时间</th>
+                    <th>收支类型</th>
+                    <th>数额（￥）</th>
+                    <th>原因</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2011</td>
+                    <td>接手</td>
+                    <td>677.5</td>
+                    <td>10年度结余</td>
+                  </tr>
+                  <tr>
+                    <td>2011.1</td>
+                    <td>支出</td>
+                    <td>60</td>
+                    <td>网银U盾费用</td>
+                  </tr>
+                  <tr>
+                    <td>2011.1</td>
+                    <td>收入</td>
+                    <td>274</td>
+                    <td>社区捐赠活动经费</td>
+                  </tr>
+                  <tr>
+                    <td>2011.1</td>
+                    <td>支出</td>
+                    <td>382</td>
+                    <td>Linux Install Party, 包括礼品、设备、场地、交通费用</td>
+                  </tr>
+                  <tr>
+                    <td>2011.1</td>
+                    <td>收入</td>
+                    <td>320</td>
+                    <td>团委报销（Linux Install Party）</td>
+                  </tr>
+                  <tr>
+                    <td>2011.1</td>
+                    <td>收入</td>
+                    <td>48</td>
+                    <td>华扬报销（海报费用）</td>
+                  </tr>
+                  <tr>
+                    <td>2011.4</td>
+                    <td>支出</td>
+                    <td>360</td>
+                    <td>Gnome 3 发布会，包括礼品、海报、横幅、相关材料、交通费用等</td>
+                  </tr>
+                  <tr>
+                    <td>2011.5</td>
+                    <td>收入</td>
+                    <td>360</td>
+                    <td>校团委报销Gnome 活动经费</td>
+                  </tr>
+                  <tr>
+                    <td>2011.5</td>
+                    <td>支出</td>
+                    <td>75.5</td>
+                    <td>活动参与奖状购买费用</td>
+                  </tr>
+                  <tr>
+                    <td>2011.6</td>
+                    <td>收入</td>
+                    <td>310</td>
+                    <td>网络捐赠费用</td>
+                  </tr>
+                  <tr>
+                    <td>2011.8</td>
+                    <td>收入</td>
+                    <td>57</td>
+                    <td>随版衫捐赠费用</td>
+                  </tr>
+                  <tr>
+                    <td>2011.9</td>
+                    <td>支出</td>
+                    <td>350</td>
+                    <td>社团招新</td>
+                  </tr>
+                  <tr>
+                    <td>2011.9</td>
+                    <td>收入</td>
+                    <td>100</td>
+                    <td>社团招新报销</td>
+                  </tr>
+                  <tr>
+                    <td>2011.9</td>
+                    <td>支出</td>
+                    <td>161</td>
+                    <td>版衫费用支出</td>
+                  </tr>
+                  <tr>
+                    <td>2011.10-12</td>
+                    <td>支出</td>
+                    <td>4507.8</td>
+                    <td>社团Linux系列活动，共4场，主要包括邀请嘉宾、以及嘉宾住宿、交通，宣传资料、礼品等费用</td>
+                  </tr>
+                  <tr>
+                    <td>2011.12</td>
+                    <td>收入</td>
+                    <td>4500</td>
+                    <td>团委Linux活动经费</td>
+                  </tr>
+                  <tr>
+                    <td>2011.12</td>
+                    <td>收入</td>
+                    <td>150</td>
+                    <td>学术科技部奖励</td>
+                  </tr>
+                  <tr>
+                    <td>2011.12</td>
+                    <td>收入</td>
+                    <td>250</td>
+                    <td>协会自筹资金</td>
+                  </tr>
+                  <tr>
+                    <td>当前结余</td>
+                    <td>-</td>
+                    <td>1210.2</td>
+                    <td>-</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="2010年">2010年</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th>时间</th>
+                    <th>收支类型</th>
+                    <th>数额（￥）</th>
+                    <th>原因</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2010</td>
+                    <td>-</td>
+                    <td>1194.8</td>
+                    <td>09年度结余</td>
+                  </tr>
+                  <tr>
+                    <td>2010.06</td>
+                    <td>支出</td>
+                    <td>145</td>
+                    <td>Linux Install Party</td>
+                  </tr>
+                  <tr>
+                    <td>2010.06</td>
+                    <td>收入</td>
+                    <td>60</td>
+                    <td>团委报销（Linux Install Party）</td>
+                  </tr>
+                  <tr>
+                    <td>2010.09</td>
+                    <td>支出</td>
+                    <td>16</td>
+                    <td>打印招新传单</td>
+                  </tr>
+                  <tr>
+                    <td>2010.09</td>
+                    <td>收入</td>
+                    <td>50</td>
+                    <td>团委报销</td>
+                  </tr>
+                  <tr>
+                    <td>2010.09.18</td>
+                    <td>支出</td>
+                    <td>147.2</td>
+                    <td>自由软件日活动</td>
+                  </tr>
+                  <tr>
+                    <td>2010.09.21</td>
+                    <td>支出</td>
+                    <td>37.9</td>
+                    <td>购买活动室办公用品</td>
+                  </tr>
+                  <tr>
+                    <td>2010.10.15</td>
+                    <td>支出</td>
+                    <td>12</td>
+                    <td>打印cheat sheet</td>
+                  </tr>
+                  <tr>
+                    <td>2010.10</td>
+                    <td>收入</td>
+                    <td>200</td>
+                    <td>团委报销</td>
+                  </tr>
+                  <tr>
+                    <td>2010.10.15</td>
+                    <td>收入</td>
+                    <td>30</td>
+                    <td>vbs捐赠</td>
+                  </tr>
+                  <tr>
+                    <td>2010.10</td>
+                    <td>支出</td>
+                    <td>122.5</td>
+                    <td>转入Debian/OSS服务器维护专款</td>
+                  </tr>
+                  <tr>
+                    <td>2010.11.1</td>
+                    <td>支出</td>
+                    <td>400</td>
+                    <td>购买Debian服务器硬盘(1T)</td>
+                  </tr>
+                  <tr>
+                    <td>2010.10.15</td>
+                    <td>收入</td>
+                    <td>23.3</td>
+                    <td>shiqi捐赠</td>
+                  </tr>
+                  <tr>
+                    <td>2010.10.15</td>
+                    <td>-</td>
+                    <td>677.5</td>
+                    <td>账务转交：shiqi→picture</td>
+                  </tr>
+                  <tr>
+                    <td>当前结余</td>
+                    <td>-</td>
+                    <td>677.5</td>
+                    <td>-</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="2009年">2009年</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th>时间</th>
+                    <th>收支类型</th>
+                    <th>数额（￥）</th>
+                    <th>原因</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2009.07</td>
+                    <td>-</td>
+                    <td>1975</td>
+                    <td>帐务转交，freshsun→shiqi</td>
+                  </tr>
+                  <tr>
+                    <td>2009.09.19</td>
+                    <td>支出</td>
+                    <td>299.2</td>
+                    <td>自由软件日</td>
+                  </tr>
+                  <tr>
+                    <td>2009.09.19</td>
+                    <td>收入</td>
+                    <td>250</td>
+                    <td>团委报销（自由软件日）</td>
+                  </tr>
+                  <tr>
+                    <td>2009.11</td>
+                    <td>支出</td>
+                    <td>731</td>
+                    <td>购买图书（共10种12册）</td>
+                  </tr>
+                  <tr>
+                    <td>年终结余</td>
+                    <td>-</td>
+                    <td>1194.80</td>
+                    <td>-</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="2009年之前">2009年之前</h3>
+              <p>2010年9月更新服务器时以前的财务记录不慎丢失。</p>
+            </section>
+            <footer class="page__meta">
+              <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-08-09T15:12:14+08:00">2020 年 8 月 9 日</time></p>
+            </footer>
+            <nav class="pagination">
+              <a href="/wiki/lug/events/weeklyparty/" class="pagination--pager" title="LUG 每周小聚
+">上一页</a>
+              <a href="/wiki/lug/finance/donate/" class="pagination--pager" title="捐赠LUG
+">下一页</a>
+            </nav>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+        <!-- end custom footer snippets -->
+        <div class="footer-row">
+          <div class="footer-block footer__about">
+            <p>中国科学技术大学 Linux 用户协会是由中国科学技术大学在校的 GNU/Linux 爱好者发起并组成的团体，旨在联合科大的 GNU/Linux
+              使用者，搭建信息交流共享的平台，宣传自由软件的价值，提高自由软件社区文化氛围，推广自由软件的应用。</p>
+          </div>
+          <div class="footer-block footer__contact">
+            <ul>
+              <li>
+                <a href="/wiki/intro/"><i class="fas fa-fw fa-address-card"></i> 关于我们</a>
+              </li>
+              <li>
+                <a href="/wiki/lug/contact/"><i class="fas fa-fw fa-phone-alt"></i> 联系我们</a>
+              </li>
+              <li>
+                <a href="/wiki/lug/contribute/"><i class="fas fa-fw fa-users"></i> 加入我们</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-block footer__logo">
+            <img src="https://ftp.lug.ustc.edu.cn/misc/logo-white.svg" width="33%" />
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="/assets/js/main.min.js"></script>
+    <img src="https://static.beta.ustclug.org/USTC_logo.svg" style="position: fixed; bottom: -320px; left: -200px; opacity: 0.1; z-index: -100;" />
+  </body>
+</html>

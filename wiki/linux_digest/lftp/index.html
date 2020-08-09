@@ -1,0 +1,306 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.20.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="zh" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <!-- begin _includes/seo.html -->
+    <title>lftp - LUG @ USTC</title>
+    <meta name="description" content="lftp">
+    <meta name="author" content="USTCLUG">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="LUG @ USTC">
+    <meta property="og:title" content="lftp">
+    <meta property="og:url" content="https://beta.ustclug.org//wiki/linux_digest/lftp/">
+    <meta property="og:description" content="lftp">
+    <meta property="article:published_time" content="2020-08-09T15:12:14+08:00">
+    <link rel="canonical" href="https://beta.ustclug.org//wiki/linux_digest/lftp/">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+      
+          "@type": "Person",
+          "name": "USTCLUG",
+          "url": "https://beta.ustclug.org//"
+      
+      }
+    </script>
+    <!-- end _includes/seo.html -->
+    <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="LUG @ USTC Feed">
+    <!-- https://t.co/dKP3o1e -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+    </script>
+    <!-- For all browsers -->
+    <link rel="stylesheet" href="/assets/css/main.css?v=c5a82c3">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" media="invalid" onload="this.media='all'">
+    <!--[if IE]>
+      <style>
+        /* old IE unsupported flexbox fixes */
+        .greedy-nav .site-title {
+          padding-right: 3em;
+        }
+        .greedy-nav button {
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 100%;
+        }
+      </style>
+    <![endif]-->
+    <!-- start custom head snippets -->
+    <!-- insert favicons. use https://realfavicongenerator.net/ -->
+    <!-- end custom head snippets -->
+  </head>
+  <body class="layout--single">
+    <nav class="skip-links">
+      <h2 class="screen-reader-text">跳转链接</h2>
+      <ul>
+        <li><a href="#site-nav" class="screen-reader-shortcut">转到主导航栏</a></li>
+        <li><a href="#main" class="screen-reader-shortcut">转到内容</a></li>
+        <li><a href="#footer" class="screen-reader-shortcut">转到底部</a></li>
+      </ul>
+    </nav>
+    <!--[if lt IE 9]>
+      <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+    <![endif]-->
+    <div class="masthead">
+      <div class="masthead__inner-wrap">
+        <div class="masthead__menu">
+          <nav id="site-nav" class="greedy-nav">
+            <a class="site-logo" href="/"><img src="https://ftp.lug.ustc.edu.cn/misc/LUG.png" alt=""></a>
+            <a class="site-title" href="/">
+              LUG @ USTC
+            </a>
+            <ul class="visible-links">
+              <li class="masthead__menu-item">
+                <a href="/wiki/">Wiki</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="/news/">News</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="/planet/">Planet</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="https://github.com/ustclug">GitHub</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="https://mirrors.ustc.edu.cn/">Mirrors</a>
+              </li>
+            </ul>
+            <button class="greedy-nav__toggle hidden" type="button">
+              <span class="visually-hidden">切换菜单</span>
+              <div class="navicon"></div>
+            </button>
+            <ul class="hidden-links hidden"></ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="initial-content">
+      <div id="main" role="main">
+        <div class="sidebar sticky">
+          <nav class="nav__list">
+            <input id="ac-toc" name="accordion-toc" type="checkbox" />
+            <label for="ac-toc">切换菜单</label>
+            <ul class="nav__items">
+              <li>
+                <span class="nav__sub-title">LUG @ USTC</span>
+                <ul>
+                  <li><a href="/">LUG 首页</a></li>
+                  <li><a href="/news/">LUG 新闻</a></li>
+                  <li><a href="/wiki/lug/links/">友情链接</a></li>
+                  <li><a href="/wiki/mirrors/">开源软件镜像</a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="nav__sub-title">活动</span>
+                <ul>
+                  <li><a href="/wiki/lug/events/">LUG 活动</a></li>
+                  <li><a href="/wiki/lug/events/weeklyparty/">每周小聚</a></li>
+                  <li><a href="/wiki/lug/mailinglist/">邮件列表</a></li>
+                  <li><a href="/wiki/lug/book/">LUG 书库</a></li>
+                  <li><a href="https://news.ustclug.org/finance/">LUG 财务</a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="nav__sub-title">联系</span>
+                <ul>
+                  <li><a href="/wiki/lug/person-in-charge/">LUG 负责人</a></li>
+                  <li><a href="/wiki/lug/contact/">联系我们</a></li>
+                  <li><a href="/wiki/lug/contribute/">加入我们</a></li>
+                  <li><a href="/wiki/lug/finance/donate/">捐赠我们</a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="nav__sub-title">资源</span>
+                <ul>
+                  <li><a href="/wiki/linux_digest/">Linux 文摘</a></li>
+                  <li><a href="/wiki/lug/resources/">资源导航</a></li>
+                  <li><a href="https://servers.ustclug.org/">服务器新闻</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+          <meta itemprop="headline" content="lftp">
+          <meta itemprop="description" content="lftp">
+          <meta itemprop="datePublished" content="2020-08-09T15:12:14+08:00">
+          <div class="page__inner-wrap">
+            <header>
+              <h1 id="page-title" class="page__title" itemprop="headline">lftp
+              </h1>
+            </header>
+            <section class="page__content" itemprop="text">
+              <aside class="sidebar__right sticky">
+                <nav class="toc">
+                  <header>
+                    <h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4>
+                  </header>
+                  <ul class="toc__menu">
+                    <li><a href="#常用命令">常用命令</a></li>
+                    <li><a href="#配置文件">配置文件</a></li>
+                    <li><a href="#书签支持">书签支持</a></li>
+                    <li><a href="#奇巧淫技-使用lftp同步个人主页">奇巧淫技-使用lftp同步个人主页</a></li>
+                  </ul>
+                </nav>
+              </aside>
+              <p><a href="https://en.wikipedia.org/wiki/lftp" title="https://en.wikipedia.org/wiki/lftp">lftp</a>是一款基于命令行的文件传输程序。除了FTP外，她还支持FTPS, HTTP, HTTPS, HFTP, FISH和SFTP。它还有一个实用的特性，支持FXP，即在两台FTP服务器间传文件，绕过客户机。此外，她还有一个内建的BitTorrent客户端。</p>
+              <h2 id="常用命令">常用命令</h2>
+              <h2 id="配置文件">配置文件</h2>
+              <p>lftp启动后会一次读取/etc/lftp.conf、~/.lftprc和~/.lftp/rc。 通常我们将常用的设置写入~/.lftprc或者~/.lftp/rc中。 下面是一份lftprc的样例：</p>
+              <p><a href="../_export/code/linux_digest/435f.lftprc?codeblock=0" title="下载片段">.lftprc</a></p>
+              <div class="language-plaintext highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>#在浏览GBK编码的ftp时，可以执行gbkserver命令迅速切换。
+alias gbkserver set ftp:charset gbk;set file:charset utf-8
+alias utfserver set ftp:charset UTF-8;set file:charset utf-8
+ 
+#使得ls的输出更友好、美观
+alias ls cls -lhSF
+set color:use-color true
+ 
+#本地文件名使用utf8存储
+set file:charset utf-8
+ 
+#对202.38.64.22站点的独立设置
+set ftp:passive-mode/202.38.64.22 no
+set ftp:charset/202.38.64.22 gbk
+</code></pre>
+                </div>
+              </div>
+              <p>在被动模式下，lftp主动连接服务器进行数据传输。在主动模式下，服务器会主动连接lftp进行数据传输。 被动模式当您在防火墙后面时很有用。</p>
+              <h2 id="书签支持">书签支持</h2>
+              <p>将站点加入书签有两种简单常用的方法，一种是在命令行中执行bookmark命令：</p>
+              <div class="language-plaintext highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>bookmark add &lt;name&gt; [&lt;location&gt;]
+</code></pre>
+                </div>
+              </div>
+              <p>改命令将会在~/.lftp/bookmarks文件中新增一行，内容类似如下：</p>
+              <div class="language-plaintext highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>movie	ftp://upload@202.38.64.22/
+</code></pre>
+                </div>
+              </div>
+              <p>另一种方法就是直接编辑~/.lftp/bookmarks文件，例如我直接增加以下该行到文件中：</p>
+              <div class="language-plaintext highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>home    ftp://myname@home.ustc.edu.cn/public_html/
+</code></pre>
+                </div>
+              </div>
+              <p>将来只需要在shell中执行：</p>
+              <div class="language-plaintext highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>lftp home
+</code></pre>
+                </div>
+              </div>
+              <p>即可打开连接到我的ftp上了</p>
+              <p><img src="../lib/images/smileys/icon_smile.gif" alt=":-)" /></p>
+              <h2 id="奇巧淫技-使用lftp同步个人主页">奇巧淫技-使用lftp同步个人主页</h2>
+              <p>科大的童鞋们都有一个300M的静态主页空间，很多人都会用这个空间来制作漂亮的个人主页，那你是怎么同步的呢？是不是每次都需要打开nautilus或者filezilla等工具一个个文件的复制呢？ 来看看用lftp的脚本同步吧。</p>
+              <p><a href="../_export/code/linux_digest/cc37.bash_aliases?codeblock=1" title="下载片段">.bash_aliases</a></p>
+              <div class="language-plaintext highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>alias update-homepage='lftp -f ~/.bin/update-homepage.lftp'
+</code></pre>
+                </div>
+              </div>
+              <p><a href="../_export/code/linux_digest/update-homepagec273.lftp?codeblock=2" title="下载片段">update-homepage.lftp</a></p>
+              <div class="language-plaintext highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>connect home.ustc.edu.cn
+user myname
+ 
+mirror -R -e ~/public_html public_html --exclude book/ --exclude bak/
+</code></pre>
+                </div>
+              </div>
+              <p>在这个lftp脚本中，首先连接服务器，然后使用mirror -R来将本地的~/public <em>html目录同步到服务器上的public</em> html中，在我本地的目录中有bak目录，我不希望同步上去，就将它排除掉，另外book目录比较大，希望自己手动管理同步，所以也排除了。如果在服务器上有一个目录，本地没有，也可以将其排除，以免同步时被删除。</p>
+              <p>以后本地文件修改之后，只需要执行</p>
+              <div class="language-plaintext highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>update-homepage
+</code></pre>
+                </div>
+              </div>
+              <p>即可完成同步工作。也可将lftp -f ~/.bin/update-homepage.lftp这条命令写入<a href="../linux/crontab" title="linux:crontab">crontab</a>，每天自动同步。</p>
+              <p>你需要登录发表评论。</p>
+            </section>
+            <footer class="page__meta">
+              <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-08-09T15:12:14+08:00">2020 年 8 月 9 日</time></p>
+            </footer>
+            <nav class="pagination">
+              <a href="/wiki/linux_digest/expasy-ps_scan/" class="pagination--pager" title="ExPASy的ps_scan在linux下的简明配置指南
+">上一页</a>
+              <a href="/wiki/linux_digest/reading_notes/ruoshan-lfs-read-notes/" class="pagination--pager" title="手把手读书报告
+">下一页</a>
+            </nav>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+        <!-- end custom footer snippets -->
+        <div class="footer-row">
+          <div class="footer-block footer__about">
+            <p>中国科学技术大学 Linux 用户协会是由中国科学技术大学在校的 GNU/Linux 爱好者发起并组成的团体，旨在联合科大的 GNU/Linux
+              使用者，搭建信息交流共享的平台，宣传自由软件的价值，提高自由软件社区文化氛围，推广自由软件的应用。</p>
+          </div>
+          <div class="footer-block footer__contact">
+            <ul>
+              <li>
+                <a href="/wiki/intro/"><i class="fas fa-fw fa-address-card"></i> 关于我们</a>
+              </li>
+              <li>
+                <a href="/wiki/lug/contact/"><i class="fas fa-fw fa-phone-alt"></i> 联系我们</a>
+              </li>
+              <li>
+                <a href="/wiki/lug/contribute/"><i class="fas fa-fw fa-users"></i> 加入我们</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-block footer__logo">
+            <img src="https://ftp.lug.ustc.edu.cn/misc/logo-white.svg" width="33%" />
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="/assets/js/main.min.js"></script>
+    <img src="https://static.beta.ustclug.org/USTC_logo.svg" style="position: fixed; bottom: -320px; left: -200px; opacity: 0.1; z-index: -100;" />
+  </body>
+</html>

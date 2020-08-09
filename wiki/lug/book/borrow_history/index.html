@@ -1,0 +1,1267 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.20.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="zh" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <!-- begin _includes/seo.html -->
+    <title>借阅记录 - LUG @ USTC</title>
+    <meta name="description" content="借阅记录">
+    <meta name="author" content="USTCLUG">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="LUG @ USTC">
+    <meta property="og:title" content="借阅记录">
+    <meta property="og:url" content="https://beta.ustclug.org//wiki/lug/book/borrow_history/">
+    <meta property="og:description" content="借阅记录">
+    <meta property="article:published_time" content="2020-08-09T15:12:14+08:00">
+    <link rel="canonical" href="https://beta.ustclug.org//wiki/lug/book/borrow_history/">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+      
+          "@type": "Person",
+          "name": "USTCLUG",
+          "url": "https://beta.ustclug.org//"
+      
+      }
+    </script>
+    <!-- end _includes/seo.html -->
+    <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="LUG @ USTC Feed">
+    <!-- https://t.co/dKP3o1e -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+    </script>
+    <!-- For all browsers -->
+    <link rel="stylesheet" href="/assets/css/main.css?v=c5a82c3">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" media="invalid" onload="this.media='all'">
+    <!--[if IE]>
+      <style>
+        /* old IE unsupported flexbox fixes */
+        .greedy-nav .site-title {
+          padding-right: 3em;
+        }
+        .greedy-nav button {
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 100%;
+        }
+      </style>
+    <![endif]-->
+    <!-- start custom head snippets -->
+    <!-- insert favicons. use https://realfavicongenerator.net/ -->
+    <!-- end custom head snippets -->
+  </head>
+  <body class="layout--single">
+    <nav class="skip-links">
+      <h2 class="screen-reader-text">跳转链接</h2>
+      <ul>
+        <li><a href="#site-nav" class="screen-reader-shortcut">转到主导航栏</a></li>
+        <li><a href="#main" class="screen-reader-shortcut">转到内容</a></li>
+        <li><a href="#footer" class="screen-reader-shortcut">转到底部</a></li>
+      </ul>
+    </nav>
+    <!--[if lt IE 9]>
+      <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+    <![endif]-->
+    <div class="masthead">
+      <div class="masthead__inner-wrap">
+        <div class="masthead__menu">
+          <nav id="site-nav" class="greedy-nav">
+            <a class="site-logo" href="/"><img src="https://ftp.lug.ustc.edu.cn/misc/LUG.png" alt=""></a>
+            <a class="site-title" href="/">
+              LUG @ USTC
+            </a>
+            <ul class="visible-links">
+              <li class="masthead__menu-item">
+                <a href="/wiki/">Wiki</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="/news/">News</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="/planet/">Planet</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="https://github.com/ustclug">GitHub</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="https://mirrors.ustc.edu.cn/">Mirrors</a>
+              </li>
+            </ul>
+            <button class="greedy-nav__toggle hidden" type="button">
+              <span class="visually-hidden">切换菜单</span>
+              <div class="navicon"></div>
+            </button>
+            <ul class="hidden-links hidden"></ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="initial-content">
+      <div id="main" role="main">
+        <div class="sidebar sticky">
+          <nav class="nav__list">
+            <input id="ac-toc" name="accordion-toc" type="checkbox" />
+            <label for="ac-toc">切换菜单</label>
+            <ul class="nav__items">
+              <li>
+                <span class="nav__sub-title">LUG @ USTC</span>
+                <ul>
+                  <li><a href="/">LUG 首页</a></li>
+                  <li><a href="/news/">LUG 新闻</a></li>
+                  <li><a href="/wiki/lug/links/">友情链接</a></li>
+                  <li><a href="/wiki/mirrors/">开源软件镜像</a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="nav__sub-title">活动</span>
+                <ul>
+                  <li><a href="/wiki/lug/events/">LUG 活动</a></li>
+                  <li><a href="/wiki/lug/events/weeklyparty/">每周小聚</a></li>
+                  <li><a href="/wiki/lug/mailinglist/">邮件列表</a></li>
+                  <li><a href="/wiki/lug/book/">LUG 书库</a></li>
+                  <li><a href="https://news.ustclug.org/finance/">LUG 财务</a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="nav__sub-title">联系</span>
+                <ul>
+                  <li><a href="/wiki/lug/person-in-charge/">LUG 负责人</a></li>
+                  <li><a href="/wiki/lug/contact/">联系我们</a></li>
+                  <li><a href="/wiki/lug/contribute/">加入我们</a></li>
+                  <li><a href="/wiki/lug/finance/donate/">捐赠我们</a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="nav__sub-title">资源</span>
+                <ul>
+                  <li><a href="/wiki/linux_digest/">Linux 文摘</a></li>
+                  <li><a href="/wiki/lug/resources/">资源导航</a></li>
+                  <li><a href="https://servers.ustclug.org/">服务器新闻</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+          <meta itemprop="headline" content="借阅记录">
+          <meta itemprop="description" content="借阅记录">
+          <meta itemprop="datePublished" content="2020-08-09T15:12:14+08:00">
+          <div class="page__inner-wrap">
+            <header>
+              <h1 id="page-title" class="page__title" itemprop="headline">借阅记录
+              </h1>
+            </header>
+            <section class="page__content" itemprop="text">
+              <aside class="sidebar__right sticky">
+                <nav class="toc">
+                  <header>
+                    <h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4>
+                  </header>
+                  <ul class="toc__menu">
+                    <li><a href="#2020-年借阅记录">2020 年借阅记录</a></li>
+                    <li><a href="#2019年借阅记录">2019年借阅记录</a></li>
+                    <li><a href="#2018年借阅记录">2018年借阅记录</a></li>
+                    <li><a href="#2017年借阅记录">2017年借阅记录</a></li>
+                    <li><a href="#2016年借阅记录">2016年借阅记录</a></li>
+                    <li><a href="#2015年借阅记录">2015年借阅记录</a></li>
+                    <li><a href="#2014年借阅记录">2014年借阅记录</a></li>
+                    <li><a href="#2012至2013年借阅记录">2012至2013年借阅记录</a></li>
+                    <li><a href="#2011借阅记录">2011借阅记录</a></li>
+                    <li><a href="#黑名单">黑名单</a></li>
+                  </ul>
+                </nav>
+              </aside>
+              <p>如欲借阅图书，请参阅<a href="../borrow_book" title="http://lug.ustc.edu.cn/wiki/lug/borrow_book"> 图书借阅管理制度</a>。</p>
+              <h2 id="2020-年借阅记录">2020 年借阅记录</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>书名</th>
+                    <th>借阅者</th>
+                    <th>联系方式</th>
+                    <th>借阅日期</th>
+                    <th>归还日期</th>
+                    <th>备注</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>陶哲轩实分析</td>
+                    <td>王子博</td>
+                    <td>hypercube AT 0x01.me</td>
+                    <td>2020-01-07</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>概率论与数理统计</td>
+                    <td>袁一玮</td>
+                    <td>yuanyiwei AT mail.ustc.edu.cn</td>
+                    <td>2020-01-13</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>概率论与数理统计习题全解指南</td>
+                    <td>袁一玮</td>
+                    <td>yuanyiwei AT mail.ustc.edu.cn</td>
+                    <td>2020-01-13</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h2 id="2019年借阅记录">2019年借阅记录</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>书名</th>
+                    <th>借阅者</th>
+                    <th>联系方式</th>
+                    <th>借阅日期</th>
+                    <th>归还日期</th>
+                    <th>读书报告(链接)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>操作系统概念 第七版 影印版</td>
+                    <td>樊真幸</td>
+                    <td>fanzhenxing AT mail.ustc.edu.cn</td>
+                    <td>2019年3月1日</td>
+                    <td>2019 年 6 月 ? 日</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>计算机组成与设计-硬件软件接口</td>
+                    <td>樊真幸</td>
+                    <td>fanzhenxing AT mail.ustc.edu.cn</td>
+                    <td>2019年3月1日</td>
+                    <td>2019 年 6 月 ？ 日</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>算法导论（原书第 3 版）</td>
+                    <td>高志远</td>
+                    <td>gaozhiyuan AT mail.ustc.edu.cn</td>
+                    <td>2019年7月25日</td>
+                    <td>2019年9月1日</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>编译原理（第 2 版）</td>
+                    <td>高志远</td>
+                    <td>gaozhiyuan AT mail.ustc.edu.cn</td>
+                    <td>2019年7月25日</td>
+                    <td>2019年9月1日</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>Haskell 趣学指南</td>
+                    <td>张佳</td>
+                    <td>jzhang19 AT mail.ustc.edu.cn</td>
+                    <td>2019年8月31日</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>计算机网络：自顶向下方法 第六版 影印版</td>
+                    <td>樊真幸</td>
+                    <td>fanzhenxing AT mail.ustc.edu.cn</td>
+                    <td>2019年9月1日</td>
+                    <td>2020 年 1 月 9 日</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>计算机网络：自顶向下方法 第四版 影印版</td>
+                    <td>段志宇</td>
+                    <td>wfp AT mail.ustc.edu.cn</td>
+                    <td>2019年9月1日</td>
+                    <td>2020 年 1 月 9 日</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>Head First Python</td>
+                    <td>王子博</td>
+                    <td>hypercube AT 0x01.me</td>
+                    <td>2019年9月1日</td>
+                    <td>2019年11月11日</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>数学分析中的典型问题与方法</td>
+                    <td>胡清宇</td>
+                    <td>hmsh AT mail.ustc.edu.cn</td>
+                    <td>2019年10月27日</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>电子技术基础 模拟部分（第六版）学习辅导与习题解答</td>
+                    <td>袁一玮</td>
+                    <td>yuanyiwei AT mail.ustc.edu.cn</td>
+                    <td>2019年9月10日</td>
+                    <td>2019年12月24日</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>C++ Primer 英文版（第 5 版）</td>
+                    <td>龚平</td>
+                    <td>gpzlx1 AT mail.ustc.edu.cn</td>
+                    <td>2019年10月3日</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>算法导论（原书第 2 版）</td>
+                    <td>汤力宇</td>
+                    <td>lyrics_1117 AT mail.ustc.edu.cn</td>
+                    <td>2019年10月13日</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>编译原理（第二版）（龙书）</td>
+                    <td>又木</td>
+                    <td>youmu1998 AT mail.ustc.edu.cn</td>
+                    <td>2019年10月28日</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>计算机系统概论（原书第二版）</td>
+                    <td>袁一玮</td>
+                    <td>yuanyiwei AT mail.ustc.edu.cn</td>
+                    <td>2019年10月31日</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>七周七语言 理解多种编程范型</td>
+                    <td>王子博</td>
+                    <td>hypercube AT 0x01.me</td>
+                    <td>2019年11月1日</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>数据结构与算法分析</td>
+                    <td>王子博</td>
+                    <td>hypercube AT 0x01.me</td>
+                    <td>2019年11月1日</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>鸟哥的 Linux 私房菜基础学习篇第三版</td>
+                    <td>樊真幸</td>
+                    <td>fanzhenxing AT mail.ustc.edu.cn</td>
+                    <td>2019 年 12 月 18 日</td>
+                    <td>2019 年 12 月 23 日</td>
+                    <td>-</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h2 id="2018年借阅记录">2018年借阅记录</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>书名</th>
+                    <th>借阅者</th>
+                    <th>联系方式</th>
+                    <th>借阅日期</th>
+                    <th>应还日期</th>
+                    <th>归还日期</th>
+                    <th>读书报告(链接)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>鸟哥的Linux私房菜 基础学习篇 第三版</td>
+                    <td>金孜达</td>
+                    <td>jzd AT mail.ustc.edu.cn</td>
+                    <td>2018年12月9日</td>
+                    <td>2019年3月1日</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>Haskell趣学指南</td>
+                    <td>金孜达</td>
+                    <td>jzd AT mail.ustc.edu.cn</td>
+                    <td>2018年12月9日</td>
+                    <td>2019年3月1日</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>七周七数据库</td>
+                    <td>杨永钰</td>
+                    <td>yale1996@mail.ustc.edu.cn</td>
+                    <td>2018年12月9日</td>
+                    <td>2019年1月10日</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>Head First Python</td>
+                    <td>李晨宇</td>
+                    <td>dev8708446@mail.ustc.edu.cn</td>
+                    <td>2018年1月7日</td>
+                    <td>2018年6月29日</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h2 id="2017年借阅记录">2017年借阅记录</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>书名</th>
+                    <th>借阅者</th>
+                    <th>联系方式</th>
+                    <th>借阅日期</th>
+                    <th>应还日期</th>
+                    <th>归还日期</th>
+                    <th>读书报告(链接)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>鸟哥的Linux私房菜-服务器架设篇</td>
+                    <td>李晨宇</td>
+                    <td>dev8708446@mail.ustc.edu.cn</td>
+                    <td>2017年10月29日</td>
+                    <td>2018年1月15日</td>
+                    <td>2018年1月7日</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>计算机取证</td>
+                    <td>郑子涵</td>
+                    <td>zzh1996@mail.ustc.edu.cn</td>
+                    <td>2017年9月3日</td>
+                    <td>2018年1月15日</td>
+                    <td>2017年9月29日</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>计算机网络</td>
+                    <td>郑子涵</td>
+                    <td>zzh1996@mail.ustc.edu.cn</td>
+                    <td>2017年9月3日</td>
+                    <td>2018年1月15日</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>密码编码学与网络安全</td>
+                    <td>郑子涵</td>
+                    <td>zzh1996@mail.ustc.edu.cn</td>
+                    <td>2017年9月3日</td>
+                    <td>2018年1月15日</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>离散数学及其应用</td>
+                    <td>郑子涵</td>
+                    <td>zzh1996@mail.ustc.edu.cn</td>
+                    <td>2017年9月3日</td>
+                    <td>2018年1月15日</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>深入理解linux内核</td>
+                    <td>李嘉豪</td>
+                    <td>???</td>
+                    <td>2017年3月4日</td>
+                    <td>2017年7月15日</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>计算机组成原理</td>
+                    <td>李嘉豪</td>
+                    <td>???</td>
+                    <td>2017年3月4日</td>
+                    <td>2017年7月15日</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>Haskell趣学指南</td>
+                    <td>王子博</td>
+                    <td>wzb15@mail.ustc.edu.cn</td>
+                    <td>2017年2月12日</td>
+                    <td>2017年7月15日</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>人工智能 一种现代方法 第二版</td>
+                    <td>左格非</td>
+                    <td>alkaid@mail.ustc.edu.cn</td>
+                    <td>2017年2月12日</td>
+                    <td>2017年7月15日</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>计算机体系结构</td>
+                    <td>左格非</td>
+                    <td>alkaid@mail.ustc.edu.cn</td>
+                    <td>2017年2月12日</td>
+                    <td>2017年7月15日</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>数据库系统导论</td>
+                    <td>左格非</td>
+                    <td>alkaid@mail.ustc.edu.cn</td>
+                    <td>2017年2月12日</td>
+                    <td>2017年7月15日</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>数据库系统导论</td>
+                    <td>郑子涵</td>
+                    <td>zzh1996@mail.ustc.edu.cn</td>
+                    <td>2017年2月12日</td>
+                    <td>2017年7月15日</td>
+                    <td>2017年9月4日</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>并行计算-结构算法编程</td>
+                    <td>郑子涵</td>
+                    <td>zzh1996@mail.ustc.edu.cn</td>
+                    <td>2017年2月12日</td>
+                    <td>2017年7月15日</td>
+                    <td>2017年2月20日</td>
+                    <td>-</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h2 id="2016年借阅记录">2016年借阅记录</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>书名</th>
+                    <th>借阅者</th>
+                    <th>联系方式</th>
+                    <th>借阅日期</th>
+                    <th>应还日期</th>
+                    <th>归还日期</th>
+                    <th>读书报告(链接)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>深度探索Linux操作系统</td>
+                    <td>任正行</td>
+                    <td>zh2016@mail.ustc.edu.cn</td>
+                    <td>2016年9月23日</td>
+                    <td>2017年1月23日</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>计算机系统概论</td>
+                    <td>王子博</td>
+                    <td>wzb15@mail.ustc.edu.cn</td>
+                    <td>2016年8月29日</td>
+                    <td>2017年1月29日</td>
+                    <td>2017年2月12日</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>计算机系统概论(英文版)</td>
+                    <td>王子博</td>
+                    <td>wzb15@mail.ustc.edu.cn</td>
+                    <td>2016年8月29日</td>
+                    <td>2017年1月29日</td>
+                    <td>2017年2月12日</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>Intel微处理器</td>
+                    <td>郑子涵</td>
+                    <td>zzh1996@mail.ustc.edu.cn</td>
+                    <td>2016年8月29日</td>
+                    <td>2017年1月29日</td>
+                    <td>2016年9月22日</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>设计模式</td>
+                    <td>郑子涵</td>
+                    <td>zzh1996@mail.ustc.edu.cn</td>
+                    <td>2016年7月7日</td>
+                    <td>2016年9月7日</td>
+                    <td>2016年9月6日</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>SQL沉思录</td>
+                    <td>郑子涵</td>
+                    <td>zzh1996@mail.ustc.edu.cn</td>
+                    <td>2016年3月10日</td>
+                    <td>2016年5月10日</td>
+                    <td>2016年7月7日</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>鸟哥的Linux私房菜 基础学习篇 第三版</td>
+                    <td>金孜达</td>
+                    <td>jzd AT mail.ustc.edu.cn</td>
+                    <td>2016年6月26日</td>
+                    <td>2016年12月31日</td>
+                    <td>2018年12月9日</td>
+                    <td>-</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h2 id="2015年借阅记录">2015年借阅记录</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>书名</th>
+                    <th>借阅者</th>
+                    <th>联系方式</th>
+                    <th>借阅日期</th>
+                    <th>应还日期</th>
+                    <th>归还日期</th>
+                    <th>读书报告(链接)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>鸟哥的 Linux 私房菜 基础学习篇（第三版）</td>
+                    <td>熊国鑫</td>
+                    <td>xgx@mail.ustc.edu.cn</td>
+                    <td>2015年10月22日</td>
+                    <td>2015年12月22日</td>
+                    <td>2015年12月14日</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>学习 vi 和 Vim 编辑器</td>
+                    <td>王嘉男</td>
+                    <td>wjn2015@mail.ustc.edu.cn</td>
+                    <td>2015年10月5日</td>
+                    <td>2015年12月5日</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>JavaScript 高级程序设计（第三版）</td>
+                    <td>常震</td>
+                    <td>ch888@mail.ustc.edu.cn</td>
+                    <td>2015年3月26日</td>
+                    <td>2015年5月26日</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>CSAPP</td>
+                    <td>sadhen</td>
+                    <td>sadhen@mail.ustc.edu.cn</td>
+                    <td>2015年1月1日</td>
+                    <td>2015年3月1日</td>
+                    <td>2015年3月11日</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>计算机程序的构造和解释（第2版，翻译）</td>
+                    <td>崔灏</td>
+                    <td>cuihao.leo@gmail.com</td>
+                    <td>2015年1月1日</td>
+                    <td>2016年1月1日</td>
+                    <td>2015年12月18日</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>计算机网络（英文版·第5版）</td>
+                    <td>左格非</td>
+                    <td>alkaid AT mail.ustc.edu.cn</td>
+                    <td>2015年1月24日</td>
+                    <td>2015年3月2日</td>
+                    <td>2015年3月2日</td>
+                    <td>-</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>人工智能——一种现代方法(第二版)<br />
+                Artificial Intelligence - A Modern Approach |  朱晟菁 |  zsj950618@gmail.com |  2015年3月1日 |  2015年8月1日 |  - |  - <br />
+                数据库系统导论| 朱晟菁 |  zsj950618@gmail.com |  2015年3月1日 |  2015年8月1日 |  - |  - <br />
+                计算机网络：自顶向下方法（原书第4版）| 曾键|  | 2015年5月6日| 2015年8月1日| -| -<br />
+                深入理解计算机系统| 曾键|  | 2015年3月7日| 2015年8月1日| -| -<br />
+                程序设计语言原理(第8版)| 张恒若| 15665518450| 2015年3月8日| 2015年5月8日|  2015年5月4日 | -<br />
+                编译原理·第二版| 张恒若| 15665518450| 2015年3月8日| 2015年5月8日| 2015年9月1日| -<br />
+                TCP/IP 详解(卷1: 协议)<br />
+                TCP/IP Illustrated Volume 1: The Protocols| 郑子涵| zzh1996@mail.ustc.edu.cn| 2015年3月20日| 2015年9月1日|  2015年8月30日 |  -</p>
+              <h2 id="2014年借阅记录">2014年借阅记录</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>书名</th>
+                    <th>借阅者</th>
+                    <th>联系方式</th>
+                    <th>借阅日期</th>
+                    <th>应还日期</th>
+                    <th>归还日期</th>
+                    <th>读书报告(链接)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>社交网站的数据挖掘与分析</td>
+                    <td>邱康, PB12210020</td>
+                    <td>-</td>
+                    <td>2014年9月23日</td>
+                    <td>2014年12月23日</td>
+                    <td>2015年3月8日</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>密战——网络犯罪大追踪</td>
+                    <td>boj</td>
+                    <td>boj@mail.ustc.edu.cn</td>
+                    <td>2014年9月4日</td>
+                    <td>2014年11月4日</td>
+                    <td>2014年11月27日</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>用户体验要素</td>
+                    <td>周星，PB11011066</td>
+                    <td>zhou999@mail.ustc.edu.cn</td>
+                    <td>2014年12月9日</td>
+                    <td>2015年2月9日</td>
+                    <td>2014年12月17日</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>浪潮之巅</td>
+                    <td>张静宁，PB14203209</td>
+                    <td>changchongning AT gmail.com</td>
+                    <td>2014年9月18日</td>
+                    <td>2014年11月18日</td>
+                    <td>2014年11月25日</td>
+                    <td><a href="https://jenny42.com/?p=108" title="https://jenny42.com/?p=108">浪潮之巅读书笔记</a></td>
+                  </tr>
+                  <tr>
+                    <td>学习Vi和Vim编辑器</td>
+                    <td>于天泽，PB14206077</td>
+                    <td>15656587996</td>
+                    <td>2014年9月26日</td>
+                    <td>2014年11月26日</td>
+                    <td>2014年11月20日</td>
+                    <td>归还到东区</td>
+                  </tr>
+                  <tr>
+                    <td>Python开发技术详解</td>
+                    <td>李建伟, SC14011001</td>
+                    <td>-</td>
+                    <td>2014年9月23日</td>
+                    <td>2014年11月23日</td>
+                    <td>2014年11月20日</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>手把手教你构建自己的Linux系统</td>
+                    <td>武慧友，SM14204033</td>
+                    <td>18697555127</td>
+                    <td>2014-09-26</td>
+                    <td>2014-11-26</td>
+                    <td>2014-10-25</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>Programming Android</td>
+                    <td>阴钰，PB13011038</td>
+                    <td>18226611511</td>
+                    <td>2014年9月26日</td>
+                    <td>2014年11月26日</td>
+                    <td>2014年11月25</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>HTML5与CSS 3构成指南</td>
+                    <td>吴昊，PB14000207</td>
+                    <td>markwh@mail.ustc.edu.cn</td>
+                    <td>2014年9月26日</td>
+                    <td>2014年11月26日</td>
+                    <td>2015年3月14日</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>鸟哥的Linux私房菜</td>
+                    <td>王一凡，PB14011070</td>
+                    <td>wyf123@mail.ustc.edu.cn</td>
+                    <td>2014年9月26日</td>
+                    <td>2014年11月26日</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>计算机系统概论（英文版·第二版）</td>
+                    <td>刘淼丰，PB14210114</td>
+                    <td>15555432817</td>
+                    <td>2014年10月12日</td>
+                    <td>2014年12月12日</td>
+                    <td>2015年1月28日</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>鸟哥的Linux私房菜（基础学习篇·第二版）</td>
+                    <td>刘淼丰，PB14210114</td>
+                    <td>15555432817</td>
+                    <td>2014年10月12日</td>
+                    <td>2014年12月12日</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>Orange’S：一个操作系统的实现</td>
+                    <td>张恒若</td>
+                    <td>15665518450</td>
+                    <td>2014年10月12日</td>
+                    <td>2014年12月12日</td>
+                    <td>2014年11月30日</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>PHP &amp; MySQL Web网络编程</td>
+                    <td>张恒若</td>
+                    <td>15665518450</td>
+                    <td>2014年10月12日</td>
+                    <td>2014年12月12日</td>
+                    <td>2014年12月20日</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>Git权威指南</td>
+                    <td>杨博远，PB13007333</td>
+                    <td>073plan AT gmail.com</td>
+                    <td>2014年10月13日</td>
+                    <td>2014年12月13日</td>
+                    <td>2014年12月13日</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>C++ primer</td>
+                    <td>曾键，PB14011028</td>
+                    <td>anonymousknight96 AT gmail.com</td>
+                    <td>2014年10月19日</td>
+                    <td>2014年12月19日</td>
+                    <td>2015年3月15</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>C和指针</td>
+                    <td>刘淼丰，PB14210114</td>
+                    <td>musicbow@163.com</td>
+                    <td>2014年10月23日</td>
+                    <td>2014年12月23日</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>鸟哥的 Linux 私房菜</td>
+                    <td>张静宁，PB14203209</td>
+                    <td>changchongning AT gmail.com</td>
+                    <td>2014年11月27日</td>
+                    <td>2015年1月17日</td>
+                    <td>2015年3月1日</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>学习 GNU Emacs</td>
+                    <td>张静宁，PB14203209</td>
+                    <td>changchongning AT gmail.com</td>
+                    <td>2014年11月27日</td>
+                    <td>2015年1月17日</td>
+                    <td>2015年3月1日</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>黑客与画家</td>
+                    <td>张静宁，PB14203209</td>
+                    <td>changchongning AT gmail.com</td>
+                    <td>2014年11月27日</td>
+                    <td>2015年1月17日</td>
+                    <td>2014年12月26日</td>
+                    <td>-</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h2 id="2012至2013年借阅记录">2012至2013年借阅记录</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>书名</th>
+                    <th>借阅者</th>
+                    <th>联系方式</th>
+                    <th>借阅日期</th>
+                    <th>应还日期</th>
+                    <th>归还日期</th>
+                    <th>读书报告(链接)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>计算机组成与设计：硬件、软件接口（第3版）</td>
+                    <td>Thomas Copper</td>
+                    <td> </td>
+                    <td>2012年12月31日</td>
+                    <td>2013年</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>操作系统概念7</td>
+                    <td>sadhen</td>
+                    <td>sadhen@mail.ustc.edu.cn</td>
+                    <td>2013/02/24</td>
+                    <td>2013/04/24</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>操作系统概念6</td>
+                    <td>jal</td>
+                    <td>jal@mail.ustc.edu.cn</td>
+                    <td>2013/02/24</td>
+                    <td>2013/04/24</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>CSAPP(Chinese)</td>
+                    <td>jxl</td>
+                    <td>jxl888@mail.ustc.edu.cn</td>
+                    <td>2013/02/25</td>
+                    <td>2013/04/25</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>计算机组成与设计：硬件、软件接口（第3版）</td>
+                    <td>sadhen</td>
+                    <td> </td>
+                    <td>2013/02/25</td>
+                    <td>2013/04/25</td>
+                    <td>2014年9月</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>Modern Operating System</td>
+                    <td>jal</td>
+                    <td>jal@mail.ustc.edu.cn</td>
+                    <td>2013/03/02</td>
+                    <td>2013/05/02</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>鸟哥（基础学习篇，第三版）</td>
+                    <td>董小飞</td>
+                    <td>xiaofeid@mail.ustc.edu.cn</td>
+                    <td>2013年9月15日</td>
+                    <td>2013年11月15日</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>操作系统概念（第六版）</td>
+                    <td>董小飞</td>
+                    <td>xiaofeid@mail.ustc.edu.cn</td>
+                    <td>2013年9月15日</td>
+                    <td>2013年11月15日</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>学习GNU Emacs</td>
+                    <td>李喵喵</td>
+                    <td>-</td>
+                    <td>2013年1月13日</td>
+                    <td>2013年3月13日</td>
+                    <td>2014年</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>C语言程序设计</td>
+                    <td>老祝</td>
+                    <td> </td>
+                    <td>2012年12月31日</td>
+                    <td> </td>
+                    <td>2015年（已还）</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>科技想要什么</td>
+                    <td>boj</td>
+                    <td>bojieli AT gmail.com</td>
+                    <td>2012-09-02</td>
+                    <td>2012-11-02</td>
+                    <td>不详（已还）</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>人工智能</td>
+                    <td>boj</td>
+                    <td>bojieli AT gmail.com</td>
+                    <td>2012-12-04</td>
+                    <td>2013-02-04</td>
+                    <td>2013-06-23</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>鸟哥(基础学习篇)</td>
+                    <td>朱晟菁</td>
+                    <td>zsj950618 AT gmail.com</td>
+                    <td>2012-12-08</td>
+                    <td>2013-02-08</td>
+                    <td>2013年</td>
+                    <td><a href="../../linux_digest/reading_notes/zsj_niao_linux_sfc_basic_readnote" title="linux_digest:reading_notes:zsj_niao_linux_sfc_basic_readnote">鸟哥的_linux_私房菜_–_基础学习篇_读书笔记</a></td>
+                  </tr>
+                  <tr>
+                    <td>Node.js开发指南</td>
+                    <td>林太星</td>
+                    <td> </td>
+                    <td>2012-12-24</td>
+                    <td>2013-02-24</td>
+                    <td>2013-05-12</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>《黑客与画家》</td>
+                    <td>sadhen</td>
+                    <td>sadhen1992 AT gmail.com</td>
+                    <td>2012-12-31</td>
+                    <td>2013-03-01</td>
+                    <td>2013-01-12</td>
+                    <td><a href="../../user/sadhen/hackers_and_painters" title="user:sadhen:hackers_and_painters">《黑客与画家》读书笔记</a></td>
+                  </tr>
+                  <tr>
+                    <td>《Git权威指南》</td>
+                    <td>sadhen</td>
+                    <td>sadhen1992 AT gmail.com</td>
+                    <td>2012-12-31</td>
+                    <td>2013-03-01</td>
+                    <td>不详（已还）</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>失控: 全人类的最终命运和结局</td>
+                    <td>jxl</td>
+                    <td>jxl888@mail.ustc.edu.cn</td>
+                    <td>2013-02-25</td>
+                    <td>2013-04-25</td>
+                    <td>2013-05-27</td>
+                    <td>-</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h2 id="2011借阅记录">2011借阅记录</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>书名</th>
+                    <th>借阅者</th>
+                    <th>联系方式</th>
+                    <th>借阅日期</th>
+                    <th>应还日期</th>
+                    <th>归还日期</th>
+                    <th>读书报告(链接)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>系统管理指南 Apache</td>
+                    <td>张昊翀</td>
+                    <td>solomon DOT zhc AT gmail DOT com</td>
+                    <td>2010.12.13</td>
+                    <td>2011.2.16</td>
+                    <td>2011.1.9</td>
+                    <td><a href="http://goodchong.com/administering-apache-read-report/" title="http://goodchong.com/administering-apache-read-report/">读书报告</a></td>
+                  </tr>
+                  <tr>
+                    <td>学习GUN Emacs</td>
+                    <td>王光远SA08006038</td>
+                    <td>ieee AT mail.ustc.edu.cn 13696544286</td>
+                    <td>2011.1.6</td>
+                    <td>2011.3.6</td>
+                    <td>2011.3.3</td>
+                    <td><a href="../../linux_digest/reading_notes/wang-guangyuan-emacs-read-digest" title="linux_digest:reading_notes:wang-guangyuan-emacs-read-digest">读书报告</a></td>
+                  </tr>
+                  <tr>
+                    <td>手把手教你构建自己的Linux系统</td>
+                    <td>孙锡麟</td>
+                    <td>s.sn.giraffe AT gmail.com</td>
+                    <td>2011.1.6</td>
+                    <td>2011.3.6</td>
+                    <td>2011.2.23</td>
+                    <td> </td>
+                  </tr>
+                  <tr>
+                    <td>《深入理解Linux内核》第三版</td>
+                    <td>孙锡麟</td>
+                    <td>s.sn.giraffe AT gmail.com</td>
+                    <td>2011.2.23</td>
+                    <td>2011.4.23</td>
+                    <td>2011.4.16</td>
+                    <td> </td>
+                  </tr>
+                  <tr>
+                    <td>手把手教你构建自己的Linux系统</td>
+                    <td>黄若山</td>
+                    <td>ruoshan612 AT gmail.com</td>
+                    <td>2011.2.25</td>
+                    <td>2011.4.25</td>
+                    <td>2011.4.25</td>
+                    <td> </td>
+                  </tr>
+                  <tr>
+                    <td>程序员的自我修养</td>
+                    <td>黄若山</td>
+                    <td>ruoshan612 AT gmail.com</td>
+                    <td>2011.4.23</td>
+                    <td>2011.6.23</td>
+                    <td>2011.5.5</td>
+                    <td> </td>
+                  </tr>
+                  <tr>
+                    <td>鸟哥的私房菜</td>
+                    <td>Null</td>
+                    <td>-</td>
+                    <td>2011.4.23</td>
+                    <td>2011.6.23</td>
+                    <td> </td>
+                    <td> </td>
+                  </tr>
+                  <tr>
+                    <td>Gnu Emacs</td>
+                    <td>Godson</td>
+                    <td>-</td>
+                    <td>2011.4.28</td>
+                    <td>2011.6.28</td>
+                    <td> </td>
+                    <td> </td>
+                  </tr>
+                  <tr>
+                    <td>Linux设备驱动程序</td>
+                    <td>Armnotstrong</td>
+                    <td>-</td>
+                    <td>2011.5.12</td>
+                    <td>2011.7.12</td>
+                    <td> </td>
+                    <td> </td>
+                  </tr>
+                  <tr>
+                    <td>python开发技术详解</td>
+                    <td>yanfeng</td>
+                    <td>-</td>
+                    <td>2011.5.23</td>
+                    <td>2011.7.23</td>
+                    <td> </td>
+                    <td> </td>
+                  </tr>
+                  <tr>
+                    <td>鸟哥的私房菜</td>
+                    <td>袁哲，pb09210049</td>
+                    <td>-</td>
+                    <td>2011.6.28</td>
+                    <td>2011.8.23</td>
+                    <td> </td>
+                    <td> </td>
+                  </tr>
+                  <tr>
+                    <td>完美应用Ubuntu</td>
+                    <td>饶亚民；学号：PB09210173</td>
+                    <td>-</td>
+                    <td>2011.6.28</td>
+                    <td>2011.8.23</td>
+                    <td> </td>
+                    <td> </td>
+                  </tr>
+                </tbody>
+              </table>
+              <h2 id="黑名单">黑名单</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>借阅者</th>
+                    <th>借阅日期</th>
+                    <th>原因</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>孙锡麟</td>
+                    <td>2011.1.6</td>
+                    <td>拖欠读书笔记</td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+            <footer class="page__meta">
+              <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-08-09T15:12:14+08:00">2020 年 8 月 9 日</time></p>
+            </footer>
+            <nav class="pagination">
+              <a href="/wiki/lug/book/borrow_book/" class="pagination--pager" title="LUG图书管理
+">上一页</a>
+              <a href="/wiki/lug/book/" class="pagination--pager" title="LUG书库
+">下一页</a>
+            </nav>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+        <!-- end custom footer snippets -->
+        <div class="footer-row">
+          <div class="footer-block footer__about">
+            <p>中国科学技术大学 Linux 用户协会是由中国科学技术大学在校的 GNU/Linux 爱好者发起并组成的团体，旨在联合科大的 GNU/Linux
+              使用者，搭建信息交流共享的平台，宣传自由软件的价值，提高自由软件社区文化氛围，推广自由软件的应用。</p>
+          </div>
+          <div class="footer-block footer__contact">
+            <ul>
+              <li>
+                <a href="/wiki/intro/"><i class="fas fa-fw fa-address-card"></i> 关于我们</a>
+              </li>
+              <li>
+                <a href="/wiki/lug/contact/"><i class="fas fa-fw fa-phone-alt"></i> 联系我们</a>
+              </li>
+              <li>
+                <a href="/wiki/lug/contribute/"><i class="fas fa-fw fa-users"></i> 加入我们</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-block footer__logo">
+            <img src="https://ftp.lug.ustc.edu.cn/misc/logo-white.svg" width="33%" />
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="/assets/js/main.min.js"></script>
+    <img src="https://static.beta.ustclug.org/USTC_logo.svg" style="position: fixed; bottom: -320px; left: -200px; opacity: 0.1; z-index: -100;" />
+  </body>
+</html>

@@ -1,0 +1,348 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.20.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="zh" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <!-- begin _includes/seo.html -->
+    <title>LUG图书管理 - LUG @ USTC</title>
+    <meta name="description" content="LUG图书管理">
+    <meta name="author" content="USTCLUG">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="LUG @ USTC">
+    <meta property="og:title" content="LUG图书管理">
+    <meta property="og:url" content="https://beta.ustclug.org//wiki/lug/book/borrow_book/">
+    <meta property="og:description" content="LUG图书管理">
+    <meta property="article:published_time" content="2020-08-09T15:12:14+08:00">
+    <link rel="canonical" href="https://beta.ustclug.org//wiki/lug/book/borrow_book/">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+      
+          "@type": "Person",
+          "name": "USTCLUG",
+          "url": "https://beta.ustclug.org//"
+      
+      }
+    </script>
+    <!-- end _includes/seo.html -->
+    <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="LUG @ USTC Feed">
+    <!-- https://t.co/dKP3o1e -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+    </script>
+    <!-- For all browsers -->
+    <link rel="stylesheet" href="/assets/css/main.css?v=c5a82c3">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" media="invalid" onload="this.media='all'">
+    <!--[if IE]>
+      <style>
+        /* old IE unsupported flexbox fixes */
+        .greedy-nav .site-title {
+          padding-right: 3em;
+        }
+        .greedy-nav button {
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 100%;
+        }
+      </style>
+    <![endif]-->
+    <!-- start custom head snippets -->
+    <!-- insert favicons. use https://realfavicongenerator.net/ -->
+    <!-- end custom head snippets -->
+  </head>
+  <body class="layout--single">
+    <nav class="skip-links">
+      <h2 class="screen-reader-text">跳转链接</h2>
+      <ul>
+        <li><a href="#site-nav" class="screen-reader-shortcut">转到主导航栏</a></li>
+        <li><a href="#main" class="screen-reader-shortcut">转到内容</a></li>
+        <li><a href="#footer" class="screen-reader-shortcut">转到底部</a></li>
+      </ul>
+    </nav>
+    <!--[if lt IE 9]>
+      <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+    <![endif]-->
+    <div class="masthead">
+      <div class="masthead__inner-wrap">
+        <div class="masthead__menu">
+          <nav id="site-nav" class="greedy-nav">
+            <a class="site-logo" href="/"><img src="https://ftp.lug.ustc.edu.cn/misc/LUG.png" alt=""></a>
+            <a class="site-title" href="/">
+              LUG @ USTC
+            </a>
+            <ul class="visible-links">
+              <li class="masthead__menu-item">
+                <a href="/wiki/">Wiki</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="/news/">News</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="/planet/">Planet</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="https://github.com/ustclug">GitHub</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="https://mirrors.ustc.edu.cn/">Mirrors</a>
+              </li>
+            </ul>
+            <button class="greedy-nav__toggle hidden" type="button">
+              <span class="visually-hidden">切换菜单</span>
+              <div class="navicon"></div>
+            </button>
+            <ul class="hidden-links hidden"></ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="initial-content">
+      <div id="main" role="main">
+        <div class="sidebar sticky">
+          <nav class="nav__list">
+            <input id="ac-toc" name="accordion-toc" type="checkbox" />
+            <label for="ac-toc">切换菜单</label>
+            <ul class="nav__items">
+              <li>
+                <span class="nav__sub-title">LUG @ USTC</span>
+                <ul>
+                  <li><a href="/">LUG 首页</a></li>
+                  <li><a href="/news/">LUG 新闻</a></li>
+                  <li><a href="/wiki/lug/links/">友情链接</a></li>
+                  <li><a href="/wiki/mirrors/">开源软件镜像</a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="nav__sub-title">活动</span>
+                <ul>
+                  <li><a href="/wiki/lug/events/">LUG 活动</a></li>
+                  <li><a href="/wiki/lug/events/weeklyparty/">每周小聚</a></li>
+                  <li><a href="/wiki/lug/mailinglist/">邮件列表</a></li>
+                  <li><a href="/wiki/lug/book/">LUG 书库</a></li>
+                  <li><a href="https://news.ustclug.org/finance/">LUG 财务</a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="nav__sub-title">联系</span>
+                <ul>
+                  <li><a href="/wiki/lug/person-in-charge/">LUG 负责人</a></li>
+                  <li><a href="/wiki/lug/contact/">联系我们</a></li>
+                  <li><a href="/wiki/lug/contribute/">加入我们</a></li>
+                  <li><a href="/wiki/lug/finance/donate/">捐赠我们</a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="nav__sub-title">资源</span>
+                <ul>
+                  <li><a href="/wiki/linux_digest/">Linux 文摘</a></li>
+                  <li><a href="/wiki/lug/resources/">资源导航</a></li>
+                  <li><a href="https://servers.ustclug.org/">服务器新闻</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+          <meta itemprop="headline" content="LUG图书管理">
+          <meta itemprop="description" content="LUG图书管理">
+          <meta itemprop="datePublished" content="2020-08-09T15:12:14+08:00">
+          <div class="page__inner-wrap">
+            <header>
+              <h1 id="page-title" class="page__title" itemprop="headline">LUG图书管理
+              </h1>
+            </header>
+            <section class="page__content" itemprop="text">
+              <aside class="sidebar__right sticky">
+                <nav class="toc">
+                  <header>
+                    <h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4>
+                  </header>
+                  <ul class="toc__menu">
+                    <li><a href="#图书管理员特别提醒">图书管理员特别提醒</a>
+                      <ul>
+                        <li><a href="#什么时候借">什么时候借</a></li>
+                        <li><a href="#借阅手续简明版">借阅手续简明版</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#接受捐赠">接受捐赠</a></li>
+                    <li><a href="#借阅制度">借阅制度</a>
+                      <ul>
+                        <li><a href="#活动室阅读">活动室阅读</a></li>
+                        <li><a href="#借出活动室">借出活动室</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+              </aside>
+              <p>以下信息或已过时，近期将进行新一版图书管理规定的修订</p>
+              <h2 id="图书管理员特别提醒">图书管理员特别提醒</h2>
+              <h3 id="什么时候借">什么时候借</h3>
+              <p>想要阅读的同学可以直接来活动室。活动室在西区图书馆，最好在<a href="../events/weeklyparty" title="lug:events:weeklyparty">每周小聚</a>之后随我们一同前往，其他时间也可以<a href="mailto:zyfwong@gmail.com" title="zyfwong@gmail.com">联系图书管理员</a>。</p>
+              <h3 id="借阅手续简明版">借阅手续简明版</h3>
+              <p>简单的说，我需要两个时间戳(邮件)，一个是你借书的时间，一个是你还书的时间。 在第一个时间戳上，请你附上你的个人信息。 在第二个时间戳上，请你附上你的<a href="booknotes" title="lug:book:booknotes">读书笔记</a>。</p>
+              <p>请这样这样撰写：</p>
+              <table>
+                <thead>
+                  <tr>
+                    <th>第一封邮件的主题</th>
+                    <th><strong>[借阅] 《书名》</strong></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>第二封邮件的主题</td>
+                    <td><strong>[已还] 《书名》</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h2 id="接受捐赠">接受捐赠</h2>
+              <ul>
+                <li>
+                  <p>原则上最大程度的接受各种图书的捐赠，但希望图书内容与计算机科学或技术相关，或者和LUG相关，和Linux相关等。</p>
+                </li>
+                <li>
+                  <p>接受的图书原则上希望完整，品相完好。</p>
+                </li>
+                <li>
+                  <p>我们接受匿名或实名捐赠，对实名捐赠将会在LUG书库中写明捐赠者的个人姓名或单位名称，否则注明“匿名捐赠”。</p>
+                </li>
+                <li>
+                  <p>所有捐赠图书，协会一经接受，即拥有对该图书的所有权和处理权，有权对图书进行出借，传阅等处理。在捐赠者未特殊声明的情况下，协会没有将捐赠图书交还捐赠者的义务。</p>
+                </li>
+                <li>
+                  <p>捐赠者如果希望将所捐赠图书在离校时取回，需要在捐赠时声明，协会将在捐赠者离校时将图书交还捐赠者。如果图书出现丢失、损毁等，协会没有赔偿的义务。</p>
+                </li>
+              </ul>
+              <h2 id="借阅制度">借阅制度</h2>
+              <p>为了使<a href="start" title="lug:book:start">LUG书库</a>的图书能够得到充分利用，大家可以在LUG活动室阅读这些图书，也可以将图书借出活动室。借阅读书必须遵守本制度手册。</p>
+              <h3 id="活动室阅读">活动室阅读</h3>
+              <ul>
+                <li>
+                  <p><strong>阅读要求</strong></p>
+                  <ol>
+                    <li>任何人都可以前往活动室阅读图书，前往活动室前可以联系书库管理员，预约前往时间；有活动室钥匙的可以自行前往。</li>
+                  </ol>
+                </li>
+              </ul>
+              <h3 id="借出活动室">借出活动室</h3>
+              <ul>
+                <li>
+                  <p><strong>借阅要求</strong></p>
+                  <ol>
+                    <li>
+                      <p>原则上，只有加入 ustclug 邮件列表的同学才有资格将图书借出活动室阅读，出于管理上的考虑希望借阅的同学登记学生证或一卡通学号。</p>
+                    </li>
+                    <li>
+                      <p>每人每次只能借出两本图书，借出第三本图书时，必须将前一本归还活动室</p>
+                    </li>
+                    <li>
+                      <p>每本书每次最多只能借出两个月，超过两个月需要向协会申请续借，遇节假日可以顺延</p>
+                    </li>
+                    <li>
+                      <p>借阅图书的同学，在归还前必须提交一份或若干份图书报告，<a href="booknotes" title="lug:book:booknotes">读书笔记</a>可以是单独的文章，也可以是发表到自己博客的文章，或者其他形式的阅读笔记</p>
+                    </li>
+                    <li>
+                      <p>对于<a href="booknotes" title="lug:book:booknotes">读书笔记</a>的篇幅，内容，形式等没有任何强制性的要求，但是请不要让别的同学认为你是在 <strong>敷衍了事</strong> 。建议使用中文，英文或者别的一些计算机编程语言（对于很多这些书来说这可能是最好的方式）表达你的思想，但是希望作品本身易学易读并且和原书籍内容紧密相关。</p>
+                    </li>
+                    <li>
+                      <p>请勿在图书上作出勾画，涂改，加注笔记等不利于图书长期保存的动作（我们欢迎你把自己对这本书的理解写成<a href="booknotes" title="lug:book:booknotes">读书笔记</a>影响更多的人。），否则将被视为不欢迎借书的人。对于污损，丢失，撕坏或其他严重的破坏应在两个月内赔偿一本相同的书或者按原价两倍赔偿。</p>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <p><strong>借阅流程</strong></p>
+                  <ol>
+                    <li>
+                      <p>发邮件给书库管理员（目前的图书管理员是<a href="../../user/sadhen" title="user:sadhen:start">sadhen</a>）预约要借的书目，约定时间前往活动室取书</p>
+                    </li>
+                    <li>
+                      <p>书库管理员编辑<a href="borrow_book" title="lug:book:borrow_book">借阅记录</a>记录借阅信息，借阅信息包括借阅者姓名、联系方式（邮件或者手机至少一个）、借阅时间、应还时间等</p>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <p><strong>续借流程</strong></p>
+                  <ol>
+                    <li>
+                      <p>在两个月期满前，如果不能阅读完，需要续借的，必须向书库管理员发邮件申请续借，并且在两月期满前至少提交一份<a href="booknotes" title="lug:book:booknotes">读书笔记</a></p>
+                    </li>
+                    <li>
+                      <p>两个月期满前一周，如果借阅者未主动提出续借，书库管理员有责任通过短信或邮件方式提醒借阅者</p>
+                    </li>
+                    <li>
+                      <p>如果在借阅者申请续借前，已有其他同学申请预订同一本图书，则由书库管理员决定执行续借或者收回图书借给新同学（可以根据<a href="booknotes" title="lug:book:booknotes">读书笔记</a>的质量以及借阅者的借阅理由判定）</p>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <p><strong>归还流程</strong></p>
+                  <ol>
+                    <li>
+                      <p>向 ustclug 邮件列表发送<a href="booknotes" title="lug:book:booknotes">读书笔记</a>，可以是报告内容，也可以是自己的博文链接，或其他适当形式（也可以在阅读期间发送）</p>
+                    </li>
+                    <li>
+                      <p>发邮件给书库管理员，约定时间前往活动室换书（有活动室钥匙的，可以直接归还，并发邮件通知书库管理员）</p>
+                    </li>
+                    <li>
+                      <p>书库管理员编辑借阅记录，填写相关信息，包括归还时间、<a href="booknotes" title="lug:book:booknotes">读书笔记</a>链接等</p>
+                    </li>
+                    <li>
+                      <p>对于没有按规定提交<a href="booknotes" title="lug:book:booknotes">读书笔记</a>的，半年内不得再借出图书阅读</p>
+                    </li>
+                  </ol>
+                </li>
+              </ul>
+            </section>
+            <footer class="page__meta">
+              <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-08-09T15:12:14+08:00">2020 年 8 月 9 日</time></p>
+            </footer>
+            <nav class="pagination">
+              <a href="/wiki/lug/book/booknotes/" class="pagination--pager" title="读书笔记
+">上一页</a>
+              <a href="/wiki/lug/book/borrow_history/" class="pagination--pager" title="借阅记录
+">下一页</a>
+            </nav>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+        <!-- end custom footer snippets -->
+        <div class="footer-row">
+          <div class="footer-block footer__about">
+            <p>中国科学技术大学 Linux 用户协会是由中国科学技术大学在校的 GNU/Linux 爱好者发起并组成的团体，旨在联合科大的 GNU/Linux
+              使用者，搭建信息交流共享的平台，宣传自由软件的价值，提高自由软件社区文化氛围，推广自由软件的应用。</p>
+          </div>
+          <div class="footer-block footer__contact">
+            <ul>
+              <li>
+                <a href="/wiki/intro/"><i class="fas fa-fw fa-address-card"></i> 关于我们</a>
+              </li>
+              <li>
+                <a href="/wiki/lug/contact/"><i class="fas fa-fw fa-phone-alt"></i> 联系我们</a>
+              </li>
+              <li>
+                <a href="/wiki/lug/contribute/"><i class="fas fa-fw fa-users"></i> 加入我们</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-block footer__logo">
+            <img src="https://ftp.lug.ustc.edu.cn/misc/logo-white.svg" width="33%" />
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="/assets/js/main.min.js"></script>
+    <img src="https://static.beta.ustclug.org/USTC_logo.svg" style="position: fixed; bottom: -320px; left: -200px; opacity: 0.1; z-index: -100;" />
+  </body>
+</html>

@@ -1,0 +1,285 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.20.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="zh" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <!-- begin _includes/seo.html -->
+    <title>Kodi镜像使用帮助 - LUG @ USTC</title>
+    <meta name="description" content="Kodi镜像使用帮助">
+    <meta name="author" content="USTCLUG">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="LUG @ USTC">
+    <meta property="og:title" content="Kodi镜像使用帮助">
+    <meta property="og:url" content="https://beta.ustclug.org//wiki/mirrors/help/kodi/">
+    <meta property="og:description" content="Kodi镜像使用帮助">
+    <meta property="article:published_time" content="2020-08-09T15:12:14+08:00">
+    <link rel="canonical" href="https://beta.ustclug.org//wiki/mirrors/help/kodi/">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+      
+          "@type": "Person",
+          "name": "USTCLUG",
+          "url": "https://beta.ustclug.org//"
+      
+      }
+    </script>
+    <!-- end _includes/seo.html -->
+    <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="LUG @ USTC Feed">
+    <!-- https://t.co/dKP3o1e -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+    </script>
+    <!-- For all browsers -->
+    <link rel="stylesheet" href="/assets/css/main.css?v=c5a82c3">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" media="invalid" onload="this.media='all'">
+    <!--[if IE]>
+      <style>
+        /* old IE unsupported flexbox fixes */
+        .greedy-nav .site-title {
+          padding-right: 3em;
+        }
+        .greedy-nav button {
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 100%;
+        }
+      </style>
+    <![endif]-->
+    <!-- start custom head snippets -->
+    <!-- insert favicons. use https://realfavicongenerator.net/ -->
+    <!-- end custom head snippets -->
+  </head>
+  <body class="layout--single">
+    <nav class="skip-links">
+      <h2 class="screen-reader-text">跳转链接</h2>
+      <ul>
+        <li><a href="#site-nav" class="screen-reader-shortcut">转到主导航栏</a></li>
+        <li><a href="#main" class="screen-reader-shortcut">转到内容</a></li>
+        <li><a href="#footer" class="screen-reader-shortcut">转到底部</a></li>
+      </ul>
+    </nav>
+    <!--[if lt IE 9]>
+      <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+    <![endif]-->
+    <div class="masthead">
+      <div class="masthead__inner-wrap">
+        <div class="masthead__menu">
+          <nav id="site-nav" class="greedy-nav">
+            <a class="site-logo" href="/"><img src="https://ftp.lug.ustc.edu.cn/misc/LUG.png" alt=""></a>
+            <a class="site-title" href="/">
+              LUG @ USTC
+            </a>
+            <ul class="visible-links">
+              <li class="masthead__menu-item">
+                <a href="/wiki/">Wiki</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="/news/">News</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="/planet/">Planet</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="https://github.com/ustclug">GitHub</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="https://mirrors.ustc.edu.cn/">Mirrors</a>
+              </li>
+            </ul>
+            <button class="greedy-nav__toggle hidden" type="button">
+              <span class="visually-hidden">切换菜单</span>
+              <div class="navicon"></div>
+            </button>
+            <ul class="hidden-links hidden"></ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="initial-content">
+      <div id="main" role="main">
+        <div class="sidebar sticky">
+          <nav class="nav__list">
+            <input id="ac-toc" name="accordion-toc" type="checkbox" />
+            <label for="ac-toc">切换菜单</label>
+            <ul class="nav__items">
+              <li>
+                <span class="nav__sub-title">LUG @ USTC</span>
+                <ul>
+                  <li><a href="/">LUG 首页</a></li>
+                  <li><a href="/news/">LUG 新闻</a></li>
+                  <li><a href="/wiki/lug/links/">友情链接</a></li>
+                  <li><a href="/wiki/mirrors/">开源软件镜像</a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="nav__sub-title">活动</span>
+                <ul>
+                  <li><a href="/wiki/lug/events/">LUG 活动</a></li>
+                  <li><a href="/wiki/lug/events/weeklyparty/">每周小聚</a></li>
+                  <li><a href="/wiki/lug/mailinglist/">邮件列表</a></li>
+                  <li><a href="/wiki/lug/book/">LUG 书库</a></li>
+                  <li><a href="https://news.ustclug.org/finance/">LUG 财务</a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="nav__sub-title">联系</span>
+                <ul>
+                  <li><a href="/wiki/lug/person-in-charge/">LUG 负责人</a></li>
+                  <li><a href="/wiki/lug/contact/">联系我们</a></li>
+                  <li><a href="/wiki/lug/contribute/">加入我们</a></li>
+                  <li><a href="/wiki/lug/finance/donate/">捐赠我们</a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="nav__sub-title">资源</span>
+                <ul>
+                  <li><a href="/wiki/linux_digest/">Linux 文摘</a></li>
+                  <li><a href="/wiki/lug/resources/">资源导航</a></li>
+                  <li><a href="https://servers.ustclug.org/">服务器新闻</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+          <meta itemprop="headline" content="Kodi镜像使用帮助">
+          <meta itemprop="description" content="Kodi镜像使用帮助">
+          <meta itemprop="datePublished" content="2020-08-09T15:12:14+08:00">
+          <div class="page__inner-wrap">
+            <header>
+              <h1 id="page-title" class="page__title" itemprop="headline">Kodi镜像使用帮助
+              </h1>
+            </header>
+            <section class="page__content" itemprop="text">
+              <aside class="sidebar__right sticky">
+                <nav class="toc">
+                  <header>
+                    <h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4>
+                  </header>
+                  <ul class="toc__menu">
+                    <li><a href="#镜像目录结构">镜像目录结构</a></li>
+                    <li><a href="#kodi简介">Kodi简介</a></li>
+                    <li><a href="#使用说明">使用说明</a>
+                      <ul>
+                        <li><a href="#kodi-安装">Kodi 安装</a>
+                          <ul>
+                            <li><a href="#windowsandroid-平台">Windows、Android 平台</a></li>
+                            <li><a href="#mac-osx-平台">Mac OSX 平台</a></li>
+                            <li><a href="#ios-平台">iOS 平台</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#插件库使用">插件库使用</a></li>
+                        <li><a href="#编译依赖项目下载">编译依赖项目下载</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#相关链接">相关链接</a></li>
+                  </ul>
+                </nav>
+              </aside>
+              <h2 id="镜像目录结构">镜像目录结构</h2>
+              <p><code class="language-plaintext highlighter-rouge">addons</code> 官方插件库 <br />
+                <code class="language-plaintext highlighter-rouge">apt</code> iOS 版 Kodi 安装源 <br />
+                <code class="language-plaintext highlighter-rouge">build-deps</code> 编译 Kodi 依赖的其他开源项目代码 <br />
+                <code class="language-plaintext highlighter-rouge">nightlies</code> 与 Kodi 开发主分支同步编译的每日开发版安装包下载目录 <br />
+                <code class="language-plaintext highlighter-rouge">releases</code> Kodi 稳定版安装包下载目录（含 Beta 版和 RC 版） <br />
+                <code class="language-plaintext highlighter-rouge">snapshots</code> Kodi 每月发布的 Alpha 版安装包下载目录 <br />
+                <code class="language-plaintext highlighter-rouge">tools</code> Kodi 相关的工具软件（Kora 遥控软件）</p>
+              <h2 id="kodi简介">Kodi简介</h2>
+              <p>Kodi（前身是 XBMC）媒体中心，是一个屡获殊荣的自由和开源的跨平台媒体播放器和用于 HTPC（Home theater PC，家庭影院 PC）的数字媒体娱乐中心软件。它使用遥控器作为主输入设备，针对3米左右观看距离而设计的用户界面，成为适应客厅使用的媒体播放器。它的图形用户界面让用户轻按遥控，就能方便地从硬盘、光盘、局域网和互联网浏览和观看视频、图片，收听广播和音乐。Kodi 项目由非营利的 XBMC 基金会管理，并由分布在世界各地的志愿者参与开发。自从它于2003年诞生以来，超过500名软件开发人员对 Kodi 作出贡献，并有60名核心开发人员。另外，还有200多名翻译人员在帮助它扩大影响范围，使它支持多达72种语言。</p>
+              <p>Kodi（当时叫“Xbox Media Center”）最初是作为第一代 Xbox 游戏机（现在已不支持）的一个媒体中心应用而开发的，而现在已经正式以原生应用运行于 Android、Linux、Mac <abbr title="Operating System">OS</abbr> X、iOS 和 Windows 操作系统，并支持主流的处理器架构。</p>
+              <h2 id="使用说明">使用说明</h2>
+              <h3 id="kodi-安装">Kodi 安装</h3>
+              <h4 id="windowsandroid-平台">Windows、Android 平台</h4>
+              <p>从镜像站相应目录下载你所需要版本的安装包安装即可。</p>
+              <h4 id="mac-osx-平台">Mac OSX 平台</h4>
+              <p>从镜像站相应目录下载 <code class="language-plaintext highlighter-rouge">.dmg</code> 磁盘镜像文件，在 OSX 系统下装载此镜像文件后，可用鼠标将 Kodi 应用拖到“应用”文件夹即完成安装。</p>
+              <h4 id="ios-平台">iOS 平台</h4>
+              <p>需要先越狱，然后通过 Cydia 安装。</p>
+              <ul>
+                <li>
+                  <p>第一步：在已越狱的 iPhone 手机或 iPad 主屏幕上点击 Cydia 图标</p>
+                </li>
+                <li>
+                  <p>第二步：选择“软件源→编辑→添加”</p>
+                </li>
+                <li>第三步：在弹出的录入框输入 <code class="language-plaintext highlighter-rouge">http://mirrors.ustc.edu.cn/xbmc/apt/ios/</code></li>
+                <li>
+                  <p>第四步：点击刚增加的 teamKodi 源</p>
+                </li>
+                <li>第五步：选择安装 Kodi-iOS</li>
+              </ul>
+              <h3 id="插件库使用">插件库使用</h3>
+              <p>可以使用此镜像服务器来访问 Kodi 官方插件库，避免因网络访问的问题而无法正常安装使用插件。需要编辑 Kodi 安装目录中的 addons/repository.xbmc.org/addon.xml 文件。将其中所有 <code class="language-plaintext highlighter-rouge">http://mirrors.kodi.tv/</code> 替换为 <code class="language-plaintext highlighter-rouge">http://mirrors.ustc.edu.cn/xbmc/</code> 。</p>
+              <h3 id="编译依赖项目下载">编译依赖项目下载</h3>
+              <p>开发人员或者想自行从源代码编译 Kodi 的，可以使用此镜像服务器下载依赖项目。方法是在运行 DownloadBuildDeps.bat 批处理文件前先在命令行执行 <code class="language-plaintext highlighter-rouge">SET KODI_MIRROR=http://mirrors.ustc.edu.cn/xbmc/</code></p>
+              <h2 id="相关链接">相关链接</h2>
+              <p>Kodi链接</p>
+              <ul>
+                <li>
+                  <p>Kodi主页: <a href="http://kodi.tv/">http://kodi.tv/</a></p>
+                </li>
+                <li>
+                  <p>文档: <a href="http://kodi.wiki/">http://kodi.wiki/</a></p>
+                </li>
+                <li>
+                  <p>Bug Tracker: <a href="http://trac.kodi.tv/">http://trac.kodi.tv/</a></p>
+                </li>
+                <li>
+                  <p>源代码: <a href="https://github.com/xbmc/xbmc">https://github.com/xbmc/xbmc</a></p>
+                </li>
+              </ul>
+            </section>
+            <footer class="page__meta">
+              <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-08-09T15:12:14+08:00">2020 年 8 月 9 日</time></p>
+            </footer>
+            <nav class="pagination">
+              <a href="/wiki/mirrors/help/kdemod/" class="pagination--pager" title="kdemod镜像使用帮助
+">上一页</a>
+              <a href="/wiki/mirrors/help/linux/" class="pagination--pager" title="Linux 内核源码镜像
+">下一页</a>
+            </nav>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+        <!-- end custom footer snippets -->
+        <div class="footer-row">
+          <div class="footer-block footer__about">
+            <p>中国科学技术大学 Linux 用户协会是由中国科学技术大学在校的 GNU/Linux 爱好者发起并组成的团体，旨在联合科大的 GNU/Linux
+              使用者，搭建信息交流共享的平台，宣传自由软件的价值，提高自由软件社区文化氛围，推广自由软件的应用。</p>
+          </div>
+          <div class="footer-block footer__contact">
+            <ul>
+              <li>
+                <a href="/wiki/intro/"><i class="fas fa-fw fa-address-card"></i> 关于我们</a>
+              </li>
+              <li>
+                <a href="/wiki/lug/contact/"><i class="fas fa-fw fa-phone-alt"></i> 联系我们</a>
+              </li>
+              <li>
+                <a href="/wiki/lug/contribute/"><i class="fas fa-fw fa-users"></i> 加入我们</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-block footer__logo">
+            <img src="https://ftp.lug.ustc.edu.cn/misc/logo-white.svg" width="33%" />
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="/assets/js/main.min.js"></script>
+    <img src="https://static.beta.ustclug.org/USTC_logo.svg" style="position: fixed; bottom: -320px; left: -200px; opacity: 0.1; z-index: -100;" />
+  </body>
+</html>

@@ -1,0 +1,1166 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.20.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="zh" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <!-- begin _includes/seo.html -->
+    <title>LUG书库 - LUG @ USTC</title>
+    <meta name="description" content="LUG书库">
+    <meta name="author" content="USTCLUG">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="LUG @ USTC">
+    <meta property="og:title" content="LUG书库">
+    <meta property="og:url" content="https://beta.ustclug.org//wiki/lug/book/">
+    <meta property="og:description" content="LUG书库">
+    <meta property="article:published_time" content="2020-08-09T15:12:14+08:00">
+    <link rel="canonical" href="https://beta.ustclug.org//wiki/lug/book/">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+      
+          "@type": "Person",
+          "name": "USTCLUG",
+          "url": "https://beta.ustclug.org//"
+      
+      }
+    </script>
+    <!-- end _includes/seo.html -->
+    <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="LUG @ USTC Feed">
+    <!-- https://t.co/dKP3o1e -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+    </script>
+    <!-- For all browsers -->
+    <link rel="stylesheet" href="/assets/css/main.css?v=c5a82c3">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" media="invalid" onload="this.media='all'">
+    <!--[if IE]>
+      <style>
+        /* old IE unsupported flexbox fixes */
+        .greedy-nav .site-title {
+          padding-right: 3em;
+        }
+        .greedy-nav button {
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 100%;
+        }
+      </style>
+    <![endif]-->
+    <!-- start custom head snippets -->
+    <!-- insert favicons. use https://realfavicongenerator.net/ -->
+    <!-- end custom head snippets -->
+  </head>
+  <body class="layout--single">
+    <nav class="skip-links">
+      <h2 class="screen-reader-text">跳转链接</h2>
+      <ul>
+        <li><a href="#site-nav" class="screen-reader-shortcut">转到主导航栏</a></li>
+        <li><a href="#main" class="screen-reader-shortcut">转到内容</a></li>
+        <li><a href="#footer" class="screen-reader-shortcut">转到底部</a></li>
+      </ul>
+    </nav>
+    <!--[if lt IE 9]>
+      <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+    <![endif]-->
+    <div class="masthead">
+      <div class="masthead__inner-wrap">
+        <div class="masthead__menu">
+          <nav id="site-nav" class="greedy-nav">
+            <a class="site-logo" href="/"><img src="https://ftp.lug.ustc.edu.cn/misc/LUG.png" alt=""></a>
+            <a class="site-title" href="/">
+              LUG @ USTC
+            </a>
+            <ul class="visible-links">
+              <li class="masthead__menu-item">
+                <a href="/wiki/">Wiki</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="/news/">News</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="/planet/">Planet</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="https://github.com/ustclug">GitHub</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="https://mirrors.ustc.edu.cn/">Mirrors</a>
+              </li>
+            </ul>
+            <button class="greedy-nav__toggle hidden" type="button">
+              <span class="visually-hidden">切换菜单</span>
+              <div class="navicon"></div>
+            </button>
+            <ul class="hidden-links hidden"></ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="initial-content">
+      <div id="main" role="main">
+        <div class="sidebar sticky">
+          <nav class="nav__list">
+            <input id="ac-toc" name="accordion-toc" type="checkbox" />
+            <label for="ac-toc">切换菜单</label>
+            <ul class="nav__items">
+              <li>
+                <span class="nav__sub-title">LUG @ USTC</span>
+                <ul>
+                  <li><a href="/">LUG 首页</a></li>
+                  <li><a href="/news/">LUG 新闻</a></li>
+                  <li><a href="/wiki/lug/links/">友情链接</a></li>
+                  <li><a href="/wiki/mirrors/">开源软件镜像</a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="nav__sub-title">活动</span>
+                <ul>
+                  <li><a href="/wiki/lug/events/">LUG 活动</a></li>
+                  <li><a href="/wiki/lug/events/weeklyparty/">每周小聚</a></li>
+                  <li><a href="/wiki/lug/mailinglist/">邮件列表</a></li>
+                  <li><a href="/wiki/lug/book/" class="active">LUG 书库</a></li>
+                  <li><a href="https://news.ustclug.org/finance/">LUG 财务</a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="nav__sub-title">联系</span>
+                <ul>
+                  <li><a href="/wiki/lug/person-in-charge/">LUG 负责人</a></li>
+                  <li><a href="/wiki/lug/contact/">联系我们</a></li>
+                  <li><a href="/wiki/lug/contribute/">加入我们</a></li>
+                  <li><a href="/wiki/lug/finance/donate/">捐赠我们</a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="nav__sub-title">资源</span>
+                <ul>
+                  <li><a href="/wiki/linux_digest/">Linux 文摘</a></li>
+                  <li><a href="/wiki/lug/resources/">资源导航</a></li>
+                  <li><a href="https://servers.ustclug.org/">服务器新闻</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+          <meta itemprop="headline" content="LUG书库">
+          <meta itemprop="description" content="LUG书库">
+          <meta itemprop="datePublished" content="2020-08-09T15:12:14+08:00">
+          <div class="page__inner-wrap">
+            <header>
+              <h1 id="page-title" class="page__title" itemprop="headline">LUG书库
+              </h1>
+            </header>
+            <section class="page__content" itemprop="text">
+              <aside class="sidebar__right sticky">
+                <nav class="toc">
+                  <header>
+                    <h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4>
+                  </header>
+                  <ul class="toc__menu">
+                    <li><a href="#书单">书单</a>
+                      <ul>
+                        <li><a href="#linux入门">Linux入门</a></li>
+                        <li><a href="#linux服务器运维">Linux服务器运维</a></li>
+                        <li><a href="#linux内核">Linux内核</a></li>
+                        <li><a href="#代码编辑与管理">代码编辑与管理</a></li>
+                        <li><a href="#linuxunix-编程">Linux/Unix 编程</a></li>
+                        <li><a href="#编程语言">编程语言</a></li>
+                        <li><a href="#网络编程">网络编程</a></li>
+                        <li><a href="#文化与设计">文化与设计</a></li>
+                        <li><a href="#web与移动开发">Web与移动开发</a></li>
+                        <li><a href="#数据库">数据库</a></li>
+                        <li><a href="#学术与教科书">学术与教科书</a></li>
+                        <li><a href="#misc">MISC</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#lug会员推荐购置图书列表">LUG会员推荐购置图书列表</a></li>
+                  </ul>
+                </nav>
+              </aside>
+              <p>目前LUG活动室有一些Linux系统相关比较经典的书籍，有一部分是LUG购买的，有一部分是网友捐赠的。</p>
+              <p>我们同时非常欢迎童鞋们将自己手头不再需要的好书捐献出来。捐赠图书可以<a href="mailto:lug@ustc.edu.cn" title="lug@ustc.edu.cn">联系我们</a>。</p>
+              <p>关于如何借阅，如何捐赠等问题可以参阅：<a href="borrow_book" title="lug:book:borrow_book">图书借阅管理制度</a></p>
+              <p>借阅记录与黑名单：<a href="borrow_history" title="lug:book:borrow_history">借阅记录</a></p>
+              <p>读书笔记汇总：<a href="booknotes" title="lug:book:booknotes">读书笔记</a></p>
+              <p>给LUG书库推荐好书：<a href="mailto:lug@ustc.edu.cn" title="lug@ustc.edu.cn"> 联系图书管理员</a></p>
+              <h1 id="书单">书单</h1>
+              <p>书单的分类比较粗糙，有改进意见请联系图书管理员</p>
+              <p>以下信息可能已经过时，请访问新版LUG书库：<a href="https://library.ustclug.org/">https://library.ustclug.org/</a></p>
+              <h2 id="linux入门">Linux入门</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>书名</th>
+                    <th>作者</th>
+                    <th>定价（￥）</th>
+                    <th>备注</th>
+                    <th>借阅情况</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="http://book.douban.com/subject/2208530/" title="http://book.douban.com/subject/2208530/">鸟哥的Linux私房菜 基础学习篇(第二版)</a></td>
+                    <td>鸟哥</td>
+                    <td>65</td>
+                    <td>3本</td>
+                    <td> </td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>LUG购置2<br />
+                QuITh网友捐赠1| 借出1本<br />
+                <a href="http://book.douban.com/subject/4889838/" title="http://book.douban.com/subject/4889838/">鸟哥的Linux私房菜 基础学习篇(第三版)</a>| 鸟哥| 88.00 | 2本<br />
+                LUG购置 | 借出2本<br />
+                <a href="http://book.douban.com/subject/3192043/" title="http://book.douban.com/subject/3192043/">完美应用Ubuntu </a>| Ubuntu China| 55 | LUG购置| -<br />
+                <a href="http://book.douban.com/subject/10876230/" title="http://book.douban.com/subject/10876230/">从零开始学Linux </a>| 粱丽平、马飞| 45 | lizitian捐赠 | -</p>
+              <h2 id="linux服务器运维">Linux服务器运维</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>书名</th>
+                    <th>作者</th>
+                    <th>定价(￥)</th>
+                    <th>备注</th>
+                    <th>借阅</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="http://book.douban.com/subject/2338464/" title="http://book.douban.com/subject/2338464/">鸟哥的Linux私房菜 服务器架设篇(第二版)</a></td>
+                    <td>鸟哥</td>
+                    <td>88.00</td>
+                    <td>QuITh捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://book.douban.com/subject/10794788/" title="http://book.douban.com/subject/10794788/">鸟哥的Linux私房菜: 服务器架设篇(第三版)</a></td>
+                    <td>鸟哥</td>
+                    <td>108.00</td>
+                    <td>2本</td>
+                    <td> </td>
+                  </tr>
+                  <tr>
+                    <td>LUG购置</td>
+                    <td>已借出1本</td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://book.douban.com/subject/1237940/" title="http://book.douban.com/subject/1237940/">Red Hat Linux 9.0基础教程</a></td>
+                    <td>黄丽娜等</td>
+                    <td>38.60</td>
+                    <td>网友捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://book.douban.com/subject/1240136/" title="http://book.douban.com/subject/1240136/">LINUX 网络管理员指南(第二版)</a></td>
+                    <td>OLAF KIRCH TERRY DAWSON</td>
+                    <td>59.00</td>
+                    <td>网友捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://book.douban.com/subject/1240493/" title="http://book.douban.com/subject/1240493/">Solaris 8技术大全</a></td>
+                    <td>Paul A. Watters Sriranga Veeraraghavan</td>
+                    <td>48.00</td>
+                    <td>网友捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://book.douban.com/subject/1240866/" title="http://book.douban.com/subject/1240866/">Solaris8网络管理员认证培训指南</a></td>
+                    <td>Refeeq Rehman</td>
+                    <td>55.00</td>
+                    <td>网友捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://book.douban.com/subject/1229763/" title="http://book.douban.com/subject/1229763/">系统管理指南 Apache</a></td>
+                    <td>Mark Arnold Jeff Almeida</td>
+                    <td>36.00</td>
+                    <td>网友捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://book.douban.com/subject/3039216/" title="http://book.douban.com/subject/3039216/">构建可扩展的Web站点</a></td>
+                    <td>Cal Henderson</td>
+                    <td>58.00</td>
+                    <td>会员捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://book.douban.com/subject/3924175/" title="http://book.douban.com/subject/3924175/">构建高性能Web站点: 改善性能和扩展规模的具体做法</a></td>
+                    <td>郭欣</td>
+                    <td>59.00</td>
+                    <td>会员捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://book.douban.com/subject/7564094/" title="http://book.douban.com/subject/7564094/">高性能Linux服务器构建实战: 运维监控、性能调优与集群应用</a></td>
+                    <td>高俊峰</td>
+                    <td>79.00</td>
+                    <td>LUG购置</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://book.douban.com/subject/10071963/" title="http://book.douban.com/subject/10071963/">BackTrack4: 利用渗透测试保证系统安全</a></td>
+                    <td>阿里</td>
+                    <td>59.00</td>
+                    <td>LUG购置</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://book.douban.com/subject/1223266/" title="http://book.douban.com/subject/1223266/">红旗Linux用户基础教程</a></td>
+                    <td>红旗软件工作室</td>
+                    <td>18.00</td>
+                    <td>会员捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://book.douban.com/subject/11589828/" title="http://book.douban.com/subject/11589828/">Linux命令行与shell脚本编程大全(第2版)</a></td>
+                    <td>Richard Blum &amp; Christine Bresnahan</td>
+                    <td>99.00</td>
+                    <td>ewind捐赠</td>
+                    <td>-</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h2 id="linux内核">Linux内核</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>书名</th>
+                    <th>作者</th>
+                    <th>定价（￥）</th>
+                    <th>备注</th>
+                    <th>借阅情况</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>FreeBSD技术内幕</td>
+                    <td>-</td>
+                    <td>88</td>
+                    <td>网友捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>Linux 0.01内核分析与操作系统设计——创造你自己的操作系统</td>
+                    <td>-</td>
+                    <td>32</td>
+                    <td>网友捐赠</td>
+                    <td>-</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>深入Linux内核架构<br />
+                Professional Linux Kernel Architecture| 莫尔勒| 149.00| LUG购置| -<br />
+                <a href="http://book.douban.com/subject/2287506/" title="http://book.douban.com/subject/2287506/">深入理解Linux内核（第三版，中文版）</a>| Daniel P. Bovet| 98| 2本，LUG购置，stephen捐赠| -<br />
+                深入理解Linux内核 第二版| Daniel P. Bovet| 79| 网友捐赠| -<br />
+                <a href="http://www.ptpress.com.cn/Book.aspx?id=19683" title="http://www.ptpress.com.cn/Book.aspx?id=19683">手把手教你构建自己的Linux系统（1CD）</a>| 孙海勇| 65| 网友捐赠| -<br />
+                Linux设备驱动程序 第二版| -| 69| 网友捐赠| -<br />
+                <a href="http://www.china-pub.com/41602" title="http://www.china-pub.com/41602">Linux设备驱动开发技术及应用</a>| 俞永昌| 85| LUG购置| -<br />
+                <a href="http://book.douban.com/subject/3700970/" title="http://book.douban.com/subject/3700970/">精通Linux驱动程序开发</a>| Venkateswaran, S| 99| LUG购置| -<br />
+                Linux设备驱动程序（第3版）| Jonathan Corbet et al| 69.00| stephen捐赠| -</p>
+              <h2 id="代码编辑与管理">代码编辑与管理</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>书名</th>
+                    <th>作者</th>
+                    <th>定价（￥）</th>
+                    <th>备注</th>
+                    <th>借阅情况</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>学习GNU Emacs</td>
+                    <td>Debra Cameron</td>
+                    <td>68</td>
+                    <td>网友捐赠</td>
+                    <td>已借出</td>
+                  </tr>
+                  <tr>
+                    <td>Git权威指南</td>
+                    <td>蒋鑫</td>
+                    <td>89.00</td>
+                    <td>会员捐赠</td>
+                    <td>已借出</td>
+                  </tr>
+                  <tr>
+                    <td>学习vi和Vim编辑器(中文版)(第7版)</td>
+                    <td>罗宾斯</td>
+                    <td>59.90</td>
+                    <td>LUG购置</td>
+                    <td>1本在东区</td>
+                  </tr>
+                  <tr>
+                    <td>学习vi编辑器(第六版)</td>
+                    <td>Linda Lamb &amp; Arnold Robbins</td>
+                    <td>43.00</td>
+                    <td>不详</td>
+                    <td>-</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h2 id="linuxunix-编程">Linux/Unix 编程</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>书名</th>
+                    <th>作者</th>
+                    <th>定价（￥）</th>
+                    <th>备注</th>
+                    <th>借阅情况</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="http://book.douban.com/subject/2073826/" title="http://book.douban.com/subject/2073826/">Linux程序设计</a></td>
+                    <td>Neil Matthew</td>
+                    <td>89</td>
+                    <td>LUG购置</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://book.douban.com/subject/1788421/" title="http://book.douban.com/subject/1788421/">Unix环境高级编程</a></td>
+                    <td>W. Richard Stevens</td>
+                    <td>99</td>
+                    <td>3本，LUG购置</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>Linux高级编程</td>
+                    <td>-</td>
+                    <td>89</td>
+                    <td>网友捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>Linux下的C编程</td>
+                    <td>-</td>
+                    <td>48</td>
+                    <td>网友捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>Linux编程白皮书</td>
+                    <td>-</td>
+                    <td>39</td>
+                    <td>网友捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>Linux编程权威指南</td>
+                    <td>-</td>
+                    <td>45</td>
+                    <td>网友捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>Linux系统分析与高级编程技术</td>
+                    <td>-</td>
+                    <td>58</td>
+                    <td>网友捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>C/C++嵌入式系统编程</td>
+                    <td>-</td>
+                    <td>29</td>
+                    <td>网友捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>UNIX编程环境（英文版）</td>
+                    <td>Brain W. Kernighan et al</td>
+                    <td>59.00</td>
+                    <td>LUG购置</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>构建嵌入式Linux系统（第二版）</td>
+                    <td>Karim Yaghmour et al</td>
+                    <td>58.00</td>
+                    <td>LUG购置</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>C++ Primer（第4版）</td>
+                    <td>Stanley B. Lippman</td>
+                    <td>99.00</td>
+                    <td>stephen捐赠</td>
+                    <td>已借出</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h2 id="编程语言">编程语言</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>书名</th>
+                    <th>作者</th>
+                    <th>定价（￥）</th>
+                    <th>备注</th>
+                    <th>借阅情况</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>C程序设计语言(第2版新版)</td>
+                    <td>克尼汉</td>
+                    <td>20.70</td>
+                    <td>LUG购置</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://book.douban.com/subject/1444869/" title="http://book.douban.com/subject/1444869/">C++编程规范（英文版）</a></td>
+                    <td>-</td>
+                    <td>42</td>
+                    <td>网友捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>面向对象程序设计，C++语言描述</td>
+                    <td>-</td>
+                    <td>48</td>
+                    <td>网友捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>Effective C++: 改善程序与设计的55个具体做法(第3版)(云风评注)</td>
+                    <td>Scott Meyers</td>
+                    <td>48.80</td>
+                    <td>LUG购置</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>Effective C++: 改善程序与设计的55个具体做法(第3版)(英文版)</td>
+                    <td>Scott Meyers</td>
+                    <td>45.00</td>
+                    <td>LUG购置</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://book.douban.com/subject/3889005/" title="http://book.douban.com/subject/3889005/">Python开发技术详解</a></td>
+                    <td>-</td>
+                    <td>69</td>
+                    <td>网友捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>Advanced Bash Scripting</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>LUG打印</td>
+                    <td>-</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>计算机程序的构造和解释（第2版，翻译）<br />
+                Structure and Interpretation of Computer Programs| Harold Abelson等| 45.00| LUG购置| 已借出<br />
+                七周七语言：理解多种编程范型| Bruce A. Tate| 59.00| LUG购置| -<br />
+                松本行弘的程序世界| 松本行弘| 75.00| LUG购置| -<br />
+                ANSI C99 Standard| ISO/IEC| 打印| 会员捐赠| -<br />
+                面向对象程序设计——C++语言描述| Martin Kalin, Richard Johnsonbaugh| 48| 不详| -<br />
+                超越Java：探讨程序语言的未来| Bruce A. Tate| 29.00| LUG购置| -<br />
+                C和指针| Kenneth A. Reek| 65.00| LUG购置| 已借出<br />
+                程序设计语言概念（第7版影印）| Robert W. Sebesta| 49.00| 会员捐赠| -<br />
+                程序设计语言原理（第8版翻译）| Robert W. Sebesta| 75.00| 会员捐赠| 已借出<br />
+                MATLAB R2012a超级学习手册| 史洁玉，孔玲军| 69.00| 会员捐赠| -<br />
+                UNIX shell 范例精解（第四版）| Ellie Quigley| 118.00| 会员捐赠| 现在东区<br />
+                深入浅出 Python（中文版）<br />
+                Head First Python| Barry| 68.00| 会员捐赠| -<br />
+                <a href="http://book.douban.com/subject/2130190/" title="http://book.douban.com/subject/2130190/">Java编程思想 （第4版）</a>| Bruce Eckel| 108.00| boj捐赠| -<br />
+                Python Cookbook（第二版）| Martelli &amp; Ravenscroft &amp; Ascher| 99.00| ewind捐赠| -<br />
+                Python Cookbook（第3版）| David Beazley &amp; Brian K. Jones| 108.00| zhsj捐赠| -<br />
+                Haskell 趣学指南| Miran Lipovaca著，李亚舟、宋方睿译| 69.00| boj捐赠| -</p>
+              <h2 id="网络编程">网络编程</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>书名</th>
+                    <th>作者</th>
+                    <th>定价（￥）</th>
+                    <th>备注</th>
+                    <th>借阅情况</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>UNIX网络编程. 卷2: 进程间通信(第2版)</td>
+                    <td>W. Richard Stevens</td>
+                    <td>66.80</td>
+                    <td>LUG购置</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://book.douban.com/subject/4886882/" title="http://book.douban.com/subject/4886882/">UNIX网络编程. 卷2: 进程间通信(第2版)</a></td>
+                    <td>W. Richard Stevens</td>
+                    <td>89</td>
+                    <td>boj捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>UNIX网络编程(卷1): 套接字联网API(第3版)</td>
+                    <td>W. Richard Stevens</td>
+                    <td>96.70</td>
+                    <td>LUG购置</td>
+                    <td>-</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>TCP/IP 详解(卷1: 协议)<br />
+                TCP/IP Illustrated Volume 1: The Protocols| W. Richard Stevens| 45.00| LUG购置|  - <br />
+                <a href="http://book.douban.com/subject/1087767/" title="http://book.douban.com/subject/1087767/">TCP/IP详解 卷2：实现</a>| Gary R. Wright<br />
+                W. Richard Stevens| 78.00| boj捐赠| -<br />
+                TCP/IP详解 卷2 实现(英文版)| Gary R. Wright| 69| 网友捐赠| -<br />
+                <a href="http://book.douban.com/subject/1086595/" title="http://book.douban.com/subject/1086595/">用TCP/IP进行网际互联 第3卷</a>| -| 40| 网友捐赠| -<br />
+                TCP标准（RFC793）| -| 打印| 会员捐赠| -<br />
+                IPv6详解 卷一：核心协议实现（英文版）| Qing Li| 128.00| 网友捐赠| -<br />
+                IPv6详解（卷2：高级协议实现）（英文版）| Qing Li| 128.00| 网友捐赠| -<br />
+                <a href="http://book.douban.com/subject/10565572/" title="http://book.douban.com/subject/10565572/">QoS在IOS中的实现与应用</a>| 张国清| 45.00| 会员捐赠| -</p>
+              <h2 id="文化与设计">文化与设计</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>书名</th>
+                    <th>作者</th>
+                    <th>定价（￥）</th>
+                    <th>备注</th>
+                    <th>借阅情况</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>数学之美</td>
+                    <td>吴军</td>
+                    <td>45.0</td>
+                    <td>LUG购置</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>浪潮之巅</td>
+                    <td>吴军</td>
+                    <td>55.00</td>
+                    <td>会员捐赠</td>
+                    <td>已借出</td>
+                  </tr>
+                  <tr>
+                    <td>浪潮之巅</td>
+                    <td>吴军</td>
+                    <td>35.80</td>
+                    <td>LUG购置</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>失控: 全人类的最终命运和结局</td>
+                    <td>凯文·凯利</td>
+                    <td>48.50</td>
+                    <td>LUG购置</td>
+                    <td>unavailable</td>
+                  </tr>
+                  <tr>
+                    <td>黑客与画家: 硅谷创业之父Paul Graham文集</td>
+                    <td>阮一峰</td>
+                    <td>33.80</td>
+                    <td>LUG购置</td>
+                    <td>已借出</td>
+                  </tr>
+                  <tr>
+                    <td>科技想要什么</td>
+                    <td>凯文·凯利</td>
+                    <td>40.00</td>
+                    <td>LUG购置</td>
+                    <td>-</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>UNIX编程艺术（翻译）<br />
+                The Art of UNIX Programming| Eric S. Raymond| 59.00| 会员捐赠| -<br />
+                设计心理学（翻译）<br />
+                The design of everyday things| Donald Arthur Norman| 30.00| 会员捐赠| -<br />
+                用户体验要素（翻译，彩印）<br />
+                The Elements of User Experience| Jesse James Garrett| 39.00| 会员捐赠| 借出<br />
+                设计原本: 计算机科学巨匠Frederick P. Brooks的思考| 布鲁克斯| 37.70| LUG购置| -<br />
+                Mathematics and Technology| Christiane Rousseau| 打印| 会员捐赠| -<br />
+                <a href="http://book.douban.com/subject/3224524/" title="http://book.douban.com/subject/3224524/">代码之美</a>| Grey Wilson| 99.00| boj捐赠| -</p>
+              <h2 id="web与移动开发">Web与移动开发</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>书名</th>
+                    <th>作者</th>
+                    <th>定价（￥）</th>
+                    <th>备注</th>
+                    <th>借阅情况</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Node.js开发指南</td>
+                    <td>郭家宝</td>
+                    <td>45.00</td>
+                    <td>LUG购置</td>
+                    <td>已借出</td>
+                  </tr>
+                  <tr>
+                    <td>PHP高级编程</td>
+                    <td>Jesus Castagnetto</td>
+                    <td>78</td>
+                    <td>网友捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>JavaScript高级程序设计(第3版)</td>
+                    <td>Nicholas C. Zakas</td>
+                    <td>71.80</td>
+                    <td>LUG购置</td>
+                    <td>已借出</td>
+                  </tr>
+                  <tr>
+                    <td>CSS实战手册(第2版)</td>
+                    <td>David Sawyer McFarland</td>
+                    <td>52.40</td>
+                    <td>LUG购置</td>
+                    <td>现在西区</td>
+                  </tr>
+                  <tr>
+                    <td>PHP4 网站构架精辟</td>
+                    <td>-</td>
+                    <td>42</td>
+                    <td>网友捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>PHP &amp; MySQL Web</td>
+                    <td>-</td>
+                    <td>48</td>
+                    <td>网友捐赠</td>
+                    <td>借出1本</td>
+                  </tr>
+                  <tr>
+                    <td>CSS 2.1 Specification</td>
+                    <td>W3C</td>
+                    <td>打印</td>
+                    <td>会员捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>HTTP/1.1标准（RFC2616）</td>
+                    <td>-</td>
+                    <td>打印</td>
+                    <td>会员捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>XQuery 1.0 Specification</td>
+                    <td>W3C</td>
+                    <td>打印</td>
+                    <td>会员捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>HTML5与CSS3权威指南</td>
+                    <td>陆凌牛</td>
+                    <td>69.00</td>
+                    <td>会员捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>精通CSS：高级Web标准解决方案</td>
+                    <td>Andy Budd</td>
+                    <td>49.00</td>
+                    <td>会员捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>Programming Android（影印版）</td>
+                    <td>Zigurd Medieks等</td>
+                    <td>88.00</td>
+                    <td>LUG购置</td>
+                    <td>借出1本</td>
+                  </tr>
+                  <tr>
+                    <td>Android应用开发揭秘</td>
+                    <td>杨丰盛</td>
+                    <td>69.00</td>
+                    <td>LUG购置</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>Learning Android（翻译）</td>
+                    <td>Marko Gargenta</td>
+                    <td>49.00</td>
+                    <td>LUG购置</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>SEO艺术</td>
+                    <td>Eric Enge等</td>
+                    <td>89.00</td>
+                    <td>LUG购置</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>PHP和MySQL Web开发（第四版）</td>
+                    <td>Luke Welling &amp; Laura Thomson</td>
+                    <td>95.00</td>
+                    <td>ewind捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>CSS权威指南（第三版）</td>
+                    <td>Eric A. Meyer</td>
+                    <td>58.00</td>
+                    <td>ewind捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>HTTP权威指南</td>
+                    <td>David Gourley &amp; Brian Totty &amp; Marjorie Sayer &amp; Sailu Reddy &amp; Anshu Aggarwal</td>
+                    <td>109.00</td>
+                    <td>ewind捐赠</td>
+                    <td>-</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h2 id="数据库">数据库</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>书名</th>
+                    <th>作者</th>
+                    <th>定价（￥）</th>
+                    <th>备注</th>
+                    <th>借阅情况</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>MySQL技术内幕–InnoDB存储引擎</td>
+                    <td>姜承尧</td>
+                    <td>69.00</td>
+                    <td>会员捐赠</td>
+                    <td>-</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>SQL反模式（翻译）<br />
+                SQL Antipatterns| Bill Karwin| 59.00| 会员捐赠| -<br />
+                SQL沉思录（翻译）<br />
+                Thinking in Sets – Auxiliary, Temporal and Virtual Tables in SQL| Joe Ceiko| 49.00| 会员捐赠| -<br />
+                MongoDB权威指南（翻译）<br />
+                MongoDB: The Definitive Guide| Kristina Chodorow等| 39.00| 会员捐赠| -<br />
+                数据库系统导论| C. J. Date| 75| 会员捐赠| 已借出<br />
+                <a href="http://book.douban.com/subject/2179813/" title="http://book.douban.com/subject/2179813/">数据库系统导论</a>| C. J. Date| 75.00| 李朝晖捐赠| -<br />
+                <a href="http://book.douban.com/subject/4166546/" title="http://book.douban.com/subject/4166546/">数据库系统实现（英文版，第二版）</a>| Hector Garcia-Molina等| 55.00| 会员捐赠| -<br />
+                <a href="http://book.douban.com/subject/19978918/" title="http://book.douban.com/subject/19978918/">SQL Server 2012从零开始学</a>| 王英英等| 59.00| 会员捐赠| -<br />
+                <a href="http://book.douban.com/subject/24737847/" title="http://book.douban.com/subject/24737847/">七周七数据库</a>| Eric Redmond | 59.00| 会员捐赠| -<br />
+                数据库查询优化器的艺术| 李海翔| 89.00| boj捐赠| -</p>
+              <h2 id="学术与教科书">学术与教科书</h2>
+              <p>书名| 作者| 定价（￥）| 备注| 借阅情况<br />
+                —|—|—|—|—<br />
+                现代操作系统（第3版，英文）<br />
+                Modern Operating Systems| Andrew S. Tanenbaum| 69.00| 会员捐赠| unavailable<br />
+                操作系统概念（第7版，翻译）<br />
+                Operating System Concepts| Abraham Silberschatz等| 74.00| 会员捐赠| 已借出<br />
+                操作系统概念（第6版，翻译）<br />
+                Operating System Concepts| Abraham Silberschatz等| 74.00| 会员捐赠| 已借出<br />
+                计算机网络（英文版·第5版）<br />
+                Computer Networks| 塔嫩鲍姆| 99.00| LUG购置| -<br />
+                计算机组成与设计：硬件、软件接口（第4版）<br />
+                Computer Organization and Design| 帕特森| 99.00| LUG购置| -<br />
+                计算机组成与设计：硬件、软件接口（第3版）<br />
+                Computer Organization and Design| 帕特森| 75.00| 会员捐赠| 已借出<br />
+                搜索引擎–信息检索实践（英文）<br />
+                Search Engines – Information Retrieval in Practice| W. Bruce Croft等| 45.00| 会员捐赠| -<br />
+                机器视觉教程（英文）<br />
+                Machine Vision| Wesley E. Snyder等| 49.00| 会员捐赠| -<br />
+                计算机图形学（英文）<br />
+                Computer Graphics| Steve Cunningham| 36.00| 会员捐赠| -<br />
+                云计算（第二版）| 刘鹏| 48.00| 会员捐赠| -<br />
+                人工智能——一种现代方法(第二版)<br />
+                Artificial Intelligence - A Modern Approach| 拉塞尔等| 89.00| LUG购置| 已借出<br />
+                数字设计和计算机体系结构（英文版）<br />
+                Digital Design and Computer Architecture| 哈里斯| 65.00| LUG购置| -<br />
+                MIPS体系结构透视<br />
+                See MIPS Run| 斯威特曼| 48.00| LUG购置| -<br />
+                深入理解计算机系统(英文版, 第2版)| 布莱恩特, 奥哈拉伦| 85.00| LUG购置| -<br />
+                深入理解计算机系统(原书第2版)| 布莱恩特| 65.60| LUG购置| -<br />
+                <a href="http://book.douban.com/subject/1230413/" title="http://book.douban.com/subject/1230413/">深入理解计算机系统（修订版）</a>| Randal E. Bryant| 85| LUG购置| unavailable<br />
+                Representation and Inference for Natural Language (Volume 1)| Patrick Blackburn et al| 打印| 会员捐赠| -<br />
+                Representation and Inference for Natural Language (Volume 2)| Patrick Blackburn et al| 打印| 会员捐赠| -<br />
+                计算机代数讲义| 陈玉福| 25.00| 会员捐赠| -<br />
+                计算机图形学（第3版英文）| Donald Hearn| 79.00| 会员捐赠| -<br />
+                计算机系统概论（第2版英文）| Yale N. Patt| 66.00| 会员捐赠| 借出1本<br />
+                计算理论导引（第2版）| Michael Sipser| 36.00| 会员捐赠| -<br />
+                交互式定理证明与程序开发（Coq）| Yves Bertot| 59.00| 会员捐赠| -<br />
+                数学建模（英文版）| Frank R. Giordano et al| 65.00| 会员捐赠| -<br />
+                操作系统概念（第6版）| Abraham Silberschatz et al| 55.00| stephen捐赠| 已借出<br />
+                <a href="http://book.douban.com/subject/5952528/" title="http://book.douban.com/subject/5952528/">现代信息检索（英文版第2版）</a>| Ricardo Baeza-Yates<br />
+                Berthier Ribeiro-Neto| 78.00| boj捐赠| -<br />
+                <a href="http://book.douban.com/subject/1893050/" title="http://book.douban.com/subject/1893050/">信息论、推理与学习算法</a>| 麦凯| 59.00| boj捐赠| -<br />
+                <a href="http://book.douban.com/subject/3027475/" title="http://book.douban.com/subject/3027475/">Intel微处理器</a>| 布雷| 85.00| boj捐赠| -<br />
+                <a href="http://book.douban.com/subject/1391207/" title="http://book.douban.com/subject/1391207/">计算机网络：自顶向下方法（原书第4版）</a>| James F. Kurose<br />
+                Keith W. Ross| 66.00| boj捐赠| 已借出<br />
+                <a href="http://book.douban.com/subject/1885170/" title="http://book.douban.com/subject/1885170/">算法导论（原书第2版）</a>| CLRS| 85.00| boj捐赠| -<br />
+                <a href="http://book.douban.com/subject/5921462/" title="http://book.douban.com/subject/5921462/">图像处理、分析与机器视觉（第3版）</a>| Milan Sonka et al| 69.50| boj捐赠| -<br />
+                <a href="http://book.douban.com/subject/1445580/" title="http://book.douban.com/subject/1445580/">分布式系统概念与设计（英文版第4版）</a><br />
+                Distributed Systems: Concepts and Design, Fourth Edition| 库劳里斯| 89.00| boj捐赠| -<br />
+                <a href="http://book.douban.com/subject/3108800/" title="http://book.douban.com/subject/3108800/">分布式系统原理与范型（第2版 影印版）</a>| Andrew S. Tanenbaum<br />
+                Maarten van Steen| 69.00| boj捐赠| -<br />
+                <a href="http://book.douban.com/subject/1954037" title="http://book.douban.com/subject/1954037">计算机体系结构: 量化研究方法(英文版第4版)</a>| John L. Hennessy<br />
+                David A. Patterson| 78.00| boj捐赠| -<br />
+                <a href="http://book.douban.com/subject/1935714/" title="http://book.douban.com/subject/1935714/">软件工程: 理论与实践（第三版 影印版）</a><br />
+                Software Engineering: Theory and Practice, Third Edition| Shari Lawrence Pfleeger <br />
+                Joanne M. Atlee| 48.00| boj捐赠| -<br />
+                计算机网络（第五版）| Andrew S. Tanenbaum &amp; David J. Wetherall| 89.50| ewind捐赠| -<br />
+                <a href="http://book.douban.com/subject/1231910/" title="http://book.douban.com/subject/1231910/">具体数学：计算机科学基础（英文版，第二版）</a>| Graham, Knuth, Patashnik| 49.00| 会员捐赠| -<br />
+                <a href="http://book.douban.com/subject/3989842/" title="http://book.douban.com/subject/3989842/">并行算法的设计与分析</a>| 陈国良| 66.00| 会员捐赠| -<br />
+                <a href="http://book.douban.com/subject/10457422/" title="http://book.douban.com/subject/10457422/">数据挖掘导论</a>| 朱明| 36.00| 会员捐赠| -<br />
+                <a href="http://book.douban.com/subject/1312248/" title="http://book.douban.com/subject/1312248/">分布式数据库系统及其应用</a>| 邵佩英| 44.00| 会员捐赠| -<br />
+                <a href="http://book.douban.com/subject/1609732/" title="http://book.douban.com/subject/1609732/">并行计算：结构·算法·编程</a>| 陈国良| 36.50| 会员捐赠| -<br />
+                <a href="http://book.douban.com/subject/5311656/" title="http://book.douban.com/subject/5311656/">数理逻辑</a>| 汪芳庭| 22.00| 会员捐赠| -<br />
+                <a href="http://book.douban.com/subject/4867855/" title="http://book.douban.com/subject/4867855/">组合数学引论</a>|  许胤龙、孙淑玲 | 33.00| 会员捐赠| -<br />
+                <a href="http://book.douban.com/subject/1019079/" title="http://book.douban.com/subject/1019079/">数字信号处理</a>| 王世一| 40.00| 会员捐赠| -<br />
+                <a href="http://book.douban.com/subject/1136707/" title="http://book.douban.com/subject/1136707/">高等计算机网络：体系结构、协议机制、算法设计与路由技术</a>|  徐恪等| 52.00| 会员捐赠| -<br />
+                <a href="http://book.douban.com/subject/4898375/" title="http://book.douban.com/subject/4898375/">计算智能导论（第2版）</a>| Andries. P. Engelbrecht| 59.00| 会员捐赠| -<br />
+                <a href="http://book.douban.com/subject/1183178/" title="http://book.douban.com/subject/1183178/">信息论与编码</a>| 姜丹| 55.00| 会员捐赠| -<br />
+                <a href="http://book.douban.com/subject/6850128/" title="http://book.douban.com/subject/6850128/">计算机网络（英文版，第五版）</a>| Andrew S. Tanenbaum, David J. Wetherall| 99.00| 李朝晖捐赠| -<br />
+                <a href="http://book.douban.com/subject/1277288/" title="http://book.douban.com/subject/1277288/">Intel系列微处理器体系结构、编程与接口</a>| 布雷| 99.00| 李朝晖捐赠| -<br />
+                <a href="http://book.douban.com/subject/2109679/" title="http://book.douban.com/subject/2109679/">操作系统概念（第七版，影印版）</a>| Silberschatz| 72.00| 李朝晖捐赠| -<br />
+                <a href="http://book.douban.com/subject/5377669/" title="http://book.douban.com/subject/5377669/">数据挖掘导论（完整版）</a>| Pang-Ning Tan / Michael Steinbach / Vipin Kumar | 69.00| 会员捐赠| -<br />
+                <a href="http://book.douban.com/subject/1088180/" title="http://book.douban.com/subject/1088180/">应用密码学：协议、算法与C源程序</a>| Bruce Schneier | 49.00| 会员捐赠| -<br />
+                <a href="http://book.douban.com/subject/3125432/" title="http://book.douban.com/subject/3125432/">离散数学及其应用（第六版，英文版）</a>| 罗森| 89.00| 会员捐赠| -<br />
+                图论导引| Douglas B. West| 59.00| 会员捐赠| -<br />
+                数据挖掘概念与技术| Jiawei Han| 55.00| 会员捐赠| -</p>
+              <h2 id="misc">MISC</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>书名</th>
+                    <th>作者</th>
+                    <th>定价（￥）</th>
+                    <th>备注</th>
+                    <th>借阅情况</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="http://book.douban.com/subject/2154713/" title="http://book.douban.com/subject/2154713/">精通正则表达式（第三版）</a></td>
+                    <td>Jeffrey E. F. Friedl</td>
+                    <td>85</td>
+                    <td>LUG购置</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>大话设计模式</td>
+                    <td>程杰</td>
+                    <td>45.00</td>
+                    <td>会员捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://book.douban.com/subject/3652388/" title="http://book.douban.com/subject/3652388/">程序员的自我修养：链接、装载与库</a></td>
+                    <td>俞甲子、石凡、潘爱民</td>
+                    <td>65</td>
+                    <td>LUG购置</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>The Fallibility of Human Reason in Everyday Life</td>
+                    <td>Thomas Gilovich</td>
+                    <td>打印</td>
+                    <td>会员捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>A Rulebook for Arguments</td>
+                    <td>Anthony Weston</td>
+                    <td>打印</td>
+                    <td>会员捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>Asking the Right Questions - A Guide to Critical Thinking</td>
+                    <td>M. Neil Browne et al</td>
+                    <td>打印</td>
+                    <td>会员捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>Orange’s一个操作系统的实现</td>
+                    <td>于渊</td>
+                    <td>69</td>
+                    <td>不详</td>
+                    <td> </td>
+                  </tr>
+                  <tr>
+                    <td>软件开发的科学与艺术</td>
+                    <td>张亚勤</td>
+                    <td>38</td>
+                    <td>不详</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>社交网站的数据挖掘与分析</td>
+                    <td>Matthew A. Russel</td>
+                    <td>59.00</td>
+                    <td>LUG购置</td>
+                    <td>已借出</td>
+                  </tr>
+                  <tr>
+                    <td>乐者为王（just for fun）</td>
+                    <td>Linus Torvalds</td>
+                    <td>20.00</td>
+                    <td>stephen捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>密战 网络犯罪大追踪</td>
+                    <td>Joseph Menn</td>
+                    <td>39.00</td>
+                    <td>同学捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>ROOTKITS——Windows内核的安全防护</td>
+                    <td>GregHoglund JamesButler</td>
+                    <td>39.00</td>
+                    <td>同学捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://book.douban.com/subject/25780703/" title="http://book.douban.com/subject/25780703/">CPU自制入门</a></td>
+                    <td>水头一寿 米泽辽 藤田裕士</td>
+                    <td>99.00</td>
+                    <td>boj捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://book.douban.com/subject/1138189/" title="http://book.douban.com/subject/1138189/">模式分类</a></td>
+                    <td>Richard O. Duda</td>
+                    <td>59.00</td>
+                    <td>boj捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://book.douban.com/subject/1881631/" title="http://book.douban.com/subject/1881631/">数据仓库（原书第4版）</a></td>
+                    <td>荫蒙</td>
+                    <td>39.00</td>
+                    <td>boj捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://book.douban.com/subject/1982886/" title="http://book.douban.com/subject/1982886/">LATEX入门与提高（第二版）</a></td>
+                    <td>陈志杰</td>
+                    <td>47.20</td>
+                    <td>boj捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://book.douban.com/subject/1154204/" title="http://book.douban.com/subject/1154204/">算法艺术与信息学竞赛</a></td>
+                    <td>刘汝佳</td>
+                    <td>45.00</td>
+                    <td>boj捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://book.douban.com/subject/3699395/" title="http://book.douban.com/subject/3699395/">观止：微软创建NT和未来的夺命狂奔</a></td>
+                    <td>G. Pascal Zachary</td>
+                    <td>42.00</td>
+                    <td>会员捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://book.douban.com/subject/3769383/" title="http://book.douban.com/subject/3769383/">寒江独钓：Windows内核安全编程</a></td>
+                    <td>谭文 / 杨潇 / 邵坚磊</td>
+                    <td>75.00</td>
+                    <td>会员捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://book.douban.com/subject/20701576/" title="http://book.douban.com/subject/20701576/">云计算与分布式系统：从并行处理到物联网</a></td>
+                    <td>Kai Kwang等</td>
+                    <td>85.00</td>
+                    <td>会员捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://book.douban.com/subject/10546925/" title="http://book.douban.com/subject/10546925/">白帽子讲Web安全</a></td>
+                    <td>吴翰清</td>
+                    <td>69.00</td>
+                    <td>会员捐赠</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>计算机取证（英文版）</td>
+                    <td>Dan Farmer</td>
+                    <td>30.00</td>
+                    <td>boj捐赠</td>
+                    <td>-</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h1 id="lug会员推荐购置图书列表">LUG会员推荐购置图书列表</h1>
+              <p>书名 |  备注<br />
+                —|—
+                *[CSS]: Cascading Style Sheets
+                *[W3C]: World Wide Web Consortium</p>
+            </section>
+            <footer class="page__meta">
+              <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-08-09T15:12:14+08:00">2020 年 8 月 9 日</time></p>
+            </footer>
+            <nav class="pagination">
+              <a href="/wiki/lug/book/borrow_history/" class="pagination--pager" title="借阅记录
+">上一页</a>
+              <a href="/wiki/lug/contact/" class="pagination--pager" title="联系我们
+">下一页</a>
+            </nav>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+        <!-- end custom footer snippets -->
+        <div class="footer-row">
+          <div class="footer-block footer__about">
+            <p>中国科学技术大学 Linux 用户协会是由中国科学技术大学在校的 GNU/Linux 爱好者发起并组成的团体，旨在联合科大的 GNU/Linux
+              使用者，搭建信息交流共享的平台，宣传自由软件的价值，提高自由软件社区文化氛围，推广自由软件的应用。</p>
+          </div>
+          <div class="footer-block footer__contact">
+            <ul>
+              <li>
+                <a href="/wiki/intro/"><i class="fas fa-fw fa-address-card"></i> 关于我们</a>
+              </li>
+              <li>
+                <a href="/wiki/lug/contact/"><i class="fas fa-fw fa-phone-alt"></i> 联系我们</a>
+              </li>
+              <li>
+                <a href="/wiki/lug/contribute/"><i class="fas fa-fw fa-users"></i> 加入我们</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-block footer__logo">
+            <img src="https://ftp.lug.ustc.edu.cn/misc/logo-white.svg" width="33%" />
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="/assets/js/main.min.js"></script>
+    <img src="https://static.beta.ustclug.org/USTC_logo.svg" style="position: fixed; bottom: -320px; left: -200px; opacity: 0.1; z-index: -100;" />
+  </body>
+</html>

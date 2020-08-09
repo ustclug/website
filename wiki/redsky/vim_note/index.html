@@ -1,0 +1,464 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.20.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="zh" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <!-- begin _includes/seo.html -->
+    <title>Vim笔记 - LUG @ USTC</title>
+    <meta name="description" content="Vim笔记">
+    <meta name="author" content="USTCLUG">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="LUG @ USTC">
+    <meta property="og:title" content="Vim笔记">
+    <meta property="og:url" content="https://beta.ustclug.org//wiki/redsky/vim_note/">
+    <meta property="og:description" content="Vim笔记">
+    <meta property="article:published_time" content="2020-08-09T15:12:14+08:00">
+    <link rel="canonical" href="https://beta.ustclug.org//wiki/redsky/vim_note/">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+      
+          "@type": "Person",
+          "name": "USTCLUG",
+          "url": "https://beta.ustclug.org//"
+      
+      }
+    </script>
+    <!-- end _includes/seo.html -->
+    <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="LUG @ USTC Feed">
+    <!-- https://t.co/dKP3o1e -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+    </script>
+    <!-- For all browsers -->
+    <link rel="stylesheet" href="/assets/css/main.css?v=c5a82c3">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" media="invalid" onload="this.media='all'">
+    <!--[if IE]>
+      <style>
+        /* old IE unsupported flexbox fixes */
+        .greedy-nav .site-title {
+          padding-right: 3em;
+        }
+        .greedy-nav button {
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 100%;
+        }
+      </style>
+    <![endif]-->
+    <!-- start custom head snippets -->
+    <!-- insert favicons. use https://realfavicongenerator.net/ -->
+    <!-- end custom head snippets -->
+  </head>
+  <body class="layout--single">
+    <nav class="skip-links">
+      <h2 class="screen-reader-text">跳转链接</h2>
+      <ul>
+        <li><a href="#site-nav" class="screen-reader-shortcut">转到主导航栏</a></li>
+        <li><a href="#main" class="screen-reader-shortcut">转到内容</a></li>
+        <li><a href="#footer" class="screen-reader-shortcut">转到底部</a></li>
+      </ul>
+    </nav>
+    <!--[if lt IE 9]>
+      <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+    <![endif]-->
+    <div class="masthead">
+      <div class="masthead__inner-wrap">
+        <div class="masthead__menu">
+          <nav id="site-nav" class="greedy-nav">
+            <a class="site-logo" href="/"><img src="https://ftp.lug.ustc.edu.cn/misc/LUG.png" alt=""></a>
+            <a class="site-title" href="/">
+              LUG @ USTC
+            </a>
+            <ul class="visible-links">
+              <li class="masthead__menu-item">
+                <a href="/wiki/">Wiki</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="/news/">News</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="/planet/">Planet</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="https://github.com/ustclug">GitHub</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="https://mirrors.ustc.edu.cn/">Mirrors</a>
+              </li>
+            </ul>
+            <button class="greedy-nav__toggle hidden" type="button">
+              <span class="visually-hidden">切换菜单</span>
+              <div class="navicon"></div>
+            </button>
+            <ul class="hidden-links hidden"></ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="initial-content">
+      <div id="main" role="main">
+        <div class="sidebar sticky">
+          <nav class="nav__list">
+            <input id="ac-toc" name="accordion-toc" type="checkbox" />
+            <label for="ac-toc">切换菜单</label>
+            <ul class="nav__items">
+              <li>
+                <span class="nav__sub-title">LUG @ USTC</span>
+                <ul>
+                  <li><a href="/">LUG 首页</a></li>
+                  <li><a href="/news/">LUG 新闻</a></li>
+                  <li><a href="/wiki/lug/links/">友情链接</a></li>
+                  <li><a href="/wiki/mirrors/">开源软件镜像</a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="nav__sub-title">活动</span>
+                <ul>
+                  <li><a href="/wiki/lug/events/">LUG 活动</a></li>
+                  <li><a href="/wiki/lug/events/weeklyparty/">每周小聚</a></li>
+                  <li><a href="/wiki/lug/mailinglist/">邮件列表</a></li>
+                  <li><a href="/wiki/lug/book/">LUG 书库</a></li>
+                  <li><a href="https://news.ustclug.org/finance/">LUG 财务</a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="nav__sub-title">联系</span>
+                <ul>
+                  <li><a href="/wiki/lug/person-in-charge/">LUG 负责人</a></li>
+                  <li><a href="/wiki/lug/contact/">联系我们</a></li>
+                  <li><a href="/wiki/lug/contribute/">加入我们</a></li>
+                  <li><a href="/wiki/lug/finance/donate/">捐赠我们</a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="nav__sub-title">资源</span>
+                <ul>
+                  <li><a href="/wiki/linux_digest/">Linux 文摘</a></li>
+                  <li><a href="/wiki/lug/resources/">资源导航</a></li>
+                  <li><a href="https://servers.ustclug.org/">服务器新闻</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+          <meta itemprop="headline" content="Vim笔记">
+          <meta itemprop="description" content="Vim笔记">
+          <meta itemprop="datePublished" content="2020-08-09T15:12:14+08:00">
+          <div class="page__inner-wrap">
+            <header>
+              <h1 id="page-title" class="page__title" itemprop="headline">Vim笔记
+              </h1>
+            </header>
+            <section class="page__content" itemprop="text">
+              <aside class="sidebar__right sticky">
+                <nav class="toc">
+                  <header>
+                    <h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4>
+                  </header>
+                  <ul class="toc__menu">
+                    <li><a href="#vim基本操作">Vim基本操作</a></li>
+                    <li><a href="#folding">Folding</a></li>
+                    <li><a href="#quickfix">QuickFix</a></li>
+                    <li><a href="#macro">Macro</a></li>
+                    <li><a href="#split-screen">Split Screen</a></li>
+                    <li><a href="#cc">C/C++</a></li>
+                    <li><a href="#番外篇正则表达式">番外篇：正则表达式</a></li>
+                  </ul>
+                </nav>
+              </aside>
+              <h5 id="vim基本操作">Vim基本操作</h5>
+              <ul>
+                <li>
+                  <p>“一个光标的故事”（方向键不是最好的选择） ⇒ The Vim Way</p>
+                </li>
+                <li>
+                  <p>先阅读vimtutor，根据提示进行操作练习 ⇒ 先尝试“生存下来”</p>
+                </li>
+              </ul>
+              <p><img src="../lib/images/smileys/icon_cool.gif" alt="8-)" /></p>
+              <ul>
+                <li>
+                  <p>常用模式：normal, lastline, visual, insert, … ⇒ 熟练在它们中切换</p>
+                </li>
+                <li>
+                  <p>字词句段篇 ⇒ word/string/paragraph/blockwise ⇒ 尝试在它们之间移动、选定、编辑</p>
+                </li>
+                <li>
+                  <p>搜索式移动 ⇒ F/f，T/t，/，？，……</p>
+                </li>
+                <li></li>
+              </ul>
+              <p><img src="../lib/images/smileys/icon_exclaim.gif" alt=":!:" /></p>
+              <p>查看当前词语的man手册页 ⇒ Shift-k</p>
+              <ul>
+                <li></li>
+              </ul>
+              <p><img src="../lib/images/smileys/icon_exclaim.gif" alt=":!:" /></p>
+              <p>查看当前词语的定义处（局部变量） ⇒ gd</p>
+              <ul>
+                <li>
+                  <p>跳转到文件 ⇒ gf</p>
+                </li>
+                <li>
+                  <p>块（blockwise）操作 ⇒ v/c/d/y + a/i + {/[/(/“/‘</p>
+                </li>
+                <li>
+                  <p>窗口间的移动 ⇒ <C-w> \+ h/i/j/k/</C-w></p>
+                </li>
+              </ul>
+              <p>学会使用帮助</p>
+              <p>Vim中键入：</p>
+              <div class="language-plaintext highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>:help xxx
+</code></pre>
+                </div>
+              </div>
+              <p>即可获得关于xxx的帮助。xxx可以是选项、命令、甚至快捷键组合。</p>
+              <h5 id="folding">Folding</h5>
+              <p>在Vim中输入：</p>
+              <div class="language-plaintext highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>:set fdm=syntax
+</code></pre>
+                </div>
+              </div>
+              <p>即表示以syntax的方式折叠代码（即设定FoldingMethod）。</p>
+              <ul>
+                <li>
+                  <p>Folding的方法有syntax、marker、indent、manual等几种。</p>
+                </li>
+                <li>
+                  <p>在折叠处按z-o可以展开一层折叠，z-O展开此处所有层次的折叠。z-c/C则相反。</p>
+                </li>
+                <li>
+                  <p>展开当前文件所有的折叠可以用z-R，折叠则用z-M。</p>
+                </li>
+              </ul>
+              <h5 id="quickfix">QuickFix</h5>
+              <p>摘抄一段QuickFix的帮助文件：</p>
+              <div class="language-plaintext highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>Vim has a special mode to speedup the edit-compile-edit cycle.  This is
+inspired by the quickfix option of the Manx's Aztec C compiler on the Amiga.
+The idea is to save the error messages from the compiler in a file and use Vim
+to jump to the errors one by one.  You can examine each problem and fix it,
+without having to remember all the error messages.
+</code></pre>
+                </div>
+              </div>
+              <p>也就是说，QuickFix原来是用在处理编译出错的信息上的。其实通过配置，它也能用于cscope的查询和跳转。</p>
+              <p>Vim内置支持make指令，你可以输入</p>
+              <div class="language-plaintext highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>:make
+</code></pre>
+                </div>
+              </div>
+              <p>来调用make命令在Vim当前工作目录下编译，其出错信息就会出现在QuickFix窗口中。</p>
+              <p>QuickFix有些常用指令：</p>
+              <div class="language-plaintext highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>:copen
+:cclose
+:cnext
+:cprev
+</code></pre>
+                </div>
+              </div>
+              <p>分别是打开/关闭QuickFix窗口，下一个和上一个错误/警告。其它命令可以查看其帮助文件。</p>
+              <h5 id="macro">Macro</h5>
+              <p>TODO</p>
+              <h5 id="split-screen">Split Screen</h5>
+              <p>TODO</p>
+              <h5 id="cc">C/C++</h5>
+              <p>ctags和cscope是Linux下比较常用的C/C++代码分析器，配合Vim使用有不错的效果。</p>
+              <ul>
+                <li>ctags</li>
+              </ul>
+              <p>Open C++ file with extra stl_tags: <a href="http://www.vimer.cn/2010/01/让vimgvim支持补全cstl库.html" title="http://www.vimer.cn/2010/01/让vimgvim支持补全cstl库.html">Click On Me</a></p>
+              <ul>
+                <li>cscope</li>
+              </ul>
+              <p>可以参考：<a href="http://cscope.sourceforge.net/cscope_vim_tutorial.html">http://cscope.sourceforge.net/cscope_vim_tutorial.html</a></p>
+              <p>那些ctags和cscope能做和不能做的事情</p>
+              <p>ctags和cscope只能找到匹配的字符串，但是对于C++里面复杂的语义，如函数重载之类的却无能为力。跳转的时候可能会跳转错误或者给出一堆重名的函数以供选择，代码补全的时候也一样。要做到跳转/补全的正确，现有的C++的IDE（集成开发环境）中，Eclipse、QtCreator、KDevelop等都是用自带的分析器解析后再做跳转的。现在有人开始尝试在Emacs上用gcc前端分析代码，求得精确的补全，不过我还没找到Vim上比ctags和cscope更好用的东西。这么说吧，ctags和cscope这些轻量的分析器配合Vim这种快速的编辑器还是比较搭配的。或者你可以试着用一下下面提到的Eclim，后端就是个Eclipse……</p>
+              <p>然后呢，请务必记住——</p>
+              <p>活用QuickFix和TagSelect！</p>
+              <ul>
+                <li>代码补全</li>
+              </ul>
+              <p>Vim自身带有不少补全功能，可以在Vim中搜索关于“compl”的帮助</p>
+              <p>在此，我推荐C++开发者安装omnicppcomplete插件，所有用户安装neocomplcache插件。</p>
+              <ul>
+                <li>Eclim：以Vim作为前端，操作Eclipse后端，打开和编辑Eclipse工程。<a href="http://eclim.org/" title="http://eclim.org/">Eclim官方网站</a></li>
+              </ul>
+              <h5 id="番外篇正则表达式">番外篇：正则表达式</h5>
+              <p>Vim的强大也体现在其搜索/替换的时候，能够使用强大的正则表达式这一点上。参见<a href="http://www.deerchao.net/tutorials/regex/regex.htm" title="http://www.deerchao.net/tutorials/regex/regex.htm">正则表达式30分钟入门教程</a></p>
+              <h2 id="vim与linux下的cc开发">Vim与Linux下的C/C++开发</h2>
+              <ul>
+                <li>
+                  <p>Vim只是一个编辑器</p>
+                </li>
+                <li>
+                  <p>用好Linux这个最大的IDE ⇒ The Unix Way</p>
+                </li>
+              </ul>
+              <p>各种小工具的配合让开发工作变得简单</p>
+              <ul>
+                <li>用vim编辑 ⇒ 用gcc编译 ⇒ 用gdb调试</li>
+              </ul>
+              <h2 id="vim插件列表">Vim插件列表</h2>
+              <p>多看<a href="http://www.vim.org/" title="http://www.vim.org/">Vim官方网站</a>上各个插件的介绍页面和帮助手册</p>
+              <p>注意插件冲突和快捷键冲突</p>
+              <ul>
+                <li>
+                  <p>a.vim</p>
+                </li>
+                <li>
+                  <p>conque <em>1.1.vba * DoxygenToolkit.vim * doxygen * grep.vim * mark * matchit * neocomplcache * NERD</em> commenter</p>
+                </li>
+                <li>
+                  <p>omnicppcomplet</p>
+                </li>
+                <li>
+                  <p>pathogen.vim</p>
+                </li>
+                <li>
+                  <p>showfunc.vim</p>
+                </li>
+                <li>
+                  <p>snipMate</p>
+                </li>
+                <li>
+                  <p>tabbar.vim</p>
+                </li>
+                <li>
+                  <p>taghighlight</p>
+                </li>
+                <li>
+                  <p>taglist</p>
+                </li>
+                <li>
+                  <p>txtbrowser</p>
+                </li>
+                <li>
+                  <p>vcscommand</p>
+                </li>
+                <li>
+                  <p>winmanager</p>
+                </li>
+                <li>
+                  <p>zencoding</p>
+                </li>
+                <li>
+                  <p>……</p>
+                  <ul>
+                    <li><a href="../../../ftp.lug.ustc.edu.cn/_redsky/vim-scripts.tar" title="http://lug.ustc.edu.cn/~redsky/vim-scripts.tar.gz">上述插件原始文件的打包下载</a>，其实我更推荐大家到Vim官方网站上面去搜索这些插件，一边看着简介一边下载。</li>
+                  </ul>
+                </li>
+              </ul>
+              <h2 id="vim配色方案">Vim配色方案</h2>
+              <div class="language-plaintext highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>- tango2: 
+</code></pre>
+                </div>
+              </div>
+              <p><img src="../lib/images/smileys/icon_smile.gif" alt=":-)" /> 可以与终端配色一致 / <img src="../lib/images/smileys/icon_sad.gif" alt=":-(" /></p>
+              <p>深色背景下的紫色比较惨淡</p>
+              <div class="language-plaintext highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>- eclipse： 
+</code></pre>
+                </div>
+              </div>
+              <p><img src="../lib/images/smileys/icon_smile.gif" alt=":-)" /> gvim下配色接近eclipse / <img src="../lib/images/smileys/icon_sad.gif" alt=":-(" /></p>
+              <p>终端下配色不好协调</p>
+              <div class="language-plaintext highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>- solarized： 
+</code></pre>
+                </div>
+              </div>
+              <p><img src="../lib/images/smileys/icon_smile.gif" alt=":-)" /> 暖色调，可以调节背景，有配套的终端配色 / <img src="../lib/images/smileys/icon_sad.gif" alt=":-(" /></p>
+              <p>部分颜色与highlight插件配合后比较刺眼</p>
+              <div class="language-plaintext highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>- desert
+
+- wombat
+
+- vc
+
+- kate
+
+- ……
+</code></pre>
+                </div>
+              </div>
+              <h2 id="vim资源列表">Vim资源列表</h2>
+              <p><a href="../../../ftp.lug.ustc.edu.cn/_redsky/vim-config.tar" title="http://lug.ustc.edu.cn/~redsky/vim-config.tar.gz">我的Vim配置文件</a>：包括.vimrc/.gvimrc/.vim/myVim，注意前面有“.”的是隐藏文件。配置文件里面已经补上了注释。</p>
+              <p><a href="http://coolshell.cn/articles/5426.html" title="http://coolshell.cn/articles/5426.html">CoolShell：简明Vim练级攻略</a></p>
+              <p><a href="http://coolshell.cn/articles/3125.html" title="http://coolshell.cn/articles/3125.html">CoolShell：主流文本编辑器学习曲线</a></p>
+              <p><a href="http://adam8157.info/blog/2011/12/ustc-vim-speech/" title="http://adam8157.info/blog/2011/12/ustc-vim-speech/">Adam8157：在中科大关于Vim的演讲</a></p>
+              <p><a href="http://www.vimer.cn/2009/10/把vim打造成一个真正的ide1.html" title="http://www.vimer.cn/2009/10/把vim打造成一个真正的ide1.html">把vim打造成一个真正的IDE(1)</a></p>
+              <p><a href="http://www.vimer.cn/2009/10/把vim打造成一个真正的ide2.html" title="http://www.vimer.cn/2009/10/把vim打造成一个真正的ide2.html">把vim打造成一个真正的IDE(2)</a></p>
+              <p><a href="http://www.vimer.cn/2009/10/把vim打造成一个真正的ide3.html" title="http://www.vimer.cn/2009/10/把vim打造成一个真正的ide3.html">把vim打造成一个真正的IDE(3)</a></p>
+              <p><a href="http://www.vimer.cn/2010/06/本博使用的vimgvim相关插件整理.html" title="http://www.vimer.cn/2010/06/本博使用的vimgvim相关插件整理.html">Vimer(朱念洋)使用的vim/gvim相关插件整理</a></p>
+            </section>
+            <footer class="page__meta">
+              <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-08-09T15:12:14+08:00">2020 年 8 月 9 日</time></p>
+            </footer>
+            <nav class="pagination">
+              <a href="/wiki/mirrors/help/uksm-kernel/" class="pagination--pager" title="UKSM Kernel镜像使用帮助
+">上一页</a>
+              <a href="/wiki/scripts/" class="pagination--pager" title="实用脚本集锦
+">下一页</a>
+            </nav>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+        <!-- end custom footer snippets -->
+        <div class="footer-row">
+          <div class="footer-block footer__about">
+            <p>中国科学技术大学 Linux 用户协会是由中国科学技术大学在校的 GNU/Linux 爱好者发起并组成的团体，旨在联合科大的 GNU/Linux
+              使用者，搭建信息交流共享的平台，宣传自由软件的价值，提高自由软件社区文化氛围，推广自由软件的应用。</p>
+          </div>
+          <div class="footer-block footer__contact">
+            <ul>
+              <li>
+                <a href="/wiki/intro/"><i class="fas fa-fw fa-address-card"></i> 关于我们</a>
+              </li>
+              <li>
+                <a href="/wiki/lug/contact/"><i class="fas fa-fw fa-phone-alt"></i> 联系我们</a>
+              </li>
+              <li>
+                <a href="/wiki/lug/contribute/"><i class="fas fa-fw fa-users"></i> 加入我们</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-block footer__logo">
+            <img src="https://ftp.lug.ustc.edu.cn/misc/logo-white.svg" width="33%" />
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="/assets/js/main.min.js"></script>
+    <img src="https://static.beta.ustclug.org/USTC_logo.svg" style="position: fixed; bottom: -320px; left: -200px; opacity: 0.1; z-index: -100;" />
+  </body>
+</html>
