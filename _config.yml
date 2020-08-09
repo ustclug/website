@@ -282,7 +282,7 @@ defaults:
     values:
       show_date: true
       header:
-        overlay_image: https://image.ibugone.com/lug/lug-splash-1.jpg
+        overlay_image: "/static/splash/autumn-1.jpg"
         overlay_filter: 0.2
   - scope:
       read_time: true
@@ -293,5 +293,5 @@ defaults:
       show_date: true
       read_time: true
       header:
-        overlay_image: https://image.ibugone.com/lug/lug-planet-2.jpg
+        overlay_image: "/static/splash/galaxy-1.jpg"
         overlay_filter: 0.2

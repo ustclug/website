@@ -7,5 +7,5 @@ pagination:
   enabled: true
   collection: planet
 header:
-  overlay_image: https://image.ibugone.com/lug/lug-planet-2.jpg
+  overlay_image: "/static/splash/galaxy-1.jpg"
 ---
