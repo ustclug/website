@@ -20,6 +20,7 @@ body.layout--home {
 .archive-group__item {
   flex: 1 0 0;
   margin-left: gutter(of 12);
+  max-width: 100%;
 
   &:first-child {
     margin-left: 0;
