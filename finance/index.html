@@ -37,7 +37,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=da15410">
+    <link rel="stylesheet" href="/assets/css/main.css?v=1ec1ef5c">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
       <style>
@@ -105,9 +105,53 @@
     </div>
     <div class="initial-content">
       <div id="main" role="main">
+        <div class="sidebar sticky">
+          <nav class="nav__list">
+            <input id="ac-toc" name="accordion-toc" type="checkbox" />
+            <label for="ac-toc">切换菜单</label>
+            <ul class="nav__items">
+              <li>
+                <span class="nav__sub-title">LUG @ USTC</span>
+                <ul>
+                  <li><a href="/">LUG 首页</a></li>
+                  <li><a href="/news/">LUG 新闻</a></li>
+                  <li><a href="/wiki/lug/links/">友情链接</a></li>
+                  <li><a href="/wiki/server/mirrors/">开源软件镜像</a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="nav__sub-title">活动</span>
+                <ul>
+                  <li><a href="/wiki/lug/events/">LUG 活动</a></li>
+                  <li><a href="/wiki/lug/events/weeklyparty/">每周小聚</a></li>
+                  <li><a href="/wiki/lug/mailinglist/">邮件列表</a></li>
+                  <li><a href="/wiki/lug/book/">LUG 书库</a></li>
+                  <li><a href="/finance/" class="active">LUG 财务</a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="nav__sub-title">联系</span>
+                <ul>
+                  <li><a href="/wiki/lug/person-in-charge/">LUG 负责人</a></li>
+                  <li><a href="/wiki/lug/contact/">联系我们</a></li>
+                  <li><a href="/wiki/lug/contribute/">加入我们</a></li>
+                  <li><a href="/wiki/lug/finance/donate/">捐赠我们</a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="nav__sub-title">资源</span>
+                <ul>
+                  <li><a href="/wiki/linux_digest/">Linux 文摘</a></li>
+                  <li><a href="/wiki/lug/resources/">资源导航</a></li>
+                  <li><a href="https://servers.ustclug.org/">服务器新闻</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
         <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
           <meta itemprop="headline" content="财务报告">
-          <meta itemprop="dateModified" content="2020-08-08T18:44:15+08:00">
+          <meta itemprop="dateModified" content="2020-08-09T16:58:43+08:00">
           <div class="page__inner-wrap">
             <header>
               <h1 id="page-title" class="page__title" itemprop="headline">财务报告
@@ -127,20 +171,14 @@
                 </nav>
               </aside>
               <style>
-                thead {
-                    text-align: center !important;
-                }
-                
-                .amount {
-                    text-align: right;
-                }
+                thead { text-align: center !important; } .amount { text-align: right; }
               </style>
               <article id="donates">
                 <h2><a href="#donates">捐赠记录</a></h2>
                 <p>
-                  捐赠方式请见 <a href="https://lug.ustc.edu.cn/wiki/lug/finance/donate">LUG 官网</a>。
+                  捐赠方式请见 <a href="/wiki/lug/finance/donate">LUG 官网</a>。
                   本表记载 2018 年换届后的捐赠记录，根据 LUG 电子账册自动生成。
-                  之前的记录见<a href="https://lug.ustc.edu.cn/wiki/lug/finance/donate_log">历史存档</a>。
+                  之前的记录见<a href="/wiki/lug/finance/donate_log">历史存档</a>。
                 </p>
                 <div>
                   <table class="pure-table pure-table-horizontal">
@@ -172,7 +210,7 @@
                 <h2><a href="#servicefunds">服务器维护专款</a></h2>
                 <p>
                   本表记载 2018 年换届后的服务器维护专款收支记录，根据 LUG 电子账册自动生成。
-                  之前的记录见<a href="https://lug.ustc.edu.cn/wiki/lug/finance/start">历史存档</a>。
+                  之前的记录见<a href="/wiki/lug/finance">历史存档</a>。
                   由于换届前的服务器维护专款支出情况记载不明，在此将 2018 年换届时的所有捐款余额均记为服务器维护专款。
                 </p>
                 <div>
@@ -203,7 +241,7 @@
                 <h2><a href="#generalfunds">通用经费</a></h2>
                 <p>
                   本表记载 2018 年换届后的通用经费收支记录，根据 LUG 电子账册自动生成。
-                  之前的记录见<a href="https://lug.ustc.edu.cn/wiki/lug/finance/start">历史存档</a>。
+                  之前的记录见<a href="/wiki/lug/finance">历史存档</a>。
                 </p>
                 <div>
                   <table class="pure-table pure-table-horizontal">
@@ -313,7 +351,7 @@
               </script>
             </section>
             <footer class="page__meta">
-              <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-08-08">2020 年 8 月 8 日</time></p>
+              <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-08-09">2020 年 8 月 9 日</time></p>
             </footer>
           </div>
         </article>
