@@ -18,7 +18,7 @@
     <meta property="og:title" content="lftp">
     <meta property="og:url" content="https://beta.ustclug.org//wiki/linux_digest/lftp/">
     <meta property="og:description" content="lftp">
-    <meta property="article:published_time" content="2020-08-09T18:04:08+08:00">
+    <meta property="article:published_time" content="2020-08-09T18:32:50+08:00">
     <link rel="canonical" href="https://beta.ustclug.org//wiki/linux_digest/lftp/">
     <script type="application/ld+json">
       {
@@ -38,7 +38,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=c60f23f9">
+    <link rel="stylesheet" href="/assets/css/main.css?v=43cfd7ce">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
       <style>
@@ -153,7 +153,7 @@
         <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
           <meta itemprop="headline" content="lftp">
           <meta itemprop="description" content="lftp">
-          <meta itemprop="datePublished" content="2020-08-09T18:04:08+08:00">
+          <meta itemprop="datePublished" content="2020-08-09T18:32:50+08:00">
           <div class="page__inner-wrap">
             <header>
               <h1 id="page-title" class="page__title" itemprop="headline">lftp
@@ -177,7 +177,7 @@
               <h2 id="常用命令">常用命令</h2>
               <h2 id="配置文件">配置文件</h2>
               <p>lftp启动后会一次读取/etc/lftp.conf、~/.lftprc和~/.lftp/rc。 通常我们将常用的设置写入~/.lftprc或者~/.lftp/rc中。 下面是一份lftprc的样例：</p>
-              <p><a href="../_export/code/linux_digest/435f.lftprc?codeblock=0" title="下载片段">.lftprc</a></p>
+              <p><a href="/wiki/_export/code/linux_digest/435f.lftprc?codeblock=0" title="下载片段">.lftprc</a></p>
               <div class="language-plaintext highlighter-rouge">
                 <div class="highlight">
                   <pre class="highlight"><code>#在浏览GBK编码的ftp时，可以执行gbkserver命令迅速切换。
@@ -231,14 +231,14 @@ set ftp:charset/202.38.64.22 gbk
               <p><img src="../lib/images/smileys/icon_smile.gif" alt=":-)" /></p>
               <h2 id="奇巧淫技-使用lftp同步个人主页">奇巧淫技-使用lftp同步个人主页</h2>
               <p>科大的童鞋们都有一个300M的静态主页空间，很多人都会用这个空间来制作漂亮的个人主页，那你是怎么同步的呢？是不是每次都需要打开nautilus或者filezilla等工具一个个文件的复制呢？ 来看看用lftp的脚本同步吧。</p>
-              <p><a href="../_export/code/linux_digest/cc37.bash_aliases?codeblock=1" title="下载片段">.bash_aliases</a></p>
+              <p><a href="/wiki/_export/code/linux_digest/cc37.bash_aliases?codeblock=1" title="下载片段">.bash_aliases</a></p>
               <div class="language-plaintext highlighter-rouge">
                 <div class="highlight">
                   <pre class="highlight"><code>alias update-homepage='lftp -f ~/.bin/update-homepage.lftp'
 </code></pre>
                 </div>
               </div>
-              <p><a href="../_export/code/linux_digest/update-homepagec273.lftp?codeblock=2" title="下载片段">update-homepage.lftp</a></p>
+              <p><a href="/wiki/_export/code/linux_digest/update-homepagec273.lftp?codeblock=2" title="下载片段">update-homepage.lftp</a></p>
               <div class="language-plaintext highlighter-rouge">
                 <div class="highlight">
                   <pre class="highlight"><code>connect home.ustc.edu.cn
@@ -256,11 +256,11 @@ mirror -R -e ~/public_html public_html --exclude book/ --exclude bak/
 </code></pre>
                 </div>
               </div>
-              <p>即可完成同步工作。也可将lftp -f ~/.bin/update-homepage.lftp这条命令写入<a href="../linux/crontab" title="linux:crontab">crontab</a>，每天自动同步。</p>
+              <p>即可完成同步工作。也可将lftp -f ~/.bin/update-homepage.lftp这条命令写入<a href="/wiki/linux/crontab" title="linux:crontab">crontab</a>，每天自动同步。</p>
               <p>你需要登录发表评论。</p>
             </section>
             <footer class="page__meta">
-              <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-08-09T18:04:08+08:00">2020 年 8 月 9 日</time></p>
+              <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-08-09T18:32:50+08:00">2020 年 8 月 9 日</time></p>
             </footer>
             <nav class="pagination">
               <a href="/wiki/linux_digest/expasy-ps_scan/" class="pagination--pager" title="ExPASy的ps_scan在linux下的简明配置指南

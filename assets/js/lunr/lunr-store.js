@@ -702,7 +702,7 @@ var store = [{
 "teaser": null
 },{
 "title": "开源镜像使用帮助列表",
-"excerpt":"此处的帮助文档即将废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/ 反向代理 使用帮助 桌面环境镜像 KDE 镜像使用帮助 语言镜像 CPAN 镜像使用帮助 CRAN 镜像使用帮助 CTAN 镜像使用帮助 CTeX 套装使用帮助 npm 镜像使用帮助 PyPI 镜像使用帮助 Rust Crates 镜像使用帮助 Rust 静态文件镜像使用帮助 软件镜像 Docker 镜像使用帮助 Eclipse 镜像使用帮助 Kodi(XBMC) 镜像使用帮助 Infinality 镜像使用帮助 Homebrew Bottles 镜像使用帮助 Git 仓库镜像 Android (AOSP) 镜像使用帮助 Linux 内核镜像使用帮助 Homebrew Git仓库镜像使用帮助 发行版镜像 AOSC OS 镜像使用帮助...","categories": [],
+"excerpt":"此处的帮助文档即将废弃，新的内容请访问 https://mirrors.ustc.edu.cn/ 反向代理 使用帮助 桌面环境镜像 KDE 镜像使用帮助 语言镜像 CPAN 镜像使用帮助 CRAN 镜像使用帮助 CTAN 镜像使用帮助 CTeX 套装使用帮助 npm 镜像使用帮助 PyPI 镜像使用帮助 Rust Crates 镜像使用帮助 Rust 静态文件镜像使用帮助 软件镜像 Docker 镜像使用帮助 Eclipse 镜像使用帮助 Kodi(XBMC) 镜像使用帮助 Infinality 镜像使用帮助 Homebrew Bottles 镜像使用帮助 Git 仓库镜像 Android (AOSP) 镜像使用帮助 Linux 内核镜像使用帮助 Homebrew Git仓库镜像使用帮助 发行版镜像 AOSC OS 镜像使用帮助...","categories": [],
 "tags": [],
 "url": "https://beta.ustclug.org//wiki/mirrors/help/",
 "teaser": null

@@ -18,7 +18,7 @@
     <meta property="og:title" content="1.2 Xen简介">
     <meta property="og:url" content="https://beta.ustclug.org//wiki/greenwarm/xen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8/">
     <meta property="og:description" content="1.2 Xen简介">
-    <meta property="article:published_time" content="2020-08-09T18:04:08+08:00">
+    <meta property="article:published_time" content="2020-08-09T18:32:50+08:00">
     <link rel="canonical" href="https://beta.ustclug.org//wiki/greenwarm/xen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8/">
     <script type="application/ld+json">
       {
@@ -38,7 +38,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=c60f23f9">
+    <link rel="stylesheet" href="/assets/css/main.css?v=43cfd7ce">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
       <style>
@@ -153,7 +153,7 @@
         <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
           <meta itemprop="headline" content="1.2 Xen简介">
           <meta itemprop="description" content="1.2 Xen简介">
-          <meta itemprop="datePublished" content="2020-08-09T18:04:08+08:00">
+          <meta itemprop="datePublished" content="2020-08-09T18:32:50+08:00">
           <div class="page__inner-wrap">
             <header>
               <h1 id="page-title" class="page__title" itemprop="headline">1.2 Xen简介
@@ -184,7 +184,7 @@
                 </nav>
               </aside>
               <p>Xen 是在剑桥大学作为一个研究项目被开发出来的，它已经在开源社区中得到了极大的推动。Xen 是一款 半虚拟化（paravirtualizing） VMM（虚拟机监视器，Virtual Machine Monitor）， 这表示，为了调用系统管理程序，要有选择地修改操作系统，然而却不需要修改操作系统上运行的应用程序。 虽然 VMWare 等其他虚拟化系统实现了完全的虚拟化（它们不必修改使用中的操作系统），但它们仍需要进行实时的机器代码翻译，这会影响性能。 由于 Xen 需要修改操作系统内核，所以您不能直接让当前的 Linux 内核在 Xen 系统管理程序中运行，除非它已经 移植到了 Xen 架构。不过，如果当前系统可以使用新的已经移植到 Xen 架构的 Linux 内核，那么 您就可以不加修改地运行现有的系统。</p>
-              <p><a href="../_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-182c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-1.jpg"><img src="../_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-1.html" alt="" /></a> 图 1-1 简单的 Xen 架构 Xen 是一个开放源代码的para-virtualizing虚拟机（VMM）或“管理程序 ”，是为x86架构的机器而设计的。Xen 可以在 一套物理硬件上安全的执行多个虚拟机。</p>
+              <p><a href="/wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-182c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-1.jpg"><img src="/wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-1.html" alt="" /></a> 图 1-1 简单的 Xen 架构 Xen 是一个开放源代码的para-virtualizing虚拟机（VMM）或“管理程序 ”，是为x86架构的机器而设计的。Xen 可以在 一套物理硬件上安全的执行多个虚拟机。</p>
               <h2 id="121-硬件支持">1.2.1 硬件支持</h2>
               <p>目前运行在x86架构的 机器上，需要P6或更新的处理器（比如 Pentium Pro, Celeron, Pentium II, Pentium III, Pentium IV, Xeon, AMD Athlon, AMD Duron)。支 持多 处理器，并且支持超线程（SMT）。另外对IA64和Power架构的开发也在进行中。 32位Xen支持最大4GB内存。可是Xen 3.0 为Intel处理器物理指令集(PAE)提供支持，这样就能使x86/32架构的机器支持到64GB的物理内存。Xen 3.0也能支持x86/64 平台支持，比如 Intel EM64T 和AMD Opteron能支持1TB的物理 内存以上。</p>
               <h2 id="122-基于xen的系统架构">1.2.2 基于Xen的系统架构</h2>
@@ -489,30 +489,30 @@ nfs_root = '/path/to/root'	# NFS服务器文件系统路径
                 </div>
               </div>
               <p>对以上问题作出相应的回答以后，接下来的GTES11虚拟机安装就变得很容易了。如果选择支持图形方式，一个VNC窗口就会弹出来，如下图所示。</p>
-              <p><a href="../_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-282c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-2.jpg"><img src="../_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-2.html" alt="" /></a> 图 1-2 图形方式下选择安装语言 然后和普通图形安装方式类似，对语言，网络等配置以后，就会出现一个欢迎界面。如下图所示。</p>
-              <p><a href="../_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-382c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-3.jpg"><img src="../_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-3.html" alt="" /></a> 1-3 图形方式下欢迎界面 如果没有选择图形方式，就是标准的文本安装GTES11。如下图所示。</p>
-              <p><a href="../_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-482c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-4.jpg"><img src="../_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-4.html" alt="" /></a> 图 1-4 文本方式下选择安装语言 然后和普通安装文本方式类似，对语言，网络等配置以后，就会出现一个欢迎界面。如下图所示。</p>
-              <p><a href="../_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-582c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-5.jpg"><img src="../_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-5.html" alt="" /></a> 1-5 文本方式下欢迎界面 接下来的GTES11虚拟机安装跟普通文本方式安装GTES11没有什么两样。</p>
+              <p><a href="/wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-282c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-2.jpg"><img src="/wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-2.html" alt="" /></a> 图 1-2 图形方式下选择安装语言 然后和普通图形安装方式类似，对语言，网络等配置以后，就会出现一个欢迎界面。如下图所示。</p>
+              <p><a href="/wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-382c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-3.jpg"><img src="/wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-3.html" alt="" /></a> 1-3 图形方式下欢迎界面 如果没有选择图形方式，就是标准的文本安装GTES11。如下图所示。</p>
+              <p><a href="/wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-482c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-4.jpg"><img src="/wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-4.html" alt="" /></a> 图 1-4 文本方式下选择安装语言 然后和普通安装文本方式类似，对语言，网络等配置以后，就会出现一个欢迎界面。如下图所示。</p>
+              <p><a href="/wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-582c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-5.jpg"><img src="/wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-5.html" alt="" /></a> 1-5 文本方式下欢迎界面 接下来的GTES11虚拟机安装跟普通文本方式安装GTES11没有什么两样。</p>
               <h2 id="172-使用virt-manager安装虚拟机">1.7.2 使用“virt-manager”安装虚拟机</h2>
               <p>使用“virt-manager”来安装GTES11虚拟机，请执行以下命令： /usr/sbin/virt-manager 或者通过“应用程序→系统工具”来选择“Virtual Machine Manager”。</p>
-              <p><a href="../_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-682c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-6.jpg"><img src="../_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-6.html" alt="" /></a> 1-6 连接到本地Xen宿主 点击“连接”按钮，出现虚拟系统管理主窗口。如下图所示。</p>
-              <p><a href="../_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-782c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-7.jpg"><img src="../_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-7.html" alt="" /></a> 1-7 虚拟系统管理 点击“新建”按钮，出现创建新的虚拟系统主窗口。如下图所示。</p>
-              <p><a href="../_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-882c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-8.jpg"><img src="../_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-8.html" alt="" /></a> 1-8 创建新的虚拟系统主窗口 点击“前进”按钮。</p>
-              <p><a href="../_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-982c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-9.jpg"><img src="../_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-9.html" alt="" /></a> 1-9 为虚拟系统命名 命名新的虚拟机，然后点击“前进”按钮。</p>
-              <p><a href="../_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-1082c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-10.jpg"><img src="../_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-10.html" alt="" /></a> 1-10 选择虚拟化方式 选择虚拟化方式，然后点击“前进”按钮。</p>
-              <p><a href="../_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-1182c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-11.jpg"><img src="../_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-11.html" alt="" /></a> 1-11 定位安装介质 指定GTES11安装镜像所在位置，支持NFS, HTTP, FTP三种方式。 还可以指定Kickstart文件位置。 然后点击“前进”按钮。</p>
-              <p><a href="../_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-1282c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-12.jpg"><img src="../_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-12.html" alt="" /></a> 1-12 分配存储空间 为新的GTES11虚拟机分配存储空间，可以选择物理磁盘分区或者文件。 然后点击“前进”按钮。</p>
-              <p><a href="../_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-1382c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-13.jpg"><img src="../_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-13.html" alt="" /></a> 1-13 分配内存大小及CPU个数 为新的GTES11虚拟机分配内存大小以及CPU个数。 然后点击“前进”按钮。</p>
-              <p><a href="../_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-1482c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-14.jpg"><img src="../_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-14.html" alt="" /></a> 1-14 虚拟机配置 确认配置无误后，点击“结束”按钮。</p>
-              <p><a href="../_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-1582c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-15.jpg"><img src="../_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-15.html" alt="" /></a> 1-15 创建虚拟机 等虚拟机所需文件或者物理空间创建完毕以后，接下来的GTES11虚拟机安装跟普通图形方式安装GTES11类似。</p>
-              <p><a href="../_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-1682c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-16.jpg"><img src="../_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-16.html" alt="" /></a> 1-16 选择安装语言 然后和普通图形安装方式类似，对语言，网络等配置以后，就会出现一个欢迎界面。 接下来的GTES11虚拟机安装就变得很容易了。</p>
+              <p><a href="/wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-682c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-6.jpg"><img src="/wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-6.html" alt="" /></a> 1-6 连接到本地Xen宿主 点击“连接”按钮，出现虚拟系统管理主窗口。如下图所示。</p>
+              <p><a href="/wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-782c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-7.jpg"><img src="/wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-7.html" alt="" /></a> 1-7 虚拟系统管理 点击“新建”按钮，出现创建新的虚拟系统主窗口。如下图所示。</p>
+              <p><a href="/wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-882c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-8.jpg"><img src="/wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-8.html" alt="" /></a> 1-8 创建新的虚拟系统主窗口 点击“前进”按钮。</p>
+              <p><a href="/wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-982c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-9.jpg"><img src="/wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-9.html" alt="" /></a> 1-9 为虚拟系统命名 命名新的虚拟机，然后点击“前进”按钮。</p>
+              <p><a href="/wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-1082c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-10.jpg"><img src="/wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-10.html" alt="" /></a> 1-10 选择虚拟化方式 选择虚拟化方式，然后点击“前进”按钮。</p>
+              <p><a href="/wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-1182c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-11.jpg"><img src="/wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-11.html" alt="" /></a> 1-11 定位安装介质 指定GTES11安装镜像所在位置，支持NFS, HTTP, FTP三种方式。 还可以指定Kickstart文件位置。 然后点击“前进”按钮。</p>
+              <p><a href="/wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-1282c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-12.jpg"><img src="/wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-12.html" alt="" /></a> 1-12 分配存储空间 为新的GTES11虚拟机分配存储空间，可以选择物理磁盘分区或者文件。 然后点击“前进”按钮。</p>
+              <p><a href="/wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-1382c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-13.jpg"><img src="/wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-13.html" alt="" /></a> 1-13 分配内存大小及CPU个数 为新的GTES11虚拟机分配内存大小以及CPU个数。 然后点击“前进”按钮。</p>
+              <p><a href="/wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-1482c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-14.jpg"><img src="/wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-14.html" alt="" /></a> 1-14 虚拟机配置 确认配置无误后，点击“结束”按钮。</p>
+              <p><a href="/wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-1582c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-15.jpg"><img src="/wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-15.html" alt="" /></a> 1-15 创建虚拟机 等虚拟机所需文件或者物理空间创建完毕以后，接下来的GTES11虚拟机安装跟普通图形方式安装GTES11类似。</p>
+              <p><a href="/wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-1682c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-16.jpg"><img src="/wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-16.html" alt="" /></a> 1-16 选择安装语言 然后和普通图形安装方式类似，对语言，网络等配置以后，就会出现一个欢迎界面。 接下来的GTES11虚拟机安装就变得很容易了。</p>
               <h2 id="173-使用virt-manager管理虚拟机">1.7.3 使用“virt-manager”管理虚拟机</h2>
               <p>使用“virt-manager”来管理GTES11虚拟机，请执行以下命令： /usr/sbin/virt-manager 或者通过“应用程序→系统工具”来选择“Virtual Machine Manager”。</p>
-              <p><a href="../_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-1782c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-17.jpg"><img src="../_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-17.html" alt="" /></a> 1-17 连接到本地Xen宿主 点击“连接”按钮，出现虚拟系统管理主窗口。如下图所示。</p>
-              <p><a href="../_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-1882c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-18.jpg"><img src="../_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-18.html" alt="" /></a> 1-18 虚拟系统管理 然后就可以在图形方式下对虚拟机进行管理了。关于virt-manager的详细用法，请参阅相关项目文档。</p>
+              <p><a href="/wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-1782c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-17.jpg"><img src="/wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-17.html" alt="" /></a> 1-17 连接到本地Xen宿主 点击“连接”按钮，出现虚拟系统管理主窗口。如下图所示。</p>
+              <p><a href="/wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-1882c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-18.jpg"><img src="/wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-18.html" alt="" /></a> 1-18 虚拟系统管理 然后就可以在图形方式下对虚拟机进行管理了。关于virt-manager的详细用法，请参阅相关项目文档。</p>
             </section>
             <footer class="page__meta">
-              <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-08-09T18:04:08+08:00">2020 年 8 月 9 日</time></p>
+              <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-08-09T18:32:50+08:00">2020 年 8 月 9 日</time></p>
             </footer>
             <nav class="pagination">
               <a href="/wiki/greenwarm/virtualization/" class="pagination--pager" title="虚拟化简介
