@@ -11,7 +11,7 @@
 
   3. 强烈建议将读书笔记记录在本 wiki 上，这样便于自己更改和管理。
 
-  + 更多文章，请访问 [Linux 文摘](../../linux_digest "linux_digest:start")
+  + 更多文章，请访问 [Linux 文摘](/wiki/linux_digest "linux_digest:start")
 
 * * *
 
