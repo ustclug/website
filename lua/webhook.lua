@@ -1,16 +1,19 @@
 if ngx.req.get_method() ~= "POST" then
-    ngx.exit(ngx.HTTP_METHOD_NOT_ALLOWED)
+    ngx.exit(ngx.HTTP_BAD_REQUEST)
 end
 
-local map = {
+local hookmap = {
     html = {"WEBHOOK_SECRET_HTML", "gh-pages", "/var/www/html"},
     static = {"WEBHOOK_SECRET_STATIC", "master", "/var/www/static"}
 }
 
-local hook = string.sub(ngx.var.uri, 1, string.len("/_webhook/github/"))
-local envvar = map[hook][1]
-local ref = map[hook][2]
-local path = map[hook][3]
+local hookname = string.sub(ngx.var.uri, 1 + string.len("/_webhook/github/"))
+if hookmap[hookname] == nil then
+    ngx.exit(ngx.HTTP_NOT_FOUND)
+end
+local envvar = hookmap[hookname][1]
+local ref = hookmap[hookname][2]
+local path = hookmap[hookname][3]
 
 signature = ngx.req.get_headers()["X-Hub-Signature"]
 
