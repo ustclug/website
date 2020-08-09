@@ -39,7 +39,7 @@ if data == nil then
 end
 
 local str = require "resty.string"
-local hmac = str.to_hex(ngx.hmac_sha1(os.getenv('GITHUB_WEBHOOK_SECRET'), data))
+local hmac = str.to_hex(ngx.hmac_sha1(os.getenv(envvar), data))
 
 if hmac ~= signature then
     ngx.status = 403
