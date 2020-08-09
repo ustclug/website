@@ -54,5 +54,5 @@ if body_json["ref"] ~= "refs/heads/" .. ref then
     ngx.exit(ngx.HTTP_OK)
 end
 
-os.execute("cd '" .. path .. "'; git fetch --depth=1 \"$(git rev-parse --abbrev-ref --symbolic-full-name '@{u}')\" && git reset --hard FETCH_HEAD && git reflog expire --expire=all --all && git gc --prune=all")
+os.execute("cd '" .. path .. "'; git fetch --depth=1 $(git rev-parse --abbrev-ref --symbolic-full-name '@{u}' | sed 's,/, ,1') && git reset --hard FETCH_HEAD && git reflog expire --expire=all --all && git gc --prune=all")
 ngx.say("OK")
