@@ -1,5 +1,5 @@
 ---
-title: "LUG @ USTC 新闻"
+title: "LUG 新闻"
 permalink: /news/
 layout: home
 pagination:
