@@ -16,17 +16,17 @@
     <meta property="og:locale" content="zh_CN">
     <meta property="og:site_name" content="LUG @ USTC">
     <meta property="og:title" content="Fedora镜像使用帮助">
-    <meta property="og:url" content="https://beta.ustclug.org//wiki/mirrors/help/fedora/">
+    <meta property="og:url" content="https://lug.ustc.edu.cn//wiki/mirrors/help/fedora/">
     <meta property="og:description" content="Fedora镜像使用帮助">
-    <meta property="article:published_time" content="2020-08-09T19:48:07+08:00">
-    <link rel="canonical" href="https://beta.ustclug.org//wiki/mirrors/help/fedora/">
+    <meta property="article:published_time" content="2020-08-09T20:34:04+08:00">
+    <link rel="canonical" href="https://lug.ustc.edu.cn//wiki/mirrors/help/fedora/">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
       
           "@type": "Person",
           "name": "USTCLUG",
-          "url": "https://beta.ustclug.org//"
+          "url": "https://lug.ustc.edu.cn//"
       
       }
     </script>
@@ -38,7 +38,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=7a8bb2a2">
+    <link rel="stylesheet" href="/assets/css/main.css?v=c6058eac">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
       <style>
@@ -95,6 +95,12 @@
                 <a href="https://mirrors.ustc.edu.cn/">Mirrors</a>
               </li>
             </ul>
+            <button class="search__toggle" type="button">
+              <span class="visually-hidden">切换搜索</span>
+              <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+                <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+              </svg>
+            </button>
             <button class="greedy-nav__toggle hidden" type="button">
               <span class="visually-hidden">切换菜单</span>
               <div class="navicon"></div>
@@ -153,7 +159,7 @@
         <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
           <meta itemprop="headline" content="Fedora镜像使用帮助">
           <meta itemprop="description" content="Fedora镜像使用帮助">
-          <meta itemprop="datePublished" content="2020-08-09T19:48:07+08:00">
+          <meta itemprop="datePublished" content="2020-08-09T20:34:04+08:00">
           <div class="page__inner-wrap">
             <header>
               <h1 id="page-title" class="page__title" itemprop="headline">Fedora镜像使用帮助
@@ -280,7 +286,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch
                 镜像列表: <a href="http://mirrors.fedoraproject.org/publiclist">http://mirrors.fedoraproject.org/publiclist</a></p>
             </section>
             <footer class="page__meta">
-              <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-08-09T19:48:07+08:00">2020 年 8 月 9 日</time></p>
+              <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-08-09T20:34:04+08:00">2020 年 8 月 9 日</time></p>
             </footer>
             <nav class="pagination">
               <a href="/wiki/mirrors/help/epel/" class="pagination--pager" title="EPEL镜像使用帮助
@@ -290,6 +296,17 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch
             </nav>
           </div>
         </article>
+      </div>
+    </div>
+    <div class="search-content">
+      <div class="search-content__inner-wrap">
+        <form class="search-content__form" onkeydown="return event.key != 'Enter';">
+          <label class="sr-only" for="search">
+            输入您要搜索的关键词...
+          </label>
+          <input type="search" id="search" class="search-input" tabindex="-1" placeholder="输入您要搜索的关键词..." />
+        </form>
+        <div id="results" class="results"></div>
       </div>
     </div>
     <div id="footer" class="page__footer">
@@ -321,6 +338,9 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch
       </footer>
     </div>
     <script src="/assets/js/main.min.js"></script>
-    <img src="https://static.beta.ustclug.org/USTC_logo.svg" style="position: fixed; bottom: -320px; left: -200px; opacity: 0.1; z-index: -100;" />
+    <script src="/assets/js/lunr/lunr.min.js"></script>
+    <script src="/assets/js/lunr/lunr-store.js"></script>
+    <script src="/assets/js/lunr/lunr-en.js"></script>
+    <img src="https://lug.ustc.edu.cn/static/USTC_logo.svg" style="position: fixed; bottom: -320px; left: -200px; opacity: 0.1; z-index: -100;" />
   </body>
 </html>

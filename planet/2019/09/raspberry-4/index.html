@@ -16,18 +16,18 @@
     <meta property="og:locale" content="zh_CN">
     <meta property="og:site_name" content="LUG @ USTC">
     <meta property="og:title" content="【译稿】树莓派 4 评测与基准测试：与树莓派 3B+ 相比的改进">
-    <meta property="og:url" content="https://beta.ustclug.org//planet/2019/09/raspberry-4/">
+    <meta property="og:url" content="https://lug.ustc.edu.cn//planet/2019/09/raspberry-4/">
     <meta property="og:description" content="原文地址：https://ibugone.com/blog/2019/09/raspberry-pi-4-review-benchmark/，作者为 @iBug 同学。以下为翻译部分。">
     <meta property="og:image" content="https://image.ibugone.com/lug/lug-planet-2.jpg">
     <meta property="article:published_time" content="2019-09-17T00:00:00+08:00">
-    <link rel="canonical" href="https://beta.ustclug.org//planet/2019/09/raspberry-4/">
+    <link rel="canonical" href="https://lug.ustc.edu.cn//planet/2019/09/raspberry-4/">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
       
           "@type": "Person",
           "name": "USTCLUG",
-          "url": "https://beta.ustclug.org//"
+          "url": "https://lug.ustc.edu.cn//"
       
       }
     </script>
@@ -39,7 +39,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=7a8bb2a2">
+    <link rel="stylesheet" href="/assets/css/main.css?v=c6058eac">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
       <style>
@@ -96,6 +96,12 @@
                 <a href="https://mirrors.ustc.edu.cn/">Mirrors</a>
               </li>
             </ul>
+            <button class="search__toggle" type="button">
+              <span class="visually-hidden">切换搜索</span>
+              <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+                <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+              </svg>
+            </button>
             <button class="greedy-nav__toggle hidden" type="button">
               <span class="visually-hidden">切换菜单</span>
               <div class="navicon"></div>
@@ -192,27 +198,27 @@
               <p>就让我们来看一看吧。</p>
               <h2 id="概览">概览</h2>
               <figure class="third ">
-                <a href="https://static.beta.ustclug.org/planet/box.jpg" title="Package of Raspberry Pi 4">
-                  <img src="https://static.beta.ustclug.org/planet/box.jpg" alt="Package of Raspberry Pi 4" />
+                <a href="/static/planet/box.jpg" title="Package of Raspberry Pi 4">
+                  <img src="/static/planet/box.jpg" alt="Package of Raspberry Pi 4" />
                 </a>
-                <a href="https://static.beta.ustclug.org/planet/box-bottom.jpg" title="Bottom of the package">
-                  <img src="https://static.beta.ustclug.org/planet/box-bottom.jpg" alt="Bottom of the package" />
+                <a href="/static/planet/box-bottom.jpg" title="Bottom of the package">
+                  <img src="/static/planet/box-bottom.jpg" alt="Bottom of the package" />
                 </a>
-                <a href="https://static.beta.ustclug.org/planet/box-open-1024x768.jpg" title="Opening the package">
-                  <img src="https://static.beta.ustclug.org/planet/box-open-1024x768.jpg" alt="The package is open" />
+                <a href="/static/planet/box-open-1024x768.jpg" title="Opening the package">
+                  <img src="/static/planet/box-open-1024x768.jpg" alt="The package is open" />
                 </a>
               </figure>
               <p>新的树莓派 4 装在了类似 3B+ 的包装中，包装正面是树莓派 4 的红底白线的结构图，与本体大小相同。与树莓派 3B 不同的是，3B+ 和 4 都没有用防静电袋包好。当然，这不是什么问题。</p>
               <p>它的结构与前几代类似，不过有一些明显的变化。比如说，你肯定会最先注意到那几个 USB 3.0 接口——因为它们是蓝色的。在你观察那几个接口的同时，你很可能也注意到了，有可能是因为千兆网口的升级的缘故，以太网接口换了位置。</p>
               <figure class="third ">
-                <a href="https://static.beta.ustclug.org/planet/overview.jpg" title="Overview of Raspberry Pi 4">
-                  <img src="https://static.beta.ustclug.org/planet/overview.jpg" alt="Overview of Raspberry Pi 4" />
+                <a href="/static/planet/overview.jpg" title="Overview of Raspberry Pi 4">
+                  <img src="/static/planet/overview.jpg" alt="Overview of Raspberry Pi 4" />
                 </a>
-                <a href="https://static.beta.ustclug.org/planet/overview-usb.jpg" title="The USB ports and the Ethernet port">
-                  <img src="https://static.beta.ustclug.org/planet/overview-usb.jpg" alt="Raspberry Pi 4 on top of the box, showing the USB ports and the Ethernet port" />
+                <a href="/static/planet/overview-usb.jpg" title="The USB ports and the Ethernet port">
+                  <img src="/static/planet/overview-usb.jpg" alt="Raspberry Pi 4 on top of the box, showing the USB ports and the Ethernet port" />
                 </a>
-                <a href="https://static.beta.ustclug.org/planet/overview-side-ports.jpg" title="The USB Type-C port and the HDMI ports">
-                  <img src="https://static.beta.ustclug.org/planet/overview-side-ports.jpg" alt="Focusing on the USB Type-C port and the HDMI ports" />
+                <a href="/static/planet/overview-side-ports.jpg" title="The USB Type-C port and the HDMI ports">
+                  <img src="/static/planet/overview-side-ports.jpg" alt="Focusing on the USB Type-C port and the HDMI ports" />
                 </a>
               </figure>
               <p>有一些小接口，即供电口和视频输出，也有一些变化。树莓派 4 现在需要一根 Type-C 线供电，并且需求提升到了 5V / 3A。目前尚且不知树莓派 4 是否支持类似于高通快充或者 USB PD 这样的快充技术，但是从用户反馈来看，是没有的。旧款上标准大小的 HDMI 也被 micro-HDMI 口替换——而且变成了两个：它们都支持 4K 60fps 输出，而且可以同时输出！尽管我打算把树莓派当无头（无显示的）服务器来用，用树莓派配桌面环境的人可能会喜欢这个特性。</p>
@@ -294,8 +300,8 @@
               <p>在我买到 3B+ 之后，我就把 3B 卖（给了译者），所以那个树莓派 3B 就没法参与接下来的评测了。（译者注：那个 3B 现在被我放在家里吃灰……对不起……）</p>
               <h2 id="我的设置">我的设置</h2>
               <figure class=" ">
-                <a href="https://static.beta.ustclug.org/planet/rpis-powered.jpg" title="Both Raspberry Pis, powered through their GPIO pins">
-                  <img src="https://static.beta.ustclug.org/planet/rpis-powered.jpg" alt="Both Raspberry Pis, powered through their GPIO pins" />
+                <a href="/static/planet/rpis-powered.jpg" title="Both Raspberry Pis, powered through their GPIO pins">
+                  <img src="/static/planet/rpis-powered.jpg" alt="Both Raspberry Pis, powered through their GPIO pins" />
                 </a>
               </figure>
               <p>正如你看到的那样，两个树莓派都是无头的服务器，只连接了电源和以太网。你可能在疑惑，为什么它们看起来这么诡异，这是因为我所在的实验室有很多标称 5V / 6A 的电源供应线，所以我就拿了一个来通过 GPIO 给这两个树莓派供电。这两个树莓派峰值标称 5V / 2.5A 和 5V / 3A，所以一根供电线就够了。</p>
@@ -316,7 +322,7 @@ sysbench <span class="nt">--test</span><span class="o">=</span>cpu <span class="
                 </div>
               </div>
               <figure class="">
-                <img src="https://static.beta.ustclug.org/planet/sysbench-cpu.png" alt="" />
+                <img src="/static/planet/sysbench-cpu.png" alt="" />
                 <figcaption>
                   SysBench CPU 性能，单位为秒，越低越好
                 </figcaption>
@@ -335,7 +341,7 @@ sysbench <span class="nt">--test</span><span class="o">=</span>memory <span clas
                 </div>
               </div>
               <figure class="">
-                <img src="https://static.beta.ustclug.org/planet/sysbench-memory.png" alt="" />
+                <img src="/static/planet/sysbench-memory.png" alt="" />
                 <figcaption>
                   SysBench 内存性能，单位为每秒指令数，越高越好
                 </figcaption>
@@ -345,7 +351,7 @@ sysbench <span class="nt">--test</span><span class="o">=</span>memory <span clas
               <h3 id="fio-microsd-卡速度测试">FIO microSD 卡速度测试</h3>
               <p>此测试结果依赖于 microSD 卡本身，所以我拿出了我拥有的最快的 SD 卡：Lexar 667x 128 GB microSD 卡，外观类似下面这张图：</p>
               <figure class="">
-                <img src="https://static.beta.ustclug.org/planet/microsd-card-1024x752.jpg" alt="" />
+                <img src="/static/planet/microsd-card-1024x752.jpg" alt="" />
               </figure>
               <p>我使用 <code class="language-plaintext highlighter-rouge">fio</code> 作为磁盘（microSD 卡）I/O 性能测试工具。因为我更熟悉 Crystal DiskMark，我调整了 <code class="language-plaintext highlighter-rouge">fio</code> 的参数，以与其一致。</p>
               <div class="language-shell highlighter-rouge">
@@ -363,7 +369,7 @@ sysbench <span class="nt">--test</span><span class="o">=</span>memory <span clas
                 </div>
               </div>
               <figure class="">
-                <img src="https://static.beta.ustclug.org/planet/fio-microsd.png" alt="" />
+                <img src="/static/planet/fio-microsd.png" alt="" />
                 <figcaption>
                   MicroSD 性能，单位为 MB/s，越高越好
                 </figcaption>
@@ -379,7 +385,7 @@ sysbench <span class="nt">--test</span><span class="o">=</span>memory <span clas
                 </div>
               </div>
               <figure class="">
-                <img src="https://static.beta.ustclug.org/planet/p7zip.png" alt="" />
+                <img src="/static/planet/p7zip.png" alt="" />
                 <figcaption>
                   p7zip 基准测试，越高越好
                 </figcaption>
@@ -397,7 +403,7 @@ openssl speed <span class="nt">-evp</span> sha256
                 </div>
               </div>
               <figure class="">
-                <img src="https://static.beta.ustclug.org/planet/openssl.png" alt="" />
+                <img src="/static/planet/openssl.png" alt="" />
                 <figcaption>
                   OpenSSL 基准测试，单位为 MB/s，越高越好
                 </figcaption>
@@ -407,7 +413,7 @@ openssl speed <span class="nt">-evp</span> sha256
               <h4 id="curl-文件下载测试">CURL 文件下载测试</h4>
               <p>这项测试非常简单：使用 cURL 从局域网机器下载文件，查看速度。</p>
               <figure class="">
-                <img src="https://static.beta.ustclug.org/planet/cURL.png" alt="" />
+                <img src="/static/planet/cURL.png" alt="" />
                 <figcaption>
                   cURL 下载速度，单位为 MB/s，越高越好
                 </figcaption>
@@ -423,7 +429,7 @@ siege <span class="nt">-c</span> 25 <span class="nt">-r</span> 400 <span class="
                 </div>
               </div>
               <figure class="">
-                <img src="https://static.beta.ustclug.org/planet/nginx.png" alt="" />
+                <img src="/static/planet/nginx.png" alt="" />
                 <figcaption>
                   NGINX 性能，单位为请求数每秒，越高越好
                 </figcaption>
@@ -448,7 +454,7 @@ siege <span class="nt">-c</span> 25 <span class="nt">-r</span> 400 <span class="
               </div>
               <p>Ruby 测试就简单很多：使用 Jekyll 构建<a href="https://ibugone.com/">我的站点</a>，查看消耗的时间。</p>
               <figure class="">
-                <img src="https://static.beta.ustclug.org/planet/python-ruby.png" alt="" />
+                <img src="/static/planet/python-ruby.png" alt="" />
                 <figcaption>
                   应用程序性能，单位为秒，越低越好
                 </figcaption>
@@ -466,7 +472,7 @@ siege <span class="nt">-c</span> 25 <span class="nt">-r</span> 400 <span class="
                 </div>
               </div>
               <figure class="">
-                <img src="https://static.beta.ustclug.org/planet/fio-usb.png" alt="" />
+                <img src="/static/planet/fio-usb.png" alt="" />
                 <figcaption>
                   USB 速度，单位为 MB/s，越高越好
                 </figcaption>
@@ -493,9 +499,9 @@ siege <span class="nt">-c</span> 25 <span class="nt">-r</span> 400 <span class="
             </footer>
             <section class="page__share">
               <h4 class="page__share-title">分享</h4>
-              <a href="https://twitter.com/intent/tweet?text=%E3%80%90%E8%AF%91%E7%A8%BF%E3%80%91%E6%A0%91%E8%8E%93%E6%B4%BE+4+%E8%AF%84%E6%B5%8B%E4%B8%8E%E5%9F%BA%E5%87%86%E6%B5%8B%E8%AF%95%EF%BC%9A%E4%B8%8E%E6%A0%91%E8%8E%93%E6%B4%BE+3B%2B+%E7%9B%B8%E6%AF%94%E7%9A%84%E6%94%B9%E8%BF%9B%20https%3A%2F%2Fbeta.ustclug.org%2F%2Fplanet%2F2019%2F09%2Fraspberry-4%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbeta.ustclug.org%2F%2Fplanet%2F2019%2F09%2Fraspberry-4%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
-              <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fbeta.ustclug.org%2F%2Fplanet%2F2019%2F09%2Fraspberry-4%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+              <a href="https://twitter.com/intent/tweet?text=%E3%80%90%E8%AF%91%E7%A8%BF%E3%80%91%E6%A0%91%E8%8E%93%E6%B4%BE+4+%E8%AF%84%E6%B5%8B%E4%B8%8E%E5%9F%BA%E5%87%86%E6%B5%8B%E8%AF%95%EF%BC%9A%E4%B8%8E%E6%A0%91%E8%8E%93%E6%B4%BE+3B%2B+%E7%9B%B8%E6%AF%94%E7%9A%84%E6%94%B9%E8%BF%9B%20https%3A%2F%2Flug.ustc.edu.cn%2F%2Fplanet%2F2019%2F09%2Fraspberry-4%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flug.ustc.edu.cn%2F%2Fplanet%2F2019%2F09%2Fraspberry-4%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+              <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Flug.ustc.edu.cn%2F%2Fplanet%2F2019%2F09%2Fraspberry-4%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
             </section>
             <nav class="pagination">
               <a href="/planet/2019/09/how-to-use-nc/" class="pagination--pager" title="nc 是什么？
@@ -510,6 +516,17 @@ siege <span class="nt">-c</span> 25 <span class="nt">-r</span> 400 <span class="
           <div class="grid__wrapper">
           </div>
         </div>
+      </div>
+    </div>
+    <div class="search-content">
+      <div class="search-content__inner-wrap">
+        <form class="search-content__form" onkeydown="return event.key != 'Enter';">
+          <label class="sr-only" for="search">
+            输入您要搜索的关键词...
+          </label>
+          <input type="search" id="search" class="search-input" tabindex="-1" placeholder="输入您要搜索的关键词..." />
+        </form>
+        <div id="results" class="results"></div>
       </div>
     </div>
     <div id="footer" class="page__footer">
@@ -541,6 +558,9 @@ siege <span class="nt">-c</span> 25 <span class="nt">-r</span> 400 <span class="
       </footer>
     </div>
     <script src="/assets/js/main.min.js"></script>
-    <img src="https://static.beta.ustclug.org/USTC_logo.svg" style="position: fixed; bottom: -320px; left: -200px; opacity: 0.1; z-index: -100;" />
+    <script src="/assets/js/lunr/lunr.min.js"></script>
+    <script src="/assets/js/lunr/lunr-store.js"></script>
+    <script src="/assets/js/lunr/lunr-en.js"></script>
+    <img src="https://lug.ustc.edu.cn/static/USTC_logo.svg" style="position: fixed; bottom: -320px; left: -200px; opacity: 0.1; z-index: -100;" />
   </body>
 </html>

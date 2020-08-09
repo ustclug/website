@@ -16,18 +16,18 @@
     <meta property="og:locale" content="zh_CN">
     <meta property="og:site_name" content="LUG @ USTC">
     <meta property="og:title" content="PXE 是什么">
-    <meta property="og:url" content="https://beta.ustclug.org//planet/2018/10/PXE-intro/">
+    <meta property="og:url" content="https://lug.ustc.edu.cn//planet/2018/10/PXE-intro/">
     <meta property="og:description" content="PXE 是什么">
     <meta property="og:image" content="https://image.ibugone.com/lug/lug-planet-2.jpg">
     <meta property="article:published_time" content="2018-10-07T00:00:00+08:00">
-    <link rel="canonical" href="https://beta.ustclug.org//planet/2018/10/PXE-intro/">
+    <link rel="canonical" href="https://lug.ustc.edu.cn//planet/2018/10/PXE-intro/">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
       
           "@type": "Person",
           "name": "USTCLUG",
-          "url": "https://beta.ustclug.org//"
+          "url": "https://lug.ustc.edu.cn//"
       
       }
     </script>
@@ -39,7 +39,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=7a8bb2a2">
+    <link rel="stylesheet" href="/assets/css/main.css?v=c6058eac">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
       <style>
@@ -96,6 +96,12 @@
                 <a href="https://mirrors.ustc.edu.cn/">Mirrors</a>
               </li>
             </ul>
+            <button class="search__toggle" type="button">
+              <span class="visually-hidden">切换搜索</span>
+              <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+                <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+              </svg>
+            </button>
             <button class="greedy-nav__toggle hidden" type="button">
               <span class="visually-hidden">切换菜单</span>
               <div class="navicon"></div>
@@ -220,7 +226,7 @@ chain ${210:string}lpxelinux.0
               <p>下载 iso 作为虚拟光驱挂载在虚拟机上，从 CD 启动，</p>
               <h2 id="pxe-有什么">PXE 有什么</h2>
               <figure class="">
-                <img src="https://static.beta.ustclug.org/planet/2018-08-11-1720-ScreenShot.png" alt="" />
+                <img src="/static/planet/2018-08-11-1720-ScreenShot.png" alt="" />
                 <figcaption>
                   PXE 的启动菜单
                 </figcaption>
@@ -244,13 +250,13 @@ chain ${210:string}lpxelinux.0
                 <li>Manjaro</li>
               </ul>
               <h3 id="windows-pe">Windows PE</h3>
-              <p><img src="https://static.beta.ustclug.org/planet/2018-08-11-1733-ScreenShot-2.png" alt="img" /></p>
+              <p><img src="/static/planet/2018-08-11-1733-ScreenShot-2.png" alt="img" /></p>
               <h3 id="实用工具">实用工具</h3>
               <ul>
                 <li>
                   <p>Hardware Detection Tools (hdt)</p>
                   <figure class="">
-                    <img src="https://static.beta.ustclug.org/planet/2018-08-11-1726-ScreenShot.png" alt="" />
+                    <img src="/static/planet/2018-08-11-1726-ScreenShot.png" alt="" />
                     <figcaption>
                       hdt 中的查看硬盘信息部分
                     </figcaption>
@@ -264,7 +270,7 @@ chain ${210:string}lpxelinux.0
                 <li>Clonezilla live</li>
               </ul>
               <h3 id="图书馆查询系统">图书馆查询系统</h3>
-              <p><img src="https://static.beta.ustclug.org/planet/2018-08-11-1943-ScreenShot.png" alt="img" /></p>
+              <p><img src="/static/planet/2018-08-11-1943-ScreenShot.png" alt="img" /></p>
               <h2 id="应用场景分析">应用场景分析</h2>
               <h3 id="体验新系统">体验新系统</h3>
               <p>PXE 的 Live System 菜单中包含了 Debian，Deepin，Arch Linux，Manjaro 等 Live 系统，选择一个 Live 系统启动，就可以不用安装就能体验 Linux 的使用。</p>
@@ -277,7 +283,7 @@ chain ${210:string}lpxelinux.0
               <p>磁盘检查，分区修改等：fsck 和 fdisk 命令均需要进行操作的分区未被挂载。如果磁盘检查，fsck <em>设备名</em> 即可。分区修改，如扩容等操作先 fdisk <em>设备名</em>，进入 fdisk 程序内部，再执行 fdisk 命令即可。fdisk 命令可以使用 m 查看。fdisk 命令较为简单，如 p 为打印分区表，d 为删除分区，n 为新建一个分区，w 为写入分区表等，执行命令后 fdisk 会对接下来进行的操作给出提示。分区修改也可以使用 gparted live，图形界面可能更友好一些，下文会进行介绍。</p>
               <h3 id="硬盘分区扩容">硬盘分区扩容</h3>
               <p>GParted 的界面较为直观，选择设备后界面就会出现这个设备的分区情况，点击一块分区可以进行删除，移动，改变大小或复制，如果有空闲空间也可以点击 New 新建分区。移动分区或向前扩容时要注意，<strong>改变分区起始位置可能会使文件系统损坏</strong>。每次进行一次操作后最下方会增加一个条目，确认修改时要点击 Apply，此时 GParted 会根据 operation list 进行操作并给出日志，在完成之后会更新分区表。</p>
-              <p><img src="https://static.beta.ustclug.org/planet/2018-08-11-1717-ScreenShot-1.png" alt="img" />
+              <p><img src="/static/planet/2018-08-11-1717-ScreenShot-1.png" alt="img" />
                 使用 GParted 改变分区大小和位置</p>
               <h3 id="windows-下的启动修复等">Windows 下的启动修复等</h3>
               <p>PXE 上还有 Windows PE 的镜像，因此也可以通过 PE 来对本机的 Windows 进行启动修复，文件移动复制，修改注册表等操作。</p>
@@ -302,9 +308,9 @@ chain ${210:string}lpxelinux.0
             </footer>
             <section class="page__share">
               <h4 class="page__share-title">分享</h4>
-              <a href="https://twitter.com/intent/tweet?text=PXE+%E6%98%AF%E4%BB%80%E4%B9%88%20https%3A%2F%2Fbeta.ustclug.org%2F%2Fplanet%2F2018%2F10%2FPXE-intro%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbeta.ustclug.org%2F%2Fplanet%2F2018%2F10%2FPXE-intro%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
-              <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fbeta.ustclug.org%2F%2Fplanet%2F2018%2F10%2FPXE-intro%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+              <a href="https://twitter.com/intent/tweet?text=PXE+%E6%98%AF%E4%BB%80%E4%B9%88%20https%3A%2F%2Flug.ustc.edu.cn%2F%2Fplanet%2F2018%2F10%2FPXE-intro%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flug.ustc.edu.cn%2F%2Fplanet%2F2018%2F10%2FPXE-intro%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+              <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Flug.ustc.edu.cn%2F%2Fplanet%2F2018%2F10%2FPXE-intro%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
             </section>
             <nav class="pagination">
               <a href="/planet/2018/08/USTC-Linux-user-guide/" class="pagination--pager" title="USTC Linux 用户生存指南
@@ -319,6 +325,17 @@ chain ${210:string}lpxelinux.0
           <div class="grid__wrapper">
           </div>
         </div>
+      </div>
+    </div>
+    <div class="search-content">
+      <div class="search-content__inner-wrap">
+        <form class="search-content__form" onkeydown="return event.key != 'Enter';">
+          <label class="sr-only" for="search">
+            输入您要搜索的关键词...
+          </label>
+          <input type="search" id="search" class="search-input" tabindex="-1" placeholder="输入您要搜索的关键词..." />
+        </form>
+        <div id="results" class="results"></div>
       </div>
     </div>
     <div id="footer" class="page__footer">
@@ -350,6 +367,9 @@ chain ${210:string}lpxelinux.0
       </footer>
     </div>
     <script src="/assets/js/main.min.js"></script>
-    <img src="https://static.beta.ustclug.org/USTC_logo.svg" style="position: fixed; bottom: -320px; left: -200px; opacity: 0.1; z-index: -100;" />
+    <script src="/assets/js/lunr/lunr.min.js"></script>
+    <script src="/assets/js/lunr/lunr-store.js"></script>
+    <script src="/assets/js/lunr/lunr-en.js"></script>
+    <img src="https://lug.ustc.edu.cn/static/USTC_logo.svg" style="position: fixed; bottom: -320px; left: -200px; opacity: 0.1; z-index: -100;" />
   </body>
 </html>
