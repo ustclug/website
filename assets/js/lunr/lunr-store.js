@@ -371,6 +371,12 @@ var store = [{
 "url": "https://beta.ustclug.org//wiki/doc/smart-questions/",
 "teaser": null
 },{
+"title": "引导技术浅析",
+"excerpt":"计算机从来不是聪明的“电脑”，它只是在硬件设计者和程序员的设计下按部就班地运行。 当计算机启动的时候它就需要这样的指示：“我现在该干嘛”。它不会主动地启动一个用户想要的系统，而是需要有个家伙，我们称之为loader来告诉它完成这件事情，这个过程就叫boot（引导）。 计算机需要从存有程序数据的媒介里获取这个loader，这个时候它开始访问CMOS芯片里的指定的媒介，从中寻找loader。对于不同的媒介，可以在各自的某段地址里找到最初的引导代码，这段地址就称为引导区。引导区的代码载入之后，计算机就有了文件访问等更强大的功能，便开始进行下一步的引导。 通常引导区的引导代码里指定了下一步的引导文件的位置和名称，于是计算机便据此载入引导文件，引导文件载入后的计算机更加强大，能够接收用户输入，并能交互地回显用户操作。 接下来计算机开始寻找操作系统的内核，开始正式的系统启动过程。这时就不在我们讨论范围内了。 载入了loader的计算机通常是如上所说地引导操作系统内核，然而也可以再更换性地载入另一个loader，将计算机的上下文环境变为另一个loader。很多时候我们会需要这种强大的功能满足我们的需求。 grub，全称为GRand Unified Bootloader，就是一个功能十分强大的loader，它提供了多种引导方式，同时有很好的交互界面，能够方便设置各种引导环境和参数。 GRUB4DOS快速入门 为什么是grub4dos grub4dos可以看作是grub的衍生版本，又从syslinux里吸取了一些东西。 grub4dos的优势大致如下： 精简，非常适合U盘使用，其程序文件只有一个，外加一个用于配置的menu.lst； 引导扇区里的引导代码对主程序的寻找是自动的，也就是说当你安装好引导扇区里的引导代码后可以任意改变引导程序的位置（只要还是在根目录）； 支持ntfs，且与Windows的loader可以完美地互相引导。鉴于现行的PC基本上都是Windows PC，经常有需要用的地方； 方便的使用光盘/软盘镜像 国内研究较多，各种系统论坛都有相关的讨论和文档。 grub4dos也有一些缺点： 可扩充性差，只支持固定的几种文件系统：fat32, ntfs, ext2/ext3/ext4； 兼容性下降，某些机型可能引导不起来。这也是功能增加的必然结果。 安装grub4dos 可以从grub4dos的主页http://download.gna.org/grub4dos/获取grub4dos，解压后获取后面操作需要的文件。 grub4dos仅由两部分组成：处于任意一个可访问分区根目录的grldr主程序文件，用来引导扇区的引导代码。另外还有一个可选的配置文件menu.lst。 首先是安装引导代码： Windows：可使用grubinst_gui，可从http://download.gna.org/grubutil/下载。 Linux: bootlace.com /dev/sdx（sdx为你的盘符） 接下来就是拷贝文件了，大家都会，一切搞定，就这么简单。 如果你用的是自己的主机，已经装了别的系统，有自己的loader，你也可以用系统的loader来引导grub4dos。这一步取代了引导代码的安装。 grub引导 grub2引导 XP（ntldr）引导 Windows 7（bootmgr）引导 使用grub4dos 学习grub4dos最好的方法就是看人家的menu.lst，menu.lst里的每条title实际上就是一系列的grub引导命令。 下面贴一下我移动硬盘里的grub4dos的menu.lst： # GRUB boot loader configuration. # # By...","categories": [],
+"tags": [],
+"url": "https://beta.ustclug.org//wiki/greenwarm/",
+"teaser": null
+},{
 "title": "Linux_summary",
 "excerpt":"— greenwarm 2010/11/13 14:30   对GNU和Linux的一些理解   题记 —— Linux是一份UNIX兼容的内核源码   最初计算机都是有重要的工程计算任务的昂贵器械，同时其运算能力也十分有限，上层开发也比较麻烦。于是就有了UNIX，UNIX可以看成是计算机硬件上的Lua，有精简的设计，却同时满足个性化的、复杂的任务处理需求。   后来发生了一些奇妙的事情，作为辅助计算机工作的UNIX系统本身开始变得收费和闭源，PC/个人电脑的概念开始出现时，这时出现了两种力量，一种是想将开源的方式继续传承下去，一种是想在廉价的PC上使用强大的UNIX，于是就分别有了GNU和Linux。这时，GNU的发起人发现了Linux的优越性，Linus本人也是开源爱好者（open source is good），于是二者合而为一，成为了GNU/Linux。Linux继承了UNIX的一系列优点，却也保留了UNIX的传统的设计习惯，如适合分布式架构的图形系统构架，然而对于那些渴望拥有自己UNIX设备的人来说，能在自己的PC上运行Linux无疑是件非常快乐的事。这时的Linux可以看成是free UNIX。   再之后，以用户友好和多媒体应用为基本理念的PC出现了，其中包括著名的Microsoft和Apple。一方面Linux被大量优秀的工作提升性能，成为了重要的服务器系统，另一方面Linux的一帮geeker们开始建立Linux内核上的以GNU软件搭建的图形系统，这时就有著名的GNOME和KDE。   再后来，Microsoft成为了帝国，同时网络应用在PC应用中迅速崛起，很多人开始注意到了GNU/Linux可以作为网络终端的其他选择。于是开始有了Ubuntu。由于GNU/Linux良好的可定制性，及大量艺术工作者的加入，使得Linux十分养眼，加之Ubuntu之流的大力宣传。Linux开始在桌面领域流行起来，然而由于一些历史的原因，GNU/Linux的很多设计与桌面应用格格不入，这是一个戴着脚镣跳舞的时代。   再后来，最大的互联网公司Google发现未来的应用将安放在统一开放的“云平台”上，终端机的设计可以尽可能简化，终端机的类型也可以多样化，其主要作品有Android和Chrome OS。于是Linux开始进入云时代。  ","categories": [],
 "tags": [],
@@ -393,12 +399,6 @@ var store = [{
 "excerpt":"X window比MS windows先进的地方是, X window是个基于网络的的图形视窗系统, 本身就具有远程控制的强大功能. 用户在远程系统上登录执行X 应用程序, 并将Xclients执行的结果传回本地主机. 这就是我下面要介绍的Remote X. 这里我要说的不是telnet, rsh之类的远程控制工具, 而是指远程控制桌面应用. X window比MS windows先进的地方是, X window是个基于网络的的图形视窗系统, 本身就具有远程控制的强大功能. 用户在远程系统上登录执行X 应用程序, 并将Xclients执行的结果传回本地主机. 这就是我下面要介绍的Remote X 一、Remote X 假设本地主机ip为172.16.1.1, 远程的主机ip为172.16.1.2 第一步, 在本地主机上的任意一个xterm中执行xhost, 用来允许远程的其它主机可以和本地主机的X server联网: 　　xhost + 172.16.1.2 如果不指定任何ip地址, 则表示权限完全放开, 这会带来安全问题, 要小心! 第二步, 确认本地主机的xfs是运行的. 用ps检查一下进程. 第三步, 从本地主机(172.16.1.1)上通过网络登录到远程主机172.16.1.2上, 你用telnet, ssh, rsh都可以. 设置DISPLAY变量. 　　export...","categories": [],
 "tags": [],
 "url": "https://beta.ustclug.org//wiki/greenwarm/remotedesktop/",
-"teaser": null
-},{
-"title": "引导技术浅析",
-"excerpt":"计算机从来不是聪明的“电脑”，它只是在硬件设计者和程序员的设计下按部就班地运行。 当计算机启动的时候它就需要这样的指示：“我现在该干嘛”。它不会主动地启动一个用户想要的系统，而是需要有个家伙，我们称之为loader来告诉它完成这件事情，这个过程就叫boot（引导）。 计算机需要从存有程序数据的媒介里获取这个loader，这个时候它开始访问CMOS芯片里的指定的媒介，从中寻找loader。对于不同的媒介，可以在各自的某段地址里找到最初的引导代码，这段地址就称为引导区。引导区的代码载入之后，计算机就有了文件访问等更强大的功能，便开始进行下一步的引导。 通常引导区的引导代码里指定了下一步的引导文件的位置和名称，于是计算机便据此载入引导文件，引导文件载入后的计算机更加强大，能够接收用户输入，并能交互地回显用户操作。 接下来计算机开始寻找操作系统的内核，开始正式的系统启动过程。这时就不在我们讨论范围内了。 载入了loader的计算机通常是如上所说地引导操作系统内核，然而也可以再更换性地载入另一个loader，将计算机的上下文环境变为另一个loader。很多时候我们会需要这种强大的功能满足我们的需求。 grub，全称为GRand Unified Bootloader，就是一个功能十分强大的loader，它提供了多种引导方式，同时有很好的交互界面，能够方便设置各种引导环境和参数。 GRUB4DOS快速入门 为什么是grub4dos grub4dos可以看作是grub的衍生版本，又从syslinux里吸取了一些东西。 grub4dos的优势大致如下： 精简，非常适合U盘使用，其程序文件只有一个，外加一个用于配置的menu.lst； 引导扇区里的引导代码对主程序的寻找是自动的，也就是说当你安装好引导扇区里的引导代码后可以任意改变引导程序的位置（只要还是在根目录）； 支持ntfs，且与Windows的loader可以完美地互相引导。鉴于现行的PC基本上都是Windows PC，经常有需要用的地方； 方便的使用光盘/软盘镜像 国内研究较多，各种系统论坛都有相关的讨论和文档。 grub4dos也有一些缺点： 可扩充性差，只支持固定的几种文件系统：fat32, ntfs, ext2/ext3/ext4； 兼容性下降，某些机型可能引导不起来。这也是功能增加的必然结果。 安装grub4dos 可以从grub4dos的主页http://download.gna.org/grub4dos/获取grub4dos，解压后获取后面操作需要的文件。 grub4dos仅由两部分组成：处于任意一个可访问分区根目录的grldr主程序文件，用来引导扇区的引导代码。另外还有一个可选的配置文件menu.lst。 首先是安装引导代码： Windows：可使用grubinst_gui，可从http://download.gna.org/grubutil/下载。 Linux: bootlace.com /dev/sdx（sdx为你的盘符） 接下来就是拷贝文件了，大家都会，一切搞定，就这么简单。 如果你用的是自己的主机，已经装了别的系统，有自己的loader，你也可以用系统的loader来引导grub4dos。这一步取代了引导代码的安装。 grub引导 grub2引导 XP（ntldr）引导 Windows 7（bootmgr）引导 使用grub4dos 学习grub4dos最好的方法就是看人家的menu.lst，menu.lst里的每条title实际上就是一系列的grub引导命令。 下面贴一下我移动硬盘里的grub4dos的menu.lst： # GRUB boot loader configuration. # # By...","categories": [],
-"tags": [],
-"url": "https://beta.ustclug.org//wiki/greenwarm/",
 "teaser": null
 },{
 "title": "虚拟化简介",
@@ -455,6 +455,12 @@ var store = [{
 "url": "https://beta.ustclug.org//wiki/linux_digest/expasy-ps_scan/",
 "teaser": null
 },{
+"title": "Linux 文摘",
+"excerpt":"这里收录一些本 Wiki 上有关 Linux 使用的有用文章和一些有用的链接。 超级计算中心培训资料 Linux 操作系统使用基础 读书笔记 文章名称 备注 《程序员的自我修养》读书笔记   读书笔记：关于维护服务器的一些技巧   手把手读书报告   《鸟哥的 Linux 私房菜 – 基础学习篇》读书笔记   来自王光远同学的emacs读书笔记   《黑客与画家》读书笔记   另请参阅读书笔记 其它文章 文章名称 备注 Linux 下关于硬盘 S. M. A. R. T 的相关操作   crontab 使用方法   screen 使用方法   ed 使用方法   lftp...","categories": [],
+"tags": [],
+"url": "https://beta.ustclug.org//wiki/linux_digest/",
+"teaser": null
+},{
 "title": "lftp",
 "excerpt":"lftp是一款基于命令行的文件传输程序。除了FTP外，她还支持FTPS, HTTP, HTTPS, HFTP, FISH和SFTP。它还有一个实用的特性，支持FXP，即在两台FTP服务器间传文件，绕过客户机。此外，她还有一个内建的BitTorrent客户端。 常用命令 配置文件 lftp启动后会一次读取/etc/lftp.conf、~/.lftprc和~/.lftp/rc。 通常我们将常用的设置写入~/.lftprc或者~/.lftp/rc中。 下面是一份lftprc的样例： .lftprc #在浏览GBK编码的ftp时，可以执行gbkserver命令迅速切换。 alias gbkserver set ftp:charset gbk;set file:charset utf-8 alias utfserver set ftp:charset UTF-8;set file:charset utf-8   #使得ls的输出更友好、美观 alias ls cls -lhSF set color:use-color true   #本地文件名使用utf8存储 set file:charset utf-8   #对202.38.64.22站点的独立设置 set ftp:passive-mode/202.38.64.22 no set ftp:charset/202.38.64.22 gbk 在被动模式下，lftp主动连接服务器进行数据传输。在主动模式下，服务器会主动连接lftp进行数据传输。 被动模式当您在防火墙后面时很有用。...","categories": [],
 "tags": [],
@@ -495,12 +501,6 @@ var store = [{
 "excerpt":"主要命令：smartctl，包smartmontools中的一个组件。 Ubuntu可以通过apt-get install smartmontools来安装 常用命令： 有些硬盘需要先执行smartctl /dev/sdX -s on来开启硬盘的S. M. A. R. T信息访问 1. 查看硬盘的全部S. M. A. R. T信息 smartctl -a /dev/sdX 一个十分有用的命令，将给出许多有用的信息。 特别关注如下部分： SMART Attributes：给出硬盘S. M. A. R. T数据的值，其中很多可以用来判断磁盘性能和健康状况以及寿命。 SMART Error Log：给出硬盘历史上最近的5次错误细节。较新的硬盘都不应有错误数据，如果此处有记录错误而并没有察觉到硬盘的问题，不能存有侥幸心里而应该进行全面的硬盘检查。 SMART Self-test log：给出硬盘历史上以及正在进行的自检的时间和结果。一块健康的硬盘不应在此处出现错误。 2. 执行硬盘自检 smartctl -t [long|short] /dev/sdX 将进行硬盘内置的离线自检，在自检过程中系统不受影响仍可正常操作。 一般使用long（或extended）进行自检，虽然时间较长但可以发现硬盘几乎100%的错误，包括未使用的区块坏道以及表面错误等等。 自检的结果可以在smartctl -a或者smartctl -l selftest中查看 smartctl的GUI：GSmartControl，可以通过apt-get安装，图形操作十分直观。 更多信息请使用man...","categories": [],
 "tags": [],
 "url": "https://beta.ustclug.org//wiki/linux_digest/smartmontools/",
-"teaser": null
-},{
-"title": "Linux 文摘",
-"excerpt":"这里收录一些本 Wiki 上有关 Linux 使用的有用文章和一些有用的链接。 超级计算中心培训资料 Linux 操作系统使用基础 读书笔记 文章名称 备注 《程序员的自我修养》读书笔记   读书笔记：关于维护服务器的一些技巧   手把手读书报告   《鸟哥的 Linux 私房菜 – 基础学习篇》读书笔记   来自王光远同学的emacs读书笔记   《黑客与画家》读书笔记   另请参阅读书笔记 其它文章 文章名称 备注 Linux 下关于硬盘 S. M. A. R. T 的相关操作   crontab 使用方法   screen 使用方法   ed 使用方法   lftp...","categories": [],
-"tags": [],
-"url": "https://beta.ustclug.org//wiki/linux_digest/",
 "teaser": null
 },{
 "title": "Linux 用户管理",
@@ -617,10 +617,10 @@ var store = [{
 "url": "https://beta.ustclug.org//wiki/lug/finance/donate_lookup/",
 "teaser": null
 },{
-"title": "Start",
+"title": "Index",
 "excerpt":"    ","categories": [],
 "tags": [],
-"url": "https://beta.ustclug.org//wiki/lug/finance/start/",
+"url": "https://beta.ustclug.org//wiki/lug/finance/",
 "teaser": null
 },{
 "title": "友情链接",
@@ -659,6 +659,12 @@ var store = [{
 "url": "https://beta.ustclug.org//wiki/lug/services/gitlab/",
 "teaser": null
 },{
+"title": "网络服务列表",
+"excerpt":"S 级服务 开源镜像站（HTTP 访问）：https://mirrors.ustc.edu.cn 权威 DNS：ns-a.ustclug.org. ns-b.ustclug.org. ns-c.ustclug.org. A 级服务 代码托管平台：https://git.lug.ustc.edu.cn 回校访问服务 防污染 DNS（校内） B 级服务 主页 (本wiki)：https://lug.ustc.edu.cn 网络启动：pxe.ustc.edu.cn 图书馆透明计算系统 VPN 在线申请系统（校内） 轻量级网络加速服务（校内） 开源镜像站（定时同步；rsync、FTP访问；帮助页面）：https://mirrors.ustc.edu.cn 反向代理：*.proxy.ustclug.org 服务器统一认证：ldap.lug.ustc.edu.cn 内网 VPN LUG Planet（社团博客）：https://planet.ustclug.org C 级服务 LUG FTP：https://ftp.lug.ustc.edu.cn Ganglia 监控：https://status.ustclug.org Grafana 监控：https://monitor.ustclug.org LDAP 配置管理系统（GOsa²） 服务等级与服务标准 S 级：最优先保障服务可用性，24小时故障监控，故障自动转移 A 级：优先保障服务可用性，24小时故障监控，每日备份 B 级：关键数据备份 C 级：非保障类服务 未列入本列表的服务：实验性服务...","categories": [],
+"tags": [],
+"url": "https://beta.ustclug.org//wiki/lug/services/",
+"teaser": null
+},{
 "title": "图书馆查询机简介",
 "excerpt":"图书馆查询机，顾名思义，是位于图书馆内的一些用来查询图书所在位置的计算机。USTC LUG 一直以来对图书馆查询机系统进行着操作系统及软件上的维护。   历史沿革   现状   使用指南   技术细节   图书馆查询机系统   Github 项目   查询机运行状况监控：图书馆查询机状态  ","categories": [],
 "tags": [],
@@ -687,12 +693,6 @@ var store = [{
 "excerpt":"〇、总则 中国科学技术大学 Linux 用户协会（下称 LUG 或“我们”）向中国科大师生和 Linux 社区提供了一系列网络服务。用户在使用 LUG 网络服务之前，应当仔细阅读并同意本文各项条款。 除非相关网络服务的服务条款特别说明，否则本文各项规则适用于 LUG 提供的所有网络服务。这些服务包括但不限于： a. USTC blog space b. OpenVZ 虚拟主机服务（Freeshell） c. 代码托管服务（GitLab） d. 虚拟专用网络服务（OpenVPN） e. 软件源镜像（Mirrors） f. 中国科学技术大学网络启动服务（PXE） g. Time Machine 服务（TimeMachine） 用户开始使用 LUG 网络服务时，即视为无条件同意本规则和其他相关条款。 一、服务承诺 LUG 及其成员的行为受中华人民共和国法律法规、中国科学技术大学校规校纪的约束。 LUG 网络服务均为非营利性，我们不会以任何名义向用户强制收取任何费用。 我们会尽力保证服务稳定，但不对服务质量作任何保证。 我们承诺不会主动将用户提交的隐私数据泄露给第三方，用户隐私受到法律保护。 对用户通过 LUG 网络服务发表的合法原创内容，其著作权属于用户。 当 LUG 网络服务出现重大变更时，我们会通过用户提供的联系方式通知用户。 二、用户义务 用户不得利用...","categories": [],
 "tags": [],
 "url": "https://beta.ustclug.org//wiki/lug/services/rules/",
-"teaser": null
-},{
-"title": "网络服务列表",
-"excerpt":"S 级服务 开源镜像站（HTTP 访问）：https://mirrors.ustc.edu.cn 权威 DNS：ns-a.ustclug.org. ns-b.ustclug.org. ns-c.ustclug.org. A 级服务 代码托管平台：https://git.lug.ustc.edu.cn 回校访问服务 防污染 DNS（校内） B 级服务 主页 (本wiki)：https://lug.ustc.edu.cn 网络启动：pxe.ustc.edu.cn 图书馆透明计算系统 VPN 在线申请系统（校内） 轻量级网络加速服务（校内） 开源镜像站（定时同步；rsync、FTP访问；帮助页面）：https://mirrors.ustc.edu.cn 反向代理：*.proxy.ustclug.org 服务器统一认证：ldap.lug.ustc.edu.cn 内网 VPN LUG Planet（社团博客）：https://planet.ustclug.org C 级服务 LUG FTP：https://ftp.lug.ustc.edu.cn Ganglia 监控：https://status.ustclug.org Grafana 监控：https://monitor.ustclug.org LDAP 配置管理系统（GOsa²） 服务等级与服务标准 S 级：最优先保障服务可用性，24小时故障监控，故障自动转移 A 级：优先保障服务可用性，24小时故障监控，每日备份 B 级：关键数据备份 C 级：非保障类服务 未列入本列表的服务：实验性服务...","categories": [],
-"tags": [],
-"url": "https://beta.ustclug.org//wiki/lug/services/",
 "teaser": null
 },{
 "title": "LUG 宣传账号一览",
