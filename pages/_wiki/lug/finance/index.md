@@ -1,4 +1,5 @@
 ---
+permalink: /wiki/lug/finance/
 ---
 
 <iframe id="ifm" src="https://news.ustclug.org/finance/" frameborder="0" onload="changeFrameHeight()"> </iframe>
