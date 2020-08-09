@@ -2,6 +2,10 @@ body.layout--home {
   .archive__subtitle {
     display: none;
   }
+
+  .archive .list__item:first-child .archive__item-title {
+    margin-top: 0;
+  }
 }
 
 .archive-group {
