@@ -9,7 +9,7 @@
 
 ## 2015 白帽子信息安全竞赛
 
-![2015_whitehat_poster.png](/wiki/_detail/lug/2015_whitehat_poster.png?id=lug%3Aevents%3Aposter)
+![2015_whitehat_poster.png]({{ site.static_url }}/wiki/lug/2015_whitehat_poster.png)
 
 ## 2015 LaTeX 讲座
 

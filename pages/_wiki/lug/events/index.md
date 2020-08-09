@@ -8,9 +8,9 @@ LUG 活动概述请移步 [LUG首页](/)。
 
 LUG 的所有活动均依照 [社团章程](http://ftp.ustclug.org/社团管理/章程/2019-章程.pdf) 开展。
 
-欢迎订阅 [LUG 日历](/wiki/lug/events/calendar)。
+欢迎订阅 [LUG 日历](calendar.md)。
 
-2016 年及之后的活动不在这里重复记录小聚信息了，请移步[每周小聚](/wiki/lug/events/weeklyparty)页面查看。
+2016 年及之后的活动不在这里重复记录小聚信息了，请移步[每周小聚](weeklyparty.md)页面查看。
 
 ## Latest Events
 
