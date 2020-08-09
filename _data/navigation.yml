@@ -32,7 +32,7 @@ wiki:
       - title: LUG 书库
         url: /wiki/lug/book/
       - title: LUG 财务
-        url: 'https://news.ustclug.org/finance/'
+        url: /finance/
   - title: 联系
     children:
       - title: LUG 负责人
