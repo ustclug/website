@@ -34,12 +34,12 @@ pip install beancount fava
 示例账本](https://fava.pythonanywhere.com/huge-example-file/balance_sheet/) ，对应的
 Beancount 源代码可以在 [Bitbucket
 上下载](https://bitbucket.org/blais/beancount/src/default/examples/)。~~
-本文的示例账本以及可视化可以在该[仓库](https://git.lug.ustc.edu.cn/Charles/ecard_beancount)查看。
+本文的示例账本以及可视化可以在该[仓库](https://git.lug.ustc.edu.cn/Charles/ecard_beancount/-/tree/master)查看。
 
-克隆该仓库，在命令行中使用 `fava main.beancout`。
+克隆该仓库，在命令行中使用 `fava main.bean`。
 
 ```console
-$ fava main.beancout
+$ fava main.bean
 Running Fava on http://localhost:5000
 ```
 
@@ -87,7 +87,7 @@ Beancount 支持 `include` 语法来拓展账簿，个人采用按时间划分�
     2017-01-01 open Assets:Receivables:X ; 对 X 的应收款项
     ```
 
-  * Liabilities 负债；本人主要是信用卡和向他人借款的账户，比如：
+  * Liabilities 负债：本人主要是信用卡和向他人借款的账户，比如：
 
     ```conf
     2017-01-01 open Liabilities:Payable:X ; 对 X 的债务
@@ -184,9 +184,9 @@ CNY，差额从 Equity:Opening-Balances 来。注意两行之间差一天的时�
       Liabilities:CreditCard:JP:Rakuten -110000 JPY
     ```
 
-  * 账户结息 账户的利息肯定难以每日都记录，本人采用 `pad`+`balance` 断言，每隔一段时间结算一下。
+  * 账户结息：账户的利息肯定难以每日都记录，本人采用 `pad`+`balance` 断言，每隔一段时间结算一下。
 
-  * 分期付款 这是个常见的购买方式，需要单独设置开一个 Liabilities Account，手续费记利息支出，每个月账单出现的时候转移一下。
+  * 分期付款：这是个常见的购买方式，需要单独设置开一个 Liabilities Account，手续费记利息支出，每个月账单出现的时候转移一下。
 
 ### 核账
 
@@ -257,7 +257,7 @@ if __name__ == '__main__':
             th_index.append(th.getText())
         year, month, day = datetime.now().year, datetime.now().month, datetime.now().day
         # 根据自己定义的规则判定早餐、午餐、晚餐
-        payinfo = {'breakfirst': {'loc': '', 'type': '科大餐饮', 'value': 0.0, }, 'lunch': {'loc': '', 'type': '科大餐饮', 'value': 0.0, }, 'dinner': {'loc': '', 'type': '科大餐饮', 'value': 0.0, }, 'transferin': {'loc': '一卡通充值', 'type': '', 'value': 0.0, } }
+        payinfo = {'breakfast': {'loc': '', 'type': '科大餐饮', 'value': 0.0, }, 'lunch': {'loc': '', 'type': '科大餐饮', 'value': 0.0, }, 'dinner': {'loc': '', 'type': '科大餐饮', 'value': 0.0, }, 'transferin': {'loc': '一卡通充值', 'type': '', 'value': 0.0, } }
         flag = True
         for tr in table.findAll('tr'):
             line = []
@@ -281,9 +281,9 @@ if __name__ == '__main__':
                 elif linetime  0:
             csvinfo.append({headers[0]: today, headers[1]: payinfo['transferin']['type'], headers[2]: payinfo['transferin']
                             ['loc'], headers[3]: "%.2f" % -payinfo['transferin']['value'], headers[4]: 'Transferin'})
-        if payinfo['breakfirst']['value'] > 0:
-            csvinfo.append({headers[0]: today, headers[1]: payinfo['breakfirst']['type'], headers[2]: payinfo['breakfirst']
-                            ['loc'], headers[3]: "%.2f" % payinfo['breakfirst']['value'], headers[4]: 'Breakfirst'})
+        if payinfo['breakfast']['value'] > 0:
+            csvinfo.append({headers[0]: today, headers[1]: payinfo['breakfast']['type'], headers[2]: payinfo['breakfast']
+                            ['loc'], headers[3]: "%.2f" % payinfo['breakfast']['value'], headers[4]: 'Breakfast'})
         if payinfo['lunch']['value'] > 0:
             csvinfo.append({headers[0]: today, headers[1]: payinfo['lunch']['type'], headers[2]: payinfo['lunch']['loc'], headers[3]: "%.2f" % payinfo['lunch']['value'], headers[4]: 'Lunch'})
         if payinfo['dinner']['value'] > 0:
@@ -300,7 +300,7 @@ if __name__ == '__main__':
 记账日期| 收款人| 交易摘要 | 人民币金额 | 类别  
 ---|---|---|---|---  
 2020-07-02 | 科大餐饮 | 一卡通充值 | -200.00 | Transferin  
-2020-07-02 | 科大餐饮 | 西区芳华园餐厅 | 5.00 | Breakfirst  
+2020-07-02 | 科大餐饮 | 西区芳华园餐厅 | 5.00 | Breakfast  
 2020-07-02 | 科大餐饮 | 西区芳华园餐厅 | 10.00| Lunch  
 2020-07-02 | 科大餐饮 | 西区芳华园餐厅 | 10.00 | Dinner  
   
@@ -326,7 +326,7 @@ def dumb_USTCecard_categorizer(txn):
         return txn
 
     # Guess the account(s) of the other posting(s)
-    if 'breakfirst' in txn.narration.lower():
+    if 'breakfast' in txn.narration.lower():
         account = 'Expenses:Food:Breakfast'
     elif 'lunch' in txn.narration.lower():
         account = 'Expenses:Food:Lunch'
@@ -383,7 +383,7 @@ bean-extract ustc_card_importer.py 2020-07-02.csv
     Assets:CN:Card:USTC        200.00 CNY
     Assets:CN:Bank:BoC:C1234  -200.00 CNY
 
-2020-07-02 * "科大餐饮" "西区芳华园餐厅; Breakfirst"
+2020-07-02 * "科大餐饮" "西区芳华园餐厅; Breakfast"
     Assets:CN:Card:USTC      -5.00 CNY
     Expenses:Food:Breakfast   5.00 CNY
 
@@ -421,10 +421,7 @@ Done!
     2017-01-01 custom "fava-option" "import-config" "./importers/path/to/importer.py"
     2017-01-01 custom "fava-option" "import-dirs" "./importers/path/to/csv_tmp/"
     ```
-
-在 Fava 界面侧栏看到 Importer，并手动导入数据。
-
-注 ：Importer 在 Fava 中使用的时候 metadata 会被去除。
+	在 Fava 界面侧栏看到 Importer，并手动导入数据。注 ：Importer 在 Fava 中使用的时候 metadata 会被去除。
 
   * Fava 还支持自定义 side bar link，即：
 
