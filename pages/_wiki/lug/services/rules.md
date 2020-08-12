@@ -9,13 +9,13 @@
 
   2. 除非相关网络服务的服务条款特别说明，否则本文各项规则适用于 LUG 提供的所有网络服务。这些服务包括但不限于：  
 
-a. USTC blog space  
-b. OpenVZ 虚拟主机服务（Freeshell）  
-c. 代码托管服务（GitLab）  
-d. 虚拟专用网络服务（OpenVPN）  
-e. 软件源镜像（Mirrors）  
-f. 中国科学技术大学网络启动服务（PXE）  
-g. Time Machine 服务（TimeMachine）  
+    a. ~~USTC blog space~~  
+    b. ~~OpenVZ 虚拟主机服务（Freeshell）~~  
+    c. 代码托管服务（GitLab）  
+    d. 虚拟专用网络服务（OpenVPN）  
+    e. 软件源镜像（Mirrors）  
+    f. 中国科学技术大学网络启动服务（PXE）  
+    g. Time Machine 服务（TimeMachine）  
 
   3. 用户开始使用 LUG 网络服务时，即视为无条件同意本规则和其他相关条款。
 

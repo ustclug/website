@@ -13,4 +13,5 @@
 
 <https://git.lug.ustc.edu.cn/>
 
-注：出于存储、运维压力等方面的考虑，自 2019 年 12 月 29 日起，此服务仅限科大校内用户注册。 
+<i class="fas fa-fw fa-exclamation-circle"></i> 出于存储、运维压力等方面的考虑，自 2019 年 12 月 29 日起，此服务仅限科大校内用户注册。
+{: .notice--warning }

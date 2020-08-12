@@ -5,7 +5,7 @@
 
 ## 简介
 
-LUG FTP 对应域名为 [ftp.lug.ustc.edu.cn](ftp://ftp.lug.ustc.edu.cn/ "ftp://ftp.lug.ustc.edu.cn")。 
+LUG FTP 对应域名为 [ftp.lug.ustc.edu.cn](ftp://ftp.lug.ustc.edu.cn/)。 
 
 注意：直接在浏览器中输入这个域名可能会被识别为 FTP 协议。 
 
@@ -15,13 +15,13 @@ LUG FTP 对应域名为 [ftp.lug.ustc.edu.cn](ftp://ftp.lug.ustc.edu.cn/ "ftp://
 
 ### 使用 HTTP 协议
 
-站点链接：[https://ftp.lug.ustc.edu.cn](https://ftp.lug.ustc.edu.cn/ "https://ftp.lug.ustc.edu.cn")
+站点链接：[https://ftp.lug.ustc.edu.cn](https://ftp.lug.ustc.edu.cn/)
 
 支持匿名只读访问。请注意部分目录无法使用 HTTP 访问。 
 
 ### 使用 FTP 协议
 
-站点链接：[ftp://ftp.lug.ustc.edu.cn](ftp://ftp.lug.ustc.edu.cn/ "ftp://ftp.lug.ustc.edu.cn")
+站点链接：[ftp://ftp.lug.ustc.edu.cn](ftp://ftp.lug.ustc.edu.cn/)
 
 不支持 FTP 匿名访问。用户须使用公开帐号登陆至服务器。 
 
@@ -43,5 +43,4 @@ AFP (Apple Filing Protocol) 地址： `afp://ftp.lug.ustc.edu.cn/` ，选择 Con
 
 * * *
 
-[LUG@USTC](https://lug.ustc.edu.cn/ "https://lug.ustc.edu.cn")
-  *[FTP]: File Transfer Protocol
+[LUG@USTC](https://lug.ustc.edu.cn/)

@@ -13,4 +13,4 @@
 
 * * *
 
-[ mirrors 首页](http://mirrors.ustc.edu.cn/ "http://mirrors.ustc.edu.cn/") [科大源使用帮助](/wiki/mirrors/help "mirrors:help")
+[mirrors 首页](http://mirrors.ustc.edu.cn/ "http://mirrors.ustc.edu.cn/") [科大源使用帮助](/wiki/mirrors/help "mirrors:help")

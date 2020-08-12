@@ -34,7 +34,7 @@ grub-mkstandalone --compress=xz -O x86_64-efi --locales= --fonts= --themes= -o g
 
 还可以接着用下面命令制作一个 FAT 软盘镜像，有些服务器的 IPMI 支持远程加载软盘镜像，这样就可以方便地远程维护服务器了：
 
-``` shell
+```shell
 truncate -s 1474560 floppy.img
 mformat -f 1440 :: -i floppy.img
 mmd '::/EFI' '::/EFI/BOOT' -i floppy.img
