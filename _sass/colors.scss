@@ -1,3 +1,19 @@
+:root {
+  --bg-microsoft-opacity: 0.1;
+}
+
+$fg-microsoft-opacity: 62%;
+.bg-microsoft-red { background-color: rgba(242, 80, 34, var(--bg-microsoft-opacity)) !important; }
+.bg-microsoft-green { background-color: rgba(127, 186, 0, var(--bg-microsoft-opacity)) !important; }
+.bg-microsoft-blue { background-color: rgba(0, 164, 239, var(--bg-microsoft-opacity)) !important; }
+.bg-microsoft-yellow { background-color: rgba(255, 185, 0, var(--bg-microsoft-opacity)) !important; }
+.fg-microsoft-red { color: mix(#F25022, $text-color, $fg-microsoft-opacity) !important; }
+.fg-microsoft-green { color: mix(#7FBA00, $text-color, $fg-microsoft-opacity) !important; }
+.fg-microsoft-blue { color: mix(#00A4EF, $text-color, $fg-microsoft-opacity) !important; }
+.fg-microsoft-yellow { color: mix(#FFB900, $text-color, $fg-microsoft-opacity) !important; }
+
+// These are recognized CSS color names, generated programatically, don't modify!
+
 .text-aliceblue { color: aliceblue !important; }
 .text-antiquewhite { color: antiquewhite !important; }
 .text-aqua { color: aqua !important; }

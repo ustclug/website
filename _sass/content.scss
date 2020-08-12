@@ -73,6 +73,7 @@ h5 {
   .nav-right {
     background-color: #eee;
     border-radius: 6px;
+    overflow: hidden;
   }
 }
 
@@ -91,10 +92,10 @@ h5 {
 
     a {
       flex: 1 0 0;
-      color: #666;
+      color: #444;
       display: inline-block;
       text-align: center;
-      margin: 1rem auto;
+      padding: 1rem 0;
       transition: color 0.3s ease;
       font-size: 0.8rem;
 

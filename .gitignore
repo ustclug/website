@@ -9,3 +9,6 @@ _site
 .jekyll-cache
 .jekyll-metadata
 .sass-cache
+
+# Our static content
+/static/
