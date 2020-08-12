@@ -13,7 +13,11 @@
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url | append: '?v=' | append: site.git.last_commit.short_sha }}">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" media="invalid" onload="this.media='all'">
+{% if jekyll.environment == 'production' %}
+  <link rel="stylesheet" href="/assets/fontawesome/latest/css/pro.min.css" media="invalid" onload="this.media='all'">
+{% else %}
+  <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/latest/css/pro.min.css">
+{% endif %}
 
 <!--[if IE]>
   <style>
