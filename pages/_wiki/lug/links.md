@@ -15,7 +15,7 @@
 
 ## 姊妹社团
 
-* [清华大学 TUNA 协会](https://www.tuna.moe/)
+* [清华大学 TUNA 协会](https://tuna.moe/)
 
 ## 开源社区
 
