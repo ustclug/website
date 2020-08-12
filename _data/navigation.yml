@@ -1,5 +1,5 @@
 main:
-  - title: '<i class="fad fa-fw fa-table"></i> Wiki'
+  - title: '<i class="fad fa-fw fa-star-shooting"></i> Wiki'
     url: /wiki/
   - title: '<i class="fad fa-fw fa-newspaper"></i> News'
     url: /news/
