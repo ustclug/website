@@ -4,24 +4,31 @@
       使用者，搭建信息交流共享的平台，宣传自由软件的价值，提高自由软件社区文化氛围，推广自由软件的应用。</p>
   </div>
 
-  <div class="footer-block footer__contact">
-    <ul>
-      <li>
-        <a href="{{ "/wiki/intro/" | relative_url }}"><i class="fas fa-fw fa-address-card"></i> 关于我们</a>
-      </li>
-      <li>
-        <a href="{{ "/wiki/lug/contact/" | relative_url }}"><i class="fas fa-fw fa-phone-alt"></i> 联系我们</a>
-      </li>
-      <li>
-        <a href="{{ "/wiki/lug/contribute/" | relative_url }}"><i class="fas fa-fw fa-users"></i> 加入我们</a>
-      </li>
-      <li>
-        <a href="https://github.com/{{ site.repository }}"><i class="fas fa-fw fa-folder-open"></i> 网站源码</a>
-      </li>
-    </ul>
-  </div>
+  <div class="footer-block footer__extras">
+    <div class="footer__contact">
+      <ul>
+        <li>
+          <a href="/wiki/intro/"><i class="fad fa-fw fa-address-card"></i> 关于我们</a>
+        </li>
+        <li>
+          <a href="/wiki/lug/contact/"><i class="fas fa-fw fa-phone-alt"></i> 联系我们</a>
+        </li>
+        <li>
+          <a href="/wiki/lug/contribute/" ><i class="fad fa-fw fa-users"></i> 加入我们</a>
+        </li>
+        <li>
+          <a href="https://github.com/{{ site.repository }}"><i class="fab fa-fw fa-github"></i> 本站仓库</a>
+        </li>
+      </ul>
+    </div>
 
-  <div class="footer-block footer__logo">
-    <img src="https://ftp.lug.ustc.edu.cn/misc/logo-white.svg" width="33%" />
+    <div class="footer__logo">
+      <div class="footer__logo-image">
+        <img src="https://ftp.lug.ustc.edu.cn/misc/logo-white.svg" />
+      </div>
+      <div class="footer__logo-text">
+        <!-- a href="http://www.beian.miit.gov.cn" target="_blank">皖ICP备05002528号</a -->
+      </div>
+    </div>
   </div>
 </div>
