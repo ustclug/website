@@ -49,7 +49,7 @@ jobs:
         git push
         popd &>/dev/null
     - name: Call webhook
-      shell: ruby -e
+      shell: 'ruby -e {0}'
       env:
         WEBHOOK_SECRET: ${{ secrets.WEBHOOK_SECRET }}
       run: |
