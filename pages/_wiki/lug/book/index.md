@@ -68,7 +68,7 @@ LUG购置 | 借出2本
 Professional Linux Kernel Architecture| 莫尔勒| 149.00| LUG购置| -  
 [深入理解Linux内核（第三版，中文版）](http://book.douban.com/subject/2287506/ "http://book.douban.com/subject/2287506/")| Daniel P. Bovet| 98| 2本，LUG购置，stephen捐赠| -  
 深入理解Linux内核 第二版| Daniel P. Bovet| 79| 网友捐赠| -  
-[手把手教你构建自己的Linux系统（1CD）](http://www.ptpress.com.cn/Book.aspx?id=19683 "http://www.ptpress.com.cn/Book.aspx?id=19683")| 孙海勇| 65| 网友捐赠| -  
+[手把手教你构建自己的Linux系统（1CD）](https://book.douban.com/subject/5372326/ "https://book.douban.com/subject/5372326/")| 孙海勇| 65| 网友捐赠| -  
 Linux设备驱动程序 第二版| -| 69| 网友捐赠| -  
 [Linux设备驱动开发技术及应用](http://www.china-pub.com/41602 "http://www.china-pub.com/41602")| 俞永昌| 85| LUG购置| -  
 [精通Linux驱动程序开发](http://book.douban.com/subject/3700970/ "http://book.douban.com/subject/3700970/")| Venkateswaran, S| 99| LUG购置| -  
