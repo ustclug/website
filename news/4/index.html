@@ -40,8 +40,8 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=0db54053">
-    <link rel="stylesheet" href="/assets/fontawesome/latest/css/pro.min.css" media="invalid" onload="this.media='all'">
+    <link rel="stylesheet" href="/assets/css/main.css?v=692aa780">
+    <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
       <style>
         /* old IE unsupported flexbox fixes */
@@ -227,24 +227,31 @@
             <p>中国科学技术大学 Linux 用户协会是由中国科学技术大学在校的 GNU/Linux 爱好者发起并组成的团体，旨在联合科大的 GNU/Linux
               使用者，搭建信息交流共享的平台，宣传自由软件的价值，提高自由软件社区文化氛围，推广自由软件的应用。</p>
           </div>
-          <div class="footer-block footer__contact">
-            <ul>
-              <li>
-                <a href="/wiki/intro/"><i class="fas fa-fw fa-address-card"></i> 关于我们</a>
-              </li>
-              <li>
-                <a href="/wiki/lug/contact/"><i class="fas fa-fw fa-phone-alt"></i> 联系我们</a>
-              </li>
-              <li>
-                <a href="/wiki/lug/contribute/"><i class="fas fa-fw fa-users"></i> 加入我们</a>
-              </li>
-              <li>
-                <a href="https://github.com/ustclug/website"><i class="fas fa-fw fa-folder-open"></i> 网站源码</a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer-block footer__logo">
-            <img src="https://ftp.lug.ustc.edu.cn/misc/logo-white.svg" width="33%" />
+          <div class="footer-block footer__extras">
+            <div class="footer__contact">
+              <ul>
+                <li>
+                  <a href="/wiki/intro/"><i class="fad fa-fw fa-address-card"></i> 关于我们</a>
+                </li>
+                <li>
+                  <a href="/wiki/lug/contact/"><i class="fas fa-fw fa-phone-alt"></i> 联系我们</a>
+                </li>
+                <li>
+                  <a href="/wiki/lug/contribute/" ><i class="fad fa-fw fa-users"></i> 加入我们</a>
+                </li>
+                <li>
+                  <a href="https://github.com/ustclug/website"><i class="fab fa-fw fa-github"></i> 本站仓库</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__logo">
+              <div class="footer__logo-image">
+                <img src="https://ftp.lug.ustc.edu.cn/misc/logo-white.svg" />
+              </div>
+              <div class="footer__logo-text">
+                <!-- a href="http://www.beian.miit.gov.cn" target="_blank">皖ICP备05002528号</a -->
+              </div>
+            </div>
           </div>
         </div>
       </footer>
