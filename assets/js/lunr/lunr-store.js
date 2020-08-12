@@ -540,7 +540,7 @@ var store = [{
 "teaser": null
 },{
 "title": "Join us",
-"excerpt":"加入 LUG   如果你是中国科学技术大学校内学生，欢迎通过学校统一组织的社团招新流程注册成为 LUG 会员。   在非招新活动期间，你也可以将自己的 真实姓名，学号，性别，联系电话，邮箱 通过校内邮箱发送至我们（详见联系我们）登记注册。   在登记信息后，你就会收到我们每次活动的短信通知，也欢迎通过以下方式与我们取得联系。   与LUG取得联系   详见联系我们   参与LUG活动   详见LUG活动   参与LUG项目           在我们的邮件列表进行交流。            在LUG Gitlab 与 GitHub 中为 LUG 项目贡献代码。            联系管理员以加入服务器维护小组。       我们的issue tracker: https://github.com/ustclug/discussions  ","categories": [],
+"excerpt":"加入 LUG   如果你是中国科学技术大学校内学生，欢迎通过学校统一组织的社团招新流程注册成为 LUG 会员。   在非招新活动期间，你也可以将自己的 真实姓名，学号，性别，联系电话，邮箱 通过校内邮箱发送至我们（详见联系我们）登记注册。   在登记信息后，你就会收到我们每次活动的短信通知，也欢迎通过以下方式与我们取得联系。   与 LUG 取得联系   详见联系我们   参与 LUG 活动   详见LUG活动   参与 LUG 项目           在我们的邮件列表进行交流。            在LUG Gitlab 与 GitHub 中为 LUG 项目贡献代码。            联系管理员以加入服务器维护小组。       我们的issue tracker: https://github.com/ustclug/discussions  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/lug/contribute/",
 "teaser": null
@@ -617,10 +617,10 @@ var store = [{
 "url": "https://lug.ustc.edu.cn//wiki/lug/finance/donate_lookup/",
 "teaser": null
 },{
-"title": "Index",
-"excerpt":"    ","categories": [],
+"title": "财务报告",
+"excerpt":"捐赠记录 捐赠方式请见 LUG 官网。 本表记载 2018 年换届后的捐赠记录，根据 LUG 电子账册自动生成。 之前的记录见历史存档。 日期 捐赠者 数额 用途 正在加载…… ${i.date} ${i.payee} ${i.amount} ${i.account} 服务器维护专款 本表记载 2018 年换届后的服务器维护专款收支记录，根据 LUG 电子账册自动生成。 之前的记录见历史存档。 由于换届前的服务器维护专款支出情况记载不明，在此将 2018 年换届时的所有捐款余额均记为服务器维护专款。 日期 数额 事由 正在加载…… ${i.date} ${i.amount} ${i.payee} 通用经费 本表记载 2018 年换届后的通用经费收支记录，根据 LUG 电子账册自动生成。 之前的记录见历史存档。 日期 数额 事由 正在加载…… ${i.date} ${i.amount} ${i.payee}...","categories": [],
 "tags": [],
-"url": "https://lug.ustc.edu.cn//wiki/lug/finance/",
+"url": "https://lug.ustc.edu.cn//finance/",
 "teaser": null
 },{
 "title": "友情链接",
@@ -654,13 +654,13 @@ var store = [{
 "teaser": null
 },{
 "title": "GitLab",
-"excerpt":"        如果你在做课程实验……项目代码往哪里放？                       如果你们是一个小团队……把代码放在哪里才方便成员访问，还能直观地看到项目的进展？                        如果你想拥有一套专业的项目管理系统，却不会搭建服务器……                   一切尽在 GitLab！这是一个神奇的软件，让我们在校园里也能享受像 GitHub 一样的代码托管和项目管理服务，不仅访问速度快，而且支持私有项目。   https://git.lug.ustc.edu.cn/   注：出于存储、运维压力等方面的考虑，自 2019 年 12 月 29 日起，此服务仅限科大校内用户注册。  ","categories": [],
+"excerpt":"        如果你在做课程实验……项目代码往哪里放？                       如果你们是一个小团队……把代码放在哪里才方便成员访问，还能直观地看到项目的进展？                        如果你想拥有一套专业的项目管理系统，却不会搭建服务器……                   一切尽在 GitLab！这是一个神奇的软件，让我们在校园里也能享受像 GitHub 一样的代码托管和项目管理服务，不仅访问速度快，而且支持私有项目。   https://git.lug.ustc.edu.cn/    出于存储、运维压力等方面的考虑，自 2019 年 12 月 29 日起，此服务仅限科大校内用户注册。  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/lug/services/gitlab/",
 "teaser": null
 },{
 "title": "网络服务列表",
-"excerpt":"S 级服务 开源镜像站（HTTP 访问）：https://mirrors.ustc.edu.cn 权威 DNS：ns-a.ustclug.org. ns-b.ustclug.org. ns-c.ustclug.org. A 级服务 代码托管平台：https://git.lug.ustc.edu.cn 回校访问服务 防污染 DNS（校内） B 级服务 主页 (本wiki)：https://lug.ustc.edu.cn 网络启动：pxe.ustc.edu.cn 图书馆透明计算系统 VPN 在线申请系统（校内） 轻量级网络加速服务（校内） 开源镜像站（定时同步；rsync、FTP访问；帮助页面）：https://mirrors.ustc.edu.cn 反向代理：*.proxy.ustclug.org 服务器统一认证：ldap.lug.ustc.edu.cn 内网 VPN LUG Planet（社团博客）：https://planet.ustclug.org C 级服务 LUG FTP：https://ftp.lug.ustc.edu.cn Ganglia 监控：https://status.ustclug.org Grafana 监控：https://monitor.ustclug.org LDAP 配置管理系统（GOsa²） 服务等级与服务标准 S 级：最优先保障服务可用性，24小时故障监控，故障自动转移 A 级：优先保障服务可用性，24小时故障监控，每日备份 B 级：关键数据备份 C 级：非保障类服务 未列入本列表的服务：实验性服务...","categories": [],
+"excerpt":"S 级服务 开源镜像站（HTTP 访问）：https://mirrors.ustc.edu.cn 权威 DNS：ns-a.ustclug.org. ns-b.ustclug.org. ns-c.ustclug.org. A 级服务 代码托管平台：https://git.lug.ustc.edu.cn 回校访问服务 防污染 DNS（校内） B 级服务 主页 (本wiki)：https://lug.ustc.edu.cn 网络启动：pxe.ustc.edu.cn 图书馆透明计算系统 VPN 在线申请系统（校内） 轻量级网络加速服务（校内） 开源镜像站（定时同步；rsync、FTP访问；帮助页面）：https://mirrors.ustc.edu.cn 反向代理：*.proxy.ustclug.org 服务器统一认证：ldap.lug.ustc.edu.cn 内网 VPN 旧的 LUG Planet（社团博客）：https://planet.ustclug.org C 级服务 LUG FTP：https://ftp.lug.ustc.edu.cn Ganglia 监控：https://status.ustclug.org Grafana 监控：https://monitor.ustclug.org LDAP 配置管理系统（GOsa²） 服务等级与服务标准 S 级：最优先保障服务可用性，24 小时故障监控，故障自动转移 A 级：优先保障服务可用性，24 小时故障监控，每日备份 B 级：关键数据备份...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/lug/services/",
 "teaser": null
@@ -672,7 +672,7 @@ var store = [{
 "teaser": null
 },{
 "title": "开源软件镜像服务",
-"excerpt":"科大 LUG 自成立起便在 2003 年通过 BBS 网上筹款的方式搭建了当时教育网内极少数的几个 Debian GNU/Linux 的镜像源（debian.ustc.edu.cn），随后又在其上添加了 Ubuntu Linux 的镜像。2008年，借助吴峰光师兄捐助的机器，搭建了科大的开源镜像服务器（oss.ustc.edu.cn），以吸纳更多的开源软件和 Linux 发行版。尽管如此，我们的服务器仍然有些不堪重负，服务供不应求。   2010 年底，在网络中心张焕杰老师的帮助下，我们获得了新的服务器，遂将之前两个镜像站的资源以及张老师自己搭建的 CentOS Linux 镜像整合到一起，形成了“科大镜像站”（mirrors.ustc.edu.cn）。新网站正式对外发布时，好评如潮。随后我们又成功申请到了Debian GNU/Linux 的中国官方镜像资格认证等多个官方镜像资格认证。   我们将一如既往的做好镜像服务器的维护工作，争取为大家提供更新更好的服务，使参与维护的同学得到更好的锻炼。   详细介绍      mirrors 首页 科大源使用帮助  ","categories": [],
+"excerpt":"科大 LUG 自成立起便在 2003 年通过 BBS 网上筹款的方式搭建了当时教育网内极少数的几个 Debian GNU/Linux 的镜像源（debian.ustc.edu.cn），随后又在其上添加了 Ubuntu Linux 的镜像。2008年，借助吴峰光师兄捐助的机器，搭建了科大的开源镜像服务器（oss.ustc.edu.cn），以吸纳更多的开源软件和 Linux 发行版。尽管如此，我们的服务器仍然有些不堪重负，服务供不应求。   2010 年底，在网络中心张焕杰老师的帮助下，我们获得了新的服务器，遂将之前两个镜像站的资源以及张老师自己搭建的 CentOS Linux 镜像整合到一起，形成了“科大镜像站”（mirrors.ustc.edu.cn）。新网站正式对外发布时，好评如潮。随后我们又成功申请到了Debian GNU/Linux 的中国官方镜像资格认证等多个官方镜像资格认证。   我们将一如既往的做好镜像服务器的维护工作，争取为大家提供更新更好的服务，使参与维护的同学得到更好的锻炼。   详细介绍     mirrors 首页 科大源使用帮助  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/lug/services/mirrors/",
 "teaser": null
@@ -683,14 +683,8 @@ var store = [{
 "url": "https://lug.ustc.edu.cn//wiki/lug/services/pxe/",
 "teaser": null
 },{
-"title": "LUG 反向代理服务",
-"excerpt":"域名对应列表                  downloads.openwrt.org       openwrt.mirrors.ustc.edu.cn                 registry-1.docker.io       docker.mirrors.ustc.edu.cn                 registry.npmjs.org       npmreg.mirrors.ustc.edu.cn                 www.npmjs.com       npm.mirrors.ustc.edu.cn                 fonts.gstatic.com       fonts-gstatic.lug.ustc.edu.cn                 fonts.googleapis.com       fonts.lug.ustc.edu.cn                 ajax.googleapis.com       ajax.lug.ustc.edu.cn                 storage.googleapis.com       storage-googleapis.lug.ustc.edu.cn                 themes.googleusercontent.com       google-themes.lug.ustc.edu.cn                 gerrit.googlesource.com       gerrit-googlesource.lug.ustc.edu.cn                 secure.gravatar.com       gravatar.lug.ustc.edu.cn          ","categories": [],
-"tags": [],
-"url": "https://lug.ustc.edu.cn//wiki/lug/services/revproxy/",
-"teaser": null
-},{
 "title": "LUG 网络服务总则",
-"excerpt":"〇、总则 中国科学技术大学 Linux 用户协会（下称 LUG 或“我们”）向中国科大师生和 Linux 社区提供了一系列网络服务。用户在使用 LUG 网络服务之前，应当仔细阅读并同意本文各项条款。 除非相关网络服务的服务条款特别说明，否则本文各项规则适用于 LUG 提供的所有网络服务。这些服务包括但不限于： a. USTC blog space b. OpenVZ 虚拟主机服务（Freeshell） c. 代码托管服务（GitLab） d. 虚拟专用网络服务（OpenVPN） e. 软件源镜像（Mirrors） f. 中国科学技术大学网络启动服务（PXE） g. Time Machine 服务（TimeMachine） 用户开始使用 LUG 网络服务时，即视为无条件同意本规则和其他相关条款。 一、服务承诺 LUG 及其成员的行为受中华人民共和国法律法规、中国科学技术大学校规校纪的约束。 LUG 网络服务均为非营利性，我们不会以任何名义向用户强制收取任何费用。 我们会尽力保证服务稳定，但不对服务质量作任何保证。 我们承诺不会主动将用户提交的隐私数据泄露给第三方，用户隐私受到法律保护。 对用户通过 LUG 网络服务发表的合法原创内容，其著作权属于用户。 当 LUG 网络服务出现重大变更时，我们会通过用户提供的联系方式通知用户。 二、用户义务 用户不得利用...","categories": [],
+"excerpt":"〇、总则 中国科学技术大学 Linux 用户协会（下称 LUG 或“我们”）向中国科大师生和 Linux 社区提供了一系列网络服务。用户在使用 LUG 网络服务之前，应当仔细阅读并同意本文各项条款。 除非相关网络服务的服务条款特别说明，否则本文各项规则适用于 LUG 提供的所有网络服务。这些服务包括但不限于： a. ~~USTC blog space~~ b. ~~OpenVZ 虚拟主机服务（Freeshell）~~ c. 代码托管服务（GitLab） d. 虚拟专用网络服务（OpenVPN） e. 软件源镜像（Mirrors） f. 中国科学技术大学网络启动服务（PXE） g. Time Machine 服务（TimeMachine） 用户开始使用 LUG 网络服务时，即视为无条件同意本规则和其他相关条款。 一、服务承诺 LUG 及其成员的行为受中华人民共和国法律法规、中国科学技术大学校规校纪的约束。 LUG 网络服务均为非营利性，我们不会以任何名义向用户强制收取任何费用。 我们会尽力保证服务稳定，但不对服务质量作任何保证。 我们承诺不会主动将用户提交的隐私数据泄露给第三方，用户隐私受到法律保护。 对用户通过 LUG 网络服务发表的合法原创内容，其著作权属于用户。 当 LUG 网络服务出现重大变更时，我们会通过用户提供的联系方式通知用户。 二、用户义务 用户不得利用...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/lug/services/rules/",
 "teaser": null
@@ -702,7 +696,7 @@ var store = [{
 "teaser": null
 },{
 "title": "开源镜像使用帮助列表",
-"excerpt":"此处的帮助文档即将废弃，新的内容请访问 https://mirrors.ustc.edu.cn/ 反向代理 使用帮助 桌面环境镜像 KDE 镜像使用帮助 语言镜像 CPAN 镜像使用帮助 CRAN 镜像使用帮助 CTAN 镜像使用帮助 CTeX 套装使用帮助 npm 镜像使用帮助 PyPI 镜像使用帮助 Rust Crates 镜像使用帮助 Rust 静态文件镜像使用帮助 软件镜像 Docker 镜像使用帮助 Eclipse 镜像使用帮助 Kodi(XBMC) 镜像使用帮助 Infinality 镜像使用帮助 Homebrew Bottles 镜像使用帮助 Git 仓库镜像 Android (AOSP) 镜像使用帮助 Linux 内核镜像使用帮助 Homebrew Git仓库镜像使用帮助 发行版镜像 AOSC OS 镜像使用帮助...","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/     科大镜像源使用帮助由科大 LUG 成员与许多热心的朋友们共同编写。   本页面及各镜像源帮助页面源代码现托管在 GitHub 上，欢迎各位协助完善。 如果您有添加新镜像的建议与需求，请在 GitHub 上提交 issue.     科大开源软件镜像服务简介  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/",
 "teaser": null
@@ -1020,7 +1014,7 @@ var store = [{
 "teaser": null
 },{
 "title": "中国科学技术大学开源软件镜像",
-"excerpt":"mirrors.ustc.edu.cn 由中国科学技术大学、中国科学技术大学网络信息中心支持，USTC LUG 维护。 机器域名 IPv4/v6: mirrors.ustc.edu.cn （能解析出教育网/电信/移动/v6地址） v4only: mirrors4.ustc.edu.cn （能解析出教育网/电信/移动地址） v6only: mirrors6.ustc.edu.cn 在有些地方 DNS 会解析出电信地址，但使用教育网地址访问更快，这时可以通过修改 hosts 指定强制使用教育网地址访问。 教育网IP：202.38.95.110 电 信IP：202.141.160.110 移 动IP：202.141.176.110 IPv6： 2001:da8:d800:95::110 支持的访问方式 http https ftp rsync- 部分 为什么？ 提供的服务 请访问 mirrors 主页以获取完整列表。 使用帮助 请使用开源镜像使用帮助列表，或点击主页源列表旁边的“Help”链接。 欢迎您协助我们更新使用帮助，请访问 LUG 的 GitHub 项目。我们对您的帮助表示感谢。 状态监控 在首页点击页面上方的同步状态链接，可以查看当前各镜像的同步状态，包括 成功与否/上游源/镜像体积等。 大家如果知道更好（更新、更快）的上游源，请联系我们。 如果同步出现故障，服务器的管理员会收到邮件通知，以尽快处理，所以大家看到状态 监控页面中有显示同步失败的条目时，无需联系我们。 如果同步状态上显示同步正常，但实际使用过程中发现镜像有问题，请联系我们。...","categories": [],
+"excerpt":"mirrors.ustc.edu.cn 由中国科学技术大学、中国科学技术大学网络信息中心支持，USTC LUG 维护。 机器域名 IPv4/v6: mirrors.ustc.edu.cn （能解析出教育网/电信/移动/v6地址） v4-only: ipv4.mirrors.ustc.edu.cn （能解析出教育网/电信/移动地址） v6-only: ipv6.mirrors.ustc.edu.cn 在有些地方 DNS 会解析出电信地址，但使用教育网地址访问更快，这时可以通过修改 hosts 指定强制使用教育网地址访问。 教育网IP：202.38.95.110 电 信IP：202.141.160.110 移 动IP：202.141.176.110 IPv6：2001:da8:d800:95::110 支持的访问方式 http、https、ftp rsync - 部分 为什么？ 提供的服务 请访问 mirrors 主页以获取完整列表。 使用帮助 请使用开源镜像使用帮助列表，或点击主页源列表旁边的“Help”链接。 欢迎您协助我们更新使用帮助，请访问 LUG 的 GitHub 项目。我们对您的帮助表示感谢。 状态监控 在首页点击页面上方的同步状态链接，可以查看当前各镜像的同步状态，包括 成功与否/上游源/镜像体积等。 大家如果知道更好（更新、更快）的上游源，请联系我们。 如果同步出现故障，服务器的管理员会收到邮件通知，以尽快处理，所以大家看到状态 监控页面中有显示同步失败的条目时，无需联系我们。 如果同步状态上显示同步正常，但实际使用过程中发现镜像有问题，请联系我们。 服务器维护文档 Bad...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/server/mirrors/",
 "teaser": null

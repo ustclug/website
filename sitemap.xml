@@ -274,7 +274,7 @@
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/greenwarm/xen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8/</loc>
-      <lastmod>2020-08-12T20:55:04+08:00</lastmod>
+      <lastmod>2020-08-12T21:16:02+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/</loc>
@@ -362,7 +362,7 @@
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/lug/contribute/</loc>
-      <lastmod>2020-08-09T18:18:19+08:00</lastmod>
+      <lastmod>2020-08-12T21:15:33+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/lug/events/101/</loc>
@@ -413,8 +413,8 @@
       <lastmod>2020-08-09T15:07:59+08:00</lastmod>
     </url>
     <url>
-      <loc>https://lug.ustc.edu.cn//wiki/lug/finance/</loc>
-      <lastmod>2020-08-09T18:46:14+08:00</lastmod>
+      <loc>https://lug.ustc.edu.cn//finance/</loc>
+      <lastmod>2020-08-12T21:15:33+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/lug/links/</loc>
@@ -434,15 +434,15 @@
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/lug/services/ftp/</loc>
-      <lastmod>2020-08-09T15:07:59+08:00</lastmod>
+      <lastmod>2020-08-12T21:15:33+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/lug/services/gitlab/</loc>
-      <lastmod>2020-08-09T15:07:59+08:00</lastmod>
+      <lastmod>2020-08-12T21:15:33+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/lug/services/</loc>
-      <lastmod>2020-08-09T18:46:14+08:00</lastmod>
+      <lastmod>2020-08-12T21:15:33+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/lug/services/lib/</loc>
@@ -450,19 +450,15 @@
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/lug/services/mirrors/</loc>
-      <lastmod>2020-08-09T15:43:43+08:00</lastmod>
+      <lastmod>2020-08-12T21:15:33+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/lug/services/pxe/</loc>
       <lastmod>2020-08-09T18:18:19+08:00</lastmod>
     </url>
     <url>
-      <loc>https://lug.ustc.edu.cn//wiki/lug/services/revproxy/</loc>
-      <lastmod>2020-08-09T15:07:59+08:00</lastmod>
-    </url>
-    <url>
       <loc>https://lug.ustc.edu.cn//wiki/lug/services/rules/</loc>
-      <lastmod>2020-08-09T15:07:59+08:00</lastmod>
+      <lastmod>2020-08-12T21:15:33+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/lug/sns/</loc>
@@ -470,7 +466,7 @@
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/</loc>
-      <lastmod>2020-08-09T18:32:14+08:00</lastmod>
+      <lastmod>2020-08-12T21:15:33+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/anthon/</loc>
@@ -682,11 +678,11 @@
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/server/mirrors/</loc>
-      <lastmod>2020-08-09T18:46:14+08:00</lastmod>
+      <lastmod>2020-08-12T21:15:33+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/pxe/</loc>
-      <lastmod>2020-08-12T20:21:40+08:00</lastmod>
+      <lastmod>2020-08-12T21:15:33+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/user/boj/linkers-and-loaders/</loc>
@@ -711,10 +707,6 @@
     <url>
       <loc>https://lug.ustc.edu.cn//categories/</loc>
       <lastmod>2020-07-29T15:43:19+08:00</lastmod>
-    </url>
-    <url>
-      <loc>https://lug.ustc.edu.cn//finance/</loc>
-      <lastmod>2020-08-09T16:58:43+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//</loc>
