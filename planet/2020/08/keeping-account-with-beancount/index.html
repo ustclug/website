@@ -207,11 +207,11 @@
                     示例账本</a> ，对应的
                   Beancount 源代码可以在 <a href="https://bitbucket.org/blais/beancount/src/default/examples/">Bitbucket
                     上下载</a>。</del>
-                本文的示例账本以及可视化可以在该<a href="https://git.lug.ustc.edu.cn/Charles/ecard_beancount">仓库</a>查看。</p>
-              <p>克隆该仓库，在命令行中使用 <code class="language-plaintext highlighter-rouge">fava main.beancout</code>。</p>
+                本文的示例账本以及可视化可以在该<a href="https://git.lug.ustc.edu.cn/Charles/ecard_beancount/-/tree/master">仓库</a>查看。</p>
+              <p>克隆该仓库，在命令行中使用 <code class="language-plaintext highlighter-rouge">fava main.beancount</code>。</p>
               <div class="language-console highlighter-rouge">
                 <div class="highlight">
-                  <pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>fava main.beancout
+                  <pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>fava main.beancount
 <span class="go">Running Fava on http://localhost:5000
 </span></code></pre>
                 </div>
@@ -225,22 +225,22 @@
 ├── 2018
 │   └── ...
 ├── 2019
-│   └── 01.bean
-│   └── 02.bean
-│   └── 03.bean
-│   └── 04.bean ; 注释用分号
-│   └── xx.event.bean ; 单独针对某一特别事件的账本，比如旅游
-│   └── 05.bean
-│   └── 06.bean
-│   └── 07.bean
-├── accounts.bean ; 记录初始账户信息
-├── main.bean ; 主文件
+│   └── 01.beancount
+│   └── 02.beancount
+│   └── 03.beancount
+│   └── 04.beancount ; 注释用分号
+│   └── xx.event.beancount ; 单独针对某一特别事件的账本，比如旅游
+│   └── 05.beancount
+│   └── 06.beancount
+│   └── 07.beancount
+├── accounts.beancount ; 记录初始账户信息
+├── main.beancount ; 主文件
 </code></pre>
                 </div>
               </div>
               <h2 id="账本书写">账本书写</h2>
               <h3 id="账户信息设置">账户信息设置</h3>
-              <p>首先要定义账户，即文件 <code class="language-plaintext highlighter-rouge">accounts.bean</code>，Beancount 系统中预定义了五个分类：</p>
+              <p>首先要定义账户，即文件 <code class="language-plaintext highlighter-rouge">accounts.beancount</code>，Beancount 系统中预定义了五个分类：</p>
               <ul>
                 <li>
                   <p>Assets 资产：本人按照<code class="language-plaintext highlighter-rouge">账户类型:国家:金融机构名字:具体账户</code>的策略划分，时间是开户时间，比如：</p>
@@ -262,7 +262,7 @@
                         </div>
                 </li>
                 <li>
-                  <p>Liabilities 负债；本人主要是信用卡和向他人借款的账户，比如：</p>
+                  <p>Liabilities 负债：本人主要是信用卡和向他人借款的账户，比如：</p>
                   <div class="language-conf highlighter-rouge">
                     <div class="highlight">
                       <pre class="highlight"><code><span class="m">2017</span>-<span class="m">01</span>-<span class="m">01</span> <span class="n">open</span> <span class="n">Liabilities</span>:<span class="n">Payable</span>:<span class="n">X</span> ; 对 <span class="n">X</span> 的债务
@@ -312,18 +312,18 @@
                 </li>
               </ul>
               <h3 id="主文件设置">主文件设置</h3>
-              <p>然后设置主文件 <code class="language-plaintext highlighter-rouge">main.bean</code> 内容，主文件任务是设置全局变量，然后去涵盖各个子账本：</p>
+              <p>然后设置主文件 <code class="language-plaintext highlighter-rouge">main.beancount</code> 内容，主文件任务是设置全局变量，然后去涵盖各个子账本：</p>
               <div class="language-conf highlighter-rouge">
                 <div class="highlight">
                   <pre class="highlight"><code><span class="n">option</span> <span class="s2">"title"</span> <span class="s2">"取个霸气的名字吧"</span> ; 账簿名称
 <span class="n">option</span> <span class="s2">"operating_currency"</span> <span class="s2">"CNY"</span> ; 账簿主货币
 <span class="n">option</span> <span class="s2">"operating_currency"</span> <span class="s2">"USD"</span> ; 可以添加多个主货币
 
-<span class="n">include</span> <span class="s2">"accounts.bean"</span> ; 包含账户信息
+<span class="n">include</span> <span class="s2">"accounts.beancount"</span> ; 包含账户信息
 
 ; 每个月的账本
-<span class="n">include</span> <span class="s2">"2020/06.bean"</span>
-<span class="n">include</span> <span class="s2">"2020/07.bean"</span>
+<span class="n">include</span> <span class="s2">"2020/06.beancount"</span>
+<span class="n">include</span> <span class="s2">"2020/07.beancount"</span>
 </code></pre>
                 </div>
               </div>
@@ -377,10 +377,10 @@
                         </div>
                 </li>
                 <li>
-                  <p>账户结息 账户的利息肯定难以每日都记录，本人采用 <code class="language-plaintext highlighter-rouge">pad</code>+<code class="language-plaintext highlighter-rouge">balance</code> 断言，每隔一段时间结算一下。</p>
+                  <p>账户结息：账户的利息肯定难以每日都记录，本人采用 <code class="language-plaintext highlighter-rouge">pad</code>+<code class="language-plaintext highlighter-rouge">balance</code> 断言，每隔一段时间结算一下。</p>
                 </li>
                 <li>
-                  <p>分期付款 这是个常见的购买方式，需要单独设置开一个 Liabilities Account，手续费记利息支出，每个月账单出现的时候转移一下。</p>
+                  <p>分期付款：这是个常见的购买方式，需要单独设置开一个 Liabilities Account，手续费记利息支出，每个月账单出现的时候转移一下。</p>
                 </li>
               </ul>
               <h3 id="核账">核账</h3>
@@ -388,7 +388,7 @@
                 里可以看到各个账户当前的状况，如果和实际的账户金额有出入的话就需要点进对应账户查看每笔交易的情况，看看是否漏记或者错记。</p>
               <h2 id="用-importer-自动记录一卡通消费">用 Importer 自动记录一卡通消费</h2>
               <h3 id="综述">综述</h3>
-              <p><code class="language-plaintext highlighter-rouge">Importer</code> 个人理解的作用是将整理好的账单文本转化为 Bean 记录的形式，即格式化 (表格, JSON 等) 账单 -&gt; Importer -&gt;
+              <p><code class="language-plaintext highlighter-rouge">Importer</code> 个人理解的作用是将整理好的账单文本转化为 Beancount 记录的形式，即格式化 (表格, JSON 等) 账单 -&gt; Importer -&gt;
                 Beancount 记录，Importer 在其中起到一个消费记录格式转化作用。</p>
               <p>Beancount 作者对 Importer 有详细的文档叙述，即 <a href="http://furius.ca/beancount/doc/ingest">Importing External Data in
                   Beancount</a>。Beancount 官方也有基于机器学习的智能
@@ -397,7 +397,7 @@
               <p>而本人的需求是：</p>
               <ol>
                 <li>利用<a href="https://ecard.ustc.edu.cn/login">校园一卡通门户系统</a>获取每日的一卡通使用记录，并生成 <code class="language-plaintext highlighter-rouge">CSV</code> 记录。</li>
-                <li>基于 <code class="language-plaintext highlighter-rouge">CSV</code> 的账单生成 <code class="language-plaintext highlighter-rouge">bean</code> 文件。</li>
+                <li>基于 <code class="language-plaintext highlighter-rouge">CSV</code> 的账单生成 <code class="language-plaintext highlighter-rouge">beancount</code> 文件。</li>
                 <li>能够自行定制规则来实现对不同消费的分类。</li>
               </ol>
               <h3 id="将当日的一卡通消费生成为-csv">将当日的一卡通消费生成为 <code class="language-plaintext highlighter-rouge">CSV</code></h3>
@@ -445,7 +445,7 @@
             <span class="n">th_index</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">th</span><span class="p">.</span><span class="n">getText</span><span class="p">())</span>
         <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">.</span><span class="n">now</span><span class="p">().</span><span class="n">year</span><span class="p">,</span> <span class="n">datetime</span><span class="p">.</span><span class="n">now</span><span class="p">().</span><span class="n">month</span><span class="p">,</span> <span class="n">datetime</span><span class="p">.</span><span class="n">now</span><span class="p">().</span><span class="n">day</span>
         <span class="c1"># 根据自己定义的规则判定早餐、午餐、晚餐
-</span>        <span class="n">payinfo</span> <span class="o">=</span> <span class="p">{</span><span class="s">'breakfirst'</span><span class="p">:</span> <span class="p">{</span><span class="s">'loc'</span><span class="p">:</span> <span class="s">''</span><span class="p">,</span> <span class="s">'type'</span><span class="p">:</span> <span class="s">'科大餐饮'</span><span class="p">,</span> <span class="s">'value'</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="p">},</span> <span class="s">'lunch'</span><span class="p">:</span> <span class="p">{</span><span class="s">'loc'</span><span class="p">:</span> <span class="s">''</span><span class="p">,</span> <span class="s">'type'</span><span class="p">:</span> <span class="s">'科大餐饮'</span><span class="p">,</span> <span class="s">'value'</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="p">},</span> <span class="s">'dinner'</span><span class="p">:</span> <span class="p">{</span><span class="s">'loc'</span><span class="p">:</span> <span class="s">''</span><span class="p">,</span> <span class="s">'type'</span><span class="p">:</span> <span class="s">'科大餐饮'</span><span class="p">,</span> <span class="s">'value'</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="p">},</span> <span class="s">'transferin'</span><span class="p">:</span> <span class="p">{</span><span class="s">'loc'</span><span class="p">:</span> <span class="s">'一卡通充值'</span><span class="p">,</span> <span class="s">'type'</span><span class="p">:</span> <span class="s">''</span><span class="p">,</span> <span class="s">'value'</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="p">}</span> <span class="p">}</span>
+</span>        <span class="n">payinfo</span> <span class="o">=</span> <span class="p">{</span><span class="s">'breakfast'</span><span class="p">:</span> <span class="p">{</span><span class="s">'loc'</span><span class="p">:</span> <span class="s">''</span><span class="p">,</span> <span class="s">'type'</span><span class="p">:</span> <span class="s">'科大餐饮'</span><span class="p">,</span> <span class="s">'value'</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="p">},</span> <span class="s">'lunch'</span><span class="p">:</span> <span class="p">{</span><span class="s">'loc'</span><span class="p">:</span> <span class="s">''</span><span class="p">,</span> <span class="s">'type'</span><span class="p">:</span> <span class="s">'科大餐饮'</span><span class="p">,</span> <span class="s">'value'</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="p">},</span> <span class="s">'dinner'</span><span class="p">:</span> <span class="p">{</span><span class="s">'loc'</span><span class="p">:</span> <span class="s">''</span><span class="p">,</span> <span class="s">'type'</span><span class="p">:</span> <span class="s">'科大餐饮'</span><span class="p">,</span> <span class="s">'value'</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="p">},</span> <span class="s">'transferin'</span><span class="p">:</span> <span class="p">{</span><span class="s">'loc'</span><span class="p">:</span> <span class="s">'一卡通充值'</span><span class="p">,</span> <span class="s">'type'</span><span class="p">:</span> <span class="s">''</span><span class="p">,</span> <span class="s">'value'</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="p">}</span> <span class="p">}</span>
         <span class="n">flag</span> <span class="o">=</span> <span class="bp">True</span>
         <span class="k">for</span> <span class="n">tr</span> <span class="ow">in</span> <span class="n">table</span><span class="p">.</span><span class="n">findAll</span><span class="p">(</span><span class="s">'tr'</span><span class="p">):</span>
             <span class="n">line</span> <span class="o">=</span> <span class="p">[]</span>
@@ -469,9 +469,9 @@
                 <span class="k">elif</span> <span class="n">linetime</span>  <span class="mi">0</span><span class="p">:</span>
             <span class="n">csvinfo</span><span class="p">.</span><span class="n">append</span><span class="p">({</span><span class="n">headers</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span> <span class="n">today</span><span class="p">,</span> <span class="n">headers</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">payinfo</span><span class="p">[</span><span class="s">'transferin'</span><span class="p">][</span><span class="s">'type'</span><span class="p">],</span> <span class="n">headers</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">payinfo</span><span class="p">[</span><span class="s">'transferin'</span><span class="p">]</span>
                             <span class="p">[</span><span class="s">'loc'</span><span class="p">],</span> <span class="n">headers</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="s">"%.2f"</span> <span class="o">%</span> <span class="o">-</span><span class="n">payinfo</span><span class="p">[</span><span class="s">'transferin'</span><span class="p">][</span><span class="s">'value'</span><span class="p">],</span> <span class="n">headers</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="s">'Transferin'</span><span class="p">})</span>
-        <span class="k">if</span> <span class="n">payinfo</span><span class="p">[</span><span class="s">'breakfirst'</span><span class="p">][</span><span class="s">'value'</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="n">csvinfo</span><span class="p">.</span><span class="n">append</span><span class="p">({</span><span class="n">headers</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span> <span class="n">today</span><span class="p">,</span> <span class="n">headers</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">payinfo</span><span class="p">[</span><span class="s">'breakfirst'</span><span class="p">][</span><span class="s">'type'</span><span class="p">],</span> <span class="n">headers</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">payinfo</span><span class="p">[</span><span class="s">'breakfirst'</span><span class="p">]</span>
-                            <span class="p">[</span><span class="s">'loc'</span><span class="p">],</span> <span class="n">headers</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="s">"%.2f"</span> <span class="o">%</span> <span class="n">payinfo</span><span class="p">[</span><span class="s">'breakfirst'</span><span class="p">][</span><span class="s">'value'</span><span class="p">],</span> <span class="n">headers</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="s">'Breakfirst'</span><span class="p">})</span>
+        <span class="k">if</span> <span class="n">payinfo</span><span class="p">[</span><span class="s">'breakfast'</span><span class="p">][</span><span class="s">'value'</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">csvinfo</span><span class="p">.</span><span class="n">append</span><span class="p">({</span><span class="n">headers</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span> <span class="n">today</span><span class="p">,</span> <span class="n">headers</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">payinfo</span><span class="p">[</span><span class="s">'breakfast'</span><span class="p">][</span><span class="s">'type'</span><span class="p">],</span> <span class="n">headers</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">payinfo</span><span class="p">[</span><span class="s">'breakfast'</span><span class="p">]</span>
+                            <span class="p">[</span><span class="s">'loc'</span><span class="p">],</span> <span class="n">headers</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="s">"%.2f"</span> <span class="o">%</span> <span class="n">payinfo</span><span class="p">[</span><span class="s">'breakfast'</span><span class="p">][</span><span class="s">'value'</span><span class="p">],</span> <span class="n">headers</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="s">'Breakfast'</span><span class="p">})</span>
         <span class="k">if</span> <span class="n">payinfo</span><span class="p">[</span><span class="s">'lunch'</span><span class="p">][</span><span class="s">'value'</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="n">csvinfo</span><span class="p">.</span><span class="n">append</span><span class="p">({</span><span class="n">headers</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span> <span class="n">today</span><span class="p">,</span> <span class="n">headers</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">payinfo</span><span class="p">[</span><span class="s">'lunch'</span><span class="p">][</span><span class="s">'type'</span><span class="p">],</span> <span class="n">headers</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">payinfo</span><span class="p">[</span><span class="s">'lunch'</span><span class="p">][</span><span class="s">'loc'</span><span class="p">],</span> <span class="n">headers</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="s">"%.2f"</span> <span class="o">%</span> <span class="n">payinfo</span><span class="p">[</span><span class="s">'lunch'</span><span class="p">][</span><span class="s">'value'</span><span class="p">],</span> <span class="n">headers</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="s">'Lunch'</span><span class="p">})</span>
         <span class="k">if</span> <span class="n">payinfo</span><span class="p">[</span><span class="s">'dinner'</span><span class="p">][</span><span class="s">'value'</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
@@ -508,7 +508,7 @@
                     <td>科大餐饮</td>
                     <td>西区芳华园餐厅</td>
                     <td>5.00</td>
-                    <td>Breakfirst</td>
+                    <td>Breakfast</td>
                   </tr>
                   <tr>
                     <td>2020-07-02</td>
@@ -547,7 +547,7 @@
         <span class="k">return</span> <span class="n">txn</span>
 
     <span class="c1"># Guess the account(s) of the other posting(s)
-</span>    <span class="k">if</span> <span class="s">'breakfirst'</span> <span class="ow">in</span> <span class="n">txn</span><span class="p">.</span><span class="n">narration</span><span class="p">.</span><span class="n">lower</span><span class="p">():</span>
+</span>    <span class="k">if</span> <span class="s">'breakfast'</span> <span class="ow">in</span> <span class="n">txn</span><span class="p">.</span><span class="n">narration</span><span class="p">.</span><span class="n">lower</span><span class="p">():</span>
         <span class="n">account</span> <span class="o">=</span> <span class="s">'Expenses:Food:Breakfast'</span>
     <span class="k">elif</span> <span class="s">'lunch'</span> <span class="ow">in</span> <span class="n">txn</span><span class="p">.</span><span class="n">narration</span><span class="p">.</span><span class="n">lower</span><span class="p">():</span>
         <span class="n">account</span> <span class="o">=</span> <span class="s">'Expenses:Food:Lunch'</span>
@@ -589,7 +589,7 @@
               </div>
               <p>语法说明参见 <a href="https://charlesliu7.github.io/blackboard/2019/12/03/beancount-importer/">Beancount 系列二： Importer
                   设置</a>。</p>
-              <p>执行命令生成 bean 账单。</p>
+              <p>执行命令生成 beancount 账单。</p>
               <div class="language-shell highlighter-rouge">
                 <div class="highlight">
                   <pre class="highlight"><code>bean-extract ustc_card_importer.py 2020-07-02.csv
@@ -605,7 +605,7 @@
     Assets:CN:Card:USTC        200.00 CNY
     Assets:CN:Bank:BoC:C1234  -200.00 CNY
 
-2020-07-02 * "科大餐饮" "西区芳华园餐厅; Breakfirst"
+2020-07-02 * "科大餐饮" "西区芳华园餐厅; Breakfast"
     Assets:CN:Card:USTC      -5.00 CNY
     Expenses:Food:Breakfast   5.00 CNY
 
@@ -645,11 +645,8 @@
 </code></pre>
                     </div>
                         </div>
+                  <p>在 Fava 界面侧栏看到 Importer，并手动导入数据。注 ：Importer 在 Fava 中使用的时候 metadata 会被去除。</p>
                 </li>
-              </ul>
-              <p>在 Fava 界面侧栏看到 Importer，并手动导入数据。</p>
-              <p>注 ：Importer 在 Fava 中使用的时候 metadata 会被去除。</p>
-              <ul>
                 <li>
                   <p>Fava 还支持自定义 side bar link，即：</p>
                   <div class="language-conf highlighter-rouge">
