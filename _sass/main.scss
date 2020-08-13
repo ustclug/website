@@ -88,3 +88,13 @@ body {
     line-height: 2;
   }
 }
+
+// Pagination bar
+
+.pagination {
+  text-align: center;
+
+  > ul {
+    display: inline-block;
+  }
+}
