@@ -45,7 +45,7 @@
     {% endif %}
 
     {% for trail in paginator.page_trail %}
-      {% if page.url == trail.path %}
+      {% if paginator.page == trail.num %}
         <li><a href="{{ trail.path | relative_url | remove: 'index.html' }}" class="disabled current">{{ trail.num }}</a></li>
       {% else %}
         <li><a href="{{ trail.path | relative_url | remove: 'index.html' }}">{{ trail.num }}</a></li>
