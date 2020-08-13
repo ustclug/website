@@ -226,6 +226,10 @@ optional_front_matter:
 footer_scripts: [/assets/js/main.min.js]
 
 
+feed:
+  collections: [news, planet]
+
+
 # Archives
 #  Type
 #  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
