@@ -1,1 +1,1049 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://lug.ustc.edu.cn//feed/planet.xml" rel="self" type="application/atom+xml" /><link href="https://lug.ustc.edu.cn//" rel="alternate" type="text/html" /><updated>2020-08-13T16:56:19+08:00</updated><id>https://lug.ustc.edu.cn//feed/planet.xml</id><title type="html">LUG @ USTC | Planet</title><subtitle>Under construction!</subtitle><author><name>USTCLUG</name></author></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://lug.ustc.edu.cn//feed/planet.xml" rel="self" type="application/atom+xml" /><link href="https://lug.ustc.edu.cn//" rel="alternate" type="text/html" /><updated>2020-08-13T16:56:52+08:00</updated><id>https://lug.ustc.edu.cn//feed/planet.xml</id><title type="html">LUG @ USTC | Planet</title><subtitle>Under construction!</subtitle><author><name>USTCLUG</name></author><entry><title type="html">使用 Beancount 进行记账并自动记录一卡通消费</title><link href="https://lug.ustc.edu.cn//planet/2020/08/keeping-account-with-beancount/" rel="alternate" type="text/html" title="使用 Beancount 进行记账并自动记录一卡通消费" /><published>2020-08-06T00:00:00+08:00</published><updated>2020-08-11T20:12:56+08:00</updated><id>https://lug.ustc.edu.cn//planet/2020/08/keeping-account-with-beancount</id><content type="html" xml:base="https://lug.ustc.edu.cn//planet/2020/08/keeping-account-with-beancount/">&lt;p&gt;本文首发于 &lt;a href=&quot;https://charlesliu7.github.io/blackboard/2019/07/24/beancount/&quot;&gt;https://charlesliu7.github.io/blackboard/2019/07/24/beancount/&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;偶尔看到了复式记账这个概念，对精细记账的我而言很受用，选择 Beancount 这样的开源工具的原因莫过于账本数据完全由自己掌握，而不是被各大 APP
+        所保管。本文从一次个人实践的角度来说明一下复式记账的使用。&lt;/p&gt;
+        &lt;p&gt;本篇文章是一个从零开始的个人实践记录，涵盖 &lt;strong&gt;文件组织 -&amp;gt; 基本账本书写 -&amp;gt; 爬取一卡通数据并自动记录&lt;/strong&gt;，供同样使用 Beancount
+        的同学做参考，但此实践并不一定完全合乎其他人的使用习惯，如果有其它记录策略也是可以的。本文内容基于读者对复式记账和 Beancount
+        语法有一定了解的情况下撰写的，关于复式记账的概念和一些诸多基本功能介绍，可以参考阅读以下文章：&lt;/p&gt;
+        &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;https://plaintextaccounting.org/#comparisons&quot;&gt;文本记账综述、复式记账开源工具比较&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;https://www.byvoid.com/zhs/blog/beancount-bookkeeping-1&quot;&gt;Beancount复式记账（一）：为什么&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;开始！&lt;/p&gt;
+        &lt;h2 id=&quot;安装使用&quot;&gt;安装使用&lt;/h2&gt;
+        &lt;p&gt;Beancount 是一个 Python 实现的开源工具，在本地即可运行，首先从 PyPI 获取：&lt;/p&gt;
+        &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;beancount fava
+        &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;p&gt;其中 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;beancount&lt;/code&gt; 是核心包，包含核心的命令行工具；&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fava&lt;/code&gt; 是网页可视化工具。 &lt;del&gt;这里有一个&lt;a href=&quot;https://fava.pythonanywhere.com/huge-example-file/balance_sheet/&quot;&gt;fava
+        示例账本&lt;/a&gt; ，对应的
+        Beancount 源代码可以在 &lt;a href=&quot;https://bitbucket.org/blais/beancount/src/default/examples/&quot;&gt;Bitbucket
+        上下载&lt;/a&gt;。&lt;/del&gt;
+        本文的示例账本以及可视化可以在该&lt;a href=&quot;https://git.lug.ustc.edu.cn/Charles/ecard_beancount/-/tree/master&quot;&gt;仓库&lt;/a&gt;查看。&lt;/p&gt;
+        &lt;p&gt;克隆该仓库，在命令行中使用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fava main.beancount&lt;/code&gt;。&lt;/p&gt;
+        &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;fava main.beancount
+        &lt;span class=&quot;go&quot;&gt;Running Fava on http://localhost:5000
+        &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;p&gt;打开浏览器即可看到可视化账本。&lt;/p&gt;
+        &lt;h2 id=&quot;文件结构&quot;&gt;文件结构&lt;/h2&gt;
+        &lt;p&gt;Beancount 支持 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;include&lt;/code&gt; 语法来拓展账簿，个人采用按时间划分文件，辅之特殊事件（比如旅游）单独记录的方法，目录结构如下：&lt;/p&gt;
+        &lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.
+        ├── 2018
+        │   └── ...
+        ├── 2019
+        │   └── 01.beancount
+        │   └── 02.beancount
+        │   └── 03.beancount
+        │   └── 04.beancount ; 注释用分号
+        │   └── xx.event.beancount ; 单独针对某一特别事件的账本，比如旅游
+        │   └── 05.beancount
+        │   └── 06.beancount
+        │   └── 07.beancount
+        ├── accounts.beancount ; 记录初始账户信息
+        ├── main.beancount ; 主文件
+        &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;h2 id=&quot;账本书写&quot;&gt;账本书写&lt;/h2&gt;
+        &lt;h3 id=&quot;账户信息设置&quot;&gt;账户信息设置&lt;/h3&gt;
+        &lt;p&gt;首先要定义账户，即文件 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;accounts.beancount&lt;/code&gt;，Beancount 系统中预定义了五个分类：&lt;/p&gt;
+        &lt;ul&gt;
+        &lt;li&gt;
+        &lt;p&gt;Assets 资产：本人按照&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;账户类型:国家:金融机构名字:具体账户&lt;/code&gt;的策略划分，时间是开户时间，比如：&lt;/p&gt;
+        &lt;div class=&quot;language-conf highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;m&quot;&gt;2017&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;open&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Assets&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;CN&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;Bank&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;BoC&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;C1234&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CNY&lt;/span&gt; ; 学校银行卡
+        &lt;span class=&quot;m&quot;&gt;2017&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;open&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Assets&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;CN&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;Card&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;USTC&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CNY&lt;/span&gt; ; 一卡通
+        &lt;span class=&quot;m&quot;&gt;2017&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;open&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Assets&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;CN&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;Web&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;AliPay&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CNY&lt;/span&gt; ; 支付宝
+        &lt;span class=&quot;m&quot;&gt;2017&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;open&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Assets&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;CN&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;Web&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;WeChatPay&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CNY&lt;/span&gt; ; 微信支付
+        &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+        &lt;p&gt;有一类针对 AA 付款或者个人向自己借款的账户，需要专门记录。&lt;/p&gt;
+        &lt;div class=&quot;language-conf highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;m&quot;&gt;2017&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;open&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Assets&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;Receivables&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;X&lt;/span&gt; ; 对 &lt;span class=&quot;n&quot;&gt;X&lt;/span&gt; 的应收款项
+        &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+        &lt;p&gt;Liabilities 负债：本人主要是信用卡和向他人借款的账户，比如：&lt;/p&gt;
+        &lt;div class=&quot;language-conf highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;m&quot;&gt;2017&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;open&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Liabilities&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;Payable&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;X&lt;/span&gt; ; 对 &lt;span class=&quot;n&quot;&gt;X&lt;/span&gt; 的债务
+        &lt;span class=&quot;m&quot;&gt;2017&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;open&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Liabilities&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;CreditCard&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;CN&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;BoC&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;C1111&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CNY&lt;/span&gt; ; 信用卡
+        &lt;span class=&quot;m&quot;&gt;2017&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;open&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Liabilities&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;CreditCard&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;CN&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;Huabei&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CNY&lt;/span&gt; ; 花呗
+        &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+        &lt;p&gt;Equity 权益（净资产）：目前只有一个用于平衡开户的时候账户资金的权益。&lt;/p&gt;
+        &lt;div class=&quot;language-conf highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;m&quot;&gt;1990&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;open&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Equity&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;Opening&lt;/span&gt;-&lt;span class=&quot;n&quot;&gt;Balances&lt;/span&gt;
+        &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+        &lt;p&gt;Expenses 支出：支出就非常的多样化，可以根据自己需求分门别类，比如：&lt;/p&gt;
+        &lt;div class=&quot;language-conf highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;m&quot;&gt;2017&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;open&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Expenses&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;Clothing&lt;/span&gt; ; 包括上衣，裤子和装饰，袜子，围巾，帽子
+        &lt;span class=&quot;m&quot;&gt;2017&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;open&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Expenses&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;Shoes&lt;/span&gt; ; 鞋
+        &lt;span class=&quot;m&quot;&gt;2017&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;open&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Expenses&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;Food&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;Dinner&lt;/span&gt;
+        &lt;span class=&quot;m&quot;&gt;2017&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;open&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Expenses&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;Food&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;Lunch&lt;/span&gt;
+        &lt;span class=&quot;m&quot;&gt;2017&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;open&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Expenses&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;Food&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;Breakfast&lt;/span&gt;
+        &lt;span class=&quot;m&quot;&gt;2017&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;open&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Expenses&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;Food&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;Fruits&lt;/span&gt;
+        &lt;span class=&quot;m&quot;&gt;2017&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;open&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Expenses&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;Food&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;Nightingale&lt;/span&gt; ; 校门口夜宵
+        &lt;span class=&quot;m&quot;&gt;2017&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;open&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Expenses&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;Food&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;Drinks&lt;/span&gt;
+        &lt;span class=&quot;m&quot;&gt;2017&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;open&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Expenses&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;Food&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;Snack&lt;/span&gt; ; 杂食、零食
+        &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+        &lt;p&gt;等等……&lt;/p&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+        &lt;p&gt;Income 收入：收入也可以根据自己的实际收入来源来建立账户，比如：&lt;/p&gt;
+        &lt;div class=&quot;language-conf highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;m&quot;&gt;2017&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;open&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Income&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;Salary&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;XXX&lt;/span&gt;
+        &lt;span class=&quot;m&quot;&gt;2017&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;open&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Income&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;Salary&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;Others&lt;/span&gt;
+        &lt;span class=&quot;m&quot;&gt;2017&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;open&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Income&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;Others&lt;/span&gt;
+        &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;h3 id=&quot;主文件设置&quot;&gt;主文件设置&lt;/h3&gt;
+        &lt;p&gt;然后设置主文件 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main.beancount&lt;/code&gt; 内容，主文件任务是设置全局变量，然后去涵盖各个子账本：&lt;/p&gt;
+        &lt;div class=&quot;language-conf highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;option&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;title&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;取个霸气的名字吧&quot;&lt;/span&gt; ; 账簿名称
+        &lt;span class=&quot;n&quot;&gt;option&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;operating_currency&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;CNY&quot;&lt;/span&gt; ; 账簿主货币
+        &lt;span class=&quot;n&quot;&gt;option&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;operating_currency&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;USD&quot;&lt;/span&gt; ; 可以添加多个主货币
+        &lt;span class=&quot;n&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;accounts.beancount&quot;&lt;/span&gt; ; 包含账户信息
+        ; 每个月的账本
+        &lt;span class=&quot;n&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;2020/06.beancount&quot;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;2020/07.beancount&quot;&lt;/span&gt;
+        &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;h3 id=&quot;账户初始余额设置&quot;&gt;账户初始余额设置&lt;/h3&gt;
+        &lt;p&gt;在开始记账前，要设置每个账户的余额信息，采用以下方法来给每个账户设置余额/借记账单:&lt;/p&gt;
+        &lt;div class=&quot;language-conf highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;m&quot;&gt;2019&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pad&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Assets&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;Bank&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;CN&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;BoC&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;C1111&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Equity&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;Opening&lt;/span&gt;-&lt;span class=&quot;n&quot;&gt;Balances&lt;/span&gt; ; 从 &lt;span class=&quot;n&quot;&gt;Opening&lt;/span&gt;-&lt;span class=&quot;n&quot;&gt;Balances&lt;/span&gt; 中划取 &lt;span class=&quot;n&quot;&gt;XX&lt;/span&gt; 帐到银行卡中
+        &lt;span class=&quot;m&quot;&gt;2019&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;02&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;balance&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Assets&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;Bank&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;CN&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;BoC&lt;/span&gt;:&lt;span class=&quot;n&quot;&gt;C1111&lt;/span&gt;    +&lt;span class=&quot;n&quot;&gt;xxx&lt;/span&gt;.&lt;span class=&quot;n&quot;&gt;xx&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CNY&lt;/span&gt; ; 银行卡余额为 &lt;span class=&quot;n&quot;&gt;xxx&lt;/span&gt;.&lt;span class=&quot;n&quot;&gt;xx&lt;/span&gt;
+        &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;p&gt;该语句的含义是无论 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Assets:Bank:CN:BoC:C1111&lt;/code&gt; 之前余额多少，在 2019 年 1 月 2 日开始之前都调整到 xxx.xx
+        CNY，差额从 Equity:Opening-Balances 来。注意两行之间差一天的时间，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;balance&lt;/code&gt;
+        断言界定为当天开始；一般储蓄卡余额为正，信用卡余额为负。&lt;/p&gt;
+        &lt;h3 id=&quot;记账&quot;&gt;记账&lt;/h3&gt;
+        &lt;ul&gt;
+        &lt;li&gt;
+        &lt;p&gt;基本记账，记账语法为：&lt;/p&gt;
+        &lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;YYYY-mm-dd * [&quot;Payee&quot;] &quot;Narration&quot;
+        posting 1
+        posting 2
+        posting 3
+        ...
+        &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+        &lt;p&gt;比如：&lt;/p&gt;
+        &lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;2019-01-01 * &quot;Walmart&quot; &quot;在超市买两件衣服和晚餐&quot;
+        Expenses:Clothing 20 USD
+        Expenses:Clothing 10 USD
+        Expenses:Food:Dinner 10 USD
+        Liabilities:CreditCard:US:Discover -40 USD
+        &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+        &lt;p&gt;多货币转换使用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@@&lt;/code&gt; 作为货币转换即可，货币 Beancount 会进行汇率计算，比如：&lt;/p&gt;
+        &lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;2019-01-01 * &quot;日本航空&quot; &quot;纽约-东京&quot;
+        Expenses:Transport:Airline 1000 USD @@ 110000 JPY
+        Liabilities:CreditCard:JP:Rakuten -110000 JPY
+        &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+        &lt;p&gt;账户结息：账户的利息肯定难以每日都记录，本人采用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pad&lt;/code&gt;+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;balance&lt;/code&gt; 断言，每隔一段时间结算一下。&lt;/p&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+        &lt;p&gt;分期付款：这是个常见的购买方式，需要单独设置开一个 Liabilities Account，手续费记利息支出，每个月账单出现的时候转移一下。&lt;/p&gt;
+        &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;h3 id=&quot;核账&quot;&gt;核账&lt;/h3&gt;
+        &lt;p&gt;本人选择每个月还款日核实一下账本，在 Fava 左侧 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Balance Sheet&lt;/code&gt; 或者 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Holdings&lt;/code&gt;
+        里可以看到各个账户当前的状况，如果和实际的账户金额有出入的话就需要点进对应账户查看每笔交易的情况，看看是否漏记或者错记。&lt;/p&gt;
+        &lt;h2 id=&quot;用-importer-自动记录一卡通消费&quot;&gt;用 Importer 自动记录一卡通消费&lt;/h2&gt;
+        &lt;h3 id=&quot;综述&quot;&gt;综述&lt;/h3&gt;
+        &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Importer&lt;/code&gt; 个人理解的作用是将整理好的账单文本转化为 Beancount 记录的形式，即格式化 (表格, JSON 等) 账单 -&amp;gt; Importer -&amp;gt;
+        Beancount 记录，Importer 在其中起到一个消费记录格式转化作用。&lt;/p&gt;
+        &lt;p&gt;Beancount 作者对 Importer 有详细的文档叙述，即 &lt;a href=&quot;http://furius.ca/beancount/doc/ingest&quot;&gt;Importing External Data in
+        Beancount&lt;/a&gt;。Beancount 官方也有基于机器学习的智能
+        importer
+        &lt;a href=&quot;https://github.com/beancount/smart_importer&quot;&gt;beancount/smart_importer&lt;/a&gt;。&lt;/p&gt;
+        &lt;p&gt;而本人的需求是：&lt;/p&gt;
+        &lt;ol&gt;
+        &lt;li&gt;利用&lt;a href=&quot;https://ecard.ustc.edu.cn/login&quot;&gt;校园一卡通门户系统&lt;/a&gt;获取每日的一卡通使用记录，并生成 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CSV&lt;/code&gt; 记录。&lt;/li&gt;
+        &lt;li&gt;基于 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CSV&lt;/code&gt; 的账单生成 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;beancount&lt;/code&gt; 文件。&lt;/li&gt;
+        &lt;li&gt;能够自行定制规则来实现对不同消费的分类。&lt;/li&gt;
+        &lt;/ol&gt;
+        &lt;h3 id=&quot;将当日的一卡通消费生成为-csv&quot;&gt;将当日的一卡通消费生成为 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CSV&lt;/code&gt;&lt;/h3&gt;
+        &lt;p&gt;爬取一卡通数据的代码为
+        &lt;a href=&quot;https://git.lug.ustc.edu.cn/Charles/ecard_beancount/-/blob/master/crawler.py&quot;&gt;crawer.py&lt;/a&gt;
+        ，其作用为爬取当日的一卡通消费记录，并自定义规则区分早、午、晚餐，生成符合 Beancount 格式的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CSV&lt;/code&gt;。（代码可以直接运行）&lt;/p&gt;
+        &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;requests&lt;/span&gt;
+        &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;datetime&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;datetime&lt;/span&gt;
+        &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;bs4&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;
+        &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;json&lt;/span&gt;
+        &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;codecs&lt;/span&gt;
+        &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;csv&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'XXX'&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# 姓名
+        &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stu_no&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'PBXXXXXXXX'&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# 学号
+        &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pwd&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'user_pwd'&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# 统一身份认证密码
+        &lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'__main__'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;# 利用统一身份认证登陆校园一卡通门户系统
+        &lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;casurl&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'https://passport.ustc.edu.cn/login?service=http%3A%2F%2Fecard.ustc.edu.cn%2Fcaslogin'&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;caspost&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'username'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stu_no&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'password'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pwd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# 统一身份认证
+        &lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;''&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requests&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;casurl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;caspost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;except&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'{0} - INFO: USTC ecard CAS登陆失败 {1}'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;datetime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;now&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strftime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'%Y-%m-%d %H:%M:%S'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;remaining&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'{0} - INFO: USTC ecard CAS登陆失败 NOOOOOOOO!!!!!!!!'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;datetime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;now&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strftime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'%Y-%m-%d %H:%M:%S'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'{0} - INFO: USTC ecard CAS登陆成功'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;datetime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;now&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strftime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'%Y-%m-%d %H:%M:%S'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;paylist&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'https://ecard.ustc.edu.cn/paylist'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;paylist&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;features&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;lxml&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;token&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;findAll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'input'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get_attribute_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'value'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'https://ecard.ustc.edu.cn/paylist/ajax_get_paylist'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'date'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'page'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'origin'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'https://ecard.ustc.edu.cn'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'referer'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'https://ecard.ustc.edu.cn/paylist'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'sec-fetch-mode'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'cors'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'sec-fetch-site'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'same-origin'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'x-csrf-token'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;token&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'x-requested-with'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'XMLHttpRequest'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;features&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;lxml&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;table&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'table'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;th_index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;th&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;findAll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'th'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;th_index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;th&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getText&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;month&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;day&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;datetime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;now&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;datetime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;now&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;month&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;datetime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;now&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;day&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;# 根据自己定义的规则判定早餐、午餐、晚餐
+        &lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;payinfo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'breakfast'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'loc'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'type'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'科大餐饮'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'value'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'lunch'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'loc'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'type'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'科大餐饮'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'value'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'dinner'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'loc'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'type'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'科大餐饮'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'value'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'transferin'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'loc'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'一卡通充值'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'type'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'value'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;flag&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tr&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;findAll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'tr'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;td&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;findAll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'td'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;td&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getText&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;remaining&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;flag&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;pass&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;elif&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'圈存机充值'&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;payinfo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'transferin'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'value'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;elif&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'消费'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;linetime&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;datetime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strptime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'%Y-%m-%d %H:%M:%S'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;linetime&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;datetime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;month&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;day&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;linetime&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;datetime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;month&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;day&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;linetime&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;datetime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;month&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;day&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;linetime&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;datetime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;month&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;day&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# 判定为晚餐
+        &lt;/span&gt;                    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;payinfo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'dinner'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'loc'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;pass&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;payinfo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'dinner'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'loc'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;' '&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;payinfo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'dinner'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'value'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;elif&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;linetime&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;csvinfo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;today&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;payinfo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'transferin'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'type'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;payinfo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'transferin'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'loc'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;%.2f&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;payinfo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'transferin'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'value'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Transferin'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;payinfo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'breakfast'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'value'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;csvinfo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;today&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;payinfo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'breakfast'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'type'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;payinfo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'breakfast'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'loc'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;%.2f&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;payinfo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'breakfast'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'value'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Breakfast'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;payinfo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'lunch'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'value'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;csvinfo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;today&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;payinfo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'lunch'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'type'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;payinfo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'lunch'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'loc'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;%.2f&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;payinfo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'lunch'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'value'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Lunch'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;payinfo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'dinner'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'value'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;csvinfo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;today&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;payinfo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'dinner'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'type'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;payinfo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'dinner'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'loc'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;%.2f&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;payinfo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'dinner'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'value'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Dinner'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;today&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'.csv'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'w'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;f_csv&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DictWriter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;f_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;writeheader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;f_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;writerows&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;csvinfo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;p&gt;代码执行完毕后会生成 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;20XX-XX-XX.csv&lt;/code&gt;，例如 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2020-07-02.csv&lt;/code&gt;：&lt;/p&gt;
+        &lt;table&gt;
+        &lt;thead&gt;
+        &lt;tr&gt;
+        &lt;th&gt;记账日期&lt;/th&gt;
+        &lt;th&gt;收款人&lt;/th&gt;
+        &lt;th&gt;交易摘要&lt;/th&gt;
+        &lt;th&gt;人民币金额&lt;/th&gt;
+        &lt;th&gt;类别&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+        &lt;tr&gt;
+        &lt;td&gt;2020-07-02&lt;/td&gt;
+        &lt;td&gt;科大餐饮&lt;/td&gt;
+        &lt;td&gt;一卡通充值&lt;/td&gt;
+        &lt;td&gt;-200.00&lt;/td&gt;
+        &lt;td&gt;Transferin&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td&gt;2020-07-02&lt;/td&gt;
+        &lt;td&gt;科大餐饮&lt;/td&gt;
+        &lt;td&gt;西区芳华园餐厅&lt;/td&gt;
+        &lt;td&gt;5.00&lt;/td&gt;
+        &lt;td&gt;Breakfast&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td&gt;2020-07-02&lt;/td&gt;
+        &lt;td&gt;科大餐饮&lt;/td&gt;
+        &lt;td&gt;西区芳华园餐厅&lt;/td&gt;
+        &lt;td&gt;10.00&lt;/td&gt;
+        &lt;td&gt;Lunch&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td&gt;2020-07-02&lt;/td&gt;
+        &lt;td&gt;科大餐饮&lt;/td&gt;
+        &lt;td&gt;西区芳华园餐厅&lt;/td&gt;
+        &lt;td&gt;10.00&lt;/td&gt;
+        &lt;td&gt;Dinner&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/tbody&gt;
+        &lt;/table&gt;
+        &lt;h3 id=&quot;准备-importer-config&quot;&gt;准备 Importer Config&lt;/h3&gt;
+        &lt;p&gt;Beancount Importer Config 文件为
+        &lt;a href=&quot;https://git.lug.ustc.edu.cn/Charles/ecard_beancount/-/blob/master/importers/ustc_card_importer.py&quot;&gt;importers/ustc_card_importer.py&lt;/a&gt;。&lt;/p&gt;
+        &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;#!/usr/bin/env python
+        &lt;/span&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;os&lt;/span&gt;
+        &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sys&lt;/span&gt;
+        &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;beancount.ingest.extract&lt;/span&gt;
+        &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;beancount.ingest.importers&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;csv&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;beancount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ingest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;extract&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HEADER&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;''&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;dumb_USTCecard_categorizer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;txn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;# At this time the txn has only one posting
+        &lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;posting1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;txn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;postings&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;except&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;IndexError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;txn&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;# Guess the account(s) of the other posting(s)
+        &lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'breakfast'&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;txn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;narration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lower&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;account&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Expenses:Food:Breakfast'&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;elif&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'lunch'&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;txn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;narration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lower&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;account&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Expenses:Food:Lunch'&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;elif&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'dinner'&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;txn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;narration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lower&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;account&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Expenses:Food:Dinner'&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;elif&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'transferin'&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;txn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;narration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lower&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;account&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Assets:CN:Bank:BoC:C1234'&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;txn&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;# Make the other posting(s)
+        &lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;posting2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;posting1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;account&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;account&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;units&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;posting1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;units&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;# Insert / Append the posting into the transaction
+        &lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;posting1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;units&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;posting2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;units&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;txn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;postings&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;posting2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;txn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;postings&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;insert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;posting2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;txn&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;CONFIG&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;# USTC canteen
+        &lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Importer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Col&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DATE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'记账日期'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Col&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PAYEE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'收款人'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Col&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NARRATION1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'交易摘要'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Col&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;AMOUNT_DEBIT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'人民币金额'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Col&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NARRATION2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'类别'&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;account&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Assets:CN:Card:USTC'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;currency&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'CNY'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;categorizer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dumb_USTCecard_categorizer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;p&gt;语法说明参见 &lt;a href=&quot;https://charlesliu7.github.io/blackboard/2019/12/03/beancount-importer/&quot;&gt;Beancount 系列二： Importer
+        设置&lt;/a&gt;。&lt;/p&gt;
+        &lt;p&gt;执行命令生成 beancount 账单。&lt;/p&gt;
+        &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bean-extract ustc_card_importer.py 2020-07-02.csv
+        &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;p&gt;得到账单：&lt;/p&gt;
+        &lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;**** /path/to/2020-07-02.csv
+        2020-07-02 * &quot;科大餐饮&quot; &quot;一卡通充值; Transferin&quot;
+        Assets:CN:Card:USTC        200.00 CNY
+        Assets:CN:Bank:BoC:C1234  -200.00 CNY
+        2020-07-02 * &quot;科大餐饮&quot; &quot;西区芳华园餐厅; Breakfast&quot;
+        Assets:CN:Card:USTC      -5.00 CNY
+        Expenses:Food:Breakfast   5.00 CNY
+        2020-07-02 * &quot;科大餐饮&quot; &quot;西区芳华园餐厅; Lunch&quot;
+        Assets:CN:Card:USTC  -10.00 CNY
+        Expenses:Food:Lunch   10.00 CNY
+        2020-07-02 * &quot;科大餐饮&quot; &quot;西区芳华园餐厅; Dinner&quot;
+        Assets:CN:Card:USTC   -10.00 CNY
+        Expenses:Food:Dinner   10.00 CNY
+        &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;p&gt;校园卡消费可以直接使用该 importer。支付宝账单、信用卡账单等也可以通过导出 CSV 账单的方式利用自己编写的 importer 导入。&lt;/p&gt;
+        &lt;h3 id=&quot;自动化&quot;&gt;自动化&lt;/h3&gt;
+        &lt;p&gt;上述过程需要执行多个命令和脚本，利用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;crontab&lt;/code&gt; 在每日睡前 (23:30) 执行一遍代码即可自动化记录消费。&lt;/p&gt;
+        &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;python crawler.py&amp;gt;&amp;gt;log.log
+        &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;importers
+        &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;python ustc_card_importer_pipeline.py &lt;span class=&quot;c&quot;&gt;# 注意这里需要修改要记录的账本文件&lt;/span&gt;
+        &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;p&gt;Done!&lt;/p&gt;
+        &lt;h2 id=&quot;fava&quot;&gt;Fava&lt;/h2&gt;
+        &lt;ul&gt;
+        &lt;li&gt;Fava 可视化网页中提供了编辑功能，对于多文件的编辑，默认打开的是主文件，要想修改编辑器默认打开的文件，需将 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2019-07-11 custom &quot;fava-option&quot; &quot;default-file&quot;&lt;/code&gt; 这个设置放在想要设定的文件里。&lt;/li&gt;
+        &lt;li&gt;Fava 系统中也提供了添加记录的功能，但添加的记录默认写入了主文件里，根据&lt;a href=&quot;https://github.com/beancount/fava/issues/875&quot;&gt;Fava insert-entry options&lt;/a&gt;, &lt;a href=&quot;https://github.com/beancount/fava/issues/882&quot;&gt;default-file could also set the insertion file&lt;/a&gt; 作者似乎不 care 添加在哪个文件里这个问题，但依然可以利用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;insert-entry&lt;/code&gt; 关键字变相设置一下，比如将 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2019-01-01 custom &quot;fava-option&quot; &quot;insert-entry&quot; &quot;.*&quot;&lt;/code&gt; 断言写在 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2019/01.bean&lt;/code&gt; 文件的末尾，所有在 2019-01-01 之后的记录，通过 Fava 添加记录的话，该记录会 write 在这个断言之前。&lt;/li&gt;
+        &lt;li&gt;Fava 是不带有密码功能的，根据 &lt;a href=&quot;https://github.com/beancount/fava/issues/314&quot;&gt;Make fava password-protected&lt;/a&gt; 作者认为这不应该是 Fava 应该做的工作；利用 &lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-set-up-password-authentication-with-apache-on-ubuntu-16-04?comment=76154&quot;&gt;Apache&lt;/a&gt; 或者 &lt;a href=&quot;https://docs.nginx.com/nginx/admin-guide/security-controls/configuring-http-basic-authentication/&quot;&gt;Nginx&lt;/a&gt; 的认证功能可以满足这个需求。&lt;/li&gt;
+        &lt;li&gt;
+        &lt;p&gt;可视化工具 Fava 也支持 Importer，可以通过设置：&lt;/p&gt;
+        &lt;div class=&quot;language-conf highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;m&quot;&gt;2017&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;custom&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;fava-option&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;import-config&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;./importers/path/to/importer.py&quot;&lt;/span&gt;
+        &lt;span class=&quot;m&quot;&gt;2017&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;custom&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;fava-option&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;import-dirs&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;./importers/path/to/csv_tmp/&quot;&lt;/span&gt;
+        &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+        &lt;p&gt;在 Fava 界面侧栏看到 Importer，并手动导入数据。注 ：Importer 在 Fava 中使用的时候 metadata 会被去除。&lt;/p&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+        &lt;p&gt;Fava 还支持自定义 side bar link，即：&lt;/p&gt;
+        &lt;div class=&quot;language-conf highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;m&quot;&gt;2099&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;custom&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;fava-sidebar-link&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;This Week&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;/jump?time=day-6+-+day&quot;&lt;/span&gt;
+        &lt;span class=&quot;m&quot;&gt;2099&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;custom&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;fava-sidebar-link&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;This Month&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;/jump?time=month&quot;&lt;/span&gt; 
+        &lt;span class=&quot;m&quot;&gt;2099&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;custom&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;fava-sidebar-link&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;3 Month&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;/jump?time=month-1+-+month%2B1&quot;&lt;/span&gt; 
+        &lt;span class=&quot;m&quot;&gt;2099&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;custom&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;fava-sidebar-link&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Year-To-Date&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;/jump?time=year+-+month&quot;&lt;/span&gt; 
+        &lt;span class=&quot;m&quot;&gt;2099&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt;-&lt;span class=&quot;m&quot;&gt;01&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;custom&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;fava-sidebar-link&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;All dates&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;/jump?time=&quot;&lt;/span&gt;
+        &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;/ul&gt;</content><author><name>Xenon</name></author><category term="USTC" /><category term="Beancount" /><category term="eCard" /><summary type="html">本文首发于 https://charlesliu7.github.io/blackboard/2019/07/24/beancount/</summary></entry><entry><title type="html">【译稿】树莓派 4 评测与基准测试：与树莓派 3B+ 相比的改进</title><link href="https://lug.ustc.edu.cn//planet/2019/09/raspberry-4/" rel="alternate" type="text/html" title="【译稿】树莓派 4 评测与基准测试：与树莓派 3B+ 相比的改进" /><published>2019-09-17T00:00:00+08:00</published><updated>2020-08-09T20:31:40+08:00</updated><id>https://lug.ustc.edu.cn//planet/2019/09/raspberry-4</id><content type="html" xml:base="https://lug.ustc.edu.cn//planet/2019/09/raspberry-4/">&lt;p&gt;原文地址：https://ibugone.com/blog/2019/09/raspberry-pi-4-review-benchmark/，作者为 @iBug 同学。以下为翻译部分。&lt;/p&gt;
+        &lt;hr /&gt;
+        &lt;p&gt;前段时间，我终于拿到了自己心念的树莓派 4（4 GB 的型号），之后我就忍不住试了试，看看它在报道中提到的改进与提升究竟是什么样子的。&lt;/p&gt;
+        &lt;p&gt;我自己的树莓派 3B+ 有个外壳，所以这次购买树莓派 4 的同时，我也订了个铝制的外壳，以减轻发热给树莓派带来的压力。与之前的外壳不同的是，它还配备了两个小风扇，能够大幅度提高散热效率。&lt;/p&gt;
+        &lt;p&gt;就让我们来看一看吧。&lt;/p&gt;
+        &lt;h2 id=&quot;概览&quot;&gt;概览&lt;/h2&gt;
+        &lt;figure class=&quot;third &quot;&gt;
+        &lt;a href=&quot;/static/planet/box.jpg&quot; title=&quot;Package of Raspberry Pi 4&quot;&gt;
+        &lt;img src=&quot;/static/planet/box.jpg&quot; alt=&quot;Package of Raspberry Pi 4&quot; /&gt;
+        &lt;/a&gt;
+        &lt;a href=&quot;/static/planet/box-bottom.jpg&quot; title=&quot;Bottom of the package&quot;&gt;
+        &lt;img src=&quot;/static/planet/box-bottom.jpg&quot; alt=&quot;Bottom of the package&quot; /&gt;
+        &lt;/a&gt;
+        &lt;a href=&quot;/static/planet/box-open-1024x768.jpg&quot; title=&quot;Opening the package&quot;&gt;
+        &lt;img src=&quot;/static/planet/box-open-1024x768.jpg&quot; alt=&quot;The package is open&quot; /&gt;
+        &lt;/a&gt;
+        &lt;/figure&gt;
+        &lt;p&gt;新的树莓派 4 装在了类似 3B+ 的包装中，包装正面是树莓派 4 的红底白线的结构图，与本体大小相同。与树莓派 3B 不同的是，3B+ 和 4 都没有用防静电袋包好。当然，这不是什么问题。&lt;/p&gt;
+        &lt;p&gt;它的结构与前几代类似，不过有一些明显的变化。比如说，你肯定会最先注意到那几个 USB 3.0 接口——因为它们是蓝色的。在你观察那几个接口的同时，你很可能也注意到了，有可能是因为千兆网口的升级的缘故，以太网接口换了位置。&lt;/p&gt;
+        &lt;figure class=&quot;third &quot;&gt;
+        &lt;a href=&quot;/static/planet/overview.jpg&quot; title=&quot;Overview of Raspberry Pi 4&quot;&gt;
+        &lt;img src=&quot;/static/planet/overview.jpg&quot; alt=&quot;Overview of Raspberry Pi 4&quot; /&gt;
+        &lt;/a&gt;
+        &lt;a href=&quot;/static/planet/overview-usb.jpg&quot; title=&quot;The USB ports and the Ethernet port&quot;&gt;
+        &lt;img src=&quot;/static/planet/overview-usb.jpg&quot; alt=&quot;Raspberry Pi 4 on top of the box, showing the USB ports and the Ethernet port&quot; /&gt;
+        &lt;/a&gt;
+        &lt;a href=&quot;/static/planet/overview-side-ports.jpg&quot; title=&quot;The USB Type-C port and the HDMI ports&quot;&gt;
+        &lt;img src=&quot;/static/planet/overview-side-ports.jpg&quot; alt=&quot;Focusing on the USB Type-C port and the HDMI ports&quot; /&gt;
+        &lt;/a&gt;
+        &lt;/figure&gt;
+        &lt;p&gt;有一些小接口，即供电口和视频输出，也有一些变化。树莓派 4 现在需要一根 Type-C 线供电，并且需求提升到了 5V / 3A。目前尚且不知树莓派 4 是否支持类似于高通快充或者 USB PD 这样的快充技术，但是从用户反馈来看，是没有的。旧款上标准大小的 HDMI 也被 micro-HDMI 口替换——而且变成了两个：它们都支持 4K 60fps 输出，而且可以同时输出！尽管我打算把树莓派当无头（无显示的）服务器来用，用树莓派配桌面环境的人可能会喜欢这个特性。&lt;/p&gt;
+        &lt;p&gt;内存条也从树莓派的背面移到了正面，现在在 SoC 旁边。SoC 长得和 3B+ 的一样，但是内部却完全不同。Wi-Fi 屏蔽罩和天线没有变化，另外在千兆网口的前面又多出了一个额外的芯片。&lt;/p&gt;
+        &lt;h2 id=&quot;参数&quot;&gt;参数&lt;/h2&gt;
+        &lt;p&gt;新的树莓派 4 带来了大量激动人心的更新，包括了：&lt;/p&gt;
+        &lt;ul&gt;
+        &lt;li&gt;博通 BCM2711 SoC, 四核 1.5 GHz Cortex-A72 CPU&lt;/li&gt;
+        &lt;li&gt;有 1 GB, 2GB 和 4 GB RAM 四种版本（4 GB 就是我手中的这款）&lt;/li&gt;
+        &lt;li&gt;博通 VideoCore VI GPU&lt;/li&gt;
+        &lt;li&gt;真正的千兆以太网口&lt;/li&gt;
+        &lt;li&gt;蓝牙 5.0&lt;/li&gt;
+        &lt;li&gt;原生 USB 3.0 支持，包含了 2 个 Type-A 的接口&lt;/li&gt;
+        &lt;li&gt;双 HDMI 口，支持同时 4K 60fps 输出&lt;/li&gt;
+        &lt;li&gt;更快的 microSD 卡插槽&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;在之后的基准测试中，你可以看到这些更新参数意味着什么。以下是一张对比表：&lt;/p&gt;
+        &lt;table&gt;
+        &lt;thead&gt;
+        &lt;tr&gt;
+        &lt;th&gt; &lt;/th&gt;
+        &lt;th style=&quot;text-align: center&quot;&gt;树莓派 3B&lt;/th&gt;
+        &lt;th style=&quot;text-align: center&quot;&gt;树莓派 3B+&lt;/th&gt;
+        &lt;th style=&quot;text-align: center&quot;&gt;树莓派 4&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+        &lt;tr&gt;
+        &lt;td&gt;CPU&lt;/td&gt;
+        &lt;td style=&quot;text-align: center&quot;&gt;四核 1.20 GHz Cortex-A53&lt;/td&gt;
+        &lt;td style=&quot;text-align: center&quot;&gt;四核 1.40 GHz Cortex-A53&lt;/td&gt;
+        &lt;td style=&quot;text-align: center&quot;&gt;四核 1.50 GHz Cortex-A72&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td&gt;内存&lt;/td&gt;
+        &lt;td style=&quot;text-align: center&quot;&gt;1 GB DDR2&lt;/td&gt;
+        &lt;td style=&quot;text-align: center&quot;&gt;1 GB DDR2&lt;/td&gt;
+        &lt;td style=&quot;text-align: center&quot;&gt;1 / 2 / &lt;strong&gt;4&lt;/strong&gt; GB DDR4&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td&gt;GPU&lt;/td&gt;
+        &lt;td style=&quot;text-align: center&quot;&gt;VideoCore IV&lt;/td&gt;
+        &lt;td style=&quot;text-align: center&quot;&gt;VideoCore IV&lt;/td&gt;
+        &lt;td style=&quot;text-align: center&quot;&gt;VideoCore VI&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td&gt;以太网&lt;/td&gt;
+        &lt;td style=&quot;text-align: center&quot;&gt;100 Mbps&lt;/td&gt;
+        &lt;td style=&quot;text-align: center&quot;&gt;300 Mbps 有效&lt;/td&gt;
+        &lt;td style=&quot;text-align: center&quot;&gt;1 Gbps&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td&gt;Wi-Fi&lt;/td&gt;
+        &lt;td style=&quot;text-align: center&quot;&gt;2.4 GHz&lt;/td&gt;
+        &lt;td style=&quot;text-align: center&quot;&gt;2.4 GHz / 5 GHz&lt;/td&gt;
+        &lt;td style=&quot;text-align: center&quot;&gt;2.4 GHz / 5 GHz&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td&gt;蓝牙&lt;/td&gt;
+        &lt;td style=&quot;text-align: center&quot;&gt;4.0&lt;/td&gt;
+        &lt;td style=&quot;text-align: center&quot;&gt;4.2&lt;/td&gt;
+        &lt;td style=&quot;text-align: center&quot;&gt;5.0&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td&gt;USB&lt;/td&gt;
+        &lt;td style=&quot;text-align: center&quot;&gt;4 个 USB 2.0&lt;/td&gt;
+        &lt;td style=&quot;text-align: center&quot;&gt;4 个 USB 2.0&lt;/td&gt;
+        &lt;td style=&quot;text-align: center&quot;&gt;2 个 USB 2.0 和 2 个 USB 3.0&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td&gt;官方价格&lt;/td&gt;
+        &lt;td style=&quot;text-align: center&quot;&gt;35 美元&lt;/td&gt;
+        &lt;td style=&quot;text-align: center&quot;&gt;35 美元&lt;/td&gt;
+        &lt;td style=&quot;text-align: center&quot;&gt;35 / 45 / &lt;strong&gt;55&lt;/strong&gt; 美元&lt;br /&gt;（根据内存选择不同而不同）&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/tbody&gt;
+        &lt;/table&gt;
+        &lt;p&gt;在我买到 3B+ 之后，我就把 3B 卖（给了译者），所以那个树莓派 3B 就没法参与接下来的评测了。（译者注：那个 3B 现在被我放在家里吃灰……对不起……）&lt;/p&gt;
+        &lt;h2 id=&quot;我的设置&quot;&gt;我的设置&lt;/h2&gt;
+        &lt;figure class=&quot; &quot;&gt;
+        &lt;a href=&quot;/static/planet/rpis-powered.jpg&quot; title=&quot;Both Raspberry Pis, powered through their GPIO pins&quot;&gt;
+        &lt;img src=&quot;/static/planet/rpis-powered.jpg&quot; alt=&quot;Both Raspberry Pis, powered through their GPIO pins&quot; /&gt;
+        &lt;/a&gt;
+        &lt;/figure&gt;
+        &lt;p&gt;正如你看到的那样，两个树莓派都是无头的服务器，只连接了电源和以太网。你可能在疑惑，为什么它们看起来这么诡异，这是因为我所在的实验室有很多标称 5V / 6A 的电源供应线，所以我就拿了一个来通过 GPIO 给这两个树莓派供电。这两个树莓派峰值标称 5V / 2.5A 和 5V / 3A，所以一根供电线就够了。&lt;/p&gt;
+        &lt;div class=&quot;notice--danger&quot;&gt;
+        &lt;h4 class=&quot;no_toc&quot; id=&quot;section&quot;&gt;&lt;i class=&quot;fas fa-exclamation-circle&quot;&gt;&lt;/i&gt; 警告&lt;/h4&gt;
+        &lt;p&gt;除非你有稳定的供电，请不要使用 GPIO 给树莓派供电。手机充电器不能作为电源供应，你永远都不应该用手机充电器通过 GPIO 供电给树莓派。&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;h2 id=&quot;基准测试&quot;&gt;基准测试&lt;/h2&gt;
+        &lt;p&gt;两个树莓派被分配了静态 IP，所有的操作都通过 SSH 完成。操作系统是最新版的 Raspbian Buster Lite。&lt;/p&gt;
+        &lt;h3 id=&quot;sysbench-cpu-测试&quot;&gt;SysBench CPU 测试&lt;/h3&gt;
+        &lt;p&gt;SysBench 是一个可以快速获取系统性能的测试套件。这里我使用 SysBench 来测试 CPU 与内存。&lt;/p&gt;
+        &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sysbench &lt;span class=&quot;nt&quot;&gt;--test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;cpu run
+        sysbench &lt;span class=&quot;nt&quot;&gt;--test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;cpu &lt;span class=&quot;nt&quot;&gt;--num-threads&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;4 run
+        sysbench &lt;span class=&quot;nt&quot;&gt;--test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;cpu &lt;span class=&quot;nt&quot;&gt;--num-threads&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;8 run
+        &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;figure class=&quot;&quot;&gt;
+        &lt;img src=&quot;/static/planet/sysbench-cpu.png&quot; alt=&quot;&quot; /&gt;
+        &lt;figcaption&gt;
+        SysBench CPU 性能，单位为秒，越低越好
+        &lt;/figcaption&gt;
+        &lt;/figure&gt;
+        &lt;p&gt;如表中显示的那样，在 CPU 性能方面，树莓派 4 相比 3B+ 而言有巨大提升，在所有情况中都少花了 19.3% 的时间。&lt;/p&gt;
+        &lt;h3 id=&quot;sysbench-内存测试&quot;&gt;SysBench 内存测试&lt;/h3&gt;
+        &lt;p&gt;内存测试有点复杂，并且我发现了一些意料之外的结果。&lt;/p&gt;
+        &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sysbench &lt;span class=&quot;nt&quot;&gt;--test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;memory &lt;span class=&quot;nt&quot;&gt;--memory-block-size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1K &lt;span class=&quot;nt&quot;&gt;--memory-total-size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2G &lt;span class=&quot;nt&quot;&gt;--memory-oper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;read &lt;/span&gt;run
+        sysbench &lt;span class=&quot;nt&quot;&gt;--test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;memory &lt;span class=&quot;nt&quot;&gt;--memory-block-size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1K &lt;span class=&quot;nt&quot;&gt;--memory-total-size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2G &lt;span class=&quot;nt&quot;&gt;--memory-oper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;write run
+        sysbench &lt;span class=&quot;nt&quot;&gt;--test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;memory &lt;span class=&quot;nt&quot;&gt;--memory-block-size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1K &lt;span class=&quot;nt&quot;&gt;--memory-total-size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2G &lt;span class=&quot;nt&quot;&gt;--memory-oper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;read&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--num-threads&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;4 run
+        sysbench &lt;span class=&quot;nt&quot;&gt;--test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;memory &lt;span class=&quot;nt&quot;&gt;--memory-block-size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1K &lt;span class=&quot;nt&quot;&gt;--memory-total-size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2G &lt;span class=&quot;nt&quot;&gt;--memory-oper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;write &lt;span class=&quot;nt&quot;&gt;--num-threads&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;4 run
+        sysbench &lt;span class=&quot;nt&quot;&gt;--test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;memory &lt;span class=&quot;nt&quot;&gt;--memory-block-size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1M &lt;span class=&quot;nt&quot;&gt;--memory-total-size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2G &lt;span class=&quot;nt&quot;&gt;--memory-oper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;write &lt;span class=&quot;nt&quot;&gt;--num-threads&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;4 run
+        &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;figure class=&quot;&quot;&gt;
+        &lt;img src=&quot;/static/planet/sysbench-memory.png&quot; alt=&quot;&quot; /&gt;
+        &lt;figcaption&gt;
+        SysBench 内存性能，单位为每秒指令数，越高越好
+        &lt;/figcaption&gt;
+        &lt;/figure&gt;
+        &lt;p&gt;新的 DDR4 内存竟然比老古董 DDR2 内存慢，而且在多线程情况下差距进一步拉大了！唯一一点合理的是，当单个块大小到 1 MiB 的时候，树莓派 4 要小幅好于 3B+。&lt;/p&gt;
+        &lt;p&gt;一件有意思的事情是，我没有包含“1 MiB Read MT”（1 MiB 单块，读取，多线程）这一列。SysBench 在两块树莓派上都给我返回了超过 200 GB/s 的结果，有时候结果还高达 500 GB/s。这显然太滑稽了，所以我直接忽略了那个结果。&lt;/p&gt;
+        &lt;h3 id=&quot;fio-microsd-卡速度测试&quot;&gt;FIO microSD 卡速度测试&lt;/h3&gt;
+        &lt;p&gt;此测试结果依赖于 microSD 卡本身，所以我拿出了我拥有的最快的 SD 卡：Lexar 667x 128 GB microSD 卡，外观类似下面这张图：&lt;/p&gt;
+        &lt;figure class=&quot;&quot;&gt;
+        &lt;img src=&quot;/static/planet/microsd-card-1024x752.jpg&quot; alt=&quot;&quot; /&gt;
+        &lt;/figure&gt;
+        &lt;p&gt;我使用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fio&lt;/code&gt; 作为磁盘（microSD 卡）I/O 性能测试工具。因为我更熟悉 Crystal DiskMark，我调整了 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fio&lt;/code&gt; 的参数，以与其一致。&lt;/p&gt;
+        &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fio &lt;span class=&quot;nt&quot;&gt;--loops&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;5 &lt;span class=&quot;nt&quot;&gt;--size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;500m &lt;span class=&quot;nt&quot;&gt;--filename&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;fiotest.tmp &lt;span class=&quot;nt&quot;&gt;--stonewall&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--ioengine&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;libaio &lt;span class=&quot;nt&quot;&gt;--direct&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;SeqRead &lt;span class=&quot;nt&quot;&gt;--bs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1m &lt;span class=&quot;nt&quot;&gt;--rw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;read&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;SeqWrite &lt;span class=&quot;nt&quot;&gt;--bs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1m &lt;span class=&quot;nt&quot;&gt;--rw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;write &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;512Kread &lt;span class=&quot;nt&quot;&gt;--bs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;512k &lt;span class=&quot;nt&quot;&gt;--rw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;randread &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;512Kwrite &lt;span class=&quot;nt&quot;&gt;--bs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;512k &lt;span class=&quot;nt&quot;&gt;--rw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;randwrite &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;4KQD32read &lt;span class=&quot;nt&quot;&gt;--bs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;4k &lt;span class=&quot;nt&quot;&gt;--iodepth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;32 &lt;span class=&quot;nt&quot;&gt;--rw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;randread &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;4KQD32write &lt;span class=&quot;nt&quot;&gt;--bs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;4k &lt;span class=&quot;nt&quot;&gt;--iodepth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;32 &lt;span class=&quot;nt&quot;&gt;--rw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;randwrite &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;4Kread &lt;span class=&quot;nt&quot;&gt;--bs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;4k &lt;span class=&quot;nt&quot;&gt;--rw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;randread &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;4Kwrite &lt;span class=&quot;nt&quot;&gt;--bs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;4k &lt;span class=&quot;nt&quot;&gt;--rw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;randwrite
+        &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;figure class=&quot;&quot;&gt;
+        &lt;img src=&quot;/static/planet/fio-microsd.png&quot; alt=&quot;&quot; /&gt;
+        &lt;figcaption&gt;
+        MicroSD 性能，单位为 MB/s，越高越好
+        &lt;/figcaption&gt;
+        &lt;/figure&gt;
+        &lt;p&gt;从结果来看，树莓派 4 的性能有巨大提升，在许多测试中都比 3B+ 快出 50%。这可能是树莓派 4 最有用的更新，因为性能的瓶颈几乎都在缓慢的磁盘 I/O 上。&lt;/p&gt;
+        &lt;h3 id=&quot;p7zip-基准测试&quot;&gt;p7zip 基准测试&lt;/h3&gt;
+        &lt;p&gt;7-zip 有个自带的基准测试工具，当然 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;p7zip&lt;/code&gt;（7-zip 的 POSIX 移植）也有。我使用这个工具来测试树莓派的压缩与解压性能。&lt;/p&gt;
+        &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;7zr b &lt;span class=&quot;nt&quot;&gt;-mmt1&lt;/span&gt;
+        7zr b
+        &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;figure class=&quot;&quot;&gt;
+        &lt;img src=&quot;/static/planet/p7zip.png&quot; alt=&quot;&quot; /&gt;
+        &lt;figcaption&gt;
+        p7zip 基准测试，越高越好
+        &lt;/figcaption&gt;
+        &lt;/figure&gt;
+        &lt;p&gt;如&lt;a href=&quot;https://sevenzip.osdn.jp/chm/cmdline/commands/bench.htm&quot;&gt;此帮助文档&lt;/a&gt;所言，压缩更依赖于内存的吞吐量与延迟，这可能是两块树莓派间在压缩测试中差距增大的原因。总之，树莓派 4 在 p7zip 测试中有 1/3 的性能提升。&lt;/p&gt;
+        &lt;h3 id=&quot;openssl-速度测试&quot;&gt;OpenSSL 速度测试&lt;/h3&gt;
+        &lt;p&gt;OpenSSL 是目前最流行的密码学软件库，它也包含了一个内置的速度测试。结果是在所有块大小中最快的那个——在 4 个测试中大小都是 16,384 字节。&lt;/p&gt;
+        &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;openssl speed &lt;span class=&quot;nt&quot;&gt;-evp&lt;/span&gt; aes-256-cbc
+        openssl speed &lt;span class=&quot;nt&quot;&gt;-evp&lt;/span&gt; aes-256-gcm
+        openssl speed &lt;span class=&quot;nt&quot;&gt;-evp&lt;/span&gt; sha1
+        openssl speed &lt;span class=&quot;nt&quot;&gt;-evp&lt;/span&gt; sha256
+        &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;figure class=&quot;&quot;&gt;
+        &lt;img src=&quot;/static/planet/openssl.png&quot; alt=&quot;&quot; /&gt;
+        &lt;figcaption&gt;
+        OpenSSL 基准测试，单位为 MB/s，越高越好
+        &lt;/figcaption&gt;
+        &lt;/figure&gt;
+        &lt;h3 id=&quot;网络速度测试&quot;&gt;网络速度测试&lt;/h3&gt;
+        &lt;p&gt;树莓派 4 将 300 Mbps 以太网升级到了真正的千兆网口，如果你打算用它来当离线下载器或者 NAS 的话，这是极好的。这里我跑了两个测试，看看网络究竟如何。&lt;/p&gt;
+        &lt;h4 id=&quot;curl-文件下载测试&quot;&gt;CURL 文件下载测试&lt;/h4&gt;
+        &lt;p&gt;这项测试非常简单：使用 cURL 从局域网机器下载文件，查看速度。&lt;/p&gt;
+        &lt;figure class=&quot;&quot;&gt;
+        &lt;img src=&quot;/static/planet/cURL.png&quot; alt=&quot;&quot; /&gt;
+        &lt;figcaption&gt;
+        cURL 下载速度，单位为 MB/s，越高越好
+        &lt;/figcaption&gt;
+        &lt;/figure&gt;
+        &lt;p&gt;结果不如预想那么好：树莓派 4 没能跑出千兆的速度，而我旁边的 x86 Linux 盒子就做到了。&lt;/p&gt;
+        &lt;h4 id=&quot;nginx-性能测试&quot;&gt;NGINX 性能测试&lt;/h4&gt;
+        &lt;p&gt;另一个常见的场景是：使用 NGINX 提供网页服务（对不起，这里没有 Apache 的位置）。我在两块树莓派上都安装了 NGINX，设置了 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;access_log off&lt;/code&gt;，并在我的 x86 盒子上使用 Siege 4.0.4 对树莓派服务器进行基准测试。&lt;/p&gt;
+        &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;siege &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; 10 &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; 1000 &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;host]
+        siege &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; 25 &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; 400 &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;host]
+        &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;figure class=&quot;&quot;&gt;
+        &lt;img src=&quot;/static/planet/nginx.png&quot; alt=&quot;&quot; /&gt;
+        &lt;figcaption&gt;
+        NGINX 性能，单位为请求数每秒，越高越好
+        &lt;/figcaption&gt;
+        &lt;/figure&gt;
+        &lt;p&gt;在 CPU 性能与网络速度的双重提升下，新的树莓派 4 速度接近 3B+ 的两倍。如果你想用树莓派搭个网站的话，这是个好消息。&lt;/p&gt;
+        &lt;h3 id=&quot;应用程序性能&quot;&gt;应用程序性能&lt;/h3&gt;
+        &lt;p&gt;我选择了两个我最熟悉的编程语言环境：Python 和 Ruby（我对 Node 不熟）来进行测试。&lt;/p&gt;
+        &lt;p&gt;Python 测试使用了&lt;a href=&quot;https://stackoverflow.com/a/44677724/8460426&quot;&gt;此 Stack Overflow 回答&lt;/a&gt;中的那个蠢极了的脚本，运行时间作为结果。&lt;/p&gt;
+        &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;Stupid test function&quot;&quot;&quot;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;lst&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;lst&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'__main__'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;timeit&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;timeit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;timeit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;test()&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;setup&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;from __main__ import test&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+        &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;p&gt;Ruby 测试就简单很多：使用 Jekyll 构建&lt;a href=&quot;https://ibugone.com/&quot;&gt;我的站点&lt;/a&gt;，查看消耗的时间。&lt;/p&gt;
+        &lt;figure class=&quot;&quot;&gt;
+        &lt;img src=&quot;/static/planet/python-ruby.png&quot; alt=&quot;&quot; /&gt;
+        &lt;figcaption&gt;
+        应用程序性能，单位为秒，越低越好
+        &lt;/figcaption&gt;
+        &lt;/figure&gt;
+        &lt;p&gt;Ruby 测试比 Python 测试更加均衡，因为它主要测试的是纯计算性能，结果 Ruby 测试中性能差距就要小一些。&lt;/p&gt;
+        &lt;p&gt;不过等等，这不代表树莓派 4 对大型的 Python 或者 Ruby 项目来说是个好的选择。相同的测试在我的 x86 盒子（i7-8850H, 32 GB DDR4, NVMe SSD）上&lt;strong&gt;快了 10 倍&lt;/strong&gt;，其仅使用 5 秒运行 Python 脚本，4 秒构建我的 Jekyll 站点。毕竟，你不能期望一个只卖 55 美元的板子能够有毁天灭地的性能，不是吗？&lt;/p&gt;
+        &lt;h3 id=&quot;usb-io-性能&quot;&gt;USB I/O 性能&lt;/h3&gt;
+        &lt;p&gt;我拿出了我的 USB 3.1 SSD（由 LiteOn L9M 512 GB 和一个包含了 VL716 SATA 转 USB 芯片的硬盘盒组装而成）。但是，我一把 SSD 插上树莓派，它就没电了。之后我发现这是因为供电不足（GPIO 针脚无法提供足够的电力），所以一天之后，我从 MicroUSB / Type-C 接口重新供电。这一次，3B+ 很顺利，但是树莓派 4 在测试时再一次因为电力问题出错。最后，我只能&lt;strong&gt;同时&lt;/strong&gt;从 Type-C 和 GPIO 给树莓派供电，以便在不断电的情况下完成 SSD 测试。&lt;/p&gt;
+        &lt;p&gt;这次的供电问题真的很严重，但先不去管它。让我们看看结果。&lt;/p&gt;
+        &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fio &lt;span class=&quot;nt&quot;&gt;--loops&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;5 &lt;span class=&quot;nt&quot;&gt;--size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1g &lt;span class=&quot;nt&quot;&gt;--filename&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;fiotest.tmp &lt;span class=&quot;nt&quot;&gt;--stonewall&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--ioengine&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;libaio &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;--direct&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1 &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;SeqRead &lt;span class=&quot;nt&quot;&gt;--bs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1m &lt;span class=&quot;nt&quot;&gt;--rw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;read&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;SeqWrite &lt;span class=&quot;nt&quot;&gt;--bs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1m &lt;span class=&quot;nt&quot;&gt;--rw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;write
+        &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;figure class=&quot;&quot;&gt;
+        &lt;img src=&quot;/static/planet/fio-usb.png&quot; alt=&quot;&quot; /&gt;
+        &lt;figcaption&gt;
+        USB 速度，单位为 MB/s，越高越好
+        &lt;/figcaption&gt;
+        &lt;/figure&gt;
+        &lt;p&gt;结果很棒！升级后的 USB 3.0 接口，即使没有跑到最高速，也比前代树莓派高出很多。但在享受高速 USB 之前，再让我强调一次：请特别关注你的 USB 外设，特别是那些有点儿耗电的设备，像机械硬盘和 SSD。如果电力得以保证，利用那两个高速 USB 接口对于 NAS 或者其他存储扩展来说好处多多。&lt;/p&gt;
+        &lt;h2 id=&quot;总结&quot;&gt;总结&lt;/h2&gt;
+        &lt;p&gt;在体验过 3B 到 3B+ 的小小提升后，新的树莓派 4 对于大多数树莓派爱好者来说，都是一场盛宴。价格不变，即使你已经有个 3B+，树莓派 4 也可以说是必买的。尽管在供电和散热上有缺点，如果你不插太多外设，不在树莓派上放太多重型任务的话，也没什么关系。&lt;/p&gt;</content><author><name>taoky</name></author><category term="Technology" /><category term="Translation" /><category term="树莓派" /><summary type="html">原文地址：https://ibugone.com/blog/2019/09/raspberry-pi-4-review-benchmark/，作者为 @iBug 同学。以下为翻译部分。</summary></entry><entry><title type="html">nc 是什么？</title><link href="https://lug.ustc.edu.cn//planet/2019/09/how-to-use-nc/" rel="alternate" type="text/html" title="nc 是什么？" /><published>2019-09-16T00:00:00+08:00</published><updated>2020-08-09T20:31:40+08:00</updated><id>https://lug.ustc.edu.cn//planet/2019/09/how-to-use-nc</id><content type="html" xml:base="https://lug.ustc.edu.cn//planet/2019/09/how-to-use-nc/">&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nc/ncat&lt;/code&gt; 是 netcat 的缩写，它可以读写 TCP 与 UDP 端口——或许你看不懂这句话，这没有关系。简单地说，它可以在字符界面下，让你和服务器沟通交流。&lt;/p&gt;
+        &lt;p&gt;一般来说，有很多题目都会要求你使用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nc&lt;/code&gt; 连接到他们的服务器，并且进行交互，获得 flag。&lt;/p&gt;
+        &lt;h2 id=&quot;如何安装-nc&quot;&gt;如何安装 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nc&lt;/code&gt;？&lt;/h2&gt;
+        &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nc&lt;/code&gt; 命令在 macOS 中是自带的，在 Linux 中一般自带，或是可以使用相应的软件包管理器安装（如在 Debian/Ubuntu 中这个包名叫 netcat）。&lt;/p&gt;
+        &lt;p&gt;当然，如果你在看这篇手册，你的操作系统很有可能是 Windows。它不自带 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nc&lt;/code&gt;，尽管可以用 WSL 或者虚拟机的方式解决，但是如果你觉得这样太麻烦了，也有另外一些方法。&lt;/p&gt;
+        &lt;h3 id=&quot;使用静态链接的-ncat-程序&quot;&gt;使用静态链接的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ncat&lt;/code&gt; 程序&lt;/h3&gt;
+        &lt;p&gt;前往 &lt;a href=&quot;https://github.com/andrew-d/static-binaries/blob/master/binaries/windows/x86/ncat.exe&quot;&gt;https://github.com/andrew-d/static-binaries/blob/master/binaries/windows/x86/ncat.exe&lt;/a&gt; 下载此程序。我们也在这里提供了一份。下载下来即可。&lt;/p&gt;
+        &lt;p&gt;&lt;a href=&quot;https://planet.ustclug.org/wp-content/uploads/2019/09/ncat.zip&quot;&gt;ncat.zip 下载&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;em&gt;注：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nc&lt;/code&gt;/&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ncat&lt;/code&gt; 事实上是两个不同的程序，但在我们接下来的使用上，基本没有区别。&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ncat&lt;/code&gt; 是由 Nmap 项目开发的“重置版的 Netcat”。&lt;/em&gt;&lt;/p&gt;
+        &lt;h4 id=&quot;我的杀毒软件报毒&quot;&gt;我的杀毒软件报毒！&lt;/h4&gt;
+        &lt;p&gt;这是 virustotal 的检测结果：&lt;a href=&quot;https://www.virustotal.com/gui/file/d0baada87420dd7c2e63d0dd3248749c06b53806d3021863c4fa659608053a8a/detection&quot;&gt;https://www.virustotal.com/gui/file/d0baada87420dd7c2e63d0dd3248749c06b53806d3021863c4fa659608053a8a/detection&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;如果你不相信此来源，也可以下载 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nmap&lt;/code&gt;（一个网络探测、扫描工具），它会附带一个 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ncat&lt;/code&gt;。&lt;/p&gt;
+        &lt;h2 id=&quot;如何使用-nc&quot;&gt;如何使用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nc&lt;/code&gt;?&lt;/h2&gt;
+        &lt;h3 id=&quot;windows&quot;&gt;Windows&lt;/h3&gt;
+        &lt;p&gt;直接双击，你会看到一个窗口一扫而过——这是正常现象。你需要使用「命令提示符」或者「PowerShell」来访问这个程序。&lt;/p&gt;
+        &lt;p&gt;Windows 10 中，你可以使用资源管理器 -&amp;gt; 文件来在你存放 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nc&lt;/code&gt; 的目录中打开命令提示符或 PowerShell。&lt;/p&gt;
+        &lt;figure class=&quot;&quot;&gt;
+        &lt;img src=&quot;/static/planet/explorer-1024x510.png&quot; alt=&quot;&quot; /&gt;
+        &lt;figcaption&gt;
+        在 Windows 资源管理器中打开命令提示符或 PowerShell
+        &lt;/figcaption&gt;
+        &lt;/figure&gt;
+        &lt;p&gt;或者，你也可以在开始菜单 -&amp;gt; Windows 系统中打开命令提示符，或者在开始菜单 -&amp;gt; Windows PowerShell 中打开 PowerShell，然后使用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cd&lt;/code&gt; 命令转移到对应的目录：输入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cd 文件夹名&lt;/code&gt; 可以让你转移到对应的文件夹，输入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cd ..&lt;/code&gt; 可以让你转移到上面一层目录。使用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dir&lt;/code&gt; 命令，可以显示当前目录下所有文件。同时，使用 Tab 键可以帮助你补全名称。&lt;/p&gt;
+        &lt;p&gt;当跳转到你存放 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nc&lt;/code&gt; 的文件夹后：&lt;/p&gt;
+        &lt;ul&gt;
+        &lt;li&gt;如果你使用的是 PowerShell（蓝色背景），输入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;./ncat&lt;/code&gt;（根据 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nc&lt;/code&gt; 对应的名称不同而不同）。&lt;/li&gt;
+        &lt;li&gt;如果你使用的是命令提示符（黑色背景），输入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ncat&lt;/code&gt;（根据 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nc&lt;/code&gt; 对应的名称不同而不同）。&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;当显示以下内容时，说明你成功运行了它。&lt;/p&gt;
+        &lt;figure class=&quot;&quot;&gt;
+        &lt;img src=&quot;/static/planet/cmdncat-1024x596.png&quot; alt=&quot;&quot; /&gt;
+        &lt;figcaption&gt;
+        成功运行 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ncat&lt;/code&gt;
+        &lt;/figcaption&gt;
+        &lt;/figure&gt;
+        &lt;h3 id=&quot;linux--macos&quot;&gt;Linux &amp;amp; macOS&lt;/h3&gt;
+        &lt;p&gt;打开「终端」，输入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nc&lt;/code&gt;。&lt;/p&gt;
+        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ nc
+        usage: nc [-46AacCDdEFhklMnOortUuvz] [-K tc] [-b boundif] [-i interval] [-p source_port] [--apple-delegate-pid pid] [--apple-delegate-uuid uuid]
+        [-s source_ip_address] [-w timeout] [-X proxy_version]
+        [-x proxy_address[:port]] [hostname] [port[s]]
+        &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;p&gt;出现了类似上面的输出，说明运行成功了。&lt;/p&gt;
+        &lt;h3 id=&quot;示例&quot;&gt;示例&lt;/h3&gt;
+        &lt;p&gt;在我们使用浏览器上网的时候，我们和服务器使用了 HTTP 协议进行连接。关于 HTTP 协议的更多细节，你需要自己上网搜索。一般来说，默认是 80 端口。&lt;/p&gt;
+        &lt;p&gt;我们可以使用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nc&lt;/code&gt;，尝试一次与网页服务器的连接，以百度为例。&lt;/p&gt;
+        &lt;p&gt;输入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nc www.baidu.com 80&lt;/code&gt;（或者 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ncat www.baidu.com 80&lt;/code&gt;，或者 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;./ncat www.baidu.com 80&lt;/code&gt;，请根据以上的介绍自行修改），程序会等待你的输入。&lt;/p&gt;
+        &lt;p&gt;输入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GET / HTTP/1.0&lt;/code&gt;。这表示，我们使用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HTTP/1.0&lt;/code&gt; 这个协议版本，用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GET&lt;/code&gt; 的方式请求根 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/&lt;/code&gt;。输入两下回车，代表我们的 HTTP 请求完成。如果你的网络畅通，百度的网页服务器会立刻返回大量信息，可以自行搜索，了解它们的含义。现在，你成功（在不使用浏览器的情况下）完成了一次与百度网站的连接！&lt;/p&gt;
+        &lt;figure class=&quot;&quot;&gt;
+        &lt;img src=&quot;/static/planet/nc-1024x596.png&quot; alt=&quot;&quot; /&gt;
+        &lt;figcaption&gt;
+        Success!
+        &lt;/figcaption&gt;
+        &lt;/figure&gt;
+        &lt;p&gt;如果你成功了，那么你可以开始愉快地完成我们的题目了！&lt;/p&gt;</content><author><name>taoky</name></author><category term="Tech Tutorial" /><category term="hackergame" /><category term="netcat" /><summary type="html">nc 是什么？</summary></entry><entry><title type="html">一个 NFS 的简介</title><link href="https://lug.ustc.edu.cn//planet/2019/08/NFS-intro/" rel="alternate" type="text/html" title="一个 NFS 的简介" /><published>2019-08-28T00:00:00+08:00</published><updated>2020-08-09T20:31:40+08:00</updated><id>https://lug.ustc.edu.cn//planet/2019/08/NFS-intro</id><content type="html" xml:base="https://lug.ustc.edu.cn//planet/2019/08/NFS-intro/">&lt;p&gt;NFS（网络文件系统，Network File System）是一个分布式的文件系统，可以用于在局域网中共享文件。它通常运用在 Unix 与类 Unix 操作系统中。对于 Linux 服务器之间的文件共享来说，NFS 相比于其他的方案（如 Samba）更加方便，性能也更好。对于应用程序来说，NFS 也是透明的。&lt;/p&gt;
+        &lt;h2 id=&quot;简单配置-nfs&quot;&gt;简单配置 NFS&lt;/h2&gt;
+        &lt;p&gt;我们以两台 Debian 10 的机器为例&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;简单配置 NFS 服务端。其余的发行版可以查询各自的手册以获取详细信息。&lt;/p&gt;
+        &lt;p&gt;在绝大多数情况下，NFS 支持已经安装在 Linux 内核中。我们可以使用以下命令安装内核态的 NFS 服务器实现：&lt;/p&gt;
+        &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;nfs-kernel-server
+        &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;p&gt;（如果有兼容 NFSv2 和 NFSv3 的需求，需要安装 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;portmap&lt;/code&gt;）&lt;/p&gt;
+        &lt;p&gt;出于安全性的考虑&lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;，我们假设 NFS 共享的根目录是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/srv/nfs4&lt;/code&gt;。 如果需要共享的目录在其他位置，可以使用 bind mount 的方式挂载上去。（当然，对于简单的配置来说，不这样做问题也不大）&lt;/p&gt;
+        &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mount &lt;span class=&quot;nt&quot;&gt;--bind&lt;/span&gt; 实际放置文件的目录 /srv/nfs/your_folder_name
+        &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;p&gt;编辑 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/etc/exports&lt;/code&gt;，设置共享文件夹的位置、允许访问的 IP、权限等，以下是一个示例。&lt;/p&gt;
+        &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/srv/nfs4/Downloads 192.168.124.0/24&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;rw,sync&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;p&gt;这里设置了 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/srv/nfs4/Downloads&lt;/code&gt; 可以被 192.168.124.0/24 的子网访问，如果希望所有人都可以访问，可以用星号 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*&lt;/code&gt; 代替这里的网段。参数为可读写 (rw)，同步 (sync，即更改操作完成之后才会返回用户的请求)。更多的参数细节可以至 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;man exports&lt;/code&gt; 查看。&lt;/p&gt;
+        &lt;p&gt;接下来，重启 NFS 服务，服务器端就配置好了。&lt;/p&gt;
+        &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;systemctl restart nfs-kernel-server
+        &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;p&gt;接下来配置一下客户端。安装 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nfs-common&lt;/code&gt;，之后就可以愉快地挂载了。&lt;/p&gt;
+        &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;mount &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; nfs4 192.168.124.18:/srv/nfs4/Downloads /mnt/nfs_mount/
+        &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;p&gt;此处将服务器 192.168.124.18 上的 NFS 共享挂载到了 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/mnt/nfs_mount/&lt;/code&gt; 文件夹下。可以看到服务器的文件显示在了客户端中，可以正常打开。&lt;/p&gt;
+        &lt;p&gt;可以使用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;showmount -e 服务器名称或 IP&lt;/code&gt; 来查看某台服务器上可挂载的 NFS 共享。&lt;/p&gt;
+        &lt;p&gt;如果发现写入没有权限的话，这是由于客户端用户访问时的权限在服务器端会变为匿名用户 (nobody. uid, gid = 65534) 以保障安全性。可以调整文件夹的权限、调整「匿名用户」为指定的 UID 和 GID，或者设置导出参数 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;no_root_squash&lt;/code&gt;，使客户端用户权限可以在服务端保持（很危险，因为在挂载点中，客户端的 root 和服务端的 root 是一样的）。&lt;/p&gt;
+        &lt;h2 id=&quot;windows-和-macos-也支持当客户端吗&quot;&gt;Windows 和 macOS 也支持（当客户端）吗？&lt;/h2&gt;
+        &lt;p&gt;当然啦。（虽然可能有点麻烦）&lt;/p&gt;
+        &lt;h3 id=&quot;windows&quot;&gt;Windows&lt;/h3&gt;
+        &lt;p&gt;下面以一台在同一局域网的 Windows 10 机器为例。在「启用或关闭 Windows 功能」中添加 NFS 客户端支持。&lt;/p&gt;
+        &lt;figure class=&quot;&quot;&gt;
+        &lt;img src=&quot;/static/planet/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7-2019-08-28-13.57.03-1.png&quot; alt=&quot;&quot; /&gt;
+        &lt;figcaption&gt;
+        Windows 功能 =&amp;gt; NFS 服务 =&amp;gt; NFS 客户端
+        &lt;/figcaption&gt;
+        &lt;/figure&gt;
+        &lt;p&gt;此客户端会在系统中安装 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mount&lt;/code&gt; 等工具。&lt;/p&gt;
+        &lt;figure class=&quot;&quot;&gt;
+        &lt;img src=&quot;/static/planet/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7-2019-08-28-13.59.48-1-1024x824.png&quot; alt=&quot;&quot; /&gt;
+        &lt;figcaption&gt;
+        Windows 版本 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mount&lt;/code&gt; 的使用帮助
+        &lt;/figcaption&gt;
+        &lt;/figure&gt;
+        &lt;p&gt;如果我们需要挂载上面那个服务器的共享，可以输入以下命令：&lt;/p&gt;
+        &lt;pre&gt;&lt;code class=&quot;language-cmd&quot;&gt;mount \\服务器名称\共享路径 设备名（盘符）
+        &lt;/code&gt;&lt;/pre&gt;
+        &lt;figure class=&quot;&quot;&gt;
+        &lt;img src=&quot;/static/planet/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7-2019-08-28-14.10.47.png&quot; alt=&quot;&quot; /&gt;
+        &lt;figcaption&gt;
+        大概是成功挂载了
+        &lt;/figcaption&gt;
+        &lt;/figure&gt;
+        &lt;p&gt;只不过……好像哪里不太对劲？&lt;/p&gt;
+        &lt;figure class=&quot;&quot;&gt;
+        &lt;img src=&quot;/static/planet/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7-2019-08-28-14.14.09-1024x555.png&quot; alt=&quot;&quot; /&gt;
+        &lt;figcaption&gt;
+        中文的文件名变成了乱码
+        &lt;/figcaption&gt;
+        &lt;/figure&gt;
+        &lt;p&gt;Windows 中官方的 NFS 支持提供的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mount&lt;/code&gt; 不支持 UTF-8 编码，导致了乱码的产生。如果需要 Windows 支持，考虑以下一些方法：&lt;/p&gt;
+        &lt;ul&gt;
+        &lt;li&gt;使用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fuse-convmvfs&lt;/code&gt; 修改服务端文件的编码，详见&lt;a href=&quot;https://superuser.com/questions/302407/what-to-do-with-nfs-server-utf-8-and-windows-7&quot;&gt;此 Super User 上的回答&lt;/a&gt;。&lt;/li&gt;
+        &lt;li&gt;找一个别的 Windows 的 NFS 客户端。&lt;/li&gt;
+        &lt;li&gt;如果正在使用新版的 Windows 10，在区域设置中启用 Beta 版本的 UTF-8 支持。注意这可能会导致一部分软件出现乱码。&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;如果要取消挂载，使用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;umount&lt;/code&gt; 即可。&lt;/p&gt;
+        &lt;h3 id=&quot;macos&quot;&gt;macOS&lt;/h3&gt;
+        &lt;p&gt;相比于 Windows 的挂载体验来说，macOS 由于是 Unix 系的操作系统，挂载 NFS 就方便一些。直接把 Linux 的命令复制过来就……&lt;/p&gt;
+        &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;mount &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; nfs4 192.168.124.18:/srv/nfs4/Downloads nfs_mount
+        &lt;span class=&quot;go&quot;&gt;Password:
+        mount: exec /Library/Filesystems/nfs4.fs/Contents/Resources/mount_nfs4 for /Users/tao/nfs_mount: No such file or directory
+        &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;p&gt;诶？稍微调整一下……&lt;/p&gt;
+        &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;mount &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; nfs 192.168.124.18:/srv/nfs4/Downloads nfs_mount
+        &lt;span class=&quot;go&quot;&gt;mount_nfs: can't mount /srv/nfs4/Downloads from 192.168.124.18 onto /Users/tao/nfs_mount: Operation not permitted
+        &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;p&gt;这是因为 NFS 服务器默认配置要求来源端口小于 1024 以「保障安全」（因为这样的端口只有 root 用户可以开）。当然 macOS 中 mount_nfs 的文档里面也这样吐槽：&lt;/p&gt;
+        &lt;blockquote&gt;
+        &lt;p&gt;resvport: Use a reserved socket port number.&lt;/p&gt;
+        &lt;p&gt;This is useful for mounting servers that require clients to use a reserved port number on the mistaken belief that this makes NFS more secure. (For the rare case where the client has a trusted root account but untrustworthy users and the network cables are in secure areas this does help, but for normal desktop clients this does not apply.)&lt;/p&gt;
+        &lt;p&gt;BSD System Manager’s Manual, mount_nfs&lt;/p&gt;
+        &lt;/blockquote&gt;
+        &lt;p&gt;有两个解决方案：&lt;/p&gt;
+        &lt;ul&gt;
+        &lt;li&gt;服务器端参数加入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;insecure&lt;/code&gt;。这样的话 Finder 也可以轻松挂载。&lt;/li&gt;
+        &lt;li&gt;命令行加入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-o resvport&lt;/code&gt; 参数。&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;挂载之后，在 Finder 侧边栏也会显示。编码显示非常正常。&lt;del&gt;MS 出来挨打&lt;/del&gt;&lt;/p&gt;
+        &lt;h2 id=&quot;在-mirrors-中的实践&quot;&gt;在 mirrors 中的实践&lt;/h2&gt;
+        &lt;p&gt;在新的存储等设备买来配置好之前，我们的 mirrors 服务由服务器 mirrors2 提供。随着各种镜像逐年增大，我们的 ZFS pool 的空间越来越小，尤其是在同步的时候。这个月已经出现了多次空间吃光的情况，出现时会导致导致同步任务堆积无法完成，系统负载达到 100 以上，I/O 性能急剧下降。&lt;/p&gt;
+        &lt;p&gt;我们对日志分析后发现，bioc 仓库（R 语言的分子生物学软件仓库）访问量很小，但是空间占用巨大（约 1.4 TB）。由于我们前段时间多出一台闲置的服务器（命名为 mirrors3），目前我们将 bioc 放置在了 mirrors3 上，同步任务也由 mirrors3 完成，NFS 到 mirrors2 上继续正常提供服务。这一项工作主要由付佳伟同学完成。多出来的磁盘空间应该可以维持比较长一段时间的稳定工作。&lt;/p&gt;
+        &lt;p&gt;在一部分细节方面，服务器还没有配置完成，在 &lt;a href=&quot;https://mirrors.ustc.edu.cn/status/&quot;&gt;status 页面&lt;/a&gt;的显示也比较奇怪，这是因为此页面读取的是 mirrors2 的数据。我们未来会进行改进，如果你在使用 bioc 仓库时遇到问题，也欢迎通过发送邮件到 &lt;a href=&quot;mailto:lug@ustc.edu.cn&quot;&gt;lug@ustc.edu.cn&lt;/a&gt; 或者在 &lt;a href=&quot;https://github.com/ustclug/discussions&quot;&gt;https://github.com/ustclug/discussions&lt;/a&gt; 中提交 issue 进行反馈。&lt;/p&gt;
+        &lt;hr /&gt;
+        &lt;p&gt;另外，planet 已经有将近一年的时间处于死寂的状态。我写的其实不太好，此次更新主要是希望能够引起大家的注意，收到更多的稿件。另外有一些（未完成的）稿件在我们的草稿箱里，我会去给对应的作者催稿的（&lt;/p&gt;
+        &lt;p&gt;由于 WordPress 的用户权限配置问题，你在注册账号后可能找不到投稿的地方。直接发送邮件到 &lt;a href=&quot;mailto:planet@ustclug.org&quot;&gt;planet@ustclug.org&lt;/a&gt; 跟我们说吧（当然 &lt;a href=&quot;mailto:lug@ustc.edu.cn&quot;&gt;lug@ustc.edu.cn&lt;/a&gt; 也行，我也会处理的）！也欢迎提供你的博客的 RSS 地址，我们可以选择文章转载到这里。&lt;/p&gt;
+        &lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+        &lt;ol&gt;
+        &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+        &lt;p&gt;https://wiki.debian.org/NFSServerSetup &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+        &lt;/li&gt;
+        &lt;li id=&quot;fn:2&quot; role=&quot;doc-endnote&quot;&gt;
+        &lt;p&gt;https://wiki.archlinux.org/index.php/NFS#Server &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+        &lt;/li&gt;
+        &lt;/ol&gt;
+        &lt;/div&gt;</content><author><name>taoky</name></author><category term="Technology" /><category term="NFS" /><summary type="html">NFS（网络文件系统，Network File System）是一个分布式的文件系统，可以用于在局域网中共享文件。它通常运用在 Unix 与类 Unix 操作系统中。对于 Linux 服务器之间的文件共享来说，NFS 相比于其他的方案（如 Samba）更加方便，性能也更好。对于应用程序来说，NFS 也是透明的。</summary></entry><entry><title type="html">PXE 是什么</title><link href="https://lug.ustc.edu.cn//planet/2018/10/PXE-intro/" rel="alternate" type="text/html" title="PXE 是什么" /><published>2018-10-07T00:00:00+08:00</published><updated>2020-08-09T20:31:40+08:00</updated><id>https://lug.ustc.edu.cn//planet/2018/10/PXE-intro</id><content type="html" xml:base="https://lug.ustc.edu.cn//planet/2018/10/PXE-intro/">&lt;p&gt;&lt;em&gt;预启动执行环境（Preboot eXecution Environment，PXE，也被称为预执行环境)提供了一种使用网络接口（Network Interface）启动计算机的机制。这种机制让计算机的启动可以不依赖本地数据存储设备（如硬盘）或本地已安装的操作系统。——摘自 &lt;a href=&quot;https://wiki.archlinux.org/index.php/PXE&quot;&gt;Archwiki&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+        &lt;h3 id=&quot;pxe-原理介绍&quot;&gt;PXE 原理介绍&lt;/h3&gt;
+        &lt;p&gt;PXE 协议是由 Intel 设计的，它可以使计算机通过网络启动。协议分为 client 和 server 两端，PXE client 在网卡的 ROM 中，当计算机引导时，BIOS 把 PXE client 调入内存执行，并显示出命令菜单，经用户选择后，PXE client 将放置在远端的操作系统通过网络下载到本地运行。&lt;/p&gt;
+        &lt;p&gt;PXE 可以通过网络直接启动一些 Live Linux，或者调用 Linux Installer，GParted 等工具，较使用 U 盘启动更加方便快捷，有多种工具，Live 系统等可供用户挑选，在紧急维护情况下也有很大的作用。&lt;/p&gt;
+        &lt;h3 id=&quot;例子图书馆查询机&quot;&gt;例子：图书馆查询机&lt;/h3&gt;
+        &lt;p&gt;图书馆内的图书查询机就是用 PXE 启动的，启动镜像叫 liims，里面包含了一个以图书馆透明计算系统为主页的浏览器（主页包括了图书查询，邮箱登录，学习空间预约等功能），还有瀚海星云的 telnet 客户端和彩虹猫，用户也可以自己启动一个虚拟机，用 PXE 启动进入查询系统。&lt;/p&gt;
+        &lt;h2 id=&quot;pxe-怎么用&quot;&gt;PXE 怎么用&lt;/h2&gt;
+        &lt;h3 id=&quot;使用条件&quot;&gt;使用条件&lt;/h3&gt;
+        &lt;p&gt;电脑最好内置有 PXE Boot Agent，并且已经&lt;a href=&quot;https://lug.ustc.edu.cn/wiki/server/pxe/faq#如何激活我电脑中的_pxe_boot_agent&quot;&gt;激活&lt;/a&gt;；没有现成支持的话，有&lt;a href=&quot;https://lug.ustc.edu.cn/wiki/server/pxe/faq#我的电脑没有内置_pxe_boot_agent_我该怎么做&quot;&gt;几种解决办法&lt;/a&gt;。
+        所在的网段最好有能提供正确的 PXE 信息的 DHCP 服务器，以及可以通过 TFTP 数据包的网关；没有的话可以请管理员加以&lt;a href=&quot;https://lug.ustc.edu.cn/wiki/server/pxe/faq#我们实验室有自己的网关和dhcp服务器_该如何设置以便子网内的计算机能够访问pxe服务&quot;&gt;设置&lt;/a&gt;，或自己动手&lt;a href=&quot;https://lug.ustc.edu.cn/wiki/server/pxe/faq#如何把某个_pxeustc_上的网络启动系统直接加入_grublilo_的启动菜单&quot;&gt;把网络启动系统加入GRUB/LILO菜单&lt;/a&gt;。
+        如果所在实验室用地址转换/伪装技术建立了自己的子网，则需要&lt;a href=&quot;https://lug.ustc.edu.cn/wiki/server/pxe/faq#我们实验室有自己的网关和dhcp服务器_该如何设置以便子网内的计算机能够访问pxe服务&quot;&gt;配置&lt;/a&gt;。&lt;/p&gt;
+        &lt;h4 id=&quot;科大校园网&quot;&gt;科大校园网&lt;/h4&gt;
+        &lt;p&gt;连接校园网（一般需要插网线）调节 BIOS 设置进入 PXE 环境即可直接进入 USTC PXE&lt;/p&gt;
+        &lt;h4 id=&quot;非科大校园网&quot;&gt;非科大校园网&lt;/h4&gt;
+        &lt;p&gt;首先需要进入 PXE 环境，这里以在 virtualbox 虚拟机使用 iPXE 为例， virtualbox 自带的 PXE 功能比较简单，所以使用 iPXE 替代之。从 iPXE 官网下载 iPXE 的 &lt;a href=&quot;http://boot.ipxe.org/ipxe.iso&quot;&gt;ISO&lt;/a&gt;，然后让虚拟机从这个 ISO 启动。 按 Ctrl + B 进入 iPXE 的命令行模式。然后输入以下命令：&lt;/p&gt;
+        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;dhcp //如果已经获取到了地址则请忽略
+        set 210:string http://202.38.93.94/boot/tftp/
+        chain ${210:string}pxelinux.0
+        &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;p&gt;注：目前 PXE 处于更新状态，新版 PXE 还有一些问题，使用上述命令出现问题的同学请使用旧版 PXE，使用 Windows PE 的同学也请先使用旧版 PXE，命令如下&lt;/p&gt;
+        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;dhcp //如果已经获取到了地址则请忽略
+        set 210:string http://202.38.93.94/boot/tftp/
+        chain ${210:string}lpxelinux.0
+        &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;p&gt;接下来你就能见到 USTC PXE 的界面了 🙂&lt;/p&gt;
+        &lt;p&gt;注意到我们使用的 iPXE 的命令里使用的是 http 协议，这也为一些在 NAT 后面而无法使用 tftp 的用户提供使用 USTC PXE 的方法。&lt;/p&gt;
+        &lt;p&gt;另外 iPXE 也可以刻录到 usb 上，这样主机如果想用 PXE 就可以用 usb 启动 iPXE （如果主机自带的 PXE 比较弱），然后使用上面的命令进入 USTC PXE 了。 iPXE 的 usb 镜像可以从 http://boot.ipxe.org/ipxe.usb 下载，然后用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dd if=ipxe.usb of=/dev/sdX &lt;/code&gt;来刻录。&lt;/p&gt;
+        &lt;p&gt;下载 iso 作为虚拟光驱挂载在虚拟机上，从 CD 启动，&lt;/p&gt;
+        &lt;h2 id=&quot;pxe-有什么&quot;&gt;PXE 有什么&lt;/h2&gt;
+        &lt;figure class=&quot;&quot;&gt;
+        &lt;img src=&quot;/static/planet/2018-08-11-1720-ScreenShot.png&quot; alt=&quot;&quot; /&gt;
+        &lt;figcaption&gt;
+        PXE 的启动菜单
+        &lt;/figcaption&gt;
+        &lt;/figure&gt;
+        &lt;h3 id=&quot;linux-安装工具&quot;&gt;Linux 安装工具&lt;/h3&gt;
+        &lt;ul&gt;
+        &lt;li&gt;Ubuntu&lt;/li&gt;
+        &lt;li&gt;Debian&lt;/li&gt;
+        &lt;li&gt;Kali&lt;/li&gt;
+        &lt;li&gt;OpenSUSE&lt;/li&gt;
+        &lt;li&gt;Centos&lt;/li&gt;
+        &lt;li&gt;Arch Linux&lt;/li&gt;
+        &lt;li&gt;Fedora&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;h3 id=&quot;live-system&quot;&gt;Live System&lt;/h3&gt;
+        &lt;ul&gt;
+        &lt;li&gt;Ubuntu&lt;/li&gt;
+        &lt;li&gt;Debian&lt;/li&gt;
+        &lt;li&gt;Deepin&lt;/li&gt;
+        &lt;li&gt;Archlinux&lt;/li&gt;
+        &lt;li&gt;Manjaro&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;h3 id=&quot;windows-pe&quot;&gt;Windows PE&lt;/h3&gt;
+        &lt;p&gt;&lt;img src=&quot;/static/planet/2018-08-11-1733-ScreenShot-2.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+        &lt;h3 id=&quot;实用工具&quot;&gt;实用工具&lt;/h3&gt;
+        &lt;ul&gt;
+        &lt;li&gt;
+        &lt;p&gt;Hardware Detection Tools (hdt)&lt;/p&gt;
+        &lt;figure class=&quot;&quot;&gt;
+        &lt;img src=&quot;/static/planet/2018-08-11-1726-ScreenShot.png&quot; alt=&quot;&quot; /&gt;
+        &lt;figcaption&gt;
+        hdt 中的查看硬盘信息部分
+        &lt;/figcaption&gt;
+        &lt;/figure&gt;
+        &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;&amp;lt;/figure&amp;gt;&lt;/p&gt;
+        &lt;ul&gt;
+        &lt;li&gt;PXE Knife&lt;/li&gt;
+        &lt;li&gt;GParted Live&lt;/li&gt;
+        &lt;li&gt;Clonezilla live&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;h3 id=&quot;图书馆查询系统&quot;&gt;图书馆查询系统&lt;/h3&gt;
+        &lt;p&gt;&lt;img src=&quot;/static/planet/2018-08-11-1943-ScreenShot.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+        &lt;h2 id=&quot;应用场景分析&quot;&gt;应用场景分析&lt;/h2&gt;
+        &lt;h3 id=&quot;体验新系统&quot;&gt;体验新系统&lt;/h3&gt;
+        &lt;p&gt;PXE 的 Live System 菜单中包含了 Debian，Deepin，Arch Linux，Manjaro 等 Live 系统，选择一个 Live 系统启动，就可以不用安装就能体验 Linux 的使用。&lt;/p&gt;
+        &lt;h3 id=&quot;安装新系统&quot;&gt;安装新系统&lt;/h3&gt;
+        &lt;p&gt;PXE 中 Linux Installer 菜单下有 Debian，Kali 等多种 Linux 发行版的安装器，当然也可以通过 Live System 进行安装，PXE 使用的 Live System 与写了 Live iso 的 U盘功能是一样的。&lt;/p&gt;
+        &lt;h3 id=&quot;linux-密码恢复磁盘检查等&quot;&gt;Linux 密码恢复，磁盘检查等&lt;/h3&gt;
+        &lt;p&gt;Linux 用户通常需要准备一个 Live USB，在忘记密码，磁盘检查等需要对根分区进行操作等情况下能够进入 Live，再 Live 上面对本机系统进行各种操作。PXE 其实就在不需要 U盘的前提下实现了这个功能，而且由于 PXE 上面有多种镜像，用户就有了多种选择。&lt;/p&gt;
+        &lt;p&gt;进入 Live 之后，如果进入图形界面，启动一个终端模拟器（即 terminal）即可，或者进入 tty。进行密码恢复等操作一般需要 root 权限。&lt;/p&gt;
+        &lt;p&gt;密码恢复：首先挂载本机系统的根分区（mount &lt;em&gt;设备名(如 /dev/sda1)**挂载点&lt;/em&gt;），然后 chroot 进入挂载点，再用 passwd &lt;em&gt;用户名&lt;/em&gt;（root 可以不加参数）命令修改密码。&lt;/p&gt;
+        &lt;p&gt;磁盘检查，分区修改等：fsck 和 fdisk 命令均需要进行操作的分区未被挂载。如果磁盘检查，fsck &lt;em&gt;设备名&lt;/em&gt; 即可。分区修改，如扩容等操作先 fdisk &lt;em&gt;设备名&lt;/em&gt;，进入 fdisk 程序内部，再执行 fdisk 命令即可。fdisk 命令可以使用 m 查看。fdisk 命令较为简单，如 p 为打印分区表，d 为删除分区，n 为新建一个分区，w 为写入分区表等，执行命令后 fdisk 会对接下来进行的操作给出提示。分区修改也可以使用 gparted live，图形界面可能更友好一些，下文会进行介绍。&lt;/p&gt;
+        &lt;h3 id=&quot;硬盘分区扩容&quot;&gt;硬盘分区扩容&lt;/h3&gt;
+        &lt;p&gt;GParted 的界面较为直观，选择设备后界面就会出现这个设备的分区情况，点击一块分区可以进行删除，移动，改变大小或复制，如果有空闲空间也可以点击 New 新建分区。移动分区或向前扩容时要注意，&lt;strong&gt;改变分区起始位置可能会使文件系统损坏&lt;/strong&gt;。每次进行一次操作后最下方会增加一个条目，确认修改时要点击 Apply，此时 GParted 会根据 operation list 进行操作并给出日志，在完成之后会更新分区表。&lt;/p&gt;
+        &lt;p&gt;&lt;img src=&quot;/static/planet/2018-08-11-1717-ScreenShot-1.png&quot; alt=&quot;img&quot; /&gt;
+        使用 GParted 改变分区大小和位置&lt;/p&gt;
+        &lt;h3 id=&quot;windows-下的启动修复等&quot;&gt;Windows 下的启动修复等&lt;/h3&gt;
+        &lt;p&gt;PXE 上还有 Windows PE 的镜像，因此也可以通过 PE 来对本机的 Windows 进行启动修复，文件移动复制，修改注册表等操作。&lt;/p&gt;
+        &lt;h2 id=&quot;总结&quot;&gt;总结&lt;/h2&gt;
+        &lt;p&gt;相比使用 U 盘安装时还需要下载镜像，制作启动盘等繁琐的操作，使用 PXE 只需要插上网线，并且调节 BIOS 设置即可进入 live linux，而且还有 GParted 等一系列工具可用，在服务器等出现问题时应急处理也很有帮助，还是很方便的。同学们也可以事先安装 ipxe，以便在校外或直接连接时连接不上等特殊情况时也可以使用 PXE。&lt;/p&gt;
+        &lt;p&gt;PXE 目前由李文睿同学维护，如果需要反馈 BUG，可以发邮件到 lug AT ustc.edu.cn 或 sirius AT ustclug.org。&lt;/p&gt;</content><author><name>sirius</name></author><category term="Technology" /><category term="PXE" /><summary type="html">PXE 是什么</summary></entry><entry><title type="html">USTC Linux 用户生存指南</title><link href="https://lug.ustc.edu.cn//planet/2018/08/USTC-Linux-user-guide/" rel="alternate" type="text/html" title="USTC Linux 用户生存指南" /><published>2018-08-08T00:00:00+08:00</published><updated>2020-08-09T01:46:38+08:00</updated><id>https://lug.ustc.edu.cn//planet/2018/08/USTC-Linux-user-guide</id><content type="html" xml:base="https://lug.ustc.edu.cn//planet/2018/08/USTC-Linux-user-guide/">&lt;p&gt;本指南指导中科大 Linux 用户如何使用 Linux 完成各门课程。&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;注意：本指南目前仅包含部分计算机专业本科课程。&lt;/strong&gt;欢迎其他同学贡献更多内容！&lt;/p&gt;
+        &lt;h2 id=&quot;程序设计&quot;&gt;程序设计&lt;/h2&gt;
+        &lt;p&gt;程序设计课程主要讲授 C 语言知识，而 C 语言本身就是用来 UNIX 的原生语言，所以不会有任何障碍。&lt;/p&gt;
+        &lt;p&gt;建议使用 GCC 或 Clang 作为编译器，使用 GDB 作为调试器。可以选用任意一款文本编辑器（Vim、Emacs、Sublime、Atom、VSCode、gedit、Kate 等）或集成开发环境（如 CLion、Geany、KDevelop）。&lt;/p&gt;
+        &lt;p&gt;兼容性：★★★★★&lt;/p&gt;
+        &lt;h2 id=&quot;数据结构&quot;&gt;数据结构&lt;/h2&gt;
+        &lt;p&gt;主要讲授数据结构及其C语言实现。和程序设计一样没有任何问题。&lt;/p&gt;
+        &lt;p&gt;课本（严蔚敏版数据结构）分光盘版和无盘版。光盘内容为算法和数据结构的演示程序，仅支持 MS-DOS 和 Windows，其功能可完全由 VisuAlgo 替代。所以建议购买无盘版。&lt;/p&gt;
+        &lt;p&gt;兼容性：★★★★★&lt;/p&gt;
+        &lt;h2 id=&quot;模拟与数字电路&quot;&gt;模拟与数字电路&lt;/h2&gt;
+        &lt;p&gt;旧开发板：Digilent Nexys 2 和 3 均有 Linux 工具，Xilinx ISE 也有 Linux 版本。笔者经验是 Xilinx ISE 可以正常使用。&lt;/p&gt;
+        &lt;p&gt;新开发板：Xilinx Vivado 有 Linux 版本。新开发板唯烧录器只有 Windows 版本。解决方案：安装 Windows 虚拟机或在实验室电脑上烧录。&lt;/p&gt;
+        &lt;p&gt;注：除了烧录 FPGA，可以完全使用自由软件替代。仿真可以使用 Icarus Verilog 和 GTKWave。&lt;/p&gt;
+        &lt;p&gt;兼容性：★★★☆☆&lt;/p&gt;
+        &lt;h2 id=&quot;计算机系统概论h&quot;&gt;计算机系统概论（H）&lt;/h2&gt;
+        &lt;p&gt;LC3 Tools 提供 Linux 版本。作业和 Lab 只需提交 PDF 版本。教学资源、课程要求见课本官网或课程官网：http://acsa.ustc.edu.cn/ics/。&lt;/p&gt;
+        &lt;p&gt;唯一的缺憾是 Linux 版本的模拟器不支持中断，会导致最后一次实验遇到困难。&lt;/p&gt;
+        &lt;p&gt;兼容性：★★★★☆&lt;/p&gt;
+        &lt;h2 id=&quot;计算机组成原理&quot;&gt;计算机组成原理&lt;/h2&gt;
+        &lt;p&gt;实验主要为仿真，FPGA 开发板使用较少。部分仿真实验使用 Xilinx ISE 较为方便。最后的大作业可选烧录到 FPGA 上。&lt;/p&gt;
+        &lt;p&gt;注意，本课程可能必须使用 Xilinx ISE 进行仿真，因为只有 ISE 支持以直观方式查看「内存」的内容。&lt;/p&gt;
+        &lt;p&gt;兼容性：★★★☆☆&lt;/p&gt;
+        &lt;h2 id=&quot;操作系统原理与设计&quot;&gt;操作系统原理与设计&lt;/h2&gt;
+        &lt;p&gt;操作系统课不可能绕过 Linux！就算是 Windows 用户也会被迫安装 Linux 虚拟机。所以 Linux 用户不会遇到任何问题。&lt;/p&gt;
+        &lt;p&gt;兼容性：★★★★★&lt;/p&gt;
+        &lt;h2 id=&quot;编译原理与技术&quot;&gt;编译原理与技术&lt;/h2&gt;
+        &lt;p&gt;本课程会大量使用开源/自由软件，如 Flex、Bison、ANTLR、LLVM 等。作为 Linux 用户，当然 Feel at home~&lt;/p&gt;
+        &lt;p&gt;兼容性：★★★★★&lt;/p&gt;
+        &lt;h2 id=&quot;计算机网络&quot;&gt;计算机网络&lt;/h2&gt;
+        &lt;p&gt;使用 Wireshark，支持 Linux。&lt;/p&gt;
+        &lt;p&gt;兼容性：★★★★★&lt;/p&gt;
+        &lt;h2 id=&quot;微机原理与系统&quot;&gt;微机原理与系统&lt;/h2&gt;
+        &lt;p&gt;需要用到 MASM。大概使用 DOSBox 就能应付（？）&lt;/p&gt;
+        &lt;p&gt;兼容性：★★★☆☆&lt;/p&gt;
+        &lt;h2 id=&quot;算法基础&quot;&gt;算法基础&lt;/h2&gt;
+        &lt;p&gt;和数据结构差不多，写一些与平台无关的算法代码。&lt;/p&gt;
+        &lt;p&gt;兼容性：★★★★★&lt;/p&gt;
+        &lt;h2 id=&quot;数据库系统及应用&quot;&gt;数据库系统及应用&lt;/h2&gt;
+        &lt;p&gt;PowerDesigner?! 看起来只能 Wine / 虚拟机 了。&lt;/p&gt;
+        &lt;p&gt;兼容性：★★☆☆☆&lt;/p&gt;
+        &lt;h2 id=&quot;人工智能基础&quot;&gt;人工智能基础&lt;/h2&gt;
+        &lt;p&gt;实验与操作系统关系不是很大~&lt;/p&gt;
+        &lt;p&gt;兼容性：★★★★★&lt;/p&gt;
+        &lt;h2 id=&quot;计算机体系结构&quot;&gt;计算机体系结构&lt;/h2&gt;
+        &lt;p&gt;写模拟程序，可以使用任何语言，所以问题不大。&lt;/p&gt;
+        &lt;p&gt;兼容性：★★★★★&lt;/p&gt;</content><author><name>Kai Ma</name></author><category term="Experience" /><category term="Courses" /><summary type="html">本指南指导中科大 Linux 用户如何使用 Linux 完成各门课程。</summary></entry><entry><title type="html">Hello! LUG Planet</title><link href="https://lug.ustc.edu.cn//planet/2018/08/hello-lug-planet/" rel="alternate" type="text/html" title="Hello! LUG Planet" /><published>2018-08-07T00:00:00+08:00</published><updated>2020-08-09T15:07:59+08:00</updated><id>https://lug.ustc.edu.cn//planet/2018/08/hello-lug-planet</id><content type="html" xml:base="https://lug.ustc.edu.cn//planet/2018/08/hello-lug-planet/">&lt;p&gt;欢迎大家来到 LUG Planet！这是一个刚刚被发现的新星球，百废待兴。本文是 LUG Planet 的说明书，在你入驻之前，不妨先驻足欣赏一下这片风景。😀&lt;/p&gt;
+        &lt;h2 id=&quot;lug-planet-是什么&quot;&gt;LUG Planet 是什么？&lt;/h2&gt;
+        &lt;p&gt;LUG Planet 是……&lt;/p&gt;
+        &lt;ul&gt;
+        &lt;li&gt;由 USTCLUG 负责运营和管理的&lt;strong&gt;群体博客&lt;/strong&gt;。&lt;/li&gt;
+        &lt;li&gt;目标读者与参与者：
+        &lt;ol&gt;
+        &lt;li&gt;USTCLUG 会员；&lt;/li&gt;
+        &lt;li&gt;认同 USTCLUG 理念的同好；&lt;/li&gt;
+        &lt;li&gt;希望积极参加 USTCLUG 线上活动的朋友。&lt;/li&gt;
+        &lt;/ol&gt;
+        &lt;/li&gt;
+        &lt;li&gt;主要话题为 USTCLUG 社团的活动覆盖范围：
+        &lt;ol&gt;
+        &lt;li&gt;UNIX、Linux 及自由/开源软件；&lt;/li&gt;
+        &lt;li&gt;Windows, Microsoft 新技术；&lt;/li&gt;
+        &lt;li&gt;信息安全；&lt;/li&gt;
+        &lt;li&gt;这些技术与 USTC 的碰撞与融合。&lt;/li&gt;
+        &lt;/ol&gt;
+        &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;LUG Planet 是精神上的 &lt;a href=&quot;/wiki/linux_digest&quot;&gt;Linux 文摘&lt;/a&gt; 计划的延续。我们认可这个群策群力式的知识汇集的理念，但使用更方便和更自由的形式，从而鼓励大家能更积极地参与到这个项目中来。&lt;/p&gt;
+        &lt;h2 id=&quot;订阅我们&quot;&gt;订阅我们&lt;/h2&gt;
+        &lt;p&gt;你可以做一个默默潜水的读者，也可以在评论区与作者激辩，或者亲自成为写作者。但无论如何，你一定非常关注 LUG Planet 的动态。所以我们提供了多种方式确保你能得到及时的通知：&lt;/p&gt;
+        &lt;ul&gt;
+        &lt;li&gt;&lt;strong&gt;RSS 订阅&lt;/strong&gt;（推荐）。由 LUG Planet 本身提供的服务，最完善且及时；&lt;/li&gt;
+        &lt;li&gt;&lt;strong&gt;QQ 公众号&lt;/strong&gt;。QQ 号：2786229166；&lt;/li&gt;
+        &lt;li&gt;&lt;strong&gt;微信公众号&lt;/strong&gt;。ID：ustclug；&lt;/li&gt;
+        &lt;li&gt;&lt;strong&gt;Telegram 频道&lt;/strong&gt;。邀请链接：&lt;a href=&quot;https://t.me/lug_planet&quot;&gt;https://t.me/lug_planet&lt;/a&gt;。&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;免责声明：我们可能不会将所有动态都公布在这些信息渠道上。&lt;/p&gt;
+        &lt;p&gt;如果你想“共襄盛举”，加入写作者的行列，就请仔细阅读下面的内容，确保我们达成共识～&lt;/p&gt;
+        &lt;h2 id=&quot;运作方式&quot;&gt;运作方式&lt;/h2&gt;
+        &lt;p&gt;作为一个群体博客，LUG Planet 严重依赖于&lt;strong&gt;各位作者的辛勤劳动&lt;/strong&gt;，没有内容，博客将不能称为博客。虽然为时尚早，但请允许我在此提前表示感谢！ 🙂&lt;/p&gt;
+        &lt;p&gt;在 LUG Planet 上，主要有两种角色类型：作者和编辑。下面我们详细介绍这两类角色的职责。如果你不认可其中的某些条款，请与我们联络并陈述理由。&lt;/p&gt;
+        &lt;p&gt;（其实还有“牛顿”——运维人员，不过就让他们继续呆在幕后吧～）&lt;/p&gt;
+        &lt;h3 id=&quot;作者&quot;&gt;作者&lt;/h3&gt;
+        &lt;p&gt;任何人都可以成为作者！我们不限制你的身份，无论你是否是 USTC 的学生、校友、老师，只要你认同 USTCLUG 的理念，我们就欢迎你的来稿。&lt;/p&gt;
+        &lt;p&gt;参与的方法很简单，只需&lt;strong&gt;在本站 &lt;a href=&quot;https://planet.ustclug.org/wp-login.php?action=register&quot;&gt;注册&lt;/a&gt; 成为用户&lt;/strong&gt;即可。注册成功后，你就是我们的“签约作者”了。:-)&lt;/p&gt;
+        &lt;p&gt;作为一个作者，你会得到一个 LUG Planet 的特许通行证——WordPress 帐号。通过这个帐号，你可以自由地编辑你的文章，并提交给编辑进行审核，如果审核通过，恭喜，你的文章就成功发布了！&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;（在未来我们会根据反馈定期对文章进行评选，优秀作品的作者有机会得到我们的奖品哦~）&lt;/strong&gt;&lt;/p&gt;
+        &lt;p&gt;与此同时，作者应该承担如下责任：&lt;/p&gt;
+        &lt;ol&gt;
+        &lt;li&gt;遵守 &lt;a href=&quot;/wiki/lug/services/rules&quot;&gt;LUG 网络服务总则&lt;/a&gt;；&lt;/li&gt;
+        &lt;li&gt;对内容的真实性、有效性和合法性负责；&lt;/li&gt;
+        &lt;li&gt;配合编辑对稿件质量进行提升。&lt;/li&gt;
+        &lt;/ol&gt;
+        &lt;p&gt;发布后，我们鼓励作者根据读者的评论持续改进文章质量。&lt;/p&gt;
+        &lt;p&gt;任何作品的著作权属于原作者，但如果你想在 LUG Planet 这个平台上发布作品，需要同意：&lt;/p&gt;
+        &lt;ol&gt;
+        &lt;li&gt;USTCLUG 可以对这些内容进行再分发，即可以在 LUG Planet 及其他 LUG 官方信息渠道（包括但不限于 QQ 空间、Telegram 频道等）重发布；&lt;/li&gt;
+        &lt;li&gt;USTCLUG 可以对这些内容进行微小修改。我们不会改变文意，大概是帮助你修改一些错别字和术语大小写等等细枝末节的问题；&lt;/li&gt;
+        &lt;li&gt;USTCLUG 可以使用 USTCLUG 的名义对这些作品进行宣传；&lt;/li&gt;
+        &lt;li&gt;文章发布以“现状”发布。不同版本的同一作品，其授权许可应该是互相独立的。在 LUG Planet 上发布作品就代表你同意：即使未来变更作品的许可协议，已被发布的版本将仍然按原有协议许可给 USTCLUG 展示或以上述被提及的方式继续使用。在未作出特别陈述的情况下，在 LUG Planet 上编辑你撰写的已经发布的文章默认继续使用上一个版本的许可协议。（简单说，就是一旦你的文章被发布，就无法撤回了。但你有权选择将新版本的文章不授权给 LUG Planet 使用。）&lt;/li&gt;
+        &lt;/ol&gt;
+        &lt;p&gt;为了方便起见，除了这些条款，你应该允许你的作品在 &lt;a href=&quot;https://creativecommons.org/licenses/by-nc-sa/4.0/&quot;&gt;CC BY-NC-SA 4.0 (国际)&lt;/a&gt; 协议下发布，同时同意上面的附加条款。这是因为我们不是律师，所以选择一个已经写好的许可证书。&lt;/p&gt;
+        &lt;p&gt;这里需要提醒一下，虽然文章的版权仍然属于原作者，但发布与否是由编辑决定的。如果编辑认定你多次恶意提交文章，你的帐号将可能被永久封禁。注册不易，且行且珍惜。&lt;/p&gt;
+        &lt;h3 id=&quot;编辑&quot;&gt;编辑&lt;/h3&gt;
+        &lt;ol&gt;
+        &lt;li&gt;审核评论及垃圾评论清理；&lt;/li&gt;
+        &lt;li&gt;审核稿件是否适合发布在 LUG Planet 上；&lt;/li&gt;
+        &lt;li&gt;在能力范围内，协助作者确认发布该文章是合法的（但不提供任何担保）；&lt;/li&gt;
+        &lt;li&gt;在能力范围内，协助作者改进文章质量。&lt;/li&gt;
+        &lt;/ol&gt;
+        &lt;h2 id=&quot;投稿标准与类型&quot;&gt;投稿标准与类型&lt;/h2&gt;
+        &lt;p&gt;为了鼓励大家能积极投稿而不要过多地考虑质量问题，我们设立的标准非常宽松：&lt;/p&gt;
+        &lt;ol&gt;
+        &lt;li&gt;合法；&lt;/li&gt;
+        &lt;li&gt;内容长度不少于三句话；&lt;/li&gt;
+        &lt;li&gt;使用简体中文（汉语普通话），正确使用标点符号；&lt;/li&gt;
+        &lt;li&gt;语句通顺，正确输入专有名词的大小写，不故意欺骗读者；&lt;/li&gt;
+        &lt;li&gt;符合本博客的活动主题。&lt;/li&gt;
+        &lt;/ol&gt;
+        &lt;p&gt;我们特别欢迎以下类型投稿：&lt;/p&gt;
+        &lt;ul&gt;
+        &lt;li&gt;小聚话题的延伸&lt;/li&gt;
+        &lt;li&gt;折腾的心得体会&lt;/li&gt;
+        &lt;li&gt;自由/开源软件教程&lt;/li&gt;
+        &lt;li&gt;有趣的自由/开源软件的推介&lt;/li&gt;
+        &lt;li&gt;通俗易懂的技术内幕&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;但如果你要长篇连载（连载篇数大于等于 3），那么请向编辑们证明你能完结这个系列！&lt;/p&gt;
+        &lt;p&gt;上面说得可能有些抽象，下面举几个例子吧。当然，不限于这些例子。&lt;/p&gt;
+        &lt;ul&gt;
+        &lt;li&gt;你是小聚的主讲人。讲完后意犹未尽，那么你可以在这里进一步阐述；&lt;/li&gt;
+        &lt;li&gt;你是小聚的听众之一。听完后意犹未尽，那么你可以在这里发表你的看法并进行延伸讨论；&lt;/li&gt;
+        &lt;li&gt;你是 Linux 新手，不管是安装还是维护 Linux 都有了自己的独特的心得和体会，那么我们也欢迎你在这里发布；&lt;/li&gt;
+        &lt;li&gt;你解决了 Linux 在某种硬件上的兼容性问题，而在互联网的其他地方并不能找到解决方案，那么我们特别欢迎你在这里发布；&lt;/li&gt;
+        &lt;li&gt;你对某种 Microsoft 新技术有一定了解，那么我们欢迎你在这里向大家介绍。&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;标准很宽松，话虽这么说，但我们仍然有“禁区”。下面这些话题是我们认为不适宜的：&lt;/p&gt;
+        &lt;ol&gt;
+        &lt;li&gt;过偏过难的技术向文章
+        &lt;ul&gt;
+        &lt;li&gt;过于专门的文章我们也许无力审核&lt;/li&gt;
+        &lt;li&gt;读者面过于狭窄，且可能与 LUG Planet 目标读者重叠较小，发布在 LUG Planet 上“性价比”较低&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;业界资讯
+        &lt;ul&gt;
+        &lt;li&gt;这类文章时效性强，与更偏向于积累知识的 LUG Planet 不太搭调&lt;/li&gt;
+        &lt;li&gt;我们认为这类文章有更好的资讯站点&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;商业广告及赞助内容
+        &lt;ul&gt;
+        &lt;li&gt;USTCLUG 是一个不营利的学生社团&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;与 LUG 主题没有任何关系的内容
+        &lt;ul&gt;
+        &lt;li&gt;包括但不限于新式永动机设计、大陆漂移学说不成立的分析、相对论错误的第 114514 种证明&lt;/li&gt;
+        &lt;li&gt;编辑和读者对这些内容都不感兴趣，所以不能发布&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;其他任何编辑认为不适宜的内容&lt;/li&gt;
+        &lt;/ol&gt;
+        &lt;h2 id=&quot;联系方式&quot;&gt;联系方式&lt;/h2&gt;
+        &lt;p&gt;如果你有任何有关文章发表上的问题、或任何对 LUG Planet 发展上的建议，请立即与我们联络。联系邮箱：&lt;a href=&quot;mailto:planet@ustclug.org&quot;&gt;planet@ustclug.org&lt;/a&gt;。&lt;/p&gt;
+        &lt;p&gt;目前 LUG Planet 不知道谁在负责 😥&lt;/p&gt;</content><author><name>USTCLUG</name></author><summary type="html">欢迎大家来到 LUG Planet！这是一个刚刚被发现的新星球，百废待兴。本文是 LUG Planet 的说明书，在你入驻之前，不妨先驻足欣赏一下这片风景。😀</summary></entry></feed>
