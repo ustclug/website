@@ -137,10 +137,9 @@ footer:
 # Reading Files
 include: ["_pages"]
 exclude:
-  - ".*"
+  - ".git-metadata"
   - "*.sublime-project"
   - "*.sublime-workspace"
-  - vendor
   - .asset-cache
   - .bundle
   - .jekyll-assets-cache
@@ -149,13 +148,16 @@ exclude:
   - assets/js/_main.js
   - assets/js/vendor
   - Gemfile
+  - Gemfile.lock
   - LICENSE
   - log
   - node_modules
   - package.json
   - package-lock.json
   - README
+  - _scripts
   - tmp
+  - vendor
 keep_files:
   - .git
 encoding: "utf-8"
