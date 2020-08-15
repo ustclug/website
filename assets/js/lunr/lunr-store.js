@@ -323,6 +323,12 @@ var store = [{
 "url": "https://lug.ustc.edu.cn//news/2020/05/servers-down/",
 "teaser": null
 },{
+"title": "新网站上线啦",
+"excerpt":"经过多位成员连续多日的努力，Linux 用户协会的网站焕然一新。现在你所看到的页面正是我们新网站上线后的第一篇新闻。 新的网站采用 Jekyll 静态网站方案，基于 minimal-mistakes 修改的主题，并使用 GitHub Actions 自动构建，利用 webhook 通知服务器自动部署。 重新设计的网站架构带来了多方面的好处： 首先是更美观了：我们选用的主题既适用于首页等展示性页面，又适用于 wiki、文档、文章等内容性页面，同时还采用了响应式设计 (responsive design)，使得同一个页面在不同大小的屏幕上都能获得较好的显示效果 功能方面，我们终于将 wiki（即本网站）、news（社团新闻）和 planet（社团博客）合并到了一起，一定程度上解决了社团网站太多、内容过于分散、账号系统混乱的问题 基于 Git 的版本管理和协作更加方便：如同我们的旧新闻站，现在我们所有修改都有完整的历史记录，同时也能以 Pull Request 的形式接受投稿及修改建议 更易于维护及部署：纯静态的网站不需要维护数据库及 PHP 运行环境等，只需要一个能提供静态文件的服务器即可运行。我们采用了 OpenResty 作为 HTTP 服务器，在使用 Nginx 的同时还能通过 Lua 代码提供 webhook 相关功能 本网站的源码位于 ustclug/website，以 Creative Commons Attribution-NonCommercial-ShareAlike (BY-NC-SA) 4.0 协议开源。 原来的网站（wiki）已移动至 https://lug.ustc.edu.cn/oldwiki，旧新闻站仍保留在 https://news.ustclug.org/，其内容不再维护，留作存档。...","categories": ["LUG网站"],
+"tags": [],
+"url": "https://lug.ustc.edu.cn//news/2020/08/new-website/",
+"teaser": null
+},{
 "title": "Hello! LUG Planet",
 "excerpt":"欢迎大家来到 LUG Planet！这是一个刚刚被发现的新星球，百废待兴。本文是 LUG Planet 的说明书，在你入驻之前，不妨先驻足欣赏一下这片风景。😀 LUG Planet 是什么？ LUG Planet 是…… 由 USTCLUG 负责运营和管理的群体博客。 目标读者与参与者： USTCLUG 会员； 认同 USTCLUG 理念的同好； 希望积极参加 USTCLUG 线上活动的朋友。 主要话题为 USTCLUG 社团的活动覆盖范围： UNIX、Linux 及自由/开源软件； Windows, Microsoft 新技术； 信息安全； 这些技术与 USTC 的碰撞与融合。 LUG Planet 是精神上的 Linux 文摘 计划的延续。我们认可这个群策群力式的知识汇集的理念，但使用更方便和更自由的形式，从而鼓励大家能更积极地参与到这个项目中来。 订阅我们 你可以做一个默默潜水的读者，也可以在评论区与作者激辩，或者亲自成为写作者。但无论如何，你一定非常关注 LUG Planet 的动态。所以我们提供了多种方式确保你能得到及时的通知： RSS 订阅（推荐）。由 LUG...","categories": [],
 "tags": [],
