@@ -1022,7 +1022,7 @@ var store = [{
 "title": "中国科学技术大学校园网 PXE 服务 FAQ",
 "excerpt":"一般用户 什么是 PXE PXE(Pre-boot Execution Environment)是由Intel设计的协议，它可以使计算机通过网络启动。协议分为client和server两端，PXE client在网卡的ROM中，当计算机引导时，BIOS把PXE client调入内存执行，并显示出命令菜单，经用户选择后，PXE client将放置在远端的操作系统通过网络下载到本地运行。 — 摘自 IBM中国 In the mid-90’s, Compaq, Dell, HP, Intel, and Microsoft jointly released a system design guide for building Net PC systems. The guide describes a method of booting the operating system from a network server. This method eventually became...","categories": [],
 "tags": [],
-"url": "https://lug.ustc.edu.cn//wiki/server/pxe/faq",
+"url": "https://lug.ustc.edu.cn//wiki/server/pxe/faq/",
 "teaser": null
 },{
 "title": "中国科学技术大学网络启动服务",
