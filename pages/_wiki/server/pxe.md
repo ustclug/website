@@ -1,5 +1,5 @@
 ---
-permalink: /wiki/pxe/
+permalink: /wiki/server/pxe/
 ---
 
 # 中国科学技术大学网络启动服务
