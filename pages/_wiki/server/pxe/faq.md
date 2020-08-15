@@ -1,5 +1,5 @@
 ---
-permalink: /wiki/server/pxe/faq
+permalink: /wiki/server/pxe/faq/
 ---
 
 # 中国科学技术大学校园网 PXE 服务 FAQ
