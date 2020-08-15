@@ -1019,8 +1019,14 @@ var store = [{
 "url": "https://lug.ustc.edu.cn//wiki/server/mirrors/",
 "teaser": null
 },{
+"title": "中国科学技术大学校园网 PXE 服务 FAQ",
+"excerpt":"一般用户 什么是 PXE PXE(Pre-boot Execution Environment)是由Intel设计的协议，它可以使计算机通过网络启动。协议分为client和server两端，PXE client在网卡的ROM中，当计算机引导时，BIOS把PXE client调入内存执行，并显示出命令菜单，经用户选择后，PXE client将放置在远端的操作系统通过网络下载到本地运行。 — 摘自 IBM中国 In the mid-90’s, Compaq, Dell, HP, Intel, and Microsoft jointly released a system design guide for building Net PC systems. The guide describes a method of booting the operating system from a network server. This method eventually became...","categories": [],
+"tags": [],
+"url": "https://lug.ustc.edu.cn//wiki/server/pxe/faq",
+"teaser": null
+},{
 "title": "中国科学技术大学网络启动服务",
-"excerpt":"pxe.ustc.edu.cn 由中国科大图书馆、网络中心和学生 Linux 用户协会共同维护，旨在为科大校园网提供各种网络启动服务。现在支持引导 Debian、Ubuntu、Arch Linux、CentOS 等常见 Linux/UNIX 发行版安装镜像或 LiveCD，同时还提供 Clonezilla、GParted Live 等实用系统维护工具。 如果遇到使用问题，请邮件联系 lug AT ustc.edu.cn。 新版网络启动服务 基于 GRUB 的新版网络启动服务支持传统 PXE 模式和UEFI 模式的网络启动。代码位于 https://github.com/ustclug/simple-pxe 校内 DHCP 服务会自动推送网络启动配置，只要在 BIOS 设置中开启网络启动就可以了。 从本地 GRUB2 加载（UEFI） 如果您的机器是 UEFI 模式启动的、UEFI 固件带有网络支持，并已经安装有 GRUB2，则可以在 GRUB 命令行中直接加载网络启动菜单： insmod efinet http net_bootp configfile (http,202.38.93.94)/boot2/menu/root.menu 也可以制作一个 EFI 可执行文件，放在U盘中方便部署。在 Linux...","categories": [],
+"excerpt":"pxe.ustc.edu.cn 由中国科大图书馆、网络中心和学生 Linux 用户协会共同维护，旨在为科大校园网提供各种网络启动服务。现在支持引导 Debian、Ubuntu、Arch Linux、CentOS 等常见 Linux/UNIX 发行版安装镜像或 LiveCD，同时还提供 Clonezilla、GParted Live 等实用系统维护工具。 中国科学技术大学校园网 PXE 服务 FAQ 如果遇到使用问题，请邮件联系 lug AT ustc.edu.cn。 新版网络启动服务 基于 GRUB 的新版网络启动服务支持传统 PXE 模式和UEFI 模式的网络启动。代码位于 https://github.com/ustclug/simple-pxe 校内 DHCP 服务会自动推送网络启动配置，只要在 BIOS 设置中开启网络启动就可以了。 从本地 GRUB2 加载（UEFI） 如果您的机器是 UEFI 模式启动的、UEFI 固件带有网络支持，并已经安装有 GRUB2，则可以在 GRUB 命令行中直接加载网络启动菜单： insmod efinet http net_bootp configfile (http,202.38.93.94)/boot2/menu/root.menu...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/server/pxe/",
 "teaser": null
