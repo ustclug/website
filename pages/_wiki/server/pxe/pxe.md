@@ -6,6 +6,8 @@ permalink: /wiki/server/pxe/
 
 pxe.ustc.edu.cn 由中国科大图书馆、网络中心和学生 Linux 用户协会共同维护，旨在为科大校园网提供各种网络启动服务。现在支持引导 Debian、Ubuntu、Arch Linux、CentOS 等常见 Linux/UNIX 发行版安装镜像或 LiveCD，同时还提供 Clonezilla、GParted Live 等实用系统维护工具。
 
+[中国科学技术大学校园网 PXE 服务 FAQ](faq.md)
+
 如果遇到使用问题，请邮件联系 lug AT ustc.edu.cn。
 
 ## 新版网络启动服务
