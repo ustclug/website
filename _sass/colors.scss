@@ -7,157 +7,29 @@ $fg-microsoft-opacity: 62%;
 .bg-microsoft-green { background-color: rgba(127, 186, 0, var(--bg-microsoft-opacity)) !important; }
 .bg-microsoft-blue { background-color: rgba(0, 164, 239, var(--bg-microsoft-opacity)) !important; }
 .bg-microsoft-yellow { background-color: rgba(255, 185, 0, var(--bg-microsoft-opacity)) !important; }
-.fg-microsoft-red { color: mix(#F25022, $text-color, $fg-microsoft-opacity) !important; }
-.fg-microsoft-green { color: mix(#7FBA00, $text-color, $fg-microsoft-opacity) !important; }
-.fg-microsoft-blue { color: mix(#00A4EF, $text-color, $fg-microsoft-opacity) !important; }
-.fg-microsoft-yellow { color: mix(#FFB900, $text-color, $fg-microsoft-opacity) !important; }
+.fg-microsoft-red { color: mix(#f25022, $text-color, $fg-microsoft-opacity) !important; }
+.fg-microsoft-green { color: mix(#7fba00, $text-color, $fg-microsoft-opacity) !important; }
+.fg-microsoft-blue { color: mix(#00a4ef, $text-color, $fg-microsoft-opacity) !important; }
+.fg-microsoft-yellow { color: mix(#ffb900, $text-color, $fg-microsoft-opacity) !important; }
 
-// These are recognized CSS color names, generated programatically, don't modify!
+// These are recognized CSS color names
+$colors: aliceblue, antiquewhite, aqua, aquamarine, azure, beige, bisque, black, blanchedalmond, blue, blueviolet, brown,
+  burlywood, cadetblue, chartreuse, chocolate, coral, cornflowerblue, cornsilk, crimson, cyan, darkblue, darkcyan,
+  darkgoldenrod, darkgray, darkgrey, darkgreen, darkkhaki, darkmagenta, darkolivegreen, darkorange, darkorchid, darkred,
+  darksalmon, darkseagreen, darkslateblue, darkslategray, darkslategrey, darkturquoise, darkviolet, deeppink,
+  deepskyblue, dimgray, dimgrey, dodgerblue, firebrick, floralwhite, forestgreen, fuchsia, gainsboro, ghostwhite, gold,
+  goldenrod, gray, grey, green, greenyellow, honeydew, hotpink, indianred, indigo, ivory, khaki, lavender, lavenderblush,
+  lawngreen, lemonchiffon, lightblue, lightcoral, lightcyan, lightgoldenrodyellow, lightgray, lightgrey, lightgreen,
+  lightpink, lightsalmon, lightseagreen, lightskyblue, lightslategray, lightslategrey, lightsteelblue, lightyellow, lime,
+  limegreen, linen, magenta, maroon, mediumaquamarine, mediumblue, mediumorchid, mediumpurple, mediumseagreen,
+  mediumslateblue, mediumspringgreen, mediumturquoise, mediumvioletred, midnightblue, mintcream, mistyrose, moccasin,
+  navajowhite, navy, oldlace, olive, olivedrab, orange, orangered, orchid, palegoldenrod, palegreen, paleturquoise,
+  palevioletred, papayawhip, peachpuff, peru, pink, plum, powderblue, purple, red, rosybrown, royalblue, saddlebrown,
+  salmon, sandybrown, seagreen, seashell, sienna, silver, skyblue, slateblue, slategray, slategrey, snow, springgreen,
+  steelblue, tan, teal, thistle, tomato, turquoise, violet, wheat, white, whitesmoke, yellow, yellowgreen;
 
-.text-aliceblue { color: aliceblue !important; }
-.text-antiquewhite { color: antiquewhite !important; }
-.text-aqua { color: aqua !important; }
-.text-aquamarine { color: aquamarine !important; }
-.text-azure { color: azure !important; }
-.text-beige { color: beige !important; }
-.text-bisque { color: bisque !important; }
-.text-black { color: black !important; }
-.text-blanchedalmond { color: blanchedalmond !important; }
-.text-blue { color: blue !important; }
-.text-blueviolet { color: blueviolet !important; }
-.text-brown { color: brown !important; }
-.text-burlywood { color: burlywood !important; }
-.text-cadetblue { color: cadetblue !important; }
-.text-chartreuse { color: chartreuse !important; }
-.text-chocolate { color: chocolate !important; }
-.text-coral { color: coral !important; }
-.text-cornflowerblue { color: cornflowerblue !important; }
-.text-cornsilk { color: cornsilk !important; }
-.text-crimson { color: crimson !important; }
-.text-cyan { color: cyan !important; }
-.text-darkblue { color: darkblue !important; }
-.text-darkcyan { color: darkcyan !important; }
-.text-darkgoldenrod { color: darkgoldenrod !important; }
-.text-darkgray { color: darkgray !important; }
-.text-darkgrey { color: darkgrey !important; }
-.text-darkgreen { color: darkgreen !important; }
-.text-darkkhaki { color: darkkhaki !important; }
-.text-darkmagenta { color: darkmagenta !important; }
-.text-darkolivegreen { color: darkolivegreen !important; }
-.text-darkorange { color: darkorange !important; }
-.text-darkorchid { color: darkorchid !important; }
-.text-darkred { color: darkred !important; }
-.text-darksalmon { color: darksalmon !important; }
-.text-darkseagreen { color: darkseagreen !important; }
-.text-darkslateblue { color: darkslateblue !important; }
-.text-darkslategray { color: darkslategray !important; }
-.text-darkslategrey { color: darkslategrey !important; }
-.text-darkturquoise { color: darkturquoise !important; }
-.text-darkviolet { color: darkviolet !important; }
-.text-deeppink { color: deeppink !important; }
-.text-deepskyblue { color: deepskyblue !important; }
-.text-dimgray { color: dimgray !important; }
-.text-dimgrey { color: dimgrey !important; }
-.text-dodgerblue { color: dodgerblue !important; }
-.text-firebrick { color: firebrick !important; }
-.text-floralwhite { color: floralwhite !important; }
-.text-forestgreen { color: forestgreen !important; }
-.text-fuchsia { color: fuchsia !important; }
-.text-gainsboro { color: gainsboro !important; }
-.text-ghostwhite { color: ghostwhite !important; }
-.text-gold { color: gold !important; }
-.text-goldenrod { color: goldenrod !important; }
-.text-gray { color: gray !important; }
-.text-grey { color: grey !important; }
-.text-green { color: green !important; }
-.text-greenyellow { color: greenyellow !important; }
-.text-honeydew { color: honeydew !important; }
-.text-hotpink { color: hotpink !important; }
-.text-indianred { color: indianred !important; }
-.text-indigo { color: indigo !important; }
-.text-ivory { color: ivory !important; }
-.text-khaki { color: khaki !important; }
-.text-lavender { color: lavender !important; }
-.text-lavenderblush { color: lavenderblush !important; }
-.text-lawngreen { color: lawngreen !important; }
-.text-lemonchiffon { color: lemonchiffon !important; }
-.text-lightblue { color: lightblue !important; }
-.text-lightcoral { color: lightcoral !important; }
-.text-lightcyan { color: lightcyan !important; }
-.text-lightgoldenrodyellow { color: lightgoldenrodyellow !important; }
-.text-lightgray { color: lightgray !important; }
-.text-lightgrey { color: lightgrey !important; }
-.text-lightgreen { color: lightgreen !important; }
-.text-lightpink { color: lightpink !important; }
-.text-lightsalmon { color: lightsalmon !important; }
-.text-lightseagreen { color: lightseagreen !important; }
-.text-lightskyblue { color: lightskyblue !important; }
-.text-lightslategray { color: lightslategray !important; }
-.text-lightslategrey { color: lightslategrey !important; }
-.text-lightsteelblue { color: lightsteelblue !important; }
-.text-lightyellow { color: lightyellow !important; }
-.text-lime { color: lime !important; }
-.text-limegreen { color: limegreen !important; }
-.text-linen { color: linen !important; }
-.text-magenta { color: magenta !important; }
-.text-maroon { color: maroon !important; }
-.text-mediumaquamarine { color: mediumaquamarine !important; }
-.text-mediumblue { color: mediumblue !important; }
-.text-mediumorchid { color: mediumorchid !important; }
-.text-mediumpurple { color: mediumpurple !important; }
-.text-mediumseagreen { color: mediumseagreen !important; }
-.text-mediumslateblue { color: mediumslateblue !important; }
-.text-mediumspringgreen { color: mediumspringgreen !important; }
-.text-mediumturquoise { color: mediumturquoise !important; }
-.text-mediumvioletred { color: mediumvioletred !important; }
-.text-midnightblue { color: midnightblue !important; }
-.text-mintcream { color: mintcream !important; }
-.text-mistyrose { color: mistyrose !important; }
-.text-moccasin { color: moccasin !important; }
-.text-navajowhite { color: navajowhite !important; }
-.text-navy { color: navy !important; }
-.text-oldlace { color: oldlace !important; }
-.text-olive { color: olive !important; }
-.text-olivedrab { color: olivedrab !important; }
-.text-orange { color: orange !important; }
-.text-orangered { color: orangered !important; }
-.text-orchid { color: orchid !important; }
-.text-palegoldenrod { color: palegoldenrod !important; }
-.text-palegreen { color: palegreen !important; }
-.text-paleturquoise { color: paleturquoise !important; }
-.text-palevioletred { color: palevioletred !important; }
-.text-papayawhip { color: papayawhip !important; }
-.text-peachpuff { color: peachpuff !important; }
-.text-peru { color: peru !important; }
-.text-pink { color: pink !important; }
-.text-plum { color: plum !important; }
-.text-powderblue { color: powderblue !important; }
-.text-purple { color: purple !important; }
-.text-red { color: red !important; }
-.text-rosybrown { color: rosybrown !important; }
-.text-royalblue { color: royalblue !important; }
-.text-saddlebrown { color: saddlebrown !important; }
-.text-salmon { color: salmon !important; }
-.text-sandybrown { color: sandybrown !important; }
-.text-seagreen { color: seagreen !important; }
-.text-seashell { color: seashell !important; }
-.text-sienna { color: sienna !important; }
-.text-silver { color: silver !important; }
-.text-skyblue { color: skyblue !important; }
-.text-slateblue { color: slateblue !important; }
-.text-slategray { color: slategray !important; }
-.text-slategrey { color: slategrey !important; }
-.text-snow { color: snow !important; }
-.text-springgreen { color: springgreen !important; }
-.text-steelblue { color: steelblue !important; }
-.text-tan { color: tan !important; }
-.text-teal { color: teal !important; }
-.text-thistle { color: thistle !important; }
-.text-tomato { color: tomato !important; }
-.text-turquoise { color: turquoise !important; }
-.text-violet { color: violet !important; }
-.text-wheat { color: wheat !important; }
-.text-white { color: white !important; }
-.text-whitesmoke { color: whitesmoke !important; }
-.text-yellow { color: yellow !important; }
-.text-yellowgreen { color: yellowgreen !important; }
+@each $color in $colors {
+  .text-#{$color} {
+    color: $color !important;
+  }
+}
