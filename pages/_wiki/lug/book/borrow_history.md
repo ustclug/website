@@ -12,6 +12,8 @@
 | 陶哲轩实分析              | 王子博 | hypercube AT 0x01.me          | 2020-01-07 | \-     | \-  |
 | 概率论与数理统计          | 袁一玮 | yuanyiwei AT mail.ustc.edu.cn | 2020-01-13 | \-     | \-  |
 | 概率论与数理统计习题全解指南 | 袁一玮 | yuanyiwei AT mail.ustc.edu.cn | 2020-01-13 | \-     | \-  |
+| 人工智能-一种现代的方法 | 付佳伟 | ibug AT ustclug.org | 2020-08-25 | \-     | \-  |
+| 并行计算-结构、算法编程 | 付佳伟 | ibug AT ustclug.org | 2020-08-25 | \-     | \-  |
 
   
 
