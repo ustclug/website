@@ -4,7 +4,7 @@ require 'json'
 
 uri = URI("https://lug.ustc.edu.cn/_webhook/github/html")
 key = ENV['WEBHOOK_SECRET'] or exit
-payload = "#{JSON.dump({ :ref => "refs/heads/gh-pages" })}"
+payload = JSON.dump({ :ref => "refs/heads/gh-pages" })
 
 req = Net::HTTP::Post.new uri
 req.body = payload
