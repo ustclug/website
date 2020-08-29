@@ -8,8 +8,12 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      LSI: 'true'
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
     - uses: actions/setup-ruby@v1
       with:
         ruby-version: 2.7
@@ -23,6 +27,7 @@ jobs:
           ${{ runner.os }}-bundler-2.7-
     - name: Install dependencies
       run: |
+        sudo apt-get -y install libgsl-dev
         bundle install --path=vendor/bundle
         bundle clean
     - name: Prepare build
