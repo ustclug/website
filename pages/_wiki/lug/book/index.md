@@ -26,12 +26,8 @@ permalink: /wiki/lug/book/
 
 | 书名                                                                                                                 | 作者 | 定价（￥） | 备注 | 借阅情况 |
 |----------------------------------------------------------------------------------------------------------------------|-----|--------|-----|--------|
-| [鸟哥的Linux私房菜 基础学习篇(第二版)](http://book.douban.com/subject/2208530/ "http://book.douban.com/subject/2208530/") | 鸟哥 | 65     | 3本 |        |
-
-LUG购置2  
-QuITh网友捐赠1| 借出1本  
-[鸟哥的Linux私房菜 基础学习篇(第三版)](http://book.douban.com/subject/4889838/ "http://book.douban.com/subject/4889838/")| 鸟哥| 88.00 | 2本  
-LUG购置 | 借出2本  
+| [鸟哥的Linux私房菜 基础学习篇(第二版)](http://book.douban.com/subject/2208530/ "http://book.douban.com/subject/2208530/") | 鸟哥 | 65     | 3本 <br> LUG购置2 <br> QuITh网友捐赠1| 借出1本  
+[鸟哥的Linux私房菜 基础学习篇(第三版)](http://book.douban.com/subject/4889838/ "http://book.douban.com/subject/4889838/")| 鸟哥| 88.00 | 2本 <br> LUG购置 | 借出2本  
 [完美应用Ubuntu ](http://book.douban.com/subject/3192043/ "http://book.douban.com/subject/3192043/")| Ubuntu China| 55 | LUG购置| -  
 [从零开始学Linux ](http://book.douban.com/subject/10876230/ "http://book.douban.com/subject/10876230/")| 粱丽平、马飞| 45 | lizitian捐赠 | -  
   
@@ -41,8 +37,7 @@ LUG购置 | 借出2本
 | 书名                                                                                                                                | 作者                                   | 定价(￥) | 备注     | 借阅 |
 |-------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------|--------|----------|-----|
 | [鸟哥的Linux私房菜 服务器架设篇(第二版)](http://book.douban.com/subject/2338464/ "http://book.douban.com/subject/2338464/")              | 鸟哥                                   | 88.00  | QuITh捐赠 | -   |
-| [鸟哥的Linux私房菜: 服务器架设篇(第三版)](http://book.douban.com/subject/10794788/ "http://book.douban.com/subject/10794788/")           | 鸟哥                                   | 108.00 | 2本      |     |
-| LUG购置                                                                                                                             | 已借出1本                               |        |          |     |
+| [鸟哥的Linux私房菜: 服务器架设篇(第三版)](http://book.douban.com/subject/10794788/ "http://book.douban.com/subject/10794788/")           | 鸟哥                                   | 108.00 | 2本 LUG购置 | 已借出1本 |
 | [Red Hat Linux 9.0基础教程](http://book.douban.com/subject/1237940/ "http://book.douban.com/subject/1237940/")                       | 黄丽娜等                                | 38.60  | 网友捐赠  | -   |
 | [LINUX 网络管理员指南(第二版)](http://book.douban.com/subject/1240136/ "http://book.douban.com/subject/1240136/")                      | OLAF KIRCH TERRY DAWSON                | 59.00  | 网友捐赠  | -   |
 | [Solaris 8技术大全](http://book.douban.com/subject/1240493/ "http://book.douban.com/subject/1240493/")                               | Paul A. Watters Sriranga Veeraraghavan | 48.00  | 网友捐赠  | -   |
@@ -63,9 +58,7 @@ LUG购置 | 借出2本
 |-------------------------------------------------|-----|--------|--------|--------|
 | FreeBSD技术内幕                                  | -   | 88     | 网友捐赠 | -      |
 | Linux 0.01内核分析与操作系统设计——创造你自己的操作系统 | -   | 32     | 网友捐赠 | -      |
-
-深入Linux内核架构  
-Professional Linux Kernel Architecture| 莫尔勒| 149.00| LUG购置| -  
+深入Linux内核架构 <br> Professional Linux Kernel Architecture| 莫尔勒| 149.00| LUG购置| -  
 [深入理解Linux内核（第三版，中文版）](http://book.douban.com/subject/2287506/ "http://book.douban.com/subject/2287506/")| Daniel P. Bovet| 98| 2本，LUG购置，stephen捐赠| -  
 深入理解Linux内核 第二版| Daniel P. Bovet| 79| 网友捐赠| -  
 [手把手教你构建自己的Linux系统（1CD）](https://book.douban.com/subject/5372326/ "https://book.douban.com/subject/5372326/")| 孙海勇| 65| 网友捐赠| -  
@@ -115,9 +108,7 @@ Linux设备驱动程序（第3版）| Jonathan Corbet et al| 69.00| stephen捐�
 | Effective C++: 改善程序与设计的55个具体做法(第3版)(英文版)                                                  | Scott Meyers | 45.00  | LUG购置 | \-     |
 | [Python开发技术详解](http://book.douban.com/subject/3889005/ "http://book.douban.com/subject/3889005/") | -            | 69     | 网友捐赠 | -      |
 | Advanced Bash Scripting                                                                               | -            | -      | LUG打印 | -      |
-
-计算机程序的构造和解释（第2版，翻译）  
-Structure and Interpretation of Computer Programs| Harold Abelson等| 45.00| LUG购置| 已借出  
+计算机程序的构造和解释（第2版，翻译）<br> Structure and Interpretation of Computer Programs| Harold Abelson等| 45.00| LUG购置| 已借出  
 七周七语言：理解多种编程范型| Bruce A. Tate| 59.00| LUG购置| -  
 松本行弘的程序世界| 松本行弘| 75.00| LUG购置| -  
 ANSI C99 Standard| ISO/IEC| 打印| 会员捐赠| -  
@@ -128,8 +119,7 @@ C和指针| Kenneth A. Reek| 65.00| LUG购置| 已借出
 程序设计语言原理（第8版翻译）| Robert W. Sebesta| 75.00| 会员捐赠| 已借出  
 MATLAB R2012a超级学习手册| 史洁玉，孔玲军| 69.00| 会员捐赠| -  
 UNIX shell 范例精解（第四版）| Ellie Quigley| 118.00| 会员捐赠| 现在东区  
-深入浅出 Python（中文版）  
-Head First Python| Barry| 68.00| 会员捐赠| -  
+深入浅出 Python（中文版） <br> Head First Python| Barry| 68.00| 会员捐赠| -  
 [Java编程思想 （第4版）](http://book.douban.com/subject/2130190/ "http://book.douban.com/subject/2130190/")| Bruce Eckel| 108.00| boj捐赠| -  
 Python Cookbook（第二版）| Martelli & Ravenscroft & Ascher| 99.00| ewind捐赠| -  
 Python Cookbook（第3版）| David Beazley & Brian K. Jones| 108.00| zhsj捐赠| -  
@@ -143,9 +133,7 @@ Haskell 趣学指南| Miran Lipovaca著，李亚舟、宋方睿译| 69.00| boj�
 | UNIX网络编程. 卷2: 进程间通信(第2版)                                                                                      | W. Richard Stevens | 66.80  | LUG购置 | -      |
 | [UNIX网络编程. 卷2: 进程间通信(第2版)](http://book.douban.com/subject/4886882/ "http://book.douban.com/subject/4886882/") | W. Richard Stevens | 89     | boj捐赠 | -      |
 | UNIX网络编程(卷1): 套接字联网API(第3版)                                                                                   | W. Richard Stevens | 96.70  | LUG购置 | -      |
-
-TCP/IP 详解(卷1: 协议)  
-TCP/IP Illustrated Volume 1: The Protocols| W. Richard Stevens| 45.00| LUG购置|  \-   
+TCP/IP 详解(卷1: 协议)  <br> TCP/IP Illustrated Volume 1: The Protocols| W. Richard Stevens| 45.00| LUG购置|  \-   
 [TCP/IP详解 卷2：实现](http://book.douban.com/subject/1087767/ "http://book.douban.com/subject/1087767/")| Gary R. Wright  
 W. Richard Stevens| 78.00| boj捐赠| -  
 TCP/IP详解 卷2 实现(英文版)| Gary R. Wright| 69| 网友捐赠| -  
@@ -166,13 +154,9 @@ IPv6详解（卷2：高级协议实现）（英文版）| Qing Li| 128.00| 网�
 | 失控: 全人类的最终命运和结局           | 凯文·凯利 | 48.50  | LUG购置 | unavailable |
 | 黑客与画家: 硅谷创业之父Paul Graham文集 | 阮一峰   | 33.80  | LUG购置 | 已借出       |
 | 科技想要什么                         | 凯文·凯利 | 40.00  | LUG购置 | -           |
-
-UNIX编程艺术（翻译）  
-The Art of UNIX Programming| Eric S. Raymond| 59.00| 会员捐赠| -  
-设计心理学（翻译）  
-The design of everyday things| Donald Arthur Norman| 30.00| 会员捐赠| -  
-用户体验要素（翻译，彩印）  
-The Elements of User Experience| Jesse James Garrett| 39.00| 会员捐赠| 借出  
+UNIX编程艺术（翻译） <br> The Art of UNIX Programming| Eric S. Raymond| 59.00| 会员捐赠| -  
+设计心理学（翻译）<br> The design of everyday things| Donald Arthur Norman| 30.00| 会员捐赠| -  
+用户体验要素（翻译，彩印） <br> The Elements of User Experience| Jesse James Garrett| 39.00| 会员捐赠| 借出  
 设计原本: 计算机科学巨匠Frederick P. Brooks的思考| 布鲁克斯| 37.70| LUG购置| -  
 Mathematics and Technology| Christiane Rousseau| 打印| 会员捐赠| -  
 [代码之美](http://book.douban.com/subject/3224524/ "http://book.douban.com/subject/3224524/")| Grey Wilson| 99.00| boj捐赠| -  
@@ -208,13 +192,9 @@ Mathematics and Technology| Christiane Rousseau| 打印| 会员捐赠| -
 | 书名                      | 作者  | 定价（￥） | 备注   | 借阅情况 |
 |---------------------------|-------|--------|--------|--------|
 | MySQL技术内幕–InnoDB存储引擎 | 姜承尧 | 69.00  | 会员捐赠 | -      |
-
-SQL反模式（翻译）  
-SQL Antipatterns| Bill Karwin| 59.00| 会员捐赠| -  
-SQL沉思录（翻译）  
-Thinking in Sets – Auxiliary, Temporal and Virtual Tables in SQL| Joe Ceiko| 49.00| 会员捐赠| -  
-MongoDB权威指南（翻译）  
-MongoDB: The Definitive Guide| Kristina Chodorow等| 39.00| 会员捐赠| -  
+SQL反模式（翻译）<br> SQL Antipatterns| Bill Karwin| 59.00| 会员捐赠| -  
+SQL沉思录（翻译）<br> Thinking in Sets – Auxiliary, Temporal and Virtual Tables in SQL| Joe Ceiko| 49.00| 会员捐赠| -  
+MongoDB权威指南（翻译） <br> MongoDB: The Definitive Guide| Kristina Chodorow等| 39.00| 会员捐赠| -  
 数据库系统导论| C. J. Date| 75| 会员捐赠| 已借出  
 [数据库系统导论](http://book.douban.com/subject/2179813/ "http://book.douban.com/subject/2179813/")| C. J. Date| 75.00| 李朝晖捐赠| -  
 [数据库系统实现（英文版，第二版）](http://book.douban.com/subject/4166546/ "http://book.douban.com/subject/4166546/")| Hector Garcia-Molina等| 55.00| 会员捐赠| -  
@@ -227,29 +207,18 @@ MongoDB: The Definitive Guide| Kristina Chodorow等| 39.00| 会员捐赠| -
 
 书名| 作者| 定价（￥）| 备注| 借阅情况  
 ---|---|---|---|---  
-现代操作系统（第3版，英文）  
-Modern Operating Systems| Andrew S. Tanenbaum| 69.00| 会员捐赠| unavailable  
-操作系统概念（第7版，翻译）  
-Operating System Concepts| Abraham Silberschatz等| 74.00| 会员捐赠| 已借出  
-操作系统概念（第6版，翻译）  
-Operating System Concepts| Abraham Silberschatz等| 74.00| 会员捐赠| 已借出  
-计算机网络（英文版·第5版）  
-Computer Networks| 塔嫩鲍姆| 99.00| LUG购置| -  
-计算机组成与设计：硬件、软件接口（第4版）  
-Computer Organization and Design| 帕特森| 99.00| LUG购置| -  
-计算机组成与设计：硬件、软件接口（第3版）  
-Computer Organization and Design| 帕特森| 75.00| 会员捐赠| 已借出  
-搜索引擎–信息检索实践（英文）  
-Search Engines – Information Retrieval in Practice| W. Bruce Croft等| 45.00| 会员捐赠| -  
-机器视觉教程（英文）  
-Machine Vision| Wesley E. Snyder等| 49.00| 会员捐赠| -  
-计算机图形学（英文）  
-Computer Graphics| Steve Cunningham| 36.00| 会员捐赠| -  
+现代操作系统（第3版，英文）<br> Modern Operating Systems| Andrew S. Tanenbaum| 69.00| 会员捐赠| unavailable  
+操作系统概念（第7版，翻译）<br> Operating System Concepts| Abraham Silberschatz等| 74.00| 会员捐赠| 已借出  
+操作系统概念（第6版，翻译）<br> Operating System Concepts| Abraham Silberschatz等| 74.00| 会员捐赠| 已借出  
+计算机网络（英文版·第5版）<br> Computer Networks| 塔嫩鲍姆| 99.00| LUG购置| -  
+计算机组成与设计：硬件、软件接口（第4版）<br> Computer Organization and Design| 帕特森| 99.00| LUG购置| -  
+计算机组成与设计：硬件、软件接口（第3版）<br> Computer Organization and Design| 帕特森| 75.00| 会员捐赠| 已借出  
+搜索引擎–信息检索实践（英文）<br> Search Engines – Information Retrieval in Practice| W. Bruce Croft等| 45.00| 会员捐赠| -  
+机器视觉教程（英文）<br> Machine Vision| Wesley E. Snyder等| 49.00| 会员捐赠| -  
+计算机图形学（英文）<br> Computer Graphics| Steve Cunningham| 36.00| 会员捐赠| -  
 云计算（第二版）| 刘鹏| 48.00| 会员捐赠| -  
-人工智能——一种现代方法(第二版)  
-Artificial Intelligence - A Modern Approach| 拉塞尔等| 89.00| LUG购置| 已借出  
-数字设计和计算机体系结构（英文版）  
-Digital Design and Computer Architecture| 哈里斯| 65.00| LUG购置| -  
+人工智能——一种现代方法(第二版) <br> Artificial Intelligence - A Modern Approach| 拉塞尔等| 89.00| LUG购置| 已借出  
+数字设计和计算机体系结构（英文版）<br> Digital Design and Computer Architecture| 哈里斯| 65.00| LUG购置| -  
 MIPS体系结构透视<br>See MIPS Run| 斯威特曼| 48.00| LUG购置| -  
 深入理解计算机系统(英文版, 第2版)| 布莱恩特, 奥哈拉伦| 85.00| LUG购置| -  
 深入理解计算机系统(原书第2版)| 布莱恩特| 65.60| LUG购置| -  
@@ -271,14 +240,12 @@ Berthier Ribeiro-Neto| 78.00| boj捐赠| -
 Keith W. Ross| 66.00| boj捐赠| 已借出  
 [算法导论（原书第2版）](http://book.douban.com/subject/1885170/ "http://book.douban.com/subject/1885170/")| CLRS| 85.00| boj捐赠| -  
 [图像处理、分析与机器视觉（第3版）](http://book.douban.com/subject/5921462/ "http://book.douban.com/subject/5921462/")| Milan Sonka et al| 69.50| boj捐赠| -  
-[分布式系统概念与设计（英文版第4版）](http://book.douban.com/subject/1445580/ "http://book.douban.com/subject/1445580/")  
-Distributed Systems: Concepts and Design, Fourth Edition| 库劳里斯| 89.00| boj捐赠| -  
+[分布式系统概念与设计（英文版第4版）](http://book.douban.com/subject/1445580/ "http://book.douban.com/subject/1445580/")  <br> Distributed Systems: Concepts and Design, Fourth Edition| 库劳里斯| 89.00| boj捐赠| -  
 [分布式系统原理与范型（第2版 影印版）](http://book.douban.com/subject/3108800/ "http://book.douban.com/subject/3108800/")| Andrew S. Tanenbaum  
 Maarten van Steen| 69.00| boj捐赠| -  
 [计算机体系结构: 量化研究方法(英文版第4版)](http://book.douban.com/subject/1954037 "http://book.douban.com/subject/1954037")| John L. Hennessy  
 David A. Patterson| 78.00| boj捐赠| -  
-[软件工程: 理论与实践（第三版 影印版）](http://book.douban.com/subject/1935714/ "http://book.douban.com/subject/1935714/")  
-Software Engineering: Theory and Practice, Third Edition| Shari Lawrence Pfleeger   
+[软件工程: 理论与实践（第三版 影印版）](http://book.douban.com/subject/1935714/ "http://book.douban.com/subject/1935714/") <br> Software Engineering: Theory and Practice, Third Edition| Shari Lawrence Pfleeger   
 Joanne M. Atlee| 48.00| boj捐赠| -  
 计算机网络（第五版）| Andrew S. Tanenbaum & David J. Wetherall| 89.50| ewind捐赠| -  
 [具体数学：计算机科学基础（英文版，第二版）](http://book.douban.com/subject/1231910/ "http://book.douban.com/subject/1231910/")| Graham, Knuth, Patashnik| 49.00| 会员捐赠| -  
@@ -335,5 +302,3 @@ Joanne M. Atlee| 48.00| boj捐赠| -
 
 书名 |  备注  
 ---|---
-  *[CSS]: Cascading Style Sheets
-  *[W3C]: World Wide Web Consortium
