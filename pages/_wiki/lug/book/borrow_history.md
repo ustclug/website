@@ -35,7 +35,7 @@
 | 电子技术基础 模拟部分（第六版）学习辅导与习题解答 | 袁一玮 | yuanyiwei AT mail.ustc.edu.cn   | 2019年9月10日       | 2019年12月24日      | \-           |
 | C++ Primer 英文版（第 5 版）               | 龚平  | gpzlx1 AT mail.ustc.edu.cn      | 2019年10月3日       | \-                 | \-           |
 | 算法导论（原书第 2 版）                     | 汤力宇 | lyrics_1117 AT mail.ustc.edu.cn | 2019年10月13日      | \-                 | \-           |
-| 编译原理（第二版）（龙书）                     | 又木  | youmu1998 AT mail.ustc.edu.cn   | 2019年10月28日      | \-                 | \-           |
+| 编译原理（第二版）（龙书）                     | 又木  | youmu1998 AT mail.ustc.edu.cn   | 2019年10月28日      | 2020 年 8 月 31 日| \-           |
 | 计算机系统概论（原书第二版）                  | 袁一玮 | yuanyiwei AT mail.ustc.edu.cn   | 2019年10月31日      | \-                 | \-           |
 | 七周七语言 理解多种编程范型                 | 王子博 | hypercube AT 0x01.me            | 2019年11月1日       | \-                 | \-           |
 | 数据结构与算法分析                         | 王子博 | hypercube AT 0x01.me            | 2019年11月1日       | \-                 | \-           |
