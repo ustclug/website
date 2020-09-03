@@ -32,7 +32,4 @@ LUG1) 已在各个平台上建立了宣传用账号。本页面旨在对 SNS 账
 | 豆瓣        | ?          | 科大LUG            | ？     |                                    |
 
   
-1)
-
-若无特殊说明，本站中 LUG 特指 USTC LUG 
-  *[IRC]: Internet Relay Chat
+1) 若无特殊说明，本站中 LUG 特指 USTC LUG 
