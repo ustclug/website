@@ -12,7 +12,7 @@ permalink: /wiki/linux_digest/
 
 [Linux 操作系统使用基础](http://scc.ustc.edu.cn/zlsc/pxjz/201408/W020141106572524269176.pdf "http://scc.ustc.edu.cn/zlsc/pxjz/201408/W020141106572524269176.pdf")  
 ---  
-  
+
 
 #### 读书笔记
 
@@ -25,7 +25,7 @@ permalink: /wiki/linux_digest/
 | [来自王光远同学的emacs读书笔记](reading_notes/wang-guangyuan-emacs-read-digest "linux_digest:reading_notes:wang-guangyuan-emacs-read-digest")                |     |
 | [《黑客与画家》读书笔记](/wiki/user/sadhen/hackers_and_painters "user:sadhen:hackers_and_painters")                                                              |     |
 
-  
+
 另请参阅[读书笔记](/wiki/lug/book/booknotes "lug:book:booknotes")
 
 #### 其它文章
@@ -41,7 +41,7 @@ permalink: /wiki/linux_digest/
 | [Linux 用户管理](user_adm "linux_digest:user_adm")                                   |     |
 | [ExPASy的ps_scan在linux下的简明配置指南](expasy-ps_scan "linux_digest:expasy-ps_scan") |     |
 
-  
+
 
 #### 用户文章
 
@@ -58,12 +58,10 @@ permalink: /wiki/linux_digest/
 | [Vim 笔记](/wiki/redsky/vim_note "redsky:vim_note")                                | redsky    |
 | [Emacs 笔记](/wiki/user/sadhen/emacs "user:sadhen:emacs")                          | sadhen    |
 
-  
+
 
 #### 参考页面
 
   + [实用脚本集锦](/wiki/scripts "scripts")
 
   + [提问的智慧](/wiki/doc/smart-questions "doc:smart-questions")
-
-你需要登录发表评论。 

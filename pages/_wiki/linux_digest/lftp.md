@@ -13,9 +13,6 @@ lftp启动后会一次读取/etc/lftp.conf、~/.lftprc和~/.lftp/rc。 通常我
 
 [.lftprc](/wiki/_export/code/linux_digest/435f.lftprc?codeblock=0 "下载片段")
 
-    
-    
-    
     #在浏览GBK编码的ftp时，可以执行gbkserver命令迅速切换。
     alias gbkserver set ftp:charset gbk;set file:charset utf-8
     alias utfserver set ftp:charset UTF-8;set file:charset utf-8
@@ -37,26 +34,18 @@ lftp启动后会一次读取/etc/lftp.conf、~/.lftprc和~/.lftp/rc。 通常我
 
 将站点加入书签有两种简单常用的方法，一种是在命令行中执行bookmark命令： 
 
-    
-    
     bookmark add <name> [<location>]
 
 改命令将会在~/.lftp/bookmarks文件中新增一行，内容类似如下： 
 
-    
-    
     movie	ftp://upload@202.38.64.22/
 
 另一种方法就是直接编辑~/.lftp/bookmarks文件，例如我直接增加以下该行到文件中： 
 
-    
-    
     home    ftp://myname@home.ustc.edu.cn/public_html/
 
 将来只需要在shell中执行： 
 
-    
-    
     lftp home
 
 即可打开连接到我的ftp上了
@@ -67,18 +56,12 @@ lftp启动后会一次读取/etc/lftp.conf、~/.lftprc和~/.lftp/rc。 通常我
 
 科大的童鞋们都有一个300M的静态主页空间，很多人都会用这个空间来制作漂亮的个人主页，那你是怎么同步的呢？是不是每次都需要打开nautilus或者filezilla等工具一个个文件的复制呢？ 来看看用lftp的脚本同步吧。 
 
-[.bash_aliases](/wiki/_export/code/linux_digest/cc37.bash_aliases?codeblock=1 "下载片段")
+[.bash\_aliases](/wiki/_export/code/linux_digest/cc37.bash_aliases?codeblock=1 "下载片段")
 
-    
-    
-    
     alias update-homepage='lftp -f ~/.bin/update-homepage.lftp'
 
 [update-homepage.lftp](/wiki/_export/code/linux_digest/update-homepagec273.lftp?codeblock=2 "下载片段")
 
-    
-    
-    
     connect home.ustc.edu.cn
     user myname
      
@@ -88,10 +71,6 @@ lftp启动后会一次读取/etc/lftp.conf、~/.lftprc和~/.lftp/rc。 通常我
 
 以后本地文件修改之后，只需要执行 
 
-    
-    
     update-homepage
 
 即可完成同步工作。也可将lftp -f ~/.bin/update-homepage.lftp这条命令写入[crontab](/wiki/linux/crontab "linux:crontab")，每天自动同步。 
-
-你需要登录发表评论。 

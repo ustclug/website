@@ -9,8 +9,6 @@
 
 查看passwd的内容，每一行代表了一个用户例如第一行： 
 
-    
-    
     root:x:0:0:root:/root:/bin/bash
 
 各个域的含义依次如下：用户名，密码，UID，GID，用户描述，home目录，shell。 
@@ -31,8 +29,6 @@
 
 第一行内容示例： 
 
-    
-    
     root:x:0:
 
 各个域的含义如下: 组名，组密码，组ID，用户列表。 
@@ -45,8 +41,6 @@
 
 通常使用adduser来直接创建用户账户。 
 
-    
-    
     adduser [-u uid] [-g gid] [-d home] [-s shell] username
 
 参数解释如下： 
@@ -63,8 +57,6 @@
 
 useradd命令提供一种更低级也是更灵活的创建用户的命令。例如，创建一个用户，拥有home目录，shell为bash，具有普通用户权限，并且具有查看日志的权限，可以使用如下的命令 
 
-    
-    
     sudo useradd -c "User Information"  -G adm -m -s /bin/bash  username
 
   + -c 添加描述
@@ -81,8 +73,6 @@ useradd命令提供一种更低级也是更灵活的创建用户的命令。例�
 
 passwd命令用于设置和更新密码。示例： 
 
-    
-    
     passwd username
 
 这条命令为username修改密码。如果略去username，则是给当前用户修改密码。 
@@ -91,8 +81,6 @@ passwd命令用于设置和更新密码。示例：
 
 示例： 
 
-    
-    
     passwd -e username
 
 这条命令使得username的密码失效，当username下一次登录的时候，输入自己的密码之后，系统强制要求更换密码。这条命令很适合于管理员给新用户创建账户时使用。 
@@ -103,8 +91,6 @@ passwd命令用于设置和更新密码。示例：
 
 userdel用于删除用户。示例： 
 
-    
-    
     userdel -r username
 
 这条命令将删除username用户，-r参数表示同时删除该用户的home目录及home目录下的内容。如果有邮件池(/var/mail/username)，则也一并删掉。 
@@ -117,6 +103,4 @@ userdel用于删除用户。示例：
 
 ### 来源声明
 
-blog/user_adm.txt · 最后更改: 2013/04/29 08:04 (外部编辑) 
-
-你需要登录发表评论。 
+blog/user\_adm.txt · 最后更改: 2013/04/29 08:04 (外部编辑) 
