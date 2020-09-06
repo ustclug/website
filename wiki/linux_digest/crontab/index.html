@@ -19,7 +19,7 @@
     <meta property="og:url" content="https://lug.ustc.edu.cn//wiki/linux_digest/crontab/">
     <meta property="og:description" content="crontab">
     <meta property="article:published_time" content="2020-08-09T15:07:59+08:00">
-    <meta property="article:modified_time" content="2020-08-09T15:07:59+08:00">
+    <meta property="article:modified_time" content="2020-09-06T12:28:30+08:00">
     <link rel="canonical" href="https://lug.ustc.edu.cn//wiki/linux_digest/crontab/">
     <script type="application/ld+json">
       {
@@ -56,7 +56,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=85f7de1a">
+    <link rel="stylesheet" href="/assets/css/main.css?v=867f70e1">
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
       <style>
@@ -172,7 +172,7 @@
           <meta itemprop="headline" content="crontab">
           <meta itemprop="description" content="crontab">
           <meta itemprop="datePublished" content="2020-08-09T15:07:59+08:00">
-          <meta itemprop="dateModified" content="2020-08-09T15:07:59+08:00">
+          <meta itemprop="dateModified" content="2020-09-06T12:28:30+08:00">
           <div class="page__inner-wrap">
             <header>
               <h1 id="page-title" class="page__title" itemprop="headline">crontab
@@ -240,22 +240,22 @@ crontab [ -u user ] [ -i ] { -e | -l | -r }
        SHELL=/bin/bash
        #设置MAILTO
        MAILTO=paul
-       
+
        #每天00:05执行
        5 0 * * *       $HOME/bin/daily.job &gt;&gt; $HOME/tmp/out 2&gt;&amp;1
-       
+
        # 每月的第一天的14:15执行
        15 14 1 * *     $HOME/bin/monthly
-       
+
        # 每周周一至周五22:00执行
        0 22 * * 1-5    mail -s "It's 10pm" joe%Joe,%%Where are your kids?%
-       
+
        #每个两个小时的第23分钟执行
        23 0-23/2 * * * echo "run 23 minutes after midn, 2am, 4am ..., everyday"
-       
+
        #每个周日的04:05执行
        5 4 * * sun     echo "run at 5 after 4 every sunday"
-       
+
        # 每个月的第8天到第15天的04:00执行
        0 4 8-15 * *    test $(date +u) -eq 6 &amp;&amp; echo "2nd Saturday"
 </code></pre>
@@ -264,10 +264,9 @@ crontab [ -u user ] [ -i ] { -e | -l | -r }
               <p>更多内容参见 man crontab 和 man 5 crontab</p>
               <h3 id="来源声明">来源声明</h3>
               <p>blog/crontab.txt · 最后更改: 2013/04/29 08:04 (外部编辑)</p>
-              <p>你需要登录发表评论。</p>
             </section>
             <footer class="page__meta">
-              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-08-09">2020 年 8 月 9 日</time></p>
+              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-09-06">2020 年 9 月 6 日</time></p>
             </footer>
             <nav class="pagination">
               <a href="/wiki/linux_digest/badblocks/" class="pagination--pager" title="使用badblocks命令处理硬盘坏道
