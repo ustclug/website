@@ -707,6 +707,12 @@ var store = [{
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/",
 "teaser": null
 },{
+"title": "Alpine Linux 镜像源使用帮助",
+"excerpt":"收录架构           armhf            x86            x86_64       使用说明   编辑/etc/apk/repositories，然后在文件的最顶端添加(注意将3.3换成需要的版本)   http://mirrors.ustc.edu.cn/alpine/v3.3/main/   参考wiki   相关链接           官方主页: http://alpinelinux.org/            邮件列表: http://www.archlinux.org/mailman/listinfo/            论坛: http://forum.alpinelinux.org/forum            Wiki: http://wiki.alpinelinux.org/      ","categories": [],
+"tags": [],
+"url": "https://lug.ustc.edu.cn//wiki/mirrors/help/alpine/",
+"teaser": null
+},{
 "title": "AOSC OS 镜像源使用帮助",
 "excerpt":"anthon 为 AnthonOS 项目的官方源 http://repo.anthonos.org 的镜像。 快速设置 考虑到安同的系统情况可能时有改动，并且源也不少，我们就偷个懒： anthon-apt.sh # AOSC OSes, apt-dpkg cat /etc/apt/sources.list | egrep 'mirror|repo' | sed -r -e 's@(mirror|repo).anthonos.org@mirrors.ustc.edu.cn/anthon@g' &gt;&gt; /etc/apt/sources.list 如果你只想用 USTC 镜像的话，勇敢地把 &gt;&gt; 改成 &gt; 吧。由于 AOSC OS3 yum 暂时没有 fastestmirror，你需要做一些砍手的工作： anthon-yum.sh # AOSC OS3, yum-rpm sudo sed -r -e -i.orig 's@(mirror|repo).anthonos.org@mirrors.ustc.edu.cn/anthon@g' /etc/yum/repos.d/aosc.repo 接下来是分系统信息：...","categories": [],
 "tags": [],
@@ -717,6 +723,12 @@ var store = [{
 "excerpt":"初始同步方法1 第一次同步数据量特别大，如果网络不稳定，中间失败就要从头再来了。所以我们提供了打包的 AOSP 镜像，为一个 tar 包，大约 16G（单文件 16G，注意你的磁盘格式要支持）。这样你 就可以通过 HTTP 的方式下载，该方法支持断点续传。 下载地址 http://mirrors.ustc.edu.cn/aosp-monthly/ 请注意对比 checksum。 然后根据下文 已有仓库如何改用科大源 的方法更改同步地址。 解压后用命令 repo sync 就可以把代码都 checkout 出来。 Note: tar包为定时从 https://mirrors.tuna.tsinghua.edu.cn/aosp-monthly/ 下载。 初始同步方法2 按照 Google 官方教程 https://source.android.com/source/downloading.html 将 https://android.googlesource.com/platform/manifest 替换为 git://mirrors.ustc.edu.cn/aosp/platform/manifest 。 具体做法摘录如下（以防墙抽风）： 首先下载 repo 工具。 mkdir ~/bin PATH=~/bin:$PATH curl https://storage.googleapis.com/git-repo-downloads/repo &gt; ~/bin/repo ##...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/aosp/",
+"teaser": null
+},{
+"title": "archive.raspberrypi.org",
+"excerpt":"修改/etc/apt/sources.list.d/raspi.list为以下内容   raspi.list   deb https://mirrors.ustc.edu.cn/archive.raspberrypi.org/ jessie main ui  ","categories": [],
+"tags": [],
+"url": "https://lug.ustc.edu.cn//wiki/mirrors/help/archive.raspberrypi.org/",
 "teaser": null
 },{
 "title": "Arch Linux 镜像使用帮助",
@@ -735,6 +747,18 @@ var store = [{
 "excerpt":"简介   Arch Linux 中文社区仓库是由 Arch Linux 中文社区驱动的非官方用户仓库。包含中文用户常用软件、工具、字体/美化包等。   仓库地址：repo.archlinuxcn.org   该仓库地址可能会根据你所在的网络环境自动选择镜像源地址。   使用方法   在 /etc/pacman.conf 文件末尾添加两行：   [archlinuxcn] Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch   然后请安装 archlinuxcn-keyring 包以导入 GPG key。   相关链接   Arch Linux 中文社区主页： https://www.archlinuxcn.org   Arch Linux 中文社区仓库 / 镜像加速源介绍： https://www.archlinuxcn.org/archlinux-cn-repo-and-mirror/  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/archlinuxcn/",
+"teaser": null
+},{
+"title": "BlackArch 镜像源使用帮助",
+"excerpt":"简介   BlackArch 是一款基于 ArchLinux 的为渗透测试及安全研究人员开发的发行版, 相当于 Arch 版的 BackTrack/Kali。   仓库地址：blackarch.org/blackarch/   收录架构   i686   x86_64   ARMv6/7   使用方法   在 /etc/pacman.conf 文件末尾添加两行：   [blackarch] SigLevel = Optional TrustAll Server = https://mirrors.ustc.edu.cn/blackarch/$repo/os/$arch   相关链接   BlackArch 主页： http://blackarch.org   收录的工具列表： http://blackarch.org/tools.html  ","categories": [],
+"tags": [],
+"url": "https://lug.ustc.edu.cn//wiki/mirrors/help/blackarch/",
+"teaser": null
+},{
+"title": "替换及重置Homebrew默认源",
+"excerpt":"替换brew.git:     cd “$(brew –repo)”     git remote set-url origin https://mirrors.ustc.edu.cn/brew.git   替换homebrew-core.git: cd \"$(brew --repo)/Library/Taps/homebrew/homebrew-core\" git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git   替换Homebrew Bottles源: 参考:替换Homebrew Bottles源   在中科大源失效或宕机时可以： 1. 使用清华源设置参考。 2. 切换回官方源：   重置brew.git: cd \"$(brew --repo)\" git remote set-url origin https://github.com/Homebrew/brew.git  重置homebrew-core.git: cd \"$(brew --repo)/Library/Taps/homebrew/homebrew-core\" git remote set-url origin https://github.com/Homebrew/homebrew-core.git   注释掉bash配置文件里的有关Homebrew Bottles即可恢复官方源。 重启bash或让bash重读配置文件。  ","categories": [],
+"tags": [],
+"url": "https://lug.ustc.edu.cn//wiki/mirrors/help/brew.git/",
 "teaser": null
 },{
 "title": "替换及重置Homebrew默认源",
@@ -851,6 +875,12 @@ var store = [{
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/homebrew-bottles/",
 "teaser": null
 },{
+"title": "homebrew-core源",
+"excerpt":"homebrew-core是Homebrew的核心软件仓库，收录了大部分的常用软件。   使用方法   替换和重置Homebrew源  ","categories": [],
+"tags": [],
+"url": "https://lug.ustc.edu.cn//wiki/mirrors/help/homebrew-core.git/",
+"teaser": null
+},{
 "title": "Homebrew",
 "excerpt":"该镜像已过期，新镜像在这里。请不要使用这个镜像，除非你完全清楚你在做什么。   替换homebrew默认源   cd /usr/local git remote set-url origin git://mirrors.ustc.edu.cn/homebrew.git  ","categories": [],
 "tags": [],
@@ -888,6 +918,12 @@ var store = [{
 "teaser": null
 },{
 "title": "Linux 内核源码镜像",
+"excerpt":"其 Git 仓库的链接为git://mirrors.ustc.edu.cn/linux.git。   断点续传   由于git clone不支持断点续传，所以可以使用支持断点续传的git fetch。一个简单的步骤如下所示，请按自己的需求酌情更改：   mkdir linux &amp;&amp; cd linux git init git fetch git://mirrors.ustc.edu.cn/linux.git git checkout FETCH_HEAD  ","categories": [],
+"tags": [],
+"url": "https://lug.ustc.edu.cn//wiki/mirrors/help/linux.git/",
+"teaser": null
+},{
+"title": "Linux 内核源码镜像",
 "excerpt":"其 Git 仓库的链接为 git://mirrors.ustc.edu.cn/linux.git 。   断点续传   由于 git clone 不支持断点续传，所以可以使用支持断点续传的 git fetch 。一个简单的步骤如下所示，请按自己的需求酌情更改：   mkdir linux &amp;&amp; cd linux git init git fetch git://mirrors.ustc.edu.cn/linux.git git checkout FETCH_HEAD  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/linux/",
@@ -897,6 +933,18 @@ var store = [{
 "excerpt":"收录架构           i386            amd64       收录版本           elyssa            felicia            gloria            helena            isadora            julia            katya            lisa            maya            nadia       使用说明   打开Software Manager，点击Edit⇒Software Sources   在Download from中选择Other   选择China⇒mirrors.ustc.edu.cn   点击Choose Server   相关链接      官方主页：http://www.linuxmint.com/  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/linuxmint/",
+"teaser": null
+},{
+"title": "MariaDB 镜像源使用帮助",
+"excerpt":"支持发行版 所有官方支持的发行版 收录版本 所有官方支持的版本 使用说明 Fedora, CentOS, Red Hat 使用 MariaDB Repository Configuration Tool 生成一份配置，保存为 /etc/yum.repos.d/mariadb.repo 然后执行以下命令替换源地址： sudo sed -i 's#yum.mariadb.org#mirrors.ustc.edu.cn/mariadb/yum#' /etc/yum.repos.d/mariadb # 建议使用 HTTPS sudo sed -i 's#http://mirrors.ustc.edu.cn#https://mirrors.ustc.edu.cn#g' /etc/yum.repos.d/mariadb 若安装时遇到错误 “Failed to connect to 2001:da8:d800:95::110: Network is unreachable”，将源地址中的 mirrors.ustc.edu.cn 替换为 ipv4.mirrors.edu.cn 以强制使用 IPv4： sudo sed -i 's#//mirrors.ustc.edu.cn#//ipv4.mirrors.ustc.edu.cn#g' /etc/yum.repos.d/mariadb Mint,...","categories": [],
+"tags": [],
+"url": "https://lug.ustc.edu.cn//wiki/mirrors/help/mariadb/",
+"teaser": null
+},{
+"title": "MSYS2 镜像使用帮助",
+"excerpt":"收录架构           MINGW: i686, x86_64            MSYS: i686, x86_64       获取基本组件包   请访问该镜像目录下的 distrib/ 目录（x86_64、i686），找到名为 msys2-&lt;架构&gt;-&lt;日期&gt;.exe 的文件（如 msys2-x86_64-20141113.exe），下载安装即可。   pacman 的配置   编辑 /etc/pacman.d/mirrorlist.mingw32 ，在文件开头添加：     Server = http://mirrors.ustc.edu.cn/msys2/mingw/i686   编辑 /etc/pacman.d/mirrorlist.mingw64 ，在文件开头添加：     Server = http://mirrors.ustc.edu.cn/msys2/mingw/x86_64   编辑 /etc/pacman.d/mirrorlist.msys ，在文件开头添加：     Server = http://mirrors.ustc.edu.cn/msys2/msys/$arch   然后执行 pacman -Sy 刷新软件包数据即可。  ","categories": [],
+"tags": [],
+"url": "https://lug.ustc.edu.cn//wiki/mirrors/help/msys2/",
 "teaser": null
 },{
 "title": "NPM镜像使用帮助",
@@ -923,6 +971,12 @@ var store = [{
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/pypi/",
 "teaser": null
 },{
+"title": "Qt 镜像使用帮助",
+"excerpt":"在线安装   从 http://mirrors.ustc.edu.cn/qtproject/official_releases/online_installers/ 下载在线安装器。   运行在线安装器后在设置里设置 http 代理为 mirrors.ustc.edu.cn:1080，并 禁用默认源，添加新源 http://mirrors.ustc.edu.cn/qtproject/online/qtsdkrepository/linux_x64/root/qt/（其他版本注意更改地址）  ","categories": [],
+"tags": [],
+"url": "https://lug.ustc.edu.cn//wiki/mirrors/help/qtproject/",
+"teaser": null
+},{
 "title": "Raspbian镜像使用帮助",
 "excerpt":"此处内容可能已过时，最新版本的帮助参见：https://mirrors.ustc.edu.cn/help/raspbian.html Raspbian简介 Raspbian是专门用于ARM卡片式计算机Raspberry Pi®“树莓派”的操作系统。 Raspberry Pi®“树莓派”是2012年问世的ARM计算机，旨在为儿童和所有的计算机爱好者提供一套廉价的编程学习与硬件DIY平台。树莓派基于ARM，具有1080P高清视频解析能力，附带用于硬件开发的GPIO接口，使用Linux操作系统。售价仅$25~$35。 Raspbian系统是Debian的定制版本。得益于Debian从7.0/wheezy开始引入的“带硬件浮点加速的ARM架构”(armhf)，Debian 7.0在树莓派上的运行性能有了很大提升。Raspbian默认使用LXDE桌面，内置C和Python编译器。 Raspbian是树莓派的开发与维护机构The Raspbeery Pi Foundation“树莓派基金会”，推荐用于树莓派的首选系统。 由于以下原因，Raspbian单独组建了自己的软件源： Debian下所有的软件包都需要用armhf重新编译。 树莓派有部分特有的软件包，例如Python的GPIO操作库。 树莓派用户倾向于探索、尝试最新的软件。这与Debian软件源的策略完全不同。 使用说明 编辑 /etc/apt/sources.list 文件。删除原文件所有内容，用以下内容取代： deb http://mirrors.ustc.edu.cn/raspbian/raspbian/ jessie main non-free contrib deb-src http://mirrors.ustc.edu.cn/raspbian/raspbian/ jessie main non-free contrib 编辑此文件后，请使用 sudo apt-get update 命令，更新软件列表。 系统架构 armhf(*) 系统版本 wheezy jessie stretch (即，oldstable, stable, testing) 更新频率 每日更新1次。 声明 Raspbian是由独立开发者维护的，与树莓派基金会并无直接联系。...","categories": [],
 "tags": [],
@@ -935,10 +989,22 @@ var store = [{
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/revproxy/",
 "teaser": null
 },{
+"title": "添加ROS源",
+"excerpt":"sudo sh -c ‘. /etc/lsb-release &amp;&amp; echo “deb http://mirrors.ustc.edu.cn/ros/ubuntu/ $DISTRIB_CODENAME main” &gt; /etc/apt/sources.list.d/ros-latest.list’  ","categories": [],
+"tags": [],
+"url": "https://lug.ustc.edu.cn//wiki/mirrors/help/ros/",
+"teaser": null
+},{
 "title": "RPMFusion 使用说明",
 "excerpt":"rpmfusion是为Fedora/RHEL提供额外rpm软件包的第三方软件源。 配置方式 使用下列命令，可以同时启用其 free 和 nonfree 软件源： Fedora 22+ su -c 'dnf install http://mirrors.ustc.edu.cn/rpmfusion/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://mirrors.ustc.edu.cn/rpmfusion/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm' Fedora 14 至 Fedora 21 su -c 'yum install --nogpgcheck http://mirrors.ustc.edu.cn/rpmfusion/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://mirrors.ustc.edu.cn/rpmfusion/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm' RHEL 5 或兼容系统 su -c 'rpm -Uvh http://mirrors.ustc.edu.cn/rpmfusion/free/el/updates/5/i386/rpmfusion-free-release-5-1.noarch.rpm http://mirrors.ustc.edu.cn/rpmfusion/nonfree/el/updates/5/i386/rpmfusion-nonfree-release-5-1.noarch.rpm' RHEL 6 或兼容系统 su -c 'yum...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/rpmfusion/",
+"teaser": null
+},{
+"title": "替换gems默认源",
+"excerpt":"gem sources  #列出默认源     gem sources –remove https://rubygems.org/  #移除默认源     gem sources -a https://mirrors.ustc.edu.cn/rubygems/  #添加科大源      替换Rails默认源   cd path/to/your/project #Linux only: sed -i \"/^source/c source 'http://mirrors.ustc.edu.cn/rubygems/'\" Gemfile  #OS X only: sed -ig \"s/^source.*/source 'http:\\\\/\\\\/mirrors.ustc.edu.cn\\\\/rubygems\\\\/'/g\" Gemfile  ","categories": [],
+"tags": [],
+"url": "https://lug.ustc.edu.cn//wiki/mirrors/help/rubygems/",
 "teaser": null
 },{
 "title": "Rust Crates 镜像使用帮助",
@@ -975,6 +1041,18 @@ var store = [{
 "excerpt":"UKSM是 http://kerneldedup.org/ 项目为内核的KSM的算法进行的一个优化，目前 mirrors.ustc 已提供 ubuntu 12.04 和 fedora 16 的源，具体的使用方法如下：   Fedora 16   x86 _64源：http://mirrors.ustc.edu.cn/uksm-kernel/uksm-fedora-x86_64.repo   i686源：http://mirrors.ustc.edu.cn/uksm-kernel/uksm-fedora-i686.repo   下载后放入/etc/yum.repos.d/ 然后使用yum命令或软件包管理器安装新的内核。 ====Ubuntu 12.04==== http://mirrors.ustc.edu.cn/uksm-kernel/ubuntu/uskm-ubuntu-12.04.list   下载后放入 /etc/apt/sources.list.d 然后使用apt-get命令或软件包管理器安装新的内核。 ====相关链接==== * 官方主页： http://kerneldedup.org/   _  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/uksm-kernel/",
+"teaser": null
+},{
+"title": "ustclug 自建软件源使用帮助",
+"excerpt":"收录架构   i386, amd64, armhf   收录版本   针对Debian Jessie挑选的部分软件，版本按需确定。   使用说明      编辑sources.list文件：   snippet.bash   echo deb https://mirrors.ustc.edu.cn/ustclug ustclug main | sudo tee /etc/apt/sources.list.d/ustclug.list      使用apt-key add添加缺失的公钥：   snippet.bash   wget -q https://mirrors.ustc.edu.cn/ustclug/ustclug.asc -O - | sudo apt-key add -      在apt update后即可正常使用。   注意 ：LUG@USTC对其中的软件包的来源不做任何保证，请谨慎使用。   相关链接   无  ","categories": [],
+"tags": [],
+"url": "https://lug.ustc.edu.cn//wiki/mirrors/help/ustclug/",
+"teaser": null
+},{
+"title": "Kodi镜像使用帮助",
+"excerpt":"镜像目录结构 addons 官方插件库 apt iOS 版 Kodi 安装源 build-deps 编译 Kodi 依赖的其他开源项目代码 nightlies 与 Kodi 开发主分支同步编译的每日开发版安装包下载目录 releases Kodi 稳定版安装包下载目录（含 Beta 版和 RC 版） snapshots Kodi 每月发布的 Alpha 版安装包下载目录 tools Kodi 相关的工具软件（Kora 遥控软件） Kodi简介 Kodi（前身是 XBMC）媒体中心，是一个屡获殊荣的自由和开源的跨平台媒体播放器和用于 HTPC（Home theater PC，家庭影院 PC）的数字媒体娱乐中心软件。它使用遥控器作为主输入设备，针对3米左右观看距离而设计的用户界面，成为适应客厅使用的媒体播放器。它的图形用户界面让用户轻按遥控，就能方便地从硬盘、光盘、局域网和互联网浏览和观看视频、图片，收听广播和音乐。Kodi 项目由非营利的 XBMC 基金会管理，并由分布在世界各地的志愿者参与开发。自从它于2003年诞生以来，超过500名软件开发人员对 Kodi 作出贡献，并有60名核心开发人员。另外，还有200多名翻译人员在帮助它扩大影响范围，使它支持多达72种语言。 Kodi（当时叫“Xbox Media Center”）最初是作为第一代 Xbox 游戏机（现在已不支持）的一个媒体中心应用而开发的，而现在已经正式以原生应用运行于 Android、Linux、Mac...","categories": [],
+"tags": [],
+"url": "https://lug.ustc.edu.cn//wiki/mirrors/help/xbmc/",
 "teaser": null
 },{
 "title": "Vim笔记",

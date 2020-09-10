@@ -278,7 +278,7 @@
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/greenwarm/xen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8/</loc>
-      <lastmod>2020-09-07T02:35:37+08:00</lastmod>
+      <lastmod>2020-09-11T00:52:02+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/</loc>
@@ -473,12 +473,20 @@
       <lastmod>2020-08-12T21:15:33+08:00</lastmod>
     </url>
     <url>
+      <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/alpine/</loc>
+      <lastmod>2020-09-11T00:46:04+08:00</lastmod>
+    </url>
+    <url>
       <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/anthon/</loc>
       <lastmod>2020-08-09T18:18:19+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/aosp/</loc>
       <lastmod>2020-08-09T15:07:59+08:00</lastmod>
+    </url>
+    <url>
+      <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/archive.raspberrypi.org/</loc>
+      <lastmod>2020-09-11T00:46:04+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/archlinux/</loc>
@@ -491,6 +499,14 @@
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/archlinuxcn/</loc>
       <lastmod>2020-08-09T15:07:59+08:00</lastmod>
+    </url>
+    <url>
+      <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/blackarch/</loc>
+      <lastmod>2020-09-11T00:46:04+08:00</lastmod>
+    </url>
+    <url>
+      <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/brew.git/</loc>
+      <lastmod>2020-09-11T00:46:04+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/brew/</loc>
@@ -569,6 +585,10 @@
       <lastmod>2020-08-09T15:07:59+08:00</lastmod>
     </url>
     <url>
+      <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/homebrew-core.git/</loc>
+      <lastmod>2020-09-11T00:46:04+08:00</lastmod>
+    </url>
+    <url>
       <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/homebrew/</loc>
       <lastmod>2020-08-09T15:07:59+08:00</lastmod>
     </url>
@@ -593,12 +613,24 @@
       <lastmod>2020-08-09T15:07:59+08:00</lastmod>
     </url>
     <url>
+      <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/linux.git/</loc>
+      <lastmod>2020-09-11T00:46:04+08:00</lastmod>
+    </url>
+    <url>
       <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/linux/</loc>
       <lastmod>2020-08-09T15:07:59+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/linuxmint/</loc>
       <lastmod>2020-08-09T15:07:59+08:00</lastmod>
+    </url>
+    <url>
+      <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/mariadb/</loc>
+      <lastmod>2020-09-11T00:46:04+08:00</lastmod>
+    </url>
+    <url>
+      <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/msys2/</loc>
+      <lastmod>2020-09-11T00:46:04+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/npm/</loc>
@@ -617,6 +649,10 @@
       <lastmod>2020-08-09T18:18:19+08:00</lastmod>
     </url>
     <url>
+      <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/qtproject/</loc>
+      <lastmod>2020-09-11T00:46:04+08:00</lastmod>
+    </url>
+    <url>
       <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/raspbian/</loc>
       <lastmod>2020-08-09T15:07:59+08:00</lastmod>
     </url>
@@ -625,8 +661,16 @@
       <lastmod>2020-08-09T15:07:59+08:00</lastmod>
     </url>
     <url>
+      <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/ros/</loc>
+      <lastmod>2020-09-11T00:46:04+08:00</lastmod>
+    </url>
+    <url>
       <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/rpmfusion/</loc>
       <lastmod>2020-08-09T15:07:59+08:00</lastmod>
+    </url>
+    <url>
+      <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/rubygems/</loc>
+      <lastmod>2020-09-11T00:46:04+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/rust-crates/</loc>
@@ -651,6 +695,14 @@
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/uksm-kernel/</loc>
       <lastmod>2020-08-09T15:07:59+08:00</lastmod>
+    </url>
+    <url>
+      <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/ustclug/</loc>
+      <lastmod>2020-09-11T00:46:04+08:00</lastmod>
+    </url>
+    <url>
+      <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/xbmc/</loc>
+      <lastmod>2020-09-11T00:46:04+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/redsky/vim_note/</loc>
