@@ -528,7 +528,7 @@ var store = [{
 "teaser": null
 },{
 "title": "借阅记录",
-"excerpt":"如欲借阅图书，请参阅 图书借阅管理制度。 2020 年借阅记录 书名 借阅者 联系方式 借阅日期 归还日期 备注 陶哲轩实分析 王子博 hypercube AT 0x01.me 2020-01-07 2020-09-04 - 概率论与数理统计 袁一玮 totoroyyw AT ustclug.org 2020-01-13 2020-09-02 - 概率论与数理统计习题全解指南 袁一玮 totoroyyw AT ustclug.org 2020-01-13 2020-09-02 - 人工智能-一种现代的方法 付佳伟 ibug AT ustclug.org 2020-08-25 - - 并行计算-结构、算法编程 付佳伟 ibug AT ustclug.org 2020-08-25 - -...","categories": [],
+"excerpt":"如欲借阅图书，请参阅 图书借阅管理制度。 2020 年借阅记录 书名 借阅者 联系方式 借阅日期 归还日期 备注 陶哲轩实分析 王子博 hypercube AT 0x01.me 2020-01-07 2020-09-04 - 概率论与数理统计 袁一玮 totoroyyw AT ustclug.org 2020-01-13 2020-09-02 - 概率论与数理统计习题全解指南 袁一玮 totoroyyw AT ustclug.org 2020-01-13 2020-09-02 - 人工智能-一种现代的方法 付佳伟 ibug AT ustclug.org 2020-08-25 2020-09-13 - 并行计算-结构、算法编程 付佳伟 ibug AT ustclug.org 2020-08-25 2020-09-13 -...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/lug/book/borrow_history/",
 "teaser": null
