@@ -15,15 +15,8 @@ LUG 的所有活动均依照 [社团章程](http://ftp.ustclug.org/社团管理/
 ## Latest Events
 
 | 日期       | 时间        | 地点            | 内容                                                         |
-| :--------- | :---------- | :-------------- | :----------------------------------------------------------- |
-| 2020-06-07 | 14:30-15:45 | 线上直播        | Linux 101 第七课 [Video](http://ftp.lug.ustc.edu.cn/101/videos/Linux-101-Chapter-7-Video_x264.mp4) |
-| 2020-05-24 | 14:30-15:00 | 线上直播        | Linux 101 第六课 [Video](http://ftp.lug.ustc.edu.cn/101/videos/Linux-101-Chapter-6-Video_x264.mp4) |
-| 2020-05-20 | 19:30-22:00 | 线上会议 (Zoom) | 社员代表大会暨换届大会                                       |
-| 2020-05-03 | 14:30-15:30 | 线上直播        | Linux 101 第五课 [Video](http://ftp.lug.ustc.edu.cn/101/videos/Linux-101-Chapter-5-Video_x264.mp4) |
-| 2020-05-03 | 14:30-16:30 | 线上直播        | Linux 101 第四课 [Video](http://ftp.lug.ustc.edu.cn/101/videos/Linux-101-Chapter-4-Video_x264.mp4) |
-| 2020-04-12 | 14:30-15:40 | 线上直播        | Linux 101 第三课 [Video](http://ftp.lug.ustc.edu.cn/101/videos/Linux-101-Chapter-3-Video_x264.mp4) |
-| 2020-03-29 | 14:30-15:55 | 线上直播        | Linux 101 第二课 [Video](http://ftp.lug.ustc.edu.cn/101/videos/Linux-101-Chapter-2-Video_x264.mp4) |
-| 2020-03-15 | 14:30-15:55 | 线上直播        | Linux 101 第一课 [Video](http://ftp.lug.ustc.edu.cn/101/videos/Linux-101-Chapter-1-Video_x264.mp4) |
+| :--------- | :---------- | :------------- | :----------------------------------------------------------- |
+| 2020-09-26 | 19:00-21:30 | 西区 3C        | 软件自由日活动                                                 |
 
 注意：LUD (Linux User Dinner) 均为自愿参加活动，活动费用由参加者分摊，不从社团任何经费报销。关于 LUG 的财务管理制度详情见：/wiki/lug/finance
 
@@ -31,6 +24,14 @@ LUG 的所有活动均依照 [社团章程](http://ftp.ustclug.org/社团管理/
 
 | 日期          | 时间        | 地点                       | 内容                                                         |
 | :------------ | :---------- | :------------------------- | :----------------------------------------------------------- |
+| 2020-06-07    | 14:30-15:45 | 线上直播                    | Linux 101 第七课 [Video](http://ftp.lug.ustc.edu.cn/101/videos/Linux-101-Chapter-7-Video_x264.mp4) |
+| 2020-05-24    | 14:30-15:00 | 线上直播                    | Linux 101 第六课 [Video](http://ftp.lug.ustc.edu.cn/101/videos/Linux-101-Chapter-6-Video_x264.mp4) |
+| 2020-05-20    | 19:30-22:00 | 线上会议 (Zoom)             | 社员代表大会暨换届大会                                       |
+| 2020-05-03    | 14:30-15:30 | 线上直播                    | Linux 101 第五课 [Video](http://ftp.lug.ustc.edu.cn/101/videos/Linux-101-Chapter-5-Video_x264.mp4) |
+| 2020-05-03    | 14:30-16:30 | 线上直播                    | Linux 101 第四课 [Video](http://ftp.lug.ustc.edu.cn/101/videos/Linux-101-Chapter-4-Video_x264.mp4) |
+| 2020-04-12    | 14:30-15:40 | 线上直播                    | Linux 101 第三课 [Video](http://ftp.lug.ustc.edu.cn/101/videos/Linux-101-Chapter-3-Video_x264.mp4) |
+| 2020-03-29    | 14:30-15:55 | 线上直播                    | Linux 101 第二课 [Video](http://ftp.lug.ustc.edu.cn/101/videos/Linux-101-Chapter-2-Video_x264.mp4) |
+| 2020-03-15    | 14:30-15:55 | 线上直播                    | Linux 101 第一课 [Video](http://ftp.lug.ustc.edu.cn/101/videos/Linux-101-Chapter-1-Video_x264.mp4) |
 | 2019-11-09    | 14:45–17:00 | 东区 5203                  | （协办）[ 红帽校园行：Linux 容器技术](https://ftp.lug.ustc.edu.cn/活动/2019.11.09_RedHat_讲座/) |
 | 2019-10-13    | 14:00-15:30 | 西区 3C101                 | 校友分享报告：AIot 简介                                      |
 | 2019-09-28    | 14:00-15:00 | 西区 3C101                 | 全员大会                                                     |
