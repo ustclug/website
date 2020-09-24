@@ -186,7 +186,7 @@ CNY，差额从 Equity:Opening-Balances 来。注意两行之间差一天的时�
 
   * 账户结息：账户的利息肯定难以每日都记录，本人采用 `pad`+`balance` 断言，每隔一段时间结算一下。
 
-  * 分期付款：这是个常见的购买方式，需要单独设置开一个 Liabilities Account，手续费记利息支出，每个月账单出现的时候转移一下。
+  * 分期付款：这是个常见的购买方式，需要单独设置开一个 Liabilities Account，手续费记利息支出，每个月账单出现的时候转移一下。 Beancount 提供了一个[插件](https://beancount.github.io/fava/api/beancount.plugins.html) `plugin "beancount.plugins.forecast` 专门用来处理分期、订阅情况，可以用于每月费用的自动生成。
 
 ### 核账
 
@@ -214,7 +214,7 @@ importer
 ###  将当日的一卡通消费生成为 `CSV`
 
 爬取一卡通数据的代码为
-[crawer.py](https://git.lug.ustc.edu.cn/Charles/ecard_beancount/-/blob/master/crawler.py)
+[crawler.py](https://git.lug.ustc.edu.cn/Charles/ecard_beancount/-/blob/master/crawler.py)
 ，其作用为爬取当日的一卡通消费记录，并自定义规则区分早、午、晚餐，生成符合 Beancount 格式的 `CSV`。（代码可以直接运行）
 
 ```python
@@ -272,13 +272,41 @@ if __name__ == '__main__':
                 payinfo['transferin']['value'] = float(line[4])
             elif line[0] == '消费':
                 linetime = datetime.strptime(line[5], '%Y-%m-%d %H:%M:%S')
-                if linetime > datetime(year, month, day, 6) and linetime  datetime(year, month, day, 10) and linetime  datetime(year, month, day, 16) and linetime < datetime(year, month, day, 20): # 判定为晚餐
+                if linetime > datetime(year, month, day, 6) and linetime < datetime(year, month, day, 10): # 判定为早餐
+                    if line[6] in payinfo['breakfast']['loc']:
+                        pass
+                    else:
+                        payinfo['breakfast']['loc'] += (line[6] + ' ')
+                    payinfo['breakfast']['value'] += float(line[4])
+                elif linetime > datetime(year, month, day, 10) and linetime < datetime(year, month, day, 14): # 判定为午餐
+                    if line[6] in payinfo['lunch']['loc']:
+                        pass
+                    else:
+                        payinfo['lunch']['loc'] += (line[6] + ' ')
+                    payinfo['lunch']['value'] += float(line[4])
+                elif linetime > datetime(year, month, day, 16) and linetime < datetime(year, month, day, 20): # 判定为晚餐
                     if line[6] in payinfo['dinner']['loc']:
                         pass
                     else:
                         payinfo['dinner']['loc'] += (line[6] + ' ')
                     payinfo['dinner']['value'] += float(line[4])
-                elif linetime  0:
+                elif linetime < datetime(year, month, day, 0):
+                    break
+                else:
+                    mtmp = '{0} - INFO: 未知消费 {1}'.format(datetime.now().strftime('%Y-%m-%d %H:%M:%S'), line)
+                    print(mtmp)
+            else:
+                mtmp = '{0} - INFO: 异常消费 {1}'.format(datetime.now().strftime('%Y-%m-%d %H:%M:%S'), line)
+                print(mtmp)
+        mtmp = '{0} - INFO: 卡内余额 {1}'.format(
+            datetime.now().strftime('%Y-%m-%d %H:%M:%S'), remaining)
+        print(mtmp)
+
+        # CSV Part
+        today = datetime.now().strftime('%Y-%m-%d')
+        headers = ['记账日期', '收款人', '交易摘要', '人民币金额', '类别']
+        csvinfo = []
+        if payinfo['transferin']['value'] > 0:
             csvinfo.append({headers[0]: today, headers[1]: payinfo['transferin']['type'], headers[2]: payinfo['transferin']
                             ['loc'], headers[3]: "%.2f" % -payinfo['transferin']['value'], headers[4]: 'Transferin'})
         if payinfo['breakfast']['value'] > 0:
