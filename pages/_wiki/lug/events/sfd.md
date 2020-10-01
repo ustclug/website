@@ -23,6 +23,15 @@ SFD，可译为“软件自由日”，顾名思义是对自由、开源软件�
 
 **地点: 中国科大西区 3C103**
 
+| 讲者   | 主题                                                    | 资料                                                                                                                                  |
+| :----- | :------------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------ |
+| 李威威 | 《PLCT 在 spike 和 qemu 开源项目上的工作》              | [Slides](http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2020.09.26_SFD/slides/plct%20spike_qemu.pptx)                                  |
+| 陈泳融 | 《Swift 项目概况与社区现状》                            | [Slides](http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2020.09.26_SFD/slides/Swift_SFD.pdf)                                           |
+| 明宇龙 | 《Bare metal main function in Rust for OS development》 | [Slides](http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2020.09.26_SFD/slides/OS%20in%20Rust.pptx)                                     |
+| 马凯   | 闪电演讲: 《Emacs 简介》                                | \-                                                                                                                                    |
+| 吴雨飞 | 闪电演讲: 《TiddlyWiki 入门》                           | [Slides by TiddlyWiki](http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2020.09.26_SFD/%E9%97%AA%E7%94%B5%E6%BC%94%E8%AE%B2/TiddlyWiki/) |
+| 明宇龙 | 闪电演讲: 《zsh 的插件管理器 - Antigen》                | \-                                                                                                                                    |
+
 ### 2019 年 SFD
 
 2019 年 SFD 于 2019 年 9 月 21 日举办
@@ -55,7 +64,7 @@ SFD，可译为“软件自由日”，顾名思义是对自由、开源软件�
 | 讲者                         | 主题                                                         | 简介 | 资料                                                         |
 | :--------------------------- | :----------------------------------------------------------- | :--- | :----------------------------------------------------------- |
 | Huanjie Zhang                | 《科大网络原理和 IPV6 介绍》                                 |      | [slides](http://ftp.ustclug.org/活动/2018.09.15_SFD/slides/中国科大IPv6应用实践.pptx) |
-| DiXing Xu (Linux foundation) | 《A Hands-On Tutorial on using fabric-sdk-py and writing your first dapp with fabric》 |      | [slides](http://ftp.ustclug.org/活动/2018.09.15_SFD/slides/Hyperledger – 项目概览.pdf) |
+| DiXing Xu (Linux foundation) | 《A Hands-On Tutorial on using fabric-sdk-py and writing your first dapp with fabric》 |      | [slides](http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2018.09.15_SFD/slides/Hyperledger%20%E2%80%93%20%E9%A1%B9%E7%9B%AE%E6%A6%82%E8%A7%88.pdf) |
 | Kai Ma                       | 《我已阅读并同意：软件许可证简介》                           |      | [slides](http://ftp.ustclug.org/活动/2018.09.15_SFD/slides/intro-license.tar.xz) |
 
 ### 2017年 SFD
