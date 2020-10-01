@@ -62,10 +62,10 @@ Rust 是新一代高性能且安全可靠的程序设计语言，已经被 Mozil
 
 第二位报名闪电演讲的同学是吴雨飞，他介绍了 TiddlyWiki 笔记软件，这是一个单文件的笔记软件，HTML 文件既是笔记界面，又是笔记数据保存的位置，便于备份以及分享。同时，TiddlyWiki 还能够实现演示文档的功能，通过几步即可实现简单的演示功能。
 
-![](http://ftp.lug.ustc.edu.cn/_h5ai/public/cache/thumbs/thumb-b2f024c0c1a0b056c13421d4b66d4893aeb23030-320x240.jpg)
+![](http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2020.09.26_SFD/photos/DSC00574.JPG)
 
 第三个闪电演讲是由明宇龙同学带来的 Antigen，是 zsh 的另一个插件管理器，可以作为 oh-my-zsh 的替代，或者与 oh-my-zsh 配合使用，增强其功能。
 
-![](http://ftp.lug.ustc.edu.cn/_h5ai/public/cache/thumbs/thumb-c259494896b849834688a72ec7aec00fde5bab87-320x240.jpg)
+![](http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2020.09.26_SFD/photos/DSC00589.JPG)
 
 在10点时，大家的演讲全部结束，自由软件日圆满结束。
