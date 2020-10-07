@@ -648,7 +648,7 @@ var store = [{
 "teaser": null
 },{
 "title": "LUG 负责人",
-"excerpt":"公共联系方式 联系我们 主要负责人 代号 职务 姓名 邮箱 CEO 执行会长 袁一玮 - - 执行副会长 高泽豫 - - 执行副会长 李缙 - CTO 技术部部长 明宇龙 - - 技术部副部长 罗丽薇 - CFO 财务部部长 邱子悦 - COO 运营部部长 罗丽薇 - CPO 资产部部长 胡清宇 - MSC MSC 事务 陈泳融 - - 团支书 胡清宇 - - 社长...","categories": [],
+"excerpt":"公共联系方式 联系我们 主要负责人 代号 职务 姓名 邮箱 CEO 执行会长 袁一玮 totoroyyw AT ustclug.org - 执行副会长 高泽豫 zeyugao AT ustclug.org - 执行副会长 李缙 - CTO 技术部部长 明宇龙 myl AT ustclug.org - 技术部副部长 罗丽薇 loliw AT ustclug.org CFO 财务部部长 邱子悦 xyy AT ustclug.org COO 运营部部长 罗丽薇 loliw AT ustclug.org CPO 资产部部长 胡清宇...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/lug/person-in-charge/",
 "teaser": null
