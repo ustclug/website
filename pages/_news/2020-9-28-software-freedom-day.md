@@ -1,10 +1,14 @@
 ---
 title: 2020 软件自由日中国科大站
-image: http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2020.09.26_SFD/photos/DSC00538.JPG
-author: Elsa Granger & totoro
+header:
+  image: http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2020.09.26_SFD/photos/DSC00538.JPG
+  overlay_image: false
+author:
+  - elsegranger
+  - totoro
 date: '2020-09-28 14:46:58 +0800'
 categories:
-- LUG活动
+  - LUG活动
 tags: []
 comments: []
 ---

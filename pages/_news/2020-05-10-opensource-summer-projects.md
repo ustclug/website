@@ -1,5 +1,8 @@
----title: 「开源软件供应链点亮计划——暑期 2020」USTCLUG 项目提案
-image: https://ftp.lug.ustc.edu.cn/photo/opensource-summer-2020.png
+---
+title: 「开源软件供应链点亮计划——暑期 2020」USTCLUG 项目提案
+header:
+  image: https://ftp.lug.ustc.edu.cn/photo/opensource-summer-2020.png
+  overlay_image: false
 author: taoky
 date: '2020-05-10 12:00:00 +0800'
 categories: ""

@@ -1,7 +1,9 @@
 ---
 title: 游戏安全与 Cheat Engine 核心指北
-image: http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2020.10.17_CE%E5%B0%8F%E8%81%9A/Photos/_DSC1326.JPG
-author: "Elsa Granger"
+header:
+  image: http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2020.10.17_CE%E5%B0%8F%E8%81%9A/Photos/_DSC1326.JPG
+  overlay_image: false
+author: elsegranger
 date: "2020-10-18 16:40:00 +0800"
 categories:
   - LUG活动
