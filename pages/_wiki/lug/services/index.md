@@ -12,7 +12,7 @@ permalink: /wiki/lug/services/
 
 ### A 级服务
 
-  + [代码托管平台](gitlab.md)：[https://git.lug.ustc.edu.cn](https://git.lug.ustc.edu.cn/ "https://git.lug.ustc.edu.cn")
+  + [代码托管平台](gitlab.md)：[https://git.lug.ustc.edu.cn](https://git.lug.ustc.edu.cn/)
 
   + 回校访问服务
 
@@ -32,23 +32,25 @@ permalink: /wiki/lug/services/
 
   + 开源镜像站（定时同步；rsync、FTP访问；帮助页面）：<https://mirrors.ustc.edu.cn>
 
-  + [反向代理](revproxy "lug:services:revproxy")：*.proxy.ustclug.org
+  + 反向代理：*.proxy.ustclug.org
 
   + 服务器统一认证：ldap.lug.ustc.edu.cn
 
   + 内网 VPN
 
-  + 旧的 LUG Planet（社团博客）：<https://planet.ustclug.org>
-
 ### C 级服务
 
   + [LUG FTP](ftp.md)：<https://ftp.lug.ustc.edu.cn>
 
-  + Ganglia 监控：<https://status.ustclug.org>
+  + 旧的 LUG Planet（社团博客）：<https://planet.ustclug.org>
+
+  + 旧的 LUG 新闻站：<https://news.ustclug.org>
 
   + Grafana 监控：<https://monitor.ustclug.org>
 
   + LDAP 配置管理系统（GOsa²）
+
+  + ~~Ganglia 监控：<https://status.ustclug.org>~~
 
 ### 服务等级与服务标准
 

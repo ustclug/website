@@ -27,6 +27,8 @@ wiki:
         url: /wiki/lug/events/
       - title: '<i class="fad fa-lg fa-fw fa-users-class"></i> 每周小聚'
         url: /wiki/lug/events/weeklyparty/
+      - title: '<i class="fad fa-lg fa-fw fa-graduation-cap"></i> Linux 101'
+        url: https://101.lug.ustc.edu.cn/
       - title: '<i class="fad fa-lg fa-fw fa-envelope-open-text"></i> 邮件列表'
         url: /wiki/lug/mailinglist/
       - title: '<i class="fad fa-lg fa-fw fa-books"></i> LUG 书库'
