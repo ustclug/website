@@ -347,6 +347,12 @@ var store = [{
 "url": "https://lug.ustc.edu.cn//news/2020/10/ce-and-reverse/",
 "teaser": null
 },{
+"title": "LUG 全员大会",
+"excerpt":"在 2020 年 10 月 24 日星期六，USTCLUG 在西校区 3C102 教室召开了 LUG 全员大会，由 LUG 主要成员向新成员介绍 LUG 组织的各项精彩活动、维护的服务等信息。 七点整，LUG 全员大会正式开始。 首先，Linux 用户协会会长袁一玮简要介绍了 LUG 概况，包括 LUG 的建立、荣誉、组成以及 LUG 的目标，为新成员解答了“LUG 是什么”这一问题。 LUG 是一个以推广自由软件文化、宣传自由软件价值为目的的协会组织，为带给科大的 Linux 等技术爱好者一个交流学习的环境而努力。 接下来，由 Linux 用户协会 COO 罗丽薇介绍 LUG 所举办的丰富活动。 她先是回顾了刚举办不久的 SFD（软件自由日）和每周小聚，让新成员了解到 LUG 所举办的这类分享活动的形式和主题。 之后，她向新成员介绍了 LUG 即将举办的 Hackergame 活动，鼓励新成员在这一充满趣味性的比赛中学习并得到成长。 她还提到了 LUG 常有的参观网络信息中心活动以及每年举办的...","categories": ["LUG活动"],
+"tags": [],
+"url": "https://lug.ustc.edu.cn//news/2020/10/freshmen-meeting/",
+"teaser": null
+},{
 "title": "Hello! LUG Planet",
 "excerpt":"欢迎大家来到 LUG Planet！这是一个刚刚被发现的新星球，百废待兴。本文是 LUG Planet 的说明书，在你入驻之前，不妨先驻足欣赏一下这片风景。😀 LUG Planet 是什么？ LUG Planet 是…… 由 USTCLUG 负责运营和管理的群体博客。 目标读者与参与者： USTCLUG 会员； 认同 USTCLUG 理念的同好； 希望积极参加 USTCLUG 线上活动的朋友。 主要话题为 USTCLUG 社团的活动覆盖范围： UNIX、Linux 及自由/开源软件； Windows, Microsoft 新技术； 信息安全； 这些技术与 USTC 的碰撞与融合。 LUG Planet 是精神上的 Linux 文摘 计划的延续。我们认可这个群策群力式的知识汇集的理念，但使用更方便和更自由的形式，从而鼓励大家能更积极地参与到这个项目中来。 订阅我们 你可以做一个默默潜水的读者，也可以在评论区与作者激辩，或者亲自成为写作者。但无论如何，你一定非常关注 LUG Planet 的动态。所以我们提供了多种方式确保你能得到及时的通知： RSS 订阅（推荐）。由 LUG...","categories": [],
 "tags": [],
