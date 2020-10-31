@@ -720,7 +720,7 @@ var store = [{
 "teaser": null
 },{
 "title": "LUG 宣传账号一览",
-"excerpt":"LUG1) 已在各个平台上建立了宣传用账号。本页面旨在对 SNS 账号使用情况及信息交流平台进行一定的整理。 正在维护 平台/账号类型 启用时间 名称 维护者 备注 Google groups ? ustc_lug@googlegroups.com 李博杰   IRC 2014-04-01 #ustc_lug 张光宇 Freenode QQ群 2014-03-31 USTC_Linux 崔灏 号码：334011318 QQ群 2015-05-27 USTC Linux User Group 崔灏 号码：640650279，限实名校内学生，暂为邀请制           Twitter 2010-10-28 @ustclug 杨博远   Google+ 信息页 2014-08-24 USTC LUG 张光宇、王子浩...","categories": [],
+"excerpt":"LUG1) 已在各个平台上建立了宣传用账号。本页面旨在对 SNS 账号使用情况及信息交流平台进行一定的整理。 正在维护 平台/账号类型 启用时间 名称 维护者 备注 Google groups ? ustc_lug@googlegroups.com 李博杰   IRC 2014-04-01 #ustc_lug 朱晟菁(zhsj) Freenode QQ 群 2014-03-31 USTC_Linux 崔灏 号码：334011318 QQ 群 2015-05-27 USTC Linux User Group 崔灏 号码：640650279，限实名校内学生，暂为邀请制           Twitter 2010-10-28 @ustclug 杨博远   Google+ 信息页 2014-08-24 USTC...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/lug/sns/",
 "teaser": null
