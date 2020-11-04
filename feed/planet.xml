@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://lug.ustc.edu.cn//feed/planet.xml" rel="self" type="application/atom+xml" /><link href="https://lug.ustc.edu.cn//" rel="alternate" type="text/html" /><updated>2020-10-31T12:18:23+08:00</updated><id>https://lug.ustc.edu.cn//feed/planet.xml</id><title type="html">LUG @ USTC | Planet</title><subtitle>Under construction!</subtitle><author><name>USTCLUG</name></author><entry><title type="html">使用 Beancount 进行记账并自动记录一卡通消费</title><link href="https://lug.ustc.edu.cn//planet/2020/08/keeping-account-with-beancount/" rel="alternate" type="text/html" title="使用 Beancount 进行记账并自动记录一卡通消费" /><published>2020-08-06T00:00:00+08:00</published><updated>2020-09-24T09:44:56+08:00</updated><id>https://lug.ustc.edu.cn//planet/2020/08/keeping-account-with-beancount</id><content type="html" xml:base="https://lug.ustc.edu.cn//planet/2020/08/keeping-account-with-beancount/">&lt;p&gt;本文首发于 &lt;a href=&quot;https://charlesliu7.github.io/blackboard/2019/07/24/beancount/&quot;&gt;https://charlesliu7.github.io/blackboard/2019/07/24/beancount/&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://lug.ustc.edu.cn//feed/planet.xml" rel="self" type="application/atom+xml" /><link href="https://lug.ustc.edu.cn//" rel="alternate" type="text/html" /><updated>2020-11-05T01:40:56+08:00</updated><id>https://lug.ustc.edu.cn//feed/planet.xml</id><title type="html">LUG @ USTC | Planet</title><subtitle>Under construction!</subtitle><author><name>USTCLUG</name></author><entry><title type="html">使用 Beancount 进行记账并自动记录一卡通消费</title><link href="https://lug.ustc.edu.cn//planet/2020/08/keeping-account-with-beancount/" rel="alternate" type="text/html" title="使用 Beancount 进行记账并自动记录一卡通消费" /><published>2020-08-06T00:00:00+08:00</published><updated>2020-09-24T09:44:56+08:00</updated><id>https://lug.ustc.edu.cn//planet/2020/08/keeping-account-with-beancount</id><content type="html" xml:base="https://lug.ustc.edu.cn//planet/2020/08/keeping-account-with-beancount/">&lt;p&gt;本文首发于 &lt;a href=&quot;https://charlesliu7.github.io/blackboard/2019/07/24/beancount/&quot;&gt;https://charlesliu7.github.io/blackboard/2019/07/24/beancount/&lt;/a&gt;&lt;/p&gt;
         &lt;p&gt;偶尔看到了复式记账这个概念，对精细记账的我而言很受用，选择 Beancount 这样的开源工具的原因莫过于账本数据完全由自己掌握，而不是被各大 APP
         所保管。本文从一次个人实践的角度来说明一下复式记账的使用。&lt;/p&gt;
         &lt;p&gt;本篇文章是一个从零开始的个人实践记录，涵盖 &lt;strong&gt;文件组织 -&amp;gt; 基本账本书写 -&amp;gt; 爬取一卡通数据并自动记录&lt;/strong&gt;，供同样使用 Beancount
@@ -532,11 +532,9 @@
         sysbench &lt;span class=&quot;nt&quot;&gt;--test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;cpu &lt;span class=&quot;nt&quot;&gt;--num-threads&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;8 run
         &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
         &lt;figure class=&quot;&quot;&gt;
-        &lt;img src=&quot;/static/planet/sysbench-cpu.png&quot; alt=&quot;&quot; /&gt;
-        &lt;figcaption&gt;
+        &lt;img src=&quot;/static/planet/sysbench-cpu.png&quot; alt=&quot;&quot; /&gt;&lt;figcaption&gt;
         SysBench CPU 性能，单位为秒，越低越好
-        &lt;/figcaption&gt;
-        &lt;/figure&gt;
+        &lt;/figcaption&gt;&lt;/figure&gt;
         &lt;p&gt;如表中显示的那样，在 CPU 性能方面，树莓派 4 相比 3B+ 而言有巨大提升，在所有情况中都少花了 19.3% 的时间。&lt;/p&gt;
         &lt;h3 id=&quot;sysbench-内存测试&quot;&gt;SysBench 内存测试&lt;/h3&gt;
         &lt;p&gt;内存测试有点复杂，并且我发现了一些意料之外的结果。&lt;/p&gt;
@@ -547,18 +545,15 @@
         sysbench &lt;span class=&quot;nt&quot;&gt;--test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;memory &lt;span class=&quot;nt&quot;&gt;--memory-block-size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1M &lt;span class=&quot;nt&quot;&gt;--memory-total-size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2G &lt;span class=&quot;nt&quot;&gt;--memory-oper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;write &lt;span class=&quot;nt&quot;&gt;--num-threads&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;4 run
         &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
         &lt;figure class=&quot;&quot;&gt;
-        &lt;img src=&quot;/static/planet/sysbench-memory.png&quot; alt=&quot;&quot; /&gt;
-        &lt;figcaption&gt;
+        &lt;img src=&quot;/static/planet/sysbench-memory.png&quot; alt=&quot;&quot; /&gt;&lt;figcaption&gt;
         SysBench 内存性能，单位为每秒指令数，越高越好
-        &lt;/figcaption&gt;
-        &lt;/figure&gt;
+        &lt;/figcaption&gt;&lt;/figure&gt;
         &lt;p&gt;新的 DDR4 内存竟然比老古董 DDR2 内存慢，而且在多线程情况下差距进一步拉大了！唯一一点合理的是，当单个块大小到 1 MiB 的时候，树莓派 4 要小幅好于 3B+。&lt;/p&gt;
         &lt;p&gt;一件有意思的事情是，我没有包含“1 MiB Read MT”（1 MiB 单块，读取，多线程）这一列。SysBench 在两块树莓派上都给我返回了超过 200 GB/s 的结果，有时候结果还高达 500 GB/s。这显然太滑稽了，所以我直接忽略了那个结果。&lt;/p&gt;
         &lt;h3 id=&quot;fio-microsd-卡速度测试&quot;&gt;FIO microSD 卡速度测试&lt;/h3&gt;
         &lt;p&gt;此测试结果依赖于 microSD 卡本身，所以我拿出了我拥有的最快的 SD 卡：Lexar 667x 128 GB microSD 卡，外观类似下面这张图：&lt;/p&gt;
         &lt;figure class=&quot;&quot;&gt;
-        &lt;img src=&quot;/static/planet/microsd-card-1024x752.jpg&quot; alt=&quot;&quot; /&gt;
-        &lt;/figure&gt;
+        &lt;img src=&quot;/static/planet/microsd-card-1024x752.jpg&quot; alt=&quot;&quot; /&gt;&lt;/figure&gt;
         &lt;p&gt;我使用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fio&lt;/code&gt; 作为磁盘（microSD 卡）I/O 性能测试工具。因为我更熟悉 Crystal DiskMark，我调整了 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fio&lt;/code&gt; 的参数，以与其一致。&lt;/p&gt;
         &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fio &lt;span class=&quot;nt&quot;&gt;--loops&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;5 &lt;span class=&quot;nt&quot;&gt;--size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;500m &lt;span class=&quot;nt&quot;&gt;--filename&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;fiotest.tmp &lt;span class=&quot;nt&quot;&gt;--stonewall&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--ioengine&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;libaio &lt;span class=&quot;nt&quot;&gt;--direct&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
         &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;SeqRead &lt;span class=&quot;nt&quot;&gt;--bs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1m &lt;span class=&quot;nt&quot;&gt;--rw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;read&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
@@ -571,11 +566,9 @@
         &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;4Kwrite &lt;span class=&quot;nt&quot;&gt;--bs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;4k &lt;span class=&quot;nt&quot;&gt;--rw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;randwrite
         &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
         &lt;figure class=&quot;&quot;&gt;
-        &lt;img src=&quot;/static/planet/fio-microsd.png&quot; alt=&quot;&quot; /&gt;
-        &lt;figcaption&gt;
+        &lt;img src=&quot;/static/planet/fio-microsd.png&quot; alt=&quot;&quot; /&gt;&lt;figcaption&gt;
         MicroSD 性能，单位为 MB/s，越高越好
-        &lt;/figcaption&gt;
-        &lt;/figure&gt;
+        &lt;/figcaption&gt;&lt;/figure&gt;
         &lt;p&gt;从结果来看，树莓派 4 的性能有巨大提升，在许多测试中都比 3B+ 快出 50%。这可能是树莓派 4 最有用的更新，因为性能的瓶颈几乎都在缓慢的磁盘 I/O 上。&lt;/p&gt;
         &lt;h3 id=&quot;p7zip-基准测试&quot;&gt;p7zip 基准测试&lt;/h3&gt;
         &lt;p&gt;7-zip 有个自带的基准测试工具，当然 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;p7zip&lt;/code&gt;（7-zip 的 POSIX 移植）也有。我使用这个工具来测试树莓派的压缩与解压性能。&lt;/p&gt;
@@ -583,11 +576,9 @@
         7zr b
         &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
         &lt;figure class=&quot;&quot;&gt;
-        &lt;img src=&quot;/static/planet/p7zip.png&quot; alt=&quot;&quot; /&gt;
-        &lt;figcaption&gt;
+        &lt;img src=&quot;/static/planet/p7zip.png&quot; alt=&quot;&quot; /&gt;&lt;figcaption&gt;
         p7zip 基准测试，越高越好
-        &lt;/figcaption&gt;
-        &lt;/figure&gt;
+        &lt;/figcaption&gt;&lt;/figure&gt;
         &lt;p&gt;如&lt;a href=&quot;https://sevenzip.osdn.jp/chm/cmdline/commands/bench.htm&quot;&gt;此帮助文档&lt;/a&gt;所言，压缩更依赖于内存的吞吐量与延迟，这可能是两块树莓派间在压缩测试中差距增大的原因。总之，树莓派 4 在 p7zip 测试中有 1/3 的性能提升。&lt;/p&gt;
         &lt;h3 id=&quot;openssl-速度测试&quot;&gt;OpenSSL 速度测试&lt;/h3&gt;
         &lt;p&gt;OpenSSL 是目前最流行的密码学软件库，它也包含了一个内置的速度测试。结果是在所有块大小中最快的那个——在 4 个测试中大小都是 16,384 字节。&lt;/p&gt;
@@ -597,21 +588,17 @@
         openssl speed &lt;span class=&quot;nt&quot;&gt;-evp&lt;/span&gt; sha256
         &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
         &lt;figure class=&quot;&quot;&gt;
-        &lt;img src=&quot;/static/planet/openssl.png&quot; alt=&quot;&quot; /&gt;
-        &lt;figcaption&gt;
+        &lt;img src=&quot;/static/planet/openssl.png&quot; alt=&quot;&quot; /&gt;&lt;figcaption&gt;
         OpenSSL 基准测试，单位为 MB/s，越高越好
-        &lt;/figcaption&gt;
-        &lt;/figure&gt;
+        &lt;/figcaption&gt;&lt;/figure&gt;
         &lt;h3 id=&quot;网络速度测试&quot;&gt;网络速度测试&lt;/h3&gt;
         &lt;p&gt;树莓派 4 将 300 Mbps 以太网升级到了真正的千兆网口，如果你打算用它来当离线下载器或者 NAS 的话，这是极好的。这里我跑了两个测试，看看网络究竟如何。&lt;/p&gt;
         &lt;h4 id=&quot;curl-文件下载测试&quot;&gt;CURL 文件下载测试&lt;/h4&gt;
         &lt;p&gt;这项测试非常简单：使用 cURL 从局域网机器下载文件，查看速度。&lt;/p&gt;
         &lt;figure class=&quot;&quot;&gt;
-        &lt;img src=&quot;/static/planet/cURL.png&quot; alt=&quot;&quot; /&gt;
-        &lt;figcaption&gt;
+        &lt;img src=&quot;/static/planet/cURL.png&quot; alt=&quot;&quot; /&gt;&lt;figcaption&gt;
         cURL 下载速度，单位为 MB/s，越高越好
-        &lt;/figcaption&gt;
-        &lt;/figure&gt;
+        &lt;/figcaption&gt;&lt;/figure&gt;
         &lt;p&gt;结果不如预想那么好：树莓派 4 没能跑出千兆的速度，而我旁边的 x86 Linux 盒子就做到了。&lt;/p&gt;
         &lt;h4 id=&quot;nginx-性能测试&quot;&gt;NGINX 性能测试&lt;/h4&gt;
         &lt;p&gt;另一个常见的场景是：使用 NGINX 提供网页服务（对不起，这里没有 Apache 的位置）。我在两块树莓派上都安装了 NGINX，设置了 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;access_log off&lt;/code&gt;，并在我的 x86 盒子上使用 Siege 4.0.4 对树莓派服务器进行基准测试。&lt;/p&gt;
@@ -619,11 +606,9 @@
         siege &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; 25 &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; 400 &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;host]
         &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
         &lt;figure class=&quot;&quot;&gt;
-        &lt;img src=&quot;/static/planet/nginx.png&quot; alt=&quot;&quot; /&gt;
-        &lt;figcaption&gt;
+        &lt;img src=&quot;/static/planet/nginx.png&quot; alt=&quot;&quot; /&gt;&lt;figcaption&gt;
         NGINX 性能，单位为请求数每秒，越高越好
-        &lt;/figcaption&gt;
-        &lt;/figure&gt;
+        &lt;/figcaption&gt;&lt;/figure&gt;
         &lt;p&gt;在 CPU 性能与网络速度的双重提升下，新的树莓派 4 速度接近 3B+ 的两倍。如果你想用树莓派搭个网站的话，这是个好消息。&lt;/p&gt;
         &lt;h3 id=&quot;应用程序性能&quot;&gt;应用程序性能&lt;/h3&gt;
         &lt;p&gt;我选择了两个我最熟悉的编程语言环境：Python 和 Ruby（我对 Node 不熟）来进行测试。&lt;/p&gt;
@@ -639,11 +624,9 @@
         &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
         &lt;p&gt;Ruby 测试就简单很多：使用 Jekyll 构建&lt;a href=&quot;https://ibugone.com/&quot;&gt;我的站点&lt;/a&gt;，查看消耗的时间。&lt;/p&gt;
         &lt;figure class=&quot;&quot;&gt;
-        &lt;img src=&quot;/static/planet/python-ruby.png&quot; alt=&quot;&quot; /&gt;
-        &lt;figcaption&gt;
+        &lt;img src=&quot;/static/planet/python-ruby.png&quot; alt=&quot;&quot; /&gt;&lt;figcaption&gt;
         应用程序性能，单位为秒，越低越好
-        &lt;/figcaption&gt;
-        &lt;/figure&gt;
+        &lt;/figcaption&gt;&lt;/figure&gt;
         &lt;p&gt;Ruby 测试比 Python 测试更加均衡，因为它主要测试的是纯计算性能，结果 Ruby 测试中性能差距就要小一些。&lt;/p&gt;
         &lt;p&gt;不过等等，这不代表树莓派 4 对大型的 Python 或者 Ruby 项目来说是个好的选择。相同的测试在我的 x86 盒子（i7-8850H, 32 GB DDR4, NVMe SSD）上&lt;strong&gt;快了 10 倍&lt;/strong&gt;，其仅使用 5 秒运行 Python 脚本，4 秒构建我的 Jekyll 站点。毕竟，你不能期望一个只卖 55 美元的板子能够有毁天灭地的性能，不是吗？&lt;/p&gt;
         &lt;h3 id=&quot;usb-io-性能&quot;&gt;USB I/O 性能&lt;/h3&gt;
@@ -653,11 +636,9 @@
         &lt;span class=&quot;nt&quot;&gt;--direct&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1 &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;SeqRead &lt;span class=&quot;nt&quot;&gt;--bs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1m &lt;span class=&quot;nt&quot;&gt;--rw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;read&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;SeqWrite &lt;span class=&quot;nt&quot;&gt;--bs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1m &lt;span class=&quot;nt&quot;&gt;--rw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;write
         &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
         &lt;figure class=&quot;&quot;&gt;
-        &lt;img src=&quot;/static/planet/fio-usb.png&quot; alt=&quot;&quot; /&gt;
-        &lt;figcaption&gt;
+        &lt;img src=&quot;/static/planet/fio-usb.png&quot; alt=&quot;&quot; /&gt;&lt;figcaption&gt;
         USB 速度，单位为 MB/s，越高越好
-        &lt;/figcaption&gt;
-        &lt;/figure&gt;
+        &lt;/figcaption&gt;&lt;/figure&gt;
         &lt;p&gt;结果很棒！升级后的 USB 3.0 接口，即使没有跑到最高速，也比前代树莓派高出很多。但在享受高速 USB 之前，再让我强调一次：请特别关注你的 USB 外设，特别是那些有点儿耗电的设备，像机械硬盘和 SSD。如果电力得以保证，利用那两个高速 USB 接口对于 NAS 或者其他存储扩展来说好处多多。&lt;/p&gt;
         &lt;h2 id=&quot;总结&quot;&gt;总结&lt;/h2&gt;
         &lt;p&gt;在体验过 3B 到 3B+ 的小小提升后，新的树莓派 4 对于大多数树莓派爱好者来说，都是一场盛宴。价格不变，即使你已经有个 3B+，树莓派 4 也可以说是必买的。尽管在供电和散热上有缺点，如果你不插太多外设，不在树莓派上放太多重型任务的话，也没什么关系。&lt;/p&gt;</content><author><name>taoky</name></author><category term="Technology" /><category term="Translation" /><category term="树莓派" /><summary type="html">原文地址：https://ibugone.com/blog/2019/09/raspberry-pi-4-review-benchmark/，作者为 @iBug 同学。以下为翻译部分。</summary></entry><entry><title type="html">nc 是什么？</title><link href="https://lug.ustc.edu.cn//planet/2019/09/how-to-use-nc/" rel="alternate" type="text/html" title="nc 是什么？" /><published>2019-09-16T00:00:00+08:00</published><updated>2020-08-09T20:31:40+08:00</updated><id>https://lug.ustc.edu.cn//planet/2019/09/how-to-use-nc</id><content type="html" xml:base="https://lug.ustc.edu.cn//planet/2019/09/how-to-use-nc/">&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nc/ncat&lt;/code&gt; 是 netcat 的缩写，它可以读写 TCP 与 UDP 端口——或许你看不懂这句话，这没有关系。简单地说，它可以在字符界面下，让你和服务器沟通交流。&lt;/p&gt;
@@ -677,11 +658,9 @@
         &lt;p&gt;直接双击，你会看到一个窗口一扫而过——这是正常现象。你需要使用「命令提示符」或者「PowerShell」来访问这个程序。&lt;/p&gt;
         &lt;p&gt;Windows 10 中，你可以使用资源管理器 -&amp;gt; 文件来在你存放 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nc&lt;/code&gt; 的目录中打开命令提示符或 PowerShell。&lt;/p&gt;
         &lt;figure class=&quot;&quot;&gt;
-        &lt;img src=&quot;/static/planet/explorer-1024x510.png&quot; alt=&quot;&quot; /&gt;
-        &lt;figcaption&gt;
+        &lt;img src=&quot;/static/planet/explorer-1024x510.png&quot; alt=&quot;&quot; /&gt;&lt;figcaption&gt;
         在 Windows 资源管理器中打开命令提示符或 PowerShell
-        &lt;/figcaption&gt;
-        &lt;/figure&gt;
+        &lt;/figcaption&gt;&lt;/figure&gt;
         &lt;p&gt;或者，你也可以在开始菜单 -&amp;gt; Windows 系统中打开命令提示符，或者在开始菜单 -&amp;gt; Windows PowerShell 中打开 PowerShell，然后使用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cd&lt;/code&gt; 命令转移到对应的目录：输入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cd 文件夹名&lt;/code&gt; 可以让你转移到对应的文件夹，输入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cd ..&lt;/code&gt; 可以让你转移到上面一层目录。使用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dir&lt;/code&gt; 命令，可以显示当前目录下所有文件。同时，使用 Tab 键可以帮助你补全名称。&lt;/p&gt;
         &lt;p&gt;当跳转到你存放 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nc&lt;/code&gt; 的文件夹后：&lt;/p&gt;
         &lt;ul&gt;
@@ -690,11 +669,9 @@
         &lt;/ul&gt;
         &lt;p&gt;当显示以下内容时，说明你成功运行了它。&lt;/p&gt;
         &lt;figure class=&quot;&quot;&gt;
-        &lt;img src=&quot;/static/planet/cmdncat-1024x596.png&quot; alt=&quot;&quot; /&gt;
-        &lt;figcaption&gt;
+        &lt;img src=&quot;/static/planet/cmdncat-1024x596.png&quot; alt=&quot;&quot; /&gt;&lt;figcaption&gt;
         成功运行 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ncat&lt;/code&gt;
-        &lt;/figcaption&gt;
-        &lt;/figure&gt;
+        &lt;/figcaption&gt;&lt;/figure&gt;
         &lt;h3 id=&quot;linux--macos&quot;&gt;Linux &amp;amp; macOS&lt;/h3&gt;
         &lt;p&gt;打开「终端」，输入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nc&lt;/code&gt;。&lt;/p&gt;
         &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ nc
@@ -709,11 +686,9 @@
         &lt;p&gt;输入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nc www.baidu.com 80&lt;/code&gt;（或者 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ncat www.baidu.com 80&lt;/code&gt;，或者 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;./ncat www.baidu.com 80&lt;/code&gt;，请根据以上的介绍自行修改），程序会等待你的输入。&lt;/p&gt;
         &lt;p&gt;输入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GET / HTTP/1.0&lt;/code&gt;。这表示，我们使用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HTTP/1.0&lt;/code&gt; 这个协议版本，用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GET&lt;/code&gt; 的方式请求根 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/&lt;/code&gt;。输入两下回车，代表我们的 HTTP 请求完成。如果你的网络畅通，百度的网页服务器会立刻返回大量信息，可以自行搜索，了解它们的含义。现在，你成功（在不使用浏览器的情况下）完成了一次与百度网站的连接！&lt;/p&gt;
         &lt;figure class=&quot;&quot;&gt;
-        &lt;img src=&quot;/static/planet/nc-1024x596.png&quot; alt=&quot;&quot; /&gt;
-        &lt;figcaption&gt;
+        &lt;img src=&quot;/static/planet/nc-1024x596.png&quot; alt=&quot;&quot; /&gt;&lt;figcaption&gt;
         Success!
-        &lt;/figcaption&gt;
-        &lt;/figure&gt;
+        &lt;/figcaption&gt;&lt;/figure&gt;
         &lt;p&gt;如果你成功了，那么你可以开始愉快地完成我们的题目了！&lt;/p&gt;</content><author><name>taoky</name></author><category term="Tech Tutorial" /><category term="hackergame" /><category term="netcat" /><summary type="html">nc 是什么？</summary></entry><entry><title type="html">一个 NFS 的简介</title><link href="https://lug.ustc.edu.cn//planet/2019/08/NFS-intro/" rel="alternate" type="text/html" title="一个 NFS 的简介" /><published>2019-08-28T00:00:00+08:00</published><updated>2020-08-09T20:31:40+08:00</updated><id>https://lug.ustc.edu.cn//planet/2019/08/NFS-intro</id><content type="html" xml:base="https://lug.ustc.edu.cn//planet/2019/08/NFS-intro/">&lt;p&gt;NFS（网络文件系统，Network File System）是一个分布式的文件系统，可以用于在局域网中共享文件。它通常运用在 Unix 与类 Unix 操作系统中。对于 Linux 服务器之间的文件共享来说，NFS 相比于其他的方案（如 Samba）更加方便，性能也更好。对于应用程序来说，NFS 也是透明的。&lt;/p&gt;
         &lt;h2 id=&quot;简单配置-nfs&quot;&gt;简单配置 NFS&lt;/h2&gt;
         &lt;p&gt;我们以两台 Debian 10 的机器为例&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;简单配置 NFS 服务端。其余的发行版可以查询各自的手册以获取详细信息。&lt;/p&gt;
@@ -742,34 +717,26 @@
         &lt;h3 id=&quot;windows&quot;&gt;Windows&lt;/h3&gt;
         &lt;p&gt;下面以一台在同一局域网的 Windows 10 机器为例。在「启用或关闭 Windows 功能」中添加 NFS 客户端支持。&lt;/p&gt;
         &lt;figure class=&quot;&quot;&gt;
-        &lt;img src=&quot;/static/planet/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7-2019-08-28-13.57.03-1.png&quot; alt=&quot;&quot; /&gt;
-        &lt;figcaption&gt;
+        &lt;img src=&quot;/static/planet/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7-2019-08-28-13.57.03-1.png&quot; alt=&quot;&quot; /&gt;&lt;figcaption&gt;
         Windows 功能 =&amp;gt; NFS 服务 =&amp;gt; NFS 客户端
-        &lt;/figcaption&gt;
-        &lt;/figure&gt;
+        &lt;/figcaption&gt;&lt;/figure&gt;
         &lt;p&gt;此客户端会在系统中安装 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mount&lt;/code&gt; 等工具。&lt;/p&gt;
         &lt;figure class=&quot;&quot;&gt;
-        &lt;img src=&quot;/static/planet/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7-2019-08-28-13.59.48-1-1024x824.png&quot; alt=&quot;&quot; /&gt;
-        &lt;figcaption&gt;
+        &lt;img src=&quot;/static/planet/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7-2019-08-28-13.59.48-1-1024x824.png&quot; alt=&quot;&quot; /&gt;&lt;figcaption&gt;
         Windows 版本 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mount&lt;/code&gt; 的使用帮助
-        &lt;/figcaption&gt;
-        &lt;/figure&gt;
+        &lt;/figcaption&gt;&lt;/figure&gt;
         &lt;p&gt;如果我们需要挂载上面那个服务器的共享，可以输入以下命令：&lt;/p&gt;
         &lt;pre&gt;&lt;code class=&quot;language-cmd&quot;&gt;mount \\服务器名称\共享路径 设备名（盘符）
         &lt;/code&gt;&lt;/pre&gt;
         &lt;figure class=&quot;&quot;&gt;
-        &lt;img src=&quot;/static/planet/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7-2019-08-28-14.10.47.png&quot; alt=&quot;&quot; /&gt;
-        &lt;figcaption&gt;
+        &lt;img src=&quot;/static/planet/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7-2019-08-28-14.10.47.png&quot; alt=&quot;&quot; /&gt;&lt;figcaption&gt;
         大概是成功挂载了
-        &lt;/figcaption&gt;
-        &lt;/figure&gt;
+        &lt;/figcaption&gt;&lt;/figure&gt;
         &lt;p&gt;只不过……好像哪里不太对劲？&lt;/p&gt;
         &lt;figure class=&quot;&quot;&gt;
-        &lt;img src=&quot;/static/planet/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7-2019-08-28-14.14.09-1024x555.png&quot; alt=&quot;&quot; /&gt;
-        &lt;figcaption&gt;
+        &lt;img src=&quot;/static/planet/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7-2019-08-28-14.14.09-1024x555.png&quot; alt=&quot;&quot; /&gt;&lt;figcaption&gt;
         中文的文件名变成了乱码
-        &lt;/figcaption&gt;
-        &lt;/figure&gt;
+        &lt;/figcaption&gt;&lt;/figure&gt;
         &lt;p&gt;Windows 中官方的 NFS 支持提供的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mount&lt;/code&gt; 不支持 UTF-8 编码，导致了乱码的产生。如果需要 Windows 支持，考虑以下一些方法：&lt;/p&gt;
         &lt;ul&gt;
         &lt;li&gt;使用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fuse-convmvfs&lt;/code&gt; 修改服务端文件的编码，详见&lt;a href=&quot;https://superuser.com/questions/302407/what-to-do-with-nfs-server-utf-8-and-windows-7&quot;&gt;此 Super User 上的回答&lt;/a&gt;。&lt;/li&gt;
@@ -845,11 +812,9 @@
         &lt;p&gt;下载 iso 作为虚拟光驱挂载在虚拟机上，从 CD 启动，&lt;/p&gt;
         &lt;h2 id=&quot;pxe-有什么&quot;&gt;PXE 有什么&lt;/h2&gt;
         &lt;figure class=&quot;&quot;&gt;
-        &lt;img src=&quot;/static/planet/2018-08-11-1720-ScreenShot.png&quot; alt=&quot;&quot; /&gt;
-        &lt;figcaption&gt;
+        &lt;img src=&quot;/static/planet/2018-08-11-1720-ScreenShot.png&quot; alt=&quot;&quot; /&gt;&lt;figcaption&gt;
         PXE 的启动菜单
-        &lt;/figcaption&gt;
-        &lt;/figure&gt;
+        &lt;/figcaption&gt;&lt;/figure&gt;
         &lt;h3 id=&quot;linux-安装工具&quot;&gt;Linux 安装工具&lt;/h3&gt;
         &lt;ul&gt;
         &lt;li&gt;Ubuntu&lt;/li&gt;
@@ -875,15 +840,10 @@
         &lt;li&gt;
         &lt;p&gt;Hardware Detection Tools (hdt)&lt;/p&gt;
         &lt;figure class=&quot;&quot;&gt;
-        &lt;img src=&quot;/static/planet/2018-08-11-1726-ScreenShot.png&quot; alt=&quot;&quot; /&gt;
-        &lt;figcaption&gt;
+        &lt;img src=&quot;/static/planet/2018-08-11-1726-ScreenShot.png&quot; alt=&quot;&quot; /&gt;&lt;figcaption&gt;
         hdt 中的查看硬盘信息部分
-        &lt;/figcaption&gt;
-        &lt;/figure&gt;
+        &lt;/figcaption&gt;&lt;/figure&gt;
         &lt;/li&gt;
-        &lt;/ul&gt;
-        &lt;p&gt;&amp;lt;/figure&amp;gt;&lt;/p&gt;
-        &lt;ul&gt;
         &lt;li&gt;PXE Knife&lt;/li&gt;
         &lt;li&gt;GParted Live&lt;/li&gt;
         &lt;li&gt;Clonezilla live&lt;/li&gt;
