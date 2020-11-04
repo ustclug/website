@@ -37,8 +37,8 @@
 
 | 时间             | 主持            | 地点     | 主题                              | 讲稿                                                         |
 | :--------------- | :-------------- | :------- | :-------------------------------- | :----------------------------------------------------------- |
-| 2020-10-17 19:00 | 李晨宇          | 3C102    | 游戏安全与 Cheat Engine 核心指北  | [Slides](http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2020.10.17_CE%E5%B0%8F%E8%81%9A/Slides/%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E4%B8%8ECheat%20Engine%20%E6%A0%B8%E5%BF%83%E6%8C%87%E5%8C%97.pdf)|
 | 2020-10-24 19:00 | 袁一玮          | 3C102    | LUG 全员大会                      | [Slides](http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2020.10.24_%E5%85%A8%E5%91%98%E5%A4%A7%E4%BC%9A/Slides/LUG%20%E5%85%A8%E5%91%98%E5%A4%A7%E4%BC%9A%202020.pdf) |
+| 2020-10-17 17:30 | 李晨宇          | 3C102    | 游戏安全与 Cheat Engine 核心指北  | [Slides](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2020.10.17_CE%E5%B0%8F%E8%81%9A/Slides/%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E4%B8%8ECheat%20Engine%20%E6%A0%B8%E5%BF%83%E6%8C%87%E5%8C%97.pdf)|
 
 ### Spring 2020
 
@@ -88,24 +88,24 @@
 | 2018-05-06 | 隆晋威 | C++17 实现类型安全的 printf | [Code](https://ftp.lug.ustc.edu.cn/weekly_party/2018.05.06_无主题小聚/typed_printf.cpp) |
 | 2018-04-01 | 马凯   | Emacs 操作系统              | [slides](https://ftp.lug.ustc.edu.cn/weekly_party/2018.04.01_Vim%26Emacs/emacs/Emacs.html) |
 | 2018-04-01 | 李嘉豪 | Vim 基础                    | [slides](https://ftp.lug.ustc.edu.cn/weekly_party/2018.04.01_Vim%26Emacs/vim/slides.html) |
-| 2018-03-11 | 王子博 | Github Pages 搭建个人主页   | [PDF](/wiki/lib/exe/fetch.php?tok=efc120&media=http%3A%2F%2Fftp.lug.ustc.edu.cn%2Fweekly_party%2F2018.03.11_Github_pages%2Fwzb.pdf) |
-| 2018-03-04 | 郑子涵 | 密码学科普                  | [PDF](/wiki/lib/exe/fetch.php?tok=32d7c6&media=http%3A%2F%2Fftp.lug.ustc.edu.cn%2Fweekly_party%2F2018.03.04_cryptography%2Fcrypto.pdf) |
+| 2018-03-11 | 王子博 | Github Pages 搭建个人主页   | [PDF](https://ftp.lug.ustc.edu.cn/weekly_party/2018.03.11_Github_pages/wzb.pdf) |
+| 2018-03-04 | 郑子涵 | 密码学科普                  | [PDF](https://ftp.lug.ustc.edu.cn/weekly_party/2018.03.04_cryptography/crypto.pdf) |
 
 ### Fall 2017
 
 | 日期       | 主持   | 主题          | 讲稿                                                         |
 | :--------- | :----- | :------------ | :----------------------------------------------------------- |
 | 2017-12-03 | 曹焕琦 | 微软开源生态  | -                                                            |
-| 2017-11-05 | 李嘉豪 | GDB调试的艺术 | [Slides](/wiki/lib/exe/fetch.php?tok=ed292d&media=http%3A%2F%2Fftp.lug.ustc.edu.cn%2Fweekly_party%2F2017.11.05_hello_GDB%2Fslides.md) |
+| 2017-11-05 | 李嘉豪 | GDB调试的艺术 | [Slides](https://ftp.lug.ustc.edu.cn/weekly_party/2017.11.05_hello_GDB/slides.md) |
 
 ### Spring 2017
 
 | 日期       | 主持   | 主题                                            | 讲稿                                                         |
 | :--------- | :----- | :---------------------------------------------- | :----------------------------------------------------------- |
-| 2017-06-03 | 杨博远 | Git 使用入门与提高技巧                          | [Slides](/wiki/lib/exe/fetch.php?tok=60d42d&media=http%3A%2F%2Fftp.lug.ustc.edu.cn%2Fweekly_party%2F2014.10.12_git%2FGit 使用心得.pdf) |
-| 2017-05-14 | 李文睿 | Linux 入坑经验分享会                            | [Slides](/wiki/lib/exe/fetch.php?tok=0570d0&media=https%3A%2F%2Fftp.lug.ustc.edu.cn%2Fweekly_party%2F2017.05.14_Meet_Linux%2FLinux-meeting.pdf) |
-| 2017-04-30 | 金孜达 | 椭圆曲线加密算法浅谈                            | [Slides](/wiki/lib/exe/fetch.php?tok=292592&media=https%3A%2F%2Fftp.lug.ustc.edu.cn%2Fweekly_party%2F2017.04.30_ECC%2F椭圆曲线加密算法浅谈小聚.pdf) [Video](https://ftp.lug.ustc.edu.cn/weekly_party/2017.04.30_ECC/video.mp4) |
-| 2017-04-15 | 高一凡 | 从iptables到nftables，Linux网络防火墙原理与应用 | [Slides](/wiki/lib/exe/fetch.php?tok=221a11&media=https%3A%2F%2Fftp.lug.ustc.edu.cn%2Fweekly_party%2F2017.04.15_Linux_Network_2%2Fnftables.pdf) |
+| 2017-06-03 | 杨博远 | Git 使用入门与提高技巧                          | [Slides](https://ftp.lug.ustc.edu.cn/weekly_party/2014.10.12_git/Git%20%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97.pdf) |
+| 2017-05-14 | 李文睿 | Linux 入坑经验分享会                            | [Slides](https://ftp.lug.ustc.edu.cn/weekly_party/2017.05.14_Meet_Linux/Linux-meeting.pdf) |
+| 2017-04-30 | 金孜达 | 椭圆曲线加密算法浅谈                            | [Slides](https://ftp.lug.ustc.edu.cn/weekly_party/2017.04.30_ECC/%E6%A4%AD%E5%9C%86%E6%9B%B2%E7%BA%BF%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95%E6%B5%85%E8%B0%88%E5%B0%8F%E8%81%9A.pdf) [Video](https://ftp.lug.ustc.edu.cn/weekly_party/2017.04.30_ECC/video.mp4) |
+| 2017-04-15 | 高一凡 | 从iptables到nftables，Linux网络防火墙原理与应用 | [Slides](https://ftp.lug.ustc.edu.cn/weekly_party/2017.04.15_Linux_Network_2/nftables.pdf) |
 | 2017-04-02 | 高一凡 | Linux网络配置大管家iproute2 ，Linux网络配置基础 | [Video](https://ftp.lug.ustc.edu.cn/weekly_party/2017.04.02_Linux_Network_1/video.mp4) |
 
 ### Fall 2016
@@ -114,8 +114,8 @@
 | :--------- | :----- | :---------------------------- | :----------------------------------------------------------- |
 | 2016-12-18 | 庄思源 | 高性能计算                    | ![FIXME](/wiki/lib/images/smileys/fixme.gif) |
 | 2016-12-11 | 杨博远 | Reproducible Builds in Debian | [reproducible_builds_in_debian.pdf](/wiki/_media/lug/reproducible_builds_in_debian.pdf) |
-| 2016-12-04 | 张震   | g Summer of Code              | [PDF](/wiki/lib/exe/fetch.php?tok=123777&media=https%3A%2F%2Fftp.lug.ustc.edu.cn%2Fweekly_party%2F2016.12.04_GSoC_Intro%2FGSoC-zhen.pdf) |
-| 2016-11-13 | 高一凡 | Hello OpenPGP                 | [PDF](/wiki/lib/exe/fetch.php?tok=8a53e0&media=http%3A%2F%2Fftp.lug.ustc.edu.cn%2Fweekly_party%2F2016.11.13_hello_openpgp%2FHelloOpenPGP.pdf) |
+| 2016-12-04 | 张震   | g Summer of Code              | [PDF](https://ftp.lug.ustc.edu.cn/weekly_party/2016.12.04_GSoC_Intro/GSoC-zhen.pdf) |
+| 2016-11-13 | 高一凡 | Hello OpenPGP                 | [PDF](https://ftp.lug.ustc.edu.cn/weekly_party/2016.11.13_hello_openpgp/HelloOpenPGP.pdf) |
 
 ### Spring 2016
 
@@ -123,41 +123,41 @@
 | :--------- | :----- | :-------------- | :----------------------------------------------------------- | :----------------------------------------------------------- |
 | 2016-05-02 | 王子博 | 树莓派智能小车  | ![FIXME](/wiki/lib/images/smileys/fixme.gif) |                                                              |
 | 2016-04-17 | 张光宇 | Python 异步编程 | ![FIXME](/wiki/lib/images/smileys/fixme.gif) |                                                              |
-| 2016-04-03 | 高一凡 | Hello Docker II | [HelloDocker2.pdf](/wiki/lib/exe/fetch.php?tok=6efb1d&media=http%3A%2F%2Fftp.lug.ustc.edu.cn%2Fweekly_party%2F2016.04.03_hello_docker_2%2FHelloDocker2.pdf) |                                                              |
-| 2016-03-27 | 崔灏   | 密码学的故事    | [Text](/wiki/lib/exe/fetch.php?tok=58dcd1&media=http%3A%2F%2Fftp.lug.ustc.edu.cn%2Fweekly_party%2F2016.03.27_cryptography%2Fslides.md) | [World Without Java](http://www.bilibili.com/video/av4199916/) |
+| 2016-04-03 | 高一凡 | Hello Docker II | [HelloDocker2.pdf](https://ftp.lug.ustc.edu.cn/weekly_party/2016.04.03_hello_docker_2/HelloDocker2.pdf) |                                                              |
+| 2016-03-27 | 崔灏   | 密码学的故事    | [Text](https://ftp.lug.ustc.edu.cn/weekly_party/2016.03.27_cryptography/slides.md) | [World Without Java](http://www.bilibili.com/video/av4199916/) |
 
 ### Fall 2015
 
 | 日期       | 主持   | 主题                             | 讲稿                                                         |
 | :--------- | :----- | :------------------------------- | :----------------------------------------------------------- |
 | 2015-12-12 | 郑子涵 | Advanced C Programming           | ![FIXME](/wiki/lib/images/smileys/fixme.gif) |
-| 2015-11-22 | 张光宇 | 初识 MongoDB                     | [PDF](/wiki/lib/exe/fetch.php?tok=90b173&media=http%3A%2F%2Fftp.lug.ustc.edu.cn%2Fweekly_party%2F2015.11.22_mongodb%2Fslides.pdf) |
-| 2015-11-15 | 杨博远 | Meet With Linux                  | [PDF](/wiki/lib/exe/fetch.php?tok=efe9f9&media=http%3A%2F%2Fftp.lug.ustc.edu.cn%2Fweekly_party%2F2015.11.15_meet_with_linux%2Fmeet_with_linux.pdf) |
+| 2015-11-22 | 张光宇 | 初识 MongoDB                     | [PDF](https://ftp.lug.ustc.edu.cn/weekly_party/2015.11.22_mongodb/slides.pdf) |
+| 2015-11-15 | 杨博远 | Meet With Linux                  | [PDF](https://ftp.lug.ustc.edu.cn/weekly_party/2015.11.15_meet_with_linux/meet_with_linux.pdf) |
 | 2015-11-07 | 崔灏   | 操作系统的引导——从BIOS/MBR到UEFI | 作者的SSD炸了                                                |
-| 2015-11-01 | 高一凡 | Hello Firewalld                  | [PDF](/wiki/lib/exe/fetch.php?tok=f62f95&media=http%3A%2F%2Fftp.lug.ustc.edu.cn%2Fweekly_party%2F2015.11.01_hello_firewalld%2Fhello_firewalld.pdf) |
+| 2015-11-01 | 高一凡 | Hello Firewalld                  | [PDF](https://ftp.lug.ustc.edu.cn/weekly_party/2015.11.01_hello_firewalld/hello_firewalld.pdf) |
 | 2015-10-23 | 罗秀哲 | Julia User Group Meetup #1       | 无                                                           |
-| 2015-10-17 | 杨博远 | 命令行生存指南                   | [Texts](/wiki/lib/exe/fetch.php?tok=388c0d&media=http%3A%2F%2Fftp.lug.ustc.edu.cn%2Fweekly_party%2F2015.10.17_living_in_command_line%2Fliving_in_command_line.md) |
+| 2015-10-17 | 杨博远 | 命令行生存指南                   | [Texts](https://ftp.lug.ustc.edu.cn/weekly_party/2015.10.17_living_in_command_line/living_in_command_line.md) |
 
 ### Spring 2015
 
 | 日期       | 主持   | 主题                    | 讲稿                                                         |
 | :--------- | :----- | :---------------------- | :----------------------------------------------------------- |
-| 2015-05-23 | 高一凡 | Hello Bitcoin           | [Slides](/wiki/lib/exe/fetch.php?tok=f2c339&media=http%3A%2F%2Fftp.lug.ustc.edu.cn%2Fweekly_party%2F2015.05.23_hello_bitcoin%2FHelloBitcoin.pdf) |
+| 2015-05-23 | 高一凡 | Hello Bitcoin           | [Slides](https://ftp.lug.ustc.edu.cn/weekly_party/2015.05.23_hello_bitcoin/HelloBitcoin.pdf) |
 | 2015-05-16 | 李博杰 | 白帽子大赛，黑客不神秘  | ![FIXME](/wiki/lib/images/smileys/fixme.gif) |
-| 2015-04-18 | 杨博远 | 永远的 autotools （一） | [Slides](/wiki/lib/exe/fetch.php?tok=3cabad&media=http%3A%2F%2Fftp.lug.ustc.edu.cn%2Fweekly_party%2F2015.04.18_Autotools%2Flugweekly_foreverAutotools_1.ppt) |
-| 2015-04-12 | 王译锋 | 静态博客实践            | [Slides](/wiki/lib/exe/fetch.php?tok=973bd0&media=http%3A%2F%2Fftp.lug.ustc.edu.cn%2Fweekly_party%2F2015.04.12_Hexo%2F%e9%9d%99%e6%80%81%e5%8d%9a%e5%ae%a2%e5%ae%9e%e8%b7%b5.pdf) |
+| 2015-04-18 | 杨博远 | 永远的 autotools （一） | [Slides](https://ftp.lug.ustc.edu.cn/weekly_party/2015.04.18_Autotools/lugweekly_foreverAutotools_1.ppt) |
+| 2015-04-12 | 王译锋 | 静态博客实践            | [Slides](https://ftp.lug.ustc.edu.cn/weekly_party/2015.04.12_Hexo/%e9%9d%99%e6%80%81%e5%8d%9a%e5%ae%a2%e5%ae%9e%e8%b7%b5.pdf) |
 
 ### Fall 2014
 
 | 日期       | 主持   | 主题                  | 讲稿                                                         | 视频                                                         |
 | :--------- | :----- | :-------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- |
-| 2014-12-13 | 康雷   | Tornado开发简介与实例 | [Slides](/wiki/lib/exe/fetch.php?tok=362767&media=http%3A%2F%2Fftp.lug.ustc.edu.cn%2Fweekly_party%2F2014.12.13_Tornado%2FLUG_tornado.pdf) |                                                              |
+| 2014-12-13 | 康雷   | Tornado开发简介与实例 | [Slides](https://ftp.lug.ustc.edu.cn/weekly_party/2014.12.13_Tornado/LUG_tornado.pdf) |                                                              |
 | 2014-11-22 | 沈达   | TeXmacs入门讲座       | [Slides](/wiki/_media/lug/texmacs_intro.pdf) [Source Code](/wiki/_media/lug/graph.tar.gz) |                                                              |
 | 2014-11-08 | 张光宇 | Clojure 简介          | [Slides](/wiki/_media/lug/weekly-clojure.pdf) | [Video](ftp://ftp:ftp@ftp.lug.ustc.edu.cn/weekly_party/2014.11.08_Clojure/wp-clojure.mp4) |
-| 2014-11-01 | 张荣葳 | 你所不知道的 DNS      | [Slides](/wiki/lib/exe/fetch.php?tok=203ca3&media=http%3A%2F%2Fftp.lug.ustc.edu.cn%2Fweekly_party%2F2014.11.01_DNS_and_DNSSec%2FDNS.pdf) | [Video](https://ftp.lug.ustc.edu.cn/weekly_party/2014.11.01_DNS_and_DNSSec/2014.11.01_你所不知道的DNS.mp4) |
-| 2014-10-25 | 李博杰 | 云上的服务，你我共享  | [Slides](/wiki/lib/exe/fetch.php?tok=2311eb&media=http%3A%2F%2Fftp.lug.ustc.edu.cn%2Fweekly_party%2F2014.10.25_cloud_service%2FCloudService.pdf) |                                                              |
-| 2014-10-19 | 崔灏   | 有关文件的种种魔法    | [Slides](/wiki/lib/exe/fetch.php?tok=037b2a&media=http%3A%2F%2Fftp.lug.ustc.edu.cn%2Fweekly_party%2F2014.10.19_Special_files%2Ffiles.pdf) |                                                              |
-| 2014-10-12 | 杨博远 | Git 使用心得          | [Slides](/wiki/lib/exe/fetch.php?tok=60d42d&media=http%3A%2F%2Fftp.lug.ustc.edu.cn%2Fweekly_party%2F2014.10.12_git%2FGit 使用心得.pdf) |                                                              |
+| 2014-11-01 | 张荣葳 | 你所不知道的 DNS      | [Slides](https://ftp.lug.ustc.edu.cn/weekly_party/2014.11.01_DNS_and_DNSSec/DNS.pdf) | [Video](https://ftp.lug.ustc.edu.cn/weekly_party/2014.11.01_DNS_and_DNSSec/2014.11.01_你所不知道的DNS.mp4) |
+| 2014-10-25 | 李博杰 | 云上的服务，你我共享  | [Slides](https://ftp.lug.ustc.edu.cn/weekly_party/2014.10.25_cloud_service/CloudService.pdf) |                                                              |
+| 2014-10-19 | 崔灏   | 有关文件的种种魔法    | [Slides](https://ftp.lug.ustc.edu.cn/weekly_party/2014.10.19_Special_files/files.pdf) |                                                              |
+| 2014-10-12 | 杨博远 | Git 使用心得          | [Slides](https://ftp.lug.ustc.edu.cn/weekly_party/2014.10.12_git/Git 使用心得.pdf) |                                                              |
 
 ### Spring 2014
 
@@ -165,14 +165,14 @@
 
 | 名称                           | 讲者   | 文稿                                                         | 视频                                                         |
 | :----------------------------- | :----- | :----------------------------------------------------------- | :----------------------------------------------------------- |
-| 第1课：What is Linux?          | 张荣葳 | [Slides](/wiki/lib/exe/fetch.php?tok=2e0867&media=https%3A%2F%2Flug.ustc.edu.cn%2FOpenCourse%2FLesson1%2FWhat_is_Linux.pdf) | [Video](/OpenCourse/Lesson1/lesson1.mp4) |
-| 第2课：Linux基本概念和安装指南 | 张光宇 | [Slides](/wiki/lib/exe/fetch.php?tok=dd38dd&media=https%3A%2F%2Flug.ustc.edu.cn%2FOpenCourse%2FLesson2%2Flug.pdf) | [Video](/OpenCourse/Lesson2/lesson2.mp4) |
-| 第3课：图形界面 VS. 命令行界面 | 崔灏   | [Slides](/wiki/lib/exe/fetch.php?tok=5d048a&media=https%3A%2F%2Flug.ustc.edu.cn%2FOpenCourse%2FLesson3%2Fslide.pdf) | [Video](/OpenCourse/Lesson3/lesson3.mp4) |
-| 第4课：认识各种各样的文件      | 张光宇 | [Slides](/wiki/lib/exe/fetch.php?tok=843ad8&media=https%3A%2F%2Flug.ustc.edu.cn%2FOpenCourse%2FLesson4%2Flesson4.pdf) | [Video](/OpenCourse/Lesson4/lesson4.mp4) |
-| 第5课：bash基础                | 张荣葳 | [Slides](/wiki/lib/exe/fetch.php?tok=bfdb3a&media=https%3A%2F%2Flug.ustc.edu.cn%2FOpenCourse%2FLesson5%2Flesson5.pdf) | [Video](/OpenCourse/Lesson5/lesson5.mp4) |
-| 第6课：Linux网络管理介绍       | 贾明皓 | [Slides](/wiki/lib/exe/fetch.php?tok=5886bb&media=https%3A%2F%2Flug.ustc.edu.cn%2FOpenCourse%2FLesson6%2Flinux_network_introduction.pdf) | [Video](/OpenCourse/Lesson6/lesson6.mp4) |
+| 第1课：What is Linux?          | 张荣葳 | [Slides](/wiki/lib/exe/fetch.php?tok=2e0867&media=https:%2F%2Flug.ustc.edu.cn%2FOpenCourse%2FLesson1%2FWhat_is_Linux.pdf) | [Video](/OpenCourse/Lesson1/lesson1.mp4) |
+| 第2课：Linux基本概念和安装指南 | 张光宇 | [Slides](/wiki/lib/exe/fetch.php?tok=dd38dd&media=https:%2F%2Flug.ustc.edu.cn%2FOpenCourse%2FLesson2%2Flug.pdf) | [Video](/OpenCourse/Lesson2/lesson2.mp4) |
+| 第3课：图形界面 VS. 命令行界面 | 崔灏   | [Slides](/wiki/lib/exe/fetch.php?tok=5d048a&media=https:%2F%2Flug.ustc.edu.cn%2FOpenCourse%2FLesson3%2Fslide.pdf) | [Video](/OpenCourse/Lesson3/lesson3.mp4) |
+| 第4课：认识各种各样的文件      | 张光宇 | [Slides](/wiki/lib/exe/fetch.php?tok=843ad8&media=https:%2F%2Flug.ustc.edu.cn%2FOpenCourse%2FLesson4%2Flesson4.pdf) | [Video](/OpenCourse/Lesson4/lesson4.mp4) |
+| 第5课：bash基础                | 张荣葳 | [Slides](/wiki/lib/exe/fetch.php?tok=bfdb3a&media=https:%2F%2Flug.ustc.edu.cn%2FOpenCourse%2FLesson5%2Flesson5.pdf) | [Video](/OpenCourse/Lesson5/lesson5.mp4) |
+| 第6课：Linux网络管理介绍       | 贾明皓 | [Slides](/wiki/lib/exe/fetch.php?tok=5886bb&media=https:%2F%2Flug.ustc.edu.cn%2FOpenCourse%2FLesson6%2Flinux_network_introduction.pdf) | [Video](/OpenCourse/Lesson6/lesson6.mp4) |
 | 第7课：如何高效地找东西        | 张荣葳 | ![FIXME](/wiki/lib/images/smileys/fixme.gif) | ![FIXME](/wiki/lib/images/smileys/fixme.gif) |
-| 第8课：软件的安装与管理入门    | 杨博远 | [Slides](/wiki/lib/exe/fetch.php?tok=63a7ff&media=https%3A%2F%2Flug.ustc.edu.cn%2FOpenCourse%2FLesson8%2Flesson8.pdf) | [Video](/OpenCourse/Lesson8/lesson8.mp4) |
+| 第8课：软件的安装与管理入门    | 杨博远 | [Slides](/wiki/lib/exe/fetch.php?tok=63a7ff&media=https:%2F%2Flug.ustc.edu.cn%2FOpenCourse%2FLesson8%2Flesson8.pdf) | [Video](/OpenCourse/Lesson8/lesson8.mp4) |
 | 第9课：正则表达式基础          | 张恒若 | ![FIXME](/wiki/lib/images/smileys/fixme.gif) | [Video](/OpenCourse/Lesson9/lesson9.mp4) |
 
 ### Fall 2013
@@ -181,11 +181,11 @@
 | :--------- | :----- | :------------------------------ | :----------------------------------------------------------- |
 | 2013-12-15 | 张荣葳 | GPG及其使用经验                 |                                                              |
 | 2013-11-24 | 李喵喵 | 从Mirrors主页谈现代网页设计理念 |                                                              |
-| 2013-11-16 | 张光宇 | UEFI入门                        | [slides](/wiki/lib/exe/fetch.php?tok=800080&media=ftp%3A%2F%2Fftp%3Aftp%40ftp.lug.ustc.edu.cn%2Fweekly_party%2F2013.11.16_UEFI%2Fslides.pptx) |
+| 2013-11-16 | 张光宇 | UEFI入门                        | [slides](https://ftp.lug.ustc.edu.cn/weekly_party/2013.11.16_UEFI/slides.pptx) |
 | 2013-11-10 | 李博杰 | Linux路由与iptables配置         |                                                              |
 | 2013-11-02 | 陆颖潮 | Latex入门                       |                                                              |
 | 2013-10-26 | 张光宇 | Doxygen入门                     |                                                              |
-| 2013-10-20 | 崔灏   | 可爱的Python                    | [slides](/wiki/_media/lug/slides20131020.zip) |
+| 2013-10-20 | 崔灏   | 可爱的Python                    | [slides](/oldwiki/_media/lug/slides20131020.zip) |
 | 2013-10-13 | 朱晟菁 | 编辑器之战                      |                                                              |
 | 2013-09-30 | 张荣葳 | Linux 入门基础知识              |                                                              |
 
