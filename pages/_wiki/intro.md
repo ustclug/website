@@ -35,8 +35,8 @@ Linux User Party 在于为不同层次的 Linux 用户提供一个交流的平�
 
 ## 网络服务
 
-* [开源软件镜像](lug/services/mirrors.md)
-* [网络启动服务](lug/services/pxe.md)
-* [GitLab 代码托管](lug/services/gitlab.md)
+- [开源软件镜像](lug/services/mirrors.md)
+- [网络启动服务](lug/services/pxe.md)
+- [GitLab 代码托管](lug/services/gitlab.md)
 
 在 [这里](lug/contact.md) 可以找到我们

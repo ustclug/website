@@ -12,3 +12,6 @@ _site
 
 # Our static content
 /static/
+
+# Prettier files
+node_modules/

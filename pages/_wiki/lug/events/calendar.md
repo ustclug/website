@@ -1,7 +1,7 @@
 ---
 ---
 
-# LUG日历
+# LUG 日历
 
 目前使用[Google 日历 ](https://calendar.google.com/calendar/embed?src=ustclug.org_49ed6kebtusiueu45ct3ea8e5k%40group.calendar.google.com&ctz=Asia%2FShanghai&mode=AGENDA)，如果您在国内访问遇到困难，请尝试使用 USTCLUG 提供的网络加速服务或者访问与此日历同步的 [localendar](https://localendar.com/public/hejiyan) 。
 

@@ -1,39 +1,34 @@
 ---
 ---
 
-# Centos镜像使用帮助
+# Centos 镜像使用帮助
 
 ## 收录架构
 
-  + i386
+- i386
 
-  + x86_64
+- x86_64
 
 ## 收录版本
 
-  + 5
+- 5
 
-  + 6
+- 6
 
-  + 7
+- 7
 
 ## 使用说明
 
-首先备份CentOS-Base.repo 
+首先备份 CentOS-Base.repo
 
-    
-    
     mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
 
-下载对应版本的CentOS-Base.repo, 放入/etc/yum.repos.d/ 
+下载对应版本的 CentOS-Base.repo, 放入/etc/yum.repos.d/
 
-这是CentOS 5的: 
+这是 CentOS 5 的:
 
 [CentOS-Base.repo](/wiki/_export/code/mirrors/help/CentOS-Basecc37.repo?codeblock=1 "下载片段")
 
-    
-    
-    
     # CentOS-Base.repo
     #
     # The mirror system uses the connecting IP address of the client and the
@@ -41,7 +36,7 @@
     # geographically close to the client.  You should use this for CentOS updates
     # unless you are manually picking other mirrors.
     #
-    # If the mirrorlist= does not work for you, as a fall back you can try the 
+    # If the mirrorlist= does not work for you, as a fall back you can try the
     # remarked out baseurl= line instead.
     #
     #
@@ -53,7 +48,7 @@
     gpgcheck=1
     gpgkey=http://mirrors.ustc.edu.cn/centos/RPM-GPG-KEY-CentOS-5
      
-    #released updates 
+    #released updates
     [updates]
     name=CentOS-$releasever - Updates - mirrors.ustc.edu.cn
     baseurl=http://mirrors.ustc.edu.cn/centos/$releasever/updates/$basearch/
@@ -95,13 +90,10 @@
     enabled=0
     gpgkey=http://mirrors.ustc.edu.cn/centos/RPM-GPG-KEY-CentOS-5
 
-这是CentOS 6的: 
+这是 CentOS 6 的:
 
 [CentOS-Base.repo](/wiki/_export/code/mirrors/help/CentOS-Basec273.repo?codeblock=2 "下载片段")
 
-    
-    
-    
     # CentOS-Base.repo
     #
     # The mirror system uses the connecting IP address of the client and the
@@ -109,7 +101,7 @@
     # geographically close to the client.  You should use this for CentOS updates
     # unless you are manually picking other mirrors.
     #
-    # If the mirrorlist= does not work for you, as a fall back you can try the 
+    # If the mirrorlist= does not work for you, as a fall back you can try the
     # remarked out baseurl= line instead.
     #
     #
@@ -121,7 +113,7 @@
     gpgcheck=1
     gpgkey=http://mirrors.ustc.edu.cn/centos/RPM-GPG-KEY-CentOS-6
      
-    #released updates 
+    #released updates
     [updates]
     name=CentOS-$releasever - Updates - mirrors.ustc.edu.cn
     baseurl=http://mirrors.ustc.edu.cn/centos/$releasever/updates/$basearch/
@@ -155,13 +147,10 @@
     enabled=0
     gpgkey=http://mirrors.ustc.edu.cn/centos/RPM-GPG-KEY-CentOS-6
 
-这是CentOS 7的: 
+这是 CentOS 7 的:
 
 [CentOS-Base.repo](/wiki/_export/code/mirrors/help/CentOS-Base4f98.repo?codeblock=3 "下载片段")
 
-    
-    
-    
     # CentOS-Base.repo
     #
     # The mirror system uses the connecting IP address of the client and the
@@ -206,13 +195,13 @@
     enabled=0
     gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
 
-运行yum makecache生成缓存 
+运行 yum makecache 生成缓存
 
 ## 相关链接
 
-官方主页: <http://www.centos.org/>   
+官方主页: <http://www.centos.org/>  
 邮件列表: <http://www.centos.org/modules/tinycontent/index.php?id=16>  
-论坛: <http://www.centos.org/modules/newbb/>   
-文档: <http://www.centos.org/docs/>   
-Wiki: <http://wiki.centos.org/>   
+论坛: <http://www.centos.org/modules/newbb/>  
+文档: <http://www.centos.org/docs/>  
+Wiki: <http://wiki.centos.org/>  
 镜像列表: <http://www.centos.org/modules/tinycontent/index.php?id=32>

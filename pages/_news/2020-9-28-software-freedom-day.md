@@ -6,7 +6,7 @@ header:
 author:
   - elsegranger
   - totoro
-date: '2020-09-28 14:46:58 +0800'
+date: "2020-09-28 14:46:58 +0800"
 categories:
   - LUG活动
 tags: []
@@ -75,4 +75,4 @@ Rust 是新一代高性能且安全可靠的程序设计语言，已经被 Mozil
 
 ![](http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2020.09.26_SFD/photos/DSC00589.JPG)
 
-在10点时，大家的演讲全部结束，自由软件日圆满结束。
+在 10 点时，大家的演讲全部结束，自由软件日圆满结束。

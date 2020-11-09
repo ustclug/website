@@ -5,21 +5,20 @@
 
 ## 简介
 
-BlackArch 是一款基于 ArchLinux 的为渗透测试及安全研究人员开发的发行版, 相当于 Arch 版的 BackTrack/Kali。 
+BlackArch 是一款基于 ArchLinux 的为渗透测试及安全研究人员开发的发行版, 相当于 Arch 版的 BackTrack/Kali。
 
-仓库地址：blackarch.org/blackarch/ 
+仓库地址：blackarch.org/blackarch/
 
 ## 收录架构
 
-i686   
-x86_64   
-ARMv6/7 
+i686  
+x86_64  
+ARMv6/7
 
 ## 使用方法
 
-在 /etc/pacman.conf 文件末尾添加两行： 
-    
-    
+在 /etc/pacman.conf 文件末尾添加两行：
+
     [blackarch]
     SigLevel = Optional TrustAll
     Server = https://mirrors.ustc.edu.cn/blackarch/$repo/os/$arch

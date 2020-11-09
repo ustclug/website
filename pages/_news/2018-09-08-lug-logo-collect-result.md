@@ -2,9 +2,9 @@
 title: LUG LOGO 征集结果
 image: https://ftp.lug.ustc.edu.cn/~sirius/logo-two.png
 author: sirius1242
-date: '2018-09-08 21:10:26 +0800'
+date: "2018-09-08 21:10:26 +0800"
 categories:
-- LUG活动
+  - LUG活动
 tags: []
 ---
 
@@ -20,17 +20,17 @@ tags: []
 | 二等奖 | 崔灏，严鲸鲸 |
 | 三等奖 | 薛瑞，蔡文韬，王若晖，王瑞，鲁吴越 |-->
 
--    一等奖 : Archlinuxcn 成员张盛宇
+- 一等奖 : Archlinuxcn 成员张盛宇
 
--    二等奖 : 崔灏，严鲸鲸
+- 二等奖 : 崔灏，严鲸鲸
 
--    三等奖 : 薛瑞，蔡文韬，王若晖，王瑞，鲁吴越
+- 三等奖 : 薛瑞，蔡文韬，王若晖，王瑞，鲁吴越
 
 在选出一等奖后，我们与获得一等奖的张盛宇先生进行了一系列关于 LOGO 细节修正的讨论，最后决定出了我们的 LOGO：
 
-|![LOGO](https://ftp.lug.ustc.edu.cn/misc/logo-origin.png)| ![LOGO-TEXT](https://ftp.lug.ustc.edu.cn/misc/logo-text-origin.png)|
-|:---:|:---:|
-| 原版 | 带文字 |
+| ![LOGO](https://ftp.lug.ustc.edu.cn/misc/logo-origin.png) | ![LOGO-TEXT](https://ftp.lug.ustc.edu.cn/misc/logo-text-origin.png) |
+| :-------------------------------------------------------: | :-----------------------------------------------------------------: |
+|                           原版                            |                               带文字                                |
 
 LOGO 下载地址：[logo.zip](https://ftp.lug.ustc.edu.cn/misc/logo.zip)
 

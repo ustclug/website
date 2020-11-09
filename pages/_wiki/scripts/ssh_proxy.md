@@ -1,15 +1,12 @@
 ---
 ---
 
-## ssh代理
+## ssh 代理
 
-这个脚本通过自动登录免费的ssh账户，实现自动的ssh代理， 绑定的端口为7070 
+这个脚本通过自动登录免费的 ssh 账户，实现自动的 ssh 代理， 绑定的端口为 7070
 
 [ssh_proxy.sh](/wiki/_export/code/scripts/ssh_proxy435f.sh?codeblock=0 "下载片段")
 
-    
-    
-    
     #!/bin/bash
      
     cd `dirname $0` #进入ssh_proxy.sh所在的目录
@@ -25,9 +22,6 @@
 
 [ssh_proxy.ex](/wiki/_export/code/scripts/ssh_proxycc37.ex?codeblock=1 "下载片段")
 
-    
-    
-    
     #! /usr/bin/expect -f
      
     set HOST [lindex $argv 0] #获取服务器地址
@@ -45,10 +39,8 @@
     interact
     expect eof
 
-使用方法： 
+使用方法：
 
-    
-    
-     ./ssh_proxy.sh 
+     ./ssh_proxy.sh
 
-ssh _proxy.sh和ssh_ proxy.ex要在同一目录下。 
+ssh _proxy.sh 和 ssh_ proxy.ex 要在同一目录下。

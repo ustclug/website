@@ -1,7 +1,7 @@
 ---
 title: 近期部分服务中断通知（已修复）
 author: taoky
-date: '2020-05-26 23:00:00 +0800'
+date: "2020-05-26 23:00:00 +0800"
 categories:
   - LUG服务器
 tags: []

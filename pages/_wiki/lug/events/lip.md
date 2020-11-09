@@ -7,4 +7,4 @@ Linux Install Party 主旨在于推广和安装 Linux，宣传和鼓励开源和
 
 ### 历史活动
 
-* [2010年Linux Install Party](/news/2010/12/2010-04-linux-install-party/)
+- [2010 年 Linux Install Party](/news/2010/12/2010-04-linux-install-party/)

@@ -1,10 +1,10 @@
 ---
 title: "USTC Linux 用户生存指南"
 author: mk
-categories: 
-- Experience
-tags: 
-- Courses
+categories:
+  - Experience
+tags:
+  - Courses
 ---
 
 本指南指导中科大 Linux 用户如何使用 Linux 完成各门课程。
@@ -21,7 +21,7 @@ tags:
 
 ## 数据结构
 
-主要讲授数据结构及其C语言实现。和程序设计一样没有任何问题。
+主要讲授数据结构及其 C 语言实现。和程序设计一样没有任何问题。
 
 课本（严蔚敏版数据结构）分光盘版和无盘版。光盘内容为算法和数据结构的演示程序，仅支持 MS-DOS 和 Windows，其功能可完全由 VisuAlgo 替代。所以建议购买无盘版。
 

@@ -1,14 +1,15 @@
 ---
 title: LUG部分服务恢复情况
 author: Boyuan Yang
-date: '2015-08-18 16:09:52 +0800'
+date: "2015-08-18 16:09:52 +0800"
 categories:
-- LUG服务
+  - LUG服务
 tags:
-- USTC_LUG
-- server
+  - USTC_LUG
+  - server
 comments: []
 ---
+
 ### mirrors.ustc.edu.cn
 
 科大开源软件镜像服务正常。
@@ -25,9 +26,9 @@ LUG FTP 尚未正式恢复。如有迫切需求，请使用 `ftp://backup.ustclu
 
 目前服务恢复面临技术问题：上游基于 3.10 内核和 CentOS 7 的 OpenVZ 部署方案仍不成熟，故当前处于等待上游开发的阶段，暂无恢复时间表。
 
-8.21补充：如有熟练运用 OpenVZ 或了解内核调试相关技术，有能力且愿意协助项目解决 bug 的同学，欢迎投简历至 lug (at) ustc.edu.cn 了解并参与项目开发，感激不尽
+8.21 补充：如有熟练运用 OpenVZ 或了解内核调试相关技术，有能力且愿意协助项目解决 bug 的同学，欢迎投简历至 lug (at) ustc.edu.cn 了解并参与项目开发，感激不尽
 
-9.3补充：目前 bug 修复有所进展，开发正缓慢进行。
+9.3 补充：目前 bug 修复有所进展，开发正缓慢进行。
 
 ### blog.ustc.edu.cn
 

@@ -13,35 +13,35 @@
 
 [点击此处了解详情](/wiki/lug/mailinglist)
 
-## Telegram上的LUG
+## Telegram 上的 LUG
 
 加群链接见 jointele.ustclug.org 的 DNS TXT 记录
 
 ## BBS 上的 LUG
 
-前往[瀚海星云BBS Linux 版](https://bbs.ustc.edu.cn/cgi/bbsdoc?board=Linux)与我们讨论。
+前往[瀚海星云 BBS Linux 版](https://bbs.ustc.edu.cn/cgi/bbsdoc?board=Linux)与我们讨论。
 
-## QQ群上的LUG
+## QQ 群上的 LUG
 
 适合于即时性较强的讨论，较正式的讨论还请使用官方邮件列表。
 
-* QQ 群: 群号请查看 `qq.ustclug.org` 的 DNS TXT 记录。校内学生请联系管理员了解详情。
+- QQ 群: 群号请查看 `qq.ustclug.org` 的 DNS TXT 记录。校内学生请联系管理员了解详情。
 
-## IRC上的LUG
+## IRC 上的 LUG
 
-* 网络：Freenode
-* 频道：#ustc_lug
+- 网络：Freenode
+- 频道：#ustc_lug
 
-* ~~存档：/~sadhen/irc.html~~
-* ~~历史存档：/~guo/irc/irclog.txt~~
-* ~~Fishroom 存档：<https://fishroom.tuna.moe/log/ustclug/today>~~
+- ~~存档：/~sadhen/irc.html~~
+- ~~历史存档：/~guo/irc/irclog.txt~~
+- ~~Fishroom 存档：<https://fishroom.tuna.moe/log/ustclug/today>~~
 
 ## 面对面交流
 
 USTC LUG 在校内的活动室：
 
-* 西区：西区图书馆 206 室
-* 东区：~~东区图书馆 605 室~~（已搬迁）
+- 西区：西区图书馆 206 室
+- 东区：~~东区图书馆 605 室~~（已搬迁）
 
 你也可以在 LUG 举办的各类活动中找到 LUG 的成员并当面进行交流。
 
@@ -54,19 +54,19 @@ QQ: 2786229166
 ## 微信公众号
 
 ID: ustclug  
-Name: 中科大LUG
+Name: 中科大 LUG
 
 ![ustclug_mama.jpg]({{ site.static_url }}/wiki/lug/ustclug_mama.jpg)
 
-## 社交网络上的LUG
+## 社交网络上的 LUG
 
-快来关注SNS上的LUG账户吧！LUG活动通告，Linux使用技巧、业界新闻应有尽有！
+快来关注 SNS 上的 LUG 账户吧！LUG 活动通告，Linux 使用技巧、业界新闻应有尽有！
 
 **<i class="fas fa-exclamation-triangle"></i> 注意：**以下账号目前缺乏维护。
 {: .notice--warning }
 
-* Twitter: [@USTCLUG](http://www.twitter.com/ustclug/)
-* 人人：[USTCLUG](http://www.renren.com/profile.do?id=345760436)
-* 豆瓣：[科大LUG](http://www.douban.com/people/ustclug/)
+- Twitter: [@USTCLUG](http://www.twitter.com/ustclug/)
+- 人人：[USTCLUG](http://www.renren.com/profile.do?id=345760436)
+- 豆瓣：[科大 LUG](http://www.douban.com/people/ustclug/)
 
 更多信息，请参阅[LUG 宣传账号一览](/wiki/lug/sns)

@@ -1,20 +1,16 @@
 ---
 ---
 
-# 使用chroot编译android
+# 使用 chroot 编译 android
 
-请直接参考参考资料 
+请直接参考参考资料
 
-## 安装dchroot和debootstrap
+## 安装 dchroot 和 debootstrap
 
-    
-    
     $ sudo aptitude install dchroot debootstrap
 
 ## 更改配置文件
 
-    
-    
     $ sudo tee -a /etc/schroot/schroot.conf <<EOF
     [lucid]
     description=Ubuntu 10.04 LTS (Lucid Lynx)
@@ -27,8 +23,6 @@
 
 ## 安装 Ubuntu10.04
 
-    
-    
     $ sudo debootstrap --variant=buildd --arch amd64 lucid /var/chroot/lucid http://mirrors.ustc.edu.cn/ubuntu/
 
 ## 参考资料

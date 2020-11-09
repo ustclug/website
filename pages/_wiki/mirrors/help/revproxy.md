@@ -1,10 +1,8 @@
 ---
 ---
 
-各资源的对应关系如下 
+各资源的对应关系如下
 
-    
-    
       registry-1.docker.io          docker.mirrors.ustc.edu.cn
       packages.elastic.co           elastic.proxy.ustclug.org
       ppa.launchpad.net             launchpad.proxy.ustclug.org

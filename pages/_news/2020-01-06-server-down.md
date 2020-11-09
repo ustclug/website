@@ -1,9 +1,9 @@
 ---
 title: 服务器宕机通知（已恢复）
 author: taoky
-date: '2020-01-06 23:34:34 +0800'
+date: "2020-01-06 23:34:34 +0800"
 categories:
-- LUG服务器
+  - LUG服务器
 tags: []
 ---
 
@@ -17,12 +17,11 @@ tags: []
 
 - 代码托管平台：[https://git.lug.ustc.edu.cn/](https://git.lug.ustc.edu.cn/)
 
-
 目前正常的服务：
 
 - 主页 (wiki)：[https://lug.ustc.edu.cn/](https://lug.ustc.edu.cn/)
 - LUG FTP：[https://ftp.lug.ustc.edu.cn/](https://ftp.lug.ustc.edu.cn/)
-- 反向代理：*.proxy.ustclug.org
+- 反向代理：\*.proxy.ustclug.org
 - 网络加速服务：vpn.ustclug.org
 - VPN 在线申请系统：[https://getvpn.ustclug.org/](https://getvpn.ustclug.org/)
 - 轻量级网络加速服务：[https://light.ustclug.org/](https://light.ustclug.org/)
@@ -38,7 +37,7 @@ tags: []
 
 如果您使用上述服务时遇到问题，请向我们反馈。
 
-----
+---
 
 **2020-01-07 Update 1**
 
@@ -46,7 +45,7 @@ tags: []
 
 我们正在确认目前受到影响的服务范围。
 
-----
+---
 
 由于科大校园网络的未知故障，LUG 的所有网络服务现在处于不稳定状态。受影响服务的恢复时间暂时无法确定，给您带来的不便敬请谅解！
 
