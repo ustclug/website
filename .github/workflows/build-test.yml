@@ -25,11 +25,29 @@ jobs:
         key: ${{ runner.os }}-bundler-2.7-${{ hashFiles('Gemfile') }}
         restore-keys: |
           ${{ runner.os }}-bundler-2.7-
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '12'
+    - name: Cache node modules
+      uses: actions/cache@v1
+      env:
+        cache-name: cache-node-modules
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-build-${{ env.cache-name }}-
+          ${{ runner.os }}-build-
+          ${{ runner.os }}-
     - name: Install dependencies
       run: |
         sudo apt-get -y install libgsl-dev
         bundle install --path=vendor/bundle
         bundle clean
+        npm install
+    - name: Prettier check
+      run: |
+        npx prettier --check .
     - name: Prepare build
       run: |
         git clone --depth=1 --branch=gh-pages --single-branch --no-checkout \
