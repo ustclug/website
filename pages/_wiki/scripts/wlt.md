@@ -38,7 +38,6 @@
         39600 -- 11小时
         50400 -- 14小时
 
-
 ## Bash 简化版
 
 来源：[http://bbs.ustc.edu.cn/cgi/bbscon?bn=USTCnet&fn=M52FAC28D](http://bbs.ustc.edu.cn/cgi/bbscon?bn=USTCnet&fn=M52FAC28D "http://bbs.ustc.edu.cn/cgi/bbscon?bn=USTCnet&fn=M52FAC28D")

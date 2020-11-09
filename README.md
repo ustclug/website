@@ -29,6 +29,13 @@
 
    正式部署时需要添加环境变量 `JEKYLL_ENV=production`，详情请见 GitHub Actions 的 workflow 配置
 
+## Markdown 格式：在提交前使用 `prettier` format。
+
+1. 安装 Node.js 开发环境（略）
+2. 运行 `npm install` 以安装 `prettier`
+3. 使用 `npx prettier --write .` 以 format。可以将不希望 `prettier` 处理的文件加入 `.prettierignore`，未来可能会加上 yml 和 scss 格式文件的处理
+4. 使用 `npx prettier --check .` 验证格式无问题
+
 ## 许可
 
 本仓库及本网站以 [CC BY-NC-SA 4.0](LICENSE.md) 许可协议开源。

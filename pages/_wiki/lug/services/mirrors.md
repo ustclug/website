@@ -1,6 +1,5 @@
 ---
 ---
-
 # 开源软件镜像服务
 
 科大 LUG 自成立起便在 2003 年通过 BBS 网上筹款的方式搭建了当时教育网内极少数的几个 Debian GNU/Linux 的镜像源（debian.ustc.edu.cn），随后又在其上添加了 Ubuntu Linux 的镜像。2008 年，借助吴峰光师兄捐助的机器，搭建了科大的开源镜像服务器（oss.ustc.edu.cn），以吸纳更多的开源软件和 Linux 发行版。尽管如此，我们的服务器仍然有些不堪重负，服务供不应求。
@@ -10,7 +9,6 @@
 我们将一如既往的做好镜像服务器的维护工作，争取为大家提供更新更好的服务，使参与维护的同学得到更好的锻炼。
 
 [详细介绍](/wiki/server/mirrors "server:mirrors:start")
-
 ---
 
 [mirrors 首页](http://mirrors.ustc.edu.cn/ "http://mirrors.ustc.edu.cn/") [科大源使用帮助](/wiki/mirrors/help "mirrors:help")
