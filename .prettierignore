@@ -1,0 +1,20 @@
+/vendor/
+.bundle/
+
+# Jekyll
+_site
+.git-metadata
+.jekyll-cache
+.jekyll-metadata
+.sass-cache
+
+# Our static content
+/static/
+
+# We now ignore *.html, as prettier cannot parse when they are Jekyll templates.
+*.html
+LICENSE.md
+
+# temporarily not formatting *.yml and *.scss
+*.yml
+*.scss

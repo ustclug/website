@@ -31,8 +31,8 @@ Since October 2011, we hold a meeting named [Weekly Party](/wiki/lug/events/week
 
 ## Network Services
 
-* [Open-Source Software Mirrors](/wiki/lug/services/mirrors)
-* [Network Boot Service (PXE)](/wiki/lug/services/pxe)
-* [GitLab (Self-hosted Git repository hosting service)](/wiki/lug/services/gitlab)
+- [Open-Source Software Mirrors](/wiki/lug/services/mirrors)
+- [Network Boot Service (PXE)](/wiki/lug/services/pxe)
+- [GitLab (Self-hosted Git repository hosting service)](/wiki/lug/services/gitlab)
 
 You can find us [here](/wiki/lug/contact).

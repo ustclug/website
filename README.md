@@ -21,13 +21,20 @@
 3. 运行 `bundle exec jekyll serve`，此时即可在 <http://localhost:4000/> 预览网站
 4. 编译整个网站的命令为
 
-    ```shell
-    bundle exec jekyll build
-    ```
+   ```shell
+   bundle exec jekyll build
+   ```
 
-    在命令行末尾添加 `--profile` 可以查看编译性能分析（每个源文件耗时），添加 `--trace` 可以在出错时输出 stack trace
+   在命令行末尾添加 `--profile` 可以查看编译性能分析（每个源文件耗时），添加 `--trace` 可以在出错时输出 stack trace
 
-    正式部署时需要添加环境变量 `JEKYLL_ENV=production`，详情请见 GitHub Actions 的 workflow 配置
+   正式部署时需要添加环境变量 `JEKYLL_ENV=production`，详情请见 GitHub Actions 的 workflow 配置
+
+## Markdown 格式：在提交前使用 `prettier` format。
+
+1. 安装 Node.js 开发环境（略）
+2. 运行 `npm install` 以安装 `prettier`
+3. 使用 `npx prettier --write .` 以 format。可以将不希望 `prettier` 处理的文件加入 `.prettierignore`，未来可能会加上 yml 和 scss 格式文件的处理
+4. 使用 `npx prettier --check .` 验证格式无问题
 
 ## 许可
 

@@ -5,22 +5,20 @@
 
 ## 简介
 
-Arch Linux 中文社区仓库是由 Arch Linux 中文社区驱动的非官方用户仓库。包含中文用户常用软件、工具、字体/美化包等。 
+Arch Linux 中文社区仓库是由 Arch Linux 中文社区驱动的非官方用户仓库。包含中文用户常用软件、工具、字体/美化包等。
 
-仓库地址：repo.archlinuxcn.org 
+仓库地址：repo.archlinuxcn.org
 
-该仓库地址可能会根据你所在的网络环境自动选择镜像源地址。 
+该仓库地址可能会根据你所在的网络环境自动选择镜像源地址。
 
 ## 使用方法
 
-在 /etc/pacman.conf 文件末尾添加两行： 
+在 /etc/pacman.conf 文件末尾添加两行：
 
-    
-    
     [archlinuxcn]
     Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
 
-然后请安装 archlinuxcn-keyring 包以导入 GPG key。 
+然后请安装 archlinuxcn-keyring 包以导入 GPG key。
 
 ## 相关链接
 

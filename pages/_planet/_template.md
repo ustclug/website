@@ -11,5 +11,4 @@ tags: []
 
 具体格式样例请参考附近的其他文件。
 
-
-  [1]: https://mmistakes.github.io/minimal-mistakes/docs/authors/
+[1]: https://mmistakes.github.io/minimal-mistakes/docs/authors/

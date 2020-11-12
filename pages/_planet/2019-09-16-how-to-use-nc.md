@@ -1,11 +1,11 @@
 ---
 title: "萌新入门手册：如何使用 nc/ncat？"
 author: "taoky"
-categories: 
-- Tech Tutorial
-tags: 
-- hackergame
-- netcat
+categories:
+  - Tech Tutorial
+tags:
+  - hackergame
+  - netcat
 ---
 
 ## `nc` 是什么？
@@ -26,7 +26,7 @@ tags:
 
 [ncat.zip 下载](https://planet.ustclug.org/wp-content/uploads/2019/09/ncat.zip)
 
-*注：`nc`/`ncat` 事实上是两个不同的程序，但在我们接下来的使用上，基本没有区别。`ncat` 是由 Nmap 项目开发的“重置版的 Netcat”。*
+_注：`nc`/`ncat` 事实上是两个不同的程序，但在我们接下来的使用上，基本没有区别。`ncat` 是由 Nmap 项目开发的“重置版的 Netcat”。_
 
 #### 我的杀毒软件报毒！
 

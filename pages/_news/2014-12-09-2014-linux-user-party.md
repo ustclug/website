@@ -1,22 +1,23 @@
 ---
 title: 2014 Linux User Party 暨 Freeshell 用户交流会
 author: jenny42
-date: '2014-12-09 17:52:41 +0800'
+date: "2014-12-09 17:52:41 +0800"
 categories:
-- LUG活动
+  - LUG活动
 tags:
-- news
-- LUP
+  - news
+  - LUP
 comments:
-- id: 988
-  author: 10.7-12.19 生活总结 | Jenny&#039;s Life
-  author_email: ''
-  author_url: https://jenny42.com/2014/12/12-19-life-overview/
-  date: '2014-12-20 14:11:16 +0800'
-  date_gmt: '2014-12-20 06:11:16 +0800'
-  content: "[&#8230;] 新闻稿：2014 Linux User Party 暨 Freeshell 用户交流会 [&#8230;]"
+  - id: 988
+    author: 10.7-12.19 生活总结 | Jenny&#039;s Life
+    author_email: ""
+    author_url: https://jenny42.com/2014/12/12-19-life-overview/
+    date: "2014-12-20 14:11:16 +0800"
+    date_gmt: "2014-12-20 06:11:16 +0800"
+    content: "[&#8230;] 新闻稿：2014 Linux User Party 暨 Freeshell 用户交流会 [&#8230;]"
 ---
-2014 Linux User Party 暨 Freeshell 用户交流会，于今年12月7日（周日）14时30分，在西活学术报告厅成功举行。
+
+2014 Linux User Party 暨 Freeshell 用户交流会，于今年 12 月 7 日（周日）14 时 30 分，在西活学术报告厅成功举行。
 
 ![活动现场除了有点冷以外环境非常好](https://ftp.lug.ustc.edu.cn/wp-content/uploads/2014/12/QQ图片20141209181138.jpg)
 
@@ -27,9 +28,9 @@ comments:
 本次活动由会长大人张荣葳亲自主持，并有幸请来了 4 位讲者：
 
 - 科大云框架设计者 王硕博士 —— 《什么是云计算》
-- LUG资深会员 高一凡同学 —— 《Docker 的简介与进阶》
-- iCard作者 王译锋 —— 《现场计算来宾学霸指数》
-- LUG活跃会员 阴钰 —— 《部署一个网页聊天室》
+- LUG 资深会员 高一凡同学 —— 《Docker 的简介与进阶》
+- iCard 作者 王译锋 —— 《现场计算来宾学霸指数》
+- LUG 活跃会员 阴钰 —— 《部署一个网页聊天室》
 
 ![会长大人正在十分投入地主持活动](https://ftp.lug.ustc.edu.cn/wp-content/uploads/2014/12/QQ图片20141209181251.jpg)
 
@@ -37,11 +38,11 @@ comments:
 
 ![现场来了近百名观众](https://ftp.lug.ustc.edu.cn/wp-content/uploads/2014/12/QQ图片20141208220616.jpg)
 
-近年来云计算的概念越来越火，云计算是继1980年代大型计算机到客户端-服务器的大转变之后的又一种巨变。中国科大云是校网络中心一项给科大师生提供虚拟机的服务。而王硕博士以一个科大云框架设计者的角度，给我们介绍了云计算的特点以及科大云搭建过程中用到的技术。他指出，云计算主要提供强大的计算能力和海量的存储能力，并具有可靠性、可扩展性和灵活性的优点。而科大云搭建过程中的关键技术讲解更是十分专业。
+近年来云计算的概念越来越火，云计算是继 1980 年代大型计算机到客户端-服务器的大转变之后的又一种巨变。中国科大云是校网络中心一项给科大师生提供虚拟机的服务。而王硕博士以一个科大云框架设计者的角度，给我们介绍了云计算的特点以及科大云搭建过程中用到的技术。他指出，云计算主要提供强大的计算能力和海量的存储能力，并具有可靠性、可扩展性和灵活性的优点。而科大云搭建过程中的关键技术讲解更是十分专业。
 
 ![科大云框架设计者王硕](https://ftp.lug.ustc.edu.cn/wp-content/uploads/2014/12/QQ图片20141209182018.jpg)
 
-第二位讲者的演讲主题——Docker 是一个开源项目，诞生于 2013 年初。Docker 项目的目标是实现轻量级的操作系统虚拟化解决方案。高一凡同学对 Docker 颇有研究，他现场演示了Docker 的种种用法，让我们看到用户操作 Docker 的容器就像操作一个快速轻量级的虚拟机一样简单。
+第二位讲者的演讲主题——Docker 是一个开源项目，诞生于 2013 年初。Docker 项目的目标是实现轻量级的操作系统虚拟化解决方案。高一凡同学对 Docker 颇有研究，他现场演示了 Docker 的种种用法，让我们看到用户操作 Docker 的容器就像操作一个快速轻量级的虚拟机一样简单。
 
 ![高一凡同学 - 《Docker 的简介与进阶》](https://ftp.lug.ustc.edu.cn/wp-content/uploads/2014/12/QQ图片20141209182044.jpg)
 
@@ -51,7 +52,7 @@ comments:
 
 ![iCard作者王译锋 - 《现场计算来宾学霸指数》](https://ftp.lug.ustc.edu.cn/wp-content/uploads/2014/12/QQ图片20141209182106.jpg)
 
-阴钰同学是 LUG 的活跃会员，他在短短30分钟内演示了自己是如何在 Freeshell 利用 Python 的 Tornado 框架开发一个 Web 网络聊天室。同学们对他搭建的网络聊天室十分感兴趣，纷纷在上面吐槽，借着投影仪现场掀起了聊天狂潮。
+阴钰同学是 LUG 的活跃会员，他在短短 30 分钟内演示了自己是如何在 Freeshell 利用 Python 的 Tornado 框架开发一个 Web 网络聊天室。同学们对他搭建的网络聊天室十分感兴趣，纷纷在上面吐槽，借着投影仪现场掀起了聊天狂潮。
 
 ![阴钰同学 - 《部署一个网页聊天室》](https://ftp.lug.ustc.edu.cn/wp-content/uploads/2014/12/4-e1418120638556.jpg)
 

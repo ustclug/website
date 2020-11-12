@@ -3,13 +3,10 @@
 
 # 下载在线视频
 
-这个脚本借助于<http://www.flvcd.com/>，分析各主流视频网站的视频地址，根据给定的视频网页地址，下载其中的视频。 
+这个脚本借助于<http://www.flvcd.com/>，分析各主流视频网站的视频地址，根据给定的视频网页地址，下载其中的视频。
 
 [get-video.sh](/wiki/_export/code/scripts/get-video435f.sh?codeblock=0 "下载片段")
 
-    
-    
-    
     #!/bin/bash
      
     flv_web_addr=$1
@@ -36,27 +33,20 @@
         wget -U NoSuchBrowser/1.0 -O "$flv_dir/$title.flv" $url
     done
 
-使用方法很简单： 
+使用方法很简单：
 
-    
-    
     ./get-video.sh http://v.youku.com/v_show/id_XMjA2NDgyOTg0.html
 
-这将下载这个视频的4个部分，保存到$flv_dir这个目录下。 
+这将下载这个视频的 4 个部分，保存到\$flv_dir 这个目录下。
 
-如果不需要下载，也可以直接使用mplayer等播放器播放： 
+如果不需要下载，也可以直接使用 mplayer 等播放器播放：
 
 [play-video.sh](/wiki/_export/code/scripts/play-videoc273.sh?codeblock=2 "下载片段")
 
-    
-    
-    
-    #! /bin/bash 
+    #! /bin/bash
      
     wget -q -O- http://www.flvcd.com/parse.php?kw=$1 | grep "<U>" | sed s/\<U\>//g  | mplayer -playlist -
 
-使用方法同上， 
+使用方法同上，
 
-    
-    
     ./play-video.sh http://v.youku.com/v_show/id_XMjA2NDgyOTg0.html

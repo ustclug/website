@@ -1,40 +1,32 @@
 ---
 ---
 
-## CPAN镜像使用帮助
+## CPAN 镜像使用帮助
 
 ### 使用说明
 
-若你以前从未使用过CPAN，请在命令行下运行cpan 
+若你以前从未使用过 CPAN，请在命令行下运行 cpan
 
-    
-    
-    Would you like me to automatically choose some CPAN mirror sites for you? (This means connecting to the Internet) [yes] 
+    Would you like me to automatically choose some CPAN mirror sites for you? (This means connecting to the Internet) [yes]
 
-此处输入no 
+此处输入 no
 
-    
-    
-    Would you like to pick from the CPAN mirror list? [yes] 
+    Would you like to pick from the CPAN mirror list? [yes]
 
-此处直接回车 
+此处直接回车
 
-    
-    
     You should select more than one (just in case the first isn't available).
-    
+
     (1) Africa
     (2) Asia
     (3) Europe
-    (4) North America 
+    (4) North America
     (5) Oceania
     (6) South America
-    Select your continent (or several nearby continents) [] 
+    Select your continent (or several nearby continents) []
 
-此处选择2 
+此处选择 2
 
-    
-    
     (1) China
     (2) India
     (3) Indonesia
@@ -49,12 +41,10 @@
     (12) Thailand
     (13) Turkey
     (14) Viet Nam
-    Select your country (or several nearby countries) [] 
+    Select your country (or several nearby countries) []
 
-此处选择1 
+此处选择 1
 
-    
-    
     (1) ftp://ftp.cuhk.edu.hk/pub/packages/perl/CPAN/
     (2) ftp://mirror.communilink.net/CPAN/
     (3) ftp://mirrors.sohu.com/CPAN/
@@ -69,26 +59,24 @@
     (12) http://mirrors.sohu.com/CPAN/
     (13) http://mirrors.ustc.edu.cn/CPAN/
     (14) http://mirrors.xmu.edu.cn/CPAN/
-    Select as many URLs as you like (by number), put them on one line, 
+    Select as many URLs as you like (by number), put them on one line,
     separated by blanks, hyphenated ranges allowed
-     e.g. '1 4 5' or '7 1-4 8' []  
+     e.g. '1 4 5' or '7 1-4 8' []
 
-此处选择13 
+此处选择 13
 
-其它问题视具体情况选择即可 
+其它问题视具体情况选择即可
 
-若你已经用过cpan了，将~/.cpan/CPAN/MyConfig.pm中的'urllist'的值改为 
+若你已经用过 cpan 了，将~/.cpan/CPAN/MyConfig.pm 中的'urllist'的值改为
 
-    
-    
     'urllist' => [q[http://mirrors.ustc.edu.cn/CPAN/]],
 
 ### 相关链接
 
-  + 官方主页: <http://www.cpan.org/>
+- 官方主页: <http://www.cpan.org/>
 
-  + 镜像列表: <http://www.cpan.org/SITES.html>
+- 镜像列表: <http://www.cpan.org/SITES.html>
 
-  + FAQ: <http://www.cpan.org/misc/cpan-faq.html>
+- FAQ: <http://www.cpan.org/misc/cpan-faq.html>
 
-  *[FAQ]: Frequently Asked Questions
+\*[FAQ]: Frequently Asked Questions

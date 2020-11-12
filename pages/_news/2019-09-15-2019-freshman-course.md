@@ -2,9 +2,9 @@
 title: 2019 秋季学期新生活力课程
 image: https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2019.08.31_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E7%A8%8B/photo/DSC_0458.JPG
 author: taoky
-date: '2019-09-15 12:00:00 +0800'
+date: "2019-09-15 12:00:00 +0800"
 categories:
-- LUG活动
+  - LUG活动
 tags: []
 comments: []
 ---

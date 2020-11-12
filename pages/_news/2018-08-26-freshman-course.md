@@ -2,9 +2,9 @@
 title: 2018 秋季学期新生活力课程
 image: https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2018.08.25_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E7%A8%8B/news/DSC01535.jpg
 author: hejiyan
-date: '2018-08-26 17:10:50 +0800'
+date: "2018-08-26 17:10:50 +0800"
 categories:
-- 活动
+  - 活动
 tags: []
 ---
 
@@ -14,7 +14,7 @@ tags: []
 
 ![](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2018.08.25_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E7%A8%8B/news/DSC01540.jpg)
 
-第一部分由社团 COO 任正行同学主讲。课程中介绍的网络资源将包括校内上网途径，学校购买的 Windows / Linux / macOS 下的各种正版软件，图书馆资源，论文数据库等;还有自助打印，GitLab，一卡通系统，中国最大的开源软件镜像站等服务。 
+第一部分由社团 COO 任正行同学主讲。课程中介绍的网络资源将包括校内上网途径，学校购买的 Windows / Linux / macOS 下的各种正版软件，图书馆资源，论文数据库等;还有自助打印，GitLab，一卡通系统，中国最大的开源软件镜像站等服务。
 
 ![](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2018.08.25_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E7%A8%8B/news/DSC01500.jpg)
 
@@ -37,4 +37,3 @@ tags: []
 ![](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2018.08.25_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E7%A8%8B/%E6%B4%BB%E5%8A%A8%E7%85%A7%E7%89%87/IMG_20180825_193611.jpg)活动结束后大家主动清理了教室并带走垃圾，本次新生活力课程圆满结束，感谢校团委，校学生社团管理指导委员会和计算机科学与技术学院团委的支持！
 
 活动照片和讲稿：[LUG FTP](https://ftp.lug.ustc.edu.cn/weekly_party/2018.08.25_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E7%A8%8B/)
-

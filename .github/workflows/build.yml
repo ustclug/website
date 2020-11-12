@@ -3,7 +3,10 @@ name: build
 on:
   push:
     branches:
-      - master
+      - '*'
+  pull_request:
+    branches:
+      - '*'
 
 jobs:
   build:
@@ -25,12 +28,31 @@ jobs:
         key: ${{ runner.os }}-bundler-2.7-${{ hashFiles('Gemfile') }}
         restore-keys: |
           ${{ runner.os }}-bundler-2.7-
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '12'
+    - name: Cache node modules
+      uses: actions/cache@v1
+      env:
+        cache-name: cache-node-modules
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-build-${{ env.cache-name }}-
+          ${{ runner.os }}-build-
+          ${{ runner.os }}-
     - name: Install dependencies
       run: |
         sudo apt-get -y install libgsl-dev
         bundle install --path=vendor/bundle
         bundle clean
+        npm install
+    - name: Prettier check
+      run: |
+        npx prettier --check .
     - name: Prepare build
+      if: github.ref == 'refs/heads/master'
       run: |
         git clone --depth=1 --branch=gh-pages --single-branch --no-checkout \
           "https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" \
@@ -44,6 +66,7 @@ jobs:
         JEKYLL_ENV: production
         JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Deploy to GitHub Pages
+      if: github.ref == 'refs/heads/master'
       run: |
         CINFO="$(git log -1 --pretty="%an: [%h] %s")"
         pushd _site/ &>/dev/null
@@ -55,6 +78,7 @@ jobs:
         git push
         popd &>/dev/null
     - name: Call webhook
+      if: 'github.repository == "ustclug/website" && github.ref == "refs/heads/master"'
       env:
         WEBHOOK_SECRET: ${{ secrets.WEBHOOK_SECRET }}
       run: ruby _scripts/webhook.rb

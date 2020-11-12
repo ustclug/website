@@ -1,49 +1,46 @@
 ---
 ---
 
-# Kali镜像使用帮助
+# Kali 镜像使用帮助
 
-Kali，是Backtrack 5后续更新版本，它的作用大家都懂。 
+Kali，是 Backtrack 5 后续更新版本，它的作用大家都懂。
 
-这里收录了最新的更新。 
+这里收录了最新的更新。
 
 安装镜像下载地址：<http://mirrors.ustc.edu.cn/kali-images/kali-latest/>
 
 ## 支持的系统架构
 
-  + amd64
+- amd64
 
-  + armel
+- armel
 
-  + armhf
+- armhf
 
-  + i386
+- i386
 
 ## 使用说明
 
-以 1.1.0版本为例, 编辑 `/etc/apt/sources.list` 文件, 在文件最前面添加以下条目： 
+以 1.1.0 版本为例, 编辑 `/etc/apt/sources.list` 文件, 在文件最前面添加以下条目：
 
-> 使用ipv6网络添加如下内容
->  
->  
+> 使用 ipv6 网络添加如下内容
+>
 > deb http://mirrors6.ustc.edu.cn/kali kali main non-free contrib
 > deb-src http://mirrors6.ustc.edu.cn/kali kali main non-free contrib
 > deb http://mirrors6.ustc.edu.cn/kali-security kali/updates main contrib non-free
->  
-> 使用ipv4网络添加如下内容 
->  
->  
+>
+> 使用 ipv4 网络添加如下内容
+>
 > deb http://mirrors.ustc.edu.cn/kali kali main non-free contrib
 > deb-src http://mirrors.ustc.edu.cn/kali kali main non-free contrib
 > deb http://mirrors.ustc.edu.cn/kali-security kali/updates main contrib non-free
->  
-> >对于 Kali 2.0，使用ipv4网络添加如下内容 
->  
->  
+>
+> > 对于 Kali 2.0，使用 ipv4 网络添加如下内容
+>
 > deb http://mirrors.ustc.edu.cn/kali sana main non-free contrib
 > deb-src http://mirrors.ustc.edu.cn/kali sana main non-free contrib
 > deb http://mirrors.ustc.edu.cn/kali-security sana/updates main contrib non-free
->  
-> >注：建议注释掉原来系统自带的源，依据个人喜好。 
+>
+> > 注：建议注释掉原来系统自带的源，依据个人喜好。
 
-—- Add by fashioncj 
+—- Add by fashioncj

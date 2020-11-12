@@ -1,43 +1,40 @@
 ---
 ---
 
-## Debian Multimedia镜像使用帮助
+## Debian Multimedia 镜像使用帮助
 
 ### 收录架构
 
-  + i386
+- i386
 
-  + amd64
+- amd64
 
-  + source
+- source
 
 ### 收录版本
 
-  + stable
+- stable
 
-  + unstable
+- unstable
 
-  + oldstable
+- oldstable
 
-  + testing
+- testing
 
-  + experimental
+- experimental
 
 ### 使用说明
 
-以 Debian 8 “Jessie” 为例, 编辑/etc/apt/sources.list文件, 在文件最前面添加以下条目(操作前请做好相应备份) 
+以 Debian 8 “Jessie” 为例, 编辑/etc/apt/sources.list 文件, 在文件最前面添加以下条目(操作前请做好相应备份)
 
 [sources.list](/wiki/_export/code/mirrors/help/sources435f-3.list?codeblock=0 "下载片段")
 
-    
-    
-    
     deb http://mirrors.ustc.edu.cn/debian-multimedia/ jessie main non-free
     deb-src http://mirrors.ustc.edu.cn/debian-multimedia/ jessie main non-free
     deb http://mirrors.ustc.edu.cn/debian-multimedia/ jessie-backports main
     deb-src http://mirrors.ustc.edu.cn/debian-multimedia/ jessie-backports main
 
-如果遇到 GPG error，你可能需要手动更新 deb-multimedia-keyring，以下摘自 debian multimedia 首页： 
+如果遇到 GPG error，你可能需要手动更新 deb-multimedia-keyring，以下摘自 debian multimedia 首页：
 
 > 06/02/2015 :  
 > Maybe I went too quickly to my new GPG key.  
@@ -49,8 +46,8 @@
 
 ### 相关链接
 
-  + 官方主页: <http://deb-multimedia.org/>
+- 官方主页: <http://deb-multimedia.org/>
 
-  + 邮件列表: <http://deb-multimedia.org/mailinglist>
+- 邮件列表: <http://deb-multimedia.org/mailinglist>
 
-  + 镜像列表: <http://deb-multimedia.org/debian-m>
+- 镜像列表: <http://deb-multimedia.org/debian-m>

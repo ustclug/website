@@ -1,31 +1,28 @@
 ---
 ---
 
-## EPEL镜像使用帮助
+## EPEL 镜像使用帮助
 
 ### 收录架构
 
-  + i386
+- i386
 
-  + amd64
+- amd64
 
-  + SRPMS
+- SRPMS
 
-  + ppc64
+- ppc64
 
 ### 使用说明
 
-此源适用于Red Hat, CentOS, Scientific Linux版本5和6 
+此源适用于 Red Hat, CentOS, Scientific Linux 版本 5 和 6
 
-若存在则先备份/etc/yum.repos.d/epel.repo和/etc/yum.repos.d/epel-testing.repo 
+若存在则先备份/etc/yum.repos.d/epel.repo 和/etc/yum.repos.d/epel-testing.repo
 
-下载下面的两个文件到/etc/yum.repos.d/ 
+下载下面的两个文件到/etc/yum.repos.d/
 
 [epel.repo](/wiki/_export/code/mirrors/help/epel435f.repo?codeblock=0 "下载片段")
 
-    
-    
-    
     [epel]
     name=Extra Packages for Enterprise Linux 6 - $basearch
     baseurl=http://mirrors.ustc.edu.cn/epel/6/$basearch
@@ -55,9 +52,6 @@
 
 [epel-testing.repo](/wiki/_export/code/mirrors/help/epel-testingcc37.repo?codeblock=1 "下载片段")
 
-    
-    
-    
     [epel-testing]
     name=Extra Packages for Enterprise Linux 6 - Testing - $basearch
     baseurl=http://mirrors.ustc.edu.cn/epel/testing/6/$basearch
@@ -85,12 +79,12 @@
     gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-6
     gpgcheck=1
 
-运行yum makecache 
+运行 yum makecache
 
 ### 相关网站
 
-  + Wiki <http://fedoraproject.org/wiki/EPEL>
+- Wiki <http://fedoraproject.org/wiki/EPEL>
 
-  + FAQ <http://fedoraproject.org/wiki/EPEL/faq>
+- FAQ <http://fedoraproject.org/wiki/EPEL/faq>
 
-  *[FAQ]: Frequently Asked Questions
+\*[FAQ]: Frequently Asked Questions

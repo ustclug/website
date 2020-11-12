@@ -9,13 +9,13 @@
     gem sources -a https://mirrors.ustc.edu.cn/rubygems/  #添加科大源
 
 ---
+
 ---
 
-# 替换Rails默认源
-    
-    
+# 替换 Rails 默认源
+
     cd path/to/your/project
     #Linux only:
-    sed -i "/^source/c source 'http://mirrors.ustc.edu.cn/rubygems/'" Gemfile 
+    sed -i "/^source/c source 'http://mirrors.ustc.edu.cn/rubygems/'" Gemfile
     #OS X only:
-    sed -ig "s/^source.*/source 'http:\\/\\/mirrors.ustc.edu.cn\\/rubygems\\/'/g" Gemfile  
+    sed -ig "s/^source.*/source 'http:\\/\\/mirrors.ustc.edu.cn\\/rubygems\\/'/g" Gemfile

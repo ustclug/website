@@ -5,17 +5,14 @@
 
 ### 收录版本
 
-6 
+6
 
 ### 使用说明
 
-下载sl-ustc.repo放入/etc/yum.repo.d/中 
+下载 sl-ustc.repo 放入/etc/yum.repo.d/中
 
 [sl-ustc.repo](/wiki/_export/code/mirrors/help/sl-ustc435f.repo?codeblock=0 "下载片段")
 
-    
-    
-    
     [sl]
     name=Scientific Linux $releasever - $basearch - ustc.edu.cn
     baseurl=http://mirrors.ustc.edu.cn/scientificlinux/$releasever/$basearch/os/
@@ -40,4 +37,4 @@
     gpgcheck=1
     gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-sl file:///etc/pki/rpm-gpg/RPM-GPG-KEY-sl6 file:///etc/pki/rpm-gpg/RPM-GPG-KEY-cern
 
-运行yum makecache 生成缓存 
+运行 yum makecache 生成缓存

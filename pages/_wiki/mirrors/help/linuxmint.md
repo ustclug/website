@@ -1,46 +1,46 @@
 ---
 ---
 
-## Linux Mint镜像使用帮助
+## Linux Mint 镜像使用帮助
 
 ### 收录架构
 
-  + i386
+- i386
 
-  + amd64
+- amd64
 
 ### 收录版本
 
-  + elyssa
+- elyssa
 
-  + felicia
+- felicia
 
-  + gloria
+- gloria
 
-  + helena
+- helena
 
-  + isadora
+- isadora
 
-  + julia
+- julia
 
-  + katya
+- katya
 
-  + lisa
+- lisa
 
-  + maya
+- maya
 
-  + nadia
+- nadia
 
 ### 使用说明
 
-打开Software Manager，点击Edit⇒Software Sources 
+打开 Software Manager，点击 Edit⇒Software Sources
 
-在Download from中选择Other 
+在 Download from 中选择 Other
 
-选择China⇒mirrors.ustc.edu.cn 
+选择 China⇒mirrors.ustc.edu.cn
 
-点击Choose Server 
+点击 Choose Server
 
 ### 相关链接
 
-  + 官方主页：<http://www.linuxmint.com/>
+- 官方主页：<http://www.linuxmint.com/>
