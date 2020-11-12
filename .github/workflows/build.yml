@@ -78,7 +78,7 @@ jobs:
         git push
         popd &>/dev/null
     - name: Call webhook
-      if: github.ref == 'refs/heads/master'
+      if: 'github.repository == "ustclug/website" && github.ref == "refs/heads/master"'
       env:
         WEBHOOK_SECRET: ${{ secrets.WEBHOOK_SECRET }}
       run: ruby _scripts/webhook.rb
