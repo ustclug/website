@@ -9,19 +9,19 @@
   <head>
     <meta charset="utf-8">
     <!-- begin _includes/seo.html -->
-    <title>FreeBSD 镜像使用方法 - LUG @ USTC</title>
-    <meta name="description" content="FreeBSD 镜像使用方法">
+    <title>Windows 下的开源及优秀免费软件 - LUG @ USTC</title>
+    <meta name="description" content="Windows 下的开源及优秀免费软件">
     <meta name="author" content="USTCLUG">
     <meta property="article:author" content="USTCLUG">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="zh_CN">
     <meta property="og:site_name" content="LUG @ USTC">
-    <meta property="og:title" content="FreeBSD 镜像使用方法">
-    <meta property="og:url" content="https://lug.ustc.edu.cn//wiki/mirrors/help/freebsd/">
-    <meta property="og:description" content="FreeBSD 镜像使用方法">
+    <meta property="og:title" content="Windows 下的开源及优秀免费软件">
+    <meta property="og:url" content="https://lug.ustc.edu.cn//wiki/greenwarm/win32free/">
+    <meta property="og:description" content="Windows 下的开源及优秀免费软件">
     <meta property="article:published_time" content="2020-08-09T15:07:59+08:00">
     <meta property="article:modified_time" content="2020-11-09T14:22:35+08:00">
-    <link rel="canonical" href="https://lug.ustc.edu.cn//wiki/mirrors/help/freebsd/">
+    <link rel="canonical" href="https://lug.ustc.edu.cn//wiki/greenwarm/win32free/">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -171,13 +171,13 @@
           </nav>
         </div>
         <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-          <meta itemprop="headline" content="FreeBSD 镜像使用方法">
-          <meta itemprop="description" content="FreeBSD 镜像使用方法">
+          <meta itemprop="headline" content="Windows 下的开源及优秀免费软件">
+          <meta itemprop="description" content="Windows 下的开源及优秀免费软件">
           <meta itemprop="datePublished" content="2020-08-09T15:07:59+08:00">
           <meta itemprop="dateModified" content="2020-11-09T14:22:35+08:00">
           <div class="page__inner-wrap">
             <header>
-              <h1 id="page-title" class="page__title" itemprop="headline">FreeBSD 镜像使用方法
+              <h1 id="page-title" class="page__title" itemprop="headline">Windows 下的开源及优秀免费软件
               </h1>
             </header>
             <section class="page__content" itemprop="text">
@@ -187,80 +187,172 @@
                     <h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4>
                   </header>
                   <ul class="toc__menu">
-                    <li><a href="#使用说明">使用说明</a>
-                      <ul>
-                        <li><a href="#packages-使用方法">Packages 使用方法</a></li>
-                        <li><a href="#ports-使用方法">Ports 使用方法</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#相关链接">相关链接</a></li>
+                    <li><a href="#开源软件">开源软件</a></li>
+                    <li><a href="#优秀免费软件">优秀免费软件</a></li>
+                    <li><a href="#使用中的其他免费软件">使用中的其他免费软件</a></li>
+                    <li><a href="#后记">后记</a></li>
                   </ul>
                 </nav>
               </aside>
-              <p>此页面已过期。请移步 <a href="https://mirrors.ustc.edu.cn/help/freebsd.html">https://mirrors.ustc.edu.cn/help/freebsd.html</a></p>
-              <p>关于 FreeBSD pkgng 源，根据<a href="https://www.freebsd.org/doc/en/articles/hubs/mirror-howto.html#mirror-pkgs" title="https://www.freebsd.org/doc/en/articles/hubs/mirror-howto.html#mirror-pkgs">官方说明</a>， FreeBSD 不允许同步软件包，我们尊重 FreeBSD 的选择，不提供 pkgng 镜像。</p>
-              <div class="language-plaintext highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>Due to very high requirements of bandwidth, storage and adminstration the FreeBSD Project has decided not to allow public mirrors of packages.
-</code></pre>
-                </div>
-              </div>
-              <p>FreeBSD 项目<a href="https://www.freebsd.org/doc/en/articles/hubs/mirror-official.html#mirror-official-become" title="https://www.freebsd.org/doc/en/articles/hubs/mirror-official.html#mirror-official-become">暂时不再接受新站点成为官方镜像源</a>，且不向第三方镜像站点提供 pkgng 同步接口。因此，我们无法及时可靠地从官方站点同步数据。</p>
-              <p>目前我们仍会同步 FreeBSD 部分内容，但不包含 pkgng 中的软件包。</p>
-              <p>鉴于以上原因，我们不建议您使用科大镜像站提供的内容。建议您使用官方支持的镜像源。您可以在 <a href="https://www.freebsd.org/doc/handbook/eresources-web.html">https://www.freebsd.org/doc/handbook/eresources-web.html</a> 找到官方镜像站的列表。</p>
-              <p>我们并非 FreeBSD 的官方源，所同步的文件受到非官方上游的限制。使用请自行承担风险。</p>
-              <h3 id="使用说明">使用说明</h3>
-              <p>以下使用说明已过期，请自行鉴别。</p>
-              <p>最新版的 FreeBSD 使用 pkgng 管理软件包，请查阅相关资料了解详情。</p>
-              <h4 id="packages-使用方法">Packages 使用方法</h4>
-              <p>以 FreeBSD 8.1 i386 为例, 在终端下执行以下命令(操作前请做好相应备份)</p>
-              <div class="language-plaintext highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>setenv PACKAGESITE http://mirrors.ustc.edu.cn/freebsd/releases/i386/8.1-RELEASE/packages/Latest/
-pkg_add -r package #package为要安装的软件名
-</code></pre>
-                </div>
-              </div>
-              <h4 id="ports-使用方法">Ports 使用方法</h4>
-              <p>以安装 firefox 为例, 编辑/etc/make.conf 文件, 修改 MASTER <em>SITE</em> BACKUP 字段(操作前请做好相应备份)</p>
-              <div class="language-plaintext highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>MASTER_SITE_BACKUP?=http://mirrors.ustc.edu.cn/freebsd/distfiles/${DIST_SUBDIR}/
-MASTER_SITE_OVERRIDE?=${MASTER_SITE_BACKUP}
-</code></pre>
-                </div>
-              </div>
-              <p>然后在/usr/ports/www/firefox 目录下执行以下命令(要先安装 ports)</p>
-              <div class="language-plaintext highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>make
-make install
-</code></pre>
-                </div>
-              </div>
-              <h3 id="相关链接">相关链接</h3>
-              <ul>
+              <p>下面列举了我平时整理的一些开源免费软件，基本上都具有高效、功能丰富、上手快或定制能力强的特点。 还有很多开源软件，如 Free Download Manager、MPlayer 虽然对一些 geek 而言仍不失为一个优秀的软件，但是相对较为小众，这里就不多做介绍了。</p>
+              <h2 id="开源软件">开源软件</h2>
+              <ol>
                 <li>
-                  <p>官方主页: <a href="http://www.freebsd.org/">http://www.freebsd.org/</a></p>
+                  <p>办公软件：OOo</p>
                 </li>
                 <li>
-                  <p>邮件列表: <a href="http://www.freebsd.org/community/mailinglists.html">http://www.freebsd.org/community/mailinglists.html</a></p>
+                  <p>文档制作：MiKTeX</p>
                 </li>
                 <li>
-                  <p>论坛: <a href="http://forums.freebsd.org/">http://forums.freebsd.org/</a></p>
+                  <p>压缩软件：7zip</p>
                 </li>
                 <li>
-                  <p>手册: <a href="http://www.freebsd.org/doc/zh_CN/books/handbook/">http://www.freebsd.org/doc/zh_CN/books/handbook/</a></p>
+                  <p>思维导图：FreeMind</p>
                 </li>
-              </ul>
+                <li>
+                  <p>浏览器：Firefox、Chrome、MyIE</p>
+                </li>
+                <li>
+                  <p>视频播放器：VLC、media player classic+ffdshow</p>
+                </li>
+                <li>
+                  <p>多媒体格式转换：HandBrake、mkv Merge GUI、lame、flac</p>
+                </li>
+                <li>
+                  <p>文本编辑：gVim、notepad++</p>
+                </li>
+                <li>
+                  <p>十六进制编辑：madedit</p>
+                </li>
+                <li>
+                  <p>IDE：Eclipse</p>
+                </li>
+                <li>
+                  <p>快速启动器：Launchy</p>
+                </li>
+                <li>
+                  <p>碎片整理：MyDefrag</p>
+                </li>
+                <li>
+                  <p>系统维护：Grub4Dos</p>
+                </li>
+                <li>
+                  <p>远程登录：Putty</p>
+                </li>
+                <li>
+                  <p>游戏模拟器：PCSX2</p>
+                </li>
+                <li>
+                  <p>词典：Stardict</p>
+                </li>
+                <li>
+                  <p>第三方 shell：BBLean</p>
+                </li>
+                <li>
+                  <p>FTP 软件：Filezilla</p>
+                </li>
+                <li>
+                  <p>局域网传送：IP Messenger</p>
+                </li>
+                <li>
+                  <p>网络分析：Wireshark</p>
+                </li>
+                <li>
+                  <p>密码学习工具：CrypTool</p>
+                </li>
+                <li>
+                  <p>PDF 制作：ghostscript</p>
+                </li>
+                <li>
+                  <p>PDF 阅读：sumatrapdf</p>
+                </li>
+                <li>
+                  <p>光盘刻录：InfraRecorder</p>
+                </li>
+                <li>
+                  <p>虚拟化：VirtualBox</p>
+                </li>
+                <li>
+                  <p>提取脱壳：Universal Extractor</p>
+                </li>
+              </ol>
+              <h2 id="优秀免费软件">优秀免费软件</h2>
+              <ol>
+                <li>
+                  <p>办公软件：WPS（国产倾囊大作）</p>
+                </li>
+                <li>
+                  <p>PDF 阅读：Foxit Reader（国产名作）</p>
+                </li>
+                <li>
+                  <p>英文助手：hi 英文助手</p>
+                </li>
+                <li>
+                  <p>PDF 阅读：PDF-Xchange PDF Viewer（优点是预载入策略，交互性能好）</p>
+                </li>
+                <li>
+                  <p>PDF 打印：Bullzip</p>
+                </li>
+                <li>
+                  <p>中文输入：Google 拼音（Lua 扩展）</p>
+                </li>
+                <li>
+                  <p>音乐播放：Foobar2000（可定制性高，音质广受好评）</p>
+                </li>
+                <li>
+                  <p>照片管理：Picasa（交互界面超赞）</p>
+                </li>
+                <li>
+                  <p>图片管理：XnView（类 acdsee）</p>
+                </li>
+                <li>
+                  <p>BT 下载：utorrent</p>
+                </li>
+                <li>
+                  <p>FTP 软件：ftprush（可扩充能力强）</p>
+                </li>
+                <li>
+                  <p>搜索增强：Everything Search</p>
+                </li>
+                <li>
+                  <p>IDE：Microsoft Visual Studio Express 或 Microsoft Visual Studio Professional (for Student)</p>
+                </li>
+                <li>
+                  <p>虚拟光驱：DAEMON Tools Lite</p>
+                </li>
+              </ol>
+              <h2 id="使用中的其他免费软件">使用中的其他免费软件</h2>
+              <ol>
+                <li>
+                  <p>世界之窗浏览器（IE 内核）</p>
+                </li>
+                <li>
+                  <p>射手影音播放器（基于 mpc 的准开源软件）</p>
+                </li>
+                <li>
+                  <p>灵格斯词典</p>
+                </li>
+                <li>
+                  <p>total commander（文件式的操作，键盘操作方便，准免费）</p>
+                </li>
+                <li>
+                  <p>flashget 国际版</p>
+                </li>
+                <li>
+                  <p>某些不得不使用的软件</p>
+                </li>
+              </ol>
+              <h2 id="后记">后记</h2>
+              <p>上面很多软件是跨平台的，同时有 Linux 下的版本，但本人在 Linux 平台下习惯使用不同的工作方式，就没详细整理了。</p>
+              <p>开源软件还有一个很重要的优势就是通常能有 64 位的版本，使得软件的性能能有一定的提高，尤其对于计算密集型的软件；同时 64 位系统+64 位软件的安全性能很高，明显优于 32 位系统或者 64 位系统+32 软件。</p>
             </section>
             <footer class="page__meta">
               <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-11-09">2020 年 11 月 9 日</time></p>
             </footer>
             <nav class="pagination">
-              <a href="/wiki/mirrors/help/fedora/" class="pagination--pager" title="Fedora 镜像使用帮助
+              <a href="/wiki/greenwarm/virtualization/" class="pagination--pager" title="虚拟化简介
 ">上一页</a>
-              <a href="/wiki/mirrors/help/gentoo-portage/" class="pagination--pager" title="Gentoo-Portage 镜像使用帮助
+              <a href="/wiki/greenwarm/xen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8/" class="pagination--pager" title="1.2 Xen 简介
 ">下一页</a>
             </nav>
           </div>

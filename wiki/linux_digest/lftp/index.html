@@ -20,7 +20,7 @@
     <meta property="og:url" content="https://lug.ustc.edu.cn//wiki/linux_digest/lftp/">
     <meta property="og:description" content="lftp">
     <meta property="article:published_time" content="2020-08-09T15:07:59+08:00">
-    <meta property="article:modified_time" content="2020-09-06T12:28:30+08:00">
+    <meta property="article:modified_time" content="2020-11-09T14:22:35+08:00">
     <link rel="canonical" href="https://lug.ustc.edu.cn//wiki/linux_digest/lftp/">
     <script type="application/ld+json">
       {
@@ -57,7 +57,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=7c28c64a8">
+    <link rel="stylesheet" href="/assets/css/main.css?v=760ce535b">
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
       <style>
@@ -174,7 +174,7 @@
           <meta itemprop="headline" content="lftp">
           <meta itemprop="description" content="lftp">
           <meta itemprop="datePublished" content="2020-08-09T15:07:59+08:00">
-          <meta itemprop="dateModified" content="2020-09-06T12:28:30+08:00">
+          <meta itemprop="dateModified" content="2020-11-09T14:22:35+08:00">
           <div class="page__inner-wrap">
             <header>
               <h1 id="page-title" class="page__title" itemprop="headline">lftp
@@ -190,14 +190,14 @@
                     <li><a href="#常用命令">常用命令</a></li>
                     <li><a href="#配置文件">配置文件</a></li>
                     <li><a href="#书签支持">书签支持</a></li>
-                    <li><a href="#奇巧淫技-使用lftp同步个人主页">奇巧淫技-使用lftp同步个人主页</a></li>
+                    <li><a href="#奇巧淫技-使用-lftp-同步个人主页">奇巧淫技-使用 lftp 同步个人主页</a></li>
                   </ul>
                 </nav>
               </aside>
-              <p><a href="https://en.wikipedia.org/wiki/lftp" title="https://en.wikipedia.org/wiki/lftp">lftp</a>是一款基于命令行的文件传输程序。除了FTP外，她还支持FTPS, HTTP, HTTPS, HFTP, FISH和SFTP。它还有一个实用的特性，支持FXP，即在两台FTP服务器间传文件，绕过客户机。此外，她还有一个内建的BitTorrent客户端。</p>
+              <p><a href="https://en.wikipedia.org/wiki/lftp" title="https://en.wikipedia.org/wiki/lftp">lftp</a>是一款基于命令行的文件传输程序。除了 FTP 外，她还支持 FTPS, HTTP, HTTPS, HFTP, FISH 和 SFTP。它还有一个实用的特性，支持 FXP，即在两台 FTP 服务器间传文件，绕过客户机。此外，她还有一个内建的 BitTorrent 客户端。</p>
               <h2 id="常用命令">常用命令</h2>
               <h2 id="配置文件">配置文件</h2>
-              <p>lftp启动后会一次读取/etc/lftp.conf、~/.lftprc和~/.lftp/rc。 通常我们将常用的设置写入~/.lftprc或者~/.lftp/rc中。 下面是一份lftprc的样例：</p>
+              <p>lftp 启动后会一次读取/etc/lftp.conf、~/.lftprc 和~/.lftp/rc。 通常我们将常用的设置写入~/.lftprc 或者~/.lftp/rc 中。 下面是一份 lftprc 的样例：</p>
               <p><a href="/wiki/_export/code/linux_digest/435f.lftprc?codeblock=0" title="下载片段">.lftprc</a></p>
               <div class="language-plaintext highlighter-rouge">
                 <div class="highlight">
@@ -218,40 +218,40 @@ set ftp:charset/202.38.64.22 gbk
 </code></pre>
                 </div>
               </div>
-              <p>在被动模式下，lftp主动连接服务器进行数据传输。在主动模式下，服务器会主动连接lftp进行数据传输。 被动模式当您在防火墙后面时很有用。</p>
+              <p>在被动模式下，lftp 主动连接服务器进行数据传输。在主动模式下，服务器会主动连接 lftp 进行数据传输。 被动模式当您在防火墙后面时很有用。</p>
               <h2 id="书签支持">书签支持</h2>
-              <p>将站点加入书签有两种简单常用的方法，一种是在命令行中执行bookmark命令：</p>
+              <p>将站点加入书签有两种简单常用的方法，一种是在命令行中执行 bookmark 命令：</p>
               <div class="language-plaintext highlighter-rouge">
                 <div class="highlight">
                   <pre class="highlight"><code>bookmark add &lt;name&gt; [&lt;location&gt;]
 </code></pre>
                 </div>
               </div>
-              <p>改命令将会在~/.lftp/bookmarks文件中新增一行，内容类似如下：</p>
+              <p>改命令将会在~/.lftp/bookmarks 文件中新增一行，内容类似如下：</p>
               <div class="language-plaintext highlighter-rouge">
                 <div class="highlight">
                   <pre class="highlight"><code>movie	ftp://upload@202.38.64.22/
 </code></pre>
                 </div>
               </div>
-              <p>另一种方法就是直接编辑~/.lftp/bookmarks文件，例如我直接增加以下该行到文件中：</p>
+              <p>另一种方法就是直接编辑~/.lftp/bookmarks 文件，例如我直接增加以下该行到文件中：</p>
               <div class="language-plaintext highlighter-rouge">
                 <div class="highlight">
                   <pre class="highlight"><code>home    ftp://myname@home.ustc.edu.cn/public_html/
 </code></pre>
                 </div>
               </div>
-              <p>将来只需要在shell中执行：</p>
+              <p>将来只需要在 shell 中执行：</p>
               <div class="language-plaintext highlighter-rouge">
                 <div class="highlight">
                   <pre class="highlight"><code>lftp home
 </code></pre>
                 </div>
               </div>
-              <p>即可打开连接到我的ftp上了</p>
+              <p>即可打开连接到我的 ftp 上了</p>
               <p><img src="../lib/images/smileys/icon_smile.gif" alt=":-)" /></p>
-              <h2 id="奇巧淫技-使用lftp同步个人主页">奇巧淫技-使用lftp同步个人主页</h2>
-              <p>科大的童鞋们都有一个300M的静态主页空间，很多人都会用这个空间来制作漂亮的个人主页，那你是怎么同步的呢？是不是每次都需要打开nautilus或者filezilla等工具一个个文件的复制呢？ 来看看用lftp的脚本同步吧。</p>
+              <h2 id="奇巧淫技-使用-lftp-同步个人主页">奇巧淫技-使用 lftp 同步个人主页</h2>
+              <p>科大的童鞋们都有一个 300M 的静态主页空间，很多人都会用这个空间来制作漂亮的个人主页，那你是怎么同步的呢？是不是每次都需要打开 nautilus 或者 filezilla 等工具一个个文件的复制呢？ 来看看用 lftp 的脚本同步吧。</p>
               <p><a href="/wiki/_export/code/linux_digest/cc37.bash_aliases?codeblock=1" title="下载片段">.bash_aliases</a></p>
               <div class="language-plaintext highlighter-rouge">
                 <div class="highlight">
@@ -269,7 +269,7 @@ mirror -R -e ~/public_html public_html --exclude book/ --exclude bak/
 </code></pre>
                 </div>
               </div>
-              <p>在这个lftp脚本中，首先连接服务器，然后使用mirror -R来将本地的~/public <em>html目录同步到服务器上的public</em> html中，在我本地的目录中有bak目录，我不希望同步上去，就将它排除掉，另外book目录比较大，希望自己手动管理同步，所以也排除了。如果在服务器上有一个目录，本地没有，也可以将其排除，以免同步时被删除。</p>
+              <p>在这个 lftp 脚本中，首先连接服务器，然后使用 mirror -R 来将本地的~/public <em>html 目录同步到服务器上的 public</em> html 中，在我本地的目录中有 bak 目录，我不希望同步上去，就将它排除掉，另外 book 目录比较大，希望自己手动管理同步，所以也排除了。如果在服务器上有一个目录，本地没有，也可以将其排除，以免同步时被删除。</p>
               <p>以后本地文件修改之后，只需要执行</p>
               <div class="language-plaintext highlighter-rouge">
                 <div class="highlight">
@@ -277,10 +277,10 @@ mirror -R -e ~/public_html public_html --exclude book/ --exclude bak/
 </code></pre>
                 </div>
               </div>
-              <p>即可完成同步工作。也可将lftp -f ~/.bin/update-homepage.lftp这条命令写入<a href="/wiki/linux/crontab" title="linux:crontab">crontab</a>，每天自动同步。</p>
+              <p>即可完成同步工作。也可将 lftp -f ~/.bin/update-homepage.lftp 这条命令写入<a href="/wiki/linux/crontab" title="linux:crontab">crontab</a>，每天自动同步。</p>
             </section>
             <footer class="page__meta">
-              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-09-06">2020 年 9 月 6 日</time></p>
+              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-11-09">2020 年 11 月 9 日</time></p>
             </footer>
             <nav class="pagination">
               <a href="/wiki/linux_digest/" class="pagination--pager" title="Linux 文摘

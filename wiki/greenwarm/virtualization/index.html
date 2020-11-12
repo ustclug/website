@@ -20,7 +20,7 @@
     <meta property="og:url" content="https://lug.ustc.edu.cn//wiki/greenwarm/virtualization/">
     <meta property="og:description" content="虚拟化简介">
     <meta property="article:published_time" content="2020-08-09T15:07:59+08:00">
-    <meta property="article:modified_time" content="2020-08-09T15:07:59+08:00">
+    <meta property="article:modified_time" content="2020-11-09T14:22:35+08:00">
     <link rel="canonical" href="https://lug.ustc.edu.cn//wiki/greenwarm/virtualization/">
     <script type="application/ld+json">
       {
@@ -57,7 +57,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=7c28c64a8">
+    <link rel="stylesheet" href="/assets/css/main.css?v=760ce535b">
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
       <style>
@@ -174,7 +174,7 @@
           <meta itemprop="headline" content="虚拟化简介">
           <meta itemprop="description" content="虚拟化简介">
           <meta itemprop="datePublished" content="2020-08-09T15:07:59+08:00">
-          <meta itemprop="dateModified" content="2020-08-09T15:07:59+08:00">
+          <meta itemprop="dateModified" content="2020-11-09T14:22:35+08:00">
           <div class="page__inner-wrap">
             <header>
               <h1 id="page-title" class="page__title" itemprop="headline">虚拟化简介
@@ -189,7 +189,7 @@
                   <ul class="toc__menu">
                     <li><a href="#什么是虚拟化">什么是虚拟化</a></li>
                     <li><a href="#虚拟化的类型">虚拟化的类型</a></li>
-                    <li><a href="#112-与linux有关的虚拟化项目">1.1.2 与Linux有关的虚拟化项目</a></li>
+                    <li><a href="#112-与-linux-有关的虚拟化项目">1.1.2 与 Linux 有关的虚拟化项目</a></li>
                     <li><a href="#113-对完全虚拟化和超虚拟化的硬件支持">1.1.3 对完全虚拟化和超虚拟化的硬件支持</a></li>
                     <li><a href="#114-linux-kvm内核虚拟机">1.1.4 Linux KVM（内核虚拟机）</a></li>
                     <li><a href="#xen">XEN</a></li>
@@ -201,7 +201,7 @@
               <p>虚拟化的含义丰富，应用广泛。目前虚拟化技术主要关注于服务器虚拟化，即在一个宿主计算机上提供多个独立操作系统。 进行虚拟化 就是要将某种形式的东西以另外一种形式呈现出来。对计算机进行虚拟化就是要将计算机以多台计算机或一台完全不同的计算机的形式呈现出来。 虚拟化也可以将多台计算机组合成一台计算机的形式呈现出来。这通常称为服务器聚合或网格计算。</p>
               <h2 id="什么是虚拟化">什么是虚拟化</h2>
               <h2 id="虚拟化的类型">虚拟化的类型</h2>
-              <p>实现虚拟化的方法不止一种。实际上，有几种方法都可以通过不同层次的抽象来实现相同的结果。本节将介绍 Linux 中常用的4种虚拟化方法，以及它们相应的优缺点。</p>
+              <p>实现虚拟化的方法不止一种。实际上，有几种方法都可以通过不同层次的抽象来实现相同的结果。本节将介绍 Linux 中常用的 4 种虚拟化方法，以及它们相应的优缺点。</p>
               <div class="language-plaintext highlighter-rouge">
                 <div class="highlight">
                   <pre class="highlight"><code>1.1.1.1 硬件仿真
@@ -230,7 +230,7 @@
                 </div>
               </div>
               <p>最后一种技术是操作系统级的虚拟化，它使用的技术与前面所介绍的有所不同。这种技术在操作系统本身之上实现服务器的虚拟化。这种方法支持单个操作系统，并可以将独立的服务器相互简单地隔离开来。 操作系统级的虚拟化要求对操作系统的内核进行一些修改，但是其优点是可以获得原始性能。</p>
-              <h2 id="112-与linux有关的虚拟化项目">1.1.2 与Linux有关的虚拟化项目</h2>
+              <h2 id="112-与-linux-有关的虚拟化项目">1.1.2 与 Linux 有关的虚拟化项目</h2>
               <div class="language-plaintext highlighter-rouge">
                 <div class="highlight">
                   <pre class="highlight"><code>1.1.2.1	Bochs（硬件仿真）
@@ -272,29 +272,29 @@
 </code></pre>
                 </div>
               </div>
-              <p>virtual box是一个非常好用的虚拟化软件，其使用方法与著名的vmware非常相似，virtual box已经作为拓林思公司的新产品GTES11中的一部分提供给用户。</p>
+              <p>virtual box 是一个非常好用的虚拟化软件，其使用方法与著名的 vmware 非常相似，virtual box 已经作为拓林思公司的新产品 GTES11 中的一部分提供给用户。</p>
               <h2 id="113-对完全虚拟化和超虚拟化的硬件支持">1.1.3 对完全虚拟化和超虚拟化的硬件支持</h2>
               <p>Intel 正在开发新虚拟化技术，能在 x86（VT-x）和 Itanium®（VT-i）体系架构上支持 hypervisor。VT-x 支持两种格式的操作，一种用于 VMM（root），另外一种用于客户操作系统（非 root）。root 格式完全是特权级的，而非 root 格式是非特权级的（即使对环 0 来说也是如此）。这种体系架构支持定义指令来使 VM（客户操作系统）退出到 VMM 和保存处理器状态。此外还添加了许多其他的功能。 AMD 也开发了硬件辅助虚拟化技术，称为 Pacifica。除了其他一些特性之外，Pacifica 还为在特殊指令执行时保存的客户操作系统维护了一个控制块。VMRUN 指令允许虚拟机（及其相关的客户操作系统）一直运行，直到 VMM 重新获得控制权为止（这也是可配置的）。这种可配置能力允许 CMM 为每个客户操作系统定制特权指令。Pacifica 还可以使用宿主和客户内存管理单元（MMU）表来进行地址转换。 这些新技术也可以应用到此处讨论的很多其他虚拟化技术中，包括 Xen、VMware、User-mode Linux 等。</p>
               <h2 id="114-linux-kvm内核虚拟机">1.1.4 Linux KVM（内核虚拟机）</h2>
-              <p>Linux 传出的最新消息是将 KVM 合并到 Linux 内核中。KVM 是一种完全虚拟化解决方案，它有一个方面非常独特：它将 Linux 内核转换为一个使用内核模块的 hypervisor。这个模块允许使用其他客户操作系统，然后在宿主 Linux 内核的用户空间中运行。内核中的 KVM 通过 /dev/kvm 字符设备来公开虚拟化后的硬件。客户操作系统使用为 PC 硬件仿真修改过的 QEMU 进程与 KVM 模块接口。 KVM 模块向内核中引入了一个新的执行模块。普通内核支持内核 模式和用户 模式，而 KVM 则引入了一种客户 模式。客户模式用来执行所有非 I/O 客户代码，而普通用户模式支持客户 I/O。 KVM 的引入是 Linux 的一个有趣革新，因为它代表了作为主流 Linux 内核一部分的第一个虚拟化技术。它已经存在于 2.6.20 树中，不过也可以作为 2.6.19 内核的一个内核模块使用。当在支持虚拟化的硬件上运行时，KVM 支持 Linux（32 位和 64 位）和 Windows（32 位，64位？）客户机。</p>
+              <p>Linux 传出的最新消息是将 KVM 合并到 Linux 内核中。KVM 是一种完全虚拟化解决方案，它有一个方面非常独特：它将 Linux 内核转换为一个使用内核模块的 hypervisor。这个模块允许使用其他客户操作系统，然后在宿主 Linux 内核的用户空间中运行。内核中的 KVM 通过 /dev/kvm 字符设备来公开虚拟化后的硬件。客户操作系统使用为 PC 硬件仿真修改过的 QEMU 进程与 KVM 模块接口。 KVM 模块向内核中引入了一个新的执行模块。普通内核支持内核 模式和用户 模式，而 KVM 则引入了一种客户 模式。客户模式用来执行所有非 I/O 客户代码，而普通用户模式支持客户 I/O。 KVM 的引入是 Linux 的一个有趣革新，因为它代表了作为主流 Linux 内核一部分的第一个虚拟化技术。它已经存在于 2.6.20 树中，不过也可以作为 2.6.19 内核的一个内核模块使用。当在支持虚拟化的硬件上运行时，KVM 支持 Linux（32 位和 64 位）和 Windows（32 位，64 位？）客户机。</p>
               <h1 id="拓林思产品中对虚拟化的支持">拓林思产品中对虚拟化的支持</h1>
               <p>（文章来源的广告</p>
               <p>![^_^](../lib/images/smileys/icon_fun.gif)</p>
               <p>）</p>
               <h2 id="xen">XEN</h2>
-              <p><a href="xen%e7%ae%80%e4%bb%8b%e4%b8%8e%e4%bd%bf%e7%94%a8" title="greenwarm:xen简介与使用">1.2 Xen简介</a></p>
+              <p><a href="xen%e7%ae%80%e4%bb%8b%e4%b8%8e%e4%bd%bf%e7%94%a8" title="greenwarm:xen简介与使用">1.2 Xen 简介</a></p>
               <h2 id="virtual-box">Virtual Box</h2>
-              <p><a href="http://www.turbolinux.com.cn/turbo/wiki/doku.php?id=sysadmin:virtualbox" title="http://www.turbolinux.com.cn/turbo/wiki/doku.php?id=sysadmin:virtualbox">Virtual Box的使用</a></p>
+              <p><a href="http://www.turbolinux.com.cn/turbo/wiki/doku.php?id=sysadmin:virtualbox" title="http://www.turbolinux.com.cn/turbo/wiki/doku.php?id=sysadmin:virtualbox">Virtual Box 的使用</a></p>
               <h2 id="kvm">KVM</h2>
-              <p><a href="kvm%e4%bd%bf%e7%94%a8%e6%96%b9%e6%b3%95" title="greenwarm:kvm使用方法">KVM使用方法</a></p>
+              <p><a href="kvm%e4%bd%bf%e7%94%a8%e6%96%b9%e6%b3%95" title="greenwarm:kvm使用方法">KVM 使用方法</a></p>
             </section>
             <footer class="page__meta">
-              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-08-09">2020 年 8 月 9 日</time></p>
+              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-11-09">2020 年 11 月 9 日</time></p>
             </footer>
             <nav class="pagination">
-              <a href="/wiki/greenwarm/remotedesktop/" class="pagination--pager" title="认识Linux远程桌面控制
+              <a href="/wiki/greenwarm/remotedesktop/" class="pagination--pager" title="认识 Linux 远程桌面控制
 ">上一页</a>
-              <a href="/wiki/greenwarm/xen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8/" class="pagination--pager" title="1.2 Xen简介
+              <a href="/wiki/greenwarm/win32free/" class="pagination--pager" title="Windows 下的开源及优秀免费软件
 ">下一页</a>
             </nav>
           </div>

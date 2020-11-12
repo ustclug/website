@@ -9,18 +9,18 @@
   <head>
     <meta charset="utf-8">
     <!-- begin _includes/seo.html -->
-    <title>ExPASy的ps_scan在linux下的简明配置指南 - LUG @ USTC</title>
-    <meta name="description" content="ExPASy的ps_scan在linux下的简明配置指南">
+    <title>ExPASy 的 ps_scan 在 linux 下的简明配置指南 - LUG @ USTC</title>
+    <meta name="description" content="ExPASy 的 ps_scan 在 linux 下的简明配置指南">
     <meta name="author" content="USTCLUG">
     <meta property="article:author" content="USTCLUG">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="zh_CN">
     <meta property="og:site_name" content="LUG @ USTC">
-    <meta property="og:title" content="ExPASy的ps_scan在linux下的简明配置指南">
+    <meta property="og:title" content="ExPASy 的 ps_scan 在 linux 下的简明配置指南">
     <meta property="og:url" content="https://lug.ustc.edu.cn//wiki/linux_digest/expasy-ps_scan/">
-    <meta property="og:description" content="ExPASy的ps_scan在linux下的简明配置指南">
+    <meta property="og:description" content="ExPASy 的 ps_scan 在 linux 下的简明配置指南">
     <meta property="article:published_time" content="2020-08-09T15:07:59+08:00">
-    <meta property="article:modified_time" content="2020-08-09T15:07:59+08:00">
+    <meta property="article:modified_time" content="2020-11-09T14:22:35+08:00">
     <link rel="canonical" href="https://lug.ustc.edu.cn//wiki/linux_digest/expasy-ps_scan/">
     <script type="application/ld+json">
       {
@@ -57,7 +57,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=7c28c64a8">
+    <link rel="stylesheet" href="/assets/css/main.css?v=760ce535b">
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
       <style>
@@ -171,13 +171,13 @@
           </nav>
         </div>
         <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-          <meta itemprop="headline" content="ExPASy的ps_scan在linux下的简明配置指南">
-          <meta itemprop="description" content="ExPASy的ps_scan在linux下的简明配置指南">
+          <meta itemprop="headline" content="ExPASy 的 ps_scan 在 linux 下的简明配置指南">
+          <meta itemprop="description" content="ExPASy 的 ps_scan 在 linux 下的简明配置指南">
           <meta itemprop="datePublished" content="2020-08-09T15:07:59+08:00">
-          <meta itemprop="dateModified" content="2020-08-09T15:07:59+08:00">
+          <meta itemprop="dateModified" content="2020-11-09T14:22:35+08:00">
           <div class="page__inner-wrap">
             <header>
-              <h1 id="page-title" class="page__title" itemprop="headline">ExPASy的ps_scan在linux下的简明配置指南
+              <h1 id="page-title" class="page__title" itemprop="headline">ExPASy 的 ps_scan 在 linux 下的简明配置指南
               </h1>
             </header>
             <section class="page__content" itemprop="text">
@@ -197,17 +197,17 @@
               <p>下载数据库</p>
               <div class="language-plaintext highlighter-rouge">
                 <div class="highlight">
-                  <pre class="highlight"><code>wget -c  
+                  <pre class="highlight"><code>wget -c
 ftp://ftp.expasy.org/databases/prosite/release_with_updates/prosite.dat
 </code></pre>
                 </div>
               </div>
-              <p>给一个文件夹$PROSITE的环境变量，然后把prosite.dat放在$PROSITE/里头。例如我把 prosite.dat放在/home/sun/ps _scan/下 <code>export PROSITE=“/home/sun/ps_scan”</code></p>
+              <p>给一个文件夹$PROSITE的环境变量，然后把prosite.dat放在$PROSITE/里头。例如我把 prosite.dat 放在/home/sun/ps _scan/下 <code>export PROSITE=“/home/sun/ps_scan”</code></p>
               <h5 id="配置软件">配置软件</h5>
               <p>下载软件</p>
               <div class="language-plaintext highlighter-rouge">
                 <div class="highlight">
-                  <pre class="highlight"><code>wget -c  
+                  <pre class="highlight"><code>wget -c
 ftp://ftp.expasy.org/databases/prosite/tools/ps_scan/ps_scan_linux_x86_elf.tar.gz
 </code></pre>
                 </div>
@@ -215,12 +215,12 @@ ftp://ftp.expasy.org/databases/prosite/tools/ps_scan/ps_scan_linux_x86_elf.tar.g
               <p>解压缩</p>
               <div class="language-plaintext highlighter-rouge">
                 <div class="highlight">
-                  <pre class="highlight"><code>tar -zxvf /home/sun/ps_scan_linux_x86_elf.tar.gz -C /home/sun/ps_scan/ 
+                  <pre class="highlight"><code>tar -zxvf /home/sun/ps_scan_linux_x86_elf.tar.gz -C /home/sun/ps_scan/
 </code></pre>
                 </div>
               </div>
-              <p>得到ps <em>scan文件夹中有如下文件：LICENSE，pfscan，pfsearch，psa2msa，ps</em> scan.pl, README, README.prf. 其中LICENSE是该软件的协议，pfscan, pfsearch, psa2msa三个文件是可执行文件，ps_ scan.pl是perl脚本，两个README是使用指导。</p>
-              <p>把三个可执行文件放进$PATH文件夹。</p>
+              <p>得到 ps <em>scan 文件夹中有如下文件：LICENSE，pfscan，pfsearch，psa2msa，ps</em> scan.pl, README, README.prf. 其中 LICENSE 是该软件的协议，pfscan, pfsearch, psa2msa 三个文件是可执行文件，ps_ scan.pl 是 perl 脚本，两个 README 是使用指导。</p>
+              <p>把三个可执行文件放进$PATH 文件夹。</p>
               <div class="language-plaintext highlighter-rouge">
                 <div class="highlight">
                   <pre class="highlight"><code>sudo cp pfscan /usr/local/bin/
@@ -240,18 +240,18 @@ sudo cp psa2msa /usr/local/bin/
 </code></pre>
                 </div>
               </div>
-              <p>这里你需要处于ps_scan.pl所在的目录下，至于数据库，由于前边设置过环境变量，软 件会自动找到。当然你也可以在[options]的后头接上数据库的文件。[options]的参数 可以在README里头找到。</p>
-              <p>如果你想以后用起来更方便，可以把ps _scan.pl也放进$PATH里。 <code>chmod 777 ps_scan.pl</code></p>
+              <p>这里你需要处于 ps_scan.pl 所在的目录下，至于数据库，由于前边设置过环境变量，软 件会自动找到。当然你也可以在[options]的后头接上数据库的文件。[options]的参数 可以在 README 里头找到。</p>
+              <p>如果你想以后用起来更方便，可以把 ps _scan.pl 也放进$PATH 里。 <code>chmod 777 ps_scan.pl</code></p>
               <div class="language-plaintext highlighter-rouge">
                 <div class="highlight">
                   <pre class="highlight"><code>sudo cp ps_scan.pl  /usr/local/bin/ps_scan
 </code></pre>
                 </div>
               </div>
-              <p>这样一来，以后只要输入 ps <em>scan 即可运行ps</em> scan.pl这个脚本。</p>
+              <p>这样一来，以后只要输入 ps <em>scan 即可运行 ps</em> scan.pl 这个脚本。</p>
             </section>
             <footer class="page__meta">
-              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-08-09">2020 年 8 月 9 日</time></p>
+              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-11-09">2020 年 11 月 9 日</time></p>
             </footer>
             <nav class="pagination">
               <a href="/wiki/linux_digest/ed_editor_usage/" class="pagination--pager" title="ed 文本编辑器使用笔记

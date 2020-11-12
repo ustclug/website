@@ -20,7 +20,7 @@
     <meta property="og:url" content="https://lug.ustc.edu.cn//wiki/scripts/douban/">
     <meta property="og:description" content="豆瓣电台">
     <meta property="article:published_time" content="2020-08-09T15:07:59+08:00">
-    <meta property="article:modified_time" content="2020-08-09T18:18:19+08:00">
+    <meta property="article:modified_time" content="2020-11-09T14:22:35+08:00">
     <link rel="canonical" href="https://lug.ustc.edu.cn//wiki/scripts/douban/">
     <script type="application/ld+json">
       {
@@ -57,7 +57,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=7c28c64a8">
+    <link rel="stylesheet" href="/assets/css/main.css?v=760ce535b">
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
       <style>
@@ -174,7 +174,7 @@
           <meta itemprop="headline" content="豆瓣电台">
           <meta itemprop="description" content="豆瓣电台">
           <meta itemprop="datePublished" content="2020-08-09T15:07:59+08:00">
-          <meta itemprop="dateModified" content="2020-08-09T18:18:19+08:00">
+          <meta itemprop="dateModified" content="2020-11-09T14:22:35+08:00">
           <div class="page__inner-wrap">
             <header>
               <h1 id="page-title" class="page__title" itemprop="headline">豆瓣电台
@@ -188,116 +188,116 @@
                   </header>
                 </nav>
               </aside>
-              <p>摘自瀚海星云bbs：<a href="http://bbs.ustc.edu.cn/cgi/bbstcon?board=Linux&amp;file=M.1286547291.A" title="http://bbs.ustc.edu.cn/cgi/bbstcon?board=Linux&amp;file=M.1286547291.A">http://bbs.ustc.edu.cn/cgi/bbstcon?board=Linux&amp;file=M.1286547291.A</a></p>
+              <p>摘自瀚海星云 bbs：<a href="http://bbs.ustc.edu.cn/cgi/bbstcon?board=Linux&amp;file=M.1286547291.A" title="http://bbs.ustc.edu.cn/cgi/bbstcon?board=Linux&amp;file=M.1286547291.A">http://bbs.ustc.edu.cn/cgi/bbstcon?board=Linux&amp;file=M.1286547291.A</a></p>
               <p>针对网速慢的用户以及豆瓣电台的改动做了些修改～: D</p>
               <p><a href="/wiki/_export/code/scripts/dbfm435f.pl?codeblock=0" title="下载片段">dbfm.pl</a></p>
               <div class="language-plaintext highlighter-rouge">
                 <div class="highlight">
-                  <pre class="highlight"><code>#!/usr/bin/perl -w 
-use LWP; 
-use HTTP::Cookies; 
-use JSON; 
-use Encode; 
-use Term::ANSIColor; 
-#use Smart::Comments; 
+                  <pre class="highlight"><code>#!/usr/bin/perl -w
+use LWP;
+use HTTP::Cookies;
+use JSON;
+use Encode;
+use Term::ANSIColor;
+#use Smart::Comments;
  
-my $time = 0; 
-$SIG{INT} = "quit"; 
+my $time = 0;
+$SIG{INT} = "quit";
  
-my $b = LWP::UserAgent-&gt;new; 
-$b-&gt;cookie_jar(HTTP::Cookies-&gt;new); 
+my $b = LWP::UserAgent-&gt;new;
+$b-&gt;cookie_jar(HTTP::Cookies-&gt;new);
  
-my $form = { 
+my $form = {
     form_email=&gt;'your_id',   ###----- 你的帐号-----###
-	form_password=&gt;'your_passwd',          ###----- 你的密码 ----### 
-    redir=&gt;"/service/account/?return_to=http%3A%2F%2Fdouban.fm&amp;amp;mode=checkid_setup", 
-}; 
+	form_password=&gt;'your_passwd',          ###----- 你的密码 ----###
+    redir=&gt;"/service/account/?return_to=http%3A%2F%2Fdouban.fm&amp;amp;mode=checkid_setup",
+};
  
-#-------login the douban. 
-my $login = $b-&gt;post('http://www.douban.com/login', $form); 
-my $_c = $b-&gt;get('http://douban.fm/radio'); 
-my $uid ='2650910'; 
-if($_c-&gt;content=~/flashvars\[s](http://perldoc.perl.org/functions/s.html)+=\[s](http://perldoc.perl.org/functions/s.html)+\{uid:'(\d+)'/){ 
-    $uid=$1;  #-- Get the uid of your account. 
-} 
-#-------douban cache folder. 
-my $USER_DIR = "$ENV{HOME}/.douban"; 
-[mkdir](http://perldoc.perl.org/functions/mkdir.html) $USER_DIR unless -d $USER_DIR; 
+#-------login the douban.
+my $login = $b-&gt;post('http://www.douban.com/login', $form);
+my $_c = $b-&gt;get('http://douban.fm/radio');
+my $uid ='2650910';
+if($_c-&gt;content=~/flashvars\[s](http://perldoc.perl.org/functions/s.html)+=\[s](http://perldoc.perl.org/functions/s.html)+\{uid:'(\d+)'/){
+    $uid=$1;  #-- Get the uid of your account.
+}
+#-------douban cache folder.
+my $USER_DIR = "$ENV{HOME}/.douban";
+[mkdir](http://perldoc.perl.org/functions/mkdir.html) $USER_DIR unless -d $USER_DIR;
  
-&amp;play_radio(); 
+&amp;play_radio();
  
-#-------play the mp3. 
-sub play_radio{ 
-    while(1) { 
+#-------play the mp3.
+sub play_radio{
+    while(1) {
         my $mp3 = $b-&gt;get('http://douban.fm/j/mine/playlist?r=' .[rand](http://perldoc.perl.org/functions/rand.html)(). '&amp;type=n&amp;sid=&amp;uid='.$uid .'&amp;channel=1' );#这里的channel参数是新增的，取值0-9 ~:P
-        my $result = JSON-&gt;new-&gt;utf8(0)-&gt;decode($mp3-&gt;content); 
-        $result  = $result-&gt;{song}; 
-        for my $hash(@$result){ 
-             [print](http://perldoc.perl.org/functions/print.html) colored $hash-&gt;{'title'}." ", 'yellow'; 
-             [print](http://perldoc.perl.org/functions/print.html) colored ("$hash-&gt;{'albumtitle'}",'blue'),'  '; 
-             [print](http://perldoc.perl.org/functions/print.html) colored "$hash-&gt;{'artist'}\n",'green'; 
-             [print](http://perldoc.perl.org/functions/print.html) colored "$hash-&gt;{'picture'}\n$hash-&gt;{'url'}\n", 'white'; 
-             #######--如果不需要下载封面图片显示在conky上，以下2行不需要用---############### 
-             download_cover($hash); 
-             log2file("[Playing] ",$hash-&gt;{'title'},"\t(",$hash-&gt;{'artist'},")\n"); 
-             #######-- 
+        my $result = JSON-&gt;new-&gt;utf8(0)-&gt;decode($mp3-&gt;content);
+        $result  = $result-&gt;{song};
+        for my $hash(@$result){
+             [print](http://perldoc.perl.org/functions/print.html) colored $hash-&gt;{'title'}." ", 'yellow';
+             [print](http://perldoc.perl.org/functions/print.html) colored ("$hash-&gt;{'albumtitle'}",'blue'),'  ';
+             [print](http://perldoc.perl.org/functions/print.html) colored "$hash-&gt;{'artist'}\n",'green';
+             [print](http://perldoc.perl.org/functions/print.html) colored "$hash-&gt;{'picture'}\n$hash-&gt;{'url'}\n", 'white';
+             #######--如果不需要下载封面图片显示在conky上，以下2行不需要用---###############
+             download_cover($hash);
+             log2file("[Playing] ",$hash-&gt;{'title'},"\t(",$hash-&gt;{'artist'},")\n");
+             #######--
 			 #qx {wget "$hash-&gt;{'url'}" -O /tmp/dbfm 2&gt;/dev/null &amp;&amp; mplayer /tmp/dbfm 2&gt;/dev/null};
                          #这一行我换成带缓存的mplayer调用，单纯的管道在网速不行的时候不太给力～:)
 			 [qx](http://perldoc.perl.org/functions/qx.html) {wget "$hash-&gt;{'url'}" -O - 2&gt;/dev/null |mplayer -cache 1024 -  2&gt;/dev/null };
-        } 
-    } 
-} 
+        }
+    }
+}
  
-sub quit{ 
-    [qx](http://perldoc.perl.org/functions/qx.html) {killall -9 mplayer}; 
-    if ([time](http://perldoc.perl.org/functions/time.html)()-$time&lt;3){ 
-        [print](http://perldoc.perl.org/functions/print.html) "exiting...\n"; 
-        log2file("[Stopped]\n"); 
-        [exit](http://perldoc.perl.org/functions/exit.html) 1; 
-    }  
-    [print](http://perldoc.perl.org/functions/print.html) "Press Ctrl+C again in 3 seconds to exit...\n"; 
-    [select](http://perldoc.perl.org/functions/select.html)([undef](http://perldoc.perl.org/functions/undef.html),[undef](http://perldoc.perl.org/functions/undef.html),[undef](http://perldoc.perl.org/functions/undef.html),1); 
-    $time = [time](http://perldoc.perl.org/functions/time.html)(); 
-    # $SIG{INT} = "quit"; 
-} 
+sub quit{
+    [qx](http://perldoc.perl.org/functions/qx.html) {killall -9 mplayer};
+    if ([time](http://perldoc.perl.org/functions/time.html)()-$time&lt;3){
+        [print](http://perldoc.perl.org/functions/print.html) "exiting...\n";
+        log2file("[Stopped]\n");
+        [exit](http://perldoc.perl.org/functions/exit.html) 1;
+    }
+    [print](http://perldoc.perl.org/functions/print.html) "Press Ctrl+C again in 3 seconds to exit...\n";
+    [select](http://perldoc.perl.org/functions/select.html)([undef](http://perldoc.perl.org/functions/undef.html),[undef](http://perldoc.perl.org/functions/undef.html),[undef](http://perldoc.perl.org/functions/undef.html),1);
+    $time = [time](http://perldoc.perl.org/functions/time.html)();
+    # $SIG{INT} = "quit";
+}
  
-#######--如果不需要下载封面图片显示在conky上，以下都不需要用---############### 
-sub log2file{ 
-    my $logfile="/tmp/douban.log"; 
-    [open](http://perldoc.perl.org/functions/open.html) LOG, "+&gt;&gt;/tmp/douban.log" or [return](http://perldoc.perl.org/functions/return.html) -1; 
-    [print](http://perldoc.perl.org/functions/print.html) LOG @_; 
-    [close](http://perldoc.perl.org/functions/close.html) LOG; 
-    [return](http://perldoc.perl.org/functions/return.html) 0; 
-} 
-sub download_cover{ 
-    my $hash = [shift](http://perldoc.perl.org/functions/shift.html); 
-    my $covername = $hash-&gt;{albumtitle} . "_cover.jpg"; 
-    my $artist = $hash-&gt;{'artist'}; 
-    $covername = &amp;file_trim ($covername); 
-    $artist = &amp;file_trim ($artist); 
-    [mkdir](http://perldoc.perl.org/functions/mkdir.html) "$USER_DIR/$artist" if ! -d "$USER_DIR/$artist"; 
+#######--如果不需要下载封面图片显示在conky上，以下都不需要用---###############
+sub log2file{
+    my $logfile="/tmp/douban.log";
+    [open](http://perldoc.perl.org/functions/open.html) LOG, "+&gt;&gt;/tmp/douban.log" or [return](http://perldoc.perl.org/functions/return.html) -1;
+    [print](http://perldoc.perl.org/functions/print.html) LOG @_;
+    [close](http://perldoc.perl.org/functions/close.html) LOG;
+    [return](http://perldoc.perl.org/functions/return.html) 0;
+}
+sub download_cover{
+    my $hash = [shift](http://perldoc.perl.org/functions/shift.html);
+    my $covername = $hash-&gt;{albumtitle} . "_cover.jpg";
+    my $artist = $hash-&gt;{'artist'};
+    $covername = &amp;file_trim ($covername);
+    $artist = &amp;file_trim ($artist);
+    [mkdir](http://perldoc.perl.org/functions/mkdir.html) "$USER_DIR/$artist" if ! -d "$USER_DIR/$artist";
  
-    my $file = "$USER_DIR/$artist/$covername"; 
-    if ($hash-&gt;{'picture'}|| $hash-&gt;{'picture'}=~/^http.+jpg$/){ 
+    my $file = "$USER_DIR/$artist/$covername";
+    if ($hash-&gt;{'picture'}|| $hash-&gt;{'picture'}=~/^http.+jpg$/){
  
-        if ( ! -[s](http://perldoc.perl.org/functions/s.html) $file ){ 
-            $b-&gt;get($hash-&gt;{'picture'},':content_file' =&gt;"$file") or [return](http://perldoc.perl.org/functions/return.html) -1; 
-        } 
-        [unlink](http://perldoc.perl.org/functions/unlink.html) "/tmp/douban_cover.jpg"; 
-        [symlink](http://perldoc.perl.org/functions/symlink.html) "$file","/tmp/douban_cover.jpg"; 
-    } 
-    [return](http://perldoc.perl.org/functions/return.html) 0; 
-} 
+        if ( ! -[s](http://perldoc.perl.org/functions/s.html) $file ){
+            $b-&gt;get($hash-&gt;{'picture'},':content_file' =&gt;"$file") or [return](http://perldoc.perl.org/functions/return.html) -1;
+        }
+        [unlink](http://perldoc.perl.org/functions/unlink.html) "/tmp/douban_cover.jpg";
+        [symlink](http://perldoc.perl.org/functions/symlink.html) "$file","/tmp/douban_cover.jpg";
+    }
+    [return](http://perldoc.perl.org/functions/return.html) 0;
+}
  
-sub file_trim{ 
-    my $file = [shift](http://perldoc.perl.org/functions/shift.html); 
-    $file = decode('utf8',$file); 
-    $file =~ s/['"\\\/&lt;&gt;\?\!:\|\*]/ /g; 
-    $file =~ s/^\s+//; 
-    $file =~ s/\s+$//; 
-    $file = encode('utf8',$file); 
-    $file; 
-} 
+sub file_trim{
+    my $file = [shift](http://perldoc.perl.org/functions/shift.html);
+    $file = decode('utf8',$file);
+    $file =~ s/['"\\\/&lt;&gt;\?\!:\|\*]/ /g;
+    $file =~ s/^\s+//;
+    $file =~ s/\s+$//;
+    $file = encode('utf8',$file);
+    $file;
+}
  
 __END__
 </code></pre>
@@ -305,7 +305,7 @@ __END__
               </div>
             </section>
             <footer class="page__meta">
-              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-08-09">2020 年 8 月 9 日</time></p>
+              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-11-09">2020 年 11 月 9 日</time></p>
             </footer>
             <nav class="pagination">
               <a href="/wiki/scripts/" class="pagination--pager" title="实用脚本集锦

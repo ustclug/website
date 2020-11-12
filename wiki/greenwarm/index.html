@@ -20,7 +20,7 @@
     <meta property="og:url" content="https://lug.ustc.edu.cn//wiki/greenwarm/">
     <meta property="og:description" content="引导技术浅析">
     <meta property="article:published_time" content="2020-08-09T18:46:14+08:00">
-    <meta property="article:modified_time" content="2020-08-09T18:46:14+08:00">
+    <meta property="article:modified_time" content="2020-11-09T14:22:35+08:00">
     <link rel="canonical" href="https://lug.ustc.edu.cn//wiki/greenwarm/">
     <script type="application/ld+json">
       {
@@ -57,7 +57,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=7c28c64a8">
+    <link rel="stylesheet" href="/assets/css/main.css?v=760ce535b">
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
       <style>
@@ -174,7 +174,7 @@
           <meta itemprop="headline" content="引导技术浅析">
           <meta itemprop="description" content="引导技术浅析">
           <meta itemprop="datePublished" content="2020-08-09T18:46:14+08:00">
-          <meta itemprop="dateModified" content="2020-08-09T18:46:14+08:00">
+          <meta itemprop="dateModified" content="2020-11-09T14:22:35+08:00">
           <div class="page__inner-wrap">
             <header>
               <h1 id="page-title" class="page__title" itemprop="headline">引导技术浅析
@@ -187,35 +187,35 @@
                     <h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4>
                   </header>
                   <ul class="toc__menu">
-                    <li><a href="#grub4dos快速入门">GRUB4DOS快速入门</a>
+                    <li><a href="#grub4dos-快速入门">GRUB4DOS 快速入门</a>
                       <ul>
-                        <li><a href="#为什么是grub4dos">为什么是grub4dos</a></li>
-                        <li><a href="#安装grub4dos">安装grub4dos</a></li>
-                        <li><a href="#使用grub4dos">使用grub4dos</a></li>
+                        <li><a href="#为什么是-grub4dos">为什么是 grub4dos</a></li>
+                        <li><a href="#安装-grub4dos">安装 grub4dos</a></li>
+                        <li><a href="#使用-grub4dos">使用 grub4dos</a></li>
                       </ul>
                     </li>
                   </ul>
                 </nav>
               </aside>
               <p>计算机从来不是聪明的“电脑”，它只是在硬件设计者和程序员的设计下按部就班地运行。</p>
-              <p>当计算机启动的时候它就需要这样的指示：“我现在该干嘛”。它不会主动地启动一个用户想要的系统，而是需要有个家伙，我们称之为loader来告诉它完成这件事情，这个过程就叫boot（引导）。</p>
-              <p>计算机需要从存有程序数据的媒介里获取这个loader，这个时候它开始访问CMOS芯片里的指定的媒介，从中寻找loader。对于不同的媒介，可以在各自的某段地址里找到最初的引导代码，这段地址就称为引导区。引导区的代码载入之后，计算机就有了文件访问等更强大的功能，便开始进行下一步的引导。</p>
+              <p>当计算机启动的时候它就需要这样的指示：“我现在该干嘛”。它不会主动地启动一个用户想要的系统，而是需要有个家伙，我们称之为 loader 来告诉它完成这件事情，这个过程就叫 boot（引导）。</p>
+              <p>计算机需要从存有程序数据的媒介里获取这个 loader，这个时候它开始访问 CMOS 芯片里的指定的媒介，从中寻找 loader。对于不同的媒介，可以在各自的某段地址里找到最初的引导代码，这段地址就称为引导区。引导区的代码载入之后，计算机就有了文件访问等更强大的功能，便开始进行下一步的引导。</p>
               <p>通常引导区的引导代码里指定了下一步的引导文件的位置和名称，于是计算机便据此载入引导文件，引导文件载入后的计算机更加强大，能够接收用户输入，并能交互地回显用户操作。</p>
               <p>接下来计算机开始寻找操作系统的内核，开始正式的系统启动过程。这时就不在我们讨论范围内了。</p>
-              <p>载入了loader的计算机通常是如上所说地引导操作系统内核，然而也可以再更换性地载入另一个loader，将计算机的上下文环境变为另一个loader。很多时候我们会需要这种强大的功能满足我们的需求。</p>
-              <p>grub，全称为GRand Unified Bootloader，就是一个功能十分强大的loader，它提供了多种引导方式，同时有很好的交互界面，能够方便设置各种引导环境和参数。</p>
-              <h1 id="grub4dos快速入门">GRUB4DOS快速入门</h1>
-              <h2 id="为什么是grub4dos">为什么是grub4dos</h2>
-              <p>grub4dos可以看作是grub的衍生版本，又从syslinux里吸取了一些东西。 grub4dos的优势大致如下：</p>
+              <p>载入了 loader 的计算机通常是如上所说地引导操作系统内核，然而也可以再更换性地载入另一个 loader，将计算机的上下文环境变为另一个 loader。很多时候我们会需要这种强大的功能满足我们的需求。</p>
+              <p>grub，全称为 GRand Unified Bootloader，就是一个功能十分强大的 loader，它提供了多种引导方式，同时有很好的交互界面，能够方便设置各种引导环境和参数。</p>
+              <h1 id="grub4dos-快速入门">GRUB4DOS 快速入门</h1>
+              <h2 id="为什么是-grub4dos">为什么是 grub4dos</h2>
+              <p>grub4dos 可以看作是 grub 的衍生版本，又从 syslinux 里吸取了一些东西。 grub4dos 的优势大致如下：</p>
               <ol>
                 <li>
-                  <p>精简，非常适合U盘使用，其程序文件只有一个，外加一个用于配置的menu.lst；</p>
+                  <p>精简，非常适合 U 盘使用，其程序文件只有一个，外加一个用于配置的 menu.lst；</p>
                 </li>
                 <li>
                   <p>引导扇区里的引导代码对主程序的寻找是自动的，也就是说当你安装好引导扇区里的引导代码后可以任意改变引导程序的位置（只要还是在根目录）；</p>
                 </li>
                 <li>
-                  <p>支持ntfs，且与Windows的loader可以完美地互相引导。鉴于现行的PC基本上都是Windows PC，经常有需要用的地方；</p>
+                  <p>支持 ntfs，且与 Windows 的 loader 可以完美地互相引导。鉴于现行的 PC 基本上都是 Windows PC，经常有需要用的地方；</p>
                 </li>
                 <li>
                   <p>方便的使用光盘/软盘镜像</p>
@@ -224,7 +224,7 @@
                   <p>国内研究较多，各种系统论坛都有相关的讨论和文档。</p>
                 </li>
               </ol>
-              <p>grub4dos也有一些缺点：</p>
+              <p>grub4dos 也有一些缺点：</p>
               <ol>
                 <li>
                   <p>可扩充性差，只支持固定的几种文件系统：fat32, ntfs, ext2/ext3/ext4；</p>
@@ -233,28 +233,28 @@
                   <p>兼容性下降，某些机型可能引导不起来。这也是功能增加的必然结果。</p>
                 </li>
               </ol>
-              <h2 id="安装grub4dos">安装grub4dos</h2>
-              <p>可以从grub4dos的主页<a href="http://download.gna.org/grub4dos/">http://download.gna.org/grub4dos/</a>获取grub4dos，解压后获取后面操作需要的文件。</p>
-              <p>grub4dos仅由两部分组成：处于任意一个可访问分区根目录的grldr主程序文件，用来引导扇区的引导代码。另外还有一个可选的配置文件menu.lst。</p>
+              <h2 id="安装-grub4dos">安装 grub4dos</h2>
+              <p>可以从 grub4dos 的主页<a href="http://download.gna.org/grub4dos/">http://download.gna.org/grub4dos/</a>获取 grub4dos，解压后获取后面操作需要的文件。</p>
+              <p>grub4dos 仅由两部分组成：处于任意一个可访问分区根目录的 grldr 主程序文件，用来引导扇区的引导代码。另外还有一个可选的配置文件 menu.lst。</p>
               <p>首先是安装引导代码：</p>
               <ul>
-                <li>Windows：可使用grubinst_gui，可从<a href="http://download.gna.org/grubutil/">http://download.gna.org/grubutil/</a>下载。</li>
+                <li>Windows：可使用 grubinst_gui，可从<a href="http://download.gna.org/grubutil/">http://download.gna.org/grubutil/</a>下载。</li>
               </ul>
               <p><a href="/wiki/_detail/greenwarm/grub4dos-installerf38c?id=greenwarm%3Astart" title="greenwarm:grub4dos-installer.png"><img src="/wiki/_media/greenwarm/grub4dos-installer.html" alt="" /></a></p>
               <ul>
                 <li>
                   <p>Linux:</p>
-                  <p>bootlace.com /dev/sdx（sdx为你的盘符）</p>
+                  <p>bootlace.com /dev/sdx（sdx 为你的盘符）</p>
                 </li>
               </ul>
               <p>接下来就是拷贝文件了，大家都会，一切搞定，就这么简单。</p>
-              <p>如果你用的是自己的主机，已经装了别的系统，有自己的loader，你也可以用系统的loader来引导grub4dos。这一步取代了引导代码的安装。</p>
+              <p>如果你用的是自己的主机，已经装了别的系统，有自己的 loader，你也可以用系统的 loader 来引导 grub4dos。这一步取代了引导代码的安装。</p>
               <ul>
                 <li>
-                  <p>grub引导</p>
+                  <p>grub 引导</p>
                 </li>
                 <li>
-                  <p>grub2引导</p>
+                  <p>grub2 引导</p>
                 </li>
                 <li>
                   <p>XP（ntldr）引导</p>
@@ -263,9 +263,9 @@
                   <p>Windows 7（bootmgr）引导</p>
                 </li>
               </ul>
-              <h2 id="使用grub4dos">使用grub4dos</h2>
-              <p>学习grub4dos最好的方法就是看人家的menu.lst，menu.lst里的每条title实际上就是一系列的grub引导命令。</p>
-              <p>下面贴一下我移动硬盘里的grub4dos的menu.lst：</p>
+              <h2 id="使用-grub4dos">使用 grub4dos</h2>
+              <p>学习 grub4dos 最好的方法就是看人家的 menu.lst，menu.lst 里的每条 title 实际上就是一系列的 grub 引导命令。</p>
+              <p>下面贴一下我移动硬盘里的 grub4dos 的 menu.lst：</p>
               <div class="language-plaintext highlighter-rouge">
                 <div class="highlight">
                   <pre class="highlight"><code># GRUB boot loader configuration.
@@ -304,7 +304,7 @@ initrd /ghos/ghost.img
 
 # 只有kernel和initrd和Live系统
 title SliTaz GNU/Linux
-kernel /slitaz/bzimage root=/dev/null vga=771 autologin 
+kernel /slitaz/bzimage root=/dev/null vga=771 autologin
 initrd /slitaz/rootfs.gz
 
 # 会自动挂载别的文件作为根文件系统镜像，Ubuntu还可以指定路径
@@ -351,7 +351,7 @@ chainloader /bootmgr
               </div>
             </section>
             <footer class="page__meta">
-              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-08-09">2020 年 8 月 9 日</time></p>
+              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-11-09">2020 年 11 月 9 日</time></p>
             </footer>
             <nav class="pagination">
               <a href="/wiki/doc/smart-questions/" class="pagination--pager" title="提问的智慧

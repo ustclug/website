@@ -9,18 +9,18 @@
   <head>
     <meta charset="utf-8">
     <!-- begin _includes/seo.html -->
-    <title>Centos镜像使用帮助 - LUG @ USTC</title>
-    <meta name="description" content="Centos镜像使用帮助">
+    <title>Centos 镜像使用帮助 - LUG @ USTC</title>
+    <meta name="description" content="Centos 镜像使用帮助">
     <meta name="author" content="USTCLUG">
     <meta property="article:author" content="USTCLUG">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="zh_CN">
     <meta property="og:site_name" content="LUG @ USTC">
-    <meta property="og:title" content="Centos镜像使用帮助">
+    <meta property="og:title" content="Centos 镜像使用帮助">
     <meta property="og:url" content="https://lug.ustc.edu.cn//wiki/mirrors/help/centos/">
-    <meta property="og:description" content="Centos镜像使用帮助">
+    <meta property="og:description" content="Centos 镜像使用帮助">
     <meta property="article:published_time" content="2020-08-09T15:07:59+08:00">
-    <meta property="article:modified_time" content="2020-08-09T18:18:19+08:00">
+    <meta property="article:modified_time" content="2020-11-09T14:22:35+08:00">
     <link rel="canonical" href="https://lug.ustc.edu.cn//wiki/mirrors/help/centos/">
     <script type="application/ld+json">
       {
@@ -57,7 +57,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=7c28c64a8">
+    <link rel="stylesheet" href="/assets/css/main.css?v=760ce535b">
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
       <style>
@@ -171,13 +171,13 @@
           </nav>
         </div>
         <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-          <meta itemprop="headline" content="Centos镜像使用帮助">
-          <meta itemprop="description" content="Centos镜像使用帮助">
+          <meta itemprop="headline" content="Centos 镜像使用帮助">
+          <meta itemprop="description" content="Centos 镜像使用帮助">
           <meta itemprop="datePublished" content="2020-08-09T15:07:59+08:00">
-          <meta itemprop="dateModified" content="2020-08-09T18:18:19+08:00">
+          <meta itemprop="dateModified" content="2020-11-09T14:22:35+08:00">
           <div class="page__inner-wrap">
             <header>
-              <h1 id="page-title" class="page__title" itemprop="headline">Centos镜像使用帮助
+              <h1 id="page-title" class="page__title" itemprop="headline">Centos 镜像使用帮助
               </h1>
             </header>
             <section class="page__content" itemprop="text">
@@ -216,15 +216,15 @@
                 </li>
               </ul>
               <h2 id="使用说明">使用说明</h2>
-              <p>首先备份CentOS-Base.repo</p>
+              <p>首先备份 CentOS-Base.repo</p>
               <div class="language-plaintext highlighter-rouge">
                 <div class="highlight">
                   <pre class="highlight"><code>mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
 </code></pre>
                 </div>
               </div>
-              <p>下载对应版本的CentOS-Base.repo, 放入/etc/yum.repos.d/</p>
-              <p>这是CentOS 5的:</p>
+              <p>下载对应版本的 CentOS-Base.repo, 放入/etc/yum.repos.d/</p>
+              <p>这是 CentOS 5 的:</p>
               <p><a href="/wiki/_export/code/mirrors/help/CentOS-Basecc37.repo?codeblock=1" title="下载片段">CentOS-Base.repo</a></p>
               <div class="language-plaintext highlighter-rouge">
                 <div class="highlight">
@@ -235,7 +235,7 @@
 # geographically close to the client.  You should use this for CentOS updates
 # unless you are manually picking other mirrors.
 #
-# If the mirrorlist= does not work for you, as a fall back you can try the 
+# If the mirrorlist= does not work for you, as a fall back you can try the
 # remarked out baseurl= line instead.
 #
 #
@@ -247,7 +247,7 @@ baseurl=http://mirrors.ustc.edu.cn/centos/$releasever/os/$basearch/
 gpgcheck=1
 gpgkey=http://mirrors.ustc.edu.cn/centos/RPM-GPG-KEY-CentOS-5
  
-#released updates 
+#released updates
 [updates]
 name=CentOS-$releasever - Updates - mirrors.ustc.edu.cn
 baseurl=http://mirrors.ustc.edu.cn/centos/$releasever/updates/$basearch/
@@ -291,7 +291,7 @@ gpgkey=http://mirrors.ustc.edu.cn/centos/RPM-GPG-KEY-CentOS-5
 </code></pre>
                 </div>
               </div>
-              <p>这是CentOS 6的:</p>
+              <p>这是 CentOS 6 的:</p>
               <p><a href="/wiki/_export/code/mirrors/help/CentOS-Basec273.repo?codeblock=2" title="下载片段">CentOS-Base.repo</a></p>
               <div class="language-plaintext highlighter-rouge">
                 <div class="highlight">
@@ -302,7 +302,7 @@ gpgkey=http://mirrors.ustc.edu.cn/centos/RPM-GPG-KEY-CentOS-5
 # geographically close to the client.  You should use this for CentOS updates
 # unless you are manually picking other mirrors.
 #
-# If the mirrorlist= does not work for you, as a fall back you can try the 
+# If the mirrorlist= does not work for you, as a fall back you can try the
 # remarked out baseurl= line instead.
 #
 #
@@ -314,7 +314,7 @@ baseurl=http://mirrors.ustc.edu.cn/centos/$releasever/os/$basearch/
 gpgcheck=1
 gpgkey=http://mirrors.ustc.edu.cn/centos/RPM-GPG-KEY-CentOS-6
  
-#released updates 
+#released updates
 [updates]
 name=CentOS-$releasever - Updates - mirrors.ustc.edu.cn
 baseurl=http://mirrors.ustc.edu.cn/centos/$releasever/updates/$basearch/
@@ -350,7 +350,7 @@ gpgkey=http://mirrors.ustc.edu.cn/centos/RPM-GPG-KEY-CentOS-6
 </code></pre>
                 </div>
               </div>
-              <p>这是CentOS 7的:</p>
+              <p>这是 CentOS 7 的:</p>
               <p><a href="/wiki/_export/code/mirrors/help/CentOS-Base4f98.repo?codeblock=3" title="下载片段">CentOS-Base.repo</a></p>
               <div class="language-plaintext highlighter-rouge">
                 <div class="highlight">
@@ -400,20 +400,20 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
 </code></pre>
                 </div>
               </div>
-              <p>运行yum makecache生成缓存</p>
+              <p>运行 yum makecache 生成缓存</p>
               <h2 id="相关链接">相关链接</h2>
-              <p>官方主页: <a href="http://www.centos.org/">http://www.centos.org/</a> <br />
+              <p>官方主页: <a href="http://www.centos.org/">http://www.centos.org/</a><br />
                 邮件列表: <a href="http://www.centos.org/modules/tinycontent/index.php?id=16">http://www.centos.org/modules/tinycontent/index.php?id=16</a><br />
-                论坛: <a href="http://www.centos.org/modules/newbb/">http://www.centos.org/modules/newbb/</a> <br />
-                文档: <a href="http://www.centos.org/docs/">http://www.centos.org/docs/</a> <br />
-                Wiki: <a href="http://wiki.centos.org/">http://wiki.centos.org/</a> <br />
+                论坛: <a href="http://www.centos.org/modules/newbb/">http://www.centos.org/modules/newbb/</a><br />
+                文档: <a href="http://www.centos.org/docs/">http://www.centos.org/docs/</a><br />
+                Wiki: <a href="http://wiki.centos.org/">http://wiki.centos.org/</a><br />
                 镜像列表: <a href="http://www.centos.org/modules/tinycontent/index.php?id=32">http://www.centos.org/modules/tinycontent/index.php?id=32</a></p>
             </section>
             <footer class="page__meta">
-              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-08-09">2020 年 8 月 9 日</time></p>
+              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-11-09">2020 年 11 月 9 日</time></p>
             </footer>
             <nav class="pagination">
-              <a href="/wiki/mirrors/help/brew/" class="pagination--pager" title="替换及重置Homebrew默认源
+              <a href="/wiki/mirrors/help/brew/" class="pagination--pager" title="替换及重置 Homebrew 默认源
 ">上一页</a>
               <a href="/wiki/mirrors/help/chakra/" class="pagination--pager" title="Chakra Linux 镜像使用帮助
 ">下一页</a>

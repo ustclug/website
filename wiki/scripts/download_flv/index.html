@@ -20,7 +20,7 @@
     <meta property="og:url" content="https://lug.ustc.edu.cn//wiki/scripts/download_flv/">
     <meta property="og:description" content="下载在线视频">
     <meta property="article:published_time" content="2020-08-09T15:07:59+08:00">
-    <meta property="article:modified_time" content="2020-08-09T18:18:19+08:00">
+    <meta property="article:modified_time" content="2020-11-09T14:22:35+08:00">
     <link rel="canonical" href="https://lug.ustc.edu.cn//wiki/scripts/download_flv/">
     <script type="application/ld+json">
       {
@@ -57,7 +57,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=7c28c64a8">
+    <link rel="stylesheet" href="/assets/css/main.css?v=760ce535b">
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
       <style>
@@ -174,7 +174,7 @@
           <meta itemprop="headline" content="下载在线视频">
           <meta itemprop="description" content="下载在线视频">
           <meta itemprop="datePublished" content="2020-08-09T15:07:59+08:00">
-          <meta itemprop="dateModified" content="2020-08-09T18:18:19+08:00">
+          <meta itemprop="dateModified" content="2020-11-09T14:22:35+08:00">
           <div class="page__inner-wrap">
             <header>
               <h1 id="page-title" class="page__title" itemprop="headline">下载在线视频
@@ -227,12 +227,12 @@ done
 </code></pre>
                 </div>
               </div>
-              <p>这将下载这个视频的4个部分，保存到$flv_dir这个目录下。</p>
-              <p>如果不需要下载，也可以直接使用mplayer等播放器播放：</p>
+              <p>这将下载这个视频的 4 个部分，保存到$flv_dir 这个目录下。</p>
+              <p>如果不需要下载，也可以直接使用 mplayer 等播放器播放：</p>
               <p><a href="/wiki/_export/code/scripts/play-videoc273.sh?codeblock=2" title="下载片段">play-video.sh</a></p>
               <div class="language-plaintext highlighter-rouge">
                 <div class="highlight">
-                  <pre class="highlight"><code>#! /bin/bash 
+                  <pre class="highlight"><code>#! /bin/bash
  
 wget -q -O- http://www.flvcd.com/parse.php?kw=$1 | grep "&lt;U&gt;" | sed s/\&lt;U\&gt;//g  | mplayer -playlist -
 </code></pre>
@@ -247,12 +247,12 @@ wget -q -O- http://www.flvcd.com/parse.php?kw=$1 | grep "&lt;U&gt;" | sed s/\&lt
               </div>
             </section>
             <footer class="page__meta">
-              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-08-09">2020 年 8 月 9 日</time></p>
+              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-11-09">2020 年 11 月 9 日</time></p>
             </footer>
             <nav class="pagination">
               <a href="/wiki/scripts/douban/" class="pagination--pager" title="豆瓣电台
 ">上一页</a>
-              <a href="/wiki/scripts/ssh_proxy/" class="pagination--pager" title="ssh代理
+              <a href="/wiki/scripts/ssh_proxy/" class="pagination--pager" title="ssh 代理
 ">下一页</a>
             </nav>
           </div>

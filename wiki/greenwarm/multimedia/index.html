@@ -9,18 +9,18 @@
   <head>
     <meta charset="utf-8">
     <!-- begin _includes/seo.html -->
-    <title>Linux的多媒体支持 - LUG @ USTC</title>
-    <meta name="description" content="Linux的多媒体支持">
+    <title>Linux 的多媒体支持 - LUG @ USTC</title>
+    <meta name="description" content="Linux 的多媒体支持">
     <meta name="author" content="USTCLUG">
     <meta property="article:author" content="USTCLUG">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="zh_CN">
     <meta property="og:site_name" content="LUG @ USTC">
-    <meta property="og:title" content="Linux的多媒体支持">
+    <meta property="og:title" content="Linux 的多媒体支持">
     <meta property="og:url" content="https://lug.ustc.edu.cn//wiki/greenwarm/multimedia/">
-    <meta property="og:description" content="Linux的多媒体支持">
+    <meta property="og:description" content="Linux 的多媒体支持">
     <meta property="article:published_time" content="2020-08-09T15:07:59+08:00">
-    <meta property="article:modified_time" content="2020-08-09T15:07:59+08:00">
+    <meta property="article:modified_time" content="2020-11-09T14:22:35+08:00">
     <link rel="canonical" href="https://lug.ustc.edu.cn//wiki/greenwarm/multimedia/">
     <script type="application/ld+json">
       {
@@ -57,7 +57,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=7c28c64a8">
+    <link rel="stylesheet" href="/assets/css/main.css?v=760ce535b">
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
       <style>
@@ -171,13 +171,13 @@
           </nav>
         </div>
         <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-          <meta itemprop="headline" content="Linux的多媒体支持">
-          <meta itemprop="description" content="Linux的多媒体支持">
+          <meta itemprop="headline" content="Linux 的多媒体支持">
+          <meta itemprop="description" content="Linux 的多媒体支持">
           <meta itemprop="datePublished" content="2020-08-09T15:07:59+08:00">
-          <meta itemprop="dateModified" content="2020-08-09T15:07:59+08:00">
+          <meta itemprop="dateModified" content="2020-11-09T14:22:35+08:00">
           <div class="page__inner-wrap">
             <header>
-              <h1 id="page-title" class="page__title" itemprop="headline">Linux的多媒体支持
+              <h1 id="page-title" class="page__title" itemprop="headline">Linux 的多媒体支持
               </h1>
             </header>
             <section class="page__content" itemprop="text">
@@ -194,7 +194,7 @@
                         <li><a href="#编码">编码</a></li>
                       </ul>
                     </li>
-                    <li><a href="#linux的多媒体框架">Linux的多媒体框架</a>
+                    <li><a href="#linux-的多媒体框架">Linux 的多媒体框架</a>
                       <ul>
                         <li><a href="#gstreamer">GStreamer</a></li>
                         <li><a href="#xine">Xine</a></li>
@@ -205,11 +205,11 @@
                         <li><a href="#handbrake">HandBrake</a></li>
                       </ul>
                     </li>
-                    <li><a href="#linux的编解码器">Linux的编解码器</a>
+                    <li><a href="#linux-的编解码器">Linux 的编解码器</a>
                       <ul>
-                        <li><a href="#神级的解码器libavcodec">神级的解码器libavcodec</a></li>
-                        <li><a href="#昔日王者的编码器xvid">昔日王者的编码器xvid</a></li>
-                        <li><a href="#前沿编码器x264">前沿编码器x264</a></li>
+                        <li><a href="#神级的解码器-libavcodec">神级的解码器 libavcodec</a></li>
+                        <li><a href="#昔日王者的编码器-xvid">昔日王者的编码器 xvid</a></li>
+                        <li><a href="#前沿编码器-x264">前沿编码器 x264</a></li>
                       </ul>
                     </li>
                     <li><a href="#解流与混流">解流与混流</a>
@@ -217,19 +217,19 @@
                         <li><a href="#mkvtoolnix">mkvtoolnix</a></li>
                       </ul>
                     </li>
-                    <li><a href="#用mplayer看影片">用Mplayer看影片</a>
+                    <li><a href="#用-mplayer-看影片">用 Mplayer 看影片</a>
                       <ul>
                         <li><a href="#设置编解码器和输出设备">设置编解码器和输出设备</a></li>
                         <li><a href="#设置字幕">设置字幕</a></li>
                         <li><a href="#关闭屏幕保护">关闭屏幕保护</a></li>
                       </ul>
                     </li>
-                    <li><a href="#用ffmpeg录屏">用ffmpeg录屏</a></li>
-                    <li><a href="#用handbrake转码">用HandBrake转码</a></li>
+                    <li><a href="#用-ffmpeg-录屏">用 ffmpeg 录屏</a></li>
+                    <li><a href="#用-handbrake-转码">用 HandBrake 转码</a></li>
                   </ul>
                 </nav>
               </aside>
-              <p>平时爱折腾多媒体方面的东西，对多媒体多少也有一点了解，下面分享一些Linux多媒体应用的见解，不足之处欢迎大家指正。</p>
+              <p>平时爱折腾多媒体方面的东西，对多媒体多少也有一点了解，下面分享一些 Linux 多媒体应用的见解，不足之处欢迎大家指正。</p>
               <p>本文的组织如下：前面是对整体情况的一些介绍，后面就是具体的应用了。</p>
               <h2 id="多媒体文件结构介绍">多媒体文件结构介绍</h2>
               <h3 id="音视频流">音视频流</h3>
@@ -238,36 +238,36 @@
               <p>音视频流封装在文件里的方式。</p>
               <h3 id="编码">编码</h3>
               <p>音视频流如果以原始编码的方式存储，将需占用巨大的空间，为此需要编码以达到压缩的目的。</p>
-              <h2 id="linux的多媒体框架">Linux的多媒体框架</h2>
+              <h2 id="linux-的多媒体框架">Linux 的多媒体框架</h2>
               <h3 id="gstreamer">GStreamer</h3>
-              <p>成熟，LGPL，因而被广泛使用。可以使用gstreamer-ffmpeg，还有gstreamer-pitfdll来使用Windows的Direct Show滤镜（win32codecs）。GNOME下有著名的前端Totem。</p>
+              <p>成熟，LGPL，因而被广泛使用。可以使用 gstreamer-ffmpeg，还有 gstreamer-pitfdll 来使用 Windows 的 Direct Show 滤镜（win32codecs）。GNOME 下有著名的前端 Totem。</p>
               <h3 id="xine">Xine</h3>
-              <p>另一个多媒体框架，GPL。曾经的亮点是可以wrapper Windows的DirectShow滤镜（win32codecs）。</p>
+              <p>另一个多媒体框架，GPL。曾经的亮点是可以 wrapper Windows 的 DirectShow 滤镜（win32codecs）。</p>
               <h3 id="mplayermencoder">Mplayer/Mencoder</h3>
-              <p>完整的多媒体平台。Mplayer是一个播放器，Mencoder是一个非常有名的转码器，Windows下很多转码工具其实都是它的前端。因为Mplayer主要是作为一个播放器，所以其对影音源的读取能力很强，包括各种DVD和蓝光DVD。通常，即使你使用ffmpeg制作DVDRip，也需要使用Mplayer来先将影音流dump出来。</p>
+              <p>完整的多媒体平台。Mplayer 是一个播放器，Mencoder 是一个非常有名的转码器，Windows 下很多转码工具其实都是它的前端。因为 Mplayer 主要是作为一个播放器，所以其对影音源的读取能力很强，包括各种 DVD 和蓝光 DVD。通常，即使你使用 ffmpeg 制作 DVDRip，也需要使用 Mplayer 来先将影音流 dump 出来。</p>
               <h3 id="vlc">VLC</h3>
-              <p>完整统一的多媒体平台。与Mplayer一样同时支持编解码和播放，同时对流媒体支持非常好，甚至用来在线播放ftp里的电影都非常稳定，可以作为流媒体服务器。 VLC提供了一个完整的框架，但是由于年纪轻，文档少，一些功能还有不稳定的因素，因此现在还不是最完美的方案，但我们有理由相信，也许将来VLC将成为主流的跨平台播放器。</p>
+              <p>完整统一的多媒体平台。与 Mplayer 一样同时支持编解码和播放，同时对流媒体支持非常好，甚至用来在线播放 ftp 里的电影都非常稳定，可以作为流媒体服务器。 VLC 提供了一个完整的框架，但是由于年纪轻，文档少，一些功能还有不稳定的因素，因此现在还不是最完美的方案，但我们有理由相信，也许将来 VLC 将成为主流的跨平台播放器。</p>
               <h3 id="xmms2">XMMS2</h3>
-              <p>精炼的音频播放框架。命令行参数十分友好，而且是以后台daemon的方式运行，因此是个非常好的命令行音乐播放器。</p>
+              <p>精炼的音频播放框架。命令行参数十分友好，而且是以后台 daemon 的方式运行，因此是个非常好的命令行音乐播放器。</p>
               <h3 id="ffmpeg">FFmpeg</h3>
-              <p>通用的转码平台，大牛Fabrice Bellard发起的项目，libavcodec就是其中最重要的一个组件，实际上上边很多播放器强大的解码能力都是由此项目提供的。 ffmpeg可以支持copy，可以用来从影片里提取声音，或者切割多媒体文件。由于它是作为一个转码平台，能够输出许多容器格式，因此在提取和切割方面十分强大。</p>
+              <p>通用的转码平台，大牛 Fabrice Bellard 发起的项目，libavcodec 就是其中最重要的一个组件，实际上上边很多播放器强大的解码能力都是由此项目提供的。 ffmpeg 可以支持 copy，可以用来从影片里提取声音，或者切割多媒体文件。由于它是作为一个转码平台，能够输出许多容器格式，因此在提取和切割方面十分强大。</p>
               <h3 id="handbrake">HandBrake</h3>
-              <p>针对视频收藏分享的转码平台，能够使用x264和xvid两种编码器，并最后封装成强大的mkv格式。各平台下都有相应的版本；GUI和CLI接口十分友好，参数设置方便，且可以从GUI生成命令行参数。</p>
-              <h2 id="linux的编解码器">Linux的编解码器</h2>
-              <h3 id="神级的解码器libavcodec">神级的解码器libavcodec</h3>
-              <p>FFmpeg中最重要的部分，对i386和arm指令集优化极高，遗憾地是现在对多核的支持还比较早期。</p>
-              <h3 id="昔日王者的编码器xvid">昔日王者的编码器xvid</h3>
-              <p>当年DVD Rip的事实标准格式。据说是MPEG4标准的一个实现，很多便携MP4都支持这种格式（通常是用avi封装）。</p>
-              <h3 id="前沿编码器x264">前沿编码器x264</h3>
-              <p>h264编码器的一个实现，现在几乎所有的高清电影都用这种格式和该编码器编码，将来应该会更加流行；普清视频也有用这种编码器编码，通常称为half cd，以提供较好的压缩率。 而且h264的软硬件解码已十分完善，很多显卡也支持h264硬件解码，同时也有可以接受的软件解码库。所以无论从压缩质量还是兼容性来说，都可以使用它来编码你的收藏视频。 ffmpeg和mencoder都有x264支持，只要在编译时开启了相应选项，就能直接在其中方便地使用x264。</p>
+              <p>针对视频收藏分享的转码平台，能够使用 x264 和 xvid 两种编码器，并最后封装成强大的 mkv 格式。各平台下都有相应的版本；GUI 和 CLI 接口十分友好，参数设置方便，且可以从 GUI 生成命令行参数。</p>
+              <h2 id="linux-的编解码器">Linux 的编解码器</h2>
+              <h3 id="神级的解码器-libavcodec">神级的解码器 libavcodec</h3>
+              <p>FFmpeg 中最重要的部分，对 i386 和 arm 指令集优化极高，遗憾地是现在对多核的支持还比较早期。</p>
+              <h3 id="昔日王者的编码器-xvid">昔日王者的编码器 xvid</h3>
+              <p>当年 DVD Rip 的事实标准格式。据说是 MPEG4 标准的一个实现，很多便携 MP4 都支持这种格式（通常是用 avi 封装）。</p>
+              <h3 id="前沿编码器-x264">前沿编码器 x264</h3>
+              <p>h264 编码器的一个实现，现在几乎所有的高清电影都用这种格式和该编码器编码，将来应该会更加流行；普清视频也有用这种编码器编码，通常称为 half cd，以提供较好的压缩率。 而且 h264 的软硬件解码已十分完善，很多显卡也支持 h264 硬件解码，同时也有可以接受的软件解码库。所以无论从压缩质量还是兼容性来说，都可以使用它来编码你的收藏视频。 ffmpeg 和 mencoder 都有 x264 支持，只要在编译时开启了相应选项，就能直接在其中方便地使用 x264。</p>
               <h2 id="解流与混流">解流与混流</h2>
               <h3 id="mkvtoolnix">mkvtoolnix</h3>
-              <p>MKV的推动者，最完美的MKV解决方案。可以从GUI生成命令行参数。</p>
-              <h2 id="用mplayer看影片">用Mplayer看影片</h2>
-              <p>Mplayer非常强大，不仅对ffmpeg的libavcodec支持非常好，还能调用各种外部的解码库；缺点是没有好用的GUI前端，Gnome Mplayer还不错，但是还是有些不足的细小地方，但是Mplayer的CLI是非常强大的。下面介绍~/.mplayer/config文件的配置。</p>
-              <p>顺便再提一个很shit的问题：如果你用的是A卡+fglrx的驱动，你需要使用gl模式的输出，原因如下：</p>
+              <p>MKV 的推动者，最完美的 MKV 解决方案。可以从 GUI 生成命令行参数。</p>
+              <h2 id="用-mplayer-看影片">用 Mplayer 看影片</h2>
+              <p>Mplayer 非常强大，不仅对 ffmpeg 的 libavcodec 支持非常好，还能调用各种外部的解码库；缺点是没有好用的 GUI 前端，Gnome Mplayer 还不错，但是还是有些不足的细小地方，但是 Mplayer 的 CLI 是非常强大的。下面介绍~/.mplayer/config 文件的配置。</p>
+              <p>顺便再提一个很 shit 的问题：如果你用的是 A 卡+fglrx 的驱动，你需要使用 gl 模式的输出，原因如下：</p>
               <p>Catalyst’s Xv implementation is broken (visual glitches, no vsync, wrong colors.) Xv with Catalyst is supposed to only have correct colors when you connect your card to a TV</p>
-              <p>无语了，不得不承认M$ PC机本来就不是为Linux设计的，在M$ PC机诞生之初，在M$ PC里装Linux是非法的。就好像现在刷路由器和手机一样，只不过现在只是保修没了而已。</p>
+              <p>无语了，不得不承认 M$ PC机本来就不是为Linux设计的，在M$ PC 机诞生之初，在 M$ PC 里装 Linux 是非法的。就好像现在刷路由器和手机一样，只不过现在只是保修没了而已。</p>
               <h3 id="设置编解码器和输出设备">设置编解码器和输出设备</h3>
               <div class="language-plaintext highlighter-rouge">
                 <div class="highlight">
@@ -297,28 +297,28 @@ subcp='enca:zh:cp936'
               <h3 id="关闭屏幕保护">关闭屏幕保护</h3>
               <div class="language-plaintext highlighter-rouge">
                 <div class="highlight">
-                  <pre class="highlight"><code>heartbeat-cmd="gnome-screensaver-command -p" 
+                  <pre class="highlight"><code>heartbeat-cmd="gnome-screensaver-command -p"
 </code></pre>
                 </div>
               </div>
-              <h2 id="用ffmpeg录屏">用ffmpeg录屏</h2>
+              <h2 id="用-ffmpeg-录屏">用 ffmpeg 录屏</h2>
               <div class="language-plaintext highlighter-rouge">
                 <div class="highlight">
                   <pre class="highlight"><code>ffmpeg -f x11grab -q 2 -r 15
 </code></pre>
                 </div>
               </div>
-              <h2 id="用handbrake转码">用HandBrake转码</h2>
-              <p>HandBrake本来主要是针对DVD收藏的，但由于其使用的解码前端是libavcodec，而现在libavcodec几乎已经支持所有格式，所以HandBrake已经可以作为一个通用的转码工具，输出编码是非常适合收藏的h264或xvid。我相机拍下来的影像都是用它来转码的。</p>
-              <p>HandBrake的操作是图形界面的，与普通的转码软件差不多，很容易适应，这里就不做赘述了。</p>
+              <h2 id="用-handbrake-转码">用 HandBrake 转码</h2>
+              <p>HandBrake 本来主要是针对 DVD 收藏的，但由于其使用的解码前端是 libavcodec，而现在 libavcodec 几乎已经支持所有格式，所以 HandBrake 已经可以作为一个通用的转码工具，输出编码是非常适合收藏的 h264 或 xvid。我相机拍下来的影像都是用它来转码的。</p>
+              <p>HandBrake 的操作是图形界面的，与普通的转码软件差不多，很容易适应，这里就不做赘述了。</p>
             </section>
             <footer class="page__meta">
-              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-08-09">2020 年 8 月 9 日</time></p>
+              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-11-09">2020 年 11 月 9 日</time></p>
             </footer>
             <nav class="pagination">
               <a href="/wiki/greenwarm/livedist/" class="pagination--pager" title="Live Linux 发行版
 ">上一页</a>
-              <a href="/wiki/greenwarm/remotedesktop/" class="pagination--pager" title="认识Linux远程桌面控制
+              <a href="/wiki/greenwarm/remotedesktop/" class="pagination--pager" title="认识 Linux 远程桌面控制
 ">下一页</a>
             </nav>
           </div>

@@ -20,7 +20,7 @@
     <meta property="og:url" content="https://lug.ustc.edu.cn//wiki/mirrors/help/aosp/">
     <meta property="og:description" content="AOSP(Android) 镜像使用帮助">
     <meta property="article:published_time" content="2020-08-09T15:07:59+08:00">
-    <meta property="article:modified_time" content="2020-08-09T15:07:59+08:00">
+    <meta property="article:modified_time" content="2020-11-09T14:22:35+08:00">
     <link rel="canonical" href="https://lug.ustc.edu.cn//wiki/mirrors/help/aosp/">
     <script type="application/ld+json">
       {
@@ -57,7 +57,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=7c28c64a8">
+    <link rel="stylesheet" href="/assets/css/main.css?v=760ce535b">
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
       <style>
@@ -174,7 +174,7 @@
           <meta itemprop="headline" content="AOSP(Android) 镜像使用帮助">
           <meta itemprop="description" content="AOSP(Android) 镜像使用帮助">
           <meta itemprop="datePublished" content="2020-08-09T15:07:59+08:00">
-          <meta itemprop="dateModified" content="2020-08-09T15:07:59+08:00">
+          <meta itemprop="dateModified" content="2020-11-09T14:22:35+08:00">
           <div class="page__inner-wrap">
             <header>
               <h1 id="page-title" class="page__title" itemprop="headline">AOSP(Android) 镜像使用帮助
@@ -187,8 +187,8 @@
                     <h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4>
                   </header>
                   <ul class="toc__menu">
-                    <li><a href="#初始同步方法1">初始同步方法1</a></li>
-                    <li><a href="#初始同步方法2">初始同步方法2</a></li>
+                    <li><a href="#初始同步方法-1">初始同步方法 1</a></li>
+                    <li><a href="#初始同步方法-2">初始同步方法 2</a></li>
                     <li><a href="#已有仓库如何改用科大源">已有仓库如何改用科大源</a></li>
                     <li><a href="#通过-http-协议同步不推荐">通过 HTTP 协议同步（不推荐）</a></li>
                     <li><a href="#说明">说明</a></li>
@@ -196,14 +196,14 @@
                   </ul>
                 </nav>
               </aside>
-              <h3 id="初始同步方法1">初始同步方法1</h3>
+              <h3 id="初始同步方法-1">初始同步方法 1</h3>
               <p>第一次同步数据量特别大，如果网络不稳定，中间失败就要从头再来了。所以我们提供了打包的 AOSP 镜像，为一个 tar 包，大约 16G（单文件 16G，注意你的磁盘格式要支持）。这样你 就可以通过 HTTP 的方式下载，该方法支持断点续传。</p>
               <p>下载地址 <a href="http://mirrors.ustc.edu.cn/aosp-monthly/">http://mirrors.ustc.edu.cn/aosp-monthly/</a></p>
               <p>请注意对比 checksum。</p>
               <p>然后根据下文 已有仓库如何改用科大源 的方法更改同步地址。</p>
               <p>解压后用命令 repo sync 就可以把代码都 checkout 出来。</p>
-              <p>Note: tar包为定时从 <a href="https://mirrors.tuna.tsinghua.edu.cn/aosp-monthly/">https://mirrors.tuna.tsinghua.edu.cn/aosp-monthly/</a> 下载。</p>
-              <h3 id="初始同步方法2">初始同步方法2</h3>
+              <p>Note: tar 包为定时从 <a href="https://mirrors.tuna.tsinghua.edu.cn/aosp-monthly/">https://mirrors.tuna.tsinghua.edu.cn/aosp-monthly/</a> 下载。</p>
+              <h3 id="初始同步方法-2">初始同步方法 2</h3>
               <p>按照 Google 官方教程 <a href="https://source.android.com/source/downloading.html">https://source.android.com/source/downloading.html</a></p>
               <p>将 <code class="language-plaintext highlighter-rouge">https://android.googlesource.com/platform/manifest</code> 替换为 <code class="language-plaintext highlighter-rouge">git://mirrors.ustc.edu.cn/aosp/platform/manifest</code> 。</p>
               <p>具体做法摘录如下（以防墙抽风）：</p>
@@ -286,7 +286,7 @@ cd WORKING_DIRECTORY
               <h3 id="说明">说明</h3>
               <ol>
                 <li>
-                  <p>本镜像每天凌晨 04:30 同步一次。同步可能需要较长时间，因此使用本镜像时建议避开凌晨 04:30～06:00 这段时间。</p>
+                  <p>本镜像每天凌晨 04:30 同步一次。同步可能需要较长时间，因此使用本镜像时建议避开凌晨 04:30 ～ 06:00 这段时间。</p>
                 </li>
                 <li>
                   <p>由于硬盘 I/O 资源有限，Git 服务器每 IP 限制 5 个并发连接。 <code class="language-plaintext highlighter-rouge">repo sync</code> 命令默认使用 4 个并发连接，请勿使用 <code class="language-plaintext highlighter-rouge">-j</code> 参数增加并发连接数。</p>
@@ -298,7 +298,7 @@ cd WORKING_DIRECTORY
               <p><code class="language-plaintext highlighter-rouge">repo init</code> 时，使用 <code class="language-plaintext highlighter-rouge">repo init -u git://mirrors.ustc.edu.cn/aosp/brillo/manifest -b master</code></p>
             </section>
             <footer class="page__meta">
-              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-08-09">2020 年 8 月 9 日</time></p>
+              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-11-09">2020 年 11 月 9 日</time></p>
             </footer>
             <nav class="pagination">
               <a href="/wiki/mirrors/help/anthon/" class="pagination--pager" title="AOSC OS 镜像源使用帮助
