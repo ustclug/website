@@ -1,6 +1,8 @@
 # LUG @ USTC 新版网站
 
-**前方施工**
+中国科学技术大学 Linux 用户协会的官方网站。（于 2020 年 8 月启用，所以称为“新版”）
+
+本仓库为源代码，所有推送到 master 分支的修改会使用 GitHub Actions 自动编译和部署。
 
 ## 添加与修改页面
 
@@ -29,11 +31,13 @@
 
    正式部署时需要添加环境变量 `JEKYLL_ENV=production`，详情请见 GitHub Actions 的 workflow 配置
 
-## Markdown 格式：在提交前使用 `prettier` format。
+## Markdown 格式化
+
+请在提交前使用 `prettier` 进行格式化。
 
 1. 安装 Node.js 开发环境（略）
-2. 运行 `npm install` 以安装 `prettier`
-3. 使用 `npx prettier --write .` 以 format。可以将不希望 `prettier` 处理的文件加入 `.prettierignore`，未来可能会加上 yml 和 scss 格式文件的处理
+2. 运行 `npm install` 以安装 prettier
+3. 使用 `npx prettier --write .` 自动格式化。可以将不希望 prettier 处理的文件加入 `.prettierignore`，未来可能会加上 YAML 和 SCSS 格式文件的处理
 4. 使用 `npx prettier --check .` 验证格式无问题
 
 ## 许可
