@@ -3,7 +3,10 @@ name: build
 on:
   push:
     branches:
-      - master
+      - '*'
+  pull_request:
+    branches:
+      - '*'
 
 jobs:
   build:
@@ -49,6 +52,7 @@ jobs:
       run: |
         npx prettier --check .
     - name: Prepare build
+      if: github.ref == 'refs/heads/master'
       run: |
         git clone --depth=1 --branch=gh-pages --single-branch --no-checkout \
           "https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" \
@@ -62,6 +66,7 @@ jobs:
         JEKYLL_ENV: production
         JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Deploy to GitHub Pages
+      if: github.ref == 'refs/heads/master'
       run: |
         CINFO="$(git log -1 --pretty="%an: [%h] %s")"
         pushd _site/ &>/dev/null
@@ -73,6 +78,7 @@ jobs:
         git push
         popd &>/dev/null
     - name: Call webhook
+      if: github.ref == 'refs/heads/master'
       env:
         WEBHOOK_SECRET: ${{ secrets.WEBHOOK_SECRET }}
       run: ruby _scripts/webhook.rb
