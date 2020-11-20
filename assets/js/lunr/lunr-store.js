@@ -558,13 +558,13 @@ var store = [{
 "teaser": null
 },{
 "title": "借阅记录",
-"excerpt":"如欲借阅图书，请参阅 图书借阅管理制度。 2020 年借阅记录 书名 借阅者 联系方式 借阅日期 归还日期 备注 陶哲轩实分析 王子博 hypercube AT 0x01.me 2020-01-07 2020-09-04 - 概率论与数理统计 袁一玮 totoroyyw AT ustclug.org 2020-01-13 2020-09-02 - 概率论与数理统计习题全解指南 袁一玮 totoroyyw AT ustclug.org 2020-01-13 2020-09-02 - 人工智能-一种现代的方法 付佳伟 ibug AT ustclug.org 2020-08-25 2020-09-13 - 并行计算-结构、算法编程 付佳伟 ibug AT ustclug.org 2020-08-25 2020-09-13 -...","categories": [],
+"excerpt":"如欲借阅图书，请参阅图书借阅管理制度。 2020 年借阅记录 书名 借阅者 联系方式 借阅日期 归还日期 备注 陶哲轩实分析 王子博 hypercube AT 0x01.me 2020-01-07 2020-09-04 - 概率论与数理统计 袁一玮 totoroyyw AT ustclug.org 2020-01-13 2020-09-02 - 概率论与数理统计习题全解指南 袁一玮 totoroyyw AT ustclug.org 2020-01-13 2020-09-02 - 人工智能-一种现代的方法 付佳伟 ibug AT ustclug.org 2020-08-25 2020-09-13 - 并行计算-结构、算法编程 付佳伟 ibug AT ustclug.org 2020-08-25 2020-09-13 - 并行计算-结构、算法编程...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/lug/book/borrow_history/",
 "teaser": null
 },{
 "title": "LUG 书库",
-"excerpt":"目前 LUG 活动室有一些 Linux 系统相关比较经典的书籍，有一部分是 LUG 购买的，有一部分是网友捐赠的。 我们同时非常欢迎童鞋们将自己手头不再需要的好书捐献出来。捐赠图书可以联系我们。 关于如何借阅，如何捐赠等问题可以参阅：图书借阅管理制度 借阅记录与黑名单：借阅记录 读书笔记汇总：读书笔记 给 LUG 书库推荐好书： 联系图书管理员 书单 书单的分类比较粗糙，有改进意见请联系图书管理员 以下信息可能已经过时，请访问新版 LUG 书库：https://library.ustclug.org/ Linux 入门 书名 作者 定价（￥） 备注 借阅情况 鸟哥的 Linux 私房菜 基础学习篇(第二版) 鸟哥 65 3 本 LUG 购置 2 QuITh 网友捐赠 1 借出 1 本 鸟哥的 Linux 私房菜 基础学习篇(第三版) 鸟哥 88.00...","categories": [],
+"excerpt":"目前 LUG 活动室有一些 Linux 系统相关比较经典的书籍，有一部分是 LUG 购买的，有一部分是网友捐赠的。 我们同时非常欢迎童鞋们将自己手头不再需要的好书捐献出来。捐赠图书可以联系我们。 关于如何借阅，如何捐赠等问题可以参阅：图书借阅管理制度 借阅记录与黑名单：借阅记录 读书笔记汇总：读书笔记 给 LUG 书库推荐好书：联系图书管理员 书单 书单的分类比较粗糙，有改进意见请联系图书管理员 以下信息可能已经过时，请访问新版 LUG 书库：https://library.ustclug.org/ Linux 入门 书名 作者 定价（￥） 备注 借阅情况 鸟哥的 Linux 私房菜 基础学习篇(第二版) 鸟哥 65 3 本 LUG 购置 2 QuITh 网友捐赠 1 借出 1 本 鸟哥的 Linux 私房菜 基础学习篇(第三版) 鸟哥 88.00 2...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/lug/book/",
 "teaser": null
@@ -588,13 +588,13 @@ var store = [{
 "teaser": null
 },{
 "title": "LUG 日历",
-"excerpt":"目前使用Google 日历 ，如果您在国内访问遇到困难，请尝试使用 USTCLUG 提供的网络加速服务或者访问与此日历同步的 localendar 。   (活动的具体时间和地点可以通过点击活动查看详情获取）   也可将下面的 ics 地址加入其他日历软件中： ustclug.ics    ","categories": [],
+"excerpt":"目前使用Google 日历，如果您在国内访问遇到困难，请尝试使用 USTCLUG 提供的网络加速服务或者访问与此日历同步的 localendar 。   (活动的具体时间和地点可以通过点击活动查看详情获取）   也可将下面的 ics 地址加入其他日历软件中： ustclug.ics    ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/lug/events/calendar/",
 "teaser": null
 },{
 "title": "信息安全大赛",
-"excerpt":"科大信息安全大赛自 2014 年起已经连续举办六届，往届比赛均顺利举行，规模盛大，影响甚广。每年的比赛在新生入学季举行，向新生倾斜，赛前有动员会，对基础较薄弱的同学进行一些指导，比赛题目控制难度梯度，强调引导和教育作用，除常规奖项外并设立新生特别奖、Ada 奖等奖项鼓励同学们参加竞赛。考虑到同学们课业负担较重，比赛为期一周，在线上举行。   相关链接            中国科学技术大学第六届信息安全大赛（2019）             中国科学技术大学第五届信息安全大赛（2018）             中国科学技术大学第四届信息安全大赛（2017）      ","categories": [],
+"excerpt":"科大信息安全大赛自 2014 年起已经连续举办六届，往届比赛均顺利举行，规模盛大，影响甚广。每年的比赛在新生入学季举行，向新生倾斜，赛前有动员会，对基础较薄弱的同学进行一些指导，比赛题目控制难度梯度，强调引导和教育作用，除常规奖项外并设立新生特别奖、Ada 奖等奖项鼓励同学们参加竞赛。考虑到同学们课业负担较重，比赛为期一周，在线上举行。   相关链接           中国科学技术大学第六届信息安全大赛（2019）            中国科学技术大学第五届信息安全大赛（2018）            中国科学技术大学第四届信息安全大赛（2017）      ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/lug/events/hackergame/",
 "teaser": null
@@ -1152,7 +1152,7 @@ var store = [{
 "teaser": null
 },{
 "title": "使用 chroot 编译 android",
-"excerpt":"请直接参考参考资料   安装 dchroot 和 debootstrap   $ sudo aptitude install dchroot debootstrap   更改配置文件   $ sudo tee -a /etc/schroot/schroot.conf &lt;&lt;EOF [lucid] description=Ubuntu 10.04 LTS (Lucid Lynx) location=/var/chroot/lucid priority=3 users=pdecat groups=pdecat root-groups=root EOF   安装 Ubuntu10.04   $ sudo debootstrap --variant=buildd --arch amd64 lucid /var/chroot/lucid http://mirrors.ustc.edu.cn/ubuntu/   参考资料   http://blog.decat.org/aosp-step-by-step-instructions-for-setting-up-a-chrooted-ubuntu-10-04-64bit-build-environment-on-ubuntu-11-10-and-12-04-hosts/   图书馆查询机系统的制作与启动过程   ","categories": [],
+"excerpt":"请直接参考参考资料   安装 dchroot 和 debootstrap   $ sudo aptitude install dchroot debootstrap   更改配置文件   $ sudo tee -a /etc/schroot/schroot.conf &lt;&lt;EOF [lucid] description=Ubuntu 10.04 LTS (Lucid Lynx) location=/var/chroot/lucid priority=3 users=pdecat groups=pdecat root-groups=root EOF   安装 Ubuntu10.04   $ sudo debootstrap --variant=buildd --arch amd64 lucid /var/chroot/lucid http://mirrors.ustc.edu.cn/ubuntu/   参考资料   http://blog.decat.org/aosp-step-by-step-instructions-for-setting-up-a-chrooted-ubuntu-10-04-64bit-build-environment-on-ubuntu-11-10-and-12-04-hosts/  图书馆查询机系统的制作与启动过程  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/user/sadhen/android/",
 "teaser": null
@@ -1164,13 +1164,13 @@ var store = [{
 "teaser": null
 },{
 "title": "《黑客与画家》读书笔记",
-"excerpt":"Fenng 说这本书的三个主要的主题是黑客精神、创业和编程语言，我深以为然。当然，这本书还涉及到了其它很多有意思的话题。比如不能说的话、财富等等。 翻译经常是一件吃力不讨好的事。即使翻译的再好，如果原著本身很经典的话，大家都还是喜欢看原著。当然，像《歌德尔、爱舍尔、巴赫》之类的书得排除在外。本书的译者是 阮一峰，其译文和博客行文流畅自然，都值得一读。 关于财富 人们往往因为财富的分配而忽略了财富的创造。人们常常抱怨财富分配的不均匀。这很正常，没有一种分配方式能让所有人觉得公平公正。然而人们在抱怨分配不均时，往往会犯一个认知上的错误，即财富的总量是个 const。然而，人类社会的财富实实在在是在不断甚至是以极快的速度在增长着。所以，获得财富的手段是争取财富分配上的增加或者直接创造财富。后者即创业。 黑客们喜欢创造。有些创造可能仅仅是黑客们自己把玩的玩具。有些则转化为我们人类社会的财富。 禁忌 人类社会的禁忌并不常常是合理的。有些源于历史上的无知，然而不幸的传承了下来。黑客们不喜欢禁忌，黑客们向往自由。然而有时候，黑客们也只能是沉默的大多数。关于这个话题，详见《黑客与画家》第三章。 编程语言 本书中提到了 LISP 这门古老而极具生命力的编程语言，也谈论了一些作者本人对编程语言的看法。本人对编程语言的了解十分有限。下面是我的看法。 哪种编程语言最好 经常在邮件列表里面看到一群人，为了自己喜爱的编程语言争论。那么哪种语言最好呢？其实往往这些问题的提出者不怀好意，或者不知道如何提问？这种人通常被称为 Troll。 那么哪种语言最好呢？ 首先能回答这个问题的人必须是了解至少两门编程语言的人。否则谈何比较？！ 其次，如果要讨论好不好的问题，首先需要度量好坏的标准，在这些标准下面，这个问题才真正具有意义。总不能说“我喜欢它，它就是好，这不需要理由！”。实际上，从编程语言的历史上看，一门语言的出现往往是因为某种需求，或者是解决现有的一些编程语言存在的问题。而且在设计编程语言的过程中，很难避免 trade offs——为了某些特性，就必须得牺牲另外一些特性。 问：争论，到底怎样才好？ 讨论过程中难免争论，局内人争个热火朝天，局外人看个不明所以。网上的争论尤为如此，经常是断章取义，且双方似乎互相理解不了对方的文字。 我的观点是在讨论过程中，尽量考虑阅读者的感受，另外要含有一定的信息量，而不是噪音。 问：LISP 家族的后代会是“好”的语言吗？ 问：编程语言的本质是什么？ 计算的本质是什么？ 问：理想的编程语言是怎样的？ Guile: 作为一种扩展语言 以上的一些问题是我思考过，有些得到了自己答案，有些还没有想明白。寒假趁闲， 接触 了一下 scheme。接触即平时也只是用 Guile，简单的试一下自己写的 scheme 代码能不能运行，结果是不是符合预期。 目前在读《The Little Schemer》，此书且不论内容，形式上便令人耳目一新： 阿基里斯：《The Little Schemer》讲的是什么？ 乌龟：讲的是计算的本质。 阿基里斯： 计算机的本质是什么？ 乌龟： 是计算的本质，不是计算机的本质。...","categories": [],
+"excerpt":"Fenng 说这本书的三个主要的主题是黑客精神、创业和编程语言，我深以为然。当然，这本书还涉及到了其它很多有意思的话题。比如不能说的话、财富等等。 翻译经常是一件吃力不讨好的事。即使翻译的再好，如果原著本身很经典的话，大家都还是喜欢看原著。当然，像《歌德尔、爱舍尔、巴赫》之类的书得排除在外。本书的译者是阮一峰，其译文和博客行文流畅自然，都值得一读。 关于财富 人们往往因为财富的分配而忽略了财富的创造。人们常常抱怨财富分配的不均匀。这很正常，没有一种分配方式能让所有人觉得公平公正。然而人们在抱怨分配不均时，往往会犯一个认知上的错误，即财富的总量是个 const。然而，人类社会的财富实实在在是在不断甚至是以极快的速度在增长着。所以，获得财富的手段是争取财富分配上的增加或者直接创造财富。后者即创业。 黑客们喜欢创造。有些创造可能仅仅是黑客们自己把玩的玩具。有些则转化为我们人类社会的财富。 禁忌 人类社会的禁忌并不常常是合理的。有些源于历史上的无知，然而不幸的传承了下来。黑客们不喜欢禁忌，黑客们向往自由。然而有时候，黑客们也只能是沉默的大多数。关于这个话题，详见《黑客与画家》第三章。 编程语言 本书中提到了 LISP 这门古老而极具生命力的编程语言，也谈论了一些作者本人对编程语言的看法。本人对编程语言的了解十分有限。下面是我的看法。 哪种编程语言最好 经常在邮件列表里面看到一群人，为了自己喜爱的编程语言争论。那么哪种语言最好呢？其实往往这些问题的提出者不怀好意，或者不知道如何提问？这种人通常被称为Troll。 那么哪种语言最好呢？ 首先能回答这个问题的人必须是了解至少两门编程语言的人。否则谈何比较？！ 其次，如果要讨论好不好的问题，首先需要度量好坏的标准，在这些标准下面，这个问题才真正具有意义。总不能说“我喜欢它，它就是好，这不需要理由！”。实际上，从编程语言的历史上看，一门语言的出现往往是因为某种需求，或者是解决现有的一些编程语言存在的问题。而且在设计编程语言的过程中，很难避免 trade offs——为了某些特性，就必须得牺牲另外一些特性。 问：争论，到底怎样才好？ 讨论过程中难免争论，局内人争个热火朝天，局外人看个不明所以。网上的争论尤为如此，经常是断章取义，且双方似乎互相理解不了对方的文字。 我的观点是在讨论过程中，尽量考虑阅读者的感受，另外要含有一定的信息量，而不是噪音。 问：LISP 家族的后代会是“好”的语言吗？ 问：编程语言的本质是什么？ 计算的本质是什么？ 问：理想的编程语言是怎样的？ Guile: 作为一种扩展语言 以上的一些问题是我思考过，有些得到了自己答案，有些还没有想明白。寒假趁闲， 接触 了一下 scheme。接触即平时也只是用Guile，简单的试一下自己写的 scheme 代码能不能运行，结果是不是符合预期。 目前在读《The Little Schemer》，此书且不论内容，形式上便令人耳目一新： 阿基里斯：《The Little Schemer》讲的是什么？ 乌龟：讲的是计算的本质。 阿基里斯： 计算机的本质是什么？ 乌龟： 是计算的本质，不是计算机的本质。 ……（这是我杜撰两个问答） Guile 是...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/user/sadhen/hackers_and_painters/",
 "teaser": null
 },{
 "title": "About Me",
-"excerpt":"我的笔记   1.使用 chroot 编译 android   2.Emacs 读书笔记   3.《黑客与画家》读书笔记   我的 Slides   1.Bash Scripting   2.python2-networkx 可视化    LOG   2014/10/21：给本 dokuwiki 安装了 markdownku 插件，插件主页  ","categories": [],
+"excerpt":"我的笔记   1.使用 chroot 编译 android   2.Emacs 读书笔记   3.《黑客与画家》读书笔记   我的 Slides   1.Bash Scripting   2.python2-networkx 可视化   LOG   2014/10/21：给本 dokuwiki 安装了 markdownku 插件，插件主页  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/user/sadhen/",
 "teaser": null
