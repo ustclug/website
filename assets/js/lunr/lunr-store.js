@@ -678,7 +678,7 @@ var store = [{
 "teaser": null
 },{
 "title": "资源导航",
-"excerpt":"本站其他内容   这里的链接都指向本站（非 wiki）的其他内容。   LUG 官方内容   Linux 入门公开课（试验版）   Linux 入门公开课是 2014 年春社团活动的成果，包含当时社团成员的授课录像与演示文稿。   由于是第一次试验，内容多有不足，请多包涵。   LUG FTP   LUG FTP 是社团内部的 FTP 服务，主要用来存储历史文件、存放学习资料。LUG FTP 的用户名与密码均为 ftp。   LUG FTP 也可通过 HTTP 只读访问文件，请点这里。请注意 ebook 目录暂时不提供 HTTP 访问。     友情托管   winland0704 在 LUG 主页服务器上托管了以下两个文档项目。   openSUSE 非官方指南   openSUSE 非官方指南为官方指南的非正式中译版本，可供参考。   Qt 编程指南   Qt 编程指南 是作者正在写作中的一本书。 *[FTP]: File Transfer Protocol  ","categories": [],
+"excerpt":"本站其他内容   这里的链接都指向本站（非 wiki）的其他内容。   LUG 官方内容   Linux 入门公开课（试验版）   Linux 入门公开课是 2014 年春社团活动的成果，包含当时社团成员的授课录像与演示文稿。   由于是第一次试验，内容多有不足，请多包涵。   LUG FTP   LUG FTP 是社团内部的 FTP1 服务，主要用来存储历史文件、存放学习资料。请发送邮件给我们，以获取 FTP 公开账户的用户名与密码。   LUG FTP 也可通过 HTTP 只读访问文件，请点这里。请注意 ebook 等部分目录不提供 HTTP 访问。     友情托管   winland0704 在 LUG 主页服务器上托管了以下两个文档项目。   openSUSE 非官方指南   openSUSE 非官方指南为官方指南的非正式中译版本，可供参考。   Qt 编程指南   Qt 编程指南 是作者正在写作中的一本书。                  File Transfer Protocol &#8617;           ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/lug/resources/",
 "teaser": null
@@ -768,7 +768,7 @@ var store = [{
 "teaser": null
 },{
 "title": "Arch Linux ARM 镜像使用帮助",
-"excerpt":"Arch Linux ARM 是针对 ARM 架构移植的 Arch Linux 发行版。您可以使用它的默认镜像源 http://mirror.archlinuxarm.org/ ，它会自动解析到离用户较近的镜像，也可以手动设置我们的镜像源。   收录架构           ARMv5            ARMv6            ARMv7            AArch64       快速设置   编辑 /etc/pacman.d/mirrorlist ，先注释掉里面的所有行，然后在文件的最顶端添加   mirrorlist   Server = https://mirrors.ustc.edu.cn/archlinuxarm/$arch/$repo   相关链接           官方主页 http://archlinuxarm.org/            Github https://github.com/archlinuxarm            论坛 http://archlinuxarm.org/forum/            FAQ http://archlinuxarm.org/support/faq            镜像列表 http://archlinuxarm.org/about/mirrors       *[FAQ]: Frequently Asked Questions  ","categories": [],
+"excerpt":"Arch Linux ARM 是针对 ARM 架构移植的 Arch Linux 发行版。您可以使用它的默认镜像源 http://mirror.archlinuxarm.org/ ，它会自动解析到离用户较近的镜像，也可以手动设置我们的镜像源。   收录架构           ARMv5            ARMv6            ARMv7            AArch64       快速设置   编辑 /etc/pacman.d/mirrorlist ，先注释掉里面的所有行，然后在文件的最顶端添加   mirrorlist   Server = https://mirrors.ustc.edu.cn/archlinuxarm/$arch/$repo   相关链接           官方主页 http://archlinuxarm.org/            Github https://github.com/archlinuxarm            论坛 http://archlinuxarm.org/forum/            FAQ1 http://archlinuxarm.org/support/faq            镜像列表 http://archlinuxarm.org/about/mirrors                      Frequently Asked Questions &#8617;           ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/archlinuxarm/",
 "teaser": null
@@ -978,7 +978,7 @@ var store = [{
 "teaser": null
 },{
 "title": "NPM 镜像使用帮助",
-"excerpt":"中科大镜像站的 npm 镜像是 https://registry.npmjs.org/ 的反代。   使用说明   编辑 ~/.npmrc ，添加   registry=http://npmreg.mirrors.ustc.edu.cn/   若不想将本源设置为默认源，只想使用本源安装某个软件包，可在安装包时采用以下用法：   npm --registry http://npmreg.mirrors.ustc.edu.cn install &lt;packagename&gt;   中科大 npm 镜像支持 https 安全连接，如果您的网络运营商部署了缓存设备，或您对所处的网络环境不信任，请使用 https 替换上述 URL 中的 http 。   注意事项   不支持 publish，若出现错误，请将 ~/.npmrc 中的用户名密码部分注释掉，并删除缓存 ( rm -rf ~/.npm ) 重试。   相关链接   官方主页: https://www.npmjs.org/ *[URL]: Uniform Resource Locator  ","categories": [],
+"excerpt":"中科大镜像站的 npm 镜像是 https://registry.npmjs.org/ 的反代。   使用说明   编辑 ~/.npmrc ，添加   registry=http://npmreg.mirrors.ustc.edu.cn/   若不想将本源设置为默认源，只想使用本源安装某个软件包，可在安装包时采用以下用法：   npm --registry http://npmreg.mirrors.ustc.edu.cn install &lt;packagename&gt;   中科大 npm 镜像支持 https 安全连接，如果您的网络运营商部署了缓存设备，或您对所处的网络环境不信任，请使用 https 替换上述 URL1 中的 http 。   注意事项   不支持 publish，若出现错误，请将 ~/.npmrc 中的用户名密码部分注释掉，并删除缓存 ( rm -rf ~/.npm ) 重试。   相关链接   官方主页: https://www.npmjs.org/                  Uniform Resource Locator &#8617;           ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/npm/",
 "teaser": null
