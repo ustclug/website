@@ -28,4 +28,4 @@
 ## 参考资料
 
 <http://blog.decat.org/aosp-step-by-step-instructions-for-setting-up-a-chrooted-ubuntu-10-04-64bit-build-environment-on-ubuntu-11-10-and-12-04-hosts/>  
-[ 图书馆查询机系统的制作与启动过程 ](http://lug.ustc.edu.cn/~guo/doc/library_query_os.pdf "http://lug.ustc.edu.cn/~guo/doc/library_query_os.pdf")
+[图书馆查询机系统的制作与启动过程](http://lug.ustc.edu.cn/~guo/doc/library_query_os.pdf "http://lug.ustc.edu.cn/~guo/doc/library_query_os.pdf")

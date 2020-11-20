@@ -14,7 +14,7 @@ permalink: /wiki/lug/book/
 
 读书笔记汇总：[读书笔记](booknotes "lug:book:booknotes")
 
-给 LUG 书库推荐好书：[ 联系图书管理员](mailto:lug@ustc.edu.cn "lug@ustc.edu.cn")
+给 LUG 书库推荐好书：[联系图书管理员](mailto:lug@ustc.edu.cn "lug@ustc.edu.cn")
 
 # 书单
 
@@ -28,8 +28,8 @@ permalink: /wiki/lug/book/
 | --------------------------------------------------------------------------------------------------------------------------- | ------------ | ---------- | ------------------------------------------ | --------- |
 | [鸟哥的 Linux 私房菜 基础学习篇(第二版)](http://book.douban.com/subject/2208530/ "http://book.douban.com/subject/2208530/") | 鸟哥         | 65         | 3 本 <br> LUG 购置 2 <br> QuITh 网友捐赠 1 | 借出 1 本 |
 | [鸟哥的 Linux 私房菜 基础学习篇(第三版)](http://book.douban.com/subject/4889838/ "http://book.douban.com/subject/4889838/") | 鸟哥         | 88.00      | 2 本 <br> LUG 购置                         | 借出 2 本 |
-| [完美应用 Ubuntu ](http://book.douban.com/subject/3192043/ "http://book.douban.com/subject/3192043/")                       | Ubuntu China | 55         | LUG 购置                                   | -         |
-| [从零开始学 Linux ](http://book.douban.com/subject/10876230/ "http://book.douban.com/subject/10876230/")                    | 粱丽平、马飞 | 45         | lizitian 捐赠                              | -         |
+| [完美应用 Ubuntu](http://book.douban.com/subject/3192043/ "http://book.douban.com/subject/3192043/")                        | Ubuntu China | 55         | LUG 购置                                   | -         |
+| [从零开始学 Linux](http://book.douban.com/subject/10876230/ "http://book.douban.com/subject/10876230/")                     | 粱丽平、马飞 | 45         | lizitian 捐赠                              | -         |
 
 ## Linux 服务器运维
 

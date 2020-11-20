@@ -43,24 +43,24 @@
 
 ### 《程序员的自我修养》
 
-| 笔记                                                                                               | 作者 |
-| -------------------------------------------------------------------------------------------------- | ---- |
-| [ 《程序员的自我修养》读书笔记](/wiki/user/boj/linkers-and-loaders "user:boj:linkers-and-loaders") | boj  |
+| 笔记                                                                                              | 作者 |
+| ------------------------------------------------------------------------------------------------- | ---- |
+| [《程序员的自我修养》读书笔记](/wiki/user/boj/linkers-and-loaders "user:boj:linkers-and-loaders") | boj  |
 
 ### 《Advanced Bash Scripting》
 
-| 笔记                                                                                                                                                                                                                                                                                         | 作者   |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| [ ABS 读书笔记](https://docs.google.com/viewer?a=v&pid=forums&srcid=MTEyMTI5NjU4NzM3MTAwMzI3NTYBMDA3NDQzNTE1OTMyMTE5NTAzNjYBdHlHMW9hNTVSVmNKATQBAXYy "https://docs.google.com/viewer?a=v&pid=forums&srcid=MTEyMTI5NjU4NzM3MTAwMzI3NTYBMDA3NDQzNTE1OTMyMTE5NTAzNjYBdHlHMW9hNTVSVmNKATQBAXYy") | sadhen |
+| 笔记                                                                                                                                                                                                                                                                                        | 作者   |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| [ABS 读书笔记](https://docs.google.com/viewer?a=v&pid=forums&srcid=MTEyMTI5NjU4NzM3MTAwMzI3NTYBMDA3NDQzNTE1OTMyMTE5NTAzNjYBdHlHMW9hNTVSVmNKATQBAXYy "https://docs.google.com/viewer?a=v&pid=forums&srcid=MTEyMTI5NjU4NzM3MTAwMzI3NTYBMDA3NDQzNTE1OTMyMTE5NTAzNjYBdHlHMW9hNTVSVmNKATQBAXYy") | sadhen |
 
 ### 《完美应用 Ubuntu》
 
-| 笔记                                                                                                                                                                                                                                                                                                        | 作者     |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
-| [ 《完美应用 Ubuntu》读书笔记](https://docs.google.com/viewer?a=v&pid=forums&srcid=MTEyMTI5NjU4NzM3MTAwMzI3NTYBMDI0OTc3OTgyNDEzNDg2NzgyNTcBMHdGUXFWd09Od2dKATQBAXYy "https://docs.google.com/viewer?a=v&pid=forums&srcid=MTEyMTI5NjU4NzM3MTAwMzI3NTYBMDI0OTc3OTgyNDEzNDg2NzgyNTcBMHdGUXFWd09Od2dKATQBAXYy") | RaoYamin |
+| 笔记                                                                                                                                                                                                                                                                                                       | 作者     |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| [《完美应用 Ubuntu》读书笔记](https://docs.google.com/viewer?a=v&pid=forums&srcid=MTEyMTI5NjU4NzM3MTAwMzI3NTYBMDI0OTc3OTgyNDEzNDg2NzgyNTcBMHdGUXFWd09Od2dKATQBAXYy "https://docs.google.com/viewer?a=v&pid=forums&srcid=MTEyMTI5NjU4NzM3MTAwMzI3NTYBMDI0OTc3OTgyNDEzNDg2NzgyNTcBMHdGUXFWd09Od2dKATQBAXYy") | RaoYamin |
 
 ### 《鸟哥的私房菜》
 
-| 笔记                                                                                                                                                                                                                                                                                                 | 作者 |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
-| [ 鸟哥的私房菜读书笔记](https://docs.google.com/viewer?a=v&pid=forums&srcid=MTEyMTI5NjU4NzM3MTAwMzI3NTYBMDA2NTI2MTcyOTgzMTA0ODc2MjUBOTcxTE5PUGhFNWdKATQBAXYy "https://docs.google.com/viewer?a=v&pid=forums&srcid=MTEyMTI5NjU4NzM3MTAwMzI3NTYBMDA2NTI2MTcyOTgzMTA0ODc2MjUBOTcxTE5PUGhFNWdKATQBAXYy") | 未知 |
+| 笔记                                                                                                                                                                                                                                                                                                | 作者 |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
+| [鸟哥的私房菜读书笔记](https://docs.google.com/viewer?a=v&pid=forums&srcid=MTEyMTI5NjU4NzM3MTAwMzI3NTYBMDA2NTI2MTcyOTgzMTA0ODc2MjUBOTcxTE5PUGhFNWdKATQBAXYy "https://docs.google.com/viewer?a=v&pid=forums&srcid=MTEyMTI5NjU4NzM3MTAwMzI3NTYBMDA2NTI2MTcyOTgzMTA0ODc2MjUBOTcxTE5PUGhFNWdKATQBAXYy") | 未知 |

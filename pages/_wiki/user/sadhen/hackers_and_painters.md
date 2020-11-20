@@ -3,9 +3,9 @@
 
 # 《黑客与画家》读书笔记
 
-[ Fenng](http://dbanotes.net/review/Hackers_and_Painters.html "http://dbanotes.net/review/Hackers_and_Painters.html") 说这本书的三个主要的主题是黑客精神、创业和编程语言，我深以为然。当然，这本书还涉及到了其它很多有意思的话题。比如不能说的话、财富等等。
+[Fenng](http://dbanotes.net/review/Hackers_and_Painters.html "http://dbanotes.net/review/Hackers_and_Painters.html") 说这本书的三个主要的主题是黑客精神、创业和编程语言，我深以为然。当然，这本书还涉及到了其它很多有意思的话题。比如不能说的话、财富等等。
 
-翻译经常是一件吃力不讨好的事。即使翻译的再好，如果原著本身很经典的话，大家都还是喜欢看原著。当然，像《歌德尔、爱舍尔、巴赫》之类的书得排除在外。本书的译者是[ 阮一峰](http://www.ruanyifeng.com/home.html "http://www.ruanyifeng.com/home.html")，其译文和博客行文流畅自然，都值得一读。
+翻译经常是一件吃力不讨好的事。即使翻译的再好，如果原著本身很经典的话，大家都还是喜欢看原著。当然，像《歌德尔、爱舍尔、巴赫》之类的书得排除在外。本书的译者是[阮一峰](http://www.ruanyifeng.com/home.html "http://www.ruanyifeng.com/home.html")，其译文和博客行文流畅自然，都值得一读。
 
 ## 关于财富
 
@@ -23,7 +23,7 @@
 
 ### 哪种编程语言最好
 
-经常在邮件列表里面看到一群人，为了自己喜爱的编程语言争论。那么哪种语言最好呢？其实往往这些问题的提出者不怀好意，或者不知道如何[提问](/wiki/doc/smart-questions "doc:smart-questions")？这种人通常被称为[ Troll](<http://en.wikipedia.org/wiki/Troll_(Internet)> "http://en.wikipedia.org/wiki/Troll_%28Internet%29")。
+经常在邮件列表里面看到一群人，为了自己喜爱的编程语言争论。那么哪种语言最好呢？其实往往这些问题的提出者不怀好意，或者不知道如何[提问](/wiki/doc/smart-questions "doc:smart-questions")？这种人通常被称为[Troll](<http://en.wikipedia.org/wiki/Troll_(Internet)> "http://en.wikipedia.org/wiki/Troll_%28Internet%29")。
 
     那么哪种语言最好呢？
 
@@ -47,7 +47,7 @@
 
 ### Guile: 作为一种扩展语言
 
-以上的一些问题是我思考过，有些得到了自己答案，有些还没有想明白。寒假趁闲， **接触** 了一下 scheme。接触即平时也只是用[ Guile](http://en.wikipedia.org/wiki/GNU_Guile "http://en.wikipedia.org/wiki/GNU_Guile")，简单的试一下自己写的 scheme 代码能不能运行，结果是不是符合预期。
+以上的一些问题是我思考过，有些得到了自己答案，有些还没有想明白。寒假趁闲， **接触** 了一下 scheme。接触即平时也只是用[Guile](http://en.wikipedia.org/wiki/GNU_Guile "http://en.wikipedia.org/wiki/GNU_Guile")，简单的试一下自己写的 scheme 代码能不能运行，结果是不是符合预期。
 
 目前在读《The Little Schemer》，此书且不论内容，形式上便令人耳目一新：
 

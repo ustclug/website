@@ -7,8 +7,8 @@
 
 ## 相关链接
 
-- [ 中国科学技术大学第六届信息安全大赛（2019）](/news/2019/12/hackergame-2019/ "/news/2019/12/hackergame-2019/")
+- [中国科学技术大学第六届信息安全大赛（2019）](/news/2019/12/hackergame-2019/ "/news/2019/12/hackergame-2019/")
 
-- [ 中国科学技术大学第五届信息安全大赛（2018）](/news/2019/01/hackergame-awards/ "/news/2019/01/hackergame-awards/")
+- [中国科学技术大学第五届信息安全大赛（2018）](/news/2019/01/hackergame-awards/ "/news/2019/01/hackergame-awards/")
 
-- [ 中国科学技术大学第四届信息安全大赛（2017）](http://young.ustc.edu.cn/2017/1103/c17198a356957/page.htm "http://young.ustc.edu.cn/2017/1103/c17198a356957/page.htm")
+- [中国科学技术大学第四届信息安全大赛（2017）](http://young.ustc.edu.cn/2017/1103/c17198a356957/page.htm "http://young.ustc.edu.cn/2017/1103/c17198a356957/page.htm")

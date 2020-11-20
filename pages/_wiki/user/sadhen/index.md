@@ -16,7 +16,7 @@ permalink: /wiki/user/sadhen/
 
 1.[Bash Scripting](http://lug.ustc.edu.cn/~sadhen/lug_bash.pdf "http://lug.ustc.edu.cn/~sadhen/lug_bash.pdf")
 
-2.[python2-networkx 可视化 ](http://lug.ustc.edu.cn/~boj/weekly_party/2013.01.12_python_networkx/networkx.pdf "http://lug.ustc.edu.cn/~boj/weekly_party/2013.01.12_python_networkx/networkx.pdf")
+2.[python2-networkx 可视化](http://lug.ustc.edu.cn/~boj/weekly_party/2013.01.12_python_networkx/networkx.pdf "http://lug.ustc.edu.cn/~boj/weekly_party/2013.01.12_python_networkx/networkx.pdf")
 
 ## LOG
 
