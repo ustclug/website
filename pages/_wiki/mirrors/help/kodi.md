@@ -63,5 +63,3 @@ Kodi 链接
 - Bug Tracker: <http://trac.kodi.tv/>
 
 - 源代码: <https://github.com/xbmc/xbmc>
-
-\*[OS]: Operating System

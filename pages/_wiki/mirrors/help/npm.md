@@ -15,7 +15,7 @@
 
     npm --registry http://npmreg.mirrors.ustc.edu.cn install <packagename>
 
-中科大 npm 镜像支持 https 安全连接，如果您的网络运营商部署了缓存设备，或您对所处的网络环境不信任，请使用 `https` 替换上述 URL 中的 `http` 。
+中科大 npm 镜像支持 https 安全连接，如果您的网络运营商部署了缓存设备，或您对所处的网络环境不信任，请使用 `https` 替换上述 URL[^url] 中的 `http` 。
 
 ## 注意事项
 
@@ -23,4 +23,6 @@
 
 ## 相关链接
 
-官方主页: <https://www.npmjs.org/> \*[URL]: Uniform Resource Locator
+官方主页: <https://www.npmjs.org/>
+
+[^url]: Uniform Resource Locator

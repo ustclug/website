@@ -35,7 +35,7 @@ USTC LUG 邮件列表所有帖子都永久存档、公开可见：
 
 1. 尽量少用附件，以免占用收件人过多的邮箱空间。不要使用闭源格式的附件。如果需要附件，建议上传到 home.ustc.edu.cn 的个人主页空间或者 rec.ustc.edu.cn 的网盘空间，然后贴出链接。
 
-2. 尽量用纯文本，少用 HTML 格式（如果客户端支持的话）
+2. 尽量用纯文本，少用 HTML[^html] 格式（如果客户端支持的话）
 
 3. 回复较长的邮件时，引文应该选择性地引用，以便让其他人知道在评论的是哪一段。
 
@@ -57,4 +57,6 @@ USTC LUG 邮件列表所有帖子都永久存档、公开可见：
 
 原文： <http://www.catb.org/esr/faqs/smart-questions.html>
 
-中文版： [提问的智慧](/wiki/doc/smart-questions "doc:smart-questions") \*[HTML]: HyperText Markup Language
+中文版： [提问的智慧](/wiki/doc/smart-questions "doc:smart-questions")
+
+[^html]: HyperText Markup Language

@@ -17,9 +17,9 @@
 
 ### LUG FTP
 
-[LUG FTP](ftp://ftp.ustclug.org/ "ftp://ftp.ustclug.org/") 是社团内部的 FTP 服务，主要用来存储历史文件、存放学习资料。LUG FTP 的用户名与密码均为 ftp。
+[LUG FTP](ftp://ftp.lug.ustc.edu.cn/ "ftp://ftp.lug.ustc.edu.cn/") 是社团内部的 FTP[^ftp] 服务，主要用来存储历史文件、存放学习资料。请发送邮件给我们，以获取 FTP 公开账户的用户名与密码。
 
-LUG FTP 也可通过 HTTP 只读访问文件，[请点这里](http://ftp.ustclug.org/ "http://ftp.ustclug.org")。请注意 ebook 目录暂时不提供 HTTP 访问。
+LUG FTP 也可通过 HTTP 只读访问文件，[请点这里](http://ftp.lug.ustc.edu.cn/ "http://ftp.lug.ustc.edu.cn")。请注意 ebook 等部分目录不提供 HTTP 访问。
 
 ---
 
@@ -33,4 +33,6 @@ winland0704 在 LUG 主页服务器上托管了以下两个文档项目。
 
 ### Qt 编程指南
 
-[Qt 编程指南](https://qtguide.ustclug.org/ "https://qtguide.ustclug.org/") 是作者正在写作中的一本书。 \*[FTP]: File Transfer Protocol
+[Qt 编程指南](https://qtguide.ustclug.org/ "https://qtguide.ustclug.org/") 是作者正在写作中的一本书。
+
+[^ftp]: File Transfer Protocol

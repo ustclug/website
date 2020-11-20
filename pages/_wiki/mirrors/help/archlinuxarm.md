@@ -31,8 +31,8 @@ Arch Linux ARM 是针对 ARM 架构移植的 Arch Linux 发行版。您可以使
 
 - 论坛 <http://archlinuxarm.org/forum/>
 
-- FAQ <http://archlinuxarm.org/support/faq>
+- FAQ[^faq] <http://archlinuxarm.org/support/faq>
 
 - 镜像列表 <http://archlinuxarm.org/about/mirrors>
 
-\*[FAQ]: Frequently Asked Questions
+[^faq]: Frequently Asked Questions

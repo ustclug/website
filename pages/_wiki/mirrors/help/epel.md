@@ -85,6 +85,6 @@
 
 - Wiki <http://fedoraproject.org/wiki/EPEL>
 
-- FAQ <http://fedoraproject.org/wiki/EPEL/faq>
+- FAQ[^faq] <http://fedoraproject.org/wiki/EPEL/faq>
 
-\*[FAQ]: Frequently Asked Questions
+[^faq]: Frequently Asked Questions

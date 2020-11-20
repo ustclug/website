@@ -77,6 +77,6 @@
 
 - 镜像列表: <http://www.cpan.org/SITES.html>
 
-- FAQ: <http://www.cpan.org/misc/cpan-faq.html>
+- FAQ[^faq]: <http://www.cpan.org/misc/cpan-faq.html>
 
-\*[FAQ]: Frequently Asked Questions
+[^faq]: Frequently Asked Questions
