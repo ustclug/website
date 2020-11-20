@@ -1,0 +1,21 @@
+{
+  "name": "website",
+  "version": "0.0.1",
+  "description": "Prettier package.json for lug website",
+  "scripts": {
+    "check": "prettier . --check",
+    "fix": "prettier . --write"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ustclug/website.git"
+  },
+  "license": "CC BY-NC-SA 4.0",
+  "bugs": {
+    "url": "https://github.com/ustclug/website/issues"
+  },
+  "homepage": "https://lug.ustc.edu.cn",
+  "devDependencies": {
+    "prettier": "^2.1.2"
+  }
+}

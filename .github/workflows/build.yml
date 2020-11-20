@@ -50,7 +50,7 @@ jobs:
         npm install
     - name: Prettier check
       run: |
-        npx prettier --check .
+        npm run check
     - name: Prepare build
       if: github.ref == 'refs/heads/master'
       run: |
