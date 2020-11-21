@@ -47,4 +47,4 @@ expect eof
 
      ./ssh_proxy.sh
 
-ssh\_proxy.sh 和 ssh\_proxy.ex 要在同一目录下。
+ssh_proxy.sh 和 ssh_proxy.ex 要在同一目录下。
