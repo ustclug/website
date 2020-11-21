@@ -16,7 +16,7 @@ ALL
 
 编辑/etc/pacman.d/mirrorlist，先注释掉里面的所有行，然后在文件的最顶端添加
 
-[mirrorlist](/wiki/_export/code/mirrors/help/mirrorlist435f?codeblock=0 "下载片段")
+mirrorlist:
 
     Server = http://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch
 

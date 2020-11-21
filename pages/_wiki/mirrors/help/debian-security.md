@@ -29,7 +29,7 @@
 
 以 Jessie 为例, 编辑/etc/apt/sources.list 文件, 在文件最前面添加以下条目(操作前请做好相应备份)
 
-[sources.list](/wiki/_export/code/mirrors/help/sources435f-2.list?codeblock=0 "下载片段")
+sources.list:
 
     deb http://mirrors.ustc.edu.cn/debian-security/ jessie/updates main non-free contrib
     deb-src http://mirrors.ustc.edu.cn/debian-security/ jessie/updates main non-free contrib

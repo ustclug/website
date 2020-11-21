@@ -20,7 +20,7 @@ pxe.ustc.edu.cn 由中国科大图书馆、网络中心和学生 Linux 用户协
 
 如果您的机器是 UEFI 模式启动的、UEFI 固件带有网络支持，并已经安装有 GRUB2，则可以在 GRUB 命令行中直接加载网络启动菜单：
 
-```
+```shell
 insmod efinet http
 net_bootp
 configfile (http,202.38.93.94)/boot2/menu/root.menu
@@ -47,7 +47,7 @@ mcopy grub.efi '::/EFI/BOOT/bootx64.efi' -i floppy.img
 
 用 [iPXE](https://ipxe.org/) 脚本或者命令行模式执行以下命令：
 
-```
+```shell
 dhcp
 set 210:string http://202.38.93.94/boot/tftp/
 chain ${210:string}pxelinux.0
@@ -59,7 +59,7 @@ chain ${210:string}pxelinux.0
 
 仅支持传统 PXE 启动，现在已不再更新。
 
-```
+```shell
 dhcp //如果已经获取到了地址则请忽略
 set 210:string http://202.38.93.94/boot/tftp/
 chain ${210:string}lpxelinux.0

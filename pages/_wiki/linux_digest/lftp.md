@@ -11,7 +11,7 @@
 
 lftp 启动后会一次读取/etc/lftp.conf、~/.lftprc 和~/.lftp/rc。 通常我们将常用的设置写入~/.lftprc 或者~/.lftp/rc 中。 下面是一份 lftprc 的样例：
 
-[.lftprc](/wiki/_export/code/linux_digest/435f.lftprc?codeblock=0 "下载片段")
+.lftprc:
 
     #在浏览GBK编码的ftp时，可以执行gbkserver命令迅速切换。
     alias gbkserver set ftp:charset gbk;set file:charset utf-8
@@ -56,11 +56,11 @@ lftp 启动后会一次读取/etc/lftp.conf、~/.lftprc 和~/.lftp/rc。 通常�
 
 科大的童鞋们都有一个 300M 的静态主页空间，很多人都会用这个空间来制作漂亮的个人主页，那你是怎么同步的呢？是不是每次都需要打开 nautilus 或者 filezilla 等工具一个个文件的复制呢？ 来看看用 lftp 的脚本同步吧。
 
-[.bash_aliases](/wiki/_export/code/linux_digest/cc37.bash_aliases?codeblock=1 "下载片段")
+.bash_aliases:
 
     alias update-homepage='lftp -f ~/.bin/update-homepage.lftp'
 
-[update-homepage.lftp](/wiki/_export/code/linux_digest/update-homepagec273.lftp?codeblock=2 "下载片段")
+update-homepage.lftp:
 
     connect home.ustc.edu.cn
     user myname

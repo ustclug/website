@@ -27,7 +27,7 @@
 
 这是 CentOS 5 的:
 
-[CentOS-Base.repo](/wiki/_export/code/mirrors/help/CentOS-Basecc37.repo?codeblock=1 "下载片段")
+CentOS-Base.repo:
 
     # CentOS-Base.repo
     #
@@ -92,7 +92,7 @@
 
 这是 CentOS 6 的:
 
-[CentOS-Base.repo](/wiki/_export/code/mirrors/help/CentOS-Basec273.repo?codeblock=2 "下载片段")
+CentOS-Base.repo:
 
     # CentOS-Base.repo
     #
@@ -149,7 +149,7 @@
 
 这是 CentOS 7 的:
 
-[CentOS-Base.repo](/wiki/_export/code/mirrors/help/CentOS-Base4f98.repo?codeblock=3 "下载片段")
+CentOS-Base.repo:
 
     # CentOS-Base.repo
     #

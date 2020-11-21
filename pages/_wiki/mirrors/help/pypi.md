@@ -17,7 +17,7 @@
 
 如：
 
-[pip.conf](/wiki/_export/code/mirrors/help/pipcc37.conf?codeblock=1 "下载片段")
+pip.conf:
 
     [global]
     index-url = https://mirrors.ustc.edu.cn/pypi/web/simple
