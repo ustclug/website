@@ -20,7 +20,7 @@
     <meta property="og:url" content="https://lug.ustc.edu.cn//wiki/linux_digest/lftp/">
     <meta property="og:description" content="lftp">
     <meta property="article:published_time" content="2020-08-09T15:07:59+08:00">
-    <meta property="article:modified_time" content="2020-11-09T14:22:35+08:00">
+    <meta property="article:modified_time" content="2020-11-21T13:46:13+08:00">
     <link rel="canonical" href="https://lug.ustc.edu.cn//wiki/linux_digest/lftp/">
     <script type="application/ld+json">
       {
@@ -57,7 +57,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=9c0607669">
+    <link rel="stylesheet" href="/assets/css/main.css?v=6d600e15d">
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
       <style>
@@ -174,7 +174,7 @@
           <meta itemprop="headline" content="lftp">
           <meta itemprop="description" content="lftp">
           <meta itemprop="datePublished" content="2020-08-09T15:07:59+08:00">
-          <meta itemprop="dateModified" content="2020-11-09T14:22:35+08:00">
+          <meta itemprop="dateModified" content="2020-11-21T13:46:13+08:00">
           <div class="page__inner-wrap">
             <header>
               <h1 id="page-title" class="page__title" itemprop="headline">lftp
@@ -198,7 +198,7 @@
               <h2 id="常用命令">常用命令</h2>
               <h2 id="配置文件">配置文件</h2>
               <p>lftp 启动后会一次读取/etc/lftp.conf、~/.lftprc 和~/.lftp/rc。 通常我们将常用的设置写入~/.lftprc 或者~/.lftp/rc 中。 下面是一份 lftprc 的样例：</p>
-              <p><a href="/wiki/_export/code/linux_digest/435f.lftprc?codeblock=0" title="下载片段">.lftprc</a></p>
+              <p>.lftprc:</p>
               <div class="language-plaintext highlighter-rouge">
                 <div class="highlight">
                   <pre class="highlight"><code>#在浏览GBK编码的ftp时，可以执行gbkserver命令迅速切换。
@@ -252,14 +252,14 @@ set ftp:charset/202.38.64.22 gbk
               <p><img src="../lib/images/smileys/icon_smile.gif" alt=":-)" /></p>
               <h2 id="奇巧淫技-使用-lftp-同步个人主页">奇巧淫技-使用 lftp 同步个人主页</h2>
               <p>科大的童鞋们都有一个 300M 的静态主页空间，很多人都会用这个空间来制作漂亮的个人主页，那你是怎么同步的呢？是不是每次都需要打开 nautilus 或者 filezilla 等工具一个个文件的复制呢？ 来看看用 lftp 的脚本同步吧。</p>
-              <p><a href="/wiki/_export/code/linux_digest/cc37.bash_aliases?codeblock=1" title="下载片段">.bash_aliases</a></p>
+              <p>.bash_aliases:</p>
               <div class="language-plaintext highlighter-rouge">
                 <div class="highlight">
                   <pre class="highlight"><code>alias update-homepage='lftp -f ~/.bin/update-homepage.lftp'
 </code></pre>
                 </div>
               </div>
-              <p><a href="/wiki/_export/code/linux_digest/update-homepagec273.lftp?codeblock=2" title="下载片段">update-homepage.lftp</a></p>
+              <p>update-homepage.lftp:</p>
               <div class="language-plaintext highlighter-rouge">
                 <div class="highlight">
                   <pre class="highlight"><code>connect home.ustc.edu.cn
@@ -280,7 +280,7 @@ mirror -R -e ~/public_html public_html --exclude book/ --exclude bak/
               <p>即可完成同步工作。也可将 lftp -f ~/.bin/update-homepage.lftp 这条命令写入<a href="/wiki/linux/crontab" title="linux:crontab">crontab</a>，每天自动同步。</p>
             </section>
             <footer class="page__meta">
-              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-11-09">2020 年 11 月 9 日</time></p>
+              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-11-21">2020 年 11 月 21 日</time></p>
             </footer>
             <nav class="pagination">
               <a href="/wiki/linux_digest/" class="pagination--pager" title="Linux 文摘

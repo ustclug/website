@@ -20,7 +20,7 @@
     <meta property="og:url" content="https://lug.ustc.edu.cn//wiki/scripts/ssh_proxy/">
     <meta property="og:description" content="ssh 代理">
     <meta property="article:published_time" content="2020-08-09T15:07:59+08:00">
-    <meta property="article:modified_time" content="2020-11-09T14:22:35+08:00">
+    <meta property="article:modified_time" content="2020-11-21T13:47:37+08:00">
     <link rel="canonical" href="https://lug.ustc.edu.cn//wiki/scripts/ssh_proxy/">
     <script type="application/ld+json">
       {
@@ -57,7 +57,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=9c0607669">
+    <link rel="stylesheet" href="/assets/css/main.css?v=6d600e15d">
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
       <style>
@@ -174,7 +174,7 @@
           <meta itemprop="headline" content="ssh 代理">
           <meta itemprop="description" content="ssh 代理">
           <meta itemprop="datePublished" content="2020-08-09T15:07:59+08:00">
-          <meta itemprop="dateModified" content="2020-11-09T14:22:35+08:00">
+          <meta itemprop="dateModified" content="2020-11-21T13:47:37+08:00">
           <div class="page__inner-wrap">
             <header>
               <h1 id="page-title" class="page__title" itemprop="headline">ssh 代理
@@ -189,28 +189,26 @@
                 </nav>
               </aside>
               <p>这个脚本通过自动登录免费的 ssh 账户，实现自动的 ssh 代理， 绑定的端口为 7070</p>
-              <p><a href="/wiki/_export/code/scripts/ssh_proxy435f.sh?codeblock=0" title="下载片段">ssh_proxy.sh</a></p>
-              <div class="language-plaintext highlighter-rouge">
+              <p>ssh_proxy.sh:</p>
+              <div class="language-sh highlighter-rouge">
                 <div class="highlight">
-                  <pre class="highlight"><code>#!/bin/bash
+                  <pre class="highlight"><code><span class="c">#!/bin/bash</span>
  
-cd `dirname $0` #进入ssh_proxy.sh所在的目录
-SSH_ACCOUNT_SITE="http://dailimm.com/freessh.php" #提供免费ssh账户的网站
+<span class="nb">cd</span> <span class="sb">`</span><span class="nb">dirname</span> <span class="nv">$0</span><span class="sb">`</span> <span class="c">#进入ssh_proxy.sh所在的目录</span>
+<span class="nv">SSH_ACCOUNT_SITE</span><span class="o">=</span><span class="s2">"http://dailimm.com/freessh.php"</span> <span class="c">#提供免费ssh账户的网站</span>
  
-'wget' -q $SSH_ACCOUNT_SITE -O /tmp/ssh_site
-HOST=$(cat /tmp/ssh_site | grep "服务器地址" | sed "s/^.*value=\"\(.*\)\" onClick.*$/\1/") #获取服务器地址
-USER= `cat /tmp/ssh_site | grep "服务器用户" | sed "s/^.*value=\"\(.*\)\" onClick.*$/\1/"` #获取用户名
-PASSWORD= `cat /tmp/ssh_site | grep "服务器密码" | sed "s/^.*value=\"\(.*\)\" onClick.*$/\1/"` #获取密码
+<span class="s1">'wget'</span> <span class="nt">-q</span> <span class="nv">$SSH_ACCOUNT_SITE</span> <span class="nt">-O</span> /tmp/ssh_site
+<span class="nv">HOST</span><span class="o">=</span><span class="si">$(</span><span class="nb">cat</span> /tmp/ssh_site | <span class="nb">grep</span> <span class="s2">"服务器地址"</span> | <span class="nb">sed</span> <span class="s2">"s/^.*value=</span><span class="se">\"\(</span><span class="s2">.*</span><span class="se">\)\"</span><span class="s2"> onClick.*</span><span class="nv">$/</span><span class="se">\1</span><span class="s2">/"</span><span class="si">)</span> <span class="c">#获取服务器地址</span>
+<span class="nv">USER</span><span class="o">=</span> <span class="sb">`</span><span class="nb">cat</span> /tmp/ssh_site | <span class="nb">grep</span> <span class="s2">"服务器用户"</span> | <span class="nb">sed</span> <span class="s2">"s/^.*value=</span><span class="se">\"\(</span><span class="s2">.*</span><span class="se">\)\"</span><span class="s2"> onClick.*</span><span class="nv">$/</span><span class="se">\1</span><span class="s2">/"</span><span class="sb">`</span> <span class="c">#获取用户名</span>
+<span class="nv">PASSWORD</span><span class="o">=</span> <span class="sb">`</span><span class="nb">cat</span> /tmp/ssh_site | <span class="nb">grep</span> <span class="s2">"服务器密码"</span> | <span class="nb">sed</span> <span class="s2">"s/^.*value=</span><span class="se">\"\(</span><span class="s2">.*</span><span class="se">\)\"</span><span class="s2"> onClick.*</span><span class="nv">$/</span><span class="se">\1</span><span class="s2">/"</span><span class="sb">`</span> <span class="c">#获取密码</span>
  
-echo "$PASSWORD" #打印密码，当服务器忙时，密码获取的字段是服务器忙的信息
-ssh.ex $HOST $USER $PASSWORD #利用expect实现自动登录
+<span class="nb">echo</span> <span class="s2">"</span><span class="nv">$PASSWORD</span><span class="s2">"</span> <span class="c">#打印密码，当服务器忙时，密码获取的字段是服务器忙的信息</span>
+ssh.ex <span class="nv">$HOST</span> <span class="nv">$USER</span> <span class="nv">$PASSWORD</span> <span class="c">#利用expect实现自动登录</span>
 </code></pre>
                 </div>
               </div>
-              <p><a href="/wiki/_export/code/scripts/ssh_proxycc37.ex?codeblock=1" title="下载片段">ssh_proxy.ex</a></p>
-              <div class="language-plaintext highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>#! /usr/bin/expect -f
+              <p>ssh_proxy.ex:</p>
+              <pre><code class="language-expect">#! /usr/bin/expect -f
  
 set HOST [lindex $argv 0] #获取服务器地址
 set USER [lindex $argv 1] #获取用户名
@@ -227,8 +225,6 @@ send "$PASSWORD\r" #输入密码
 interact
 expect eof
 </code></pre>
-                </div>
-              </div>
               <p>使用方法：</p>
               <div class="language-plaintext highlighter-rouge">
                 <div class="highlight">
@@ -236,10 +232,10 @@ expect eof
 </code></pre>
                 </div>
               </div>
-              <p>ssh <em>proxy.sh 和 ssh</em> proxy.ex 要在同一目录下。</p>
+              <p>ssh_proxy.sh 和 ssh_proxy.ex 要在同一目录下。</p>
             </section>
             <footer class="page__meta">
-              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-11-09">2020 年 11 月 9 日</time></p>
+              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-11-21">2020 年 11 月 21 日</time></p>
             </footer>
             <nav class="pagination">
               <a href="/wiki/scripts/download_flv/" class="pagination--pager" title="下载在线视频

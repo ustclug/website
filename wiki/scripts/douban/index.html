@@ -20,7 +20,7 @@
     <meta property="og:url" content="https://lug.ustc.edu.cn//wiki/scripts/douban/">
     <meta property="og:description" content="豆瓣电台">
     <meta property="article:published_time" content="2020-08-09T15:07:59+08:00">
-    <meta property="article:modified_time" content="2020-11-09T14:22:35+08:00">
+    <meta property="article:modified_time" content="2020-11-21T13:47:37+08:00">
     <link rel="canonical" href="https://lug.ustc.edu.cn//wiki/scripts/douban/">
     <script type="application/ld+json">
       {
@@ -57,7 +57,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=9c0607669">
+    <link rel="stylesheet" href="/assets/css/main.css?v=6d600e15d">
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
       <style>
@@ -174,7 +174,7 @@
           <meta itemprop="headline" content="豆瓣电台">
           <meta itemprop="description" content="豆瓣电台">
           <meta itemprop="datePublished" content="2020-08-09T15:07:59+08:00">
-          <meta itemprop="dateModified" content="2020-11-09T14:22:35+08:00">
+          <meta itemprop="dateModified" content="2020-11-21T13:47:37+08:00">
           <div class="page__inner-wrap">
             <header>
               <h1 id="page-title" class="page__title" itemprop="headline">豆瓣电台
@@ -190,122 +190,122 @@
               </aside>
               <p>摘自瀚海星云 bbs：<a href="http://bbs.ustc.edu.cn/cgi/bbstcon?board=Linux&amp;file=M.1286547291.A" title="http://bbs.ustc.edu.cn/cgi/bbstcon?board=Linux&amp;file=M.1286547291.A">http://bbs.ustc.edu.cn/cgi/bbstcon?board=Linux&amp;file=M.1286547291.A</a></p>
               <p>针对网速慢的用户以及豆瓣电台的改动做了些修改～: D</p>
-              <p><a href="/wiki/_export/code/scripts/dbfm435f.pl?codeblock=0" title="下载片段">dbfm.pl</a></p>
-              <div class="language-plaintext highlighter-rouge">
+              <p>dbfm.pl:</p>
+              <div class="language-perl highlighter-rouge">
                 <div class="highlight">
-                  <pre class="highlight"><code>#!/usr/bin/perl -w
-use LWP;
-use HTTP::Cookies;
-use JSON;
-use Encode;
-use Term::ANSIColor;
-#use Smart::Comments;
- 
-my $time = 0;
-$SIG{INT} = "quit";
- 
-my $b = LWP::UserAgent-&gt;new;
-$b-&gt;cookie_jar(HTTP::Cookies-&gt;new);
- 
-my $form = {
-    form_email=&gt;'your_id',   ###----- 你的帐号-----###
-	form_password=&gt;'your_passwd',          ###----- 你的密码 ----###
-    redir=&gt;"/service/account/?return_to=http%3A%2F%2Fdouban.fm&amp;amp;mode=checkid_setup",
-};
- 
-#-------login the douban.
-my $login = $b-&gt;post('http://www.douban.com/login', $form);
-my $_c = $b-&gt;get('http://douban.fm/radio');
-my $uid ='2650910';
-if($_c-&gt;content=~/flashvars\[s](http://perldoc.perl.org/functions/s.html)+=\[s](http://perldoc.perl.org/functions/s.html)+\{uid:'(\d+)'/){
-    $uid=$1;  #-- Get the uid of your account.
-}
-#-------douban cache folder.
-my $USER_DIR = "$ENV{HOME}/.douban";
-[mkdir](http://perldoc.perl.org/functions/mkdir.html) $USER_DIR unless -d $USER_DIR;
- 
-&amp;play_radio();
- 
-#-------play the mp3.
-sub play_radio{
-    while(1) {
-        my $mp3 = $b-&gt;get('http://douban.fm/j/mine/playlist?r=' .[rand](http://perldoc.perl.org/functions/rand.html)(). '&amp;type=n&amp;sid=&amp;uid='.$uid .'&amp;channel=1' );#这里的channel参数是新增的，取值0-9 ~:P
-        my $result = JSON-&gt;new-&gt;utf8(0)-&gt;decode($mp3-&gt;content);
-        $result  = $result-&gt;{song};
-        for my $hash(@$result){
-             [print](http://perldoc.perl.org/functions/print.html) colored $hash-&gt;{'title'}." ", 'yellow';
-             [print](http://perldoc.perl.org/functions/print.html) colored ("$hash-&gt;{'albumtitle'}",'blue'),'  ';
-             [print](http://perldoc.perl.org/functions/print.html) colored "$hash-&gt;{'artist'}\n",'green';
-             [print](http://perldoc.perl.org/functions/print.html) colored "$hash-&gt;{'picture'}\n$hash-&gt;{'url'}\n", 'white';
-             #######--如果不需要下载封面图片显示在conky上，以下2行不需要用---###############
-             download_cover($hash);
-             log2file("[Playing] ",$hash-&gt;{'title'},"\t(",$hash-&gt;{'artist'},")\n");
-             #######--
-			 #qx {wget "$hash-&gt;{'url'}" -O /tmp/dbfm 2&gt;/dev/null &amp;&amp; mplayer /tmp/dbfm 2&gt;/dev/null};
-                         #这一行我换成带缓存的mplayer调用，单纯的管道在网速不行的时候不太给力～:)
-			 [qx](http://perldoc.perl.org/functions/qx.html) {wget "$hash-&gt;{'url'}" -O - 2&gt;/dev/null |mplayer -cache 1024 -  2&gt;/dev/null };
+                  <pre class="highlight"><code><span class="c1">#!/usr/bin/perl -w</span>
+<span class="k">use</span> <span class="nv">LWP</span><span class="p">;</span>
+<span class="k">use</span> <span class="nn">HTTP::</span><span class="nv">Cookies</span><span class="p">;</span>
+<span class="k">use</span> <span class="nv">JSON</span><span class="p">;</span>
+<span class="k">use</span> <span class="nv">Encode</span><span class="p">;</span>
+<span class="k">use</span> <span class="nn">Term::</span><span class="nv">ANSIColor</span><span class="p">;</span>
+<span class="c1">#use Smart::Comments;</span>
+<span class="err"> </span>
+<span class="k">my</span> <span class="nv">$time</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="nv">$SIG</span><span class="p">{</span><span class="nv">INT</span><span class="p">}</span> <span class="o">=</span> <span class="p">"</span><span class="s2">quit</span><span class="p">";</span>
+<span class="err"> </span>
+<span class="k">my</span> <span class="nv">$b</span> <span class="o">=</span> <span class="nn">LWP::</span><span class="nv">UserAgent</span><span class="o">-&gt;</span><span class="k">new</span><span class="p">;</span>
+<span class="nv">$b</span><span class="o">-&gt;</span><span class="nv">cookie_jar</span><span class="p">(</span><span class="nn">HTTP::</span><span class="nv">Cookies</span><span class="o">-&gt;</span><span class="k">new</span><span class="p">);</span>
+<span class="err"> </span>
+<span class="k">my</span> <span class="nv">$form</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">form_email</span><span class="o">=&gt;</span><span class="p">'</span><span class="s1">your_id</span><span class="p">',</span>   <span class="c1">###----- 你的帐号-----###</span>
+    <span class="s">form_password</span><span class="o">=&gt;</span><span class="p">'</span><span class="s1">your_passwd</span><span class="p">',</span>          <span class="c1">###----- 你的密码 ----###</span>
+    <span class="s">redir</span><span class="o">=&gt;</span><span class="p">"</span><span class="s2">/service/account/?return_to=http%3A%2F%2Fdouban.fm&amp;amp;mode=checkid_setup</span><span class="p">",</span>
+<span class="p">};</span>
+<span class="err"> </span>
+<span class="c1">#-------login the douban.</span>
+<span class="k">my</span> <span class="nv">$login</span> <span class="o">=</span> <span class="nv">$b</span><span class="o">-&gt;</span><span class="nv">post</span><span class="p">('</span><span class="s1">http://www.douban.com/login</span><span class="p">',</span> <span class="nv">$form</span><span class="p">);</span>
+<span class="k">my</span> <span class="nv">$_c</span> <span class="o">=</span> <span class="nv">$b</span><span class="o">-&gt;</span><span class="nv">get</span><span class="p">('</span><span class="s1">http://douban.fm/radio</span><span class="p">');</span>
+<span class="k">my</span> <span class="nv">$uid</span> <span class="o">=</span><span class="p">'</span><span class="s1">2650910</span><span class="p">';</span>
+<span class="k">if</span><span class="p">(</span><span class="nv">$_c</span><span class="o">-&gt;</span><span class="nv">content</span><span class="o">=~</span><span class="sr">/flashvars\[s](http://perldoc.perl.org/</span><span class="nv">functions</span><span class="sr">/s.html)+=\[s](http://perldoc.perl.org/</span><span class="nv">functions</span><span class="sr">/s.html)+\{uid:'(\d+)'/</span><span class="p">){</span>
+    <span class="nv">$uid</span><span class="o">=</span><span class="err">$</span><span class="mi">1</span><span class="p">;</span>  <span class="c1">#-- Get the uid of your account.</span>
+<span class="p">}</span>
+<span class="c1">#-------douban cache folder.</span>
+<span class="k">my</span> <span class="nv">$USER_DIR</span> <span class="o">=</span> <span class="p">"</span><span class="si">$ENV</span><span class="s2">{HOME}/.douban</span><span class="p">";</span>
+<span class="p">[</span><span class="nb">mkdir</span><span class="p">](</span><span class="nv">http:</span><span class="sr">//p</span><span class="nv">erldoc</span><span class="o">.</span><span class="nv">perl</span><span class="o">.</span><span class="nv">org</span><span class="sr">/functions/m</span><span class="nv">kdir</span><span class="o">.</span><span class="nv">html</span><span class="p">)</span> <span class="nv">$USER_DIR</span> <span class="k">unless</span> <span class="o">-</span><span class="nv">d</span> <span class="nv">$USER_DIR</span><span class="p">;</span>
+<span class="err"> </span>
+<span class="nv">&amp;play_radio</span><span class="p">();</span>
+<span class="err"> </span>
+<span class="c1">#-------play the mp3.</span>
+<span class="k">sub </span><span class="nf">play_radio</span><span class="p">{</span>
+    <span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">my</span> <span class="nv">$mp3</span> <span class="o">=</span> <span class="nv">$b</span><span class="o">-&gt;</span><span class="nv">get</span><span class="p">('</span><span class="s1">http://douban.fm/j/mine/playlist?r=</span><span class="p">'</span> <span class="o">.</span><span class="p">[</span><span class="nb">rand</span><span class="p">](</span><span class="nv">http:</span><span class="sr">//p</span><span class="nv">erldoc</span><span class="o">.</span><span class="nv">perl</span><span class="o">.</span><span class="nv">org</span><span class="sr">/functions/</span><span class="nb">rand</span><span class="o">.</span><span class="nv">html</span><span class="p">)()</span><span class="o">.</span> <span class="p">'</span><span class="s1">&amp;type=n&amp;sid=&amp;uid=</span><span class="p">'</span><span class="o">.</span><span class="nv">$uid</span> <span class="o">.</span><span class="p">'</span><span class="s1">&amp;channel=1</span><span class="p">'</span> <span class="p">);</span><span class="c1">#这里的channel参数是新增的，取值0-9 ~:P</span>
+        <span class="k">my</span> <span class="nv">$result</span> <span class="o">=</span> <span class="nv">JSON</span><span class="o">-&gt;</span><span class="k">new</span><span class="o">-&gt;</span><span class="nv">utf8</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">-&gt;</span><span class="nv">decode</span><span class="p">(</span><span class="nv">$mp3</span><span class="o">-&gt;</span><span class="nv">content</span><span class="p">);</span>
+        <span class="nv">$result</span>  <span class="o">=</span> <span class="nv">$result</span><span class="o">-&gt;</span><span class="p">{</span><span class="nv">song</span><span class="p">};</span>
+        <span class="k">for</span> <span class="k">my</span> <span class="nv">$hash</span><span class="p">(</span><span class="nv">@$result</span><span class="p">){</span>
+                <span class="p">[</span><span class="k">print</span><span class="p">](</span><span class="nv">http:</span><span class="sr">//p</span><span class="nv">erldoc</span><span class="o">.</span><span class="nv">perl</span><span class="o">.</span><span class="nv">org</span><span class="sr">/functions/p</span><span class="nv">rint</span><span class="o">.</span><span class="nv">html</span><span class="p">)</span> <span class="nv">colored</span> <span class="nv">$hash</span><span class="o">-&gt;</span><span class="p">{'</span><span class="s1">title</span><span class="p">'}</span><span class="o">.</span><span class="p">"</span><span class="s2"> </span><span class="p">",</span> <span class="p">'</span><span class="s1">yellow</span><span class="p">';</span>
+                <span class="p">[</span><span class="k">print</span><span class="p">](</span><span class="nv">http:</span><span class="sr">//p</span><span class="nv">erldoc</span><span class="o">.</span><span class="nv">perl</span><span class="o">.</span><span class="nv">org</span><span class="sr">/functions/p</span><span class="nv">rint</span><span class="o">.</span><span class="nv">html</span><span class="p">)</span> <span class="nv">colored</span> <span class="p">("</span><span class="si">$hash</span><span class="s2">-&gt;{'albumtitle'}</span><span class="p">",'</span><span class="s1">blue</span><span class="p">'),'</span><span class="s1">  </span><span class="p">';</span>
+                <span class="p">[</span><span class="k">print</span><span class="p">](</span><span class="nv">http:</span><span class="sr">//p</span><span class="nv">erldoc</span><span class="o">.</span><span class="nv">perl</span><span class="o">.</span><span class="nv">org</span><span class="sr">/functions/p</span><span class="nv">rint</span><span class="o">.</span><span class="nv">html</span><span class="p">)</span> <span class="nv">colored</span> <span class="p">"</span><span class="si">$hash</span><span class="s2">-&gt;{'artist'}</span><span class="se">\n</span><span class="p">",'</span><span class="s1">green</span><span class="p">';</span>
+                <span class="p">[</span><span class="k">print</span><span class="p">](</span><span class="nv">http:</span><span class="sr">//p</span><span class="nv">erldoc</span><span class="o">.</span><span class="nv">perl</span><span class="o">.</span><span class="nv">org</span><span class="sr">/functions/p</span><span class="nv">rint</span><span class="o">.</span><span class="nv">html</span><span class="p">)</span> <span class="nv">colored</span> <span class="p">"</span><span class="si">$hash</span><span class="s2">-&gt;{'picture'}</span><span class="se">\n</span><span class="si">$hash</span><span class="s2">-&gt;{'url'}</span><span class="se">\n</span><span class="p">",</span> <span class="p">'</span><span class="s1">white</span><span class="p">';</span>
+                <span class="c1">#######--如果不需要下载封面图片显示在conky上，以下2行不需要用---###############</span>
+                <span class="nv">download_cover</span><span class="p">(</span><span class="nv">$hash</span><span class="p">);</span>
+                <span class="nv">log2file</span><span class="p">("</span><span class="s2">[Playing] </span><span class="p">",</span><span class="nv">$hash</span><span class="o">-&gt;</span><span class="p">{'</span><span class="s1">title</span><span class="p">'},"</span><span class="se">\t</span><span class="s2">(</span><span class="p">",</span><span class="nv">$hash</span><span class="o">-&gt;</span><span class="p">{'</span><span class="s1">artist</span><span class="p">'},"</span><span class="s2">)</span><span class="se">\n</span><span class="p">");</span>
+                <span class="c1">#######--</span>
+                <span class="c1">#qx {wget "$hash-&gt;{'url'}" -O /tmp/dbfm 2&gt;/dev/null &amp;&amp; mplayer /tmp/dbfm 2&gt;/dev/null};</span>
+                            <span class="c1">#这一行我换成带缓存的mplayer调用，单纯的管道在网速不行的时候不太给力～:)</span>
+                <span class="p">[</span><span class="sx">qx](http://perldoc.perl.org/functions/qx.html) {wget "$hash-&gt;{'url'}" -O - 2&gt;/dev/null |mplayer -cache 1024 -  2&gt;/dev/null };
         }
     }
 }
  
 sub quit{
-    [qx](http://perldoc.perl.org/functions/qx.html) {killall -9 mplayer};
-    if ([time](http://perldoc.perl.org/functions/time.html)()-$time&lt;3){
-        [print](http://perldoc.perl.org/functions/print.html) "exiting...\n";
-        log2file("[Stopped]\n");
-        [exit](http://perldoc.perl.org/functions/exit.html) 1;
-    }
-    [print](http://perldoc.perl.org/functions/print.html) "Press Ctrl+C again in 3 seconds to exit...\n";
-    [select](http://perldoc.perl.org/functions/select.html)([undef](http://perldoc.perl.org/functions/undef.html),[undef](http://perldoc.perl.org/functions/undef.html),[undef](http://perldoc.perl.org/functions/undef.html),1);
-    $time = [time](http://perldoc.perl.org/functions/time.html)();
-    # $SIG{INT} = "quit";
-}
- 
-#######--如果不需要下载封面图片显示在conky上，以下都不需要用---###############
-sub log2file{
-    my $logfile="/tmp/douban.log";
-    [open](http://perldoc.perl.org/functions/open.html) LOG, "+&gt;&gt;/tmp/douban.log" or [return](http://perldoc.perl.org/functions/return.html) -1;
-    [print](http://perldoc.perl.org/functions/print.html) LOG @_;
-    [close](http://perldoc.perl.org/functions/close.html) LOG;
-    [return](http://perldoc.perl.org/functions/return.html) 0;
-}
-sub download_cover{
-    my $hash = [shift](http://perldoc.perl.org/functions/shift.html);
-    my $covername = $hash-&gt;{albumtitle} . "_cover.jpg";
-    my $artist = $hash-&gt;{'artist'};
-    $covername = &amp;file_trim ($covername);
-    $artist = &amp;file_trim ($artist);
-    [mkdir](http://perldoc.perl.org/functions/mkdir.html) "$USER_DIR/$artist" if ! -d "$USER_DIR/$artist";
- 
-    my $file = "$USER_DIR/$artist/$covername";
-    if ($hash-&gt;{'picture'}|| $hash-&gt;{'picture'}=~/^http.+jpg$/){
- 
-        if ( ! -[s](http://perldoc.perl.org/functions/s.html) $file ){
+    [qx]</span><span class="p">(</span><span class="nv">http:</span><span class="sr">//p</span><span class="nv">erldoc</span><span class="o">.</span><span class="nv">perl</span><span class="o">.</span><span class="nv">org</span><span class="sr">/functions/</span><span class="sx">qx.html) {killall -9 mplayer};
+    if ([time](http://perldoc.</span><span class="nv">perl</span><span class="o">.</span><span class="nv">org</span><span class="sr">/functions/</span><span class="nb">time</span><span class="o">.</span><span class="nv">html</span><span class="p">)()</span><span class="o">-</span><span class="nv">$time</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">){</span>
+        <span class="p">[</span><span class="k">print</span><span class="p">](</span><span class="nv">http:</span><span class="sr">//p</span><span class="nv">erldoc</span><span class="o">.</span><span class="nv">perl</span><span class="o">.</span><span class="nv">org</span><span class="sr">/functions/p</span><span class="nv">rint</span><span class="o">.</span><span class="nv">html</span><span class="p">)</span> <span class="p">"</span><span class="s2">exiting...</span><span class="se">\n</span><span class="p">";</span>
+        <span class="nv">log2file</span><span class="p">("</span><span class="s2">[Stopped]</span><span class="se">\n</span><span class="p">");</span>
+        <span class="p">[</span><span class="nb">exit</span><span class="p">](</span><span class="nv">http:</span><span class="sr">//p</span><span class="nv">erldoc</span><span class="o">.</span><span class="nv">perl</span><span class="o">.</span><span class="nv">org</span><span class="sr">/functions/</span><span class="nb">exit</span><span class="o">.</span><span class="nv">html</span><span class="p">)</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="p">[</span><span class="k">print</span><span class="p">](</span><span class="nv">http:</span><span class="sr">//p</span><span class="nv">erldoc</span><span class="o">.</span><span class="nv">perl</span><span class="o">.</span><span class="nv">org</span><span class="sr">/functions/p</span><span class="nv">rint</span><span class="o">.</span><span class="nv">html</span><span class="p">)</span> <span class="p">"</span><span class="s2">Press Ctrl+C again in 3 seconds to exit...</span><span class="se">\n</span><span class="p">";</span>
+    <span class="p">[</span><span class="nb">select</span><span class="p">](</span><span class="nv">http:</span><span class="sr">//p</span><span class="nv">erldoc</span><span class="o">.</span><span class="nv">perl</span><span class="o">.</span><span class="nv">org</span><span class="sr">/functions/s</span><span class="nv">elect</span><span class="o">.</span><span class="nv">html</span><span class="p">)([</span><span class="nb">undef</span><span class="p">](</span><span class="nv">http:</span><span class="sr">//p</span><span class="nv">erldoc</span><span class="o">.</span><span class="nv">perl</span><span class="o">.</span><span class="nv">org</span><span class="sr">/functions/und</span><span class="nv">ef</span><span class="o">.</span><span class="nv">html</span><span class="p">),[</span><span class="nb">undef</span><span class="p">](</span><span class="nv">http:</span><span class="sr">//p</span><span class="nv">erldoc</span><span class="o">.</span><span class="nv">perl</span><span class="o">.</span><span class="nv">org</span><span class="sr">/functions/und</span><span class="nv">ef</span><span class="o">.</span><span class="nv">html</span><span class="p">),[</span><span class="nb">undef</span><span class="p">](</span><span class="nv">http:</span><span class="sr">//p</span><span class="nv">erldoc</span><span class="o">.</span><span class="nv">perl</span><span class="o">.</span><span class="nv">org</span><span class="sr">/functions/und</span><span class="nv">ef</span><span class="o">.</span><span class="nv">html</span><span class="p">),</span><span class="mi">1</span><span class="p">);</span>
+    <span class="nv">$time</span> <span class="o">=</span> <span class="p">[</span><span class="nb">time</span><span class="p">](</span><span class="nv">http:</span><span class="sr">//p</span><span class="nv">erldoc</span><span class="o">.</span><span class="nv">perl</span><span class="o">.</span><span class="nv">org</span><span class="sr">/functions/</span><span class="nb">time</span><span class="o">.</span><span class="nv">html</span><span class="p">)();</span>
+    <span class="c1"># $SIG{INT} = "quit";</span>
+<span class="p">}</span>
+<span class="err"> </span>
+<span class="c1">#######--如果不需要下载封面图片显示在conky上，以下都不需要用---###############</span>
+<span class="k">sub </span><span class="nf">log2file</span><span class="p">{</span>
+    <span class="k">my</span> <span class="nv">$logfile</span><span class="o">=</span><span class="p">"</span><span class="s2">/tmp/douban.log</span><span class="p">";</span>
+    <span class="p">[</span><span class="nb">open</span><span class="p">](</span><span class="nv">http:</span><span class="sr">//p</span><span class="nv">erldoc</span><span class="o">.</span><span class="nv">perl</span><span class="o">.</span><span class="nv">org</span><span class="sr">/functions/op</span><span class="nv">en</span><span class="o">.</span><span class="nv">html</span><span class="p">)</span> <span class="nv">LOG</span><span class="p">,</span> <span class="p">"</span><span class="s2">+&gt;&gt;/tmp/douban.log</span><span class="p">"</span> <span class="ow">or</span> <span class="p">[</span><span class="k">return</span><span class="p">](</span><span class="nv">http:</span><span class="sr">//p</span><span class="nv">erldoc</span><span class="o">.</span><span class="nv">perl</span><span class="o">.</span><span class="nv">org</span><span class="sr">/functions/</span><span class="k">return</span><span class="o">.</span><span class="nv">html</span><span class="p">)</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="p">[</span><span class="k">print</span><span class="p">](</span><span class="nv">http:</span><span class="sr">//p</span><span class="nv">erldoc</span><span class="o">.</span><span class="nv">perl</span><span class="o">.</span><span class="nv">org</span><span class="sr">/functions/p</span><span class="nv">rint</span><span class="o">.</span><span class="nv">html</span><span class="p">)</span> <span class="nv">LOG</span> <span class="nv">@_</span><span class="p">;</span>
+    <span class="p">[</span><span class="nb">close</span><span class="p">](</span><span class="nv">http:</span><span class="sr">//p</span><span class="nv">erldoc</span><span class="o">.</span><span class="nv">perl</span><span class="o">.</span><span class="nv">org</span><span class="sr">/functions/clos</span><span class="nv">e</span><span class="o">.</span><span class="nv">html</span><span class="p">)</span> <span class="nv">LOG</span><span class="p">;</span>
+    <span class="p">[</span><span class="k">return</span><span class="p">](</span><span class="nv">http:</span><span class="sr">//p</span><span class="nv">erldoc</span><span class="o">.</span><span class="nv">perl</span><span class="o">.</span><span class="nv">org</span><span class="sr">/functions/</span><span class="k">return</span><span class="o">.</span><span class="nv">html</span><span class="p">)</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">sub </span><span class="nf">download_cover</span><span class="p">{</span>
+    <span class="k">my</span> <span class="nv">$hash</span> <span class="o">=</span> <span class="p">[</span><span class="nb">shift</span><span class="p">](</span><span class="nv">http:</span><span class="sr">//p</span><span class="nv">erldoc</span><span class="o">.</span><span class="nv">perl</span><span class="o">.</span><span class="nv">org</span><span class="sr">/functions/s</span><span class="nv">hift</span><span class="o">.</span><span class="nv">html</span><span class="p">);</span>
+    <span class="k">my</span> <span class="nv">$covername</span> <span class="o">=</span> <span class="nv">$hash</span><span class="o">-&gt;</span><span class="p">{</span><span class="nv">albumtitle</span><span class="p">}</span> <span class="o">.</span> <span class="p">"</span><span class="s2">_cover.jpg</span><span class="p">";</span>
+    <span class="k">my</span> <span class="nv">$artist</span> <span class="o">=</span> <span class="nv">$hash</span><span class="o">-&gt;</span><span class="p">{'</span><span class="s1">artist</span><span class="p">'};</span>
+    <span class="nv">$covername</span> <span class="o">=</span> <span class="nv">&amp;file_trim</span> <span class="p">(</span><span class="nv">$covername</span><span class="p">);</span>
+    <span class="nv">$artist</span> <span class="o">=</span> <span class="nv">&amp;file_trim</span> <span class="p">(</span><span class="nv">$artist</span><span class="p">);</span>
+    <span class="p">[</span><span class="nb">mkdir</span><span class="p">](</span><span class="nv">http:</span><span class="sr">//p</span><span class="nv">erldoc</span><span class="o">.</span><span class="nv">perl</span><span class="o">.</span><span class="nv">org</span><span class="sr">/functions/m</span><span class="nv">kdir</span><span class="o">.</span><span class="nv">html</span><span class="p">)</span> <span class="p">"</span><span class="si">$USER_DIR</span><span class="s2">/</span><span class="si">$artist</span><span class="p">"</span> <span class="k">if</span> <span class="o">!</span> <span class="o">-</span><span class="nv">d</span> <span class="p">"</span><span class="si">$USER_DIR</span><span class="s2">/</span><span class="si">$artist</span><span class="p">";</span>
+<span class="err"> </span>
+    <span class="k">my</span> <span class="nv">$file</span> <span class="o">=</span> <span class="p">"</span><span class="si">$USER_DIR</span><span class="s2">/</span><span class="si">$artist</span><span class="s2">/</span><span class="si">$covername</span><span class="p">";</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$hash</span><span class="o">-&gt;</span><span class="p">{'</span><span class="s1">picture</span><span class="p">'}</span><span class="o">||</span> <span class="nv">$hash</span><span class="o">-&gt;</span><span class="p">{'</span><span class="s1">picture</span><span class="p">'}</span><span class="o">=~</span><span class="sr">/^http.+jpg$/</span><span class="p">){</span>
+<span class="err"> </span>
+        <span class="k">if</span> <span class="p">(</span> <span class="o">!</span> <span class="o">-</span><span class="p">[</span><span class="sr">s](http://perldoc.perl.org/functions/s.html) $file ){
             $b-&gt;get($hash-&gt;{'picture'},':content_file' =&gt;"$file") or [return](http://perldoc.perl.org/functions/return.html) -1;
         }
-        [unlink](http://perldoc.perl.org/functions/unlink.html) "/tmp/douban_cover.jpg";
-        [symlink](http://perldoc.perl.org/functions/symlink.html) "$file","/tmp/douban_cover.jpg";
-    }
-    [return](http://perldoc.perl.org/functions/return.html) 0;
-}
- 
-sub file_trim{
-    my $file = [shift](http://perldoc.perl.org/functions/shift.html);
-    $file = decode('utf8',$file);
-    $file =~ s/['"\\\/&lt;&gt;\?\!:\|\*]/ /g;
-    $file =~ s/^\s+//;
-    $file =~ s/\s+$//;
-    $file = encode('utf8',$file);
-    $file;
-}
- 
-__END__
-</code></pre>
+        [unlink]</span><span class="p">(</span><span class="nv">http:</span><span class="sr">//p</span><span class="nv">erldoc</span><span class="o">.</span><span class="nv">perl</span><span class="o">.</span><span class="nv">org</span><span class="sr">/functions/unlin</span><span class="nv">k</span><span class="o">.</span><span class="nv">html</span><span class="p">)</span> <span class="p">"</span><span class="s2">/tmp/douban_cover.jpg</span><span class="p">";</span>
+        <span class="p">[</span><span class="nb">symlink</span><span class="p">](</span><span class="nv">http:</span><span class="sr">//p</span><span class="nv">erldoc</span><span class="o">.</span><span class="nv">perl</span><span class="o">.</span><span class="nv">org</span><span class="sr">/functions/s</span><span class="nv">ymlink</span><span class="o">.</span><span class="nv">html</span><span class="p">)</span> <span class="p">"</span><span class="si">$file</span><span class="p">","</span><span class="s2">/tmp/douban_cover.jpg</span><span class="p">";</span>
+    <span class="p">}</span>
+    <span class="p">[</span><span class="k">return</span><span class="p">](</span><span class="nv">http:</span><span class="sr">//p</span><span class="nv">erldoc</span><span class="o">.</span><span class="nv">perl</span><span class="o">.</span><span class="nv">org</span><span class="sr">/functions/</span><span class="k">return</span><span class="o">.</span><span class="nv">html</span><span class="p">)</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="err"> </span>
+<span class="k">sub </span><span class="nf">file_trim</span><span class="p">{</span>
+    <span class="k">my</span> <span class="nv">$file</span> <span class="o">=</span> <span class="p">[</span><span class="nb">shift</span><span class="p">](</span><span class="nv">http:</span><span class="sr">//p</span><span class="nv">erldoc</span><span class="o">.</span><span class="nv">perl</span><span class="o">.</span><span class="nv">org</span><span class="sr">/functions/s</span><span class="nv">hift</span><span class="o">.</span><span class="nv">html</span><span class="p">);</span>
+    <span class="nv">$file</span> <span class="o">=</span> <span class="nv">decode</span><span class="p">('</span><span class="s1">utf8</span><span class="p">',</span><span class="nv">$file</span><span class="p">);</span>
+    <span class="nv">$file</span> <span class="o">=~</span> <span class="sr">s/['"\\\/&lt;&gt;\?\!:\|\*]/ /g</span><span class="p">;</span>
+    <span class="nv">$file</span> <span class="o">=~</span> <span class="sr">s/^\s+//</span><span class="p">;</span>
+    <span class="nv">$file</span> <span class="o">=~</span> <span class="sr">s/\s+$//</span><span class="p">;</span>
+    <span class="nv">$file</span> <span class="o">=</span> <span class="nv">encode</span><span class="p">('</span><span class="s1">utf8</span><span class="p">',</span><span class="nv">$file</span><span class="p">);</span>
+    <span class="nv">$file</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="err"> </span>
+<span class="cp">__END__
+</span></code></pre>
                 </div>
               </div>
             </section>
             <footer class="page__meta">
-              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-11-09">2020 年 11 月 9 日</time></p>
+              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-11-21">2020 年 11 月 21 日</time></p>
             </footer>
             <nav class="pagination">
               <a href="/wiki/scripts/" class="pagination--pager" title="实用脚本集锦

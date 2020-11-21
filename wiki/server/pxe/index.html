@@ -20,7 +20,7 @@
     <meta property="og:url" content="https://lug.ustc.edu.cn//wiki/server/pxe/">
     <meta property="og:description" content="中国科学技术大学网络启动服务">
     <meta property="article:published_time" content="2020-08-15T12:48:35+08:00">
-    <meta property="article:modified_time" content="2020-11-09T14:22:35+08:00">
+    <meta property="article:modified_time" content="2020-11-21T13:46:13+08:00">
     <link rel="canonical" href="https://lug.ustc.edu.cn//wiki/server/pxe/">
     <script type="application/ld+json">
       {
@@ -57,7 +57,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=9c0607669">
+    <link rel="stylesheet" href="/assets/css/main.css?v=6d600e15d">
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
       <style>
@@ -174,7 +174,7 @@
           <meta itemprop="headline" content="中国科学技术大学网络启动服务">
           <meta itemprop="description" content="中国科学技术大学网络启动服务">
           <meta itemprop="datePublished" content="2020-08-15T12:48:35+08:00">
-          <meta itemprop="dateModified" content="2020-11-09T14:22:35+08:00">
+          <meta itemprop="dateModified" content="2020-11-21T13:46:13+08:00">
           <div class="page__inner-wrap">
             <header>
               <h1 id="page-title" class="page__title" itemprop="headline">中国科学技术大学网络启动服务
@@ -205,11 +205,11 @@
               <p>校内 DHCP 服务会自动推送网络启动配置，只要在 BIOS 设置中开启网络启动就可以了。</p>
               <h3 id="从本地-grub2-加载uefi">从本地 GRUB2 加载（UEFI）</h3>
               <p>如果您的机器是 UEFI 模式启动的、UEFI 固件带有网络支持，并已经安装有 GRUB2，则可以在 GRUB 命令行中直接加载网络启动菜单：</p>
-              <div class="language-plaintext highlighter-rouge">
+              <div class="language-shell highlighter-rouge">
                 <div class="highlight">
                   <pre class="highlight"><code>insmod efinet http
 net_bootp
-configfile (http,202.38.93.94)/boot2/menu/root.menu
+configfile <span class="o">(</span>http,202.38.93.94<span class="o">)</span>/boot2/menu/root.menu
 </code></pre>
                 </div>
               </div>
@@ -233,28 +233,28 @@ mcopy grub.efi <span class="s1">'::/EFI/BOOT/bootx64.efi'</span> <span class="nt
               </div>
               <h3 id="从-ipxe-加载传统-pxe">从 iPXE 加载（传统 PXE）</h3>
               <p>用 <a href="https://ipxe.org/">iPXE</a> 脚本或者命令行模式执行以下命令：</p>
-              <div class="language-plaintext highlighter-rouge">
+              <div class="language-shell highlighter-rouge">
                 <div class="highlight">
                   <pre class="highlight"><code>dhcp
-set 210:string http://202.38.93.94/boot/tftp/
-chain ${210:string}pxelinux.0
+<span class="nb">set </span>210:string http://202.38.93.94/boot/tftp/
+chain <span class="k">${</span><span class="nv">210</span>:string<span class="k">}</span>pxelinux.0
 </code></pre>
                 </div>
               </div>
               <h2 id="旧版网络启动服务">旧版网络启动服务</h2>
               <p>旧版网络启动服务是吴峰光校友在 2001-2005 年创建的，基于 SYSLINUX。</p>
               <p>仅支持传统 PXE 启动，现在已不再更新。</p>
-              <div class="language-plaintext highlighter-rouge">
+              <div class="language-shell highlighter-rouge">
                 <div class="highlight">
                   <pre class="highlight"><code>dhcp //如果已经获取到了地址则请忽略
-set 210:string http://202.38.93.94/boot/tftp/
-chain ${210:string}lpxelinux.0
+<span class="nb">set </span>210:string http://202.38.93.94/boot/tftp/
+chain <span class="k">${</span><span class="nv">210</span>:string<span class="k">}</span>lpxelinux.0
 </code></pre>
                 </div>
               </div>
             </section>
             <footer class="page__meta">
-              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-11-09">2020 年 11 月 9 日</time></p>
+              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-11-21">2020 年 11 月 21 日</time></p>
             </footer>
             <nav class="pagination">
               <a href="/wiki/server/pxe/faq/" class="pagination--pager" title="中国科学技术大学校园网 PXE 服务 FAQ

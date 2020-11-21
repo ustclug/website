@@ -498,7 +498,7 @@ var store = [{
 "teaser": null
 },{
 "title": "lftp",
-"excerpt":"lftp是一款基于命令行的文件传输程序。除了 FTP 外，她还支持 FTPS, HTTP, HTTPS, HFTP, FISH 和 SFTP。它还有一个实用的特性，支持 FXP，即在两台 FTP 服务器间传文件，绕过客户机。此外，她还有一个内建的 BitTorrent 客户端。 常用命令 配置文件 lftp 启动后会一次读取/etc/lftp.conf、~/.lftprc 和~/.lftp/rc。 通常我们将常用的设置写入~/.lftprc 或者~/.lftp/rc 中。 下面是一份 lftprc 的样例： .lftprc #在浏览GBK编码的ftp时，可以执行gbkserver命令迅速切换。 alias gbkserver set ftp:charset gbk;set file:charset utf-8 alias utfserver set ftp:charset UTF-8;set file:charset utf-8   #使得ls的输出更友好、美观 alias ls cls -lhSF set color:use-color...","categories": [],
+"excerpt":"lftp是一款基于命令行的文件传输程序。除了 FTP 外，她还支持 FTPS, HTTP, HTTPS, HFTP, FISH 和 SFTP。它还有一个实用的特性，支持 FXP，即在两台 FTP 服务器间传文件，绕过客户机。此外，她还有一个内建的 BitTorrent 客户端。 常用命令 配置文件 lftp 启动后会一次读取/etc/lftp.conf、~/.lftprc 和~/.lftp/rc。 通常我们将常用的设置写入~/.lftprc 或者~/.lftp/rc 中。 下面是一份 lftprc 的样例： .lftprc: #在浏览GBK编码的ftp时，可以执行gbkserver命令迅速切换。 alias gbkserver set ftp:charset gbk;set file:charset utf-8 alias utfserver set ftp:charset UTF-8;set file:charset utf-8   #使得ls的输出更友好、美观 alias ls cls -lhSF set color:use-color...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/linux_digest/lftp/",
 "teaser": null
@@ -744,7 +744,7 @@ var store = [{
 "teaser": null
 },{
 "title": "AOSC OS 镜像源使用帮助",
-"excerpt":"anthon 为 AnthonOS 项目的官方源 http://repo.anthonos.org 的镜像。 快速设置 考虑到安同的系统情况可能时有改动，并且源也不少，我们就偷个懒： anthon-apt.sh # AOSC OSes, apt-dpkg cat /etc/apt/sources.list | egrep 'mirror|repo' | sed -r -e 's@(mirror|repo).anthonos.org@mirrors.ustc.edu.cn/anthon@g' &gt;&gt; /etc/apt/sources.list 如果你只想用 USTC 镜像的话，勇敢地把 &gt;&gt; 改成 &gt; 吧。由于 AOSC OS3 yum 暂时没有 fastestmirror，你需要做一些砍手的工作： anthon-yum.sh # AOSC OS3, yum-rpm sudo sed -r -e -i.orig 's@(mirror|repo).anthonos.org@mirrors.ustc.edu.cn/anthon@g' /etc/yum/repos.d/aosc.repo 接下来是分系统信息：...","categories": [],
+"excerpt":"anthon 为 AnthonOS 项目的官方源 http://repo.anthonos.org 的镜像。 快速设置 考虑到安同的系统情况可能时有改动，并且源也不少，我们就偷个懒： anthon-apt.sh: # AOSC OSes, apt-dpkg cat /etc/apt/sources.list | egrep 'mirror|repo' | sed -r -e 's@(mirror|repo).anthonos.org@mirrors.ustc.edu.cn/anthon@g' &gt;&gt; /etc/apt/sources.list 如果你只想用 USTC 镜像的话，勇敢地把 &gt;&gt; 改成 &gt; 吧。由于 AOSC OS3 yum 暂时没有 fastestmirror，你需要做一些砍手的工作： anthon-yum.sh: # AOSC OS3, yum-rpm sudo sed -r -e -i.orig 's@(mirror|repo).anthonos.org@mirrors.ustc.edu.cn/anthon@g' /etc/yum/repos.d/aosc.repo 接下来是分系统信息：...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/anthon/",
 "teaser": null
@@ -756,19 +756,19 @@ var store = [{
 "teaser": null
 },{
 "title": "archive.raspberrypi.org",
-"excerpt":"修改/etc/apt/sources.list.d/raspi.list为以下内容   raspi.list   deb https://mirrors.ustc.edu.cn/archive.raspberrypi.org/ jessie main ui  ","categories": [],
+"excerpt":"修改/etc/apt/sources.list.d/raspi.list为以下内容   raspi.list:   deb https://mirrors.ustc.edu.cn/archive.raspberrypi.org/ jessie main ui  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/archive.raspberrypi.org/",
 "teaser": null
 },{
 "title": "Arch Linux 镜像使用帮助",
-"excerpt":"收录架构   i686  x86_64   收录版本   ALL   使用说明   编辑/etc/pacman.d/mirrorlist，先注释掉里面的所有行，然后在文件的最顶端添加   mirrorlist   Server = http://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch   相关链接   官方主页: http://www.archlinux.org/  邮件列表: http://www.archlinux.org/mailman/listinfo/  论坛: http://bbs.archlinux.org/  Wiki: http://wiki.archlinux.org/  ","categories": [],
+"excerpt":"收录架构   i686  x86_64   收录版本   ALL   使用说明   编辑/etc/pacman.d/mirrorlist，先注释掉里面的所有行，然后在文件的最顶端添加   mirrorlist:   Server = http://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch   相关链接   官方主页: http://www.archlinux.org/  邮件列表: http://www.archlinux.org/mailman/listinfo/  论坛: http://bbs.archlinux.org/  Wiki: http://wiki.archlinux.org/  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/archlinux/",
 "teaser": null
 },{
 "title": "Arch Linux ARM 镜像使用帮助",
-"excerpt":"Arch Linux ARM 是针对 ARM 架构移植的 Arch Linux 发行版。您可以使用它的默认镜像源 http://mirror.archlinuxarm.org/ ，它会自动解析到离用户较近的镜像，也可以手动设置我们的镜像源。   收录架构           ARMv5            ARMv6            ARMv7            AArch64       快速设置   编辑 /etc/pacman.d/mirrorlist ，先注释掉里面的所有行，然后在文件的最顶端添加   mirrorlist   Server = https://mirrors.ustc.edu.cn/archlinuxarm/$arch/$repo   相关链接           官方主页 http://archlinuxarm.org/            Github https://github.com/archlinuxarm            论坛 http://archlinuxarm.org/forum/            FAQ1 http://archlinuxarm.org/support/faq            镜像列表 http://archlinuxarm.org/about/mirrors                      Frequently Asked Questions &#8617;           ","categories": [],
+"excerpt":"Arch Linux ARM 是针对 ARM 架构移植的 Arch Linux 发行版。您可以使用它的默认镜像源 http://mirror.archlinuxarm.org/ ，它会自动解析到离用户较近的镜像，也可以手动设置我们的镜像源。   收录架构           ARMv5            ARMv6            ARMv7            AArch64       快速设置   编辑 /etc/pacman.d/mirrorlist ，先注释掉里面的所有行，然后在文件的最顶端添加   mirrorlist:   Server = https://mirrors.ustc.edu.cn/archlinuxarm/$arch/$repo   相关链接           官方主页 http://archlinuxarm.org/            Github https://github.com/archlinuxarm            论坛 http://archlinuxarm.org/forum/            FAQ1 http://archlinuxarm.org/support/faq            镜像列表 http://archlinuxarm.org/about/mirrors                      Frequently Asked Questions &#8617;           ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/archlinuxarm/",
 "teaser": null
@@ -798,7 +798,7 @@ var store = [{
 "teaser": null
 },{
 "title": "Centos 镜像使用帮助",
-"excerpt":"收录架构 i386 x86_64 收录版本 5 6 7 使用说明 首先备份 CentOS-Base.repo mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup 下载对应版本的 CentOS-Base.repo, 放入/etc/yum.repos.d/ 这是 CentOS 5 的: CentOS-Base.repo # CentOS-Base.repo # # The mirror system uses the connecting IP address of the client and the # update status of each mirror to pick mirrors that are updated...","categories": [],
+"excerpt":"收录架构 i386 x86_64 收录版本 5 6 7 使用说明 首先备份 CentOS-Base.repo mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup 下载对应版本的 CentOS-Base.repo, 放入/etc/yum.repos.d/ 这是 CentOS 5 的: CentOS-Base.repo: # CentOS-Base.repo # # The mirror system uses the connecting IP address of the client and the # update status of each mirror to pick mirrors that are updated...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/centos/",
 "teaser": null
@@ -834,19 +834,19 @@ var store = [{
 "teaser": null
 },{
 "title": "Debian Multimedia 镜像使用帮助",
-"excerpt":"收录架构 i386 amd64 source 收录版本 stable unstable oldstable testing experimental 使用说明 以 Debian 8 “Jessie” 为例, 编辑/etc/apt/sources.list 文件, 在文件最前面添加以下条目(操作前请做好相应备份) sources.list deb http://mirrors.ustc.edu.cn/debian-multimedia/ jessie main non-free deb-src http://mirrors.ustc.edu.cn/debian-multimedia/ jessie main non-free deb http://mirrors.ustc.edu.cn/debian-multimedia/ jessie-backports main deb-src http://mirrors.ustc.edu.cn/debian-multimedia/ jessie-backports main 如果遇到 GPG error，你可能需要手动更新 deb-multimedia-keyring，以下摘自 debian multimedia 首页： 06/02/2015 : Maybe I went...","categories": [],
+"excerpt":"收录架构 i386 amd64 source 收录版本 stable unstable oldstable testing experimental 使用说明 以 Debian 8 “Jessie” 为例, 编辑/etc/apt/sources.list 文件, 在文件最前面添加以下条目(操作前请做好相应备份) sources.list: deb http://mirrors.ustc.edu.cn/debian-multimedia/ jessie main non-free deb-src http://mirrors.ustc.edu.cn/debian-multimedia/ jessie main non-free deb http://mirrors.ustc.edu.cn/debian-multimedia/ jessie-backports main deb-src http://mirrors.ustc.edu.cn/debian-multimedia/ jessie-backports main 如果遇到 GPG error，你可能需要手动更新 deb-multimedia-keyring，以下摘自 debian multimedia 首页： 06/02/2015 : Maybe I went...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/debian-multimedia/",
 "teaser": null
 },{
 "title": "Debian Security 镜像使用帮助",
-"excerpt":"收录架构 i386 amd64 source 收录版本 stable testing 使用说明 操作前请做好相应备份 一般情况下，更改 /etc/apt/sources.list 文件中 Debian Security 默认的源地址 http://security.debian.org/ 为 https://mirrors.ustc.edu.cn/debian-security 即可。 可以使用如下命令： sudo sed -i 's/security.debian.org/mirrors.ustc.edu.cn\\/debian-security/g' /etc/apt/sources.list 以 Jessie 为例, 编辑/etc/apt/sources.list 文件, 在文件最前面添加以下条目(操作前请做好相应备份) sources.list deb http://mirrors.ustc.edu.cn/debian-security/ jessie/updates main non-free contrib deb-src http://mirrors.ustc.edu.cn/debian-security/ jessie/updates main non-free contrib 相关链接 官方主页: http://www.debian.org/ 邮件列表: http://www.debian.org/support#mail_lists Wiki:...","categories": [],
+"excerpt":"收录架构 i386 amd64 source 收录版本 stable testing 使用说明 操作前请做好相应备份 一般情况下，更改 /etc/apt/sources.list 文件中 Debian Security 默认的源地址 http://security.debian.org/ 为 https://mirrors.ustc.edu.cn/debian-security 即可。 可以使用如下命令： sudo sed -i 's/security.debian.org/mirrors.ustc.edu.cn\\/debian-security/g' /etc/apt/sources.list 以 Jessie 为例, 编辑/etc/apt/sources.list 文件, 在文件最前面添加以下条目(操作前请做好相应备份) sources.list: deb http://mirrors.ustc.edu.cn/debian-security/ jessie/updates main non-free contrib deb-src http://mirrors.ustc.edu.cn/debian-security/ jessie/updates main non-free contrib 相关链接 官方主页: http://www.debian.org/ 邮件列表: http://www.debian.org/support#mail_lists Wiki:...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/debian-security/",
 "teaser": null
 },{
 "title": "Debian 镜像使用帮助",
-"excerpt":"收录架构 作为官方源之一，与 Debian 上游保持相同 收录版本 与 Debian 上游保持相同 使用说明 操作前请做好相应备份 一般情况下，更改 /etc/apt/sources.list 文件中 Debian 默认的源地址 http://httpredir.debian.org 为 http://mirrors.ustc.edu.cn 即可。 Debian 的默认源地址可能依情况而不同，请注意更改 httpredir.debian.org 为合适的地址。 可以使用如下命令： sudo sed -i 's/httpredir.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list 也可以直接编辑，以 Jessie 为例，编辑 /etc/apt/sources.list 文件，在文件最前面添加以下条目 sources.list deb http://mirrors.ustc.edu.cn/debian stable main contrib non-free deb-src http://mirrors.ustc.edu.cn/debian stable main contrib non-free deb http://mirrors.ustc.edu.cn/debian stable-proposed-updates...","categories": [],
+"excerpt":"收录架构 作为官方源之一，与 Debian 上游保持相同 收录版本 与 Debian 上游保持相同 使用说明 操作前请做好相应备份 一般情况下，更改 /etc/apt/sources.list 文件中 Debian 默认的源地址 http://httpredir.debian.org 为 http://mirrors.ustc.edu.cn 即可。 Debian 的默认源地址可能依情况而不同，请注意更改 httpredir.debian.org 为合适的地址。 可以使用如下命令： sudo sed -i 's/httpredir.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list 也可以直接编辑，以 Jessie 为例，编辑 /etc/apt/sources.list 文件，在文件最前面添加以下条目 sources.list: deb http://mirrors.ustc.edu.cn/debian stable main contrib non-free deb-src http://mirrors.ustc.edu.cn/debian stable main contrib non-free deb http://mirrors.ustc.edu.cn/debian stable-proposed-updates...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/debian/",
 "teaser": null
@@ -870,13 +870,13 @@ var store = [{
 "teaser": null
 },{
 "title": "EPEL 镜像使用帮助",
-"excerpt":"收录架构 i386 amd64 SRPMS ppc64 使用说明 此源适用于 Red Hat, CentOS, Scientific Linux 版本 5 和 6 若存在则先备份/etc/yum.repos.d/epel.repo 和/etc/yum.repos.d/epel-testing.repo 下载下面的两个文件到/etc/yum.repos.d/ epel.repo [epel] name=Extra Packages for Enterprise Linux 6 - $basearch baseurl=http://mirrors.ustc.edu.cn/epel/6/$basearch #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=epel-6&amp;arch=$basearch failovermethod=priority enabled=1 gpgcheck=1 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-6   [epel-debuginfo] name=Extra Packages for Enterprise Linux 6 - $basearch - Debug baseurl=http://mirrors.ustc.edu.cn/epel/6/$basearch/debug #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=epel-debug-6&amp;arch=$basearch failovermethod=priority...","categories": [],
+"excerpt":"收录架构 i386 amd64 SRPMS ppc64 使用说明 此源适用于 Red Hat, CentOS, Scientific Linux 版本 5 和 6 若存在则先备份/etc/yum.repos.d/epel.repo 和/etc/yum.repos.d/epel-testing.repo 下载下面的两个文件到/etc/yum.repos.d/ epel.repo: [epel] name=Extra Packages for Enterprise Linux 6 - $basearch baseurl=http://mirrors.ustc.edu.cn/epel/6/$basearch #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=epel-6&amp;arch=$basearch failovermethod=priority enabled=1 gpgcheck=1 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-6   [epel-debuginfo] name=Extra Packages for Enterprise Linux 6 - $basearch - Debug baseurl=http://mirrors.ustc.edu.cn/epel/6/$basearch/debug #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=epel-debug-6&amp;arch=$basearch failovermethod=priority...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/epel/",
 "teaser": null
 },{
 "title": "Fedora 镜像使用帮助",
-"excerpt":"收录架构 i686 x86_64 收录版本 所有仍在支持的版本 最新测试版本 使用说明 将以下保存为 fedora-ustc.repo fedora-ustc.repo [fedora] name=Fedora $releasever - $basearch - ustc failovermethod=priority baseurl=http://mirrors.ustc.edu.cn/fedora/releases/$releasever/Everything/$basearch/os/ #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=fedora-$releasever&amp;arch=$basearch enabled=1 metadata_expire=7d gpgcheck=1 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch   [fedora-debuginfo] name=Fedora $releasever - $basearch - Debug - ustc failovermethod=priority baseurl=http://mirrors.ustc.edu.cn/fedora/releases/$releasever/Everything/$basearch/debug/ #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=fedora-debug-$releasever&amp;arch=$basearch enabled=0 metadata_expire=7d gpgcheck=1 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch   [fedora-source] name=Fedora $releasever - Source - ustc failovermethod=priority...","categories": [],
+"excerpt":"收录架构 i686 x86_64 收录版本 所有仍在支持的版本 最新测试版本 使用说明 将以下保存为 fedora-ustc.repo fedora-ustc.repo: [fedora] name=Fedora $releasever - $basearch - ustc failovermethod=priority baseurl=http://mirrors.ustc.edu.cn/fedora/releases/$releasever/Everything/$basearch/os/ #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=fedora-$releasever&amp;arch=$basearch enabled=1 metadata_expire=7d gpgcheck=1 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch   [fedora-debuginfo] name=Fedora $releasever - $basearch - Debug - ustc failovermethod=priority baseurl=http://mirrors.ustc.edu.cn/fedora/releases/$releasever/Everything/$basearch/debug/ #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=fedora-debug-$releasever&amp;arch=$basearch enabled=0 metadata_expire=7d gpgcheck=1 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch   [fedora-source] name=Fedora $releasever - Source - ustc failovermethod=priority...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/fedora/",
 "teaser": null
@@ -888,7 +888,7 @@ var store = [{
 "teaser": null
 },{
 "title": "Gentoo-Portage 镜像使用帮助",
-"excerpt":"收录架构   收录版本   使用说明   旧的 SYNC 方式已不推荐使用，建议使用新的 repos.conf  官网 wiki：https://wiki.gentoo.org/wiki//etc/portage/repos.conf   单文件方式   新建或修改 /etc/portage/repos.conf ：   /etc/portage/repos.conf   [DEFAULT] main-repo = gentoo   [gentoo] location = /usr/portage sync-type = rsync sync-uri = rsync://rsync.mirrors.ustc.edu.cn/gentoo-portage/ auto-sync = yes   相关链接   官方主页: http://www.gentoo.org/  邮件列表: http://www.gentoo.org/main/en/lists.xml  论坛: http://forums.gentoo.org/  文档: http://www.gentoo.org/doc/en/  Wiki: http://wiki.gentoo.org/  镜像列表: http://www.gentoo.org/main/en/mirrors-rsync.xml  ","categories": [],
+"excerpt":"收录架构   收录版本   使用说明   旧的 SYNC 方式已不推荐使用，建议使用新的 repos.conf  官网 wiki：https://wiki.gentoo.org/wiki//etc/portage/repos.conf   单文件方式   新建或修改 /etc/portage/repos.conf ：   /etc/portage/repos.conf:   [DEFAULT] main-repo = gentoo   [gentoo] location = /usr/portage sync-type = rsync sync-uri = rsync://rsync.mirrors.ustc.edu.cn/gentoo-portage/ auto-sync = yes   相关链接   官方主页: http://www.gentoo.org/  邮件列表: http://www.gentoo.org/main/en/lists.xml  论坛: http://forums.gentoo.org/  文档: http://www.gentoo.org/doc/en/  Wiki: http://wiki.gentoo.org/  镜像列表: http://www.gentoo.org/main/en/mirrors-rsync.xml  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/gentoo-portage/",
 "teaser": null
@@ -996,7 +996,7 @@ var store = [{
 "teaser": null
 },{
 "title": "PyPI 镜像使用帮助",
-"excerpt":"如何使用科大 mirrors 加速 pip？ 编辑 ~/.pip/pip.conf 文件（如果没有则创建之），将 index-url 开头的一行修改为下面一行： index-url = https://mirrors.ustc.edu.cn/pypi/web/simple 如果运行 pip 时, 提示如下错误 configparser.MissingSectionHeaderError: File contains no section headers. 请在 ~/.pip/pip.conf 最上方加上 [global] 这一 section header 如： pip.conf [global] index-url = https://mirrors.ustc.edu.cn/pypi/web/simple format = columns 同步方式 使用 bandersnatch，每 4 小时从 pypi.python.org 官方同步。 相关链接 PyPI Official Mirrors: https://pypi.python.org/mirrors...","categories": [],
+"excerpt":"如何使用科大 mirrors 加速 pip？ 编辑 ~/.pip/pip.conf 文件（如果没有则创建之），将 index-url 开头的一行修改为下面一行： index-url = https://mirrors.ustc.edu.cn/pypi/web/simple 如果运行 pip 时, 提示如下错误 configparser.MissingSectionHeaderError: File contains no section headers. 请在 ~/.pip/pip.conf 最上方加上 [global] 这一 section header 如： pip.conf: [global] index-url = https://mirrors.ustc.edu.cn/pypi/web/simple format = columns 同步方式 使用 bandersnatch，每 4 小时从 pypi.python.org 官方同步。 相关链接 PyPI Official Mirrors: https://pypi.python.org/mirrors...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/pypi/",
 "teaser": null
@@ -1050,7 +1050,7 @@ var store = [{
 "teaser": null
 },{
 "title": "Scientific Linux 镜像使用帮助",
-"excerpt":"收录版本 6 使用说明 下载 sl-ustc.repo 放入/etc/yum.repo.d/中 sl-ustc.repo [sl] name=Scientific Linux $releasever - $basearch - ustc.edu.cn baseurl=http://mirrors.ustc.edu.cn/scientificlinux/$releasever/$basearch/os/ #mirrorlist=http://ftp.scientificlinux.org/linux/scientific/mirrorlist/sl-base-6.txt enabled=1 gpgcheck=1 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-sl file:///etc/pki/rpm-gpg/RPM-GPG-KEY-sl6 file:///etc/pki/rpm-gpg/RPM-GPG-KEY-cern   [sl-security] name=Scientific Linux $releasever - $basearch - security updates - ustc.edu.cn baseurl=http://mirrors.ustc.edu.cn/scientificlinux/$releasever/$basearch/updates/security/ #mirrorlist=http://ftp.scientificlinux.org/linux/scientific/mirrorlist/sl-security-6.txt enabled=1 gpgcheck=1 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-sl file:///etc/pki/rpm-gpg/RPM-GPG-KEY-sl6 file:///etc/pki/rpm-gpg/RPM-GPG-KEY-cern     [sl-source] name=Scientific Linux $releasever - Source -...","categories": [],
+"excerpt":"收录版本 6 使用说明 下载 sl-ustc.repo 放入/etc/yum.repo.d/中 sl-ustc.repo: [sl] name=Scientific Linux $releasever - $basearch - ustc.edu.cn baseurl=http://mirrors.ustc.edu.cn/scientificlinux/$releasever/$basearch/os/ #mirrorlist=http://ftp.scientificlinux.org/linux/scientific/mirrorlist/sl-base-6.txt enabled=1 gpgcheck=1 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-sl file:///etc/pki/rpm-gpg/RPM-GPG-KEY-sl6 file:///etc/pki/rpm-gpg/RPM-GPG-KEY-cern   [sl-security] name=Scientific Linux $releasever - $basearch - security updates - ustc.edu.cn baseurl=http://mirrors.ustc.edu.cn/scientificlinux/$releasever/$basearch/updates/security/ #mirrorlist=http://ftp.scientificlinux.org/linux/scientific/mirrorlist/sl-security-6.txt enabled=1 gpgcheck=1 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-sl file:///etc/pki/rpm-gpg/RPM-GPG-KEY-sl6 file:///etc/pki/rpm-gpg/RPM-GPG-KEY-cern     [sl-source] name=Scientific Linux $releasever - Source -...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/scientificlinux/",
 "teaser": null
@@ -1062,7 +1062,7 @@ var store = [{
 "teaser": null
 },{
 "title": "Ubuntu 镜像使用帮助",
-"excerpt":"收录架构 ALL 收录版本 所有 Ubuntu 当前支持的版本，包括开发版，具体版本见 https://wiki.ubuntu.com/Releases 对于 Ubuntu 不再支持的版本，请参考 Ubuntu Old Release，https://mirrors.ustc.edu.cn/ubuntu-old-releases/ 使用说明 软件包管理中心（推荐） 在软件包管理中心“软件源”中选择“中国的服务器”下 mirrors.ustc.edu.cn 即可自动使用。 手动更改配置文件 操作前请做好相应备份 一般情况下，更改 /etc/apt/sources.list 文件中 Ubuntu 默认的源地址 http://archive.ubuntu.com/ 为 http://mirrors.ustc.edu.cn 即可。 可以使用如下命令： sudo sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list 当然直接编辑 /etc/apt/sources.list 文件（需要使用 sudo）也可以，以 Ubuntu 16.04 为例，在文件最前面添加以下条目： sources.list # 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释 deb https://mirrors.ustc.edu.cn/ubuntu/...","categories": [],
+"excerpt":"收录架构 ALL 收录版本 所有 Ubuntu 当前支持的版本，包括开发版，具体版本见 https://wiki.ubuntu.com/Releases 对于 Ubuntu 不再支持的版本，请参考 Ubuntu Old Release，https://mirrors.ustc.edu.cn/ubuntu-old-releases/ 使用说明 软件包管理中心（推荐） 在软件包管理中心“软件源”中选择“中国的服务器”下 mirrors.ustc.edu.cn 即可自动使用。 手动更改配置文件 操作前请做好相应备份 一般情况下，更改 /etc/apt/sources.list 文件中 Ubuntu 默认的源地址 http://archive.ubuntu.com/ 为 http://mirrors.ustc.edu.cn 即可。 可以使用如下命令： sudo sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list 当然直接编辑 /etc/apt/sources.list 文件（需要使用 sudo）也可以，以 Ubuntu 16.04 为例，在文件最前面添加以下条目： sources.list: # 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释 deb https://mirrors.ustc.edu.cn/ubuntu/...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/ubuntu/",
 "teaser": null
@@ -1074,7 +1074,7 @@ var store = [{
 "teaser": null
 },{
 "title": "ustclug 自建软件源使用帮助",
-"excerpt":"收录架构   i386, amd64, armhf   收录版本   针对 Debian Jessie 挑选的部分软件，版本按需确定。   使用说明      编辑sources.list文件：   snippet.bash   echo deb https://mirrors.ustc.edu.cn/ustclug ustclug main | sudo tee /etc/apt/sources.list.d/ustclug.list      使用apt-key add添加缺失的公钥：   snippet.bash   wget -q https://mirrors.ustc.edu.cn/ustclug/ustclug.asc -O - | sudo apt-key add -      在apt update后即可正常使用。   注意 ：LUG@USTC 对其中的软件包的来源不做任何保证，请谨慎使用。   相关链接   无  ","categories": [],
+"excerpt":"收录架构   i386, amd64, armhf   收录版本   针对 Debian Jessie 挑选的部分软件，版本按需确定。   使用说明      编辑sources.list文件：   snippet.bash:   echo deb https://mirrors.ustc.edu.cn/ustclug ustclug main | sudo tee /etc/apt/sources.list.d/ustclug.list      使用apt-key add添加缺失的公钥：   snippet.bash:   wget -q https://mirrors.ustc.edu.cn/ustclug/ustclug.asc -O - | sudo apt-key add -      在apt update后即可正常使用。   注意 ：LUG@USTC 对其中的软件包的来源不做任何保证，请谨慎使用。   相关链接   无  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/ustclug/",
 "teaser": null
@@ -1098,25 +1098,25 @@ var store = [{
 "teaser": null
 },{
 "title": "豆瓣电台",
-"excerpt":"摘自瀚海星云 bbs：http://bbs.ustc.edu.cn/cgi/bbstcon?board=Linux&amp;file=M.1286547291.A 针对网速慢的用户以及豆瓣电台的改动做了些修改～: D dbfm.pl #!/usr/bin/perl -w use LWP; use HTTP::Cookies; use JSON; use Encode; use Term::ANSIColor; #use Smart::Comments;   my $time = 0; $SIG{INT} = \"quit\";   my $b = LWP::UserAgent-&gt;new; $b-&gt;cookie_jar(HTTP::Cookies-&gt;new);   my $form = { form_email=&gt;'your_id', ###----- 你的帐号-----### form_password=&gt;'your_passwd', ###----- 你的密码 ----### redir=&gt;\"/service/account/?return_to=http%3A%2F%2Fdouban.fm&amp;amp;mode=checkid_setup\", };   #-------login the...","categories": [],
+"excerpt":"摘自瀚海星云 bbs：http://bbs.ustc.edu.cn/cgi/bbstcon?board=Linux&amp;file=M.1286547291.A 针对网速慢的用户以及豆瓣电台的改动做了些修改～: D dbfm.pl: #!/usr/bin/perl -w use LWP; use HTTP::Cookies; use JSON; use Encode; use Term::ANSIColor; #use Smart::Comments;   my $time = 0; $SIG{INT} = \"quit\";   my $b = LWP::UserAgent-&gt;new; $b-&gt;cookie_jar(HTTP::Cookies-&gt;new);   my $form = { form_email=&gt;'your_id', ###----- 你的帐号-----### form_password=&gt;'your_passwd', ###----- 你的密码 ----### redir=&gt;\"/service/account/?return_to=http%3A%2F%2Fdouban.fm&amp;amp;mode=checkid_setup\", };   #-------login the...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/scripts/douban/",
 "teaser": null
 },{
 "title": "下载在线视频",
-"excerpt":"这个脚本借助于http://www.flvcd.com/，分析各主流视频网站的视频地址，根据给定的视频网页地址，下载其中的视频。 get-video.sh #!/bin/bash   flv_web_addr=$1 flv_dir=$HOME/videos #存放视频地址的位置 flvcd_page_file=/tmp/flv_page_file   wget -q -O $flvcd_page_file \"http://www.flvcd.com/parse.php?format=high&amp;kw=$flv_web_addr\" flvurls=( $(cat $flvcd_page_file | grep \"&lt;U&gt;\" | sed s/\\&lt;U\\&gt;//g) ) #取出所有片段的视频地址 flvtitles=( $(cat $flvcd_page_file | grep \"&lt;N&gt;\" | iconv -f gb2312 -t utf8 | sed -n \"s/\\s\\{1,\\}/_/g;s/&lt;N&gt;//gp\") ) #取出所有片段的标题，将空格替换为下划线 nr_urls=${#flvurls[@]}   if [ $nr_urls -eq 0...","categories": [],
+"excerpt":"这个脚本借助于http://www.flvcd.com/，分析各主流视频网站的视频地址，根据给定的视频网页地址，下载其中的视频。 get-video.sh: #!/bin/bash   flv_web_addr=$1 flv_dir=$HOME/videos #存放视频地址的位置 flvcd_page_file=/tmp/flv_page_file   wget -q -O $flvcd_page_file \"http://www.flvcd.com/parse.php?format=high&amp;kw=$flv_web_addr\" flvurls=( $(cat $flvcd_page_file | grep \"&lt;U&gt;\" | sed s/\\&lt;U\\&gt;//g) ) #取出所有片段的视频地址 flvtitles=( $(cat $flvcd_page_file | grep \"&lt;N&gt;\" | iconv -f gb2312 -t utf8 | sed -n \"s/\\s\\{1,\\}/_/g;s/&lt;N&gt;//gp\") ) #取出所有片段的标题，将空格替换为下划线 nr_urls=${#flvurls[@]}   if [ $nr_urls -eq 0...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/scripts/download_flv/",
 "teaser": null
 },{
 "title": "ssh 代理",
-"excerpt":"这个脚本通过自动登录免费的 ssh 账户，实现自动的 ssh 代理， 绑定的端口为 7070 ssh_proxy.sh #!/bin/bash   cd `dirname $0` #进入ssh_proxy.sh所在的目录 SSH_ACCOUNT_SITE=\"http://dailimm.com/freessh.php\" #提供免费ssh账户的网站   'wget' -q $SSH_ACCOUNT_SITE -O /tmp/ssh_site HOST=$(cat /tmp/ssh_site | grep \"服务器地址\" | sed \"s/^.*value=\\\"\\(.*\\)\\\" onClick.*$/\\1/\") #获取服务器地址 USER= `cat /tmp/ssh_site | grep \"服务器用户\" | sed \"s/^.*value=\\\"\\(.*\\)\\\" onClick.*$/\\1/\"` #获取用户名 PASSWORD= `cat /tmp/ssh_site | grep \"服务器密码\" |...","categories": [],
+"excerpt":"这个脚本通过自动登录免费的 ssh 账户，实现自动的 ssh 代理， 绑定的端口为 7070 ssh_proxy.sh: #!/bin/bash   cd `dirname $0` #进入ssh_proxy.sh所在的目录 SSH_ACCOUNT_SITE=\"http://dailimm.com/freessh.php\" #提供免费ssh账户的网站   'wget' -q $SSH_ACCOUNT_SITE -O /tmp/ssh_site HOST=$(cat /tmp/ssh_site | grep \"服务器地址\" | sed \"s/^.*value=\\\"\\(.*\\)\\\" onClick.*$/\\1/\") #获取服务器地址 USER= `cat /tmp/ssh_site | grep \"服务器用户\" | sed \"s/^.*value=\\\"\\(.*\\)\\\" onClick.*$/\\1/\"` #获取用户名 PASSWORD= `cat /tmp/ssh_site | grep \"服务器密码\" |...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/scripts/ssh_proxy/",
 "teaser": null
 },{
 "title": "USTC 网络通脚本",
-"excerpt":"Bash 版 来源：http://bbs.ustc.edu.cn/cgi/go?cgi=bbscon&amp;bid=77&amp;fn=M4CAEC63D wlt.sh #!/bin/bash   curl -c /tmp/wlt \"http://wlt.ustc.edu.cn/cgi-bin/ip?cmd=login&amp;name=yourname&amp;password=yourpass\" &gt; /dev/null curl -b /tmp/wlt \"http://wlt.ustc.edu.cn/cgi-bin/ip?cmd=set&amp;type=6&amp;exp=0\" &gt; /dev/null rm /tmp/wlt 脚本说明： 其中 yourname 和 yourpass 分别是用户名密码， type = 0 -- 教育网出口 1 -- 电信出口 2 -- 联通出口 3 -- 电信出口2 4 -- 联通出口2 5 -- 电信出口3 6 -- 联通出口3 7...","categories": [],
+"excerpt":"Bash 版 来源：http://bbs.ustc.edu.cn/cgi/go?cgi=bbscon&amp;bid=77&amp;fn=M4CAEC63D wlt.sh: #!/bin/bash   curl -c /tmp/wlt \"http://wlt.ustc.edu.cn/cgi-bin/ip?cmd=login&amp;name=yourname&amp;password=yourpass\" &gt; /dev/null curl -b /tmp/wlt \"http://wlt.ustc.edu.cn/cgi-bin/ip?cmd=set&amp;type=6&amp;exp=0\" &gt; /dev/null rm /tmp/wlt 脚本说明： 其中 yourname 和 yourpass 分别是用户名密码， type = 0 -- 教育网出口 1 -- 电信出口 2 -- 联通出口 3 -- 电信出口2 4 -- 联通出口2 5 -- 电信出口3 6 -- 联通出口3 7...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/scripts/wlt/",
 "teaser": null

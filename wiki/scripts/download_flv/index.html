@@ -20,7 +20,7 @@
     <meta property="og:url" content="https://lug.ustc.edu.cn//wiki/scripts/download_flv/">
     <meta property="og:description" content="下载在线视频">
     <meta property="article:published_time" content="2020-08-09T15:07:59+08:00">
-    <meta property="article:modified_time" content="2020-11-09T14:22:35+08:00">
+    <meta property="article:modified_time" content="2020-11-21T13:46:13+08:00">
     <link rel="canonical" href="https://lug.ustc.edu.cn//wiki/scripts/download_flv/">
     <script type="application/ld+json">
       {
@@ -57,7 +57,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=9c0607669">
+    <link rel="stylesheet" href="/assets/css/main.css?v=6d600e15d">
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
       <style>
@@ -174,7 +174,7 @@
           <meta itemprop="headline" content="下载在线视频">
           <meta itemprop="description" content="下载在线视频">
           <meta itemprop="datePublished" content="2020-08-09T15:07:59+08:00">
-          <meta itemprop="dateModified" content="2020-11-09T14:22:35+08:00">
+          <meta itemprop="dateModified" content="2020-11-21T13:46:13+08:00">
           <div class="page__inner-wrap">
             <header>
               <h1 id="page-title" class="page__title" itemprop="headline">下载在线视频
@@ -189,34 +189,34 @@
                 </nav>
               </aside>
               <p>这个脚本借助于<a href="http://www.flvcd.com/">http://www.flvcd.com/</a>，分析各主流视频网站的视频地址，根据给定的视频网页地址，下载其中的视频。</p>
-              <p><a href="/wiki/_export/code/scripts/get-video435f.sh?codeblock=0" title="下载片段">get-video.sh</a></p>
-              <div class="language-plaintext highlighter-rouge">
+              <p>get-video.sh:</p>
+              <div class="language-sh highlighter-rouge">
                 <div class="highlight">
-                  <pre class="highlight"><code>#!/bin/bash
+                  <pre class="highlight"><code><span class="c">#!/bin/bash</span>
  
-flv_web_addr=$1
-flv_dir=$HOME/videos    #存放视频地址的位置
-flvcd_page_file=/tmp/flv_page_file
+<span class="nv">flv_web_addr</span><span class="o">=</span><span class="nv">$1</span>
+<span class="nv">flv_dir</span><span class="o">=</span><span class="nv">$HOME</span>/videos    <span class="c">#存放视频地址的位置</span>
+<span class="nv">flvcd_page_file</span><span class="o">=</span>/tmp/flv_page_file
  
-wget -q -O $flvcd_page_file "http://www.flvcd.com/parse.php?format=high&amp;kw=$flv_web_addr"
-flvurls=( $(cat $flvcd_page_file | grep "&lt;U&gt;" | sed s/\&lt;U\&gt;//g) )  #取出所有片段的视频地址
-flvtitles=( $(cat $flvcd_page_file | grep "&lt;N&gt;" | iconv -f gb2312 -t utf8 | sed -n "s/\s\{1,\}/_/g;s/&lt;N&gt;//gp") )  #取出所有片段的标题，将空格替换为下划线
-nr_urls=${#flvurls[@]}
+wget <span class="nt">-q</span> <span class="nt">-O</span> <span class="nv">$flvcd_page_file</span> <span class="s2">"http://www.flvcd.com/parse.php?format=high&amp;kw=</span><span class="nv">$flv_web_addr</span><span class="s2">"</span>
+<span class="nv">flvurls</span><span class="o">=(</span> <span class="si">$(</span><span class="nb">cat</span> <span class="nv">$flvcd_page_file</span> | <span class="nb">grep</span> <span class="s2">"&lt;U&gt;"</span> | <span class="nb">sed </span>s/<span class="se">\&lt;</span>U<span class="se">\&gt;</span>//g<span class="si">)</span> <span class="o">)</span>  <span class="c">#取出所有片段的视频地址</span>
+<span class="nv">flvtitles</span><span class="o">=(</span> <span class="si">$(</span><span class="nb">cat</span> <span class="nv">$flvcd_page_file</span> | <span class="nb">grep</span> <span class="s2">"&lt;N&gt;"</span> | iconv <span class="nt">-f</span> gb2312 <span class="nt">-t</span> utf8 | <span class="nb">sed</span> <span class="nt">-n</span> <span class="s2">"s/</span><span class="se">\s\{</span><span class="s2">1,</span><span class="se">\}</span><span class="s2">/_/g;s/&lt;N&gt;//gp"</span><span class="si">)</span> <span class="o">)</span>  <span class="c">#取出所有片段的标题，将空格替换为下划线</span>
+<span class="nv">nr_urls</span><span class="o">=</span><span class="k">${#</span><span class="nv">flvurls</span><span class="p">[@]</span><span class="k">}</span>
  
-if [ $nr_urls -eq 0 ]
-then
-    echo "No videos found in this page :("
-    exit 1
-fi
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$nr_urls</span> <span class="nt">-eq</span> 0 <span class="o">]</span>
+<span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"No videos found in this page :("</span>
+    <span class="nb">exit </span>1
+<span class="k">fi</span>
  
-for ((i=0; i&lt;$nr_urls; i++))
-do
-    title=${flvtitles[$i]}
-    url=${flvurls[$i]}
-    echo "title: $title"
-    echo "  url: $url"
-    wget -U NoSuchBrowser/1.0 -O "$flv_dir/$title.flv" $url
-done
+<span class="k">for</span> <span class="o">((</span><span class="nv">i</span><span class="o">=</span>0<span class="p">;</span> i&lt;<span class="nv">$nr_urls</span><span class="p">;</span> i++<span class="o">))</span>
+<span class="k">do
+    </span><span class="nv">title</span><span class="o">=</span><span class="k">${</span><span class="nv">flvtitles</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="k">}</span>
+    <span class="nv">url</span><span class="o">=</span><span class="k">${</span><span class="nv">flvurls</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="k">}</span>
+    <span class="nb">echo</span> <span class="s2">"title: </span><span class="nv">$title</span><span class="s2">"</span>
+    <span class="nb">echo</span> <span class="s2">"  url: </span><span class="nv">$url</span><span class="s2">"</span>
+    wget <span class="nt">-U</span> NoSuchBrowser/1.0 <span class="nt">-O</span> <span class="s2">"</span><span class="nv">$flv_dir</span><span class="s2">/</span><span class="nv">$title</span><span class="s2">.flv"</span> <span class="nv">$url</span>
+<span class="k">done</span>
 </code></pre>
                 </div>
               </div>
@@ -229,12 +229,12 @@ done
               </div>
               <p>这将下载这个视频的 4 个部分，保存到$flv_dir 这个目录下。</p>
               <p>如果不需要下载，也可以直接使用 mplayer 等播放器播放：</p>
-              <p><a href="/wiki/_export/code/scripts/play-videoc273.sh?codeblock=2" title="下载片段">play-video.sh</a></p>
-              <div class="language-plaintext highlighter-rouge">
+              <p>play-video.sh:</p>
+              <div class="language-sh highlighter-rouge">
                 <div class="highlight">
-                  <pre class="highlight"><code>#! /bin/bash
+                  <pre class="highlight"><code><span class="c">#! /bin/bash</span>
  
-wget -q -O- http://www.flvcd.com/parse.php?kw=$1 | grep "&lt;U&gt;" | sed s/\&lt;U\&gt;//g  | mplayer -playlist -
+wget <span class="nt">-q</span> <span class="nt">-O-</span> http://www.flvcd.com/parse.php?kw<span class="o">=</span><span class="nv">$1</span> | <span class="nb">grep</span> <span class="s2">"&lt;U&gt;"</span> | <span class="nb">sed </span>s/<span class="se">\&lt;</span>U<span class="se">\&gt;</span>//g  | mplayer <span class="nt">-playlist</span> -
 </code></pre>
                 </div>
               </div>
@@ -247,7 +247,7 @@ wget -q -O- http://www.flvcd.com/parse.php?kw=$1 | grep "&lt;U&gt;" | sed s/\&lt
               </div>
             </section>
             <footer class="page__meta">
-              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-11-09">2020 年 11 月 9 日</time></p>
+              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-11-21">2020 年 11 月 21 日</time></p>
             </footer>
             <nav class="pagination">
               <a href="/wiki/scripts/douban/" class="pagination--pager" title="豆瓣电台
