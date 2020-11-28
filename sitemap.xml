@@ -298,7 +298,7 @@
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/greenwarm/xen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8/</loc>
-      <lastmod>2020-11-28T14:36:07+08:00</lastmod>
+      <lastmod>2020-11-28T15:16:17+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/</loc>
@@ -502,7 +502,7 @@
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/aosp/</loc>
-      <lastmod>2020-11-28T14:34:41+08:00</lastmod>
+      <lastmod>2020-11-28T15:15:12+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/archive.raspberrypi.org/</loc>
@@ -550,7 +550,7 @@
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/ctex/</loc>
-      <lastmod>2020-11-09T14:22:35+08:00</lastmod>
+      <lastmod>2020-11-28T15:15:12+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/debian-backports/</loc>
@@ -574,11 +574,11 @@
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/dotdeb/</loc>
-      <lastmod>2020-11-28T14:34:41+08:00</lastmod>
+      <lastmod>2020-11-28T15:15:12+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/eclipse/</loc>
-      <lastmod>2020-11-09T14:22:35+08:00</lastmod>
+      <lastmod>2020-11-28T15:15:12+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/epel/</loc>
@@ -609,6 +609,10 @@
       <lastmod>2020-11-28T14:34:41+08:00</lastmod>
     </url>
     <url>
+      <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/homebrew.git/</loc>
+      <lastmod>2020-11-28T15:15:12+08:00</lastmod>
+    </url>
+    <url>
       <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/homebrew/</loc>
       <lastmod>2020-11-28T14:34:41+08:00</lastmod>
     </url>
@@ -622,7 +626,7 @@
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/kde/</loc>
-      <lastmod>2020-11-09T14:22:35+08:00</lastmod>
+      <lastmod>2020-11-28T15:15:12+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/kdemod/</loc>
@@ -630,11 +634,11 @@
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/kodi/</loc>
-      <lastmod>2020-11-21T01:33:20+08:00</lastmod>
+      <lastmod>2020-11-28T15:15:12+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/linux.git/</loc>
-      <lastmod>2020-11-09T14:22:35+08:00</lastmod>
+      <lastmod>2020-11-28T15:15:12+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/linux/</loc>
@@ -670,7 +674,7 @@
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/qtproject/</loc>
-      <lastmod>2020-11-09T14:22:35+08:00</lastmod>
+      <lastmod>2020-11-28T15:15:12+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/raspbian/</loc>
@@ -702,7 +706,7 @@
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/scientificlinux/</loc>
-      <lastmod>2020-11-28T14:34:41+08:00</lastmod>
+      <lastmod>2020-11-28T15:15:12+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/trisquel/</loc>
@@ -722,7 +726,7 @@
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/mirrors/help/xbmc/</loc>
-      <lastmod>2020-11-21T01:33:20+08:00</lastmod>
+      <lastmod>2020-11-28T15:15:12+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn//wiki/redsky/vim_note/</loc>

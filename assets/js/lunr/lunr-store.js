@@ -750,7 +750,7 @@ var store = [{
 "teaser": null
 },{
 "title": "AOSP(Android) 镜像使用帮助",
-"excerpt":"初始同步方法 1 第一次同步数据量特别大，如果网络不稳定，中间失败就要从头再来了。所以我们提供了打包的 AOSP 镜像，为一个 tar 包，大约 16G（单文件 16G，注意你的磁盘格式要支持）。这样你 就可以通过 HTTP 的方式下载，该方法支持断点续传。 下载地址 http://mirrors.ustc.edu.cn/aosp-monthly/ 请注意对比 checksum。 然后根据下文 已有仓库如何改用科大源 的方法更改同步地址。 解压后用命令 repo sync 就可以把代码都 checkout 出来。 Note: tar 包为定时从 https://mirrors.tuna.tsinghua.edu.cn/aosp-monthly/ 下载。 初始同步方法 2 按照 Google 官方教程 https://source.android.com/source/downloading.html 将 https://android.googlesource.com/platform/manifest 替换为 git://mirrors.ustc.edu.cn/aosp/platform/manifest 。 具体做法摘录如下（以防墙抽风）： 首先下载 repo 工具。 mkdir ~/bin PATH=~/bin:$PATH curl https://storage.googleapis.com/git-repo-downloads/repo...","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/ 初始同步方法 1 第一次同步数据量特别大，如果网络不稳定，中间失败就要从头再来了。所以我们提供了打包的 AOSP 镜像，为一个 tar 包，大约 16G（单文件 16G，注意你的磁盘格式要支持）。这样你 就可以通过 HTTP 的方式下载，该方法支持断点续传。 下载地址 http://mirrors.ustc.edu.cn/aosp-monthly/ 请注意对比 checksum。 然后根据下文 已有仓库如何改用科大源 的方法更改同步地址。 解压后用命令 repo sync 就可以把代码都 checkout 出来。 Note: tar 包为定时从 https://mirrors.tuna.tsinghua.edu.cn/aosp-monthly/ 下载。 初始同步方法 2 按照 Google 官方教程 https://source.android.com/source/downloading.html 将 https://android.googlesource.com/platform/manifest 替换为 git://mirrors.ustc.edu.cn/aosp/platform/manifest 。 具体做法摘录如下（以防墙抽风）： 首先下载 repo 工具。 mkdir ~/bin PATH=~/bin:$PATH...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/aosp/",
 "teaser": null
@@ -821,8 +821,8 @@ var store = [{
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/cran/",
 "teaser": null
 },{
-"title": "CTeX 套装镜像使用帮助",
-"excerpt":"CTeX 套装简介 （摘自 ctex.org 官方网站） CTeX 中文套装是基于 Windows 下的 MiKTeX 系统，集成了编辑器 WinEdt 和 PostScript 处理软件 Ghostscript 和 GSview 等主要工具。 CTeX 中文套装在 MiKTeX 的基础上增加了对中文的完整支持。 CTeX 中文套装支持 CJK, xeCJK, CCT, TY 等多种中文 TeX 处理方式。 注：请勿混淆 CTeX 套装与 CTeX 宏集。前者是基于 Windows 平台的 TeX 发行版，后者是跨平台、跨发行版、跨 TeX 引擎的 LaTeX 宏包集合。 使用方式 直接下载最新版的 .exe 文件安装即可。安装前请务必校验散列值和数字签名。 unstable...","categories": [],
+"title": "（旧）CTeX 套装镜像使用帮助",
+"excerpt":"CTeX 已经停止维护，帮助不再更新。 CTeX 套装简介 （摘自 ctex.org 官方网站） CTeX 中文套装是基于 Windows 下的 MiKTeX 系统，集成了编辑器 WinEdt 和 PostScript 处理软件 Ghostscript 和 GSview 等主要工具。 CTeX 中文套装在 MiKTeX 的基础上增加了对中文的完整支持。 CTeX 中文套装支持 CJK, xeCJK, CCT, TY 等多种中文 TeX 处理方式。 注：请勿混淆 CTeX 套装与 CTeX 宏集。前者是基于 Windows 平台的 TeX 发行版，后者是跨平台、跨发行版、跨 TeX 引擎的 LaTeX 宏包集合。 使用方式 直接下载最新版的 .exe...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/ctex/",
 "teaser": null
@@ -857,14 +857,14 @@ var store = [{
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/docker/",
 "teaser": null
 },{
-"title": "Dotdeb 镜像使用帮助",
-"excerpt":"使用说明 1. 添加下面两行到 /etc/apt/sources.list ，并将 jessie 替换为自己所使用的版本名称： deb http://mirrors.ustc.edu.cn/dotdeb jessie all deb-src http://mirrors.ustc.edu.cn/dotdeb jessie all 2. 可选项： 如果你想在 Debian Squeeze 上安装 PHP5.4 的话，再添加下面这两行： deb http://mirrors.ustc.edu.cn/dotdeb squeeze-php54 all deb-src http://mirrors.ustc.edu.cn/dotdeb squeeze-php54 all 如果你想在 Debian Wheezy 上安装未启用 Zend Thread Safety 的 PHP5.6 的话，再添加下面这两行： deb http://mirrors.ustc.edu.cn/dotdeb wheezy-php56 all deb-src http://mirrors.ustc.edu.cn/dotdeb wheezy-php56 all 如果你想在...","categories": [],
+"title": "（旧）Dotdeb 镜像使用帮助",
+"excerpt":"Dotdeb 已经停止维护，帮助不再更新。 使用说明 1. 添加下面两行到 /etc/apt/sources.list ，并将 jessie 替换为自己所使用的版本名称： deb http://mirrors.ustc.edu.cn/dotdeb jessie all deb-src http://mirrors.ustc.edu.cn/dotdeb jessie all 2. 可选项： 如果你想在 Debian Squeeze 上安装 PHP5.4 的话，再添加下面这两行： deb http://mirrors.ustc.edu.cn/dotdeb squeeze-php54 all deb-src http://mirrors.ustc.edu.cn/dotdeb squeeze-php54 all 如果你想在 Debian Wheezy 上安装未启用 Zend Thread Safety 的 PHP5.6 的话，再添加下面这两行： deb http://mirrors.ustc.edu.cn/dotdeb wheezy-php56 all deb-src http://mirrors.ustc.edu.cn/dotdeb wheezy-php56...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/dotdeb/",
 "teaser": null
 },{
 "title": "Eclipse 镜像使用帮助",
-"excerpt":"使用科大镜像更新插件   以 Luna 为例，点击 Help → Install New Software... → Available Software Sites 可以看到所有的更新源，将其中的 download.eclipse.org 全部替换成 mirrors.ustc.edu.cn/eclipse 即可。   基本配置   Vim-like 快捷键绑定   See http://vrapper.sourceforge.net/home/   离线 Java API   See http://stackoverflow.com/questions/4664007/off-line-java-api-documentation-in-eclipse   参考资料   http://www.webupd8.org/2014/03/how-to-install-oracle-java-8-in-debian.html  ","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/     使用科大镜像更新插件   以 Luna 为例，点击 Help → Install New Software... → Available Software Sites 可以看到所有的更新源，将其中的 download.eclipse.org 全部替换成 mirrors.ustc.edu.cn/eclipse 即可。   基本配置   Vim-like 快捷键绑定   See http://vrapper.sourceforge.net/home/   离线 Java API   See http://stackoverflow.com/questions/4664007/off-line-java-api-documentation-in-eclipse   参考资料   http://www.webupd8.org/2014/03/how-to-install-oracle-java-8-in-debian.html  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/eclipse/",
 "teaser": null
@@ -911,6 +911,12 @@ var store = [{
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/homebrew-core.git/",
 "teaser": null
 },{
+"title": "Homebrew.git",
+"excerpt":"该镜像已过期，新镜像在这里。请不要使用这个镜像，除非你完全清楚你在做什么。   替换 homebrew 默认源   cd /usr/local git remote set-url origin git://mirrors.ustc.edu.cn/homebrew.git  ","categories": [],
+"tags": [],
+"url": "https://lug.ustc.edu.cn//wiki/mirrors/help/homebrew.git/",
+"teaser": null
+},{
 "title": "Homebrew",
 "excerpt":"该镜像已过期，新镜像在[这里](brew “mirrors:help:brew.git”)。请不要使用这个镜像，除非你完全清楚你在做什么。   替换 homebrew 默认源   cd /usr/local git remote set-url origin git://mirrors.ustc.edu.cn/homebrew.git  ","categories": [],
 "tags": [],
@@ -930,7 +936,7 @@ var store = [{
 "teaser": null
 },{
 "title": "KDE 镜像使用帮助",
-"excerpt":"一般来说，你无需阅读此帮助。因为 KDE 的官网会自动将一些软件的下载定向到中国科大的镜像。   KDE for Windows   点击这里可以下载到最新的 KDE for Windows installer。   双击这个安装器，只要在接下来的安装界面中添加 http://mirrors.ustc.edu.cn/kde 作为下载源，就可以完全用科大镜像下载 KDE 的软件了。   参考   https://techbase.kde.org/Projects/KDE_on_Windows/Installation  ","categories": [],
+"excerpt":"此处的帮助文档已经废弃，欢迎在 https://github.com/ustclug/mirrorhelp 为我们贡献新的 KDE 镜像的使用帮助。     一般来说，你无需阅读此帮助。因为 KDE 的官网会自动将一些软件的下载定向到中国科大的镜像。   KDE for Windows   点击这里可以下载到最新的 KDE for Windows installer。   双击这个安装器，只要在接下来的安装界面中添加 http://mirrors.ustc.edu.cn/kde 作为下载源，就可以完全用科大镜像下载 KDE 的软件了。   参考   https://techbase.kde.org/Projects/KDE_on_Windows/Installation  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/kde/",
 "teaser": null
@@ -942,13 +948,13 @@ var store = [{
 "teaser": null
 },{
 "title": "Kodi 镜像使用帮助",
-"excerpt":"镜像目录结构 addons 官方插件库 apt iOS 版 Kodi 安装源 build-deps 编译 Kodi 依赖的其他开源项目代码 nightlies 与 Kodi 开发主分支同步编译的每日开发版安装包下载目录 releases Kodi 稳定版安装包下载目录（含 Beta 版和 RC 版） snapshots Kodi 每月发布的 Alpha 版安装包下载目录 tools Kodi 相关的工具软件（Kora 遥控软件） Kodi 简介 Kodi（前身是 XBMC）媒体中心，是一个屡获殊荣的自由和开源的跨平台媒体播放器和用于 HTPC（Home theater PC，家庭影院 PC）的数字媒体娱乐中心软件。它使用遥控器作为主输入设备，针对 3 米左右观看距离而设计的用户界面，成为适应客厅使用的媒体播放器。它的图形用户界面让用户轻按遥控，就能方便地从硬盘、光盘、局域网和互联网浏览和观看视频、图片，收听广播和音乐。Kodi 项目由非营利的 XBMC 基金会管理，并由分布在世界各地的志愿者参与开发。自从它于 2003 年诞生以来，超过 500 名软件开发人员对 Kodi...","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/ 镜像目录结构 addons 官方插件库 apt iOS 版 Kodi 安装源 build-deps 编译 Kodi 依赖的其他开源项目代码 nightlies 与 Kodi 开发主分支同步编译的每日开发版安装包下载目录 releases Kodi 稳定版安装包下载目录（含 Beta 版和 RC 版） snapshots Kodi 每月发布的 Alpha 版安装包下载目录 tools Kodi 相关的工具软件（Kora 遥控软件） Kodi 简介 Kodi（前身是 XBMC）媒体中心，是一个屡获殊荣的自由和开源的跨平台媒体播放器和用于 HTPC（Home theater PC，家庭影院 PC）的数字媒体娱乐中心软件。它使用遥控器作为主输入设备，针对 3 米左右观看距离而设计的用户界面，成为适应客厅使用的媒体播放器。它的图形用户界面让用户轻按遥控，就能方便地从硬盘、光盘、局域网和互联网浏览和观看视频、图片，收听广播和音乐。Kodi 项目由非营利的 XBMC 基金会管理，并由分布在世界各地的志愿者参与开发。自从它于 2003 年诞生以来，超过 500...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/kodi/",
 "teaser": null
 },{
 "title": "Linux 内核源码镜像",
-"excerpt":"其 Git 仓库的链接为git://mirrors.ustc.edu.cn/linux.git。   断点续传   由于git clone不支持断点续传，所以可以使用支持断点续传的git fetch。一个简单的步骤如下所示，请按自己的需求酌情更改：   mkdir linux &amp;&amp; cd linux git init git fetch git://mirrors.ustc.edu.cn/linux.git git checkout FETCH_HEAD  ","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/     其 Git 仓库的链接为git://mirrors.ustc.edu.cn/linux.git。   断点续传   由于git clone不支持断点续传，所以可以使用支持断点续传的git fetch。一个简单的步骤如下所示，请按自己的需求酌情更改：   mkdir linux &amp;&amp; cd linux git init git fetch git://mirrors.ustc.edu.cn/linux.git git checkout FETCH_HEAD  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/linux.git/",
 "teaser": null
@@ -1002,7 +1008,7 @@ var store = [{
 "teaser": null
 },{
 "title": "Qt 镜像使用帮助",
-"excerpt":"在线安装   从 http://mirrors.ustc.edu.cn/qtproject/official_releases/online_installers/ 下载在线安装器。   运行在线安装器后在设置里设置 http 代理为 mirrors.ustc.edu.cn:1080，并 禁用默认源，添加新源 http://mirrors.ustc.edu.cn/qtproject/online/qtsdkrepository/linux_x64/root/qt/（其他版本注意更改地址）  ","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/     在线安装   从 http://mirrors.ustc.edu.cn/qtproject/official_releases/online_installers/ 下载在线安装器。   运行在线安装器后在设置里设置 http 代理为 mirrors.ustc.edu.cn:1080，并 禁用默认源，添加新源 http://mirrors.ustc.edu.cn/qtproject/online/qtsdkrepository/linux_x64/root/qt/（其他版本注意更改地址）  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/qtproject/",
 "teaser": null
@@ -1050,7 +1056,7 @@ var store = [{
 "teaser": null
 },{
 "title": "Scientific Linux 镜像使用帮助",
-"excerpt":"收录版本 6 使用说明 下载 sl-ustc.repo 放入/etc/yum.repo.d/中 sl-ustc.repo: [sl] name=Scientific Linux $releasever - $basearch - ustc.edu.cn baseurl=http://mirrors.ustc.edu.cn/scientificlinux/$releasever/$basearch/os/ #mirrorlist=http://ftp.scientificlinux.org/linux/scientific/mirrorlist/sl-base-6.txt enabled=1 gpgcheck=1 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-sl file:///etc/pki/rpm-gpg/RPM-GPG-KEY-sl6 file:///etc/pki/rpm-gpg/RPM-GPG-KEY-cern   [sl-security] name=Scientific Linux $releasever - $basearch - security updates - ustc.edu.cn baseurl=http://mirrors.ustc.edu.cn/scientificlinux/$releasever/$basearch/updates/security/ #mirrorlist=http://ftp.scientificlinux.org/linux/scientific/mirrorlist/sl-security-6.txt enabled=1 gpgcheck=1 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-sl file:///etc/pki/rpm-gpg/RPM-GPG-KEY-sl6 file:///etc/pki/rpm-gpg/RPM-GPG-KEY-cern     [sl-source] name=Scientific Linux $releasever - Source -...","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/ 收录版本 6 使用说明 下载 sl-ustc.repo 放入/etc/yum.repo.d/中 sl-ustc.repo: [sl] name=Scientific Linux $releasever - $basearch - ustc.edu.cn baseurl=http://mirrors.ustc.edu.cn/scientificlinux/$releasever/$basearch/os/ #mirrorlist=http://ftp.scientificlinux.org/linux/scientific/mirrorlist/sl-base-6.txt enabled=1 gpgcheck=1 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-sl file:///etc/pki/rpm-gpg/RPM-GPG-KEY-sl6 file:///etc/pki/rpm-gpg/RPM-GPG-KEY-cern   [sl-security] name=Scientific Linux $releasever - $basearch - security updates - ustc.edu.cn baseurl=http://mirrors.ustc.edu.cn/scientificlinux/$releasever/$basearch/updates/security/ #mirrorlist=http://ftp.scientificlinux.org/linux/scientific/mirrorlist/sl-security-6.txt enabled=1 gpgcheck=1 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-sl file:///etc/pki/rpm-gpg/RPM-GPG-KEY-sl6 file:///etc/pki/rpm-gpg/RPM-GPG-KEY-cern     [sl-source] name=Scientific Linux $releasever -...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/scientificlinux/",
 "teaser": null
@@ -1080,7 +1086,7 @@ var store = [{
 "teaser": null
 },{
 "title": "Kodi 镜像使用帮助",
-"excerpt":"镜像目录结构 addons 官方插件库 apt iOS 版 Kodi 安装源 build-deps 编译 Kodi 依赖的其他开源项目代码 nightlies 与 Kodi 开发主分支同步编译的每日开发版安装包下载目录 releases Kodi 稳定版安装包下载目录（含 Beta 版和 RC 版） snapshots Kodi 每月发布的 Alpha 版安装包下载目录 tools Kodi 相关的工具软件（Kora 遥控软件） Kodi 简介 Kodi（前身是 XBMC）媒体中心，是一个屡获殊荣的自由和开源的跨平台媒体播放器和用于 HTPC（Home theater PC，家庭影院 PC）的数字媒体娱乐中心软件。它使用遥控器作为主输入设备，针对 3 米左右观看距离而设计的用户界面，成为适应客厅使用的媒体播放器。它的图形用户界面让用户轻按遥控，就能方便地从硬盘、光盘、局域网和互联网浏览和观看视频、图片，收听广播和音乐。Kodi 项目由非营利的 XBMC 基金会管理，并由分布在世界各地的志愿者参与开发。自从它于 2003 年诞生以来，超过 500 名软件开发人员对 Kodi...","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/ 镜像目录结构 addons 官方插件库 apt iOS 版 Kodi 安装源 build-deps 编译 Kodi 依赖的其他开源项目代码 nightlies 与 Kodi 开发主分支同步编译的每日开发版安装包下载目录 releases Kodi 稳定版安装包下载目录（含 Beta 版和 RC 版） snapshots Kodi 每月发布的 Alpha 版安装包下载目录 tools Kodi 相关的工具软件（Kora 遥控软件） Kodi 简介 Kodi（前身是 XBMC）媒体中心，是一个屡获殊荣的自由和开源的跨平台媒体播放器和用于 HTPC（Home theater PC，家庭影院 PC）的数字媒体娱乐中心软件。它使用遥控器作为主输入设备，针对 3 米左右观看距离而设计的用户界面，成为适应客厅使用的媒体播放器。它的图形用户界面让用户轻按遥控，就能方便地从硬盘、光盘、局域网和互联网浏览和观看视频、图片，收听广播和音乐。Kodi 项目由非营利的 XBMC 基金会管理，并由分布在世界各地的志愿者参与开发。自从它于 2003 年诞生以来，超过 500...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/xbmc/",
 "teaser": null
