@@ -3,6 +3,10 @@
 
 # Homebrew Bottles 源
 
+此处的帮助文档已经废弃，新的内容请访问 <https://mirrors.ustc.edu.cn/help/>
+
+---
+
 Homebrew Bottles 是 Homebrew 提供的二进制代码包，目前镜像站收录了以下仓库：
 
 - homebrew/homebrew-core

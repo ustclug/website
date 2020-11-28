@@ -1,6 +1,10 @@
 ---
 ---
 
+此处的帮助文档已经废弃，请查看[镜像站主页](https://mirrors.ustc.edu.cn)获取目前反代的情况。
+
+---
+
 各资源的对应关系如下
 
       registry-1.docker.io          docker.mirrors.ustc.edu.cn

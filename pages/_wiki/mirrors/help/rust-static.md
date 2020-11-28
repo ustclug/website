@@ -3,6 +3,10 @@
 
 # 使用说明
 
+此处的帮助文档已经废弃，新的内容请访问 <https://mirrors.ustc.edu.cn/help/>
+
+---
+
 请配合[rustup](http://www.rustup.rs/ "http://www.rustup.rs/")来使用.
 
 rustup 安装方法可参考 [官方的 README](https://github.com/rust-lang-nursery/rustup.rs#other-installation-methods "https://github.com/rust-lang-nursery/rustup.rs#other-installation-methods").

@@ -1,7 +1,13 @@
 ---
 ---
 
-## Debian Multimedia 镜像使用帮助
+# Debian Multimedia 镜像使用帮助
+
+此处的帮助文档已经废弃，新的内容请访问 <https://mirrors.ustc.edu.cn/help/>
+
+Debian Multimedia 已更名为 Deb Multimedia。
+
+---
 
 ### 收录架构
 

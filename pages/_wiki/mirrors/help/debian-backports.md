@@ -1,7 +1,9 @@
 ---
 ---
 
-## Debian Backports 镜像使用帮助
+# Debian Backports 镜像使用帮助
+
+此处的帮助文档已经废弃，`debian-backports` 目录已去除。
 
 **注意：新版本 Debian Backports 已并入主源，单独的 `debian-backports` 目录只为兼容性保留。如需了解如何使用 `debian-backports` ，请参阅[官方文档](http://backports.debian.org/Instructions "http://backports.debian.org/Instructions")。**
 

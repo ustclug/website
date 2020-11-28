@@ -3,6 +3,10 @@
 
 # BlackArch 镜像源使用帮助
 
+此处的帮助文档已经废弃，新的内容请访问 <https://mirrors.ustc.edu.cn/help/>
+
+---
+
 ## 简介
 
 BlackArch 是一款基于 ArchLinux 的为渗透测试及安全研究人员开发的发行版, 相当于 Arch 版的 BackTrack/Kali。

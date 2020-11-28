@@ -3,6 +3,10 @@
 
 # Kali 镜像使用帮助
 
+此处的帮助文档已经废弃，新的内容请访问 <https://mirrors.ustc.edu.cn/help/>
+
+---
+
 Kali，是 Backtrack 5 后续更新版本，它的作用大家都懂。
 
 这里收录了最新的更新。

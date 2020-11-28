@@ -3,6 +3,10 @@
 
 # Rust Crates 镜像使用帮助
 
+此处的帮助文档已经废弃，新的内容请访问 <https://mirrors.ustc.edu.cn/help/>
+
+---
+
 ## 使用说明
 
 在 \$HOME/.cargo/config 中添加如下内容

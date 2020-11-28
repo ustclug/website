@@ -3,6 +3,10 @@
 
 # AOSC OS 镜像源使用帮助
 
+此处的帮助文档已经废弃，新的内容请访问 <https://mirrors.ustc.edu.cn/help/>
+
+---
+
 anthon 为 [AnthonOS](https://anthonos.org/ "https://anthonos.org") 项目的官方源 [http://repo.anthonos.org](http://repo.anthonos.org/ "http://repo.anthonos.org") 的镜像。
 
 ## 快速设置

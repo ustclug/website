@@ -3,6 +3,10 @@
 
 # Arch Linux ARM 镜像使用帮助
 
+此处的帮助文档已经废弃，新的内容请访问 <https://mirrors.ustc.edu.cn/help/>
+
+---
+
 Arch Linux ARM 是针对 ARM 架构移植的 Arch Linux 发行版。您可以使用它的默认镜像源 `http://mirror.archlinuxarm.org/` ，它会自动解析到离用户较近的镜像，也可以手动设置我们的镜像源。
 
 ## 收录架构

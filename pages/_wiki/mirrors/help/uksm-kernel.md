@@ -1,7 +1,11 @@
 ---
 ---
 
-## UKSM Kernel 镜像使用帮助
+# UKSM Kernel 镜像使用帮助
+
+此处的帮助文档已经废弃，此镜像目前已不提供。
+
+---
 
 UKSM 是 <http://kerneldedup.org/> 项目为内核的 KSM 的算法进行的一个优化，目前 mirrors.ustc 已提供 ubuntu 12.04 和 fedora 16 的源，具体的使用方法如下：
 

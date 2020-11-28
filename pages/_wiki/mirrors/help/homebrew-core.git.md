@@ -3,6 +3,10 @@
 
 # homebrew-core 源
 
+此处的帮助文档已经废弃，新的内容请访问 <https://mirrors.ustc.edu.cn/help/>
+
+---
+
 homebrew-core 是 Homebrew 的核心软件仓库，收录了大部分的常用软件。
 
 ## 使用方法

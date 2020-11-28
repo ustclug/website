@@ -3,7 +3,9 @@
 
 # Raspbian 镜像使用帮助
 
-此处内容可能已过时，最新版本的帮助参见：<https://mirrors.ustc.edu.cn/help/raspbian.html>
+此处内容已过时，最新版本的帮助参见：<https://mirrors.ustc.edu.cn/help/raspbian.html>
+
+---
 
 ## Raspbian 简介
 

@@ -5,6 +5,8 @@
 
 此页面已过期。请移步 <https://mirrors.ustc.edu.cn/help/freebsd.html>
 
+---
+
 关于 FreeBSD pkgng 源，根据[官方说明](https://www.freebsd.org/doc/en/articles/hubs/mirror-howto.html#mirror-pkgs "https://www.freebsd.org/doc/en/articles/hubs/mirror-howto.html#mirror-pkgs")， FreeBSD 不允许同步软件包，我们尊重 FreeBSD 的选择，不提供 pkgng 镜像。
 
     Due to very high requirements of bandwidth, storage and adminstration the FreeBSD Project has decided not to allow public mirrors of packages.

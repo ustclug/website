@@ -3,6 +3,12 @@
 
 # Docker 镜像使用帮助
 
+此处的帮助文档已经废弃，新的内容请访问 <https://mirrors.ustc.edu.cn/help/>
+
+由于带宽等各种条件限制，Docker Hub 源目前仅为科大校园网用户提供。
+
+---
+
 ## 使用说明
 
 新版的 Docker 使用 /etc/docker/daemon.json（Linux） 或者 %programdata%\docker\config\daemon.json（Windows） 来配置 Daemon。

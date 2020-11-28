@@ -1,7 +1,7 @@
 ---
 ---
 
-## AOSP(Android) 镜像使用帮助
+# AOSP(Android) 镜像使用帮助
 
 ### 初始同步方法 1
 

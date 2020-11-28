@@ -3,6 +3,10 @@
 
 # infinality bundle 镜像使用帮助
 
+此镜像目前已不提供。
+
+---
+
 ## 使用方法
 
 请在 /etc/pacman.conf 里根据需要添加：

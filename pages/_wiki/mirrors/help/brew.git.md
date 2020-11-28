@@ -3,6 +3,10 @@
 
 # 替换及重置 Homebrew 默认源
 
+此处的帮助文档已经废弃，新的内容请访问 <https://mirrors.ustc.edu.cn/help/>
+
+---
+
     替换brew.git:
     cd "$(brew --repo)"
     git remote set-url origin https://mirrors.ustc.edu.cn/brew.git
