@@ -3,6 +3,10 @@
 
 # Eclipse 镜像使用帮助
 
+此处的帮助文档已经废弃，新的内容请访问 <https://mirrors.ustc.edu.cn/help/>
+
+---
+
 ## 使用科大镜像更新插件
 
 以 Luna 为例，点击 `Help` → `Install New Software...` → `Available Software Sites` 可以看到所有的更新源，将其中的 `download.eclipse.org` 全部替换成 `mirrors.ustc.edu.cn/eclipse` 即可。

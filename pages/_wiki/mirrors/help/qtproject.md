@@ -3,6 +3,10 @@
 
 # Qt 镜像使用帮助
 
+此处的帮助文档已经废弃，新的内容请访问 <https://mirrors.ustc.edu.cn/help/>
+
+---
+
 ## 在线安装
 
 从 <http://mirrors.ustc.edu.cn/qtproject/official_releases/online_installers/> 下载在线安装器。

@@ -3,6 +3,10 @@
 
 # Kodi 镜像使用帮助
 
+此处的帮助文档已经废弃，新的内容请访问 <https://mirrors.ustc.edu.cn/help/>
+
+---
+
 ## 镜像目录结构
 
 `addons` 官方插件库  

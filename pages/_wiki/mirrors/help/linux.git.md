@@ -3,6 +3,10 @@
 
 # Linux 内核源码镜像
 
+此处的帮助文档已经废弃，新的内容请访问 <https://mirrors.ustc.edu.cn/help/>
+
+---
+
 其 Git 仓库的链接为`git://mirrors.ustc.edu.cn/linux.git`。
 
 ## 断点续传

@@ -3,6 +3,10 @@
 
 # KDE 镜像使用帮助
 
+此处的帮助文档已经废弃，欢迎在 <https://github.com/ustclug/mirrorhelp> 为我们贡献新的 KDE 镜像的使用帮助。
+
+---
+
 一般来说，你无需阅读此帮助。因为 KDE 的官网会自动将一些软件的下载定向到中国科大的镜像。
 
 ## KDE for Windows
