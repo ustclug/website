@@ -1,4 +1,4 @@
-该镜像已过期，新镜像在[这里](https://lug.ustc.edu.cn/oldwiki/mirrors/help/brew.git "mirrors:help:brew.git")。请不要使用这个镜像，除非你完全清楚你在做什么。
+该镜像已过期，新镜像在[这里](https://mirrors.ustc.edu.cn/help/brew.git.html)。请不要使用这个镜像，除非你完全清楚你在做什么。
 
 ---
 

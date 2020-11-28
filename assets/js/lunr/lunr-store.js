@@ -732,19 +732,19 @@ var store = [{
 "teaser": null
 },{
 "title": "开源镜像使用帮助列表",
-"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/   科大镜像源使用帮助由科大 LUG 成员与许多热心的朋友们共同编写。   本页面及各镜像源帮助页面源代码现托管在 GitHub 上，欢迎各位协助完善。 如果您有添加新镜像的建议与需求，请在 GitHub 上提交 issue.     科大开源软件镜像服务简介  ","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/     科大镜像源使用帮助由科大 LUG 成员与许多热心的朋友们共同编写。   本页面及各镜像源帮助页面源代码现托管在 GitHub 上，欢迎各位协助完善。 如果您有添加新镜像的建议与需求，请在 GitHub 上提交 issue.     科大开源软件镜像服务简介  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/",
 "teaser": null
 },{
 "title": "Alpine Linux 镜像源使用帮助",
-"excerpt":"收录架构           armhf            x86            x86_64       使用说明   编辑/etc/apk/repositories，然后在文件的最顶端添加(注意将 3.3 换成需要的版本)   http://mirrors.ustc.edu.cn/alpine/v3.3/main/   参考 wiki   相关链接           官方主页: http://alpinelinux.org/            邮件列表: http://www.archlinux.org/mailman/listinfo/            论坛: http://forum.alpinelinux.org/forum            Wiki: http://wiki.alpinelinux.org/      ","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/     收录架构           armhf            x86            x86_64       使用说明   编辑/etc/apk/repositories，然后在文件的最顶端添加(注意将 3.3 换成需要的版本)   http://mirrors.ustc.edu.cn/alpine/v3.3/main/   参考 wiki   相关链接           官方主页: http://alpinelinux.org/            邮件列表: http://www.archlinux.org/mailman/listinfo/            论坛: http://forum.alpinelinux.org/forum            Wiki: http://wiki.alpinelinux.org/      ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/alpine/",
 "teaser": null
 },{
 "title": "AOSC OS 镜像源使用帮助",
-"excerpt":"anthon 为 AnthonOS 项目的官方源 http://repo.anthonos.org 的镜像。 快速设置 考虑到安同的系统情况可能时有改动，并且源也不少，我们就偷个懒： anthon-apt.sh: # AOSC OSes, apt-dpkg cat /etc/apt/sources.list | egrep 'mirror|repo' | sed -r -e 's@(mirror|repo).anthonos.org@mirrors.ustc.edu.cn/anthon@g' &gt;&gt; /etc/apt/sources.list 如果你只想用 USTC 镜像的话，勇敢地把 &gt;&gt; 改成 &gt; 吧。由于 AOSC OS3 yum 暂时没有 fastestmirror，你需要做一些砍手的工作： anthon-yum.sh: # AOSC OS3, yum-rpm sudo sed -r -e -i.orig 's@(mirror|repo).anthonos.org@mirrors.ustc.edu.cn/anthon@g' /etc/yum/repos.d/aosc.repo 接下来是分系统信息：...","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/ anthon 为 AnthonOS 项目的官方源 http://repo.anthonos.org 的镜像。 快速设置 考虑到安同的系统情况可能时有改动，并且源也不少，我们就偷个懒： anthon-apt.sh: # AOSC OSes, apt-dpkg cat /etc/apt/sources.list | egrep 'mirror|repo' | sed -r -e 's@(mirror|repo).anthonos.org@mirrors.ustc.edu.cn/anthon@g' &gt;&gt; /etc/apt/sources.list 如果你只想用 USTC 镜像的话，勇敢地把 &gt;&gt; 改成 &gt; 吧。由于 AOSC OS3 yum 暂时没有 fastestmirror，你需要做一些砍手的工作： anthon-yum.sh: # AOSC OS3, yum-rpm sudo sed -r -e -i.orig 's@(mirror|repo).anthonos.org@mirrors.ustc.edu.cn/anthon@g'...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/anthon/",
 "teaser": null
@@ -756,55 +756,55 @@ var store = [{
 "teaser": null
 },{
 "title": "archive.raspberrypi.org",
-"excerpt":"修改/etc/apt/sources.list.d/raspi.list为以下内容   raspi.list:   deb https://mirrors.ustc.edu.cn/archive.raspberrypi.org/ jessie main ui  ","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/     修改/etc/apt/sources.list.d/raspi.list为以下内容   raspi.list:   deb https://mirrors.ustc.edu.cn/archive.raspberrypi.org/ jessie main ui  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/archive.raspberrypi.org/",
 "teaser": null
 },{
 "title": "Arch Linux 镜像使用帮助",
-"excerpt":"收录架构   i686  x86_64   收录版本   ALL   使用说明   编辑/etc/pacman.d/mirrorlist，先注释掉里面的所有行，然后在文件的最顶端添加   mirrorlist:   Server = http://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch   相关链接   官方主页: http://www.archlinux.org/  邮件列表: http://www.archlinux.org/mailman/listinfo/  论坛: http://bbs.archlinux.org/  Wiki: http://wiki.archlinux.org/  ","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/     收录架构   i686  x86_64   收录版本   ALL   使用说明   编辑/etc/pacman.d/mirrorlist，先注释掉里面的所有行，然后在文件的最顶端添加   mirrorlist:   Server = http://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch   相关链接   官方主页: http://www.archlinux.org/  邮件列表: http://www.archlinux.org/mailman/listinfo/  论坛: http://bbs.archlinux.org/  Wiki: http://wiki.archlinux.org/  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/archlinux/",
 "teaser": null
 },{
 "title": "Arch Linux ARM 镜像使用帮助",
-"excerpt":"Arch Linux ARM 是针对 ARM 架构移植的 Arch Linux 发行版。您可以使用它的默认镜像源 http://mirror.archlinuxarm.org/ ，它会自动解析到离用户较近的镜像，也可以手动设置我们的镜像源。   收录架构           ARMv5            ARMv6            ARMv7            AArch64       快速设置   编辑 /etc/pacman.d/mirrorlist ，先注释掉里面的所有行，然后在文件的最顶端添加   mirrorlist:   Server = https://mirrors.ustc.edu.cn/archlinuxarm/$arch/$repo   相关链接           官方主页 http://archlinuxarm.org/            Github https://github.com/archlinuxarm            论坛 http://archlinuxarm.org/forum/            FAQ1 http://archlinuxarm.org/support/faq            镜像列表 http://archlinuxarm.org/about/mirrors                      Frequently Asked Questions &#8617;           ","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/     Arch Linux ARM 是针对 ARM 架构移植的 Arch Linux 发行版。您可以使用它的默认镜像源 http://mirror.archlinuxarm.org/ ，它会自动解析到离用户较近的镜像，也可以手动设置我们的镜像源。   收录架构           ARMv5            ARMv6            ARMv7            AArch64       快速设置   编辑 /etc/pacman.d/mirrorlist ，先注释掉里面的所有行，然后在文件的最顶端添加   mirrorlist:   Server = https://mirrors.ustc.edu.cn/archlinuxarm/$arch/$repo   相关链接           官方主页 http://archlinuxarm.org/            Github https://github.com/archlinuxarm            论坛 http://archlinuxarm.org/forum/            FAQ1 http://archlinuxarm.org/support/faq            镜像列表 http://archlinuxarm.org/about/mirrors                      Frequently Asked Questions &#8617;           ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/archlinuxarm/",
 "teaser": null
 },{
 "title": "Archlinux CN 镜像源使用帮助",
-"excerpt":"简介   Arch Linux 中文社区仓库是由 Arch Linux 中文社区驱动的非官方用户仓库。包含中文用户常用软件、工具、字体/美化包等。   仓库地址：repo.archlinuxcn.org   该仓库地址可能会根据你所在的网络环境自动选择镜像源地址。   使用方法   在 /etc/pacman.conf 文件末尾添加两行：   [archlinuxcn] Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch   然后请安装 archlinuxcn-keyring 包以导入 GPG key。   相关链接   Arch Linux 中文社区主页： https://www.archlinuxcn.org   Arch Linux 中文社区仓库 / 镜像加速源介绍： https://www.archlinuxcn.org/archlinux-cn-repo-and-mirror/  ","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/     简介   Arch Linux 中文社区仓库是由 Arch Linux 中文社区驱动的非官方用户仓库。包含中文用户常用软件、工具、字体/美化包等。   仓库地址：repo.archlinuxcn.org   该仓库地址可能会根据你所在的网络环境自动选择镜像源地址。   使用方法   在 /etc/pacman.conf 文件末尾添加两行：   [archlinuxcn] Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch   然后请安装 archlinuxcn-keyring 包以导入 GPG key。   相关链接   Arch Linux 中文社区主页： https://www.archlinuxcn.org   Arch Linux 中文社区仓库 / 镜像加速源介绍： https://www.archlinuxcn.org/archlinux-cn-repo-and-mirror/  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/archlinuxcn/",
 "teaser": null
 },{
 "title": "BlackArch 镜像源使用帮助",
-"excerpt":"简介   BlackArch 是一款基于 ArchLinux 的为渗透测试及安全研究人员开发的发行版, 相当于 Arch 版的 BackTrack/Kali。   仓库地址：blackarch.org/blackarch/   收录架构   i686  x86_64  ARMv6/7   使用方法   在 /etc/pacman.conf 文件末尾添加两行：   [blackarch] SigLevel = Optional TrustAll Server = https://mirrors.ustc.edu.cn/blackarch/$repo/os/$arch   相关链接   BlackArch 主页： http://blackarch.org   收录的工具列表： http://blackarch.org/tools.html  ","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/     简介   BlackArch 是一款基于 ArchLinux 的为渗透测试及安全研究人员开发的发行版, 相当于 Arch 版的 BackTrack/Kali。   仓库地址：blackarch.org/blackarch/   收录架构   i686  x86_64  ARMv6/7   使用方法   在 /etc/pacman.conf 文件末尾添加两行：   [blackarch] SigLevel = Optional TrustAll Server = https://mirrors.ustc.edu.cn/blackarch/$repo/os/$arch   相关链接   BlackArch 主页： http://blackarch.org   收录的工具列表： http://blackarch.org/tools.html  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/blackarch/",
 "teaser": null
 },{
 "title": "替换及重置 Homebrew 默认源",
-"excerpt":"替换brew.git: cd “$(brew –repo)” git remote set-url origin https://mirrors.ustc.edu.cn/brew.git 替换homebrew-core.git: cd \"$(brew --repo)/Library/Taps/homebrew/homebrew-core\" git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git 替换 Homebrew Bottles 源: 参考:替换 Homebrew Bottles 源 在中科大源失效或宕机时可以： 1. 使用清华源设置参考。 2. 切换回官方源： 重置brew.git: cd \"$(brew --repo)\" git remote set-url origin https://github.com/Homebrew/brew.git 重置homebrew-core.git: cd \"$(brew --repo)/Library/Taps/homebrew/homebrew-core\" git remote set-url origin https://github.com/Homebrew/homebrew-core.git 注释掉...","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/ 替换brew.git: cd \"$(brew --repo)\" git remote set-url origin https://mirrors.ustc.edu.cn/brew.git 替换homebrew-core.git: cd \"$(brew --repo)/Library/Taps/homebrew/homebrew-core\" git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git 替换 Homebrew Bottles 源: 参考:替换 Homebrew Bottles 源 在中科大源失效或宕机时可以： 1. 使用清华源设置参考。 2. 切换回官方源： 重置brew.git: cd \"$(brew --repo)\" git remote set-url origin https://github.com/Homebrew/brew.git 重置homebrew-core.git: cd \"$(brew --repo)/Library/Taps/homebrew/homebrew-core\" git remote set-url origin...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/brew.git/",
 "teaser": null
 },{
 "title": "替换及重置 Homebrew 默认源",
-"excerpt":"替换brew.git: cd “$(brew –repo)” git remote set-url origin https://mirrors.ustc.edu.cn/brew.git 替换homebrew-core.git: cd \"$(brew --repo)/Library/Taps/homebrew/homebrew-core\" git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git 替换 Homebrew Bottles 源: 参考:替换 Homebrew Bottles 源 在中科大源失效或宕机时可以： 1. 使用清华源设置参考。 2. 切换回官方源： 重置brew.git: cd \"$(brew --repo)\" git remote set-url origin https://github.com/Homebrew/brew.git 重置homebrew-core.git: cd \"$(brew --repo)/Library/Taps/homebrew/homebrew-core\" git remote set-url origin https://github.com/Homebrew/homebrew-core.git 注释掉...","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/ 替换brew.git: cd \"$(brew --repo)\" git remote set-url origin https://mirrors.ustc.edu.cn/brew.git 替换homebrew-core.git: cd \"$(brew --repo)/Library/Taps/homebrew/homebrew-core\" git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git 替换 Homebrew Bottles 源: 参考:替换 Homebrew Bottles 源 在中科大源失效或宕机时可以： 1. 使用清华源设置参考。 2. 切换回官方源： 重置brew.git: cd \"$(brew --repo)\" git remote set-url origin https://github.com/Homebrew/brew.git 重置homebrew-core.git: cd \"$(brew --repo)/Library/Taps/homebrew/homebrew-core\" git remote set-url origin...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/brew/",
 "teaser": null
 },{
 "title": "Centos 镜像使用帮助",
-"excerpt":"收录架构 i386 x86_64 收录版本 5 6 7 使用说明 首先备份 CentOS-Base.repo mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup 下载对应版本的 CentOS-Base.repo, 放入/etc/yum.repos.d/ 这是 CentOS 5 的: CentOS-Base.repo: # CentOS-Base.repo # # The mirror system uses the connecting IP address of the client and the # update status of each mirror to pick mirrors that are updated...","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/ 收录架构 i386 x86_64 收录版本 5 6 7 使用说明 首先备份 CentOS-Base.repo mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup 下载对应版本的 CentOS-Base.repo, 放入/etc/yum.repos.d/ 这是 CentOS 5 的: CentOS-Base.repo: # CentOS-Base.repo # # The mirror system uses the connecting IP address of the client and the # update status of each mirror to pick mirrors that...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/centos/",
 "teaser": null
 },{
 "title": "Chakra Linux 镜像使用帮助",
-"excerpt":"收录架构   x86_64   收录版本   ALL   使用说明   编辑/etc/pacman.d/mirrorlist，先注释掉里面的所有行，然后在文件的最顶端添加     Server = http://mirrors.ustc.edu.cn/chakra/$repo/$arch   相关链接   官方主页: http://chakraos.org/home/  论坛: http://chakraos.org/forum/  Wiki: http://chakraos.org/wiki/  ","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/     收录架构   x86_64   收录版本   ALL   使用说明   编辑/etc/pacman.d/mirrorlist，先注释掉里面的所有行，然后在文件的最顶端添加     Server = http://mirrors.ustc.edu.cn/chakra/$repo/$arch   相关链接   官方主页: http://chakraos.org/home/  论坛: http://chakraos.org/forum/  Wiki: http://chakraos.org/wiki/  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/chakra/",
 "teaser": null
@@ -828,31 +828,31 @@ var store = [{
 "teaser": null
 },{
 "title": "Debian Backports 镜像使用帮助",
-"excerpt":"注意：新版本 Debian Backports 已并入主源，单独的 debian-backports 目录只为兼容性保留。如需了解如何使用 debian-backports ，请参阅官方文档。     收录架构           i386            amd64            source       收录版本   stable-backports   使用说明   以 Squeeze 为例, 编辑/etc/apt/sources.list 文件, 在文件最前面添加以下条目(操作前请做好相应备份)   deb http://mirrors.ustc.edu.cn/debian-backports/ squeeze-backports main contrib non-free deb-src http://mirrors.ustc.edu.cn/debian-backports/ squeeze-backports main contrib non-free   相关链接           官方主页: http://backports.debian.org/            邮件列表: http://backports.debian.org/Mailinglists/            镜像列表: http://backports.debian.org/Mirrors/      ","categories": [],
+"excerpt":"此处的帮助文档已经废弃，debian-backports 目录已去除。   注意：新版本 Debian Backports 已并入主源，单独的 debian-backports 目录只为兼容性保留。如需了解如何使用 debian-backports ，请参阅官方文档。     收录架构           i386            amd64            source       收录版本   stable-backports   使用说明   以 Squeeze 为例, 编辑/etc/apt/sources.list 文件, 在文件最前面添加以下条目(操作前请做好相应备份)   deb http://mirrors.ustc.edu.cn/debian-backports/ squeeze-backports main contrib non-free deb-src http://mirrors.ustc.edu.cn/debian-backports/ squeeze-backports main contrib non-free   相关链接           官方主页: http://backports.debian.org/            邮件列表: http://backports.debian.org/Mailinglists/            镜像列表: http://backports.debian.org/Mirrors/      ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/debian-backports/",
 "teaser": null
 },{
 "title": "Debian Multimedia 镜像使用帮助",
-"excerpt":"收录架构 i386 amd64 source 收录版本 stable unstable oldstable testing experimental 使用说明 以 Debian 8 “Jessie” 为例, 编辑/etc/apt/sources.list 文件, 在文件最前面添加以下条目(操作前请做好相应备份) sources.list: deb http://mirrors.ustc.edu.cn/debian-multimedia/ jessie main non-free deb-src http://mirrors.ustc.edu.cn/debian-multimedia/ jessie main non-free deb http://mirrors.ustc.edu.cn/debian-multimedia/ jessie-backports main deb-src http://mirrors.ustc.edu.cn/debian-multimedia/ jessie-backports main 如果遇到 GPG error，你可能需要手动更新 deb-multimedia-keyring，以下摘自 debian multimedia 首页： 06/02/2015 : Maybe I went...","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/ Debian Multimedia 已更名为 Deb Multimedia。 收录架构 i386 amd64 source 收录版本 stable unstable oldstable testing experimental 使用说明 以 Debian 8 “Jessie” 为例, 编辑/etc/apt/sources.list 文件, 在文件最前面添加以下条目(操作前请做好相应备份) sources.list: deb http://mirrors.ustc.edu.cn/debian-multimedia/ jessie main non-free deb-src http://mirrors.ustc.edu.cn/debian-multimedia/ jessie main non-free deb http://mirrors.ustc.edu.cn/debian-multimedia/ jessie-backports main deb-src http://mirrors.ustc.edu.cn/debian-multimedia/ jessie-backports main 如果遇到 GPG error，你可能需要手动更新 deb-multimedia-keyring，以下摘自 debian...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/debian-multimedia/",
 "teaser": null
 },{
 "title": "Debian Security 镜像使用帮助",
-"excerpt":"收录架构 i386 amd64 source 收录版本 stable testing 使用说明 操作前请做好相应备份 一般情况下，更改 /etc/apt/sources.list 文件中 Debian Security 默认的源地址 http://security.debian.org/ 为 https://mirrors.ustc.edu.cn/debian-security 即可。 可以使用如下命令： sudo sed -i 's/security.debian.org/mirrors.ustc.edu.cn\\/debian-security/g' /etc/apt/sources.list 以 Jessie 为例, 编辑/etc/apt/sources.list 文件, 在文件最前面添加以下条目(操作前请做好相应备份) sources.list: deb http://mirrors.ustc.edu.cn/debian-security/ jessie/updates main non-free contrib deb-src http://mirrors.ustc.edu.cn/debian-security/ jessie/updates main non-free contrib 相关链接 官方主页: http://www.debian.org/ 邮件列表: http://www.debian.org/support#mail_lists Wiki:...","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/ 收录架构 i386 amd64 source 收录版本 stable testing 使用说明 操作前请做好相应备份 一般情况下，更改 /etc/apt/sources.list 文件中 Debian Security 默认的源地址 http://security.debian.org/ 为 https://mirrors.ustc.edu.cn/debian-security 即可。 可以使用如下命令： sudo sed -i 's/security.debian.org/mirrors.ustc.edu.cn\\/debian-security/g' /etc/apt/sources.list 以 Jessie 为例, 编辑/etc/apt/sources.list 文件, 在文件最前面添加以下条目(操作前请做好相应备份) sources.list: deb http://mirrors.ustc.edu.cn/debian-security/ jessie/updates main non-free contrib deb-src http://mirrors.ustc.edu.cn/debian-security/ jessie/updates main non-free contrib 相关链接 官方主页: http://www.debian.org/ 邮件列表:...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/debian-security/",
 "teaser": null
 },{
 "title": "Debian 镜像使用帮助",
-"excerpt":"收录架构 作为官方源之一，与 Debian 上游保持相同 收录版本 与 Debian 上游保持相同 使用说明 操作前请做好相应备份 一般情况下，更改 /etc/apt/sources.list 文件中 Debian 默认的源地址 http://httpredir.debian.org 为 http://mirrors.ustc.edu.cn 即可。 Debian 的默认源地址可能依情况而不同，请注意更改 httpredir.debian.org 为合适的地址。 可以使用如下命令： sudo sed -i 's/httpredir.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list 也可以直接编辑，以 Jessie 为例，编辑 /etc/apt/sources.list 文件，在文件最前面添加以下条目 sources.list: deb http://mirrors.ustc.edu.cn/debian stable main contrib non-free deb-src http://mirrors.ustc.edu.cn/debian stable main contrib non-free deb http://mirrors.ustc.edu.cn/debian stable-proposed-updates...","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/ 收录架构 作为官方源之一，与 Debian 上游保持相同 收录版本 与 Debian 上游保持相同 使用说明 操作前请做好相应备份 一般情况下，更改 /etc/apt/sources.list 文件中 Debian 默认的源地址 http://httpredir.debian.org 为 http://mirrors.ustc.edu.cn 即可。 Debian 的默认源地址可能依情况而不同，请注意更改 httpredir.debian.org 为合适的地址。 可以使用如下命令： sudo sed -i 's/httpredir.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list 也可以直接编辑，以 Jessie 为例，编辑 /etc/apt/sources.list 文件，在文件最前面添加以下条目 sources.list: deb http://mirrors.ustc.edu.cn/debian stable main contrib non-free deb-src http://mirrors.ustc.edu.cn/debian stable main contrib non-free deb...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/debian/",
 "teaser": null
 },{
 "title": "Docker 镜像使用帮助",
-"excerpt":"使用说明 新版的 Docker 使用 /etc/docker/daemon.json（Linux） 或者 %programdata%\\docker\\config\\daemon.json（Windows） 来配置 Daemon。 请在该配置文件中加入（没有该文件的话，请先建一个）： { \"registry-mirrors\": [\"https://docker.mirrors.ustc.edu.cn\"] } Docker Daemon configuration file 文档： https://docs.docker.com/engine/reference/commandline/dockerd/#/daemon-configuration-file Docker for Windows 文档: https://docs.docker.com/docker-for-windows/#/docker-daemon 以下是一些过时的配置方法 在 Docker 的启动参数中加入: --registry-mirror=https://docker.mirrors.ustc.edu.cn Ubuntu 用户（包括使用 systemd 的 Ubuntu 15.04）可以修改 /etc/default/docker 文件，加入如下参数： DOCKER_OPTS=\"--registry-mirror=https://docker.mirrors.ustc.edu.cn\" 其他 systemd 用户可以通过执行 sudo systemctl edit docker.service 来修改设置, 覆盖默认的启动参数: [Service] ExecStart=...","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/ 由于带宽等各种条件限制，Docker Hub 源目前仅为科大校园网用户提供。 使用说明 新版的 Docker 使用 /etc/docker/daemon.json（Linux） 或者 %programdata%\\docker\\config\\daemon.json（Windows） 来配置 Daemon。 请在该配置文件中加入（没有该文件的话，请先建一个）： { \"registry-mirrors\": [\"https://docker.mirrors.ustc.edu.cn\"] } Docker Daemon configuration file 文档： https://docs.docker.com/engine/reference/commandline/dockerd/#/daemon-configuration-file Docker for Windows 文档: https://docs.docker.com/docker-for-windows/#/docker-daemon 以下是一些过时的配置方法 在 Docker 的启动参数中加入: --registry-mirror=https://docker.mirrors.ustc.edu.cn Ubuntu 用户（包括使用 systemd 的 Ubuntu 15.04）可以修改 /etc/default/docker 文件，加入如下参数： DOCKER_OPTS=\"--registry-mirror=https://docker.mirrors.ustc.edu.cn\" 其他 systemd 用户可以通过执行 sudo systemctl edit...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/docker/",
 "teaser": null
@@ -870,13 +870,13 @@ var store = [{
 "teaser": null
 },{
 "title": "EPEL 镜像使用帮助",
-"excerpt":"收录架构 i386 amd64 SRPMS ppc64 使用说明 此源适用于 Red Hat, CentOS, Scientific Linux 版本 5 和 6 若存在则先备份/etc/yum.repos.d/epel.repo 和/etc/yum.repos.d/epel-testing.repo 下载下面的两个文件到/etc/yum.repos.d/ epel.repo: [epel] name=Extra Packages for Enterprise Linux 6 - $basearch baseurl=http://mirrors.ustc.edu.cn/epel/6/$basearch #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=epel-6&amp;arch=$basearch failovermethod=priority enabled=1 gpgcheck=1 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-6   [epel-debuginfo] name=Extra Packages for Enterprise Linux 6 - $basearch - Debug baseurl=http://mirrors.ustc.edu.cn/epel/6/$basearch/debug #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=epel-debug-6&amp;arch=$basearch failovermethod=priority...","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/ 收录架构 i386 amd64 SRPMS ppc64 使用说明 此源适用于 Red Hat, CentOS, Scientific Linux 版本 5 和 6 若存在则先备份/etc/yum.repos.d/epel.repo 和/etc/yum.repos.d/epel-testing.repo 下载下面的两个文件到/etc/yum.repos.d/ epel.repo: [epel] name=Extra Packages for Enterprise Linux 6 - $basearch baseurl=http://mirrors.ustc.edu.cn/epel/6/$basearch #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=epel-6&amp;arch=$basearch failovermethod=priority enabled=1 gpgcheck=1 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-6   [epel-debuginfo] name=Extra Packages for Enterprise Linux 6 - $basearch - Debug baseurl=http://mirrors.ustc.edu.cn/epel/6/$basearch/debug...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/epel/",
 "teaser": null
 },{
 "title": "Fedora 镜像使用帮助",
-"excerpt":"收录架构 i686 x86_64 收录版本 所有仍在支持的版本 最新测试版本 使用说明 将以下保存为 fedora-ustc.repo fedora-ustc.repo: [fedora] name=Fedora $releasever - $basearch - ustc failovermethod=priority baseurl=http://mirrors.ustc.edu.cn/fedora/releases/$releasever/Everything/$basearch/os/ #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=fedora-$releasever&amp;arch=$basearch enabled=1 metadata_expire=7d gpgcheck=1 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch   [fedora-debuginfo] name=Fedora $releasever - $basearch - Debug - ustc failovermethod=priority baseurl=http://mirrors.ustc.edu.cn/fedora/releases/$releasever/Everything/$basearch/debug/ #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=fedora-debug-$releasever&amp;arch=$basearch enabled=0 metadata_expire=7d gpgcheck=1 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch   [fedora-source] name=Fedora $releasever - Source - ustc failovermethod=priority...","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/ 收录架构 i686 x86_64 收录版本 所有仍在支持的版本 最新测试版本 使用说明 将以下保存为 fedora-ustc.repo fedora-ustc.repo: [fedora] name=Fedora $releasever - $basearch - ustc failovermethod=priority baseurl=http://mirrors.ustc.edu.cn/fedora/releases/$releasever/Everything/$basearch/os/ #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=fedora-$releasever&amp;arch=$basearch enabled=1 metadata_expire=7d gpgcheck=1 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch   [fedora-debuginfo] name=Fedora $releasever - $basearch - Debug - ustc failovermethod=priority baseurl=http://mirrors.ustc.edu.cn/fedora/releases/$releasever/Everything/$basearch/debug/ #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=fedora-debug-$releasever&amp;arch=$basearch enabled=0 metadata_expire=7d gpgcheck=1 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch   [fedora-source] name=Fedora $releasever - Source -...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/fedora/",
 "teaser": null
@@ -888,43 +888,43 @@ var store = [{
 "teaser": null
 },{
 "title": "Gentoo-Portage 镜像使用帮助",
-"excerpt":"收录架构   收录版本   使用说明   旧的 SYNC 方式已不推荐使用，建议使用新的 repos.conf  官网 wiki：https://wiki.gentoo.org/wiki//etc/portage/repos.conf   单文件方式   新建或修改 /etc/portage/repos.conf ：   /etc/portage/repos.conf:   [DEFAULT] main-repo = gentoo   [gentoo] location = /usr/portage sync-type = rsync sync-uri = rsync://rsync.mirrors.ustc.edu.cn/gentoo-portage/ auto-sync = yes   相关链接   官方主页: http://www.gentoo.org/  邮件列表: http://www.gentoo.org/main/en/lists.xml  论坛: http://forums.gentoo.org/  文档: http://www.gentoo.org/doc/en/  Wiki: http://wiki.gentoo.org/  镜像列表: http://www.gentoo.org/main/en/mirrors-rsync.xml  ","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/     收录架构   收录版本   使用说明   旧的 SYNC 方式已不推荐使用，建议使用新的 repos.conf  官网 wiki：https://wiki.gentoo.org/wiki//etc/portage/repos.conf   单文件方式   新建或修改 /etc/portage/repos.conf ：   /etc/portage/repos.conf:   [DEFAULT] main-repo = gentoo   [gentoo] location = /usr/portage sync-type = rsync sync-uri = rsync://rsync.mirrors.ustc.edu.cn/gentoo-portage/ auto-sync = yes   相关链接   官方主页: http://www.gentoo.org/  邮件列表: http://www.gentoo.org/main/en/lists.xml  论坛: http://forums.gentoo.org/  文档: http://www.gentoo.org/doc/en/  Wiki: http://wiki.gentoo.org/  镜像列表: http://www.gentoo.org/main/en/mirrors-rsync.xml  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/gentoo-portage/",
 "teaser": null
 },{
 "title": "Gentoo 镜像使用帮助",
-"excerpt":"收录架构   收录版本   使用说明   在/etc/portage/make.conf 中添加或修改：   GENTOO_MIRRORS=\"http://mirrors.ustc.edu.cn/gentoo/\"   相关链接   官方主页: http://www.gentoo.org/  邮件列表: http://www.gentoo.org/main/en/lists.xml  论坛: http://forums.gentoo.org/  文档: http://www.gentoo.org/doc/en/  Wiki: http://wiki.gentoo.org/  镜像列表: http://www.gentoo.org/main/en/mirrors2.xml  ","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/     收录架构   收录版本   使用说明   在/etc/portage/make.conf 中添加或修改：   GENTOO_MIRRORS=\"http://mirrors.ustc.edu.cn/gentoo/\"   相关链接   官方主页: http://www.gentoo.org/  邮件列表: http://www.gentoo.org/main/en/lists.xml  论坛: http://forums.gentoo.org/  文档: http://www.gentoo.org/doc/en/  Wiki: http://wiki.gentoo.org/  镜像列表: http://www.gentoo.org/main/en/mirrors2.xml  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/gentoo/",
 "teaser": null
 },{
 "title": "Homebrew Bottles 源",
-"excerpt":"Homebrew Bottles 是 Homebrew 提供的二进制代码包，目前镜像站收录了以下仓库：           homebrew/homebrew-core            homebrew/homebrew-dupes            homebrew/homebrew-games            homebrew/homebrew-gui            homebrew/homebrew-python            homebrew/homebrew-php            homebrew/homebrew-science            homebrew/homebrew-versions            homebrew/homebrew-x11       使用方法   对于 bash 用户：   echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' &gt;&gt; ~/.bash_profile source ~/.bash_profile   对于 zsh 用户   echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' &gt;&gt; ~/.zshrc source ~/.zshrc   更多说明  ","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/     Homebrew Bottles 是 Homebrew 提供的二进制代码包，目前镜像站收录了以下仓库：           homebrew/homebrew-core            homebrew/homebrew-dupes            homebrew/homebrew-games            homebrew/homebrew-gui            homebrew/homebrew-python            homebrew/homebrew-php            homebrew/homebrew-science            homebrew/homebrew-versions            homebrew/homebrew-x11       使用方法   对于 bash 用户：   echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' &gt;&gt; ~/.bash_profile source ~/.bash_profile   对于 zsh 用户   echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' &gt;&gt; ~/.zshrc source ~/.zshrc   更多说明  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/homebrew-bottles/",
 "teaser": null
 },{
 "title": "homebrew-core 源",
-"excerpt":"homebrew-core 是 Homebrew 的核心软件仓库，收录了大部分的常用软件。   使用方法   替换和重置 Homebrew 源  ","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/     homebrew-core 是 Homebrew 的核心软件仓库，收录了大部分的常用软件。   使用方法   替换和重置 Homebrew 源  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/homebrew-core.git/",
 "teaser": null
 },{
 "title": "Homebrew",
-"excerpt":"该镜像已过期，新镜像在这里。请不要使用这个镜像，除非你完全清楚你在做什么。   替换 homebrew 默认源   cd /usr/local git remote set-url origin git://mirrors.ustc.edu.cn/homebrew.git  ","categories": [],
+"excerpt":"该镜像已过期，新镜像在[这里](brew “mirrors:help:brew.git”)。请不要使用这个镜像，除非你完全清楚你在做什么。   替换 homebrew 默认源   cd /usr/local git remote set-url origin git://mirrors.ustc.edu.cn/homebrew.git  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/homebrew/",
 "teaser": null
 },{
 "title": "infinality bundle 镜像使用帮助",
-"excerpt":"使用方法   请在 /etc/pacman.conf 里根据需要添加：   [infinality-bundle] Server = http://mirrors.ustc.edu.cn/infinality-bundle/$arch   [infinality-bundle-multilib] Server = http://mirrors.ustc.edu.cn/infinality-bundle/multilib/$arch   [infinality-bundle-fonts] Server = http://mirrors.ustc.edu.cn/infinality-bundle/fonts   如果在更新过程中遇到了签名错误, 您可以选择设置 SigLevel = Optional TrustAll , 或者通过执行以下命令导入公钥来解决   # pacman-key -r 962DDE58 # pacman-key --lsign-key 962DDE58 # pacman -Syy   相关链接   官方主页: http://bohoomil.com/   ArchWiki: https://wiki.archlinux.org/index.php/Infinality  ","categories": [],
+"excerpt":"此镜像目前已不提供。     使用方法   请在 /etc/pacman.conf 里根据需要添加：   [infinality-bundle] Server = http://mirrors.ustc.edu.cn/infinality-bundle/$arch   [infinality-bundle-multilib] Server = http://mirrors.ustc.edu.cn/infinality-bundle/multilib/$arch   [infinality-bundle-fonts] Server = http://mirrors.ustc.edu.cn/infinality-bundle/fonts   如果在更新过程中遇到了签名错误, 您可以选择设置 SigLevel = Optional TrustAll , 或者通过执行以下命令导入公钥来解决   # pacman-key -r 962DDE58 # pacman-key --lsign-key 962DDE58 # pacman -Syy   相关链接   官方主页: http://bohoomil.com/   ArchWiki: https://wiki.archlinux.org/index.php/Infinality  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/infinality-bundle/",
 "teaser": null
 },{
 "title": "Kali 镜像使用帮助",
-"excerpt":"Kali，是 Backtrack 5 后续更新版本，它的作用大家都懂。 这里收录了最新的更新。 安装镜像下载地址：http://mirrors.ustc.edu.cn/kali-images/kali-latest/ 支持的系统架构 amd64 armel armhf i386 使用说明 以 1.1.0 版本为例, 编辑 /etc/apt/sources.list 文件, 在文件最前面添加以下条目： 使用 ipv6 网络添加如下内容 deb http://mirrors6.ustc.edu.cn/kali kali main non-free contrib deb-src http://mirrors6.ustc.edu.cn/kali kali main non-free contrib deb http://mirrors6.ustc.edu.cn/kali-security kali/updates main contrib non-free 使用 ipv4 网络添加如下内容 deb http://mirrors.ustc.edu.cn/kali kali main non-free contrib deb-src...","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/ Kali，是 Backtrack 5 后续更新版本，它的作用大家都懂。 这里收录了最新的更新。 安装镜像下载地址：http://mirrors.ustc.edu.cn/kali-images/kali-latest/ 支持的系统架构 amd64 armel armhf i386 使用说明 以 1.1.0 版本为例, 编辑 /etc/apt/sources.list 文件, 在文件最前面添加以下条目： 使用 ipv6 网络添加如下内容 deb http://mirrors6.ustc.edu.cn/kali kali main non-free contrib deb-src http://mirrors6.ustc.edu.cn/kali kali main non-free contrib deb http://mirrors6.ustc.edu.cn/kali-security kali/updates main contrib non-free 使用 ipv4 网络添加如下内容 deb http://mirrors.ustc.edu.cn/kali kali main non-free...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/kali/",
 "teaser": null
@@ -960,19 +960,19 @@ var store = [{
 "teaser": null
 },{
 "title": "Linux Mint 镜像使用帮助",
-"excerpt":"收录架构           i386            amd64       收录版本           elyssa            felicia            gloria            helena            isadora            julia            katya            lisa            maya            nadia       使用说明   打开 Software Manager，点击 Edit⇒Software Sources   在 Download from 中选择 Other   选择 China⇒mirrors.ustc.edu.cn   点击 Choose Server   相关链接      官方主页：http://www.linuxmint.com/  ","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/     收录架构           i386            amd64       收录版本           elyssa            felicia            gloria            helena            isadora            julia            katya            lisa            maya            nadia       使用说明   打开 Software Manager，点击 Edit⇒Software Sources   在 Download from 中选择 Other   选择 China⇒mirrors.ustc.edu.cn   点击 Choose Server   相关链接      官方主页：http://www.linuxmint.com/  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/linuxmint/",
 "teaser": null
 },{
 "title": "MariaDB 镜像源使用帮助",
-"excerpt":"支持发行版 所有官方支持的发行版 收录版本 所有官方支持的版本 使用说明 Fedora, CentOS, Red Hat 使用 MariaDB Repository Configuration Tool 生成一份配置，保存为 /etc/yum.repos.d/mariadb.repo 然后执行以下命令替换源地址： sudo sed -i 's#yum.mariadb.org#mirrors.ustc.edu.cn/mariadb/yum#' /etc/yum.repos.d/mariadb # 建议使用 HTTPS sudo sed -i 's#http://mirrors.ustc.edu.cn#https://mirrors.ustc.edu.cn#g' /etc/yum.repos.d/mariadb 若安装时遇到错误 “Failed to connect to 2001:da8:d800:95::110: Network is unreachable”，将源地址中的 mirrors.ustc.edu.cn 替换为 ipv4.mirrors.edu.cn 以强制使用 IPv4： sudo sed -i 's#//mirrors.ustc.edu.cn#//ipv4.mirrors.ustc.edu.cn#g' /etc/yum.repos.d/mariadb Mint,...","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/ 支持发行版 所有官方支持的发行版 收录版本 所有官方支持的版本 使用说明 Fedora, CentOS, Red Hat 使用 MariaDB Repository Configuration Tool 生成一份配置，保存为 /etc/yum.repos.d/mariadb.repo 然后执行以下命令替换源地址： sudo sed -i 's#yum.mariadb.org#mirrors.ustc.edu.cn/mariadb/yum#' /etc/yum.repos.d/mariadb # 建议使用 HTTPS sudo sed -i 's#http://mirrors.ustc.edu.cn#https://mirrors.ustc.edu.cn#g' /etc/yum.repos.d/mariadb 若安装时遇到错误 “Failed to connect to 2001:da8:d800:95::110: Network is unreachable”，将源地址中的 mirrors.ustc.edu.cn 替换为 ipv4.mirrors.edu.cn 以强制使用 IPv4： sudo sed -i 's#//mirrors.ustc.edu.cn#//ipv4.mirrors.ustc.edu.cn#g'...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/mariadb/",
 "teaser": null
 },{
 "title": "MSYS2 镜像使用帮助",
-"excerpt":"收录架构           MINGW: i686, x86_64            MSYS: i686, x86_64       获取基本组件包   请访问该镜像目录下的 distrib/ 目录（x86_64、i686），找到名为 msys2-&lt;架构&gt;-&lt;日期&gt;.exe 的文件（如 msys2-x86_64-20141113.exe），下载安装即可。   pacman 的配置   编辑 /etc/pacman.d/mirrorlist.mingw32 ，在文件开头添加：     Server = http://mirrors.ustc.edu.cn/msys2/mingw/i686   编辑 /etc/pacman.d/mirrorlist.mingw64 ，在文件开头添加：     Server = http://mirrors.ustc.edu.cn/msys2/mingw/x86_64   编辑 /etc/pacman.d/mirrorlist.msys ，在文件开头添加：     Server = http://mirrors.ustc.edu.cn/msys2/msys/$arch   然后执行 pacman -Sy 刷新软件包数据即可。  ","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/     收录架构           MINGW: i686, x86_64            MSYS: i686, x86_64       获取基本组件包   请访问该镜像目录下的 distrib/ 目录（x86_64、i686），找到名为 msys2-&lt;架构&gt;-&lt;日期&gt;.exe 的文件（如 msys2-x86_64-20141113.exe），下载安装即可。   pacman 的配置   编辑 /etc/pacman.d/mirrorlist.mingw32 ，在文件开头添加：     Server = http://mirrors.ustc.edu.cn/msys2/mingw/i686   编辑 /etc/pacman.d/mirrorlist.mingw64 ，在文件开头添加：     Server = http://mirrors.ustc.edu.cn/msys2/mingw/x86_64   编辑 /etc/pacman.d/mirrorlist.msys ，在文件开头添加：     Server = http://mirrors.ustc.edu.cn/msys2/msys/$arch   然后执行 pacman -Sy 刷新软件包数据即可。  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/msys2/",
 "teaser": null
@@ -984,19 +984,19 @@ var store = [{
 "teaser": null
 },{
 "title": "openSUSE 镜像使用帮助",
-"excerpt":"收录架构 i586 x86_64 收录版本 11.4 （不含 Update） 12.1 （不含 Update） 12.2 12.3 13.1 13.2 Leap 42.1 Leap 42.2 Tumbleweed (Factory) 使用说明 手动配置软件源 （以下配置方法适用于从未自行配置软件源的用户。其他用户请根据具体情况自行配置 ，以下仅供参考。） 终端下配置方法 禁用原有软件源 sudo zypper mr -da 添加科大镜像源（以 openSUSE Leap 42.2 为例） sudo zypper ar -fc https://mirrors.ustc.edu.cn/opensuse/distribution/leap/42.2/repo/oss USTC:42.2:OSS sudo zypper ar -fc https://mirrors.ustc.edu.cn/opensuse/distribution/leap/42.2/repo/non-oss USTC:42.2:NON-OSS sudo zypper ar...","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/ 收录架构 i586 x86_64 收录版本 11.4 （不含 Update） 12.1 （不含 Update） 12.2 12.3 13.1 13.2 Leap 42.1 Leap 42.2 Tumbleweed (Factory) 使用说明 手动配置软件源 （以下配置方法适用于从未自行配置软件源的用户。其他用户请根据具体情况自行配置 ，以下仅供参考。） 终端下配置方法 禁用原有软件源 sudo zypper mr -da 添加科大镜像源（以 openSUSE Leap 42.2 为例） sudo zypper ar -fc https://mirrors.ustc.edu.cn/opensuse/distribution/leap/42.2/repo/oss USTC:42.2:OSS sudo zypper ar -fc https://mirrors.ustc.edu.cn/opensuse/distribution/leap/42.2/repo/non-oss USTC:42.2:NON-OSS sudo...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/opensuse/",
 "teaser": null
 },{
 "title": "openwrt 镜像存档使用说明",
-"excerpt":"说明   由于 OpenWrt 上游不提供 rsync 服务, 而且用 lftp 与上游进行同步的时候总是会出现文件下载不完整的情况, 所以 USTC Mirrors 目前改为对 http://downloads.openwrt.org 做反向代理.   同步的地址由原来的 http://mirrors.ustc.edu.cn/openwrt 改为 http://openwrt.mirrors.ustc.edu.cn   原来的地址目前仍会保留, 以后将择日删除.  ","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/     说明   由于 OpenWrt 上游不提供 rsync 服务, 而且用 lftp 与上游进行同步的时候总是会出现文件下载不完整的情况, 所以 USTC Mirrors 目前改为对 http://downloads.openwrt.org 做反向代理.   同步的地址由原来的 http://mirrors.ustc.edu.cn/openwrt 改为 http://openwrt.mirrors.ustc.edu.cn   原来的地址目前仍会保留, 以后将择日删除.  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/openwrt/",
 "teaser": null
 },{
 "title": "PyPI 镜像使用帮助",
-"excerpt":"如何使用科大 mirrors 加速 pip？ 编辑 ~/.pip/pip.conf 文件（如果没有则创建之），将 index-url 开头的一行修改为下面一行： index-url = https://mirrors.ustc.edu.cn/pypi/web/simple 如果运行 pip 时, 提示如下错误 configparser.MissingSectionHeaderError: File contains no section headers. 请在 ~/.pip/pip.conf 最上方加上 [global] 这一 section header 如： pip.conf: [global] index-url = https://mirrors.ustc.edu.cn/pypi/web/simple format = columns 同步方式 使用 bandersnatch，每 4 小时从 pypi.python.org 官方同步。 相关链接 PyPI Official Mirrors: https://pypi.python.org/mirrors...","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/ 科大源目前暂不提供 PyPI 镜像或反代。 如何使用科大 mirrors 加速 pip？ 编辑 ~/.pip/pip.conf 文件（如果没有则创建之），将 index-url 开头的一行修改为下面一行： index-url = https://mirrors.ustc.edu.cn/pypi/web/simple 如果运行 pip 时, 提示如下错误 configparser.MissingSectionHeaderError: File contains no section headers. 请在 ~/.pip/pip.conf 最上方加上 [global] 这一 section header 如： pip.conf: [global] index-url = https://mirrors.ustc.edu.cn/pypi/web/simple format = columns 同步方式 使用 bandersnatch，每 4 小时从 pypi.python.org 官方同步。...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/pypi/",
 "teaser": null
@@ -1008,19 +1008,19 @@ var store = [{
 "teaser": null
 },{
 "title": "Raspbian 镜像使用帮助",
-"excerpt":"此处内容可能已过时，最新版本的帮助参见：https://mirrors.ustc.edu.cn/help/raspbian.html Raspbian 简介 Raspbian 是专门用于 ARM 卡片式计算机 Raspberry Pi®“树莓派”的操作系统。 Raspberry Pi®“树莓派”是 2012 年问世的 ARM 计算机，旨在为儿童和所有的计算机爱好者提供一套廉价的编程学习与硬件 DIY 平台。树莓派基于 ARM，具有 1080P 高清视频解析能力，附带用于硬件开发的 GPIO 接口，使用 Linux 操作系统。售价仅$25~$35。 Raspbian 系统是 Debian 的定制版本。得益于 Debian 从 7.0/wheezy 开始引入的“带硬件浮点加速的 ARM 架构”(armhf)，Debian 7.0 在树莓派上的运行性能有了很大提升。Raspbian 默认使用 LXDE 桌面，内置 C 和 Python 编译器。 Raspbian 是树莓派的开发与维护机构 The Raspbeery Pi Foundation“树莓派基金会”，推荐用于树莓派的首选系统。 由于以下原因，Raspbian...","categories": [],
+"excerpt":"此处内容已过时，最新版本的帮助参见：https://mirrors.ustc.edu.cn/help/raspbian.html Raspbian 简介 Raspbian 是专门用于 ARM 卡片式计算机 Raspberry Pi®“树莓派”的操作系统。 Raspberry Pi®“树莓派”是 2012 年问世的 ARM 计算机，旨在为儿童和所有的计算机爱好者提供一套廉价的编程学习与硬件 DIY 平台。树莓派基于 ARM，具有 1080P 高清视频解析能力，附带用于硬件开发的 GPIO 接口，使用 Linux 操作系统。售价仅$25~$35。 Raspbian 系统是 Debian 的定制版本。得益于 Debian 从 7.0/wheezy 开始引入的“带硬件浮点加速的 ARM 架构”(armhf)，Debian 7.0 在树莓派上的运行性能有了很大提升。Raspbian 默认使用 LXDE 桌面，内置 C 和 Python 编译器。 Raspbian 是树莓派的开发与维护机构 The Raspbeery Pi Foundation“树莓派基金会”，推荐用于树莓派的首选系统。 由于以下原因，Raspbian...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/raspbian/",
 "teaser": null
 },{
 "title": "Revproxy",
-"excerpt":"各资源的对应关系如下     registry-1.docker.io          docker.mirrors.ustc.edu.cn   packages.elastic.co           elastic.proxy.ustclug.org   ppa.launchpad.net             launchpad.proxy.ustclug.org   archive.cloudera.com/cdh5/    cloudera.proxy.ustclug.org/cdh5/   downloads.lede-project.org    lede.proxy.ustclug.org   downloads.openwrt.org         openwrt.proxy.ustclug.org   registry.npmjs.org            npmreg.proxy.ustclug.org   www.npmjs.com                 npm.proxy.ustclug.org   fonts.gstatic.com             fonts-gstatic.proxy.ustclug.org   fonts.googleapis.com          fonts.proxy.ustclug.org   ajax.googleapis.com           ajax.proxy.ustclug.org   themes.googleusercontent.com  google-themes.proxy.ustclug.org   secure.gravatar.com           gravatar.proxy.ustclug.org  ","categories": [],
+"excerpt":"此处的帮助文档已经废弃，请查看镜像站主页获取目前反代的情况。     各资源的对应关系如下     registry-1.docker.io          docker.mirrors.ustc.edu.cn   packages.elastic.co           elastic.proxy.ustclug.org   ppa.launchpad.net             launchpad.proxy.ustclug.org   archive.cloudera.com/cdh5/    cloudera.proxy.ustclug.org/cdh5/   downloads.lede-project.org    lede.proxy.ustclug.org   downloads.openwrt.org         openwrt.proxy.ustclug.org   registry.npmjs.org            npmreg.proxy.ustclug.org   www.npmjs.com                 npm.proxy.ustclug.org   fonts.gstatic.com             fonts-gstatic.proxy.ustclug.org   fonts.googleapis.com          fonts.proxy.ustclug.org   ajax.googleapis.com           ajax.proxy.ustclug.org   themes.googleusercontent.com  google-themes.proxy.ustclug.org   secure.gravatar.com           gravatar.proxy.ustclug.org  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/revproxy/",
 "teaser": null
 },{
 "title": "添加 ROS 源",
-"excerpt":"sudo sh -c ‘. /etc/lsb-release &amp;&amp; echo “deb http://mirrors.ustc.edu.cn/ros/ubuntu/ $DISTRIB_CODENAME main” &gt; /etc/apt/sources.list.d/ros-latest.list’  ","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/     sudo sh -c '. /etc/lsb-release &amp;&amp; echo \"deb http://mirrors.ustc.edu.cn/ros/ubuntu/ $DISTRIB_CODENAME main\" &gt; /etc/apt/sources.list.d/ros-latest.list'  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/ros/",
 "teaser": null
@@ -1031,20 +1031,20 @@ var store = [{
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/rpmfusion/",
 "teaser": null
 },{
-"title": "替换gems默认源",
-"excerpt":"gem sources  #列出默认源     gem sources –remove https://rubygems.org/  #移除默认源     gem sources -a https://mirrors.ustc.edu.cn/rubygems/  #添加科大源       替换 Rails 默认源   cd path/to/your/project #Linux only: sed -i \"/^source/c source 'http://mirrors.ustc.edu.cn/rubygems/'\" Gemfile #OS X only: sed -ig \"s/^source.*/source 'http:\\\\/\\\\/mirrors.ustc.edu.cn\\\\/rubygems\\\\/'/g\" Gemfile  ","categories": [],
+"title": "替换 gems 默认源",
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/     gem sources  #列出默认源 gem sources --remove https://rubygems.org/  #移除默认源 gem sources -a https://mirrors.ustc.edu.cn/rubygems/  #添加科大源     替换 Rails 默认源   cd path/to/your/project #Linux only: sed -i \"/^source/c source 'http://mirrors.ustc.edu.cn/rubygems/'\" Gemfile #OS X only: sed -ig \"s/^source.*/source 'http:\\\\/\\\\/mirrors.ustc.edu.cn\\\\/rubygems\\\\/'/g\" Gemfile  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/rubygems/",
 "teaser": null
 },{
 "title": "Rust Crates 镜像使用帮助",
-"excerpt":"使用说明   在 $HOME/.cargo/config 中添加如下内容   [registry] index = \"git://mirrors.ustc.edu.cn/crates.io-index\"   如果所处的环境中不允许使用 git 协议, 可以把上述地址改为   index = \"http://mirrors.ustc.edu.cn/crates.io-index\"   同步频率为每两个小时更新一次.   如果 cargo 版本为 0.13.0 或以上, 需要更改 $HOME/.cargo/config 为以下内容:   [source.crates-io] registry = \"https://github.com/rust-lang/crates.io-index\" replace-with = 'ustc' [source.ustc] registry = \"git://mirrors.ustc.edu.cn/crates.io-index\"   相关链接   官方主页: https://crates.io/  ","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/     使用说明   在 $HOME/.cargo/config 中添加如下内容   [registry] index = \"git://mirrors.ustc.edu.cn/crates.io-index\"   如果所处的环境中不允许使用 git 协议, 可以把上述地址改为   index = \"http://mirrors.ustc.edu.cn/crates.io-index\"   同步频率为每两个小时更新一次.   如果 cargo 版本为 0.13.0 或以上, 需要更改 $HOME/.cargo/config 为以下内容:   [source.crates-io] registry = \"https://github.com/rust-lang/crates.io-index\" replace-with = 'ustc' [source.ustc] registry = \"git://mirrors.ustc.edu.cn/crates.io-index\"   相关链接   官方主页: https://crates.io/  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/rust-crates/",
 "teaser": null
 },{
 "title": "使用说明",
-"excerpt":"请配合rustup来使用.   rustup 安装方法可参考 官方的 README.   设置环境变量 RUSTUP_DIST_SERVER (用于更新 toolchain)   export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static   以及 RUSTUP_UPDATE_ROOT (用于更新 rustup)   export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup  ","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/     请配合rustup来使用.   rustup 安装方法可参考 官方的 README.   设置环境变量 RUSTUP_DIST_SERVER (用于更新 toolchain)   export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static   以及 RUSTUP_UPDATE_ROOT (用于更新 rustup)   export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/rust-static/",
 "teaser": null
@@ -1056,19 +1056,19 @@ var store = [{
 "teaser": null
 },{
 "title": "Trisquel 镜像使用帮助",
-"excerpt":"收录架构 ALL 收录版本 Toutatis(6.0) Brigantia(5.5) Dagda(5.0) Slaine(4.5) Taranis(4.0) Awen(3.5) Dwyn(3.0) Robur(2.0) 使用说明 Trisquel 使用 APT 软件包管理系统，故其软件源使用方法与 Ubuntu 或 Debian 等很相似。 以 Toutatis 为例, 编辑 /etc/apt/sources.list 文件 (需要使用 sudo), 在文件最前面添加以下条目(操作前请做好相应备份) deb http://mirrors.ustc.edu.cn/trisquel/ toutatis main deb-src http://mirrors.ustc.edu.cn/trisquel/ toutatis main deb http://mirrors.ustc.edu.cn/trisquel/ toutatis-security main deb-src http://mirrors.ustc.edu.cn/trisquel/ toutatis-security main deb http://mirrors.ustc.edu.cn/trisquel/ toutatis-updates main deb-src...","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/ 收录架构 ALL 收录版本 Toutatis(6.0) Brigantia(5.5) Dagda(5.0) Slaine(4.5) Taranis(4.0) Awen(3.5) Dwyn(3.0) Robur(2.0) 使用说明 Trisquel 使用 APT 软件包管理系统，故其软件源使用方法与 Ubuntu 或 Debian 等很相似。 以 Toutatis 为例, 编辑 /etc/apt/sources.list 文件 (需要使用 sudo), 在文件最前面添加以下条目(操作前请做好相应备份) deb http://mirrors.ustc.edu.cn/trisquel/ toutatis main deb-src http://mirrors.ustc.edu.cn/trisquel/ toutatis main deb http://mirrors.ustc.edu.cn/trisquel/ toutatis-security main deb-src http://mirrors.ustc.edu.cn/trisquel/ toutatis-security main deb http://mirrors.ustc.edu.cn/trisquel/ toutatis-updates...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/trisquel/",
 "teaser": null
 },{
 "title": "Ubuntu 镜像使用帮助",
-"excerpt":"收录架构 ALL 收录版本 所有 Ubuntu 当前支持的版本，包括开发版，具体版本见 https://wiki.ubuntu.com/Releases 对于 Ubuntu 不再支持的版本，请参考 Ubuntu Old Release，https://mirrors.ustc.edu.cn/ubuntu-old-releases/ 使用说明 软件包管理中心（推荐） 在软件包管理中心“软件源”中选择“中国的服务器”下 mirrors.ustc.edu.cn 即可自动使用。 手动更改配置文件 操作前请做好相应备份 一般情况下，更改 /etc/apt/sources.list 文件中 Ubuntu 默认的源地址 http://archive.ubuntu.com/ 为 http://mirrors.ustc.edu.cn 即可。 可以使用如下命令： sudo sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list 当然直接编辑 /etc/apt/sources.list 文件（需要使用 sudo）也可以，以 Ubuntu 16.04 为例，在文件最前面添加以下条目： sources.list: # 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释 deb https://mirrors.ustc.edu.cn/ubuntu/...","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/ 收录架构 ALL 收录版本 所有 Ubuntu 当前支持的版本，包括开发版，具体版本见 https://wiki.ubuntu.com/Releases 对于 Ubuntu 不再支持的版本，请参考 Ubuntu Old Release，https://mirrors.ustc.edu.cn/ubuntu-old-releases/ 使用说明 软件包管理中心（推荐） 在软件包管理中心“软件源”中选择“中国的服务器”下 mirrors.ustc.edu.cn 即可自动使用。 手动更改配置文件 操作前请做好相应备份 一般情况下，更改 /etc/apt/sources.list 文件中 Ubuntu 默认的源地址 http://archive.ubuntu.com/ 为 http://mirrors.ustc.edu.cn 即可。 可以使用如下命令： sudo sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list 当然直接编辑 /etc/apt/sources.list 文件（需要使用 sudo）也可以，以 Ubuntu 16.04 为例，在文件最前面添加以下条目： sources.list: # 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/ubuntu/",
 "teaser": null
 },{
 "title": "UKSM Kernel 镜像使用帮助",
-"excerpt":"UKSM 是 http://kerneldedup.org/ 项目为内核的 KSM 的算法进行的一个优化，目前 mirrors.ustc 已提供 ubuntu 12.04 和 fedora 16 的源，具体的使用方法如下：   Fedora 16   x86 _64 源：http://mirrors.ustc.edu.cn/uksm-kernel/uksm-fedora-x86_64.repo  i686 源：http://mirrors.ustc.edu.cn/uksm-kernel/uksm-fedora-i686.repo  下载后放入/etc/yum.repos.d/ 然后使用 yum 命令或软件包管理器安装新的内核。 ====Ubuntu 12.04==== http://mirrors.ustc.edu.cn/uksm-kernel/ubuntu/uskm-ubuntu-12.04.list  下载后放入 /etc/apt/sources.list.d 然后使用 apt-get 命令或软件包管理器安装新的内核。 ====相关链接==== * 官方主页： http://kerneldedup.org/  _  ","categories": [],
+"excerpt":"此处的帮助文档已经废弃，此镜像目前已不提供。     UKSM 是 http://kerneldedup.org/ 项目为内核的 KSM 的算法进行的一个优化，目前 mirrors.ustc 已提供 ubuntu 12.04 和 fedora 16 的源，具体的使用方法如下：   Fedora 16   x86 _64 源：http://mirrors.ustc.edu.cn/uksm-kernel/uksm-fedora-x86_64.repo  i686 源：http://mirrors.ustc.edu.cn/uksm-kernel/uksm-fedora-i686.repo  下载后放入/etc/yum.repos.d/ 然后使用 yum 命令或软件包管理器安装新的内核。 ====Ubuntu 12.04==== http://mirrors.ustc.edu.cn/uksm-kernel/ubuntu/uskm-ubuntu-12.04.list  下载后放入 /etc/apt/sources.list.d 然后使用 apt-get 命令或软件包管理器安装新的内核。 ====相关链接==== * 官方主页： http://kerneldedup.org/  _  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/uksm-kernel/",
 "teaser": null
