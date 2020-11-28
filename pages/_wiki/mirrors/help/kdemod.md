@@ -3,6 +3,10 @@
 
 # kdemod 镜像使用帮助
 
+KDEMod 已更名为 Chakra Linux。此处的帮助文档已经废弃，新的内容请访问 <https://mirrors.ustc.edu.cn/help/>
+
+---
+
 ### 收录架构
 
 i686  

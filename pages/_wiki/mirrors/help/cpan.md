@@ -3,6 +3,10 @@
 
 # CPAN 镜像使用帮助
 
+此处的帮助文档已经废弃，新的内容请访问 <https://mirrors.ustc.edu.cn/help/>
+
+---
+
 ### 使用说明
 
 若你以前从未使用过 CPAN，请在命令行下运行 cpan

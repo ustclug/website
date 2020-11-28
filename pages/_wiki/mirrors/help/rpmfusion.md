@@ -3,6 +3,10 @@
 
 # RPMFusion 使用说明
 
+此处的帮助文档已经废弃，新的内容请访问 <https://mirrors.ustc.edu.cn/help/>
+
+---
+
 rpmfusion 是为 Fedora/RHEL 提供额外 rpm 软件包的第三方软件源。
 
 ## 配置方式

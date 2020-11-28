@@ -3,6 +3,10 @@
 
 # CRAN 镜像使用帮助
 
+此处的帮助文档已经废弃，新的内容请访问 <https://mirrors.ustc.edu.cn/help/>
+
+---
+
 ### 使用说明
 
 在第一次执行 install.package(“xxx”)时会弹出窗口让你选择镜像，此时选择 China Hefei 即可

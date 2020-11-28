@@ -15,3 +15,6 @@ _site
 
 # Prettier files
 node_modules/
+
+# Misc
+.DS_Store
