@@ -810,13 +810,13 @@ var store = [{
 "teaser": null
 },{
 "title": "CPAN 镜像使用帮助",
-"excerpt":"使用说明 若你以前从未使用过 CPAN，请在命令行下运行 cpan Would you like me to automatically choose some CPAN mirror sites for you? (This means connecting to the Internet) [yes] 此处输入 no Would you like to pick from the CPAN mirror list? [yes] 此处直接回车 You should select more than one (just in case the first isn't...","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/ 使用说明 若你以前从未使用过 CPAN，请在命令行下运行 cpan Would you like me to automatically choose some CPAN mirror sites for you? (This means connecting to the Internet) [yes] 此处输入 no Would you like to pick from the CPAN mirror list? [yes] 此处直接回车 You should select more than one (just in case the...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/cpan/",
 "teaser": null
 },{
 "title": "CRAN 镜像使用帮助",
-"excerpt":"使用说明   在第一次执行 install.package(“xxx”)时会弹出窗口让你选择镜像，此时选择 China Hefei 即可   也可以通过 chooseCRANmirror()来打开窗口   相关链接           官方主页：http://cran.r-project.org/            FAQ：http://cran.r-project.org/faqs.html            文档：http://cran.r-project.org/doc/      ","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/     使用说明   在第一次执行 install.package(“xxx”)时会弹出窗口让你选择镜像，此时选择 China Hefei 即可   也可以通过 chooseCRANmirror()来打开窗口   相关链接           官方主页：http://cran.r-project.org/            FAQ：http://cran.r-project.org/faqs.html            文档：http://cran.r-project.org/doc/      ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/cran/",
 "teaser": null
@@ -942,7 +942,7 @@ var store = [{
 "teaser": null
 },{
 "title": "kdemod 镜像使用帮助",
-"excerpt":"收录架构   i686  x86_64   收录版本   ALL   使用说明   最新版的 Chakra 已经默认添加了我们的源   注意   此源不能用于 Archlinux   相关链接   官方主页: http://chakra-linux.org//  Wiki: http://chakra-linux.org/wiki  ","categories": [],
+"excerpt":"KDEMod 已更名为 Chakra Linux。此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/     收录架构   i686  x86_64   收录版本   ALL   使用说明   最新版的 Chakra 已经默认添加了我们的源   注意   此源不能用于 Archlinux   相关链接   官方主页: http://chakra-linux.org//  Wiki: http://chakra-linux.org/wiki  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/kdemod/",
 "teaser": null
@@ -960,7 +960,7 @@ var store = [{
 "teaser": null
 },{
 "title": "Linux 内核源码镜像",
-"excerpt":"其 Git 仓库的链接为 git://mirrors.ustc.edu.cn/linux.git 。   断点续传   由于 git clone 不支持断点续传，所以可以使用支持断点续传的 git fetch 。一个简单的步骤如下所示，请按自己的需求酌情更改：   mkdir linux &amp;&amp; cd linux git init git fetch git://mirrors.ustc.edu.cn/linux.git git checkout FETCH_HEAD  ","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/     其 Git 仓库的链接为 git://mirrors.ustc.edu.cn/linux.git 。   断点续传   由于 git clone 不支持断点续传，所以可以使用支持断点续传的 git fetch 。一个简单的步骤如下所示，请按自己的需求酌情更改：   mkdir linux &amp;&amp; cd linux git init git fetch git://mirrors.ustc.edu.cn/linux.git git checkout FETCH_HEAD  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/linux/",
 "teaser": null
@@ -1032,7 +1032,7 @@ var store = [{
 "teaser": null
 },{
 "title": "RPMFusion 使用说明",
-"excerpt":"rpmfusion 是为 Fedora/RHEL 提供额外 rpm 软件包的第三方软件源。 配置方式 使用下列命令，可以同时启用其 free 和 nonfree 软件源： Fedora 22+ su -c 'dnf install http://mirrors.ustc.edu.cn/rpmfusion/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://mirrors.ustc.edu.cn/rpmfusion/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm' Fedora 14 至 Fedora 21 su -c 'yum install --nogpgcheck http://mirrors.ustc.edu.cn/rpmfusion/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://mirrors.ustc.edu.cn/rpmfusion/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm' RHEL 5 或兼容系统 su -c 'rpm -Uvh http://mirrors.ustc.edu.cn/rpmfusion/free/el/updates/5/i386/rpmfusion-free-release-5-1.noarch.rpm http://mirrors.ustc.edu.cn/rpmfusion/nonfree/el/updates/5/i386/rpmfusion-nonfree-release-5-1.noarch.rpm' RHEL...","categories": [],
+"excerpt":"此处的帮助文档已经废弃，新的内容请访问 https://mirrors.ustc.edu.cn/help/ rpmfusion 是为 Fedora/RHEL 提供额外 rpm 软件包的第三方软件源。 配置方式 使用下列命令，可以同时启用其 free 和 nonfree 软件源： Fedora 22+ su -c 'dnf install http://mirrors.ustc.edu.cn/rpmfusion/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://mirrors.ustc.edu.cn/rpmfusion/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm' Fedora 14 至 Fedora 21 su -c 'yum install --nogpgcheck http://mirrors.ustc.edu.cn/rpmfusion/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://mirrors.ustc.edu.cn/rpmfusion/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm' RHEL 5 或兼容系统 su -c 'rpm -Uvh http://mirrors.ustc.edu.cn/rpmfusion/free/el/updates/5/i386/rpmfusion-free-release-5-1.noarch.rpm...","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/rpmfusion/",
 "teaser": null
@@ -1080,7 +1080,7 @@ var store = [{
 "teaser": null
 },{
 "title": "ustclug 自建软件源使用帮助",
-"excerpt":"收录架构   i386, amd64, armhf   收录版本   针对 Debian Jessie 挑选的部分软件，版本按需确定。   使用说明      编辑sources.list文件：   snippet.bash:   echo deb https://mirrors.ustc.edu.cn/ustclug ustclug main | sudo tee /etc/apt/sources.list.d/ustclug.list      使用apt-key add添加缺失的公钥：   snippet.bash:   wget -q https://mirrors.ustc.edu.cn/ustclug/ustclug.asc -O - | sudo apt-key add -      在apt update后即可正常使用。   注意 ：LUG@USTC 对其中的软件包的来源不做任何保证，请谨慎使用。   相关链接   无  ","categories": [],
+"excerpt":"此镜像目前已停止维护。     收录架构   i386, amd64, armhf   收录版本   针对 Debian Jessie 挑选的部分软件，版本按需确定。   使用说明      编辑sources.list文件：   snippet.bash:   echo deb https://mirrors.ustc.edu.cn/ustclug ustclug main | sudo tee /etc/apt/sources.list.d/ustclug.list      使用apt-key add添加缺失的公钥：   snippet.bash:   wget -q https://mirrors.ustc.edu.cn/ustclug/ustclug.asc -O - | sudo apt-key add -      在apt update后即可正常使用。   注意 ：LUG@USTC 对其中的软件包的来源不做任何保证，请谨慎使用。   相关链接   无  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn//wiki/mirrors/help/ustclug/",
 "teaser": null
