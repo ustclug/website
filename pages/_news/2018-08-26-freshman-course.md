@@ -36,4 +36,4 @@ tags: []
 
 ![](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2018.08.25_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E7%A8%8B/%E6%B4%BB%E5%8A%A8%E7%85%A7%E7%89%87/IMG_20180825_193611.jpg)活动结束后大家主动清理了教室并带走垃圾，本次新生活力课程圆满结束，感谢校团委，校学生社团管理指导委员会和计算机科学与技术学院团委的支持！
 
-活动照片和讲稿：[LUG FTP](https://ftp.lug.ustc.edu.cn/weekly_party/2018.08.25_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E7%A8%8B/)
+活动照片和讲稿：[LUG FTP](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2018.08.25_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E7%A8%8B/)

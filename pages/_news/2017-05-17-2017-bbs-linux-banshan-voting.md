@@ -17,7 +17,7 @@ comments:
     content: 已经投票，期待ing
 ---
 
-2017 年 Linux 板版衫设计方案出炉啦！[经过一周的征集](/2017/05/2017-bbs-linux-banshan/)，本次共获得了两份投稿的设计方案，将通过投票决定最终制作的版衫样式。
+2017 年 Linux 板版衫设计方案出炉啦！[经过一周的征集](/news/2017/05/2017-bbs-linux-banshan/)，本次共获得了两份投稿的设计方案，将通过投票决定最终制作的版衫样式。
 
 BBS 投票页面联动：[点我前往](https://bbs.ustc.edu.cn/cgi/bbscon?bn=Linux&fn=M591BBE5F)
 

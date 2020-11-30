@@ -4,6 +4,7 @@
    - 未处理“-”不变
    - 站点消失无法修复使用“|”表示
    - 因其他原因无法修复且没有对原文做任何改动使用“||”表示
+   - （这个符号系统设计的比较失败，可能会有点乱）
 
 默认修复策略：
    - 站点迁移 —— 常访问页面使用现有可用站点链接替换，历史页面保留失效链接，后面用括号注明可访问链接
@@ -12,6 +13,8 @@
    - 无效 ftp 图片引用原文中直接替换不在原文标识
    - 实时有效网址（如直播链接）原文不做任何更改，视为实时性链接失效，对应 “++” 表示
    - 有一些链接在进行 html-proofer 静态站点 url-swap 时发生了重复替换的 bug，在本次修复的过程中将其删除，暂不考虑能否访问
+
+无法修复，没有改动的尽量注明全面的理由，让其他人不需要回到原来的上下文就可以清楚问题所在。
 
 需要上线时直接将两个 html-proofer.log 删除，将 Gemfile 中的 htmlproofer 行删除，与 master 分支合并就可以。（备忘）
 
@@ -45,56 +48,50 @@ lug 回首之人，在此 ~
   *  External link http://lug.ustc.edu.cn/ftp/events/2013.04.21_%e8%ae%a1%e9%99%a2%e8%ae%b2%e5%ba%a7/slides/OS%e5%92%8c%e7%bd%91%e7%bb%9c%e4%bb%8e%e8%bf%99%e9%87%8c%e8%b5%b0%e6%9d%a5.pdf failed: 404 No error
   *  External link http://lug.ustc.edu.cn/ftp/events/2013.04.21_%e8%ae%a1%e9%99%a2%e8%ae%b2%e5%ba%a7/slides/cutepython.pdf failed: 404 No error
 || ./_site/news/2014/08/2014-e5-b9-b48-e6-9c-88-sfd-e5-b7-a5-e4-bd-9c-e8-a7-84-e5-88-92-e6-9a-a8-e6-96-b0-e5-ad-a6-e6-9c-9f-lug-e5-b7-a5-e4-bd-9c-e4-bc-9a-e8-ae-ae/index.html
-  *  External link https://lug.ustc.edu.cn/wiki/lug/internal/minutes/20140830 failed: 404 No error （没有找到会议记录）
+  *  External link https://lug.ustc.edu.cn/wiki/lug/internal/minutes/20140830 failed: 404 No error （没有找到会议记录（可能需要看下上下文））
 ++ ./_site/news/2015/05/2015-linux-tshirt-voting-result-and-order/index.html
   *  External link http://www.teeker.com/openstore failed: 403 No error （实时性链接失效）（订购链接）
-- ./_site/news/2015/09/lug-banshan-commission-guide/index.html
+|| ./_site/news/2015/09/lug-banshan-commission-guide/index.html （我不是很清楚现在这个 blog 目录映射到了哪里）
   *  External link https://lug.ustc.edu.cn/blog/2015/05/2015-linux-tshirt-voting-result-and-order/ failed: 404 No error
   *  External link https://lug.ustc.edu.cn/blog/2015/05/2015-linux-user-group-banshan/ failed: 404 No error
-- ./_site/news/2017/05/2017-bbs-linux-banshan-voting/index.html
-  *  internally linking to /2017/05/2017-bbs-linux-banshan/, which does not exist (line 0)
++ ./_site/news/2017/05/2017-bbs-linux-banshan-voting/index.html
+  *  internally linking to /2017/05/2017-bbs-linux-banshan/, which does not exist (line 0) （新闻站内部引用修复）
      <a href="/2017/05/2017-bbs-linux-banshan/">经过一周的征集</a>
-- ./_site/news/2017/05/2017-bbs-linux-banshan/index.html
-  *  External link https://lug.ustc.edu.cn/wiki/lug/banshan failed: 404 No error
-- ./_site/news/2018/06/server-down/index.html
-  *  External link https://git.ustclug.org/ failed: response code 0 means something's wrong.
-             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
-             Sometimes, making too many requests at once also breaks things.
-             Either way, the return message (if any) from the server is: Couldn't resolve host name
-  *  External link https://pgp.ustc.edu.cn/ failed: response code 0 means something's wrong.
-             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
-             Sometimes, making too many requests at once also breaks things.
-             Either way, the return message (if any) from the server is: Couldn't resolve host name
-- ./_site/news/2018/08/freshman-course/index.html
-  *  External link https://ftp.lug.ustc.edu.cn/weekly_party/2018.08.25_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E7%A8%8B/ failed: 404 No error
-- ./_site/news/2018/09/2018-sfd-ustc/index.html
-  *  External link https://ftp.lug.ustc.edu.cn/%6%B4%BB%E5%8A%A8/2018.09.15_SFD/photos/DSC01780.JPG failed: 400 No error
-- ./_site/news/2019/01/hackergame-awards/index.html
-  *  External link https://hack2018.lug.ustc.edu.cn/ failed: 502 No error
-- ./_site/news/2019/04/2019-bbs-linux-banshan/index.html
-  *  External link https://lug.ustc.edu.cn/wiki/lug/zhoubian/banshan failed: 404 No error
-- ./_site/planet/2020/08/keeping-account-with-beancount/index.html
-  *  External link https://beancount.github.io/fava/api/beancount.plugins.html failed: 404 No error
-  *  External link https://bitbucket.org/blais/beancount/src/default/examples/ failed: 404 No error
-- ./_site/wiki/doc/smart-questions/index.html
-  *  External link http://homepage.ntlworld.com./jonathan.deboynepollard/FGA/questions-with-yes-or-no-answers.html failed: got a time out (response code 0)
-  *  External link http://www.linux.org/groups/index.html failed: 404 No error
+|| ./_site/news/2017/05/2017-bbs-linux-banshan/index.html 
+  *  External link https://lug.ustc.edu.cn/wiki/lug/banshan failed: 404 No error （以往的版衫设计链接，可能要替换成 ftp 中版衫的链接）
+|| ./_site/news/2018/06/server-down/index.html
+  *  External link https://git.ustclug.org/ failed: response code 0 means something's wrong.  （不知道为什么不能直接被重定向到 git.lug.ustc.edu.cn gitlab 服务上）
+  *  External link https://pgp.ustc.edu.cn/ failed: response code 0 means something's wrong. （啊我们有这个服务吗（pgp 密钥同步服务）。。）
++ ./_site/news/2018/08/freshman-course/index.html
+  *  External link https://ftp.lug.ustc.edu.cn/weekly_party/2018.08.25_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E7%A8%8B/ failed: 404 No error （从小聚改到活动文件夹了）
++ ./_site/news/2018/09/2018-sfd-ustc/index.html
+  *  External link https://ftp.lug.ustc.edu.cn/%6%B4%BB%E5%8A%A8/2018.09.15_SFD/photos/DSC01780.JPG failed: 400 No error （从前有人随缘按下删除键，把 url encode 给破坏了）
+|| ./_site/news/2019/01/hackergame-awards/index.html
+  *  External link https://hack2018.lug.ustc.edu.cn/ failed: 502 No error （这个题目 —— hackgame 2018 现在应该是撤了吧）
+|| ./_site/news/2019/04/2019-bbs-linux-banshan/index.html
+  *  External link https://lug.ustc.edu.cn/wiki/lug/zhoubian/banshan failed: 404 No error （和上面一样，可能要替换成 ftp 中版衫的链接）
+? ./_site/planet/2020/08/keeping-account-with-beancount/index.html
+  +  External link https://beancount.github.io/fava/api/beancount.plugins.html failed: 404 No error （站内位置变更）
+  ||  External link https://bitbucket.org/blais/beancount/src/default/examples/ failed: 404 No error  （这个我就比较迷惑了，我指原文）
+|| ./_site/wiki/doc/smart-questions/index.html
+  |  External link http://homepage.ntlworld.com./jonathan.deboynepollard/FGA/questions-with-yes-or-no-answers.html failed: got a time out (response code 0) （链接失效）
+  *  External link http://www.linux.org/groups/index.html failed: 404 No error   （群组失效）
   *  internally linking to esr%40thyrsus.html, which does not exist (line 0)
-     <a href="esr%40thyrsus.html">esr@thyrsus.com</a>
+     <a href="esr%40thyrsus.html">esr@thyrsus.com</a> （不知道怎么处理）
   *  internally linking to respond-auto%40linuxmafia, which does not exist (line 0)
-     <a href="respond-auto%40linuxmafia">respond-auto@linuxmafia.com</a>
-- ./_site/wiki/greenwarm/index.html
-  *  External link http://download.gna.org/grub4dos/ failed: 404 No error
-  *  External link http://download.gna.org/grubutil/ failed: 404 No error
+     <a href="respond-auto%40linuxmafia">respond-auto@linuxmafia.com</a> （同上）
+|| ./_site/wiki/greenwarm/index.html
+  *  External link http://download.gna.org/grub4dos/ failed: 404 No error  （站点失效，现代码位于 github chenall/grub4dos）
+  *  External link http://download.gna.org/grubutil/ failed: 404 No error   （同上）
   *  internal image /wiki/_media/greenwarm/grub4dos-installer.html does not exist (line 0)
   *  internally linking to /wiki/_detail/greenwarm/grub4dos-installerf38c?id=greenwarm%3Astart, which does not exist (line 0)
      <a href="/wiki/_detail/greenwarm/grub4dos-installerf38c?id=greenwarm%3Astart" title="greenwarm:grub4dos-installer.png"><img src="/wiki/_media/greenwarm/grub4dos-installer.html" alt=""></a>
-- ./_site/wiki/greenwarm/remotedesktop/index.html
-  *  External link http://172.16.1.2:5801/ failed: got a time out (response code 0)
-- ./_site/wiki/greenwarm/virtualization/index.html
-  *  External link http://www.turbolinux.com.cn/turbo/wiki/doku.php?id=sysadmin:virtualbox failed: 404 No error
+++ ./_site/wiki/greenwarm/remotedesktop/index.html
+  *  External link http://172.16.1.2:5801/ failed: got a time out (response code 0)    （一个示例）
+|| ./_site/wiki/greenwarm/virtualization/index.html （我发现这种页面很难在 wiki 中索引到）
+  *  External link http://www.turbolinux.com.cn/turbo/wiki/doku.php?id=sysadmin:virtualbox failed: 404 No error （页面迁移到未知的位置）
   *  internally linking to kvm%e4%bd%bf%e7%94%a8%e6%96%b9%e6%b3%95, which does not exist (line 0)
-     <a href="kvm%e4%bd%bf%e7%94%a8%e6%96%b9%e6%b3%95" title="greenwarm:kvm使用方法">KVM 使用方法</a>
+     <a href="kvm%e4%bd%bf%e7%94%a8%e6%96%b9%e6%b3%95" title="greenwarm:kvm使用方法">KVM 使用方法</a> （
   *  internally linking to xen%e7%ae%80%e4%bb%8b%e4%b8%8e%e4%bd%bf%e7%94%a8, which does not exist (line 0)
      <a href="xen%e7%ae%80%e4%bb%8b%e4%b8%8e%e4%bd%bf%e7%94%a8" title="greenwarm:xen简介与使用">1.2 Xen 简介</a>
 - ./_site/wiki/greenwarm/xen简介与使用/index.html
@@ -153,21 +150,9 @@ lug 回首之人，在此 ~
   *  internally linking to /wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-982c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8, which does not exist (line 0)
      <a href="/wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-982c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-9.jpg"><img src="/wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-9.html" alt=""></a>
 - ./_site/wiki/index.html
-             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
-             Sometimes, making too many requests at once also breaks things.
-             Either way, the return message (if any) from the server is: Couldn't resolve host name
-             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
-             Sometimes, making too many requests at once also breaks things.
-             Either way, the return message (if any) from the server is: Couldn't resolve host name
 - ./_site/wiki/intro_english/index.html
   *  External link https://debian.ustc.edu.cn/ failed: response code 0 means something's wrong.
-             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
-             Sometimes, making too many requests at once also breaks things.
-             Either way, the return message (if any) from the server is: SSL peer certificate or SSH remote key was not OK
   *  External link https://oss.ustc.edu.cn/ failed: response code 0 means something's wrong.
-             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
-             Sometimes, making too many requests at once also breaks things.
-             Either way, the return message (if any) from the server is: SSL peer certificate or SSH remote key was not OK
 - ./_site/wiki/linux_digest/lftp/index.html
   *  internal image ../lib/images/smileys/icon_smile.gif does not exist (line 0)
   *  internally linking to /wiki/linux/crontab, which does not exist (line 0)
@@ -197,18 +182,9 @@ lug 回首之人，在此 ~
      <a href="start" title="lug:book:start">LUG 书库</a>
 - ./_site/wiki/lug/book/borrow_history/index.html
   *  External link http://goodchong.com/administering-apache-read-report/ failed: response code 0 means something's wrong.
-             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
-             Sometimes, making too many requests at once also breaks things.
-             Either way, the return message (if any) from the server is: Couldn't resolve host name
   *  internally linking to /wiki/lug/borrow_book, which does not exist (line 0)
      <a href="/wiki/lug/borrow_book" title="http://lug.ustc.edu.cn/wiki/lug/borrow_book">图书借阅管理制度</a>
 - ./_site/wiki/lug/contact/index.html
-             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
-             Sometimes, making too many requests at once also breaks things.
-             Either way, the return message (if any) from the server is: Couldn't resolve host name
-             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
-             Sometimes, making too many requests at once also breaks things.
-             Either way, the return message (if any) from the server is: Couldn't resolve host name
 - ./_site/wiki/lug/events/index.html
   *  External link http://ftp.ustclug.org/%E6%B4%BB%E5%8A%A8/2019.%20%E6%98%A5%5C_Linux101/Slides/Linux101%2001.pdf failed: 404 No error
   *  External link http://ftp.ustclug.org/%E6%B4%BB%E5%8A%A8/2019.%20%E6%98%A5%5C_Linux101/Slides/Linux101%2002.pdf failed: 404 No error
@@ -342,31 +318,16 @@ lug 回首之人，在此 ~
   *  internal image ../../lib/images/smileys/fixme.gif does not exist (line 0)
 - ./_site/wiki/lug/links/index.html
   *  External link http://www.cdlug.sh/ failed: response code 0 means something's wrong.
-             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
-             Sometimes, making too many requests at once also breaks things.
-             Either way, the return message (if any) from the server is: Couldn't resolve host name
   *  External link http://www.chongqinglug.org/ failed: 502 No error
   *  External link http://www.hhcn.com/ failed: 403 No error
   *  External link https://blug.sh/ failed: response code 0 means something's wrong.
-             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
-             Sometimes, making too many requests at once also breaks things.
-             Either way, the return message (if any) from the server is: Couldn't resolve host name
   *  External link https://blug.sh/mailing-list/ failed: response code 0 means something's wrong.
-             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
-             Sometimes, making too many requests at once also breaks things.
-             Either way, the return message (if any) from the server is: Couldn't resolve host name
   *  External link https://lug.neu.edu.cn/ failed: got a time out (response code 0)
 - ./_site/wiki/lug/mailinglist/index.html
   *  External link http://archive.lug.ustc.edu.cn/ failed: response code 0 means something's wrong.
-             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
-             Sometimes, making too many requests at once also breaks things.
-             Either way, the return message (if any) from the server is: Couldn't resolve host name
   *  External link http://dir.gmane.org/gmane.user-groups.linux.ustclug failed: 523 No error
 - ./_site/wiki/lug/person-in-charge/index.html
   *  External link http://blog.ustc.edu.cn/freeshell failed: response code 0 means something's wrong.
-             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
-             Sometimes, making too many requests at once also breaks things.
-             Either way, the return message (if any) from the server is: Couldn't resolve host name
 - ./_site/wiki/lug/resources/index.html
   *  External link https://lug.ustc.edu.cn/OpenCourse/ failed: 404 No error
 - ./_site/wiki/lug/services/lib/index.html
@@ -374,14 +335,8 @@ lug 回首之人，在此 ~
      <a href="/wiki/serveradm/lib" title="serveradm:lib">图书馆查询机系统</a>
 - ./_site/wiki/mirrors/help/alpine/index.html
   *  External link http://forum.alpinelinux.org/forum failed: response code 0 means something's wrong.
-             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
-             Sometimes, making too many requests at once also breaks things.
-             Either way, the return message (if any) from the server is: Couldn't resolve host name
 - ./_site/wiki/mirrors/help/anthon/index.html
   *  External link https://anthonos.org/ failed: response code 0 means something's wrong.
-             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
-             Sometimes, making too many requests at once also breaks things.
-             Either way, the return message (if any) from the server is: SSL peer certificate or SSH remote key was not OK
   *  External link https://mirrors.ustc.edu.cn/anthon/os2-repo failed: 404 No error
   *  External link https://mirrors.ustc.edu.cn/anthon/os3-next/ failed: 404 No error
 - ./_site/wiki/mirrors/help/aosp/index.html
@@ -453,31 +408,16 @@ lug 回首之人，在此 ~
      <a href="/.ustc.edu.cn/_redsky/vim-scripts.tar" title="http://lug.ustc.edu.cn/~redsky/vim-scripts.tar.gz">上述插件原始文件的打包下载</a>
 - ./_site/wiki/server/pxe/faq/index.html
   *  External link http://am.xs4all.nl/phpwiki/index.php/Qemu failed: response code 0 means something's wrong.
-             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
-             Sometimes, making too many requests at once also breaks things.
-             Either way, the return message (if any) from the server is: Couldn't resolve host name
   *  External link http://cha.homeip.net/blog/archives/2006/08/pxe.html failed: got a time out (response code 0)
   *  External link http://clic.mandrakesoft.com/documentation/pxe/ failed: got a time out (response code 0)
   *  External link http://dad-answers.com/qemu/utilities/QEMU-HD-Mounter/ failed: 404 No error
   *  External link http://debian.jones.dk/tweaks/dhcp3/ failed: response code 0 means something's wrong.
-             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
-             Sometimes, making too many requests at once also breaks things.
-             Either way, the return message (if any) from the server is: Couldn't resolve host name
   *  External link http://frank.harvard.edu/~coldwell/diskless/ failed: got a time out (response code 0)
   *  External link http://grub.linuxeden.com/ failed: response code 0 means something's wrong.
-             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
-             Sometimes, making too many requests at once also breaks things.
-             Either way, the return message (if any) from the server is: Couldn't resolve host name
   *  External link http://grub.linuxeden.com/wakka.php?wakka=%CA%D7%D2%B3 failed: response code 0 means something's wrong.
-             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
-             Sometimes, making too many requests at once also breaks things.
-             Either way, the return message (if any) from the server is: Couldn't resolve host name
   *  External link http://grub4dos.sourceforge.net/wingrub.html failed: 404 No error
   *  External link http://grub4dos.sourceforge.net/wingrub_examples.html failed: 404 No error
   *  External link http://moe.tnc.edu.tw/~kendrew/pollix/ failed: response code 0 means something's wrong.
-             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
-             Sometimes, making too many requests at once also breaks things.
-             Either way, the return message (if any) from the server is: Couldn't resolve host name
   *  External link http://pareto.uab.es/mcreel/ParallelKnoppix/ failed: 404 No error
   *  External link http://people.cs.uchicago.edu/~gmurali/gui/isodos.html failed: 403 No error
   *  External link http://pxe.ustc.edu.cn/images/8139_28pin_bootrom.jpg failed: 404 No error
@@ -498,9 +438,6 @@ lug 回首之人，在此 ~
   *  External link http://www.undercoverdesign.com/dosghost/dos/utildos.htm failed: 404 No error
 - ./_site/wiki/user/sadhen/android/index.html
   *  External link http://blog.decat.org/aosp-step-by-step-instructions-for-setting-up-a-chrooted-ubuntu-10-04-64bit-build-environment-on-ubuntu-11-10-and-12-04-hosts/ failed: response code 0 means something's wrong.
-             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
-             Sometimes, making too many requests at once also breaks things.
-             Either way, the return message (if any) from the server is: Couldn't resolve host name
   *  External link http://lug.ustc.edu.cn/~guo/doc/library_query_os.pdf failed: 404 No error
 - ./_site/wiki/user/sadhen/hackers_and_painters/index.html
   *  External link http://dbanotes.net/review/Hackers_and_Painters.html failed: 404 No error
