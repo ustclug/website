@@ -1,0 +1,522 @@
+过滤掉没有 alt 属性的错误后，以该 log 为模板进行页面修复：
+   - 已进行替换修复用“+”表示
+   - 无需修改用“++”表示
+   - 未处理“-”不变
+   - 站点消失无法修复使用“|”表示
+   - 因其他原因无法修复且没有对原文做任何改动使用“||”表示
+
+默认修复策略：
+   - 站点迁移 —— 常访问页面使用现有可用站点链接替换，历史页面保留失效链接，后面用括号注明可访问链接
+   - 博客站点失效 —— 仅声明失效。
+   - 失效链接统一用 "（原链接失效）" 标注，后续可全局替换更改措辞
+   - 无效 ftp 图片引用原文中直接替换不在原文标识
+   - 实时有效网址（如直播链接）原文不做任何更改，视为实时性链接失效，对应 “++” 表示
+   - 有一些链接在进行 html-proofer 静态站点 url-swap 时发生了重复替换的 bug，在本次修复的过程中将其删除，暂不考虑能否访问
+
+需要上线时直接将两个 html-proofer.log 删除，将 Gemfile 中的 htmlproofer 行删除，与 master 分支合并就可以。（备忘）
+
+lug 回首之人，在此 ~
+
+| ./_site/news/2010/09/2010-software-freedom-day/index.html
+  *  External link http://www.oss.org.cn/ failed: response code 0 means something's wrong. （域名变更）
+  *  External link http://www.redflag-linux.com/ failed: got a time out (response code 0) （域名失效）
++ ./_site/news/2011/04/gnome3-launch-party/index.html
+  *  External link https://ftp.lug.ustc.edu.cn/wp-content/gallery/linux%e6%8a%80%e6%9c%af%e6%b2%99%e9%be%99%e6%9a%a8gnome-3-0%e5%8f%91%e5%b8%83%e6%b4%bb%e5%8a%a8/dscf2713_0.jpg failed: 404 No error 图片引用问题，修改为一张合理的图片
+++ ./_site/news/2011/04/mirrors-ustc-edu-cn-comes/index.html
+  *  External link http://debian.ustc.edu.cn/ubuntu-cd failed: 404 No error （实时性链接失效）（服务变迁声明）
+  *  External link http://oss.ustc.edu.cn/cygwin/cygwin/ failed: 404 No error （同上）
++ ./_site/news/2011/05/customize-pxe-live-system/index.html
+  *  External link http://live.debian.net/ failed: response code 0 means something's wrong. （域名变更）
+  *  External link http://live.debian.net/manual/en/html/live-manual.html failed: response code 0 means something's wrong. （同上）
+|+ ./_site/news/2011/06/deepin-linux-dau-2011/index.html
+  *  External link http://basiccoder.com/wuhan-deepin-linux-meeting-info.html failed: 500 No error （域名失效）
+  *  External link http://os.51cto.com/art/201106/266358.htm failed: 404 No error （文章失效）
+  *  External link http://www.bentutu.com/2011/06/linux-deepin-dau-2011-note/ failed: response code 0 means something's wrong. （域名失效）
+  *  External link http://www.linuxdeepin.net/ failed: response code 0 means something's wrong. （域名变更）
+  *  External link http://www.ziqiang.net/ failed: got a time out (response code 0) （域名变更）
+|| ./_site/news/2012/09/sfd-2012-hefei-ustc/index.html
+  *  External link http://home.ustc.edu.cn/~sunxilin/sfd/12SFD-01.jpg failed: 404 No error （科大主页失效，且 ftp 中没有搜索到替换图片）
+  *  External link http://home.ustc.edu.cn/~sunxilin/sfd/12SFD-03.jpg failed: 404 No error  （同上）
+  *  External link http://www.fengyunzhibo.com/tv/22107_1347540720168.htm failed: 301 Couldn't resolve host name  （实时性链接失效）（当时的直播地址）
++ ./_site/news/2013/04/linux-make-everything-easy/index.html （lug ftp 域名切换，直接替换）
+  *  External link http://lug.ustc.edu.cn/ftp/events/2013.04.21_%E8%AE%A1%E9%99%A2%E8%AE%B2%E5%BA%A7/photo/ failed: 404 No error
+  *  External link http://lug.ustc.edu.cn/ftp/events/2013.04.21_%E8%AE%A1%E9%99%A2%E8%AE%B2%E5%BA%A7/slides/ failed: 404 No error
+  *  External link http://lug.ustc.edu.cn/ftp/events/2013.04.21_%e8%ae%a1%e9%99%a2%e8%ae%b2%e5%ba%a7/slides/Linux%e8%ae%a9%e4%bd%a0%e6%9b%b4%e6%87%82%e8%ae%a1%e7%ae%97%e6%9c%ba.pdf failed: 404 No error
+  *  External link http://lug.ustc.edu.cn/ftp/events/2013.04.21_%e8%ae%a1%e9%99%a2%e8%ae%b2%e5%ba%a7/slides/OS%e5%92%8c%e7%bd%91%e7%bb%9c%e4%bb%8e%e8%bf%99%e9%87%8c%e8%b5%b0%e6%9d%a5.pdf failed: 404 No error
+  *  External link http://lug.ustc.edu.cn/ftp/events/2013.04.21_%e8%ae%a1%e9%99%a2%e8%ae%b2%e5%ba%a7/slides/cutepython.pdf failed: 404 No error
+|| ./_site/news/2014/08/2014-e5-b9-b48-e6-9c-88-sfd-e5-b7-a5-e4-bd-9c-e8-a7-84-e5-88-92-e6-9a-a8-e6-96-b0-e5-ad-a6-e6-9c-9f-lug-e5-b7-a5-e4-bd-9c-e4-bc-9a-e8-ae-ae/index.html
+  *  External link https://lug.ustc.edu.cn/wiki/lug/internal/minutes/20140830 failed: 404 No error （没有找到会议记录）
+++ ./_site/news/2015/05/2015-linux-tshirt-voting-result-and-order/index.html
+  *  External link http://www.teeker.com/openstore failed: 403 No error （实时性链接失效）（订购链接）
+- ./_site/news/2015/09/lug-banshan-commission-guide/index.html
+  *  External link https://lug.ustc.edu.cn/blog/2015/05/2015-linux-tshirt-voting-result-and-order/ failed: 404 No error
+  *  External link https://lug.ustc.edu.cn/blog/2015/05/2015-linux-user-group-banshan/ failed: 404 No error
+- ./_site/news/2017/05/2017-bbs-linux-banshan-voting/index.html
+  *  internally linking to /2017/05/2017-bbs-linux-banshan/, which does not exist (line 0)
+     <a href="/2017/05/2017-bbs-linux-banshan/">经过一周的征集</a>
+- ./_site/news/2017/05/2017-bbs-linux-banshan/index.html
+  *  External link https://lug.ustc.edu.cn/wiki/lug/banshan failed: 404 No error
+- ./_site/news/2018/06/server-down/index.html
+  *  External link https://git.ustclug.org/ failed: response code 0 means something's wrong.
+             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
+             Sometimes, making too many requests at once also breaks things.
+             Either way, the return message (if any) from the server is: Couldn't resolve host name
+  *  External link https://pgp.ustc.edu.cn/ failed: response code 0 means something's wrong.
+             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
+             Sometimes, making too many requests at once also breaks things.
+             Either way, the return message (if any) from the server is: Couldn't resolve host name
+- ./_site/news/2018/08/freshman-course/index.html
+  *  External link https://ftp.lug.ustc.edu.cn/weekly_party/2018.08.25_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E7%A8%8B/ failed: 404 No error
+- ./_site/news/2018/09/2018-sfd-ustc/index.html
+  *  External link https://ftp.lug.ustc.edu.cn/%6%B4%BB%E5%8A%A8/2018.09.15_SFD/photos/DSC01780.JPG failed: 400 No error
+- ./_site/news/2019/01/hackergame-awards/index.html
+  *  External link https://hack2018.lug.ustc.edu.cn/ failed: 502 No error
+- ./_site/news/2019/04/2019-bbs-linux-banshan/index.html
+  *  External link https://lug.ustc.edu.cn/wiki/lug/zhoubian/banshan failed: 404 No error
+- ./_site/planet/2020/08/keeping-account-with-beancount/index.html
+  *  External link https://beancount.github.io/fava/api/beancount.plugins.html failed: 404 No error
+  *  External link https://bitbucket.org/blais/beancount/src/default/examples/ failed: 404 No error
+- ./_site/wiki/doc/smart-questions/index.html
+  *  External link http://homepage.ntlworld.com./jonathan.deboynepollard/FGA/questions-with-yes-or-no-answers.html failed: got a time out (response code 0)
+  *  External link http://www.linux.org/groups/index.html failed: 404 No error
+  *  internally linking to esr%40thyrsus.html, which does not exist (line 0)
+     <a href="esr%40thyrsus.html">esr@thyrsus.com</a>
+  *  internally linking to respond-auto%40linuxmafia, which does not exist (line 0)
+     <a href="respond-auto%40linuxmafia">respond-auto@linuxmafia.com</a>
+- ./_site/wiki/greenwarm/index.html
+  *  External link http://download.gna.org/grub4dos/ failed: 404 No error
+  *  External link http://download.gna.org/grubutil/ failed: 404 No error
+  *  internal image /wiki/_media/greenwarm/grub4dos-installer.html does not exist (line 0)
+  *  internally linking to /wiki/_detail/greenwarm/grub4dos-installerf38c?id=greenwarm%3Astart, which does not exist (line 0)
+     <a href="/wiki/_detail/greenwarm/grub4dos-installerf38c?id=greenwarm%3Astart" title="greenwarm:grub4dos-installer.png"><img src="/wiki/_media/greenwarm/grub4dos-installer.html" alt=""></a>
+- ./_site/wiki/greenwarm/remotedesktop/index.html
+  *  External link http://172.16.1.2:5801/ failed: got a time out (response code 0)
+- ./_site/wiki/greenwarm/virtualization/index.html
+  *  External link http://www.turbolinux.com.cn/turbo/wiki/doku.php?id=sysadmin:virtualbox failed: 404 No error
+  *  internally linking to kvm%e4%bd%bf%e7%94%a8%e6%96%b9%e6%b3%95, which does not exist (line 0)
+     <a href="kvm%e4%bd%bf%e7%94%a8%e6%96%b9%e6%b3%95" title="greenwarm:kvm使用方法">KVM 使用方法</a>
+  *  internally linking to xen%e7%ae%80%e4%bb%8b%e4%b8%8e%e4%bd%bf%e7%94%a8, which does not exist (line 0)
+     <a href="xen%e7%ae%80%e4%bb%8b%e4%b8%8e%e4%bd%bf%e7%94%a8" title="greenwarm:xen简介与使用">1.2 Xen 简介</a>
+- ./_site/wiki/greenwarm/xen简介与使用/index.html
+  *  internal image /wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-1.html does not exist (line 0)
+  *  internal image /wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-10.html does not exist (line 0)
+  *  internal image /wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-11.html does not exist (line 0)
+  *  internal image /wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-12.html does not exist (line 0)
+  *  internal image /wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-13.html does not exist (line 0)
+  *  internal image /wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-14.html does not exist (line 0)
+  *  internal image /wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-15.html does not exist (line 0)
+  *  internal image /wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-16.html does not exist (line 0)
+  *  internal image /wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-17.html does not exist (line 0)
+  *  internal image /wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-18.html does not exist (line 0)
+  *  internal image /wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-2.html does not exist (line 0)
+  *  internal image /wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-3.html does not exist (line 0)
+  *  internal image /wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-4.html does not exist (line 0)
+  *  internal image /wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-5.html does not exist (line 0)
+  *  internal image /wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-6.html does not exist (line 0)
+  *  internal image /wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-7.html does not exist (line 0)
+  *  internal image /wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-8.html does not exist (line 0)
+  *  internal image /wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-9.html does not exist (line 0)
+  *  internally linking to /wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-1082c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8, which does not exist (line 0)
+     <a href="/wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-1082c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-10.jpg"><img src="/wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-10.html" alt=""></a>
+  *  internally linking to /wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-1182c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8, which does not exist (line 0)
+     <a href="/wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-1182c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-11.jpg"><img src="/wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-11.html" alt=""></a>
+  *  internally linking to /wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-1282c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8, which does not exist (line 0)
+     <a href="/wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-1282c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-12.jpg"><img src="/wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-12.html" alt=""></a>
+  *  internally linking to /wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-1382c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8, which does not exist (line 0)
+     <a href="/wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-1382c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-13.jpg"><img src="/wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-13.html" alt=""></a>
+  *  internally linking to /wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-1482c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8, which does not exist (line 0)
+     <a href="/wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-1482c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-14.jpg"><img src="/wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-14.html" alt=""></a>
+  *  internally linking to /wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-1582c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8, which does not exist (line 0)
+     <a href="/wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-1582c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-15.jpg"><img src="/wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-15.html" alt=""></a>
+  *  internally linking to /wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-1682c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8, which does not exist (line 0)
+     <a href="/wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-1682c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-16.jpg"><img src="/wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-16.html" alt=""></a>
+  *  internally linking to /wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-1782c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8, which does not exist (line 0)
+     <a href="/wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-1782c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-17.jpg"><img src="/wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-17.html" alt=""></a>
+  *  internally linking to /wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-182c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8, which does not exist (line 0)
+     <a href="/wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-182c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-1.jpg"><img src="/wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-1.html" alt=""></a>
+  *  internally linking to /wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-1882c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8, which does not exist (line 0)
+     <a href="/wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-1882c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-18.jpg"><img src="/wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-18.html" alt=""></a>
+  *  internally linking to /wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-282c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8, which does not exist (line 0)
+     <a href="/wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-282c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-2.jpg"><img src="/wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-2.html" alt=""></a>
+  *  internally linking to /wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-382c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8, which does not exist (line 0)
+     <a href="/wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-382c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-3.jpg"><img src="/wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-3.html" alt=""></a>
+  *  internally linking to /wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-482c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8, which does not exist (line 0)
+     <a href="/wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-482c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-4.jpg"><img src="/wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-4.html" alt=""></a>
+  *  internally linking to /wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-582c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8, which does not exist (line 0)
+     <a href="/wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-582c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-5.jpg"><img src="/wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-5.html" alt=""></a>
+  *  internally linking to /wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-682c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8, which does not exist (line 0)
+     <a href="/wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-682c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-6.jpg"><img src="/wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-6.html" alt=""></a>
+  *  internally linking to /wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-782c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8, which does not exist (line 0)
+     <a href="/wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-782c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-7.jpg"><img src="/wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-7.html" alt=""></a>
+  *  internally linking to /wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-882c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8, which does not exist (line 0)
+     <a href="/wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-882c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-8.jpg"><img src="/wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-8.html" alt=""></a>
+  *  internally linking to /wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-982c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8, which does not exist (line 0)
+     <a href="/wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-982c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-9.jpg"><img src="/wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-9.html" alt=""></a>
+- ./_site/wiki/index.html
+             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
+             Sometimes, making too many requests at once also breaks things.
+             Either way, the return message (if any) from the server is: Couldn't resolve host name
+             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
+             Sometimes, making too many requests at once also breaks things.
+             Either way, the return message (if any) from the server is: Couldn't resolve host name
+- ./_site/wiki/intro_english/index.html
+  *  External link https://debian.ustc.edu.cn/ failed: response code 0 means something's wrong.
+             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
+             Sometimes, making too many requests at once also breaks things.
+             Either way, the return message (if any) from the server is: SSL peer certificate or SSH remote key was not OK
+  *  External link https://oss.ustc.edu.cn/ failed: response code 0 means something's wrong.
+             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
+             Sometimes, making too many requests at once also breaks things.
+             Either way, the return message (if any) from the server is: SSL peer certificate or SSH remote key was not OK
+- ./_site/wiki/linux_digest/lftp/index.html
+  *  internal image ../lib/images/smileys/icon_smile.gif does not exist (line 0)
+  *  internally linking to /wiki/linux/crontab, which does not exist (line 0)
+     <a href="/wiki/linux/crontab" title="linux:crontab">crontab</a>
+- ./_site/wiki/lug/book/borrow_book/index.html
+  *  internally linking to booknotes, which does not exist (line 0)
+     <a href="booknotes" title="lug:book:booknotes">读书笔记</a>
+  *  internally linking to booknotes, which does not exist (line 0)
+     <a href="booknotes" title="lug:book:booknotes">读书笔记</a>
+  *  internally linking to booknotes, which does not exist (line 0)
+     <a href="booknotes" title="lug:book:booknotes">读书笔记</a>
+  *  internally linking to booknotes, which does not exist (line 0)
+     <a href="booknotes" title="lug:book:booknotes">读书笔记</a>
+  *  internally linking to booknotes, which does not exist (line 0)
+     <a href="booknotes" title="lug:book:booknotes">读书笔记</a>
+  *  internally linking to booknotes, which does not exist (line 0)
+     <a href="booknotes" title="lug:book:booknotes">读书笔记</a>
+  *  internally linking to booknotes, which does not exist (line 0)
+     <a href="booknotes" title="lug:book:booknotes">读书笔记</a>
+  *  internally linking to booknotes, which does not exist (line 0)
+     <a href="booknotes" title="lug:book:booknotes">读书笔记</a>
+  *  internally linking to booknotes, which does not exist (line 0)
+     <a href="booknotes" title="lug:book:booknotes">读书笔记</a>
+  *  internally linking to borrow_book, which does not exist (line 0)
+     <a href="borrow_book" title="lug:book:borrow_book">借阅记录</a>
+  *  internally linking to start, which does not exist (line 0)
+     <a href="start" title="lug:book:start">LUG 书库</a>
+- ./_site/wiki/lug/book/borrow_history/index.html
+  *  External link http://goodchong.com/administering-apache-read-report/ failed: response code 0 means something's wrong.
+             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
+             Sometimes, making too many requests at once also breaks things.
+             Either way, the return message (if any) from the server is: Couldn't resolve host name
+  *  internally linking to /wiki/lug/borrow_book, which does not exist (line 0)
+     <a href="/wiki/lug/borrow_book" title="http://lug.ustc.edu.cn/wiki/lug/borrow_book">图书借阅管理制度</a>
+- ./_site/wiki/lug/contact/index.html
+             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
+             Sometimes, making too many requests at once also breaks things.
+             Either way, the return message (if any) from the server is: Couldn't resolve host name
+             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
+             Sometimes, making too many requests at once also breaks things.
+             Either way, the return message (if any) from the server is: Couldn't resolve host name
+- ./_site/wiki/lug/events/index.html
+  *  External link http://ftp.ustclug.org/%E6%B4%BB%E5%8A%A8/2019.%20%E6%98%A5%5C_Linux101/Slides/Linux101%2001.pdf failed: 404 No error
+  *  External link http://ftp.ustclug.org/%E6%B4%BB%E5%8A%A8/2019.%20%E6%98%A5%5C_Linux101/Slides/Linux101%2002.pdf failed: 404 No error
+  *  External link http://ftp.ustclug.org/%E6%B4%BB%E5%8A%A8/2019.%20%E6%98%A5%5C_Linux101/Slides/Linux101%2003.pdf failed: 404 No error
+  *  External link http://ftp.ustclug.org/%E6%B4%BB%E5%8A%A8/2019.%20%E6%98%A5%5C_Linux101/Slides/Linux101%2004.pdf failed: 404 No error
+  *  External link http://ftp.ustclug.org/%E6%B4%BB%E5%8A%A8/2019.%20%E6%98%A5%5C_Linux101/Slides/Linux101%2005.pdf failed: 404 No error
+  *  internally linking to /blog/2014/12/2014-linux-user-party/, which does not exist (line 0)
+     <a href="/blog/2014/12/2014-linux-user-party/">Linux User Party</a>
+  *  internally linking to /~boj/LUP2012/, which does not exist (line 0)
+     <a href="/~boj/LUP2012/">资源汇总</a>
+- ./_site/wiki/lug/events/lup/index.html
+  *  internally linking to /news/2013/12/2013科大lug-software-freedom-day/, which does not exist (line 0)
+     <a href="/news/2013/12/2013科大lug-software-freedom-day/">2013 科大 LUG Linux User Party</a>
+- ./_site/wiki/lug/events/sfd/index.html
+  *  External link http://www.softwarefreedomday.org/en/sfd failed: 404 No error
+  *  internally linking to /news/tag/sfd/, which does not exist (line 0)
+     <a href="/news/tag/sfd/">这里</a>
+  *  internally linking to /~zguangyu/browser-app.tar.bz2, which does not exist (line 0)
+     <a href="/~zguangyu/browser-app.tar.bz2">演示程序</a>
+  *  internally linking to /~zguangyu/sfd-firefoxos.tar.bz2, which does not exist (line 0)
+     <a href="/~zguangyu/sfd-firefoxos.tar.bz2">slides</a>
+- ./_site/wiki/lug/events/weeklyparty/index.html
+  *  External link http://cm.bell-labs.com/who/ken/trust.html failed: got a time out (response code 0)
+  *  External link http://www.bilibili.com/video/av4199916/ failed: 403 No error
+  *  External link https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2019.%20%E7%A7%8B%5C_%E5%B0%8F%E8%81%9A%E9%9B%86%E9%94%A6/2019.12.07/video/ failed: 404 No error
+  *  External link https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2019.%20%E7%A7%8B*%E5%B0%8F%E8%81%9A%E9%9B%86%E9%94%A6/2019.09.17/slides/computation-talk.pdf failed: 404 No error
+  *  External link https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2019.%20%E7%A7%8B*%E5%B0%8F%E8%81%9A%E9%9B%86%E9%94%A6/2019.09.17/video/video.mp4 failed: 404 No error
+  *  internal image /wiki/lib/images/smileys/fixme.gif does not exist (line 0)
+  *  internal image /wiki/lib/images/smileys/fixme.gif does not exist (line 0)
+  *  internal image /wiki/lib/images/smileys/fixme.gif does not exist (line 0)
+  *  internal image /wiki/lib/images/smileys/fixme.gif does not exist (line 0)
+  *  internal image /wiki/lib/images/smileys/fixme.gif does not exist (line 0)
+  *  internal image /wiki/lib/images/smileys/fixme.gif does not exist (line 0)
+  *  internal image /wiki/lib/images/smileys/fixme.gif does not exist (line 0)
+  *  internal image /wiki/lib/images/smileys/fixme.gif does not exist (line 0)
+  *  internal image /wiki/lib/images/smileys/fixme.gif does not exist (line 0)
+  *  internal image /wiki/lib/images/smileys/fixme.gif does not exist (line 0)
+  *  internal image /wiki/lib/images/smileys/fixme.gif does not exist (line 0)
+  *  internally linking to /OpenCourse, which does not exist (line 0)
+     <a href="/OpenCourse">Linux 入门公开课</a>
+  *  internally linking to /OpenCourse/Lesson1/lesson1.mp4, which does not exist (line 0)
+     <a href="/OpenCourse/Lesson1/lesson1.mp4">Video</a>
+  *  internally linking to /OpenCourse/Lesson2/lesson2.mp4, which does not exist (line 0)
+     <a href="/OpenCourse/Lesson2/lesson2.mp4">Video</a>
+  *  internally linking to /OpenCourse/Lesson3/lesson3.mp4, which does not exist (line 0)
+     <a href="/OpenCourse/Lesson3/lesson3.mp4">Video</a>
+  *  internally linking to /OpenCourse/Lesson4/lesson4.mp4, which does not exist (line 0)
+     <a href="/OpenCourse/Lesson4/lesson4.mp4">Video</a>
+  *  internally linking to /OpenCourse/Lesson5/lesson5.mp4, which does not exist (line 0)
+     <a href="/OpenCourse/Lesson5/lesson5.mp4">Video</a>
+  *  internally linking to /OpenCourse/Lesson6/lesson6.mp4, which does not exist (line 0)
+     <a href="/OpenCourse/Lesson6/lesson6.mp4">Video</a>
+  *  internally linking to /OpenCourse/Lesson8/lesson8.mp4, which does not exist (line 0)
+     <a href="/OpenCourse/Lesson8/lesson8.mp4">Video</a>
+  *  internally linking to /OpenCourse/Lesson9/lesson9.mp4, which does not exist (line 0)
+     <a href="/OpenCourse/Lesson9/lesson9.mp4">Video</a>
+  *  internally linking to /oldwiki/_media/lug/slides20131020.zip, which does not exist (line 0)
+     <a href="/oldwiki/_media/lug/slides20131020.zip">slides</a>
+  *  internally linking to /wiki/_media/lug/graph.tar.gz, which does not exist (line 0)
+     <a href="/wiki/_media/lug/graph.tar.gz">Source Code</a>
+  *  internally linking to /wiki/_media/lug/reproducible_builds_in_debian.pdf, which does not exist (line 0)
+     <a href="/wiki/_media/lug/reproducible_builds_in_debian.pdf">reproducible_builds_in_debian.pdf</a>
+  *  internally linking to /wiki/_media/lug/texmacs_intro.pdf, which does not exist (line 0)
+     <a href="/wiki/_media/lug/texmacs_intro.pdf">Slides</a>
+  *  internally linking to /wiki/_media/lug/weekly-clojure.pdf, which does not exist (line 0)
+     <a href="/wiki/_media/lug/weekly-clojure.pdf">Slides</a>
+  *  internally linking to /wiki/lib/exe/fetch.php?tok=2e0867&media=https:%2F%2Flug.ustc.edu.cn%2FOpenCourse%2FLesson1%2FWhat_is_Linux.pdf, which does not exist (line 0)
+     <a href="/wiki/lib/exe/fetch.php?tok=2e0867&amp;media=https:%2F%2Flug.ustc.edu.cn%2FOpenCourse%2FLesson1%2FWhat_is_Linux.pdf">Slides</a>
+  *  internally linking to /wiki/lib/exe/fetch.php?tok=5886bb&media=https:%2F%2Flug.ustc.edu.cn%2FOpenCourse%2FLesson6%2Flinux_network_introduction.pdf, which does not exist (line 0)
+     <a href="/wiki/lib/exe/fetch.php?tok=5886bb&amp;media=https:%2F%2Flug.ustc.edu.cn%2FOpenCourse%2FLesson6%2Flinux_network_introduction.pdf">Slides</a>
+  *  internally linking to /wiki/lib/exe/fetch.php?tok=5d048a&media=https:%2F%2Flug.ustc.edu.cn%2FOpenCourse%2FLesson3%2Fslide.pdf, which does not exist (line 0)
+     <a href="/wiki/lib/exe/fetch.php?tok=5d048a&amp;media=https:%2F%2Flug.ustc.edu.cn%2FOpenCourse%2FLesson3%2Fslide.pdf">Slides</a>
+  *  internally linking to /wiki/lib/exe/fetch.php?tok=63a7ff&media=https:%2F%2Flug.ustc.edu.cn%2FOpenCourse%2FLesson8%2Flesson8.pdf, which does not exist (line 0)
+     <a href="/wiki/lib/exe/fetch.php?tok=63a7ff&amp;media=https:%2F%2Flug.ustc.edu.cn%2FOpenCourse%2FLesson8%2Flesson8.pdf">Slides</a>
+  *  internally linking to /wiki/lib/exe/fetch.php?tok=843ad8&media=https:%2F%2Flug.ustc.edu.cn%2FOpenCourse%2FLesson4%2Flesson4.pdf, which does not exist (line 0)
+     <a href="/wiki/lib/exe/fetch.php?tok=843ad8&amp;media=https:%2F%2Flug.ustc.edu.cn%2FOpenCourse%2FLesson4%2Flesson4.pdf">Slides</a>
+  *  internally linking to /wiki/lib/exe/fetch.php?tok=bfdb3a&media=https:%2F%2Flug.ustc.edu.cn%2FOpenCourse%2FLesson5%2Flesson5.pdf, which does not exist (line 0)
+     <a href="/wiki/lib/exe/fetch.php?tok=bfdb3a&amp;media=https:%2F%2Flug.ustc.edu.cn%2FOpenCourse%2FLesson5%2Flesson5.pdf">Slides</a>
+  *  internally linking to /wiki/lib/exe/fetch.php?tok=dd38dd&media=https:%2F%2Flug.ustc.edu.cn%2FOpenCourse%2FLesson2%2Flug.pdf, which does not exist (line 0)
+     <a href="/wiki/lib/exe/fetch.php?tok=dd38dd&amp;media=https:%2F%2Flug.ustc.edu.cn%2FOpenCourse%2FLesson2%2Flug.pdf">Slides</a>
+  *  internally linking to /~boj/web_dev/, which does not exist (line 0)
+     <a href="/~boj/web_dev/">点这里</a>
+  *  internally linking to /~boj/web_dev/01-intro.pdf, which does not exist (line 0)
+     <a href="/~boj/web_dev/01-intro.pdf">slides</a>
+  *  internally linking to /~boj/web_dev/02-HTTP.pdf, which does not exist (line 0)
+     <a href="/~boj/web_dev/02-HTTP.pdf">slides</a>
+  *  internally linking to /~boj/web_dev/03-HTML.pdf, which does not exist (line 0)
+     <a href="/~boj/web_dev/03-HTML.pdf">slides</a>
+  *  internally linking to /~boj/web_dev/05-design(1).pdf, which does not exist (line 0)
+     <a href="/~boj/web_dev/05-design(1).pdf">slides</a>
+  *  internally linking to /~boj/web_dev/09-PHP(2).pdf, which does not exist (line 0)
+     <a href="/~boj/web_dev/09-PHP(2).pdf">slides</a>
+  *  internally linking to /~boj/web_dev/10-RDBMS.pdf, which does not exist (line 0)
+     <a href="/~boj/web_dev/10-RDBMS.pdf">slides</a>
+  *  internally linking to /~boj/web_dev/HappyDemo/jquery.html, which does not exist (line 0)
+     <a href="/~boj/web_dev/HappyDemo/jquery.html">slides</a>
+  *  internally linking to /~boj/web_dev/designdoc.pdf, which does not exist (line 0)
+     <a href="/~boj/web_dev/designdoc.pdf">slides</a>
+  *  internally linking to /~boj/web_dev/designdoc.pdf, which does not exist (line 0)
+     <a href="/~boj/web_dev/designdoc.pdf">slides</a>
+  *  internally linking to /~boj/weekly_party/2012.09.29_desktop/Linux-desktop-app.pdf, which does not exist (line 0)
+     <a href="/~boj/weekly_party/2012.09.29_desktop/Linux-desktop-app.pdf">slides</a>
+  *  internally linking to /~boj/weekly_party/2012.09.29_desktop/Linux-desktop-app.pdf, which does not exist (line 0)
+     <a href="/~boj/weekly_party/2012.09.29_desktop/Linux-desktop-app.pdf">slides</a>
+  *  internally linking to /~boj/weekly_party/2012.10.20_search_engine/introduction to the search engine.pdf, which does not exist (line 0)
+     <a href="/~boj/weekly_party/2012.10.20_search_engine/introduction to the search engine.pdf">slides</a>
+  *  internally linking to /~boj/weekly_party/2012.12.15_LFS/pudh-slide.pdf, which does not exist (line 0)
+     <a href="/~boj/weekly_party/2012.12.15_LFS/pudh-slide.pdf">slides</a>
+  *  internally linking to /~boj/weekly_party/2012.12.22_compiler_backdoor/compiler-backdoor.tar.gz, which does not exist (line 0)
+     <a href="/~boj/weekly_party/2012.12.22_compiler_backdoor/compiler-backdoor.tar.gz">project</a>
+  *  internally linking to /~boj/weekly_party/2012.12.22_compiler_backdoor/compiler-slides.pdf, which does not exist (line 0)
+     <a href="/~boj/weekly_party/2012.12.22_compiler_backdoor/compiler-slides.pdf">slides</a>
+  *  internally linking to /~boj/weekly_party/2013.01.12_python_networkx/networkx.pdf, which does not exist (line 0)
+     <a href="/~boj/weekly_party/2013.01.12_python_networkx/networkx.pdf">slides</a>
+  *  internally linking to /~boj/weekly_party/2013.03.09_bash/bash.pdf, which does not exist (line 0)
+     <a href="/~boj/weekly_party/2013.03.09_bash/bash.pdf">slides</a>
+  *  internally linking to /~boj/weekly_party/2013.03.09_bash/bash.tar.gz, which does not exist (line 0)
+     <a href="/~boj/weekly_party/2013.03.09_bash/bash.tar.gz">code</a>
+  *  internally linking to /~guo/doc/iptables.pdf, which does not exist (line 0)
+     <a href="/~guo/doc/iptables.pdf">slides</a>
+  *  internally linking to /~guo/doc/library_query_os.pdf, which does not exist (line 0)
+     <a href="/~guo/doc/library_query_os.pdf">slides</a>
+  *  internally linking to /~sadhen/lug_bash.pdf, which does not exist (line 0)
+     <a href="/~sadhen/lug_bash.pdf">slides</a>
+  *  internally linking to /~zgy/pres.tar.xz, which does not exist (line 0)
+     <a href="/~zgy/pres.tar.xz">pres.tar.xz</a>
+  *  internally linking to /~zgy/slides.txz, which does not exist (line 0)
+     <a href="/~zgy/slides.txz">slides</a>
+- ./_site/wiki/lug/finance/archive/index.html
+  *  internal image ../../lib/images/smileys/fixme.gif does not exist (line 0)
+  *  internal image ../../lib/images/smileys/fixme.gif does not exist (line 0)
+- ./_site/wiki/lug/links/index.html
+  *  External link http://www.cdlug.sh/ failed: response code 0 means something's wrong.
+             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
+             Sometimes, making too many requests at once also breaks things.
+             Either way, the return message (if any) from the server is: Couldn't resolve host name
+  *  External link http://www.chongqinglug.org/ failed: 502 No error
+  *  External link http://www.hhcn.com/ failed: 403 No error
+  *  External link https://blug.sh/ failed: response code 0 means something's wrong.
+             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
+             Sometimes, making too many requests at once also breaks things.
+             Either way, the return message (if any) from the server is: Couldn't resolve host name
+  *  External link https://blug.sh/mailing-list/ failed: response code 0 means something's wrong.
+             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
+             Sometimes, making too many requests at once also breaks things.
+             Either way, the return message (if any) from the server is: Couldn't resolve host name
+  *  External link https://lug.neu.edu.cn/ failed: got a time out (response code 0)
+- ./_site/wiki/lug/mailinglist/index.html
+  *  External link http://archive.lug.ustc.edu.cn/ failed: response code 0 means something's wrong.
+             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
+             Sometimes, making too many requests at once also breaks things.
+             Either way, the return message (if any) from the server is: Couldn't resolve host name
+  *  External link http://dir.gmane.org/gmane.user-groups.linux.ustclug failed: 523 No error
+- ./_site/wiki/lug/person-in-charge/index.html
+  *  External link http://blog.ustc.edu.cn/freeshell failed: response code 0 means something's wrong.
+             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
+             Sometimes, making too many requests at once also breaks things.
+             Either way, the return message (if any) from the server is: Couldn't resolve host name
+- ./_site/wiki/lug/resources/index.html
+  *  External link https://lug.ustc.edu.cn/OpenCourse/ failed: 404 No error
+- ./_site/wiki/lug/services/lib/index.html
+  *  internally linking to /wiki/serveradm/lib, which does not exist (line 0)
+     <a href="/wiki/serveradm/lib" title="serveradm:lib">图书馆查询机系统</a>
+- ./_site/wiki/mirrors/help/alpine/index.html
+  *  External link http://forum.alpinelinux.org/forum failed: response code 0 means something's wrong.
+             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
+             Sometimes, making too many requests at once also breaks things.
+             Either way, the return message (if any) from the server is: Couldn't resolve host name
+- ./_site/wiki/mirrors/help/anthon/index.html
+  *  External link https://anthonos.org/ failed: response code 0 means something's wrong.
+             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
+             Sometimes, making too many requests at once also breaks things.
+             Either way, the return message (if any) from the server is: SSL peer certificate or SSH remote key was not OK
+  *  External link https://mirrors.ustc.edu.cn/anthon/os2-repo failed: 404 No error
+  *  External link https://mirrors.ustc.edu.cn/anthon/os3-next/ failed: 404 No error
+- ./_site/wiki/mirrors/help/aosp/index.html
+  *  External link https://source.android.com/source/build-numbers.html#source-code-tags-and-builds failed: 302 Number of redirects hit maximum amount
+  *  External link https://source.android.com/source/downloading.html failed: 302 Number of redirects hit maximum amount
+- ./_site/wiki/mirrors/help/archlinux/index.html
+  *  External link http://www.archlinux.org/mailman/listinfo/ failed: 404 No error
+- ./_site/wiki/mirrors/help/archlinuxarm/index.html
+  *  External link http://archlinuxarm.org/support/faq failed: 404 No error
+- ./_site/wiki/mirrors/help/brew/index.html
+  *  internally linking to homebrew-bottles, which does not exist (line 0)
+     <a href="homebrew-bottles" title="https://lug.ustc.edu.cn/wiki/mirrors/help/homebrew-bottles">替换 Homebrew Bottles 源</a>
+- ./_site/wiki/mirrors/help/centos/index.html
+  *  External link http://www.centos.org/modules/newbb/ failed: 404 No error
+  *  External link http://www.centos.org/modules/tinycontent/index.php?id=16 failed: 404 No error
+- ./_site/wiki/mirrors/help/chakra/index.html
+  *  External link http://chakraos.org/forum/ failed: 404 No error
+  *  External link http://chakraos.org/home/ failed: 404 No error
+  *  External link http://chakraos.org/wiki/ failed: 404 No error
+- ./_site/wiki/mirrors/help/debian-backports/index.html
+  *  External link http://backports.debian.org/Mirrors/ failed: got a time out (response code 0)
+- ./_site/wiki/mirrors/help/dotdeb/index.html
+  *  External link http://www.dotdeb.org/mirrors/ failed: 404 No error
+- ./_site/wiki/mirrors/help/epel/index.html
+  *  External link http://fedoraproject.org/wiki/EPEL/faq failed: 404 No error
+- ./_site/wiki/mirrors/help/freebsd/index.html
+  *  External link http://www.freebsd.org/community/mailinglists.html failed: got a time out (response code 301)
+- ./_site/wiki/mirrors/help/index.html
+  *  internally linking to /lug/services/mirrors, which does not exist (line 0)
+     <a href="/lug/services/mirrors" title="lug:services:mirrors">科大开源软件镜像服务简介</a>
+- ./_site/wiki/mirrors/help/kali/index.html
+  *  External link http://mirrors.ustc.edu.cn/kali-images/kali-latest/ failed: 404 No error
+- ./_site/wiki/mirrors/help/kde/index.html
+  *  internally linking to /.ustc.edu.cn/kde/stable/kdewin/installer/kdewin-installer-gui-latest, which does not exist (line 0)
+     <a href="/.ustc.edu.cn/kde/stable/kdewin/installer/kdewin-installer-gui-latest" title="http://mirrors.ustc.edu.cn/kde/stable/kdewin/installer/kdewin-installer-gui-latest.exe">这里</a>
+- ./_site/wiki/mirrors/help/mariadb/index.html
+  *  External link http://nl.mirror.babylon.network failed: got a time out (response code 0)
+- ./_site/wiki/mirrors/help/opensuse/index.html
+  *  External link http://en.opensuse.org/Communicate/Mailinglists failed: 404 No error
+  *  External link http://lug.ustc.edu.cn/sites/opensuse-guide/ failed: 404 No error
+  *  External link http://www.opensuse.org/zh-cn/ failed: 404 No error
+- ./_site/wiki/mirrors/help/pypi/index.html
+  *  External link https://pypi.python.org/mirrors failed: 404 No error
+- ./_site/wiki/mirrors/help/rpmfusion/index.html
+  *  internally linking to epel, which does not exist (line 0)
+     <a href="epel" title="mirrors:help:epel">EPEL</a>
+- ./_site/wiki/mirrors/help/ubuntu/index.html
+  *  internally linking to ubuntu-old-release, which does not exist (line 0)
+     <a href="ubuntu-old-release" title="mirrors:help:ubuntu-old-release">Ubuntu Old Release</a>
+- ./_site/wiki/mirrors/help/uksm-kernel/index.html
+  *  External link http://mirrors.ustc.edu.cn/uksm-kernel/ubuntu/uskm-ubuntu-12.04.list failed: 404 No error
+  *  External link http://mirrors.ustc.edu.cn/uksm-kernel/uksm-fedora-i686.repo failed: 404 No error
+  *  External link http://mirrors.ustc.edu.cn/uksm-kernel/uksm-fedora-x86_64.repo failed: 404 No error
+- ./_site/wiki/redsky/vim_note/index.html
+  *  External link http://adam8157.info/blog/2011/12/ustc-vim-speech/ failed: got a time out (response code 0)
+  *  External link http://www.vimer.cn/2010/01/%E8%AE%A9vimgvim%E6%94%AF%E6%8C%81%E8%A1%A5%E5%85%A8cstl%E5%BA%93.html failed: 404 No error
+  *  internal image ../lib/images/smileys/icon_cool.gif does not exist (line 0)
+  *  internal image ../lib/images/smileys/icon_exclaim.gif does not exist (line 0)
+  *  internal image ../lib/images/smileys/icon_exclaim.gif does not exist (line 0)
+  *  internal image ../lib/images/smileys/icon_sad.gif does not exist (line 0)
+  *  internal image ../lib/images/smileys/icon_sad.gif does not exist (line 0)
+  *  internal image ../lib/images/smileys/icon_sad.gif does not exist (line 0)
+  *  internal image /wiki/lib/images/smileys/icon_smile.gif does not exist (line 0)
+  *  internal image /wiki/lib/images/smileys/icon_smile.gif does not exist (line 0)
+  *  internal image /wiki/lib/images/smileys/icon_smile.gif does not exist (line 0)
+  *  internally linking to /.ustc.edu.cn/_redsky/vim-config.tar, which does not exist (line 0)
+     <a href="/.ustc.edu.cn/_redsky/vim-config.tar" title="http://lug.ustc.edu.cn/~redsky/vim-config.tar.gz">我的 Vim 配置文件</a>
+  *  internally linking to /.ustc.edu.cn/_redsky/vim-scripts.tar, which does not exist (line 0)
+     <a href="/.ustc.edu.cn/_redsky/vim-scripts.tar" title="http://lug.ustc.edu.cn/~redsky/vim-scripts.tar.gz">上述插件原始文件的打包下载</a>
+- ./_site/wiki/server/pxe/faq/index.html
+  *  External link http://am.xs4all.nl/phpwiki/index.php/Qemu failed: response code 0 means something's wrong.
+             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
+             Sometimes, making too many requests at once also breaks things.
+             Either way, the return message (if any) from the server is: Couldn't resolve host name
+  *  External link http://cha.homeip.net/blog/archives/2006/08/pxe.html failed: got a time out (response code 0)
+  *  External link http://clic.mandrakesoft.com/documentation/pxe/ failed: got a time out (response code 0)
+  *  External link http://dad-answers.com/qemu/utilities/QEMU-HD-Mounter/ failed: 404 No error
+  *  External link http://debian.jones.dk/tweaks/dhcp3/ failed: response code 0 means something's wrong.
+             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
+             Sometimes, making too many requests at once also breaks things.
+             Either way, the return message (if any) from the server is: Couldn't resolve host name
+  *  External link http://frank.harvard.edu/~coldwell/diskless/ failed: got a time out (response code 0)
+  *  External link http://grub.linuxeden.com/ failed: response code 0 means something's wrong.
+             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
+             Sometimes, making too many requests at once also breaks things.
+             Either way, the return message (if any) from the server is: Couldn't resolve host name
+  *  External link http://grub.linuxeden.com/wakka.php?wakka=%CA%D7%D2%B3 failed: response code 0 means something's wrong.
+             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
+             Sometimes, making too many requests at once also breaks things.
+             Either way, the return message (if any) from the server is: Couldn't resolve host name
+  *  External link http://grub4dos.sourceforge.net/wingrub.html failed: 404 No error
+  *  External link http://grub4dos.sourceforge.net/wingrub_examples.html failed: 404 No error
+  *  External link http://moe.tnc.edu.tw/~kendrew/pollix/ failed: response code 0 means something's wrong.
+             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
+             Sometimes, making too many requests at once also breaks things.
+             Either way, the return message (if any) from the server is: Couldn't resolve host name
+  *  External link http://pareto.uab.es/mcreel/ParallelKnoppix/ failed: 404 No error
+  *  External link http://people.cs.uchicago.edu/~gmurali/gui/isodos.html failed: 403 No error
+  *  External link http://pxe.ustc.edu.cn/images/8139_28pin_bootrom.jpg failed: 404 No error
+  *  External link http://pxe.ustc.edu.cn/images/8139_32pin_bootrom.jpg failed: 404 No error
+  *  External link http://pxe.ustc.edu.cn/images/8139_NIC_PXE.jpg failed: 404 No error
+  *  External link http://pxe.ustc.edu.cn/images/boot-device-pxe.gif failed: 404 No error
+  *  External link http://pxe.ustc.edu.cn/images/etherboot-screen.gif failed: 404 No error
+  *  External link http://pxe.ustc.edu.cn/images/intel-boot-agent-setup.gif failed: 404 No error
+  *  External link http://pxe.ustc.edu.cn/images/realtek-boot-agent-setup.gif failed: 404 No error
+  *  External link http://pxe.ustc.edu.cn/ubcd/index.html failed: 404 No error
+  *  External link http://rom-o-matic.net/ failed: got a time out (response code 0)
+  *  External link http://thinstation.sourceforge.net/wiki/index.php/ThIndex failed: 404 No error
+  *  External link http://www-900.ibm.com/developerWorks/cn/linux/l-tip-prompt/l-pex/index.shtml failed: got a time out (response code 0)
+  *  External link http://www-900.ibm.com/developerWorks/cn/linux/l-tip-prompt/l-pex/index.shtml#2 failed: got a time out (response code 0)
+  *  External link http://www.gentoo.org.tw/doc/altinstall.xml#doc_chap5 failed: 403 No error
+  *  External link http://www.munts.com/diskless/netboot.html failed: 404 No error
+  *  External link http://www.tnpi.biz/computing/freebsd/pxe-netboot.shtml failed: 502 No error
+  *  External link http://www.undercoverdesign.com/dosghost/dos/utildos.htm failed: 404 No error
+- ./_site/wiki/user/sadhen/android/index.html
+  *  External link http://blog.decat.org/aosp-step-by-step-instructions-for-setting-up-a-chrooted-ubuntu-10-04-64bit-build-environment-on-ubuntu-11-10-and-12-04-hosts/ failed: response code 0 means something's wrong.
+             It's possible libcurl couldn't connect to the server or perhaps the request timed out.
+             Sometimes, making too many requests at once also breaks things.
+             Either way, the return message (if any) from the server is: Couldn't resolve host name
+  *  External link http://lug.ustc.edu.cn/~guo/doc/library_query_os.pdf failed: 404 No error
+- ./_site/wiki/user/sadhen/hackers_and_painters/index.html
+  *  External link http://dbanotes.net/review/Hackers_and_Painters.html failed: 404 No error
+- ./_site/wiki/user/sadhen/index.html
+  *  External link http://lug.ustc.edu.cn/~boj/weekly_party/2013.01.12_python_networkx/networkx.pdf failed: 404 No error
+  *  External link http://lug.ustc.edu.cn/~sadhen/lug_bash.pdf failed: 404 No error
+
+-----
+/var/lib/gems/2.7.0/gems/html-proofer-3.17.2/lib/html-proofer/runner.rb:214:in `print_failed_tests': HTML-Proofer found 1407 failures! (RuntimeError)
+	from /var/lib/gems/2.7.0/gems/html-proofer-3.17.2/lib/html-proofer/runner.rb:56:in `run'
+	from /var/lib/gems/2.7.0/gems/html-proofer-3.17.2/bin/htmlproofer:109:in `block (2 levels) in <top (required)>'
+	from /var/lib/gems/2.7.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in `block in execute'
+	from /var/lib/gems/2.7.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in `each'
+	from /var/lib/gems/2.7.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in `execute'
+	from /var/lib/gems/2.7.0/gems/mercenary-0.4.0/lib/mercenary/program.rb:44:in `go'
+	from /var/lib/gems/2.7.0/gems/mercenary-0.4.0/lib/mercenary.rb:21:in `program'
+	from /var/lib/gems/2.7.0/gems/html-proofer-3.17.2/bin/htmlproofer:11:in `<top (required)>'
+	from /usr/local/bin/htmlproofer:23:in `load'
+	from /usr/local/bin/htmlproofer:23:in `<main>'

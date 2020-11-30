@@ -24,7 +24,7 @@ comments:
     content: "你好，邮件列表在 \r\nhttp://groups.google.com/forum/#!forum/ustc_lug"
 ---
 
-2010 年 9 月 18 日在中国科大西区 3112 教室，中国科学技术大学 Linux User Group(USTC@LUG) 组织了以“人人为我，我为人人”为主题的自由软件日活动，本次活动得到了[龙芯梦兰](http://www.lemote.com/)、[龙芯俱乐部](http://blog.sina.com.cn/loongsonclub)、[中标软件](http://www.cs2c.com.cn/)、[中科红旗](http://www.redflag-linux.com/)、[中国开源软件推进联盟](http://www.oss.org.cn/)等公司、开源社区，以及合肥工业大学，安徽大学等兄弟院校的大力支持。100 多名中国科大、安徽大学、合肥工业大学等高校的在校学生及校友以及合肥地区开源爱好者参加了本次活动。
+2010 年 9 月 18 日在中国科大西区 3112 教室，中国科学技术大学 Linux User Group(USTC@LUG) 组织了以“人人为我，我为人人”为主题的自由软件日活动，本次活动得到了[龙芯梦兰](http://www.lemote.com/)、[龙芯俱乐部](http://blog.sina.com.cn/loongsonclub)、[中标软件](http://www.cs2c.com.cn/)、[中科红旗（链接无效）](http://www.redflag-linux.com/)、[中国开源软件推进联盟（原链接无效）](http://www.oss.org.cn/)（<http://www.copu.org.cn/>）等公司、开源社区，以及合肥工业大学，安徽大学等兄弟院校的大力支持。100 多名中国科大、安徽大学、合肥工业大学等高校的在校学生及校友以及合肥地区开源爱好者参加了本次活动。
 
 ![活动开幕](https://ftp.lug.ustc.edu.cn/wp-content/gallery/2010-09-sfd/sfd10_02.jpg)
 

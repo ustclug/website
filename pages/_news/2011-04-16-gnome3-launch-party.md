@@ -69,4 +69,4 @@ LUG 的祝元宠同学给大家介绍并演示了 Gnome 3.0 环境。祝元宠�
 
 ![赵希明同学为新手做报告](https://ftp.lug.ustc.edu.cn/wp-content/gallery/gnome3-launch-party/dscf2707.jpg)
 
-![活动结束后LUD](https://ftp.lug.ustc.edu.cn/wp-content/gallery/linux%e6%8a%80%e6%9c%af%e6%b2%99%e9%be%99%e6%9a%a8gnome-3-0%e5%8f%91%e5%b8%83%e6%b4%bb%e5%8a%a8/dscf2713_0.jpg)
+![活动结束后LUD](https://ftp.lug.ustc.edu.cn/wp-content/gallery/gnome3-launch-party/dscf2713.jpg)

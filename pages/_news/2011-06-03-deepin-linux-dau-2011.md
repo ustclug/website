@@ -29,7 +29,7 @@ comments:
 
 # 一些花絮
 
-这次大会主办方是 Deepin 研发团队，主办方接客非常热情周到。由于火车时刻不是很凑巧，当天赶去无法赶上会议，因此提前一天晚上便到了，当天晚上我被安排跟 Hiweed 住在一个房间。晚上，刘总（Deepin）、欣姐还有 Hiweed 与我聊了很多，主要聊了科大 LUG 在高校推广方面的努力和计划，以及我个人的一些想法，另外刘总也跟我聊了 Deepin 的发展计划。聊天开始时，Deepin 说我们的域名可能有问题了，结果晚上他们刚回去，就发现 deepin 的域名都无法解析了……现在新的域名已经生效（[http://www.linuxdeepin.net/](http://www.linuxdeepin.net/)），网站部分内容还没有完全迁移完成，论坛将从深度的其他内容独立出来，并将在近期上线。
+这次大会主办方是 Deepin 研发团队，主办方接客非常热情周到。由于火车时刻不是很凑巧，当天赶去无法赶上会议，因此提前一天晚上便到了，当天晚上我被安排跟 Hiweed 住在一个房间。晚上，刘总（Deepin）、欣姐还有 Hiweed 与我聊了很多，主要聊了科大 LUG 在高校推广方面的努力和计划，以及我个人的一些想法，另外刘总也跟我聊了 Deepin 的发展计划。聊天开始时，Deepin 说我们的域名可能有问题了，结果晚上他们刚回去，就发现 deepin 的域名都无法解析了……现在新的域名已经生效（[https://www.deepin.org](https://www.deepin.org)），网站部分内容还没有完全迁移完成，论坛将从深度的其他内容独立出来，并将在近期上线。
 
 第二天早上，跟 Hiweed 吃早饭的时候，小白（BJGUG 负责人）到了，他吃过简单的早餐，就去一所中学了，与学校的老师讨论学校教育中使用开源软件的事。现在有许多中小学的计算机启蒙教育中都开始用开源软件了，很让人振奋 :-)
 
@@ -41,7 +41,7 @@ comments:
 
 交流会结束后，我们几个年轻人（yanting, Hiweed, Deepin 等）出去吃烧烤，随心所欲的聊天。yanting 和 Hiweed 都是很活跃、很有想法、很会闯的人，我的性格跟他们很像，因此听他们讲故事的时候，共鸣很强，感触很深。Deepin 跟这它的团队一样很年轻，我相信也同样会很有想法、很有活力！
 
-第二天我受邀去武大参观了他们[自强网](http://www.ziqiang.net/)的工作室和机房。同时也交流了一下两校在推广 Linux 时的优势和障碍。武大的学生课余时间相对较多，自强网完全由学生来维护，但他们的资源（网络带宽、服务器配置等）有限。科大有着很好的 Linux 使用的环境，网络条件也非常好，但是大多数学生的课余时间较少。
+第二天我受邀去武大参观了他们[自强网（原链接失效）](http://www.ziqiang.net/)（<https://www.ziqiang.net.cn/>）的工作室和机房。同时也交流了一下两校在推广 Linux 时的优势和障碍。武大的学生课余时间相对较多，自强网完全由学生来维护，但他们的资源（网络带宽、服务器配置等）有限。科大有着很好的 Linux 使用的环境，网络条件也非常好，但是大多数学生的课余时间较少。
 
 下午赶去火车站时，由于宾馆在市中心最堵的路段，半天都没打到的，正愁会误点赶不到火车站时，一个小“摩的”（加引号是因为不是摩托车，而是电瓶车，但我想不出用什么词好了 :-P）来了，不到 20 分钟就赶到火车站了。“摩的”小哥自我介绍说是武大食堂的，下午没事做，就出来转转，能赚点钱就赚一点，要过日子阿。小哥很热情，收的钱也不多（应该比打的便宜），很开心 :-)
 
@@ -239,8 +239,8 @@ comments:
 
 以下是一些特邀嘉宾对此次大会的报导：
 
-- [Linux Deepin 武汉技术交流会后记](http://www.bentutu.com/2011/06/linux-deepin-dau-2011-note/)（笨兔兔）
+- [Linux Deepin 武汉技术交流会后记（失效）](http://www.bentutu.com/2011/06/linux-deepin-dau-2011-note/)（笨兔兔）
 - [Linux Deepin 2011 开发者和用户大会实录](http://news.mydrivers.com/1/195/195039.htm)（驱动之家）
 - (http://www.ownlinux.cn/2011/05/28/ownlinux-linux-deepin-2011.html)（OwnLinux.cn）
-- [国产 Linux 发行版面临的机遇和挑战](http://os.51cto.com/art/201106/266358.htm)（51CTO）
-- [武汉 Deepin DAU 会议见闻](http://basiccoder.com/wuhan-deepin-linux-meeting-info.html)（basic coder）
+- [国产 Linux 发行版面临的机遇和挑战（失效）](http://os.51cto.com/art/201106/266358.htm)（51CTO）
+- [武汉 Deepin DAU 会议见闻（失效）](http://basiccoder.com/wuhan-deepin-linux-meeting-info.html)（basic coder）

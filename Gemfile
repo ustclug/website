@@ -3,6 +3,7 @@ source 'https://rubygems.org/'
 gem 'jekyll', '~> 4.1.1'
 gem 'minimal-mistakes-jekyll', '~> 4.0', '>= 4.20.1'
 gem 'liquid-c', '~> 4.0'
+gem 'html-proofer'
 
 if ENV['LSI'] == 'true'
   gem 'classifier-reborn'

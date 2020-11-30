@@ -54,7 +54,7 @@ comments:
 
 ## 使用 Debian Live 定制系统
 
-在各发行版中，Debian 提供了定制 Live 系统的工具，[Debian Live](http://live.debian.net/)。[Debian Live 的文档](http://live.debian.net/manual/en/html/live-manual.html)中有非常详细的介绍。简化后的步骤为：
+在各发行版中，Debian 提供了定制 Live 系统的工具，[Debian Live（原链接失效）](http://live.debian.net/)（<https://www.debian.org/CD/live>）。[Debian Live 的文档（原链接失效）](http://live.debian.net/manual/en/html/live-manual.html)（https://www.debian.org/doc/）中有非常详细的介绍。简化后的步骤为：
 
 ```
 sudo apt-get install live-build
