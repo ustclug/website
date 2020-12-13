@@ -10,6 +10,8 @@
 
 添加新页面（Wiki / News / Planet）请分别在 `pages/_wiki`，`pages/_news`，`pages/_planet` 中参考 `_template.md`。
 
+设置文章作者请在 [`_data/authors.yml`](_data/authors.yml) 中添加作者信息（参考已有内容），然后在页面中指定 `author: key`（只支持一个作者）。
+
 请将图片上传至 [website-static 仓库](https://github.com/ustclug/website-static)，并使用如下格式引用：
 
 ```markdown
