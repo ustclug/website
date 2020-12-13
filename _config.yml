@@ -302,3 +302,7 @@ defaults:
       header:
         overlay_image: "/static/splash/galaxy-1.jpg"
         overlay_filter: 0.2
+
+
+plugins:
+  - jekyll-feed

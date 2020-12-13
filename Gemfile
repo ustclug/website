@@ -10,6 +10,7 @@ if ENV['LSI'] == 'true'
 end
 
 group :jekyll_plugins do
+  gem 'jekyll-feed'
   gem 'jekyll-sitemap'
   gem 'jekyll-relative-links'
   gem 'jekyll-optional-front-matter'
