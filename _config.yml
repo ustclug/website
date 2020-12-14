@@ -19,7 +19,7 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "USTCLUG"
 description              : "Under construction!"
-url                      : "https://lug.ustc.edu.cn/"
+url                      : "https://lug.ustc.edu.cn"
 static_url               : "/static"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "ustclug/website" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
