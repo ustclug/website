@@ -35,28 +35,34 @@
 
 ### Fall 2020
 
-| 时间             | 主持   | 地点  | 主题                             | 讲稿                                                                                                                                                                                                   |
-| :--------------- | :----- | :---- | :------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 2020-10-17 17:30 | 李晨宇 | 3C102 | 游戏安全与 Cheat Engine 核心指北 | [Slides](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2020.10.17_CE%E5%B0%8F%E8%81%9A/Slides/%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E4%B8%8ECheat%20Engine%20%E6%A0%B8%E5%BF%83%E6%8C%87%E5%8C%97.pdf) |
+| 时间             | 主持   | 地点  | 主题                                      | 讲稿                                                                                                                                                                                                   |
+| :--------------- | :----- | :---- | :---------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2020-12-13 14:30 | 明宇龙 | 3A109 | 并发与各语言实现                          | [Slides](http://ftp.lug.ustc.edu.cn/weekly_party/2020.12.13_%E6%97%A0%E4%B8%BB%E9%A2%98%E5%B0%8F%E8%81%9A/Slides/async.pdf)                                                                            |
+| 2020-12-13 14:30 | 李文睿 | 3A109 | 用 telegraf-influxdb-grafana 监控你的机器 | -                                                                                                                                                                                                      |
+| 2020-12-13 14:30 | 陶柯宇 | 3A109 | 一个很简略的 Electron 简介                | [Slides](http://ftp.lug.ustc.edu.cn/weekly_party/2020.12.13_%E6%97%A0%E4%B8%BB%E9%A2%98%E5%B0%8F%E8%81%9A/Slides/Electron.pdf)                                                                         |
+| 2020-12-13 14:30 | 古宜民 | 3A109 | Vivado 调试技巧                           | -                                                                                                                                                                                                      |
+| 2020-12-13 14:30 | 付佳伟 | 3A109 | 静态博客与 LUG 新版主页                   | -                                                                                                                                                                                                      |
+| 2020-12-13 14:30 | 郑子涵 | 3A109 | x86 和 arm 之间内存模型的不同             | -                                                                                                                                                                                                      |
+| 2020-10-17 17:30 | 李晨宇 | 3C102 | 游戏安全与 Cheat Engine 核心指北          | [Slides](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2020.10.17_CE%E5%B0%8F%E8%81%9A/Slides/%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E4%B8%8ECheat%20Engine%20%E6%A0%B8%E5%BF%83%E6%8C%87%E5%8C%97.pdf) |
 
 ### Spring 2020
 
-| 时间             | 主持            | 地点     | 主题                              | 讲稿                                                                                                                                                                                                          |
-| :--------------- | :-------------- | :------- | :-------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 2020-05-04 14:30 | 陶柯宇          | 线上直播 | 一个简单的 OpenResty 介绍         | [Slides](https://ftp.lug.ustc.edu.cn/weekly_party/2020.05.04_OpenResty/openresty-intro.pdf) [Video](https://ftp.lug.ustc.edu.cn/weekly_party/2020.05.04_OpenResty/2020-05-04 14-28-50.mp4)                    |
-| 2020-04-06 14:30 | 俞颉颃 & 梁仪恩 | 线上直播 | 量子计算的基础概念                | [Slides & Video](https://ftp.lug.ustc.edu.cn/weekly_party/2020.04.06_Quantum_Computing/)                                                                                                                      |
-| 2020-04-06 14:30 | 龚平            | 线上直播 | 众核时代，如何高效利用 CPU 资源？ | [Slides](https://ftp.lug.ustc.edu.cn/weekly_party/2020.04.06_Parallel_Computing/并行计算.pptx)                                                                                                                |
-| 2020-03-22 14:30 | 古宜民          | 线上直播 | PYNQ 简介与应用                   | [Slides](https://ftp.lug.ustc.edu.cn/weekly_party/2020.03.22_PYNQ_Introduction/PYNQ开发简介与应用.pdf) [Video](https://ftp.lug.ustc.edu.cn/weekly_party/2020.03.22_PYNQ_Introduction/2020-03-22 14-24-02.mp4) |
+| 时间             | 主持            | 地点     | 主题                              | 讲稿                                                                                                                                                                                                            |
+| :--------------- | :-------------- | :------- | :-------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2020-05-04 14:30 | 陶柯宇          | 线上直播 | 一个简单的 OpenResty 介绍         | [Slides](https://ftp.lug.ustc.edu.cn/weekly_party/2020.05.04_OpenResty/openresty-intro.pdf) [Video](https://ftp.lug.ustc.edu.cn/weekly_party/2020.05.04_OpenResty/2020-05-04%2014-28-50.mp4)                    |
+| 2020-04-06 14:30 | 俞颉颃 & 梁仪恩 | 线上直播 | 量子计算的基础概念                | [Slides & Video](https://ftp.lug.ustc.edu.cn/weekly_party/2020.04.06_Quantum_Computing/)                                                                                                                        |
+| 2020-04-06 14:30 | 龚平            | 线上直播 | 众核时代，如何高效利用 CPU 资源？ | [Slides](https://ftp.lug.ustc.edu.cn/weekly_party/2020.04.06_Parallel_Computing/并行计算.pptx)                                                                                                                  |
+| 2020-03-22 14:30 | 古宜民          | 线上直播 | PYNQ 简介与应用                   | [Slides](https://ftp.lug.ustc.edu.cn/weekly_party/2020.03.22_PYNQ_Introduction/PYNQ开发简介与应用.pdf) [Video](https://ftp.lug.ustc.edu.cn/weekly_party/2020.03.22_PYNQ_Introduction/2020-03-22%2014-24-02.mp4) |
 
 ### Fall 2019
 
-| 时间             | 主持   | 地点       | 主题                                   | 讲稿                                                                                                                                                                                       |
-| :--------------- | :----- | :--------- | :------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 2019-12-07 14:30 | 曾明亮 | 西区 3A110 | How Org-mode Changed My Life           | [slides](https://ftp.lug.ustc.edu.cn/weekly_party/2019.12.07_How_Org-mode_Changed_My_Life/) [video](https://ftp.lug.ustc.edu.cn/活动/2019. 秋\_小聚集锦/2019.12.07/video/)                 |
-| 2019-12-01 14:30 | 蔡文韬 | 西区 3A110 | 预测执行攻击及其补丁                   | [notes](https://etsai.site/spectres-and-meltdown/) [slides](https://ftp.lug.ustc.edu.cn/weekly_party/2019.12.01_Spectre_And_Meltdown/Spectre And Meltdown.pdf)                             |
-| 2019-11-24 14:30 | 彭定澜 | 西区 3A110 | C++ 黑魔法：模板元编程和编译期编程技术 | [slides](https://ftp.lug.ustc.edu.cn/weekly_party/2019.11.24_TMP/TMP.pdf)                                                                                                                  |
-| 2019-11-17 14:30 | 李文睿 | 西区 3A110 | LaTeX 使用简介及经验分享               | [slides](https://ftp.lug.ustc.edu.cn/weekly_party/2019.11.17_LaTeX/)                                                                                                                       |
-| 2019-09-17 17:30 | 张震   | 西区 3A311 | 构建系统、惰性求值与增量计算           | [slides](https://ftp.lug.ustc.edu.cn/活动/2019. 秋*小聚集锦/2019.09.17/slides/computation-talk.pdf) [video](https://ftp.lug.ustc.edu.cn/活动/2019. 秋*小聚集锦/2019.09.17/video/video.mp4) |
+| 时间             | 主持   | 地点       | 主题                                   | 讲稿                                                                                                                                                                                     |
+| :--------------- | :----- | :--------- | :------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2019-12-07 14:30 | 曾明亮 | 西区 3A110 | How Org-mode Changed My Life           | [slides](https://ftp.lug.ustc.edu.cn/weekly_party/2019.12.07_How_Org-mode_Changed_My_Life/) [video](https://ftp.lug.ustc.edu.cn/活动/2019.秋_小聚集锦/2019.12.07/video/)                 |
+| 2019-12-01 14:30 | 蔡文韬 | 西区 3A110 | 预测执行攻击及其补丁                   | [notes](https://etsai.site/spectres-and-meltdown/) [slides](https://ftp.lug.ustc.edu.cn/weekly_party/2019.12.01_Spectre_And_Meltdown/Spectre%20And%20Meltdown.pdf)                       |
+| 2019-11-24 14:30 | 彭定澜 | 西区 3A110 | C++ 黑魔法：模板元编程和编译期编程技术 | [slides](https://ftp.lug.ustc.edu.cn/weekly_party/2019.11.24_TMP/TMP.pdf)                                                                                                                |
+| 2019-11-17 14:30 | 李文睿 | 西区 3A110 | LaTeX 使用简介及经验分享               | [slides](https://ftp.lug.ustc.edu.cn/weekly_party/2019.11.17_LaTeX/)                                                                                                                     |
+| 2019-09-17 17:30 | 张震   | 西区 3A311 | 构建系统、惰性求值与增量计算           | [slides](https://ftp.lug.ustc.edu.cn/活动/2019.秋_小聚集锦/2019.09.17/slides/computation-talk.pdf) [video](https://ftp.lug.ustc.edu.cn/活动/2019.秋_小聚集锦/2019.09.17/video/video.mp4) |
 
 ### Spring 2019
 
@@ -152,11 +158,11 @@
 | :--------- | :----- | :--------------------- | :------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------- |
 | 2014-12-13 | 康雷   | Tornado 开发简介与实例 | [Slides](https://ftp.lug.ustc.edu.cn/weekly_party/2014.12.13_Tornado/LUG_tornado.pdf)        |                                                                                                            |
 | 2014-11-22 | 沈达   | TeXmacs 入门讲座       | [Slides](/wiki/_media/lug/texmacs_intro.pdf) [Source Code](/wiki/_media/lug/graph.tar.gz)    |                                                                                                            |
-| 2014-11-08 | 张光宇 | Clojure 简介           | [Slides](/wiki/_media/lug/weekly-clojure.pdf)                                                | [Video](ftp://ftp:ftp@ftp.lug.ustc.edu.cn/weekly_party/2014.11.08_Clojure/wp-clojure.mp4)                  |
+| 2014-11-08 | 张光宇 | Clojure 简介           | [Slides](/wiki/_media/lug/weekly-clojure.pdf)                                                | [Video](https://ftp.lug.ustc.edu.cn/weekly_party/2014.11.08_Clojure/wp-clojure.mp4)                        |
 | 2014-11-01 | 张荣葳 | 你所不知道的 DNS       | [Slides](https://ftp.lug.ustc.edu.cn/weekly_party/2014.11.01_DNS_and_DNSSec/DNS.pdf)         | [Video](https://ftp.lug.ustc.edu.cn/weekly_party/2014.11.01_DNS_and_DNSSec/2014.11.01_你所不知道的DNS.mp4) |
 | 2014-10-25 | 李博杰 | 云上的服务，你我共享   | [Slides](https://ftp.lug.ustc.edu.cn/weekly_party/2014.10.25_cloud_service/CloudService.pdf) |                                                                                                            |
 | 2014-10-19 | 崔灏   | 有关文件的种种魔法     | [Slides](https://ftp.lug.ustc.edu.cn/weekly_party/2014.10.19_Special_files/files.pdf)        |                                                                                                            |
-| 2014-10-12 | 杨博远 | Git 使用心得           | [Slides](https://ftp.lug.ustc.edu.cn/weekly_party/2014.10.12_git/Git 使用心得.pdf)           |                                                                                                            |
+| 2014-10-12 | 杨博远 | Git 使用心得           | [Slides](https://ftp.lug.ustc.edu.cn/weekly_party/2014.10.12_git/Git%20使用心得.pdf)         |                                                                                                            |
 
 ### Spring 2014
 
@@ -198,32 +204,32 @@
 | 2013-03-30 | 张成       | Linux 奇巧淫技                      | [slides](https://ftp.lug.ustc.edu.cn/weekly_party/2013.03.30_linux_tools/linux-tools.pdf)                                                                                                                  |
 | 2013-03-23 | 李博杰     | 搭建 Linux Web 服务器               | [张成的 slides](https://ftp.lug.ustc.edu.cn/weekly_party/2013.03.23_linux_web_server/HTTP-intro.pdf) [李博杰的 slides](https://ftp.lug.ustc.edu.cn/weekly_party/2013.03.23_linux_web_server/linux-web.pdf) |
 | 2013-03-17 | 郭家华     | 图书馆查询机系统的制作与启动过程    | [slides](/~guo/doc/library_query_os.pdf)                                                                                                                                                                   |
-| 2013-03-09 | 李博杰     | Bash: A Programmer's Perspective    | [slides](/~boj/weekly_party/2013.03.09_bash/bash.pdf) [code](/~boj/weekly_party/2013.03.09_bash/bash.tar.gz)                                                                                               |
+| 2013-03-09 | 李博杰     | Bash: A Programmer's Perspective    | [slides](https://ftp.lug.ustc.edu.cn/weekly_party/2013.03.09_bash/bash.pdf) [code](https://ftp.lug.ustc.edu.cn/weekly_party/2013.03.09_bash/bash.tar.gz)                                                   |
 
 ### Fall 2012
 
-| 日期       | 主持   | 主题                                                                                             | 讲稿                                                                                                                                                              |
-| :--------- | :----- | :----------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 2013-01-12 | 沈达   | python2-networkx 可视化                                                                          | [slides](/~boj/weekly_party/2013.01.12_python_networkx/networkx.pdf)                                                                                              |
-| 2013-01-05 | 彭飞   | 动态二进制插桩                                                                                   | –                                                                                                                                                                 |
-| 2012-12-29 | 张光宇 | deb 包制作过程简介                                                                               | [pres.tar.xz](/~zgy/pres.tar.xz)                                                                                                                                  |
-| 2012-12-22 | 李博杰 | 给开源编译器插入后门 [Reflections on Trusting Trust](http://cm.bell-labs.com/who/ken/trust.html) | [project](/~boj/weekly_party/2012.12.22_compiler_backdoor/compiler-backdoor.tar.gz) [slides](/~boj/weekly_party/2012.12.22_compiler_backdoor/compiler-slides.pdf) |
-| 2012-12-15 | 张荣葳 | Linux From Scratch                                                                               | [slides](/~boj/weekly_party/2012.12.15_LFS/pudh-slide.pdf)                                                                                                        |
-| 2012-12-08 | 赵希明 | 给进程打补丁                                                                                     | –                                                                                                                                                                 |
-| 2012-10-20 | 王晶晶 | 搜索引擎简介                                                                                     | [slides](/~boj/weekly_party/2012.10.20_search_engine/introduction to the search engine.pdf)                                                                       |
-| 2012-09-29 | 陈张   | Linux Desktop App                                                                                | [slides](/~boj/weekly_party/2012.09.29_desktop/Linux-desktop-app.pdf)                                                                                             |
+| 日期       | 主持   | 主题                                                                                             | 讲稿                                                                                                                                                                                                          |
+| :--------- | :----- | :----------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 2013-01-12 | 沈达   | python2-networkx 可视化                                                                          | [slides](https://ftp.lug.ustc.edu.cn/weekly_party/2013.01.12_python_networkx/networkx.pdf)                                                                                                                    |
+| 2013-01-05 | 彭飞   | 动态二进制插桩                                                                                   | –                                                                                                                                                                                                             |
+| 2012-12-29 | 张光宇 | deb 包制作过程简介                                                                               | [pres.tar.xz](/~zgy/pres.tar.xz)                                                                                                                                                                              |
+| 2012-12-22 | 李博杰 | 给开源编译器插入后门 [Reflections on Trusting Trust](http://cm.bell-labs.com/who/ken/trust.html) | [project](https://ftp.lug.ustc.edu.cn/weekly_party/2012.12.22_compiler_backdoor/compiler-backdoor.tar.gz) [slides](https://ftp.lug.ustc.edu.cn/weekly_party/2012.12.22_compiler_backdoor/compiler-slides.pdf) |
+| 2012-12-15 | 张荣葳 | Linux From Scratch                                                                               | [slides](https://ftp.lug.ustc.edu.cn/weekly_party/2012.12.15_LFS/pudh-slide.pdf)                                                                                                                              |
+| 2012-12-08 | 赵希明 | 给进程打补丁                                                                                     | –                                                                                                                                                                                                             |
+| 2012-10-20 | 王晶晶 | 搜索引擎简介                                                                                     | [slides](https://ftp.lug.ustc.edu.cn/weekly_party/2012.10.20_search_engine/introduction%20to%20the%20search%20engine.pdf)                                                                                     |
+| 2012-09-29 | 陈张   | Linux Desktop App                                                                                | [slides](https://ftp.lug.ustc.edu.cn/weekly_party/2012.09.29_desktop/Linux-desktop-app.pdf)                                                                                                                   |
 
 ### Spring 2012
 
-| 日期       | 主持   | 主题                     | 简介                                                | 讲稿                                                                  |
-| :--------- | :----- | :----------------------- | :-------------------------------------------------- | :-------------------------------------------------------------------- |
-| 2012-05-27 | 李喵喵 | HTML5                    | Lightweight JavaScript AVG Backport & Customization | ![FIXME](/wiki/lib/images/smileys/fixme.gif)                          |
-| 2012-05-20 | 李博杰 | 用 git 进行版本控制      | git 基本操作及其原理 git object hash，历史穿梭      | [slides](http://home.ustc.edu.cn/~boj/lug/git-lecture.pdf)            |
-| 2012-04-22 | 顾昊   | 正则表达式               | 正则表达式语法 在 sed、grep、python 中的应用        | ![FIXME](/wiki/lib/images/smileys/fixme.gif)                          |
-| 2012-04-14 | 郭家华 | iptables                 | iptables 原理 封包过滤、NAT 转发、指定出口 IP       | [slides](/~guo/doc/iptables.pdf)                                      |
-| 2012-04-08 | 祝元宠 | 用 vim 进行 C++开发      | vim 与 gdb 等的整合 vim 插件与资源，vim 键盘图      | [Vim 笔记](/wiki/redsky/vim_note)                                     |
-| 2012-04-01 | 沈达   | BreAk SHell, touch linux | Bash Scripting 如何使用文档和搜索来解决问题         | [slides](/~sadhen/lug_bash.pdf)                                       |
-| 2012-03-25 | 陈张   | Linux 桌面环境的使用     | 原来我们可以完全用 Linux 工作                       | [slides](/~boj/weekly_party/2012.09.29_desktop/Linux-desktop-app.pdf) |
+| 日期       | 主持   | 主题                     | 简介                                                | 讲稿                                                                                        |
+| :--------- | :----- | :----------------------- | :-------------------------------------------------- | :------------------------------------------------------------------------------------------ |
+| 2012-05-27 | 李喵喵 | HTML5                    | Lightweight JavaScript AVG Backport & Customization | ![FIXME](/wiki/lib/images/smileys/fixme.gif)                                                |
+| 2012-05-20 | 李博杰 | 用 git 进行版本控制      | git 基本操作及其原理 git object hash，历史穿梭      | [slides](http://home.ustc.edu.cn/~boj/lug/git-lecture.pdf)                                  |
+| 2012-04-22 | 顾昊   | 正则表达式               | 正则表达式语法 在 sed、grep、python 中的应用        | ![FIXME](/wiki/lib/images/smileys/fixme.gif)                                                |
+| 2012-04-14 | 郭家华 | iptables                 | iptables 原理 封包过滤、NAT 转发、指定出口 IP       | [slides](https://ftp.lug.ustc.edu.cn/weekly_party/2012.04.14_iptables/iptables.pdf)         |
+| 2012-04-08 | 祝元宠 | 用 vim 进行 C++开发      | vim 与 gdb 等的整合 vim 插件与资源，vim 键盘图      | [Vim 笔记](/wiki/redsky/vim_note)                                                           |
+| 2012-04-01 | 沈达   | BreAk SHell, touch linux | Bash Scripting 如何使用文档和搜索来解决问题         | [slides](https://ftp.lug.ustc.edu.cn/weekly_party/2012.04.01_bash/lug_bash.pdf)             |
+| 2012-03-25 | 陈张   | Linux 桌面环境的使用     | 原来我们可以完全用 Linux 工作                       | [slides](https://ftp.lug.ustc.edu.cn/weekly_party/2012.09.29_desktop/Linux-desktop-app.pdf) |
 
 ### Fall 2011
 
