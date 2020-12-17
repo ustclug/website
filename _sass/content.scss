@@ -96,7 +96,8 @@ h5 {
       display: inline-block;
       text-align: center;
       padding: 1rem 0;
-      transition: color 0.3s ease;
+      transition: color 0.3s ease-in-out;
+      transition: none;
       font-size: 0.8rem;
 
       &:hover {
