@@ -1,0 +1,589 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.21.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="zh" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <!-- begin _includes/seo.html -->
+    <title>在 Linux 内核中测试程序性能 - LUG @ USTC</title>
+    <meta name="description" content="本学期，我担任了李诚老师编译原理课程的助教。在课程实验中，我们基于 LLVM 构建了一套编译系统，其中一个实验需要编写后端优化算法。为了评估学生们的优化代码，我们需要比较优化前后的代码（在这里是 LLVM IR）的性能。我们通过统计程序运行的时间来比较代码的性能，但是用户程序会受到内核调度。因为不是连续执行程序，所以受到调度造成的延迟会导致统计到的时间出现噪音，这些噪音可能会让测试结果不准确甚至影响到了同学们的分数。最开始，我想到是不是可以统计指令数来评估性能，打算用 perf stat 进行测试。然而，我们提供的实验环境基于虚拟机，VirtualBox 和 WSL 都没有实现相关的虚拟寄存器，要让同学们方便地使用该指令会比较困难，只得作罢。这时，我突然想到，内核线程可以不受到调度，那么使用内核线程是不是可以更精确的测量时间呢？于是我便开始了尝试。">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="LUG @ USTC">
+    <meta property="og:title" content="在 Linux 内核中测试程序性能">
+    <meta property="og:url" content="https://lug.ustc.edu.cn/planet/2020/12/tic-toc-in-kernel/">
+    <meta property="og:description" content="本学期，我担任了李诚老师编译原理课程的助教。在课程实验中，我们基于 LLVM 构建了一套编译系统，其中一个实验需要编写后端优化算法。为了评估学生们的优化代码，我们需要比较优化前后的代码（在这里是 LLVM IR）的性能。我们通过统计程序运行的时间来比较代码的性能，但是用户程序会受到内核调度。因为不是连续执行程序，所以受到调度造成的延迟会导致统计到的时间出现噪音，这些噪音可能会让测试结果不准确甚至影响到了同学们的分数。最开始，我想到是不是可以统计指令数来评估性能，打算用 perf stat 进行测试。然而，我们提供的实验环境基于虚拟机，VirtualBox 和 WSL 都没有实现相关的虚拟寄存器，要让同学们方便地使用该指令会比较困难，只得作罢。这时，我突然想到，内核线程可以不受到调度，那么使用内核线程是不是可以更精确的测量时间呢？于是我便开始了尝试。">
+    <meta property="og:image" content="https://lug.ustc.edu.cn/static/splash/galaxy-1.jpg">
+    <meta property="article:published_time" content="2020-12-19T00:00:00+08:00">
+    <meta property="article:modified_time" content="2020-12-19T13:56:37+08:00">
+    <link rel="canonical" href="https://lug.ustc.edu.cn/planet/2020/12/tic-toc-in-kernel/">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+      
+          "@type": "Person",
+          "name": "USTCLUG",
+          "url": "https://lug.ustc.edu.cn/"
+      
+      }
+    </script>
+    <!-- end _includes/seo.html -->
+    <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="LUG @ USTC Feed">
+    <!-- https://t.co/dKP3o1e -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="57x57" href="/static/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/static/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/static/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/static/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/static/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/static/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/static/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/static/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/static/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/static/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/static/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#f3f6f6">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#f3f6f6">
+    <script>
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+    </script>
+    <!-- For all browsers -->
+    <link rel="stylesheet" href="/assets/css/main.css?v=3c9c0a2ff">
+    <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
+    <!--[if IE]>
+      <style>
+        /* old IE unsupported flexbox fixes */
+        .greedy-nav .site-title {
+          padding-right: 3em;
+        }
+        .greedy-nav button {
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 100%;
+        }
+      </style>
+    <![endif]-->
+    <!-- start custom head snippets -->
+    <!-- insert favicons. use https://realfavicongenerator.net/ -->
+    <!-- end custom head snippets -->
+  </head>
+  <body class="layout--single">
+    <nav class="skip-links">
+      <h2 class="screen-reader-text">跳转链接</h2>
+      <ul>
+        <li><a href="#site-nav" class="screen-reader-shortcut">转到主导航栏</a></li>
+        <li><a href="#main" class="screen-reader-shortcut">转到内容</a></li>
+        <li><a href="#footer" class="screen-reader-shortcut">转到底部</a></li>
+      </ul>
+    </nav>
+    <!--[if lt IE 9]>
+      <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+    <![endif]-->
+    <div class="masthead">
+      <div class="masthead__inner-wrap">
+        <div class="masthead__menu">
+          <nav id="site-nav" class="greedy-nav">
+            <a class="site-logo" href="/"><img src="/static/lug-penguin.png" alt=""></a>
+            <a class="site-title" href="/">
+              LUG @ USTC
+            </a>
+            <ul class="visible-links">
+              <li class="masthead__menu-item">
+                <a href="/wiki/"><i class="fad fa-lg fa-fw fa-star-shooting"></i> Wiki</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="/news/"><i class="fad fa-lg fa-fw fa-newspaper"></i> News</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="/planet/"><i class="fad fa-lg fa-fw fa-planet-ringed fa-swap-opacity"></i> Planet</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="https://github.com/ustclug"><i class="fab fa-lg fa-fw fa-github"></i> GitHub</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="https://mirrors.ustc.edu.cn/"><i class="fad fa-lg fa-fw fa-server"></i> Mirrors</a>
+              </li>
+            </ul>
+            <button class="greedy-nav__toggle hidden" type="button">
+              <span class="visually-hidden">切换菜单</span>
+              <div class="navicon"></div>
+            </button>
+            <ul class="hidden-links hidden"></ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="initial-content">
+      <div class="page__hero--overlay"
+  style=" background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/static/splash/galaxy-1.jpg');"
+>
+        <div class="wrapper">
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            在 Linux 内核中测试程序性能
+          </h1>
+          <p class="page__meta">
+            <span class="page__meta-date">
+              <i class="far fa-calendar-alt" aria-hidden="true"></i>
+              <time datetime="2020-12-19T00:00:00+08:00">2020 年 12 月 19 日</time>
+            </span>
+            <span class="page__meta-sep"></span>
+            <span class="page__meta-readtime">
+              <i class="far fa-clock" aria-hidden="true"></i>
+              8 分钟阅读
+            </span>
+          </p>
+        </div>
+      </div>
+      <div id="main" role="main">
+        <div class="sidebar sticky">
+          <div itemscope itemtype="https://schema.org/Person">
+            <div class="author__content">
+              <h3 class="author__name" itemprop="name"></h3>
+            </div>
+            <div class="author__urls-wrapper">
+              <button class="btn btn--inverse">关注</button>
+              <ul class="author__urls social-icons">
+                <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+              </ul>
+            </div>
+          </div>
+        </div>
+        <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+          <meta itemprop="headline" content="在 Linux 内核中测试程序性能">
+          <meta itemprop="description" content="本学期，我担任了李诚老师编译原理课程的助教。在课程实验中，我们基于 LLVM 构建了一套编译系统，其中一个实验需要编写后端优化算法。为了评估学生们的优化代码，我们需要比较优化前后的代码（在这里是 LLVM IR）的性能。我们通过统计程序运行的时间来比较代码的性能，但是用户程序会受到内核调度。因为不是连续执行程序，所以受到调度造成的延迟会导致统计到的时间出现噪音，这些噪音可能会让测试结果不准确甚至影响到了同学们的分数。最开始，我想到是不是可以统计指令数来评估性能，打算用 perf stat 进行测试。然而，我们提供的实验环境基于虚拟机，VirtualBox 和 WSL 都没有实现相关的虚拟寄存器，要让同学们方便地使用该指令会比较困难，只得作罢。这时，我突然想到，内核线程可以不受到调度，那么使用内核线程是不是可以更精确的测量时间呢？于是我便开始了尝试。">
+          <meta itemprop="datePublished" content="2020-12-19T00:00:00+08:00">
+          <meta itemprop="dateModified" content="2020-12-19T13:56:37+08:00">
+          <div class="page__inner-wrap">
+            <section class="page__content" itemprop="text">
+              <aside class="sidebar__right sticky">
+                <nav class="toc">
+                  <header>
+                    <h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4>
+                  </header>
+                  <ul class="toc__menu">
+                    <li><a href="#编写内核模块">编写内核模块</a>
+                      <ul>
+                        <li><a href="#超简单的内核模块编写方法">超简单的内核模块编写方法</a></li>
+                        <li><a href="#tic-toc-">Tic-Toc …</a></li>
+                        <li><a href="#怎么使用它">怎么使用它？</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#链接函数">链接函数</a></li>
+                    <li><a href="#一个小测试">一个小测试</a></li>
+                    <li><a href="#小结">小结</a></li>
+                  </ul>
+                </nav>
+              </aside>
+              <p>本学期，我担任了李诚老师编译原理课程的助教。在课程实验中，我们基于 LLVM 构建了一套编译系统，其中一个实验需要编写后端优化算法。为了评估学生们的优化代码，我们需要比较优化前后的代码（在这里是 LLVM IR）的性能。我们通过统计程序运行的时间来比较代码的性能，但是用户程序会受到<a href="https://101.lug.ustc.edu.cn/Ch04/#schedule">内核调度</a>。因为不是连续执行程序，所以受到调度造成的延迟会导致统计到的时间出现噪音，这些噪音可能会让测试结果不准确<del>甚至影响到了同学们的分数</del>。最开始，我想到是不是可以统计指令数来评估性能，打算用 <code class="language-plaintext highlighter-rouge">perf stat</code> 进行测试。然而，我们提供的实验环境基于虚拟机，<a href="https://www.virtualbox.org/ticket/10754?cversion=0&amp;cnum_hist=5">VirtualBox</a> 和 <a href="https://github.com/microsoft/WSL/issues/4678">WSL</a> 都没有实现相关的虚拟寄存器，要让同学们方便地使用该指令会比较困难，只得作罢。这时，我突然想到，内核线程可以不受到调度，那么使用内核线程是不是可以更精确的测量时间呢？于是我便开始了尝试。</p>
+              <p>注：由于原本目的是用于 LLVM IR，所以使用了 <code class="language-plaintext highlighter-rouge">clang</code> 来编译内核，没有这种需求可以完全无视 <code class="language-plaintext highlighter-rouge">clang</code>。</p>
+              <h2 id="编写内核模块">编写内核模块</h2>
+              <h3 id="超简单的内核模块编写方法">超简单的内核模块编写方法</h3>
+              <p>为了创建内核线程，我们可以构建一个内核模块，由它来执行相关的函数。构建一个基础的内核模块非常简单，这里我们 参考 <a href="https://tldp.org/LDP/lkmpg/2.6/html/x121.html"><strong>The Linux Kernel Module Programming Guide</strong></a>：</p>
+              <div class="language-c highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="cm">/*
+ *  hello_mod.c - The simplest kernel module.
+ */</span>
+<span class="cp">#include &lt;linux/module.h&gt;	</span><span class="cm">/* Needed by all modules */</span><span class="cp">
+#include &lt;linux/kernel.h&gt;	</span><span class="cm">/* Needed for KERN_INFO */</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">init_module</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="n">printk</span><span class="p">(</span><span class="n">KERN_INFO</span> <span class="s">"Hello world.</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+
+	<span class="cm">/*
+	 * A non 0 return means init_module failed; module can't be loaded.
+	 */</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">cleanup_module</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="n">printk</span><span class="p">(</span><span class="n">KERN_INFO</span> <span class="s">"Goodbye world.</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+                </div>
+              </div>
+              <p>然后再加上一个简单的 Makefile：</p>
+              <div class="language-makefile highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="c"># obj-m 告诉构建系统以模块编译，编译目标是 hello.ko
+</span><span class="nv">obj-m</span> <span class="o">+=</span> hello.o
+<span class="nv">hello-objs</span> <span class="o">:=</span> hello_mod.o
+
+<span class="nl">all</span><span class="o">:</span>
+	make <span class="nt">-C</span> /lib/modules/<span class="nf">$(</span><span class="nb">shell</span> <span class="nb">uname</span> <span class="nt">-r</span><span class="nf">)</span>/build <span class="nv">M</span><span class="o">=</span><span class="nv">$(PWD)</span> modules
+
+<span class="nl">clean</span><span class="o">:</span>
+	make <span class="nt">-C</span> /lib/modules/<span class="nf">$(</span><span class="nb">shell</span> <span class="nb">uname</span> <span class="nt">-r</span><span class="nf">)</span>/build <span class="nv">M</span><span class="o">=</span><span class="nv">$(PWD)</span> clean
+</code></pre>
+                </div>
+              </div>
+              <p>这样，一个超简单的内核模块就完成啦！</p>
+              <p>为了编译内核模块，我们需要有头文件，在 Ubuntu 上可以安装 <code class="language-plaintext highlighter-rouge">linux-headers-&lt;version&gt;</code> 来实现。又或者你像我一样需要用到 <code class="language-plaintext highlighter-rouge">clang</code> ，那就下载 Linux 源码重新编译安装（PS：如果全量编译搭配 VSCode 补全体验很好）。在这之后，运行 <code class="language-plaintext highlighter-rouge">sudo make CC=/path/to/clang</code> 就可以编译这个模块了。编译完成后，会发现目录下多出来一个叫 <code class="language-plaintext highlighter-rouge">hello.ko</code> 的文件，它就是我们编译得到的内核模块。</p>
+              <p>在这个模块中，<code class="language-plaintext highlighter-rouge">init_module</code> 会在模块被载入时调用，而 <code class="language-plaintext highlighter-rouge">cleanup_module</code> 会被模块被卸载时被调用。通过 <code class="language-plaintext highlighter-rouge">insmod hello.ko</code>，可以载入它，而 <code class="language-plaintext highlighter-rouge">rmmod hello</code> 可以卸载这个模块。<code class="language-plaintext highlighter-rouge">printk</code>会将日志打印到内核的日志中，调用 <code class="language-plaintext highlighter-rouge">dmesg</code> 可以看到模块打印的欢迎和告别信息。</p>
+              <h3 id="tic-toc-">Tic-Toc …</h3>
+              <p>虽然已经编写了一个模块，但是它啥都干不来，我们还得实现计时功能。在编写用户态程序时，语言库里通常有获取当前时间的函数，内核也一样。我们可以通过<code class="language-plaintext highlighter-rouge">ktime.h</code> 中的 <code class="language-plaintext highlighter-rouge">ktime_get</code> 来获取时间，大概的逻辑如下：</p>
+              <div class="language-c highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="n">ktime_t</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">;</span>
+<span class="n">u64</span> <span class="n">dur_ns</span><span class="p">;</span>
+<span class="n">start</span> <span class="o">=</span> <span class="n">ktime_get</span><span class="p">();</span>
+<span class="n">foo</span><span class="p">();</span> <span class="c1">// 被测试的函数</span>
+<span class="n">end</span> <span class="o">=</span> <span class="n">ktime_get</span><span class="p">();</span>
+<span class="n">dur_ns</span> <span class="o">=</span> <span class="n">ktime_to_ns</span><span class="p">(</span><span class="n">ktime_sub</span><span class="p">(</span><span class="n">end</span><span class="p">,</span> <span class="n">start</span><span class="p">));</span>
+<span class="n">printk</span><span class="p">(</span><span class="n">KERN_INFO</span> <span class="s">"foo runtime: %lluns"</span><span class="p">,</span> <span class="n">dur_ns</span><span class="p">);</span>
+</code></pre>
+                </div>
+              </div>
+              <p>看得出来，内核里的函数接口也很平易近人，简单几行就把我们最核心的算法实现完了。</p>
+              <h3 id="怎么使用它">怎么使用它？</h3>
+              <p>现在，我们已经知道了如何统计时间，还得设计一个接口来让人触发相关的功能。虽然让模块在初始化时运行也不是不行，但是扩展性就变得太糟糕了。我决定用 <a href="https://en.wikipedia.org/wiki/Procfs">procfs</a> 来设计一个接口。Procfs 来源于 UNIX 哲学中一切皆文件的思想，它把系统运行时的一些信息用文件目录的形式展示出来，这样可以通过简单的文件操作（比如 <code class="language-plaintext highlighter-rouge">cat</code>、管道等）来访问和控制系统相关的参数，你可以通过 <code class="language-plaintext highlighter-rouge">/proc/</code> 目录访问里面的内容。</p>
+              <p>在初始化的时候，我们通过 <code class="language-plaintext highlighter-rouge">proc_mkdir</code> 和 <code class="language-plaintext highlighter-rouge">proc_create</code> 可以像普通的文件系统一样在 <code class="language-plaintext highlighter-rouge">/proc/</code> 目录下创建目录和文件：</p>
+              <div class="language-c highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="c1">// 在 /proc/ 下创建一个目录</span>
+<span class="k">if</span> <span class="p">((</span><span class="n">root</span> <span class="o">=</span> <span class="n">proc_mkdir</span><span class="p">(</span><span class="n">proc_dirname</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">))</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
+    <span class="k">return</span> <span class="o">-</span><span class="n">EEXIST</span><span class="p">;</span>
+<span class="c1">// 在 /proc/&lt;proc_dirname&gt;/ 目录下创建一个文件，并让该文件使用 bench_fops</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">proc_create</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="mo">0444</span><span class="p">,</span> <span class="n">root</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">bench_fops</span><span class="p">)</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
+    <span class="k">return</span> <span class="o">-</span><span class="n">ENOMEM</span><span class="p">;</span>
+</code></pre>
+                </div>
+              </div>
+              <p>这里的 <code class="language-plaintext highlighter-rouge">bench_fops</code> 是一个类型为 <code class="language-plaintext highlighter-rouge">struct file_operations</code> 的结构体。它能为这个文件注册功能，比如 open、read、write 等。在内核中设计一个文件系统也需要实现类似的操作，万幸的是， procfs 下不需要实现 <a href="https://en.wikipedia.org/wiki/POSIX">POSIX</a> 语义。在这里，我希望只要有 <code class="language-plaintext highlighter-rouge">write</code> 被调用时，就会运行我的测试程序，这样我只要在 shell 中用 <code class="language-plaintext highlighter-rouge">echo</code> 和管道重定向就能调用它了：</p>
+              <div class="language-c highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="c1">// 所有参数都用不到，我们只希望触发一次测试</span>
+<span class="kt">ssize_t</span> <span class="nf">run_bench</span><span class="p">(</span><span class="k">struct</span> <span class="n">file</span> <span class="o">*</span><span class="n">filp</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="n">__user</span> <span class="o">*</span><span class="n">buf</span><span class="p">,</span>
+                  <span class="kt">size_t</span> <span class="n">len</span><span class="p">,</span> <span class="n">loff_t</span> <span class="o">*</span><span class="n">ppos</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// 测试相关的函数</span>
+    <span class="n">foo</span><span class="p">();</span>
+    <span class="c1">// 返回长度和参数一样代表写入成功</span>
+    <span class="k">return</span> <span class="n">len</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// 这是 C99 加入的结构体指定初始化，其它成员默认为空。</span>
+<span class="c1">// 这意味着该文件只支持写</span>
+<span class="k">static</span> <span class="k">const</span> <span class="k">struct</span> <span class="n">file_operations</span> <span class="n">bench_fops</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="p">.</span><span class="n">owner</span>		<span class="o">=</span> <span class="n">THIS_MODULE</span><span class="p">,</span>
+	<span class="p">.</span><span class="n">write</span>		<span class="o">=</span> <span class="n">run_bench</span>
+<span class="p">}</span>
+</code></pre>
+                </div>
+              </div>
+              <p>模块功能已经完成了，最后得给模块取个好听的名字。我把英文中表示时间流逝的 tic-toc （tick-tock） 和表示内核的 kernel 合在一起，就变成了 tiktok。</p>
+              <h2 id="链接函数">链接函数</h2>
+              <p>我本以为编写了寥寥数行 tiktok，将 LLVM IR 编译到目标文件再链接到模块上便可以了。然而经过测试，这样做会导致进程一直无法返回。经过反汇编比较了同一段代码在内核模块里编译的结果和外部产生的结果后，我才理解是因为编译选项不同导致了内存布局的差别，这使得默认参数编译的代码无法在内核中使用。由于内核编译选项繁杂，根据不同架构也会产生不同的选项，我们必须把代码放置进内核的构建系统内来让它产生内核想要的汇编（现在的内核中禁用了浮点数，所以浮点计算就无法测试了）。对于普通的 c 文件，只需要在 Makefile 中加上几句，比如：</p>
+              <div class="language-makefile highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="nv">hello-objs</span> <span class="o">:=</span> hello_mod.o another_file.o
+</code></pre>
+                </div>
+              </div>
+              <p>但是 LLVM IR 还需要一些技巧来骗过编译系统才行。我把自制编译器产生的 IR 文件改成了 .c 文件，并修改了 Makefile：</p>
+              <div class="language-makefile highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="nv">hello-objs</span> <span class="o">:=</span> hello_mod.o another_file.o
+<span class="nv">CFLAGS_another_file.o</span> <span class="o">:=</span> <span class="nt">-O0</span> <span class="nt">-x</span> ir
+</code></pre>
+                </div>
+              </div>
+              <p>内核编译系统会在产生 another_file.o 时将这里的 <code class="language-plaintext highlighter-rouge">-O0 -x ir</code> 传给编译器，这让编译器知道接下来要读的语言是 LLVM IR，并且关掉大部分优化（这样才能体现出自制编译器中的优化效果）。由于 LLVM IR 编译时会忽略一些选项，所以我让编译器在产生中间代码时就加上了属性来确保编译正确。</p>
+              <p>虽然知道了怎么链接函数，但是内核是无法链接库函数的，而 IO 函数也无法直接在内核中使用。对此，我们可以修改相关的函数，在 tiktok 实现相似的功能。比如， <code class="language-plaintext highlighter-rouge">printf</code> 可以转换成 <code class="language-plaintext highlighter-rouge">printk</code>，而 <code class="language-plaintext highlighter-rouge">exit</code> 可以换成内核中的 <code class="language-plaintext highlighter-rouge">do_exit</code>。<code class="language-plaintext highlighter-rouge">malloc</code> 和 <code class="language-plaintext highlighter-rouge">free</code> 比较复杂，内核中的内存可没有进程那样退出就自动释放这么好的待遇。所以，在内核中必须得手动维护每一次分配和释放，避免出现事故导致 panic 或者内存泄漏（当然我很懒，课程不需要我就都没实现）。</p>
+              <h2 id="一个小测试">一个小测试</h2>
+              <p>既然实现完了，我们进行一个测试来检验 tiktok 的功能：</p>
+              <div class="language-c highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="cp">#define OUT_LOOP 100
+</span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">j</span><span class="p">;</span>
+
+    <span class="n">a</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">j</span> <span class="o">&lt;</span> <span class="n">OUT_LOOP</span><span class="p">){</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">while</span><span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">1000000</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">j</span> <span class="o">=</span> <span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">a</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+                </div>
+              </div>
+              <p>上面是一段进行一些无意义计算的代码，我们修改 <code class="language-plaintext highlighter-rouge">OUT_LOOPS</code> 的大小（100、99、98）来比较不同方法的灵敏度。除了普通的 time 测量，我还加入了一组使用 <code class="language-plaintext highlighter-rouge">taskset(1)</code> 的对照组。 <code class="language-plaintext highlighter-rouge">taskset</code> 控制了程序的亲核性，这使得程序总能被调度到同一个核上，减少了跨核导致的缓存失效开销。为了减少随机误差，每种配置我都运行进行了 100 次函数得到虚列。实验数据可以在<a href="https://github.com/gloit042/tiktok/tree/main/bench">这里</a>查看。要反映灵敏度，我们无法直接拿不同方法的结果进行比较，而是要在同一个方法内看看能否显著区分出不同循环次数带来运行时间差距（约为 1%~%2）。短暂尝试了复习概率论和数理统计后，我谷歌到了 <a href="https://en.wikipedia.org/wiki/Kolmogorov%E2%80%93Smirnov_test">K-S 检验</a> （Kolmogorov-Smirnov test），对于两组输入数据它可以检验它们是否同分布。这里我们假设实际运行时间是固有的，而调度等开销造成的是一个均匀同分布的随机误差。如果测量工具对两种配置得到的两组数据无法拒绝同分布假设，我们可以认为它无法准确得检测出程序性能的差异（统计全忘光了，我不知道我在说啥，如果有误欢迎指正）。我使用了 <code class="language-plaintext highlighter-rouge">scipy.stat.kstest</code> 来进行了 K-S 检验，结果如下表 （p 值小于 0.05 拒绝同分布假设）：</p>
+              <table>
+                <thead>
+                  <tr>
+                    <th style="text-align: center">p 值</th>
+                    <th style="text-align: center">98-99</th>
+                    <th style="text-align: center">99-100</th>
+                    <th style="text-align: center">98-100</th>
+                    <th style="text-align: center">98-98</th>
+                    <th style="text-align: center">99-99</th>
+                    <th style="text-align: center">100-100</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="text-align: center">normal_time</td>
+                    <td style="text-align: center">$2.11*10^{-1}$</td>
+                    <td style="text-align: center">$5.83*10^{-1}$</td>
+                    <td style="text-align: center">$3.68*10^{-1}$</td>
+                    <td style="text-align: center">$3.6*10^{-2}$</td>
+                    <td style="text-align: center">$5.83*10^{-1}$</td>
+                    <td style="text-align: center">$1.29*10^{-3}$</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center">taskset_time</td>
+                    <td style="text-align: center">$1.56*10^{-2}$</td>
+                    <td style="text-align: center">$2.11*10^{-1}$</td>
+                    <td style="text-align: center">$3.21*10^{-5}$</td>
+                    <td style="text-align: center">$8.15*10^{-1}$</td>
+                    <td style="text-align: center">$8.15*10^{-1}$</td>
+                    <td style="text-align: center">$2.4*10^{-2}$</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center">tiktok</td>
+                    <td style="text-align: center">$3.73*10^{-36}$</td>
+                    <td style="text-align: center">$6.31*10^{-19}$</td>
+                    <td style="text-align: center">$2.6*10^{-38}$</td>
+                    <td style="text-align: center">$4.11*10^{-43}$</td>
+                    <td style="text-align: center">$1.41*10^{-28}$</td>
+                    <td style="text-align: center">$2.24*10^{-4}$</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>gg，完全没有用，连同一个配置都分不清楚。虽然占据了一个核，但是虚拟机本身也在被调度，这个误差并不满足我们的假设。但是，还不能放弃，还可以抢救一下，我把 tiktok 放裸机上测试了一下，得到的结果如下：</p>
+              <table>
+                <thead>
+                  <tr>
+                    <th style="text-align: center">p 值</th>
+                    <th style="text-align: center">98-99</th>
+                    <th style="text-align: center">99-100</th>
+                    <th style="text-align: center">98-100</th>
+                    <th style="text-align: center">98-98</th>
+                    <th style="text-align: center">99-99</th>
+                    <th style="text-align: center">100-100</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="text-align: center">normal_time</td>
+                    <td style="text-align: center">$4.04*10^{-35}$</td>
+                    <td style="text-align: center">$2.82*10^{-1}$</td>
+                    <td style="text-align: center">$3.05*10^{-31}$</td>
+                    <td style="text-align: center">$8.15*10^{-1}$</td>
+                    <td style="text-align: center">$5.83*10^{-1}$</td>
+                    <td style="text-align: center">$1.54*10^{-1}$</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center">taskset_time</td>
+                    <td style="text-align: center">$1.42*10^{-51}$</td>
+                    <td style="text-align: center">$3.64*10^{-2}$</td>
+                    <td style="text-align: center">$4.39*10^{-55}$</td>
+                    <td style="text-align: center">$5.39*10^{-1}$</td>
+                    <td style="text-align: center">$9.08*10^{-1}$</td>
+                    <td style="text-align: center">$2.11*10^{-1}$</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center">tiktok</td>
+                    <td style="text-align: center">$2.20*10^{-59}$</td>
+                    <td style="text-align: center">$4.39*10^{-55}$</td>
+                    <td style="text-align: center">$2.20*10^{-59}$</td>
+                    <td style="text-align: center">$2.11*10^{-1}$</td>
+                    <td style="text-align: center">$7.02*10^{-1}$</td>
+                    <td style="text-align: center">$2.11*10^{-1}$</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>在裸机上，tiktok 的优势就体现了出来，它比 <code class="language-plaintext highlighter-rouge">taskset</code> 要更加灵敏一点。然而裸机上使用 <code class="language-plaintext highlighter-rouge">perf stat</code>就可以看到更加精确的指令数结果…</p>
+              <h2 id="小结">小结</h2>
+              <p>虽然 tiktok 被证明没有太多实际价值，但是研究的过程中我还是学到了挺多 Linux 内核编译系统的知识。我想分享一下这个过程，是因为我觉得这很有趣。如果你对 tiktok 感兴趣，它在我的 <a href="https://github.com/gloit042/tiktok">Github</a> 上，它比本文介绍的要稍微复杂一丢丢。如果你想要了解更多关于 Linux 内核的内容，网络上有许多很好的资料。至于编译课程，我估计细小的差距是没法在虚拟机里准确测量了，还是要尽量避开这种测试样例（Windows 上应该也有工具，但是不太方便）。</p>
+            </section>
+            <footer class="page__meta">
+              <p class="page__taxonomy">
+                <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 标签: </strong>
+                <span itemprop="keywords">
+                  <a href="/tags/benchmark" class="page__taxonomy-item" rel="tag">Benchmark</a><span class="sep">, </span>
+                  <a href="/tags/kernel" class="page__taxonomy-item" rel="tag">Kernel</a><span class="sep">, </span>
+                  <a href="/tags/llvm" class="page__taxonomy-item" rel="tag">LLVM</a>
+                </span>
+              </p>
+              <p class="page__taxonomy">
+                <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 分类: </strong>
+                <span itemprop="keywords">
+                  <a href="/categories/technology" class="page__taxonomy-item" rel="tag">Technology</a>
+                </span>
+              </p>
+              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-12-19">2020 年 12 月 19 日</time></p>
+            </footer>
+            <section class="page__share">
+              <h4 class="page__share-title">分享</h4>
+              <a href="https://twitter.com/intent/tweet?text=%E5%9C%A8+Linux+%E5%86%85%E6%A0%B8%E4%B8%AD%E6%B5%8B%E8%AF%95%E7%A8%8B%E5%BA%8F%E6%80%A7%E8%83%BD%20https%3A%2F%2Flug.ustc.edu.cn%2Fplanet%2F2020%2F12%2Ftic-toc-in-kernel%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flug.ustc.edu.cn%2Fplanet%2F2020%2F12%2Ftic-toc-in-kernel%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+              <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Flug.ustc.edu.cn%2Fplanet%2F2020%2F12%2Ftic-toc-in-kernel%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+            </section>
+            <nav class="pagination">
+              <a href="/planet/2020/08/keeping-account-with-beancount/" class="pagination--pager" title="使用 Beancount 进行记账并自动记录一卡通消费
+">上一页</a>
+              <a href="#" class="pagination--pager disabled">下一页</a>
+            </nav>
+          </div>
+        </article>
+        <div class="page__related">
+          <h4 class="page__related-title">猜您还喜欢</h4>
+          <div class="grid__wrapper">
+            <div class="grid__item">
+              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                <h2 class="archive__item-title no_toc" itemprop="headline">
+                  <a href="/planet/2020/08/keeping-account-with-beancount/" rel="permalink">使用 Beancount 进行记账并自动记录一卡通消费
+                  </a>
+                </h2>
+                <p class="page__meta">
+                  <span class="page__meta-date">
+                    <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                    <time datetime="2020-08-06T00:00:00+08:00">2020 年 8 月 6 日</time>
+                  </span>
+                  <span class="page__meta-sep"></span>
+                  <span class="page__meta-readtime">
+                    <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+                    9 分钟阅读
+                  </span>
+                </p>
+                <p class="archive__item-excerpt" itemprop="description">本文首发于 https://charlesliu7.github.io/blackboard/2019/07/24/beancount/
+                </p>
+              </article>
+            </div>
+            <div class="grid__item">
+              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                <h2 class="archive__item-title no_toc" itemprop="headline">
+                  <a href="/planet/2019/09/raspberry-4/" rel="permalink">【译稿】树莓派 4 评测与基准测试：与树莓派 3B+ 相比的改进
+                  </a>
+                </h2>
+                <p class="page__meta">
+                  <span class="page__meta-date">
+                    <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                    <time datetime="2019-09-17T00:00:00+08:00">2019 年 9 月 17 日</time>
+                  </span>
+                  <span class="page__meta-sep"></span>
+                  <span class="page__meta-readtime">
+                    <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+                    8 分钟阅读
+                  </span>
+                </p>
+                <p class="archive__item-excerpt" itemprop="description">原文地址：https://ibugone.com/blog/2019/09/raspberry-pi-4-review-benchmark/，作者为 @iBug 同学。以下为翻译部分。
+                </p>
+              </article>
+            </div>
+            <div class="grid__item">
+              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                <h2 class="archive__item-title no_toc" itemprop="headline">
+                  <a href="/planet/2019/09/how-to-use-nc/" rel="permalink">nc 是什么？
+                  </a>
+                </h2>
+                <p class="page__meta">
+                  <span class="page__meta-date">
+                    <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                    <time datetime="2019-09-16T00:00:00+08:00">2019 年 9 月 16 日</time>
+                  </span>
+                  <span class="page__meta-sep"></span>
+                  <span class="page__meta-readtime">
+                    <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+                    2 分钟阅读
+                  </span>
+                </p>
+                <p class="archive__item-excerpt" itemprop="description">nc 是什么？
+                </p>
+              </article>
+            </div>
+            <div class="grid__item">
+              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                <h2 class="archive__item-title no_toc" itemprop="headline">
+                  <a href="/planet/2019/08/NFS-intro/" rel="permalink">一个 NFS 的简介
+                  </a>
+                </h2>
+                <p class="page__meta">
+                  <span class="page__meta-date">
+                    <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                    <time datetime="2019-08-28T00:00:00+08:00">2019 年 8 月 28 日</time>
+                  </span>
+                  <span class="page__meta-sep"></span>
+                  <span class="page__meta-readtime">
+                    <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+                    5 分钟阅读
+                  </span>
+                </p>
+                <p class="archive__item-excerpt" itemprop="description">NFS（网络文件系统，Network File System）是一个分布式的文件系统，可以用于在局域网中共享文件。它通常运用在 Unix 与类 Unix 操作系统中。对于 Linux 服务器之间的文件共享来说，NFS 相比于其他的方案（如 Samba）更加方便，性能也更好。对于应用程序来说，NFS 也是透明的。
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+        <!-- end custom footer snippets -->
+        <div class="footer-row">
+          <div class="footer-block footer__about">
+            <p>中国科学技术大学 Linux 用户协会是由中国科学技术大学在校的 GNU/Linux 爱好者发起并组成的团体，旨在联合科大的 GNU/Linux
+              使用者，搭建信息交流共享的平台，宣传自由软件的价值，提高自由软件社区文化氛围，推广自由软件的应用。</p>
+          </div>
+          <div class="footer-block footer__extras">
+            <div class="footer__contact">
+              <ul>
+                <li>
+                  <a href="/wiki/intro/"><i class="fad fa-fw fa-address-card"></i> 关于我们</a>
+                </li>
+                <li>
+                  <a href="/wiki/lug/contact/"><i class="fas fa-fw fa-phone-alt"></i> 联系我们</a>
+                </li>
+                <li>
+                  <a href="/wiki/lug/contribute/"><i class="fad fa-fw fa-users"></i> 加入我们</a>
+                </li>
+                <li>
+                  <a href="/feed/"><i class="fad fa-fw fa-rss" style="--fa-secondary-opacity: 0.6;"></i> RSS 订阅</a>
+                </li>
+                <li>
+                  <a href="https://github.com/ustclug/website"><i class="fab fa-fw fa-github"></i> 本站仓库</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__logo">
+              <div class="footer__logo-image">
+                <img src="https://ftp.lug.ustc.edu.cn/misc/logo-white.svg" />
+              </div>
+              <div class="footer__logo-text">
+                <!-- a href="http://www.beian.miit.gov.cn" target="_blank">皖ICP备05002528号</a -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="/assets/js/main.min.js"></script>
+    <img src="/static/USTC_logo.svg" style="position: fixed; bottom: -320px; left: -200px; opacity: 0.1; z-index: -100;" />
+  </body>
+</html>

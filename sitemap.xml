@@ -273,6 +273,10 @@
       <lastmod>2020-11-09T14:22:35+08:00</lastmod>
     </url>
     <url>
+      <loc>https://lug.ustc.edu.cn/planet/2020/12/tic-toc-in-kernel/</loc>
+      <lastmod>2020-12-19T13:56:37+08:00</lastmod>
+    </url>
+    <url>
       <loc>https://lug.ustc.edu.cn/news/2010/09/2010-software-freedom-day/</loc>
       <lastmod>2020-11-09T14:22:35+08:00</lastmod>
     </url>
@@ -545,6 +549,10 @@
       <lastmod>2020-11-09T14:22:35+08:00</lastmod>
     </url>
     <url>
+      <loc>https://lug.ustc.edu.cn/planet/2020/12/tic-toc-in-kernel/</loc>
+      <lastmod>2020-12-19T13:56:37+08:00</lastmod>
+    </url>
+    <url>
       <loc>https://lug.ustc.edu.cn/wiki/doc/smart-questions/</loc>
       <lastmod>2020-11-09T14:22:35+08:00</lastmod>
     </url>
@@ -578,7 +586,7 @@
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/wiki/greenwarm/xen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8/</loc>
-      <lastmod>2020-12-17T18:08:42+08:00</lastmod>
+      <lastmod>2020-12-19T13:57:59+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/wiki/</loc>
@@ -1224,6 +1232,15 @@
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/tags/ecard/</loc>
+    </url>
+    <url>
+      <loc>https://lug.ustc.edu.cn/tags/benchmark/</loc>
+    </url>
+    <url>
+      <loc>https://lug.ustc.edu.cn/tags/kernel/</loc>
+    </url>
+    <url>
+      <loc>https://lug.ustc.edu.cn/tags/llvm/</loc>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/categories/lug%E6%B4%BB%E5%8A%A8/</loc>

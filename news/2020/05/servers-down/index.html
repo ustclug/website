@@ -58,7 +58,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=e28eb38eb">
+    <link rel="stylesheet" href="/assets/css/main.css?v=3c9c0a2ff">
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
       <style>
@@ -203,6 +203,26 @@
             <div class="grid__item">
               <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
                 <h2 class="archive__item-title no_toc" itemprop="headline">
+                  <a href="/planet/2020/12/tic-toc-in-kernel/" rel="permalink">在 Linux 内核中测试程序性能
+                  </a>
+                </h2>
+                <p class="page__meta">
+                  <span class="page__meta-date">
+                    <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                    <time datetime="2020-12-19T00:00:00+08:00">2020 年 12 月 19 日</time>
+                  </span>
+                  <span class="page__meta-sep"></span>
+                  <span class="page__meta-readtime">
+                    <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+                    8 分钟阅读
+                  </span>
+                </p>
+                <p class="archive__item-excerpt" itemprop="description">本学期，我担任了李诚老师编译原理课程的助教。在课程实验中，我们基于 LLVM 构建了一套编译系统，其中一个实验需要编写后端优化算法。为了评估学生们的优化代码，我们需要比较优化前后的代码（在这里是 LLVM IR）的性能。我们通过统计程序运行的时间来比较代码的性能，但是用户程序会受到内核调度。因为不是连续执行程序，...</p>
+              </article>
+            </div>
+            <div class="grid__item">
+              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                <h2 class="archive__item-title no_toc" itemprop="headline">
                   <a href="/planet/2020/08/keeping-account-with-beancount/" rel="permalink">使用 Beancount 进行记账并自动记录一卡通消费
                   </a>
                 </h2>
@@ -260,27 +280,6 @@
                   </span>
                 </p>
                 <p class="archive__item-excerpt" itemprop="description">nc 是什么？
-                </p>
-              </article>
-            </div>
-            <div class="grid__item">
-              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                <h2 class="archive__item-title no_toc" itemprop="headline">
-                  <a href="/planet/2019/08/NFS-intro/" rel="permalink">一个 NFS 的简介
-                  </a>
-                </h2>
-                <p class="page__meta">
-                  <span class="page__meta-date">
-                    <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
-                    <time datetime="2019-08-28T00:00:00+08:00">2019 年 8 月 28 日</time>
-                  </span>
-                  <span class="page__meta-sep"></span>
-                  <span class="page__meta-readtime">
-                    <i class="far fa-fw fa-clock" aria-hidden="true"></i>
-                    5 分钟阅读
-                  </span>
-                </p>
-                <p class="archive__item-excerpt" itemprop="description">NFS（网络文件系统，Network File System）是一个分布式的文件系统，可以用于在局域网中共享文件。它通常运用在 Unix 与类 Unix 操作系统中。对于 Linux 服务器之间的文件共享来说，NFS 相比于其他的方案（如 Samba）更加方便，性能也更好。对于应用程序来说，NFS 也是透明的。
                 </p>
               </article>
             </div>

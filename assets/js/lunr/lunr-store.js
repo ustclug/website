@@ -407,6 +407,12 @@ var store = [{
 "url": "https://lug.ustc.edu.cn/planet/2020/08/keeping-account-with-beancount/",
 "teaser": null
 },{
+"title": "在 Linux 内核中测试程序性能",
+"excerpt":"本学期，我担任了李诚老师编译原理课程的助教。在课程实验中，我们基于 LLVM 构建了一套编译系统，其中一个实验需要编写后端优化算法。为了评估学生们的优化代码，我们需要比较优化前后的代码（在这里是 LLVM IR）的性能。我们通过统计程序运行的时间来比较代码的性能，但是用户程序会受到内核调度。因为不是连续执行程序，所以受到调度造成的延迟会导致统计到的时间出现噪音，这些噪音可能会让测试结果不准确甚至影响到了同学们的分数。最开始，我想到是不是可以统计指令数来评估性能，打算用 perf stat 进行测试。然而，我们提供的实验环境基于虚拟机，VirtualBox 和 WSL 都没有实现相关的虚拟寄存器，要让同学们方便地使用该指令会比较困难，只得作罢。这时，我突然想到，内核线程可以不受到调度，那么使用内核线程是不是可以更精确的测量时间呢？于是我便开始了尝试。 注：由于原本目的是用于 LLVM IR，所以使用了 clang 来编译内核，没有这种需求可以完全无视 clang。 编写内核模块 超简单的内核模块编写方法 为了创建内核线程，我们可以构建一个内核模块，由它来执行相关的函数。构建一个基础的内核模块非常简单，这里我们 参考 The Linux Kernel Module Programming Guide： /* * hello_mod.c - The simplest kernel module. */ #include &lt;linux/module.h&gt; /* Needed by all modules */ #include &lt;linux/kernel.h&gt; /* Needed for KERN_INFO...","categories": ["Technology"],
+"tags": ["Benchmark","Kernel","LLVM"],
+"url": "https://lug.ustc.edu.cn/planet/2020/12/tic-toc-in-kernel/",
+"teaser": null
+},{
 "title": "2010年自由软件日（合肥站）",
 "excerpt":"2010 年 9 月 18 日在中国科大西区 3112 教室，中国科学技术大学 Linux User Group(USTC@LUG) 组织了以“人人为我，我为人人”为主题的自由软件日活动，本次活动得到了龙芯梦兰、龙芯俱乐部、中标软件、中科红旗、中国开源软件推进联盟等公司、开源社区，以及合肥工业大学，安徽大学等兄弟院校的大力支持。100 多名中国科大、安徽大学、合肥工业大学等高校的在校学生及校友以及合肥地区开源爱好者参加了本次活动。      活动由 LUG 协会现任会长王鹏主持，他首先对自由软件日合肥站的活动流程以及科大 LUG、合肥 LUG 的情况做了具体介绍。在 UBUNTU 创始人给中国开源爱好者的视频播放中，2010 年自由软件日合肥站的活动正式开幕了。      科大网络中心的张焕杰老师首先为大家带来了《Linux 在科大校园网络建设中的应用》的专题报告。张焕杰老师是科大 92 级计算系学生，后来留校在网络信息中心任职，主要工作之一是负责管理科大校园网，他也是国内当年有名的中科大 Linux 三剑客之一。张老师精彩的报告之后开始了休息以及游戏互动环节，在回答了组织方准备的关于自由软件和 Linux 的小问题后，同学们领取了丰厚的奖品。在这中间还穿插了中科红旗 Qomo1.0 社区版发布，中标软件体验有奖征文活动启示等环节，活动中气氛热烈。   休息之后是我们的自由主题演讲活动，一些同学做了开源软件使用相关的技术分享报告，同学们就一些常见问题进行了互动交流。   主题演讲活动之后，进行了现场短信投票，赵希明同学题为《Linux 下的日常工作和娱乐》的报告当选为当天最受欢迎的自由主题演讲。之后进行了抽奖环节，若干名参与者成为了当天的幸运观众，并获得了收音机，小玩具等奖品。活动从下午 2:30 一直持续到下午 6:00. 会后举行了 Linux User Dinner(LUD), 在 LUD 中，LUG 的志愿者们就我校 PXE 系统今后的发展，以及结合我校网络环境将要开发的项目进行了讨论与规划。                       ","categories": ["LUG活动"],
 "tags": ["USTC_LUG","SFD"],
@@ -813,6 +819,12 @@ var store = [{
 "excerpt":"本文首发于 https://charlesliu7.github.io/blackboard/2019/07/24/beancount/ 偶尔看到了复式记账这个概念，对精细记账的我而言很受用，选择 Beancount 这样的开源工具的原因莫过于账本数据完全由自己掌握，而不是被各大 APP 所保管。本文从一次个人实践的角度来说明一下复式记账的使用。 本篇文章是一个从零开始的个人实践记录，涵盖 文件组织 -&gt; 基本账本书写 -&gt; 爬取一卡通数据并自动记录，供同样使用 Beancount 的同学做参考，但此实践并不一定完全合乎其他人的使用习惯，如果有其它记录策略也是可以的。本文内容基于读者对复式记账和 Beancount 语法有一定了解的情况下撰写的，关于复式记账的概念和一些诸多基本功能介绍，可以参考阅读以下文章： 文本记账综述、复式记账开源工具比较 Beancount 复式记账（一）：为什么 开始！ 安装使用 Beancount 是一个 Python 实现的开源工具，在本地即可运行，首先从 PyPI 获取： pip install beancount fava 其中 beancount 是核心包，包含核心的命令行工具；fava 是网页可视化工具。 这里有一个fava 示例账本 ，对应的 Beancount 源代码可以在 Bitbucket 上下载。 本文的示例账本以及可视化可以在该仓库查看。 克隆该仓库，在命令行中使用 fava main.beancount。 $ fava main.beancount...","categories": ["USTC"],
 "tags": ["Beancount","eCard"],
 "url": "https://lug.ustc.edu.cn/planet/2020/08/keeping-account-with-beancount/",
+"teaser": null
+},{
+"title": "在 Linux 内核中测试程序性能",
+"excerpt":"本学期，我担任了李诚老师编译原理课程的助教。在课程实验中，我们基于 LLVM 构建了一套编译系统，其中一个实验需要编写后端优化算法。为了评估学生们的优化代码，我们需要比较优化前后的代码（在这里是 LLVM IR）的性能。我们通过统计程序运行的时间来比较代码的性能，但是用户程序会受到内核调度。因为不是连续执行程序，所以受到调度造成的延迟会导致统计到的时间出现噪音，这些噪音可能会让测试结果不准确甚至影响到了同学们的分数。最开始，我想到是不是可以统计指令数来评估性能，打算用 perf stat 进行测试。然而，我们提供的实验环境基于虚拟机，VirtualBox 和 WSL 都没有实现相关的虚拟寄存器，要让同学们方便地使用该指令会比较困难，只得作罢。这时，我突然想到，内核线程可以不受到调度，那么使用内核线程是不是可以更精确的测量时间呢？于是我便开始了尝试。 注：由于原本目的是用于 LLVM IR，所以使用了 clang 来编译内核，没有这种需求可以完全无视 clang。 编写内核模块 超简单的内核模块编写方法 为了创建内核线程，我们可以构建一个内核模块，由它来执行相关的函数。构建一个基础的内核模块非常简单，这里我们 参考 The Linux Kernel Module Programming Guide： /* * hello_mod.c - The simplest kernel module. */ #include &lt;linux/module.h&gt; /* Needed by all modules */ #include &lt;linux/kernel.h&gt; /* Needed for KERN_INFO...","categories": ["Technology"],
+"tags": ["Benchmark","Kernel","LLVM"],
+"url": "https://lug.ustc.edu.cn/planet/2020/12/tic-toc-in-kernel/",
 "teaser": null
 },{
 "title": "提问的智慧",
