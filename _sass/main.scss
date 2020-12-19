@@ -81,6 +81,14 @@ body {
   @import "content";
 }
 
+// Page related
+
+.page__related {
+  .archive__item-excerpt {
+    overflow-wrap: break-word;
+  }
+}
+
 // Left sidebar
 
 .sidebar {
