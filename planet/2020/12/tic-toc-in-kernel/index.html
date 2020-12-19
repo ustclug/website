@@ -11,6 +11,8 @@
     <!-- begin _includes/seo.html -->
     <title>在 Linux 内核中测试程序性能 - LUG @ USTC</title>
     <meta name="description" content="本学期，我担任了李诚老师编译原理课程的助教。在课程实验中，我们基于 LLVM 构建了一套编译系统，其中一个实验需要编写后端优化算法。为了评估学生们的优化代码，我们需要比较优化前后的代码（在这里是 LLVM IR）的性能。我们通过统计程序运行的时间来比较代码的性能，但是用户程序会受到内核调度。因为不是连续执行程序，所以受到调度造成的延迟会导致统计到的时间出现噪音，这些噪音可能会让测试结果不准确甚至影响到了同学们的分数。最开始，我想到是不是可以统计指令数来评估性能，打算用 perf stat 进行测试。然而，我们提供的实验环境基于虚拟机，VirtualBox 和 WSL 都没有实现相关的虚拟寄存器，要让同学们方便地使用该指令会比较困难，只得作罢。这时，我突然想到，内核线程可以不受到调度，那么使用内核线程是不是可以更精确的测量时间呢？于是我便开始了尝试。">
+    <meta name="author" content="gloit">
+    <meta property="article:author" content="gloit">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="zh_CN">
     <meta property="og:site_name" content="LUG @ USTC">
@@ -56,7 +58,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=3c9c0a2ff">
+    <link rel="stylesheet" href="/assets/css/main.css?v=591958b6f">
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
       <style>
@@ -146,8 +148,11 @@
       <div id="main" role="main">
         <div class="sidebar sticky">
           <div itemscope itemtype="https://schema.org/Person">
+            <div class="author__avatar">
+              <img src="https://secure.gravatar.com/avatar/c8743e2d4d6fd22a9fc8ce8a8138848d?s=256&d=identicon&r=g" alt="gloit" itemprop="image">
+            </div>
             <div class="author__content">
-              <h3 class="author__name" itemprop="name"></h3>
+              <h3 class="author__name" itemprop="name">gloit</h3>
             </div>
             <div class="author__urls-wrapper">
               <button class="btn btn--inverse">关注</button>
