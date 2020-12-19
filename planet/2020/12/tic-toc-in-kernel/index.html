@@ -21,7 +21,7 @@
     <meta property="og:description" content="本学期，我担任了李诚老师编译原理课程的助教。在课程实验中，我们基于 LLVM 构建了一套编译系统，其中一个实验需要编写后端优化算法。为了评估学生们的优化代码，我们需要比较优化前后的代码（在这里是 LLVM IR）的性能。我们通过统计程序运行的时间来比较代码的性能，但是用户程序会受到内核调度。因为不是连续执行程序，所以受到调度造成的延迟会导致统计到的时间出现噪音，这些噪音可能会让测试结果不准确甚至影响到了同学们的分数。最开始，我想到是不是可以统计指令数来评估性能，打算用 perf stat 进行测试。然而，我们提供的实验环境基于虚拟机，VirtualBox 和 WSL 都没有实现相关的虚拟寄存器，要让同学们方便地使用该指令会比较困难，只得作罢。这时，我突然想到，内核线程可以不受到调度，那么使用内核线程是不是可以更精确的测量时间呢？于是我便开始了尝试。">
     <meta property="og:image" content="https://lug.ustc.edu.cn/static/splash/galaxy-1.jpg">
     <meta property="article:published_time" content="2020-12-19T00:00:00+08:00">
-    <meta property="article:modified_time" content="2020-12-19T15:46:55+08:00">
+    <meta property="article:modified_time" content="2020-12-19T16:01:47+08:00">
     <link rel="canonical" href="https://lug.ustc.edu.cn/planet/2020/12/tic-toc-in-kernel/">
     <script type="application/ld+json">
       {
@@ -58,7 +58,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=87496ccdf">
+    <link rel="stylesheet" href="/assets/css/main.css?v=88099f5e2">
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
       <style>
@@ -74,8 +74,17 @@
         }
       </style>
     <![endif]-->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$','$'], ["\\(","\\)"]],
+      				displayMath: [['$$','$$'], ["\\[","\\]"]],
+      				processEscapes: true
+        }
+      }
+    </script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <!-- start custom head snippets -->
     <!-- insert favicons. use https://realfavicongenerator.net/ -->
     <!-- end custom head snippets -->
@@ -174,7 +183,7 @@
           <meta itemprop="headline" content="在 Linux 内核中测试程序性能">
           <meta itemprop="description" content="本学期，我担任了李诚老师编译原理课程的助教。在课程实验中，我们基于 LLVM 构建了一套编译系统，其中一个实验需要编写后端优化算法。为了评估学生们的优化代码，我们需要比较优化前后的代码（在这里是 LLVM IR）的性能。我们通过统计程序运行的时间来比较代码的性能，但是用户程序会受到内核调度。因为不是连续执行程序，所以受到调度造成的延迟会导致统计到的时间出现噪音，这些噪音可能会让测试结果不准确甚至影响到了同学们的分数。最开始，我想到是不是可以统计指令数来评估性能，打算用 perf stat 进行测试。然而，我们提供的实验环境基于虚拟机，VirtualBox 和 WSL 都没有实现相关的虚拟寄存器，要让同学们方便地使用该指令会比较困难，只得作罢。这时，我突然想到，内核线程可以不受到调度，那么使用内核线程是不是可以更精确的测量时间呢？于是我便开始了尝试。">
           <meta itemprop="datePublished" content="2020-12-19T00:00:00+08:00">
-          <meta itemprop="dateModified" content="2020-12-19T15:46:55+08:00">
+          <meta itemprop="dateModified" content="2020-12-19T16:01:47+08:00">
           <div class="page__inner-wrap">
             <section class="page__content" itemprop="text">
               <aside class="sidebar__right sticky">
@@ -354,30 +363,30 @@
                 <tbody>
                   <tr>
                     <td style="text-align: center">normal_time</td>
-                    <td style="text-align: center">\(2.11*10^{-1}\)</td>
-                    <td style="text-align: center">\(5.83*10^{-1}\)</td>
-                    <td style="text-align: center">\(3.68*10^{-1}\)</td>
-                    <td style="text-align: center">\(3.6*10^{-2}\)</td>
-                    <td style="text-align: center">\(5.83*10^{-1}\)</td>
-                    <td style="text-align: center">\(1.29*10^{-3}\)</td>
+                    <td style="text-align: center">$2.11*10^{-1}$</td>
+                    <td style="text-align: center">$5.83*10^{-1}$</td>
+                    <td style="text-align: center">$3.68*10^{-1}$</td>
+                    <td style="text-align: center">$3.6*10^{-2}$</td>
+                    <td style="text-align: center">$5.83*10^{-1}$</td>
+                    <td style="text-align: center">$1.29*10^{-3}$</td>
                   </tr>
                   <tr>
                     <td style="text-align: center">taskset_time</td>
-                    <td style="text-align: center">\(1.56*10^{-2}\)</td>
-                    <td style="text-align: center">\(2.11*10^{-1}\)</td>
-                    <td style="text-align: center">\(3.21*10^{-5}\)</td>
-                    <td style="text-align: center">\(8.15*10^{-1}\)</td>
-                    <td style="text-align: center">\(8.15*10^{-1}\)</td>
-                    <td style="text-align: center">\(2.4*10^{-2}\)</td>
+                    <td style="text-align: center">$1.56*10^{-2}$</td>
+                    <td style="text-align: center">$2.11*10^{-1}$</td>
+                    <td style="text-align: center">$3.21*10^{-5}$</td>
+                    <td style="text-align: center">$8.15*10^{-1}$</td>
+                    <td style="text-align: center">$8.15*10^{-1}$</td>
+                    <td style="text-align: center">$2.4*10^{-2}$</td>
                   </tr>
                   <tr>
                     <td style="text-align: center">tiktok</td>
-                    <td style="text-align: center">\(3.73*10^{-36}\)</td>
-                    <td style="text-align: center">\(6.31*10^{-19}\)</td>
-                    <td style="text-align: center">\(2.6*10^{-38}\)</td>
-                    <td style="text-align: center">\(4.11*10^{-43}\)</td>
-                    <td style="text-align: center">\(1.41*10^{-28}\)</td>
-                    <td style="text-align: center">\(2.24*10^{-4}\)</td>
+                    <td style="text-align: center">$3.73*10^{-36}$</td>
+                    <td style="text-align: center">$6.31*10^{-19}$</td>
+                    <td style="text-align: center">$2.6*10^{-38}$</td>
+                    <td style="text-align: center">$4.11*10^{-43}$</td>
+                    <td style="text-align: center">$1.41*10^{-28}$</td>
+                    <td style="text-align: center">$2.24*10^{-4}$</td>
                   </tr>
                 </tbody>
               </table>
@@ -397,30 +406,30 @@
                 <tbody>
                   <tr>
                     <td style="text-align: center">normal_time</td>
-                    <td style="text-align: center">\(4.04*10^{-35}\)</td>
-                    <td style="text-align: center">\(2.82*10^{-1}\)</td>
-                    <td style="text-align: center">\(3.05*10^{-31}\)</td>
-                    <td style="text-align: center">\(8.15*10^{-1}\)</td>
-                    <td style="text-align: center">\(5.83*10^{-1}\)</td>
-                    <td style="text-align: center">\(1.54*10^{-1}\)</td>
+                    <td style="text-align: center">$4.04*10^{-35}$</td>
+                    <td style="text-align: center">$2.82*10^{-1}$</td>
+                    <td style="text-align: center">$3.05*10^{-31}$</td>
+                    <td style="text-align: center">$8.15*10^{-1}$</td>
+                    <td style="text-align: center">$5.83*10^{-1}$</td>
+                    <td style="text-align: center">$1.54*10^{-1}$</td>
                   </tr>
                   <tr>
                     <td style="text-align: center">taskset_time</td>
-                    <td style="text-align: center">\(1.42*10^{-51}\)</td>
-                    <td style="text-align: center">\(3.64*10^{-2}\)</td>
-                    <td style="text-align: center">\(4.39*10^{-55}\)</td>
-                    <td style="text-align: center">\(5.39*10^{-1}\)</td>
-                    <td style="text-align: center">\(9.08*10^{-1}\)</td>
-                    <td style="text-align: center">\(2.11*10^{-1}\)</td>
+                    <td style="text-align: center">$1.42*10^{-51}$</td>
+                    <td style="text-align: center">$3.64*10^{-2}$</td>
+                    <td style="text-align: center">$4.39*10^{-55}$</td>
+                    <td style="text-align: center">$5.39*10^{-1}$</td>
+                    <td style="text-align: center">$9.08*10^{-1}$</td>
+                    <td style="text-align: center">$2.11*10^{-1}$</td>
                   </tr>
                   <tr>
                     <td style="text-align: center">tiktok</td>
-                    <td style="text-align: center">\(2.20*10^{-59}\)</td>
-                    <td style="text-align: center">\(4.39*10^{-55}\)</td>
-                    <td style="text-align: center">\(2.20*10^{-59}\)</td>
-                    <td style="text-align: center">\(2.11*10^{-1}\)</td>
-                    <td style="text-align: center">\(7.02*10^{-1}\)</td>
-                    <td style="text-align: center">\(2.11*10^{-1}\)</td>
+                    <td style="text-align: center">$2.20*10^{-59}$</td>
+                    <td style="text-align: center">$4.39*10^{-55}$</td>
+                    <td style="text-align: center">$2.20*10^{-59}$</td>
+                    <td style="text-align: center">$2.11*10^{-1}$</td>
+                    <td style="text-align: center">$7.02*10^{-1}$</td>
+                    <td style="text-align: center">$2.11*10^{-1}$</td>
                   </tr>
                 </tbody>
               </table>
