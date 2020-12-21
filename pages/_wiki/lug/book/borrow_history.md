@@ -22,8 +22,8 @@
 | 算法导论（第三版）                | 罗丽薇 | loliw AT ustclug.org          | 2020-09-13 | \-         | \-   |
 | 编译原理（第三版）陈意云 张昱     | 罗丽薇 | loliw AT ustclug.org          | 2020-09-13 | \-         | \-   |
 | 计算机网络-自顶向下方法（第七版） | 罗丽薇 | loliw AT ustclug.org          | 2020-09-13 | \-         | \-   |
-| 计算机系统概论（英文第二版）      | 余致远 | fishyu AT mail.ustc.edu.cn    | 2020-09-28 | \-         | \-   |
-| 机器学习实战                      | 余致远 | fishyu AT mail.ustc.edu.cn    | 2020-09-28 | \-         | \-   |
+| 计算机系统概论（英文第二版）      | 余致远 | fishyu AT mail.ustc.edu.cn    | 2020-09-28 | 2020-12-21 | \-   |
+| 机器学习实战                      | 余致远 | fishyu AT mail.ustc.edu.cn    | 2020-09-28 | 2020-12-21 | \-   |
 | 鸟哥的 Linux 私房菜 基础学习篇    | 王若妍 | wry2018zs AT mail.ustc.edu.cn | 2020-10-01 | \-         | \-   |
 
 ## 2019 年借阅记录
