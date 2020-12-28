@@ -365,6 +365,12 @@ var store = [{
 "url": "https://lug.ustc.edu.cn/news/2020/12/multitopic-party/",
 "teaser": null
 },{
+"title": "无主题小聚",
+"excerpt":"2020 年 12 月 27 日，USTC LUG 和 MSC 在西区 3C101 教室举办了本年第二次无主题小聚。 金泽文同学介绍了 Serverless Computing，他以一个生动的例子开篇，展示了 Serverless 的巨大优势，随后深入介绍了 Apache OpenWhisk 的具体实现和 Serverless 目前的局限性。 随后，古宜民同学介绍了 GRUB 和 Linux 启动修复，他从 GRUB 在 Linux 启动中的作用开始，讲解并演示了如何在 GRUB 启动失败时进行修复。 接下来，刘紫檀介绍了他近期参与搭建的 Verilog OJ 在线评测系统。 之后，袁一玮同学介绍了手机实现快充的原理，简述 USB-PD 协议的定义。 最后，明宇龙同学即兴发挥，分享了自己使用 AWS Lambda、Azure Function 和 Cloudflare Worker 的心得体会，介绍了自己 Serverless 架构的博客。...","categories": ["LUG活动"],
+"tags": [],
+"url": "https://lug.ustc.edu.cn/news/2020/12/multitopic-party/",
+"teaser": null
+},{
 "title": "Hello! LUG Planet",
 "excerpt":"欢迎大家来到 LUG Planet！这是一个刚刚被发现的新星球，百废待兴。本文是 LUG Planet 的说明书，在你入驻之前，不妨先驻足欣赏一下这片风景。😀 LUG Planet 是什么？ LUG Planet 是…… 由 USTCLUG 负责运营和管理的群体博客。 目标读者与参与者： USTCLUG 会员； 认同 USTCLUG 理念的同好； 希望积极参加 USTCLUG 线上活动的朋友。 主要话题为 USTCLUG 社团的活动覆盖范围： UNIX、Linux 及自由/开源软件； Windows, Microsoft 新技术； 信息安全； 这些技术与 USTC 的碰撞与融合。 LUG Planet 是精神上的 Linux 文摘 计划的延续。我们认可这个群策群力式的知识汇集的理念，但使用更方便和更自由的形式，从而鼓励大家能更积极地参与到这个项目中来。 订阅我们 你可以做一个默默潜水的读者，也可以在评论区与作者激辩，或者亲自成为写作者。但无论如何，你一定非常关注 LUG Planet 的动态。所以我们提供了多种方式确保你能得到及时的通知： RSS 订阅（推荐）。由 LUG...","categories": [],
 "tags": [],
@@ -775,6 +781,12 @@ var store = [{
 },{
 "title": "无主题小聚",
 "excerpt":"2020 年 12 月 13 日，USTCLUG 和 MSC 在西区 3A109 教室开展了本年度第一次无主题小聚活动。   明宇龙同学从介绍时代背景开始，表示了民用 CPU 核心数的增加和 GPU 计算的普及，并行变得越来越重要。他从异步和多进程开始，讲述了多进程和资源的概念、各种语言的多进程实现和其弊端，引出了线程、纤程和协程的概念。         之后由李文睿同学介绍 Grafana，一个能将服务器的运行状况可视化的软件。他以一个开源社区游戏为例，详细地讲述了如何使用 TIG 套件监视游戏的在线人数、服务器的运行状况等等信息。      陶柯宇同学介绍了如何使用 Electron 框架开发跨平台桌面应用程序，分享了他近期积累的相关经验。他从各种操作系统下有的图形库开始，引出了 Electron 基础的用法。同时，他结合自己之前做的一个项目，详细地为大家讲解了 Electron 的配置。      古宜民同学讲述了如何使用 Vivado 的 Debug 模式调试 Verilog 代码，分享了在 FPGA 开发方面的一些经验。      付佳伟同学讲述了静态网站的搭建，并且拿了 LUG 官网和几位同学的博客作为例子进行比较。      郑子涵同学通过两个程序示例介绍了 x86 和 arm64 在内存模型方面的差异。     ","categories": ["LUG活动"],
+"tags": [],
+"url": "https://lug.ustc.edu.cn/news/2020/12/multitopic-party/",
+"teaser": null
+},{
+"title": "无主题小聚",
+"excerpt":"2020 年 12 月 27 日，USTC LUG 和 MSC 在西区 3C101 教室举办了本年第二次无主题小聚。 金泽文同学介绍了 Serverless Computing，他以一个生动的例子开篇，展示了 Serverless 的巨大优势，随后深入介绍了 Apache OpenWhisk 的具体实现和 Serverless 目前的局限性。 随后，古宜民同学介绍了 GRUB 和 Linux 启动修复，他从 GRUB 在 Linux 启动中的作用开始，讲解并演示了如何在 GRUB 启动失败时进行修复。 接下来，刘紫檀介绍了他近期参与搭建的 Verilog OJ 在线评测系统。 之后，袁一玮同学介绍了手机实现快充的原理，简述 USB-PD 协议的定义。 最后，明宇龙同学即兴发挥，分享了自己使用 AWS Lambda、Azure Function 和 Cloudflare Worker 的心得体会，介绍了自己 Serverless 架构的博客。...","categories": ["LUG活动"],
 "tags": [],
 "url": "https://lug.ustc.edu.cn/news/2020/12/multitopic-party/",
 "teaser": null
