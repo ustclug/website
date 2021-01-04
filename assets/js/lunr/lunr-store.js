@@ -1020,7 +1020,7 @@ var store = [{
 "teaser": null
 },{
 "title": "Join us",
-"excerpt":"加入 LUG   如果你是中国科学技术大学校内学生，欢迎通过学校统一组织的社团招新流程注册成为 LUG 会员。   在非招新活动期间，你也可以将自己的 真实姓名，学号，性别，联系电话，邮箱 通过校内邮箱发送至我们（详见联系我们）登记注册。   提示：如果有加入科大「第二课堂」平台中的 LUG 社团的需要，请在邮件中特别注明。   在登记信息后，你就会收到我们每次活动的短信通知，也欢迎通过以下方式与我们取得联系。   与 LUG 取得联系   详见联系我们   参与 LUG 活动   详见LUG 活动   参与 LUG 项目           在我们的邮件列表进行交流。            在LUG Gitlab 与 GitHub 中为 LUG 项目贡献代码。            联系管理员以加入服务器维护小组。       我们的 issue tracker: https://github.com/ustclug/discussions  ","categories": [],
+"excerpt":"加入 LUG   如果你是中国科学技术大学校内学生，欢迎通过学校统一组织的社团招新流程注册成为 LUG 会员。   在非招新活动期间，你也可以将自己的 真实姓名，学号，性别，联系电话，邮箱 通过校内邮箱发送至我们（详见联系我们）登记注册。   提示：如果有加入科大「第二课堂」平台中的 LUG 社团的需要，请在邮件中特别注明。   在登记信息后，你就会收到我们每次活动的短信通知，也欢迎通过以下方式与我们取得联系。   与 LUG 取得联系   详见联系我们   参与 LUG 活动   详见 LUG 活动   参与 LUG 项目           在我们的邮件列表进行交流。            在 LUG Gitlab 与 GitHub 中为 LUG 项目贡献代码。            联系管理员以加入服务器维护小组。       我们的 issue tracker: https://github.com/ustclug/discussions  ","categories": [],
 "tags": [],
 "url": "https://lug.ustc.edu.cn/wiki/lug/contribute/",
 "teaser": null
