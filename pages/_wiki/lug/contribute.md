@@ -23,10 +23,12 @@
 
 ## 参与 LUG 项目
 
-- 在我们的[邮件列表](mailinglist.md)进行交流。
+你可以：
 
-- 在 [LUG Gitlab](https://git.lug.ustc.edu.cn/) 与 [GitHub](https://github.com/ustclug) 中为 LUG 项目贡献代码。
+- 在我们的[邮件列表](mailinglist.md)进行交流
 
-- 联系管理员以加入服务器维护小组。
+- 在 [LUG GitLab](https://git.lug.ustc.edu.cn/) 与 [GitHub](https://github.com/ustclug) 中为 LUG 项目贡献代码
+
+- 联系管理员以加入服务器维护小组
 
 我们的 issue tracker: <https://github.com/ustclug/discussions>
