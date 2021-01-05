@@ -18,7 +18,7 @@ title                    : "LUG @ USTC"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "USTCLUG"
-description              : "Under construction!"
+description              : "LUG @ USTC 新版网站"
 url                      : "https://lug.ustc.edu.cn"
 static_url               : "/static"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
