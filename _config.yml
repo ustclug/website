@@ -192,7 +192,7 @@ sass:
 
 
 # Outputting
-permalink: /:categories/:year/:month/:title/
+permalink: /:categories/:year/:month/:day/:title/
 pagination: # jekyll-paginate-v2 settings
   enabled: true
   per_page: 5
@@ -213,10 +213,10 @@ collections:
     permalink: /:collection/:path/
   news:
     output: true
-    permalink: /:collection/:year/:month/:title/
+    permalink: /:collection/:year/:month/:day/:title/
   planet:
     output: true
-    permalink: /:collection/:year/:month/:title/
+    permalink: /:collection/:year/:month/:day/:title/
 
 
 relative_links:
