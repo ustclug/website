@@ -7,7 +7,7 @@ categories:
 tags: []
 ---
 
-2020 年 12 月 27 日，USTC LUG 和 MSC 在西区 3C101 教室举办了本年第二次无主题小聚。
+2020 年 12 月 27 日，USTC LUG 和 MSC 在西区 3C101 教室举办了本年度第二次无主题小聚。
 
 金泽文同学介绍了 Serverless Computing，他以一个生动的例子开篇，展示了 Serverless 的巨大优势，随后深入介绍了 Apache OpenWhisk 的具体实现和 Serverless 目前的局限性。
 
