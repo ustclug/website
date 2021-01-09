@@ -1,0 +1,474 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.21.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="zh" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <!-- begin _includes/seo.html -->
+    <title>Hello! LUG Planet - LUG @ USTC</title>
+    <meta name="description" content="欢迎大家来到 LUG Planet！这是一个刚刚被发现的新星球，百废待兴。本文是 LUG Planet 的说明书，在你入驻之前，不妨先驻足欣赏一下这片风景。😀">
+    <meta name="author" content="USTCLUG">
+    <meta property="article:author" content="USTCLUG">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="LUG @ USTC">
+    <meta property="og:title" content="Hello! LUG Planet">
+    <meta property="og:url" content="https://lug.ustc.edu.cn/planet/2018/08/hello-lug-planet/">
+    <meta property="og:description" content="欢迎大家来到 LUG Planet！这是一个刚刚被发现的新星球，百废待兴。本文是 LUG Planet 的说明书，在你入驻之前，不妨先驻足欣赏一下这片风景。😀">
+    <meta property="og:image" content="https://lug.ustc.edu.cn/static/splash/galaxy-1.jpg">
+    <meta property="article:published_time" content="2018-08-07T00:00:00+08:00">
+    <meta property="article:modified_time" content="2020-11-09T14:22:35+08:00">
+    <link rel="canonical" href="https://lug.ustc.edu.cn/planet/2018/08/hello-lug-planet/">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+      
+          "@type": "Person",
+          "name": "USTCLUG",
+          "url": "https://lug.ustc.edu.cn/"
+      
+      }
+    </script>
+    <!-- end _includes/seo.html -->
+    <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="LUG @ USTC Feed">
+    <!-- https://t.co/dKP3o1e -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="57x57" href="/static/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/static/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/static/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/static/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/static/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/static/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/static/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/static/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/static/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/static/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/static/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#f3f6f6">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#f3f6f6">
+    <script>
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+    </script>
+    <!-- For all browsers -->
+    <link rel="stylesheet" href="/assets/css/main.css?v=16c38bc31">
+    <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
+    <!--[if IE]>
+      <style>
+        /* old IE unsupported flexbox fixes */
+        .greedy-nav .site-title {
+          padding-right: 3em;
+        }
+        .greedy-nav button {
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 100%;
+        }
+      </style>
+    <![endif]-->
+    <!-- start custom head snippets -->
+    <!-- insert favicons. use https://realfavicongenerator.net/ -->
+    <!-- end custom head snippets -->
+  </head>
+  <body class="layout--single">
+    <nav class="skip-links">
+      <h2 class="screen-reader-text">跳转链接</h2>
+      <ul>
+        <li><a href="#site-nav" class="screen-reader-shortcut">转到主导航栏</a></li>
+        <li><a href="#main" class="screen-reader-shortcut">转到内容</a></li>
+        <li><a href="#footer" class="screen-reader-shortcut">转到底部</a></li>
+      </ul>
+    </nav>
+    <!--[if lt IE 9]>
+      <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+    <![endif]-->
+    <div class="masthead">
+      <div class="masthead__inner-wrap">
+        <div class="masthead__menu">
+          <nav id="site-nav" class="greedy-nav">
+            <a class="site-logo" href="/"><img src="/static/lug-penguin.png" alt=""></a>
+            <a class="site-title" href="/">
+              LUG @ USTC
+            </a>
+            <ul class="visible-links">
+              <li class="masthead__menu-item">
+                <a href="/wiki/"><i class="fad fa-lg fa-fw fa-star-shooting"></i> Wiki</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="/news/"><i class="fad fa-lg fa-fw fa-newspaper"></i> News</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="/planet/"><i class="fad fa-lg fa-fw fa-planet-ringed fa-swap-opacity"></i> Planet</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="https://github.com/ustclug"><i class="fab fa-lg fa-fw fa-github"></i> GitHub</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="https://mirrors.ustc.edu.cn/"><i class="fad fa-lg fa-fw fa-server"></i> Mirrors</a>
+              </li>
+            </ul>
+            <button class="greedy-nav__toggle hidden" type="button">
+              <span class="visually-hidden">切换菜单</span>
+              <div class="navicon"></div>
+            </button>
+            <ul class="hidden-links hidden"></ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="initial-content">
+      <div class="page__hero--overlay"
+  style=" background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/static/splash/galaxy-1.jpg');"
+>
+        <div class="wrapper">
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            Hello! LUG Planet
+          </h1>
+          <p class="page__meta">
+            <span class="page__meta-date">
+              <i class="far fa-calendar-alt" aria-hidden="true"></i>
+              <time datetime="2018-08-07T00:00:00+08:00">2018 年 8 月 7 日</time>
+            </span>
+            <span class="page__meta-sep"></span>
+            <span class="page__meta-readtime">
+              <i class="far fa-clock" aria-hidden="true"></i>
+              6 分钟阅读
+            </span>
+          </p>
+        </div>
+      </div>
+      <div id="main" role="main">
+        <div class="sidebar sticky">
+          <div itemscope itemtype="https://schema.org/Person">
+            <div class="author__avatar">
+              <img src="https://secure.gravatar.com/avatar/94c03bc620ea2cf7dc239ac0535cad8e?s=256&d=identicon&r=g" alt="USTCLUG" itemprop="image">
+            </div>
+            <div class="author__content">
+              <h3 class="author__name" itemprop="name">USTCLUG</h3>
+              <div class="author__bio" itemprop="description">
+                <p>中国科学技术大学 Linux 用户协会</p>
+              </div>
+            </div>
+            <div class="author__urls-wrapper">
+              <button class="btn btn--inverse">关注</button>
+              <ul class="author__urls social-icons">
+                <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+                  <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">USTC</span>
+                </li>
+                <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+              </ul>
+            </div>
+          </div>
+        </div>
+        <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+          <meta itemprop="headline" content="Hello! LUG Planet">
+          <meta itemprop="description" content="欢迎大家来到 LUG Planet！这是一个刚刚被发现的新星球，百废待兴。本文是 LUG Planet 的说明书，在你入驻之前，不妨先驻足欣赏一下这片风景。😀">
+          <meta itemprop="datePublished" content="2018-08-07T00:00:00+08:00">
+          <meta itemprop="dateModified" content="2020-11-09T14:22:35+08:00">
+          <div class="page__inner-wrap">
+            <section class="page__content" itemprop="text">
+              <aside class="sidebar__right sticky">
+                <nav class="toc">
+                  <header>
+                    <h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4>
+                  </header>
+                  <ul class="toc__menu">
+                    <li><a href="#lug-planet-是什么">LUG Planet 是什么？</a></li>
+                    <li><a href="#订阅我们">订阅我们</a></li>
+                    <li><a href="#运作方式">运作方式</a>
+                      <ul>
+                        <li><a href="#作者">作者</a></li>
+                        <li><a href="#编辑">编辑</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#投稿标准与类型">投稿标准与类型</a></li>
+                    <li><a href="#联系方式">联系方式</a></li>
+                  </ul>
+                </nav>
+              </aside>
+              <p>欢迎大家来到 LUG Planet！这是一个刚刚被发现的新星球，百废待兴。本文是 LUG Planet 的说明书，在你入驻之前，不妨先驻足欣赏一下这片风景。😀</p>
+              <h2 id="lug-planet-是什么">LUG Planet 是什么？</h2>
+              <p>LUG Planet 是……</p>
+              <ul>
+                <li>由 USTCLUG 负责运营和管理的<strong>群体博客</strong>。</li>
+                <li>目标读者与参与者：
+                  <ol>
+                    <li>USTCLUG 会员；</li>
+                    <li>认同 USTCLUG 理念的同好；</li>
+                    <li>希望积极参加 USTCLUG 线上活动的朋友。</li>
+                  </ol>
+                </li>
+                <li>主要话题为 USTCLUG 社团的活动覆盖范围：
+                  <ol>
+                    <li>UNIX、Linux 及自由/开源软件；</li>
+                    <li>Windows, Microsoft 新技术；</li>
+                    <li>信息安全；</li>
+                    <li>这些技术与 USTC 的碰撞与融合。</li>
+                  </ol>
+                </li>
+              </ul>
+              <p>LUG Planet 是精神上的 <a href="/wiki/linux_digest">Linux 文摘</a> 计划的延续。我们认可这个群策群力式的知识汇集的理念，但使用更方便和更自由的形式，从而鼓励大家能更积极地参与到这个项目中来。</p>
+              <h2 id="订阅我们">订阅我们</h2>
+              <p>你可以做一个默默潜水的读者，也可以在评论区与作者激辩，或者亲自成为写作者。但无论如何，你一定非常关注 LUG Planet 的动态。所以我们提供了多种方式确保你能得到及时的通知：</p>
+              <ul>
+                <li><strong>RSS 订阅</strong>（推荐）。由 LUG Planet 本身提供的服务，最完善且及时；</li>
+                <li><strong>QQ 公众号</strong>。QQ 号：2786229166；</li>
+                <li><strong>微信公众号</strong>。ID：ustclug；</li>
+                <li><strong>Telegram 频道</strong>。邀请链接：<a href="https://t.me/lug_planet">https://t.me/lug_planet</a>。</li>
+              </ul>
+              <p>免责声明：我们可能不会将所有动态都公布在这些信息渠道上。</p>
+              <p>如果你想“共襄盛举”，加入写作者的行列，就请仔细阅读下面的内容，确保我们达成共识～</p>
+              <h2 id="运作方式">运作方式</h2>
+              <p>作为一个群体博客，LUG Planet 严重依赖于<strong>各位作者的辛勤劳动</strong>，没有内容，博客将不能称为博客。虽然为时尚早，但请允许我在此提前表示感谢！ 🙂</p>
+              <p>在 LUG Planet 上，主要有两种角色类型：作者和编辑。下面我们详细介绍这两类角色的职责。如果你不认可其中的某些条款，请与我们联络并陈述理由。</p>
+              <p>（其实还有“牛顿”——运维人员，不过就让他们继续呆在幕后吧～）</p>
+              <h3 id="作者">作者</h3>
+              <p>任何人都可以成为作者！我们不限制你的身份，无论你是否是 USTC 的学生、校友、老师，只要你认同 USTCLUG 的理念，我们就欢迎你的来稿。</p>
+              <p>参与的方法很简单，只需<strong>在本站 <a href="https://planet.ustclug.org/wp-login.php?action=register">注册</a> 成为用户</strong>即可。注册成功后，你就是我们的“签约作者”了。:-)</p>
+              <p>作为一个作者，你会得到一个 LUG Planet 的特许通行证——WordPress 帐号。通过这个帐号，你可以自由地编辑你的文章，并提交给编辑进行审核，如果审核通过，恭喜，你的文章就成功发布了！</p>
+              <p><strong>（在未来我们会根据反馈定期对文章进行评选，优秀作品的作者有机会得到我们的奖品哦~）</strong></p>
+              <p>与此同时，作者应该承担如下责任：</p>
+              <ol>
+                <li>遵守 <a href="/wiki/lug/services/rules">LUG 网络服务总则</a>；</li>
+                <li>对内容的真实性、有效性和合法性负责；</li>
+                <li>配合编辑对稿件质量进行提升。</li>
+              </ol>
+              <p>发布后，我们鼓励作者根据读者的评论持续改进文章质量。</p>
+              <p>任何作品的著作权属于原作者，但如果你想在 LUG Planet 这个平台上发布作品，需要同意：</p>
+              <ol>
+                <li>USTCLUG 可以对这些内容进行再分发，即可以在 LUG Planet 及其他 LUG 官方信息渠道（包括但不限于 QQ 空间、Telegram 频道等）重发布；</li>
+                <li>USTCLUG 可以对这些内容进行微小修改。我们不会改变文意，大概是帮助你修改一些错别字和术语大小写等等细枝末节的问题；</li>
+                <li>USTCLUG 可以使用 USTCLUG 的名义对这些作品进行宣传；</li>
+                <li>文章发布以“现状”发布。不同版本的同一作品，其授权许可应该是互相独立的。在 LUG Planet 上发布作品就代表你同意：即使未来变更作品的许可协议，已被发布的版本将仍然按原有协议许可给 USTCLUG 展示或以上述被提及的方式继续使用。在未作出特别陈述的情况下，在 LUG Planet 上编辑你撰写的已经发布的文章默认继续使用上一个版本的许可协议。（简单说，就是一旦你的文章被发布，就无法撤回了。但你有权选择将新版本的文章不授权给 LUG Planet 使用。）</li>
+              </ol>
+              <p>为了方便起见，除了这些条款，你应该允许你的作品在 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 (国际)</a> 协议下发布，同时同意上面的附加条款。这是因为我们不是律师，所以选择一个已经写好的许可证书。</p>
+              <p>这里需要提醒一下，虽然文章的版权仍然属于原作者，但发布与否是由编辑决定的。如果编辑认定你多次恶意提交文章，你的帐号将可能被永久封禁。注册不易，且行且珍惜。</p>
+              <h3 id="编辑">编辑</h3>
+              <ol>
+                <li>审核评论及垃圾评论清理；</li>
+                <li>审核稿件是否适合发布在 LUG Planet 上；</li>
+                <li>在能力范围内，协助作者确认发布该文章是合法的（但不提供任何担保）；</li>
+                <li>在能力范围内，协助作者改进文章质量。</li>
+              </ol>
+              <h2 id="投稿标准与类型">投稿标准与类型</h2>
+              <p>为了鼓励大家能积极投稿而不要过多地考虑质量问题，我们设立的标准非常宽松：</p>
+              <ol>
+                <li>合法；</li>
+                <li>内容长度不少于三句话；</li>
+                <li>使用简体中文（汉语普通话），正确使用标点符号；</li>
+                <li>语句通顺，正确输入专有名词的大小写，不故意欺骗读者；</li>
+                <li>符合本博客的活动主题。</li>
+              </ol>
+              <p>我们特别欢迎以下类型投稿：</p>
+              <ul>
+                <li>小聚话题的延伸</li>
+                <li>折腾的心得体会</li>
+                <li>自由/开源软件教程</li>
+                <li>有趣的自由/开源软件的推介</li>
+                <li>通俗易懂的技术内幕</li>
+              </ul>
+              <p>但如果你要长篇连载（连载篇数大于等于 3），那么请向编辑们证明你能完结这个系列！</p>
+              <p>上面说得可能有些抽象，下面举几个例子吧。当然，不限于这些例子。</p>
+              <ul>
+                <li>你是小聚的主讲人。讲完后意犹未尽，那么你可以在这里进一步阐述；</li>
+                <li>你是小聚的听众之一。听完后意犹未尽，那么你可以在这里发表你的看法并进行延伸讨论；</li>
+                <li>你是 Linux 新手，不管是安装还是维护 Linux 都有了自己的独特的心得和体会，那么我们也欢迎你在这里发布；</li>
+                <li>你解决了 Linux 在某种硬件上的兼容性问题，而在互联网的其他地方并不能找到解决方案，那么我们特别欢迎你在这里发布；</li>
+                <li>你对某种 Microsoft 新技术有一定了解，那么我们欢迎你在这里向大家介绍。</li>
+              </ul>
+              <p>标准很宽松，话虽这么说，但我们仍然有“禁区”。下面这些话题是我们认为不适宜的：</p>
+              <ol>
+                <li>过偏过难的技术向文章
+                  <ul>
+                    <li>过于专门的文章我们也许无力审核</li>
+                    <li>读者面过于狭窄，且可能与 LUG Planet 目标读者重叠较小，发布在 LUG Planet 上“性价比”较低</li>
+                  </ul>
+                </li>
+                <li>业界资讯
+                  <ul>
+                    <li>这类文章时效性强，与更偏向于积累知识的 LUG Planet 不太搭调</li>
+                    <li>我们认为这类文章有更好的资讯站点</li>
+                  </ul>
+                </li>
+                <li>商业广告及赞助内容
+                  <ul>
+                    <li>USTCLUG 是一个不营利的学生社团</li>
+                  </ul>
+                </li>
+                <li>与 LUG 主题没有任何关系的内容
+                  <ul>
+                    <li>包括但不限于新式永动机设计、大陆漂移学说不成立的分析、相对论错误的第 114514 种证明</li>
+                    <li>编辑和读者对这些内容都不感兴趣，所以不能发布</li>
+                  </ul>
+                </li>
+                <li>其他任何编辑认为不适宜的内容</li>
+              </ol>
+              <h2 id="联系方式">联系方式</h2>
+              <p>如果你有任何有关文章发表上的问题、或任何对 LUG Planet 发展上的建议，请立即与我们联络。联系邮箱：<a href="mailto:planet@ustclug.org">planet@ustclug.org</a>。</p>
+              <p>目前 LUG Planet 不知道谁在负责 😥</p>
+            </section>
+            <footer class="page__meta">
+              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-11-09">2020 年 11 月 9 日</time></p>
+            </footer>
+            <section class="page__share">
+              <h4 class="page__share-title">分享</h4>
+              <a href="https://twitter.com/intent/tweet?text=Hello%21+LUG+Planet%20https%3A%2F%2Flug.ustc.edu.cn%2Fplanet%2F2018%2F08%2Fhello-lug-planet%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flug.ustc.edu.cn%2Fplanet%2F2018%2F08%2Fhello-lug-planet%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+              <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Flug.ustc.edu.cn%2Fplanet%2F2018%2F08%2Fhello-lug-planet%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+            </section>
+            <nav class="pagination">
+              <a href="#" class="pagination--pager disabled">上一页</a>
+              <a href="/planet/2018/08/USTC-Linux-user-guide/" class="pagination--pager" title="USTC Linux 用户生存指南
+">下一页</a>
+            </nav>
+          </div>
+        </article>
+        <div class="page__related">
+          <h4 class="page__related-title">猜您还喜欢</h4>
+          <div class="grid__wrapper">
+            <div class="grid__item">
+              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                <h2 class="archive__item-title no_toc" itemprop="headline">
+                  <a href="/planet/2020/12/tic-toc-in-kernel/" rel="permalink">在 Linux 内核中测试程序性能
+                  </a>
+                </h2>
+                <p class="page__meta">
+                  <span class="page__meta-date">
+                    <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                    <time datetime="2020-12-19T00:00:00+08:00">2020 年 12 月 19 日</time>
+                  </span>
+                  <span class="page__meta-sep"></span>
+                  <span class="page__meta-readtime">
+                    <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+                    8 分钟阅读
+                  </span>
+                </p>
+                <p class="archive__item-excerpt" itemprop="description">本学期，我担任了李诚老师编译原理课程的助教。在课程实验中，我们基于 LLVM 构建了一套编译系统，其中一个实验需要编写后端优化算法。为了评估学生们的优化代码，我们需要比较优化前后的代码（在这里是 LLVM IR）的性能。我们通过统计程序运行的时间来比较代码的性能，但是用户程序会受到内核调度。因为不是连续执行程序，...</p>
+              </article>
+            </div>
+            <div class="grid__item">
+              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                <h2 class="archive__item-title no_toc" itemprop="headline">
+                  <a href="/planet/2020/08/keeping-account-with-beancount/" rel="permalink">使用 Beancount 进行记账并自动记录一卡通消费
+                  </a>
+                </h2>
+                <p class="page__meta">
+                  <span class="page__meta-date">
+                    <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                    <time datetime="2020-08-06T00:00:00+08:00">2020 年 8 月 6 日</time>
+                  </span>
+                  <span class="page__meta-sep"></span>
+                  <span class="page__meta-readtime">
+                    <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+                    9 分钟阅读
+                  </span>
+                </p>
+                <p class="archive__item-excerpt" itemprop="description">本文首发于 https://charlesliu7.github.io/blackboard/2019/07/24/beancount/
+                </p>
+              </article>
+            </div>
+            <div class="grid__item">
+              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                <h2 class="archive__item-title no_toc" itemprop="headline">
+                  <a href="/planet/2019/09/raspberry-4/" rel="permalink">【译稿】树莓派 4 评测与基准测试：与树莓派 3B+ 相比的改进
+                  </a>
+                </h2>
+                <p class="page__meta">
+                  <span class="page__meta-date">
+                    <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                    <time datetime="2019-09-17T00:00:00+08:00">2019 年 9 月 17 日</time>
+                  </span>
+                  <span class="page__meta-sep"></span>
+                  <span class="page__meta-readtime">
+                    <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+                    8 分钟阅读
+                  </span>
+                </p>
+                <p class="archive__item-excerpt" itemprop="description">原文地址：https://ibugone.com/blog/2019/09/raspberry-pi-4-review-benchmark/，作者为 @iBug 同学。以下为翻译部分。
+                </p>
+              </article>
+            </div>
+            <div class="grid__item">
+              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                <h2 class="archive__item-title no_toc" itemprop="headline">
+                  <a href="/planet/2019/09/how-to-use-nc/" rel="permalink">nc 是什么？
+                  </a>
+                </h2>
+                <p class="page__meta">
+                  <span class="page__meta-date">
+                    <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                    <time datetime="2019-09-16T00:00:00+08:00">2019 年 9 月 16 日</time>
+                  </span>
+                  <span class="page__meta-sep"></span>
+                  <span class="page__meta-readtime">
+                    <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+                    2 分钟阅读
+                  </span>
+                </p>
+                <p class="archive__item-excerpt" itemprop="description">nc 是什么？
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+        <!-- end custom footer snippets -->
+        <div class="footer-row">
+          <div class="footer-block footer__about">
+            <p>中国科学技术大学 Linux 用户协会是由中国科学技术大学在校的 GNU/Linux 爱好者发起并组成的团体，旨在联合科大的 GNU/Linux
+              使用者，搭建信息交流共享的平台，宣传自由软件的价值，提高自由软件社区文化氛围，推广自由软件的应用。</p>
+          </div>
+          <div class="footer-block footer__extras">
+            <div class="footer__contact">
+              <ul>
+                <li>
+                  <a href="/wiki/intro/"><i class="fad fa-fw fa-address-card"></i> 关于我们</a>
+                </li>
+                <li>
+                  <a href="/wiki/lug/contact/"><i class="fas fa-fw fa-phone-alt"></i> 联系我们</a>
+                </li>
+                <li>
+                  <a href="/wiki/lug/contribute/"><i class="fad fa-fw fa-users"></i> 加入我们</a>
+                </li>
+                <li>
+                  <a href="/feed/"><i class="fad fa-fw fa-rss" style="--fa-secondary-opacity: 0.6;"></i> RSS 订阅</a>
+                </li>
+                <li>
+                  <a href="https://github.com/ustclug/website"><i class="fab fa-fw fa-github"></i> 本站仓库</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__logo">
+              <div class="footer__logo-image">
+                <img src="https://ftp.lug.ustc.edu.cn/misc/logo-white.svg" />
+              </div>
+              <div class="footer__logo-text">
+                <!-- a href="http://www.beian.miit.gov.cn" target="_blank">皖ICP备05002528号</a -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="/assets/js/main.min.js"></script>
+    <img src="/static/USTC_logo.svg" style="position: fixed; bottom: -320px; left: -200px; opacity: 0.1; z-index: -100;" />
+  </body>
+</html>
