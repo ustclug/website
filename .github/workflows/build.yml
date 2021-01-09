@@ -57,6 +57,9 @@ jobs:
         git clone --depth=1 --branch=gh-pages --single-branch --no-checkout \
           "https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" \
           _site
+    - name: Check site with Jekyll Doctor
+      run: |
+        bundle exec jekyll doctor --trace --profile
     - name: Build site
       run: |
         bundle exec jekyll build --trace --profile
