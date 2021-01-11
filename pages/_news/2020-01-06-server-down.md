@@ -22,9 +22,9 @@ tags: []
 - 主页 (wiki)：[https://lug.ustc.edu.cn/](https://lug.ustc.edu.cn/)
 - LUG FTP：[https://ftp.lug.ustc.edu.cn/](https://ftp.lug.ustc.edu.cn/)
 - 反向代理：\*.proxy.ustclug.org
-- 网络加速服务：vpn.ustclug.org
-- VPN 在线申请系统：[https://getvpn.ustclug.org/](https://getvpn.ustclug.org/)
-- 轻量级网络加速服务：[https://light.ustclug.org/](https://light.ustclug.org/)
+- 校内网络加速服务
+- 校内 VPN 在线申请系统
+- 校内轻量级网络加速服务
 - 服务器统一认证：ldap.ustclug.org
 - 内网 VPN
 - Ganglia 监控：[https://status.ustclug.org/](https://status.ustclug.org/)

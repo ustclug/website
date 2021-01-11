@@ -32,9 +32,9 @@ tags: []
 从数据备份中恢复数据并没有计划中的这么一帆风顺，我们仍在努力恢复受影响的各项服务，接下来的工作计划是按照以下顺序继续恢复服务：
 
 - 反向代理：\*.proxy.ustclug.org
-- 网络加速服务：vpn.ustclug.org
-- VPN 在线申请系统：[https://getvpn.ustclug.org/](https://getvpn.ustclug.org/)
-- 轻量级网络加速服务：[https://light.ustclug.org/](https://light.ustclug.org/)
+- 网络加速服务
+- VPN 在线申请系统
+- 轻量级网络加速服务
 
 给您带来的不便敬请谅解。
 
@@ -51,12 +51,12 @@ tags: []
 以下服务因为此事件暂时不能正常运行，正在抢修中：
 
 - 代码托管平台：[https://git.ustclug.org/](https://git.ustclug.org/) （已恢复）
-- 网络加速服务：vpn.ustclug.org
+- 网络加速服务
 - 防污染 DNS
 - 主页 (wiki)：[https://lug.ustc.edu.cn/](https://lug.ustc.edu.cn/) （已恢复）
 - 反向代理：\*.proxy.ustclug.org （已恢复）
-- VPN 在线申请系统：[https://getvpn.ustclug.org/](https://getvpn.ustclug.org/)
-- 轻量级网络加速服务：[https://light.ustclug.org/](https://light.ustclug.org/)
+- VPN 在线申请系统
+- 轻量级网络加速服务
 - 服务器统一认证：ldap.ustclug.org
 - 内网 VPN
 - LUG FTP：[https://ftp.lug.ustc.edu.cn/](https://ftp.lug.ustc.edu.cn/) （已恢复）

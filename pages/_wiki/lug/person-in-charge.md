@@ -40,8 +40,8 @@
 | 邮件列表     | [LUG 邮件列表](https://lug.ustc.edu.cn/wiki/lug/mailinglist) | stephen, yifan                 |
 | SNS          | 人人, G+, etc                                                | **hosiet**                     |
 | FTP          | https://ftp.ustclug.org/                                     | hosiet, yifan                  |
-| 网络加速服务 | https://getvpn.ustclug.org/                                  | yifan                          |
-| freeshell    | [VPS for USTCers](http://blog.ustc.edu.cn/freeshell)         | **alkaid**, zsj, cuihao, yifan |
+| 网络加速服务 |                                                              | yifan                          |
+| freeshell    |                                                              | **alkaid**, zsj, cuihao, yifan |
 | gitlab       | [类似 GitHub 的代码托管服务](https://git.lug.ustc.edu.cn/)   | **knight**, yifan              |
 | DNS          | LUG 权威 DNS 服务器                                          | **roy**                        |
 | 防污染 DNS   | LUG 自建的防污染 DNS 服务器                                  | **yifan**                      |
