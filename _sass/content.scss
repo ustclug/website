@@ -1,5 +1,9 @@
 // This file is imported within a { .page__content } block
 
+a {
+  overflow-wrap: break-word;
+}
+
 h1 {
   font-size: 2em;
   margin-top: 2em;
@@ -132,9 +136,4 @@ table {
 
 li p {
   margin-bottom: 0;
-}
-
-a {
-  word-break: break-word;
-  word-wrap: break-word;
 }
