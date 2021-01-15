@@ -30,7 +30,7 @@ permalink: /wiki/lug/services/
 
 - 轻量级网络加速服务（校内）
 
-- 开源镜像站（定时同步；rsync、FTP 访问；帮助页面）：<https://mirrors.ustc.edu.cn>
+- 开源镜像站（定时同步；rsync 访问；帮助页面）：<https://mirrors.ustc.edu.cn>
 
 - 反向代理：\*.proxy.ustclug.org
 
