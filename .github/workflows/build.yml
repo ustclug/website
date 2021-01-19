@@ -44,7 +44,6 @@ jobs:
           ${{ runner.os }}-
     - name: Install dependencies
       run: |
-        sudo apt-get -y install libgsl-dev
         bundle install --path=vendor/bundle
         bundle clean
         npm install
