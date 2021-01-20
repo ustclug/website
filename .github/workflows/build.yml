@@ -22,7 +22,7 @@ jobs:
         ruby-version: 2.7
     - name: Setup cache for Bundler
       id: cache
-      uses: actions/cache@v1
+      uses: actions/cache@v2
       with:
         path: vendor/bundle
         key: ${{ runner.os }}-bundler-2.7-${{ hashFiles('Gemfile') }}
@@ -30,9 +30,9 @@ jobs:
           ${{ runner.os }}-bundler-2.7-
     - uses: actions/setup-node@v1
       with:
-        node-version: '12'
+        node-version: 12
     - name: Cache node modules
-      uses: actions/cache@v1
+      uses: actions/cache@v2
       env:
         cache-name: cache-node-modules
       with:
@@ -56,7 +56,7 @@ jobs:
         git clone --depth=1 --branch=gh-pages --single-branch --no-checkout \
           "https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" \
           _site
-    - name: Check site with Jekyll Doctor
+    - name: Run Jekyll Doctor
       run: |
         bundle exec jekyll doctor --trace --profile
     - name: Build site
