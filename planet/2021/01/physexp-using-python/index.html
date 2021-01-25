@@ -1,0 +1,551 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.21.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="zh" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <!-- begin _includes/seo.html -->
+    <title>开始 - LUG @ USTC</title>
+    <meta name="description" content="开始">
+    <meta name="author" content="petergu">
+    <meta property="article:author" content="petergu">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="LUG @ USTC">
+    <meta property="og:title" content="开始">
+    <meta property="og:url" content="https://lug.ustc.edu.cn/planet/2021/01/physexp-using-python/">
+    <meta property="og:description" content="开始">
+    <meta property="og:image" content="https://lug.ustc.edu.cn/static/splash/galaxy-1.jpg">
+    <meta property="article:published_time" content="2021-01-25T00:00:00+08:00">
+    <meta property="article:modified_time" content="2021-01-25T22:58:27+08:00">
+    <link rel="canonical" href="https://lug.ustc.edu.cn/planet/2021/01/physexp-using-python/">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+      
+          "@type": "Person",
+          "name": "USTCLUG",
+          "url": "https://lug.ustc.edu.cn/"
+      
+      }
+    </script>
+    <!-- end _includes/seo.html -->
+    <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="LUG @ USTC Feed">
+    <!-- https://t.co/dKP3o1e -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="57x57" href="/static/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/static/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/static/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/static/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/static/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/static/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/static/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/static/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/static/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/static/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/static/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#f3f6f6">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#f3f6f6">
+    <script>
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+    </script>
+    <!-- For all browsers -->
+    <link rel="stylesheet" href="/assets/css/main.css?v=ae1b2ad7d">
+    <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
+    <!--[if IE]>
+      <style>
+        /* old IE unsupported flexbox fixes */
+        .greedy-nav .site-title {
+          padding-right: 3em;
+        }
+        .greedy-nav button {
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 100%;
+        }
+      </style>
+    <![endif]-->
+    <!-- start custom head snippets -->
+    <!-- insert favicons. use https://realfavicongenerator.net/ -->
+    <!-- end custom head snippets -->
+  </head>
+  <body class="layout--single">
+    <nav class="skip-links">
+      <h2 class="screen-reader-text">跳转链接</h2>
+      <ul>
+        <li><a href="#site-nav" class="screen-reader-shortcut">转到主导航栏</a></li>
+        <li><a href="#main" class="screen-reader-shortcut">转到内容</a></li>
+        <li><a href="#footer" class="screen-reader-shortcut">转到底部</a></li>
+      </ul>
+    </nav>
+    <!--[if lt IE 9]>
+      <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+    <![endif]-->
+    <div class="masthead">
+      <div class="masthead__inner-wrap">
+        <div class="masthead__menu">
+          <nav id="site-nav" class="greedy-nav">
+            <a class="site-logo" href="/"><img src="/static/lug-penguin.png" alt=""></a>
+            <a class="site-title" href="/">
+              LUG @ USTC
+            </a>
+            <ul class="visible-links">
+              <li class="masthead__menu-item">
+                <a href="/wiki/"><i class="fad fa-lg fa-fw fa-star-shooting"></i> Wiki</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="/news/"><i class="fad fa-lg fa-fw fa-newspaper"></i> News</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="/planet/"><i class="fad fa-lg fa-fw fa-planet-ringed fa-swap-opacity"></i> Planet</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="https://github.com/ustclug"><i class="fab fa-lg fa-fw fa-github"></i> GitHub</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="https://mirrors.ustc.edu.cn/"><i class="fad fa-lg fa-fw fa-server"></i> Mirrors</a>
+              </li>
+            </ul>
+            <button class="greedy-nav__toggle hidden" type="button">
+              <span class="visually-hidden">切换菜单</span>
+              <div class="navicon"></div>
+            </button>
+            <ul class="hidden-links hidden"></ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="initial-content">
+      <div class="page__hero--overlay"
+  style=" background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/static/splash/galaxy-1.jpg');"
+>
+        <div class="wrapper">
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            开始
+          </h1>
+          <p class="page__meta">
+            <span class="page__meta-date">
+              <i class="far fa-calendar-alt" aria-hidden="true"></i>
+              <time datetime="2021-01-25T00:00:00+08:00">2021 年 1 月 25 日</time>
+            </span>
+            <span class="page__meta-sep"></span>
+            <span class="page__meta-readtime">
+              <i class="far fa-clock" aria-hidden="true"></i>
+              6 分钟阅读
+            </span>
+          </p>
+        </div>
+      </div>
+      <div id="main" role="main">
+        <div class="sidebar sticky">
+          <div itemscope itemtype="https://schema.org/Person">
+            <div class="author__avatar">
+              <img src="https://secure.gravatar.com/avatar/2bb42aa969cb70fc7fc76eb6b82f86ed?s=256&d=identicon&r=g" alt="petergu" itemprop="image">
+            </div>
+            <div class="author__content">
+              <h3 class="author__name" itemprop="name">petergu</h3>
+            </div>
+            <div class="author__urls-wrapper">
+              <button class="btn btn--inverse">关注</button>
+              <ul class="author__urls social-icons">
+                <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+              </ul>
+            </div>
+          </div>
+        </div>
+        <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+          <meta itemprop="headline" content="开始">
+          <meta itemprop="description" content="开始">
+          <meta itemprop="datePublished" content="2021-01-25T00:00:00+08:00">
+          <meta itemprop="dateModified" content="2021-01-25T22:58:27+08:00">
+          <div class="page__inner-wrap">
+            <section class="page__content" itemprop="text">
+              <aside class="sidebar__right sticky">
+                <nav class="toc">
+                  <header>
+                    <h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4>
+                  </header>
+                  <ul class="toc__menu">
+                    <li><a href="#两年之后">两年之后</a></li>
+                    <li><a href="#迟到的-jupyter-notebook">迟到的 Jupyter Notebook</a></li>
+                    <li><a href="#总结">总结</a></li>
+                  </ul>
+                </nav>
+              </aside>
+              <p>身为某<a href="http://世界一流退学.com">世界一流退学</a>的学生，大物实验自然是逃不过。本人有幸选择了大物实验最多的专业方向，从一级做到六级，直到上学期刚刚结束。大物实验里数据处理是占了很多时间的，那么怎么才能「优雅」地完成这一工作呢？</p>
+              <p>大一的时候讲座推荐的软件是 Origin，画图、拟合等虽然方便，但完全鼠标操作，并且只有 Windows 上能运行，Wine 上有时会遇到个别功能不好用，很影响体验（当时我的电脑配置不好，玩不起虚拟机）。思来想去，还是觉得 Python 比较自然，于是故事就这样开始了。</p>
+              <p>在一级、二级大物中，需求基本是：散点画图（有时是对数）、线性拟合、组合的画图，以及不确定度计算和一般的数值计算。输入输出方面，要手工输入有时候多达几页的手写数据，画出来的图打印上交、计算出的结果手写进实验报告。</p>
+              <p>Python 做这些事情其实都不困难。画图用 Matplotlib 非常方便，也可以直接保存图片。数据计算自然是 NumPy。线性拟合的话，最初选择了 SciPy。输入输出还是比较基本，从文件读入。</p>
+              <p>于是，第一个实验「自由落体」的数据和处理就是这样：</p>
+              <div class="language-plaintext highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>#光电门间距 H cm
+#数量级
+e -2
+90.0	90.0	90.0	80.0	80.0	80.0	70.0	70.0	70.0	60.0	60.0	60.0	50.0	50.0	50.0	40.0	40.0	40.0	30.0	30.0	30.0	20.0	20.0	20.0
+#时间差 t ms
+e -3
+331.6	331.5	331.8	307.9	307.9	307.9	282.9	282.8	282.9	255.8	255.7	255.7	226.9	227.0	226.9	195.2	195.2	195.2	159.9	159.9	159.8	119.2	119.1	119.2
+</code></pre>
+                </div>
+              </div>
+              <div class="language-python highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="c1">#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+</span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="c1">#avoid font problem
+</span><span class="n">plt</span><span class="p">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s">'font.sans-serif'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s">'SimHei'</span><span class="p">]</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s">'axes.unicode_minus'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="c1">#read data
+</span><span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1">#order of magnitude
+</span><span class="n">oom</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">fin</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'./data.txt'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">fin</span><span class="p">.</span><span class="n">readlines</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s">'#'</span><span class="p">:</span>
+        <span class="c1">#line start with # is comment
+</span>        <span class="k">pass</span>
+    <span class="k">elif</span> <span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s">'e'</span><span class="p">:</span>
+        <span class="n">oom</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">data</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">*</span> <span class="nb">pow</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">oom</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">i</span><span class="p">.</span><span class="n">split</span><span class="p">()]))</span>
+        <span class="n">oom</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1"># print(data)
+### main processing ###
+</span><span class="n">l</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">y0</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">data</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">y0</span> <span class="o">/</span> <span class="n">x</span><span class="p">)</span>
+<span class="n">y1</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">slope</span><span class="p">,</span> <span class="n">intercept</span><span class="p">,</span> <span class="n">r_value</span><span class="p">,</span> <span class="n">p_value</span><span class="p">,</span> <span class="n">std_err</span> <span class="o">=</span> <span class="n">stats</span><span class="p">.</span><span class="n">linregress</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y1</span><span class="p">)</span>
+<span class="c1"># z = np.polyfit(x, y1, 1)
+</span><span class="n">s_slope</span> <span class="o">=</span> <span class="n">slope</span> <span class="o">*</span> <span class="n">math</span><span class="p">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">r_value</span> <span class="o">**</span> <span class="o">-</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">l</span> <span class="o">-</span> <span class="mi">2</span><span class="p">))</span>
+<span class="n">s_intercept</span> <span class="o">=</span> <span class="n">s_slope</span> <span class="o">*</span> <span class="n">math</span><span class="p">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">mean</span><span class="p">(</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'linear regression:'</span> <span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'slope:'</span><span class="p">,</span> <span class="n">slope</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'intercept:'</span><span class="p">,</span> <span class="n">intercept</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'r-value:'</span><span class="p">,</span> <span class="n">r_value</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'p-value:'</span><span class="p">,</span> <span class="n">p_value</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'std-err:'</span><span class="p">,</span> <span class="n">std_err</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'r-squared:'</span><span class="p">,</span> <span class="n">r_value</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'斜率标准差:'</span><span class="p">,</span> <span class="n">s_slope</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'截距标准差:'</span><span class="p">,</span> <span class="n">s_intercept</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'算得重力加速度:'</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">slope</span><span class="p">)</span>
+<span class="c1">#plot
+</span><span class="n">plt</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s">'*'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">'black'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'原始数据'</span><span class="p">)</span>
+<span class="c1"># plt.plot(x, y1, '--', color='green', label='光滑曲线')
+</span><span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">intercept</span> <span class="o">+</span> <span class="n">slope</span> <span class="o">*</span> <span class="n">x</span><span class="p">,</span> <span class="s">'r'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'拟合直线'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'时间 t/s'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'平均速度 H/t / m/s'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'小球下落平均速度与时间关系图'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">savefig</span><span class="p">(</span><span class="s">'pic.png'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre>
+                </div>
+              </div>
+              <p><img src="https://static.beta.ustclug.org/planet/2021-01-25-physexp-using-python-1.png" alt="1" /></p>
+              <p>只是画了张图就这么麻烦，很明显，除了练习了 Python 之外，和 Origin 相比生产力负提升。</p>
+              <p>之后的问题就是简化这些过程了。</p>
+              <h2 id="两年之后">两年之后</h2>
+              <p>经过一年多的开发，我将一些常用的画图和数据处理操作打包成库，并添加了方便的文件输入和自动生成 docx 文件的功能。同时将 Python 包 <code class="language-plaintext highlighter-rouge">physicsexp</code> 发布到了 PyPI（和 AUR 一样，在 PyPI 发布包的门槛几乎没有）。</p>
+              <p>这里以三级大物 β 射线吸收为例。现在，读入文件只需要这样：</p>
+              <div class="language-python highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="n">fin</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'./data.txt'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s">'utf-8'</span><span class="p">)</span>
+<span class="n">pos</span> <span class="o">=</span> <span class="n">readoneline</span><span class="p">(</span><span class="n">fin</span><span class="p">)</span>
+<span class="n">N</span> <span class="o">=</span> <span class="n">readoneline</span><span class="p">(</span><span class="n">fin</span><span class="p">)</span>
+<span class="n">Al_num</span> <span class="o">=</span> <span class="n">readoneline</span><span class="p">(</span><span class="n">fin</span><span class="p">)</span>
+<span class="n">Cnt</span> <span class="o">=</span> <span class="n">readoneline</span><span class="p">(</span><span class="n">fin</span><span class="p">)</span>
+<span class="n">fin</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre>
+                </div>
+              </div>
+              <p>数据做图也只要一行代码，一张图上多个曲线也只是一个参数的事，比如这是一张有三条线的图：</p>
+              <div class="language-python highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="n">simple_plot</span><span class="p">(</span><span class="n">Momentum</span><span class="p">,</span> <span class="n">Emeasure</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">issetrange</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">dot</span><span class="o">=</span><span class="s">'+'</span><span class="p">,</span> <span class="n">lab</span><span class="o">=</span><span class="s">'测量动能'</span><span class="p">)</span>
+<span class="n">simple_plot</span><span class="p">(</span><span class="n">Momentum</span><span class="p">,</span> <span class="n">Eclassic</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">issetrange</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">dot</span><span class="o">=</span><span class="s">'*'</span><span class="p">,</span> <span class="n">lab</span><span class="o">=</span><span class="s">'经典动能'</span><span class="p">)</span>
+<span class="n">simple_plot</span><span class="p">(</span><span class="n">Momentum</span><span class="p">,</span> <span class="n">Erela</span><span class="p">,</span> <span class="n">dot</span><span class="o">=</span><span class="s">'o'</span><span class="p">,</span> <span class="n">save</span><span class="o">=</span><span class="s">'1.png'</span><span class="p">,</span> <span class="n">issetrange</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">xlab</span><span class="o">=</span><span class="s">'$pc/MeV$'</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s">'$E/MeV$'</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s">'电子动能随动量变化曲线'</span><span class="p">,</span> <span class="n">lab</span><span class="o">=</span><span class="s">'相对论动能'</span><span class="p">)</span>
+</code></pre>
+                </div>
+              </div>
+              <p>画图并线性拟合也是非常常见的操作，于是也加入了库：</p>
+              <div class="language-python highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="n">slope</span><span class="p">,</span> <span class="n">intercept</span> <span class="o">=</span> <span class="n">simple_linear_plot</span><span class="p">(</span><span class="n">Al_Real</span><span class="p">,</span> <span class="n">CntLn</span><span class="p">,</span> <span class="n">xlab</span><span class="o">=</span><span class="s">'质量厚度$g/cm^{-2}$'</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s">'选区计数率对数(射线强度)'</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s">'半对数曲线曲线'</span><span class="p">,</span> <span class="n">save</span><span class="o">=</span><span class="s">'3.png'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="o">-</span><span class="n">slope</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">math</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="mf">1e4</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="o">-</span><span class="n">slope</span><span class="p">))</span>
+<span class="k">print</span><span class="p">((</span><span class="n">math</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">Cnt</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">-</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">math</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">-</span> <span class="n">intercept</span><span class="p">)</span> <span class="o">/</span> <span class="n">slope</span><span class="p">)</span>
+</code></pre>
+                </div>
+              </div>
+              <p>最后，一行代码将所有的数据和图片生成直接可以打印的 docx 文件，包含名字和日期：</p>
+              <div class="language-python highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="n">gendocx</span><span class="p">(</span><span class="s">'gen.docx'</span><span class="p">,</span> <span class="s">'1.png'</span><span class="p">,</span> <span class="s">'2.png'</span><span class="p">,</span> <span class="s">'3.png'</span><span class="p">,</span> <span class="s">'slope, intercept: %f %f'</span> <span class="o">%</span> <span class="p">(</span><span class="n">slope</span><span class="p">,</span> <span class="n">intercept</span><span class="p">))</span>
+</code></pre>
+                </div>
+              </div>
+              <p>文件如图所示，可以直接拿去打印了：</p>
+              <p><img src="https://static.beta.ustclug.org/planet/2021-01-25-physexp-using-python-2.png" alt="2" /></p>
+              <p>下面是整体代码：</p>
+              <div class="language-python highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="c1">#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+</span>
+<span class="kn">from</span> <span class="nn">physicsexp.mainfunc</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">physicsexp.gendocx</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># read data
+</span><span class="n">fin</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'./data.txt'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s">'utf-8'</span><span class="p">)</span>
+<span class="n">pos</span> <span class="o">=</span> <span class="n">readoneline</span><span class="p">(</span><span class="n">fin</span><span class="p">)</span>
+<span class="n">N</span> <span class="o">=</span> <span class="n">readoneline</span><span class="p">(</span><span class="n">fin</span><span class="p">)</span>
+<span class="n">Al_num</span> <span class="o">=</span> <span class="n">readoneline</span><span class="p">(</span><span class="n">fin</span><span class="p">)</span>
+<span class="n">Cnt</span> <span class="o">=</span> <span class="n">readoneline</span><span class="p">(</span><span class="n">fin</span><span class="p">)</span>
+<span class="n">fin</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="c1"># data process
+</span>
+<span class="c1"># calculated calibration values in class
+</span><span class="n">a</span> <span class="o">=</span> <span class="mf">2.373e-3</span>
+<span class="n">b</span> <span class="o">=</span> <span class="o">-</span><span class="p">.</span><span class="mi">0161</span>
+<span class="n">dEk</span> <span class="o">=</span> <span class="p">.</span><span class="mi">20</span>
+
+<span class="n">c0</span> <span class="o">=</span> <span class="mf">299792458.</span>
+<span class="n">MeV</span> <span class="o">=</span> <span class="mf">1e6</span> <span class="o">*</span> <span class="n">electron</span>
+
+<span class="n">Emeasure</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">N</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="n">dEk</span>
+<span class="n">x0</span> <span class="o">=</span> <span class="p">.</span><span class="mi">10</span>
+<span class="n">R</span> <span class="o">=</span> <span class="p">(</span><span class="n">pos</span> <span class="o">-</span> <span class="n">x0</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="n">B</span> <span class="o">=</span> <span class="mf">640.01e-4</span>
+<span class="n">Momentum</span> <span class="o">=</span> <span class="mi">300</span> <span class="o">*</span> <span class="n">B</span> <span class="o">*</span> <span class="n">R</span>
+<span class="n">Eclassic</span> <span class="o">=</span> <span class="p">((</span><span class="n">Momentum</span> <span class="o">*</span> <span class="n">MeV</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">me</span> <span class="o">*</span> <span class="n">c0</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span> <span class="o">/</span> <span class="n">MeV</span>
+<span class="n">Erela</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="n">math</span><span class="p">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">i</span> <span class="o">*</span> <span class="n">MeV</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">me</span> <span class="o">*</span> <span class="n">c0</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="n">me</span> <span class="o">*</span> <span class="n">c0</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">Momentum</span><span class="p">])</span> <span class="o">/</span> <span class="n">MeV</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'pos</span><span class="se">\t</span><span class="s">'</span><span class="p">,</span> <span class="n">pos</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'R</span><span class="se">\t</span><span class="s">'</span><span class="p">,</span> <span class="n">R</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'pc</span><span class="se">\t</span><span class="s">'</span><span class="p">,</span> <span class="n">Momentum</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'N</span><span class="se">\t</span><span class="s">'</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Eclas</span><span class="se">\t</span><span class="s">'</span><span class="p">,</span> <span class="n">Eclassic</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Erela</span><span class="se">\t</span><span class="s">'</span><span class="p">,</span> <span class="n">Erela</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Emes</span><span class="se">\t</span><span class="s">'</span><span class="p">,</span> <span class="n">Emeasure</span><span class="p">)</span>
+
+<span class="n">simple_plot</span><span class="p">(</span><span class="n">Momentum</span><span class="p">,</span> <span class="n">Emeasure</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">issetrange</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">dot</span><span class="o">=</span><span class="s">'+'</span><span class="p">,</span> <span class="n">lab</span><span class="o">=</span><span class="s">'测量动能'</span><span class="p">)</span>
+<span class="n">simple_plot</span><span class="p">(</span><span class="n">Momentum</span><span class="p">,</span> <span class="n">Eclassic</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">issetrange</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">dot</span><span class="o">=</span><span class="s">'*'</span><span class="p">,</span> <span class="n">lab</span><span class="o">=</span><span class="s">'经典动能'</span><span class="p">)</span>
+<span class="n">simple_plot</span><span class="p">(</span><span class="n">Momentum</span><span class="p">,</span> <span class="n">Erela</span><span class="p">,</span> <span class="n">dot</span><span class="o">=</span><span class="s">'o'</span><span class="p">,</span> <span class="n">save</span><span class="o">=</span><span class="s">'1.png'</span><span class="p">,</span> <span class="n">issetrange</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+            <span class="n">xlab</span><span class="o">=</span><span class="s">'$pc/MeV$'</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s">'$E/MeV$'</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s">'电子动能随动量变化曲线'</span><span class="p">,</span> <span class="n">lab</span><span class="o">=</span><span class="s">'相对论动能'</span><span class="p">)</span>
+
+<span class="n">Len</span> <span class="o">=</span> <span class="mi">150</span>
+<span class="n">Cnt</span> <span class="o">=</span> <span class="n">Cnt</span> <span class="o">/</span> <span class="n">Len</span>
+<span class="n">simple_plot</span><span class="p">(</span><span class="n">Al_num</span><span class="p">,</span> <span class="n">Cnt</span><span class="p">,</span> <span class="n">xlab</span><span class="o">=</span><span class="s">'铝片数'</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s">'选区计数率(射线强度)'</span><span class="p">,</span>
+            <span class="n">title</span><span class="o">=</span><span class="s">'$</span><span class="se">\\</span><span class="s">beta$射线强度随铝片数衰减曲线'</span><span class="p">,</span> <span class="n">save</span><span class="o">=</span><span class="s">'2.png'</span><span class="p">)</span>
+<span class="n">CntLn</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">Cnt</span><span class="p">)</span>
+<span class="c1"># d = 50 mg / cm^2
+</span><span class="n">d</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">Al_Real</span> <span class="o">=</span> <span class="n">Al_num</span> <span class="o">*</span> <span class="n">d</span>
+<span class="n">slope</span><span class="p">,</span> <span class="n">intercept</span> <span class="o">=</span> <span class="n">simple_linear_plot</span><span class="p">(</span><span class="n">Al_Real</span><span class="p">,</span> <span class="n">CntLn</span><span class="p">,</span> <span class="n">xlab</span><span class="o">=</span><span class="s">'质量厚度$g/cm^{-2}$'</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s">'选区计数率对数(射线强度)'</span><span class="p">,</span>
+                                      <span class="n">title</span><span class="o">=</span><span class="s">'半对数曲线曲线'</span><span class="p">,</span> <span class="n">save</span><span class="o">=</span><span class="s">'3.png'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="o">-</span><span class="n">slope</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">math</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="mf">1e4</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="o">-</span><span class="n">slope</span><span class="p">))</span>
+<span class="k">print</span><span class="p">((</span><span class="n">math</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">Cnt</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">-</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">math</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">-</span> <span class="n">intercept</span><span class="p">)</span> <span class="o">/</span> <span class="n">slope</span><span class="p">)</span>
+
+<span class="n">gendocx</span><span class="p">(</span><span class="s">'gen.docx'</span><span class="p">,</span> <span class="s">'1.png'</span><span class="p">,</span> <span class="s">'2.png'</span><span class="p">,</span> <span class="s">'3.png'</span><span class="p">,</span> <span class="s">'slope, intercept: %f %f'</span> <span class="o">%</span> <span class="p">(</span><span class="n">slope</span><span class="p">,</span> <span class="n">intercept</span><span class="p">))</span>
+</code></pre>
+                </div>
+              </div>
+              <p>整个代码不含空行和注释共 46 行，而上面的自由落体代码 45 行。可见包装程度还是不错的。先计算然后画这三张图，写上面的代码和 Origin 相比哪个更快呢？还是看个人习惯，反正我是比较习惯代码。至少，这说明了大物实验需要的数据处理还是有很多相似点的，以至于打包一些函数可以提高一些生产力。</p>
+              <p>当然，这只是一个例子，对于个别实验，不管怎么处理都是要多花写时间的（直流辉光等离子体，说的就是你）。</p>
+              <p>你可能会问，为什么没有误差分析的功能。这确实是一个问题：计算 A 类和 B 类不确定度等不同实验差别很大，水平有限，我能做的除了将常数打表提供最基础的功能外，好像就没什么了。并且，开发得差不多时已经到二级中期了，算不确定度也不常见了（所以，别被一级吓怕了），所以这部分也没怎么测试过，属于 TODO。</p>
+              <h2 id="迟到的-jupyter-notebook">迟到的 Jupyter Notebook</h2>
+              <p>以上还是标准的 Python，但五级大物时，我尝试了仅一次就发现明显 Jupyter Notebook 更适合做类似的工作——尽管它不能用 Vim 编辑代码！这下子，数据直接输入在 Notebook 里就好了，画图也是所见即所得，不用等一张一张弹出来了。而进行临时的运算也不必影响正常流程。如图：</p>
+              <p><img src="https://static.beta.ustclug.org/planet/2021-01-25-physexp-using-python-3.png" alt="3" /></p>
+              <p>既然都到了 Jupyter ，如果<strong>多人合作</strong>的话，<a href="https://github.com/jupyterhub/jupyterhub">JupyterHub</a> 是非常不错的选择，可以多个人在一台服务器上使用 Jupyter Notebook 。我之前配置的是每个用户一个隔离的 Docker 容器，里面的 Python 已经装好了包，可以直接使用，同时挂载了一个共享空间可以分享写好的 Notebook 。其实 JupyterHub 有用 Github 帐号登录之类的权限管理功能，但当时我们是几个认识的人合作，就没有管这些。</p>
+              <p>具体的代码在我的 <a href="https://github.com/ustcpetergu/physicsexp">Github</a> 上，如果有人在写大物实验报告的过程中无聊了想找个地方摸鱼浪费点时间，不妨来看看。</p>
+              <h2 id="总结">总结</h2>
+              <p>如果您想尝试用 Python 处理大物实验数据，我可以比较负责地说对于 95% 以上的实验是完全没有问题的。使用 NumPy 和 SciPy 计算， Matplotlib 做图，配以 docx 生成、Jupyter Notebook 或 JupyterHub 团队合作，可以比较轻松（但不意味着节省时间）地完成所有需要的操作，并可以通过包装库提高效率。</p>
+              <p>之前也有学长学姐尝试过类似的大物实验自动化项目，但因为暂时无法全部找到并对比，这里就不说了。大一的时候确实是想搞一套自动化程度很高的东西，但水平实在有限，并且不同的实验处理过程不太一样，一己之力完成每一个实验专属的程序也不太现实，所以结果就是自己挖了个坑并跳进去出不来：有时想想，或许还是左手卡西欧 991 右手座标纸来得快一些呢！</p>
+            </section>
+            <footer class="page__meta">
+              <p class="page__taxonomy">
+                <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 标签: </strong>
+                <span itemprop="keywords">
+                  <a href="/tags/python" class="page__taxonomy-item" rel="tag">Python</a><span class="sep">, </span>
+                  <a href="/tags/%E5%A4%A7%E7%89%A9%E5%AE%9E%E9%AA%8C" class="page__taxonomy-item" rel="tag">大物实验</a>
+                </span>
+              </p>
+              <p class="page__taxonomy">
+                <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 分类: </strong>
+                <span itemprop="keywords">
+                  <a href="/categories/ustc" class="page__taxonomy-item" rel="tag">USTC</a>
+                </span>
+              </p>
+              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2021-01-25">2021 年 1 月 25 日</time></p>
+            </footer>
+            <section class="page__share">
+              <h4 class="page__share-title">分享</h4>
+              <a href="https://twitter.com/intent/tweet?text=%E5%BC%80%E5%A7%8B%20https%3A%2F%2Flug.ustc.edu.cn%2Fplanet%2F2021%2F01%2Fphysexp-using-python%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flug.ustc.edu.cn%2Fplanet%2F2021%2F01%2Fphysexp-using-python%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+              <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Flug.ustc.edu.cn%2Fplanet%2F2021%2F01%2Fphysexp-using-python%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+            </section>
+            <nav class="pagination">
+              <a href="/planet/2020/12/tic-toc-in-kernel/" class="pagination--pager" title="在 Linux 内核中测试程序性能
+">上一页</a>
+              <a href="#" class="pagination--pager disabled">下一页</a>
+            </nav>
+          </div>
+        </article>
+        <div class="page__related">
+          <h4 class="page__related-title">猜您还喜欢</h4>
+          <div class="grid__wrapper">
+            <div class="grid__item">
+              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                <h2 class="archive__item-title no_toc" itemprop="headline">
+                  <a href="/planet/2020/12/tic-toc-in-kernel/" rel="permalink">在 Linux 内核中测试程序性能
+                  </a>
+                </h2>
+                <p class="page__meta">
+                  <span class="page__meta-date">
+                    <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                    <time datetime="2020-12-19T00:00:00+08:00">2020 年 12 月 19 日</time>
+                  </span>
+                  <span class="page__meta-sep"></span>
+                  <span class="page__meta-readtime">
+                    <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+                    8 分钟阅读
+                  </span>
+                </p>
+                <p class="archive__item-excerpt" itemprop="description">本学期，我担任了李诚老师编译原理课程的助教。在课程实验中，我们基于 LLVM 构建了一套编译系统，其中一个实验需要编写后端优化算法。为了评估学生们的优化代码，我们需要比较优化前后的代码（在这里是 LLVM IR）的性能。我们通过统计程序运行的时间来比较代码的性能，但是用户程序会受到内核调度。因为不是连续执行程序，...</p>
+              </article>
+            </div>
+            <div class="grid__item">
+              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                <h2 class="archive__item-title no_toc" itemprop="headline">
+                  <a href="/planet/2020/08/keeping-account-with-beancount/" rel="permalink">使用 Beancount 进行记账并自动记录一卡通消费
+                  </a>
+                </h2>
+                <p class="page__meta">
+                  <span class="page__meta-date">
+                    <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                    <time datetime="2020-08-06T00:00:00+08:00">2020 年 8 月 6 日</time>
+                  </span>
+                  <span class="page__meta-sep"></span>
+                  <span class="page__meta-readtime">
+                    <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+                    9 分钟阅读
+                  </span>
+                </p>
+                <p class="archive__item-excerpt" itemprop="description">本文首发于 https://charlesliu7.github.io/blackboard/2019/07/24/beancount/
+                </p>
+              </article>
+            </div>
+            <div class="grid__item">
+              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                <h2 class="archive__item-title no_toc" itemprop="headline">
+                  <a href="/planet/2019/09/raspberry-4/" rel="permalink">【译稿】树莓派 4 评测与基准测试：与树莓派 3B+ 相比的改进
+                  </a>
+                </h2>
+                <p class="page__meta">
+                  <span class="page__meta-date">
+                    <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                    <time datetime="2019-09-17T00:00:00+08:00">2019 年 9 月 17 日</time>
+                  </span>
+                  <span class="page__meta-sep"></span>
+                  <span class="page__meta-readtime">
+                    <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+                    8 分钟阅读
+                  </span>
+                </p>
+                <p class="archive__item-excerpt" itemprop="description">原文地址：https://ibugone.com/blog/2019/09/raspberry-pi-4-review-benchmark/，作者为 @iBug 同学。以下为翻译部分。
+                </p>
+              </article>
+            </div>
+            <div class="grid__item">
+              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                <h2 class="archive__item-title no_toc" itemprop="headline">
+                  <a href="/planet/2019/09/how-to-use-nc/" rel="permalink">nc 是什么？
+                  </a>
+                </h2>
+                <p class="page__meta">
+                  <span class="page__meta-date">
+                    <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                    <time datetime="2019-09-16T00:00:00+08:00">2019 年 9 月 16 日</time>
+                  </span>
+                  <span class="page__meta-sep"></span>
+                  <span class="page__meta-readtime">
+                    <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+                    2 分钟阅读
+                  </span>
+                </p>
+                <p class="archive__item-excerpt" itemprop="description">nc 是什么？
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+        <!-- end custom footer snippets -->
+        <div class="footer-row">
+          <div class="footer-block footer__about">
+            <p>中国科学技术大学 Linux 用户协会是由中国科学技术大学在校的 GNU/Linux 爱好者发起并组成的团体，旨在联合科大的 GNU/Linux
+              使用者，搭建信息交流共享的平台，宣传自由软件的价值，提高自由软件社区文化氛围，推广自由软件的应用。</p>
+          </div>
+          <div class="footer-block footer__extras">
+            <div class="footer__contact">
+              <ul>
+                <li>
+                  <a href="/wiki/intro/"><i class="fad fa-fw fa-address-card"></i> 关于我们</a>
+                </li>
+                <li>
+                  <a href="/wiki/lug/contact/"><i class="fas fa-fw fa-phone-alt"></i> 联系我们</a>
+                </li>
+                <li>
+                  <a href="/wiki/lug/contribute/"><i class="fad fa-fw fa-users"></i> 加入我们</a>
+                </li>
+                <li>
+                  <a href="/feed/"><i class="fad fa-fw fa-rss" style="--fa-secondary-opacity: 0.6;"></i> RSS 订阅</a>
+                </li>
+                <li>
+                  <a href="https://github.com/ustclug/website"><i class="fab fa-fw fa-github"></i> 本站仓库</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__logo">
+              <div class="footer__logo-image">
+                <img src="https://ftp.lug.ustc.edu.cn/misc/logo-white.svg" />
+              </div>
+              <div class="footer__logo-text">
+                <!-- a href="http://www.beian.miit.gov.cn" target="_blank">皖ICP备05002528号</a -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="/assets/js/main.min.js"></script>
+    <img src="/static/USTC_logo.svg" style="position: fixed; bottom: -320px; left: -200px; opacity: 0.1; z-index: -100;" />
+  </body>
+</html>
