@@ -87,7 +87,7 @@ plt.savefig('pic.png')
 plt.show()
 ```
 
-![1](https://static.beta.ustclug.org/planet/2021-01-25-physexp-using-python-1.png)
+![1](https://lug.ustc.edu.cn/static/planet/2021-01-25-physexp-using-python-1.png)
 
 只是画了张图就这么麻烦，很明显，除了练习了 Python 之外，和 Origin 相比生产力负提升。
 
@@ -133,7 +133,7 @@ gendocx('gen.docx', '1.png', '2.png', '3.png', 'slope, intercept: %f %f' % (slop
 
 文件如图所示，可以直接拿去打印了：
 
-![2](https://static.beta.ustclug.org/planet/2021-01-25-physexp-using-python-2.png)
+![2](https://lug.ustc.edu.cn/static/planet/2021-01-25-physexp-using-python-2.png)
 
 下面是整体代码：
 
@@ -209,7 +209,7 @@ gendocx('gen.docx', '1.png', '2.png', '3.png', 'slope, intercept: %f %f' % (slop
 
 以上还是标准的 Python，但五级大物时，我尝试了仅一次就发现明显 Jupyter Notebook 更适合做类似的工作——尽管它不能用 Vim 编辑代码！这下子，数据直接输入在 Notebook 里就好了，画图也是所见即所得，不用等一张一张弹出来了。而进行临时的运算也不必影响正常流程。如图：
 
-![3](https://static.beta.ustclug.org/planet/2021-01-25-physexp-using-python-3.png)
+![3](https://lug.ustc.edu.cn/static/planet/2021-01-25-physexp-using-python-3.png)
 
 既然都到了 Jupyter ，如果**多人合作**的话，[JupyterHub](https://github.com/jupyterhub/jupyterhub) 是非常不错的选择，可以多个人在一台服务器上使用 Jupyter Notebook 。我之前配置的是每个用户一个隔离的 Docker 容器，里面的 Python 已经装好了包，可以直接使用，同时挂载了一个共享空间可以分享写好的 Notebook 。其实 JupyterHub 有用 Github 帐号登录之类的权限管理功能，但当时我们是几个认识的人合作，就没有管这些。
 
