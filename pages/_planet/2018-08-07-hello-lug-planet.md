@@ -49,7 +49,9 @@ LUG Planet 是精神上的 [Linux 文摘](/wiki/linux_digest) 计划的延续。
 
 任何人都可以成为作者！我们不限制你的身份，无论你是否是 USTC 的学生、校友、老师，只要你认同 USTCLUG 的理念，我们就欢迎你的来稿。
 
-参与的方法很简单，只需为 [本网站仓库](https://github.com/ustclug/website) 提交 Pull request 即可（如果文章包含图片等大二进制文件，需要将相关文件 PR 到 [网站静态内容仓库](https://github.com/ustclug/website-static)）。如果觉得麻烦，可以使用邮件（见文章最后）等方式单独联系我们，我们可以帮助排版并发布 :-)
+参与的方法很简单，只需为 [本网站仓库](https://github.com/ustclug/website) 提交 Pull request 即可（如果文章包含图片等大二进制文件，需要将相关文件 PR 到 [网站静态内容仓库](https://github.com/ustclug/website-static)）。具体操作细节可参考 [仓库 README](https://github.com/ustclug/website/blob/master/README.md) 与 [Planet 文章模板](https://github.com/ustclug/website/blob/master/pages/_planet/_template.md)
+
+如果觉得麻烦，可以使用邮件（见文章最后）等方式单独联系我们，我们可以帮助排版并发布 :-)
 
 **（在未来我们会根据反馈定期对文章进行评选，优秀作品的作者有机会得到我们的奖品哦~）**
 
@@ -131,3 +133,5 @@ LUG Planet 是精神上的 [Linux 文摘](/wiki/linux_digest) 计划的延续。
 ## 更新日志
 
 2021-01-24: 删除了有关 Wordpress 的内容，并更新了订阅方式。
+
+2021-01-26: 更新了投稿操作细节。
