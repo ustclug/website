@@ -21,7 +21,7 @@
     <meta property="og:description" content="身为某世界一流退学的学生，大物实验自然是逃不过。本人有幸选择了大物实验最多的专业方向，从一级做到六级，直到上学期刚刚结束。大物实验里数据处理是占了很多时间的，那么怎么才能「优雅」地完成这一工作呢？">
     <meta property="og:image" content="https://lug.ustc.edu.cn/static/splash/galaxy-1.jpg">
     <meta property="article:published_time" content="2021-01-25T00:00:00+08:00">
-    <meta property="article:modified_time" content="2021-01-25T23:13:04+08:00">
+    <meta property="article:modified_time" content="2021-01-26T13:13:28+08:00">
     <link rel="canonical" href="https://lug.ustc.edu.cn/planet/2021/01/physexp-using-python/">
     <script type="application/ld+json">
       {
@@ -58,7 +58,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=8fc089a41">
+    <link rel="stylesheet" href="/assets/css/main.css?v=d4bd44f29">
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
       <style>
@@ -172,7 +172,7 @@
           <meta itemprop="headline" content="用 Python 处理大物实验数据">
           <meta itemprop="description" content="身为某世界一流退学的学生，大物实验自然是逃不过。本人有幸选择了大物实验最多的专业方向，从一级做到六级，直到上学期刚刚结束。大物实验里数据处理是占了很多时间的，那么怎么才能「优雅」地完成这一工作呢？">
           <meta itemprop="datePublished" content="2021-01-25T00:00:00+08:00">
-          <meta itemprop="dateModified" content="2021-01-25T23:13:04+08:00">
+          <meta itemprop="dateModified" content="2021-01-26T13:13:28+08:00">
           <div class="page__inner-wrap">
             <section class="page__content" itemprop="text">
               <aside class="sidebar__right sticky">
@@ -265,7 +265,7 @@ e -3
 </code></pre>
                 </div>
               </div>
-              <p><img src="https://static.beta.ustclug.org/planet/2021-01-25-physexp-using-python-1.png" alt="1" /></p>
+              <p><img src="https://lug.ustc.edu.cn/static/planet/2021-01-25-physexp-using-python-1.png" alt="1" /></p>
               <p>只是画了张图就这么麻烦，很明显，除了练习了 Python 之外，和 Origin 相比生产力负提升。</p>
               <p>之后的问题就是简化这些过程了。</p>
               <h2 id="两年之后">两年之后</h2>
@@ -309,7 +309,7 @@ e -3
                 </div>
               </div>
               <p>文件如图所示，可以直接拿去打印了：</p>
-              <p><img src="https://static.beta.ustclug.org/planet/2021-01-25-physexp-using-python-2.png" alt="2" /></p>
+              <p><img src="https://lug.ustc.edu.cn/static/planet/2021-01-25-physexp-using-python-2.png" alt="2" /></p>
               <p>下面是整体代码：</p>
               <div class="language-python highlighter-rouge">
                 <div class="highlight">
@@ -380,7 +380,7 @@ e -3
               <p>你可能会问，为什么没有误差分析的功能。这确实是一个问题：计算 A 类和 B 类不确定度等不同实验差别很大，水平有限，我能做的除了将常数打表提供最基础的功能外，好像就没什么了。并且，开发得差不多时已经到二级中期了，算不确定度也不常见了（所以，别被一级吓怕了），所以这部分也没怎么测试过，属于 TODO。</p>
               <h2 id="迟到的-jupyter-notebook">迟到的 Jupyter Notebook</h2>
               <p>以上还是标准的 Python，但五级大物时，我尝试了仅一次就发现明显 Jupyter Notebook 更适合做类似的工作——尽管它不能用 Vim 编辑代码！这下子，数据直接输入在 Notebook 里就好了，画图也是所见即所得，不用等一张一张弹出来了。而进行临时的运算也不必影响正常流程。如图：</p>
-              <p><img src="https://static.beta.ustclug.org/planet/2021-01-25-physexp-using-python-3.png" alt="3" /></p>
+              <p><img src="https://lug.ustc.edu.cn/static/planet/2021-01-25-physexp-using-python-3.png" alt="3" /></p>
               <p>既然都到了 Jupyter ，如果<strong>多人合作</strong>的话，<a href="https://github.com/jupyterhub/jupyterhub">JupyterHub</a> 是非常不错的选择，可以多个人在一台服务器上使用 Jupyter Notebook 。我之前配置的是每个用户一个隔离的 Docker 容器，里面的 Python 已经装好了包，可以直接使用，同时挂载了一个共享空间可以分享写好的 Notebook 。其实 JupyterHub 有用 Github 帐号登录之类的权限管理功能，但当时我们是几个认识的人合作，就没有管这些。</p>
               <p>具体的代码在我的 <a href="https://github.com/ustcpetergu/physicsexp">Github</a> 上，如果有人在写大物实验报告的过程中无聊了想找个地方摸鱼浪费点时间，不妨来看看。</p>
               <h2 id="总结">总结</h2>
@@ -401,7 +401,7 @@ e -3
                   <a href="/categories/ustc" class="page__taxonomy-item" rel="tag">USTC</a>
                 </span>
               </p>
-              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2021-01-25">2021 年 1 月 25 日</time></p>
+              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2021-01-26">2021 年 1 月 26 日</time></p>
             </footer>
             <section class="page__share">
               <h4 class="page__share-title">分享</h4>
