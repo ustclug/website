@@ -18,7 +18,7 @@ LUG Planet 是……
   3. 希望积极参加 USTCLUG 线上活动的朋友。
 - 主要话题为 USTCLUG 社团的活动覆盖范围：
   1. UNIX、Linux 及自由/开源软件；
-  2. Windows, Microsoft 新技术；
+  2. Windows 与 Microsoft 新技术；
   3. 信息安全；
   4. 这些技术与 USTC 的碰撞与融合。
 
