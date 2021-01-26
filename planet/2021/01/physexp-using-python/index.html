@@ -21,7 +21,7 @@
     <meta property="og:description" content="身为某世界一流退学的学生，大物实验自然是逃不过。本人有幸选择了大物实验最多的专业方向，从一级做到六级，直到上学期刚刚结束。大物实验里数据处理是占了很多时间的，那么怎么才能「优雅」地完成这一工作呢？">
     <meta property="og:image" content="https://lug.ustc.edu.cn/static/splash/galaxy-1.jpg">
     <meta property="article:published_time" content="2021-01-25T00:00:00+08:00">
-    <meta property="article:modified_time" content="2021-01-26T13:27:21+08:00">
+    <meta property="article:modified_time" content="2021-01-26T19:25:49+08:00">
     <link rel="canonical" href="https://lug.ustc.edu.cn/planet/2021/01/physexp-using-python/">
     <script type="application/ld+json">
       {
@@ -58,7 +58,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=e121f81af">
+    <link rel="stylesheet" href="/assets/css/main.css?v=ef048467a">
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
       <style>
@@ -172,7 +172,7 @@
           <meta itemprop="headline" content="用 Python 处理大物实验数据">
           <meta itemprop="description" content="身为某世界一流退学的学生，大物实验自然是逃不过。本人有幸选择了大物实验最多的专业方向，从一级做到六级，直到上学期刚刚结束。大物实验里数据处理是占了很多时间的，那么怎么才能「优雅」地完成这一工作呢？">
           <meta itemprop="datePublished" content="2021-01-25T00:00:00+08:00">
-          <meta itemprop="dateModified" content="2021-01-26T13:27:21+08:00">
+          <meta itemprop="dateModified" content="2021-01-26T19:25:49+08:00">
           <div class="page__inner-wrap">
             <section class="page__content" itemprop="text">
               <aside class="sidebar__right sticky">
@@ -309,7 +309,7 @@ e -3
                 </div>
               </div>
               <p>文件如图所示，可以直接拿去打印了：</p>
-              <p><img src="/static/static/planet/2021-01-25-physexp-using-python-2.png" alt="2" /></p>
+              <p><img src="/static/planet/2021-01-25-physexp-using-python-2.png" alt="2" /></p>
               <p>下面是整体代码：</p>
               <div class="language-python highlighter-rouge">
                 <div class="highlight">
@@ -380,9 +380,9 @@ e -3
               <p>你可能会问，为什么没有误差分析的功能。这确实是一个问题：计算 A 类和 B 类不确定度等不同实验差别很大，水平有限，我能做的除了将常数打表提供最基础的功能外，好像就没什么了。并且，开发得差不多时已经到二级中期了，算不确定度也不常见了（所以，别被一级吓怕了），所以这部分也没怎么测试过，属于 TODO。</p>
               <h2 id="迟到的-jupyter-notebook">迟到的 Jupyter Notebook</h2>
               <p>以上还是标准的 Python，但五级大物时，我尝试了仅一次就发现明显 Jupyter Notebook 更适合做类似的工作——尽管它不能用 Vim 编辑代码！这下子，数据直接输入在 Notebook 里就好了，画图也是所见即所得，不用等一张一张弹出来了。而进行临时的运算也不必影响正常流程。如图：</p>
-              <p><img src="/static/static/planet/2021-01-25-physexp-using-python-3.png" alt="3" /></p>
+              <p><img src="/static/planet/2021-01-25-physexp-using-python-3.png" alt="3" /></p>
               <p>既然都到了 Jupyter ，如果<strong>多人合作</strong>的话，<a href="https://github.com/jupyterhub/jupyterhub">JupyterHub</a> 是非常不错的选择，可以多个人在一台服务器上使用 Jupyter Notebook 。我之前配置的是每个用户一个隔离的 Docker 容器，里面的 Python 已经装好了包，可以直接使用，同时挂载了一个共享空间可以分享写好的 Notebook 。其实 JupyterHub 有用 Github 帐号登录之类的权限管理功能，但当时我们是几个认识的人合作，就没有管这些。</p>
-              <p>具体的代码在我的 <a href="https://github.com/ustcpetergu/physicsexp">Github</a> 上，如果有人在写大物实验报告的过程中无聊了想找个地方摸鱼浪费点时间，不妨来看看。</p>
+              <p>具体的代码在我的 <a href="https://github.com/ustcpetergu/physicsexp">GitHub</a> 上，如果有人在写大物实验报告的过程中无聊了想找个地方摸鱼浪费点时间，不妨来看看。</p>
               <h2 id="总结">总结</h2>
               <p>如果您想尝试用 Python 处理大物实验数据，我可以比较负责地说对于 95% 以上的实验是完全没有问题的。使用 NumPy 和 SciPy 计算， Matplotlib 做图，配以 docx 生成、Jupyter Notebook 或 JupyterHub 团队合作，可以比较轻松（但不意味着节省时间）地完成所有需要的操作，并可以通过包装库提高效率。</p>
               <p>之前也有学长学姐尝试过类似的大物实验自动化项目，但因为暂时无法全部找到并对比，这里就不说了。大一的时候确实是想搞一套自动化程度很高的东西，但水平实在有限，并且不同的实验处理过程不太一样，一己之力完成每一个实验专属的程序也不太现实，所以结果就是自己挖了个坑并跳进去出不来：有时想想，或许还是左手卡西欧 991 右手座标纸来得快一些呢！</p>
