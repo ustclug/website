@@ -5,6 +5,13 @@ admin:
   avatar: "https://secure.gravatar.com/avatar/94c03bc620ea2cf7dc239ac0535cad8e?s=256&d=identicon&r=g"
   bio: "中国科学技术大学 Linux 用户协会"
   location: "USTC"
+  links:
+    - label: Website
+      icon: far fa-fw fa-globe
+      url: https://lug.ustc.edu.cn/
+    - label: GitHub
+      icon: fab fa-fw fa-github
+      url: https://github.com/ustclug
 
 mk:
   name: Kai Ma
@@ -33,4 +40,7 @@ gloit:
 petergu:
   name: petergu
   avatar: "https://secure.gravatar.com/avatar/2bb42aa969cb70fc7fc76eb6b82f86ed?s=256&d=identicon&r=g"
-  
+  links:
+    - label: GitHub
+      icon: fab fa-fw fa-github
+      url: https://github.com/ustcpetergu
