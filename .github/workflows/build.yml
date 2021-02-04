@@ -27,22 +27,22 @@ jobs:
     - name: Cache Ruby Bundler
       id: cache
       uses: actions/cache@v2
+      env:
+        CACHE_ID: 1
       with:
         path: vendor/bundle
-        key: ${{ runner.os }}-bundler-2.7-${{ hashFiles('Gemfile') }}
+        key: ${{ runner.os }}-bundler-${{ env.CACHE_ID }}-${{ hashFiles('Gemfile') }}
         restore-keys: |
-          ${{ runner.os }}-bundler-2.7-
+          ${{ runner.os }}-bundler-${{ env.CACHE_ID }}-
     - name: Cache Node modules
       uses: actions/cache@v2
       env:
-        cache-name: cache-node-modules
+        CACHE_ID: 1
       with:
         path: ~/.npm
-        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+        key: ${{ runner.os }}-npm-${{ env.CACHE_ID }}-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
-          ${{ runner.os }}-build-${{ env.cache-name }}-
-          ${{ runner.os }}-build-
-          ${{ runner.os }}-
+          ${{ runner.os }}-npm-${{ env.CACHE_ID }}-
 
     - name: Install dependencies
       run: |
