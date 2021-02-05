@@ -1,6 +1,11 @@
 body.layout--splash {
+  .masthead {
+    height: 0;
+    color: white;
+  }
+
   .page__hero--overlay {
-    padding-top: 3.333em;
+    padding-top: 8em;
   }
 
   .feature__wrapper {
@@ -15,6 +20,20 @@ body.layout--splash {
     &:nth-child(3n + 1) {
       clear: both;
       margin-left: 0;
+    }
+  }
+
+  .search-content {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -4em;
+      left: 0;
+      right: 0;
+      height: 4em;
+      background-color: $primary-color;
     }
   }
 }
