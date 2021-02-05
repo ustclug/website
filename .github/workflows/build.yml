@@ -46,7 +46,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        bundle install --path=vendor/bundle
+        bundle install --path=vendor/bundle --jobs=4 --retry=3
         bundle clean
         npm install
 
