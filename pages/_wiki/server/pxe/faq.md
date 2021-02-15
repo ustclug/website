@@ -350,7 +350,7 @@ Windows 9x/XP/NT 用户需要下载安装 [WINGRUB](http://sourceforge.net/proje
 
 - [LTSP](http://www.ltsp.org/) 项目提供了相关的支持工具；
 - Etherboot 的 contrib/initrd 目录下包含的 mkinitrd-net 工具也可参考使用；
-- Debian 还提供了工具包 initrd-netboot-tools (http://www.lessdisks.net/)。
+- Debian 还提供了工具包 initrd-netboot-tools。
 
 或者可以直接使用 NFS-ROOT 方案。基本思路是：
 
