@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.21.0 by Michael Rose
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
   Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
@@ -57,7 +57,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=39f239b8e">
+    <link rel="stylesheet" href="/assets/css/main.css?v=a4544511b">
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
       <style>
@@ -190,43 +190,47 @@
                     <li><a href="#快速设置">快速设置</a></li>
                     <li><a href="#aosc-os2">AOSC OS2</a></li>
                     <li><a href="#aosc-os3">AOSC OS3</a>
-                      -  <a href="#deb-仓库配置">deb 仓库配置</a>
-                      -  <a href="#rpm-仓库配置">rpm 仓库配置</a>
-                      -  <a href="#zypper-用户">Zypper 用户</a>
-                      {:.}</li>
+                      <ul>
+                        <li><a href="#deb-仓库配置">deb 仓库配置</a></li>
+                        <li><a href="#rpm-仓库配置">rpm 仓库配置</a></li>
+                        <li><a href="#zypper-用户">Zypper 用户</a></li>
+                      </ul>
+                    </li>
                   </ul>
-                </nav>
-              </aside>
-              <p>此处的帮助文档已经废弃，新的内容请访问 <a href="https://mirrors.ustc.edu.cn/help/">https://mirrors.ustc.edu.cn/help/</a></p>
-              <hr />
-              <p>anthon 为 <a href="https://anthonos.org/" title="https://anthonos.org">AnthonOS</a> 项目的官方源 <a href="http://repo.anthonos.org/" title="http://repo.anthonos.org">http://repo.anthonos.org</a> 的镜像。</p>
-              <h2 id="快速设置">快速设置</h2>
-              <p>考虑到安同的系统情况可能时有改动，并且源也不少，我们就偷个懒：</p>
-              <p>anthon-apt.sh:</p>
-              <div class="language-plaintext highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code># AOSC OSes, apt-dpkg
+                </li>
+              </ul>
+            </nav>
+          </aside>
+          <p>此处的帮助文档已经废弃，新的内容请访问 <a href="https://mirrors.ustc.edu.cn/help/">https://mirrors.ustc.edu.cn/help/</a></p>
+          <hr />
+          <p>anthon 为 <a href="https://anthonos.org/" title="https://anthonos.org">AnthonOS</a> 项目的官方源 <a href="http://repo.anthonos.org/" title="http://repo.anthonos.org">http://repo.anthonos.org</a> 的镜像。</p>
+          <h2 id="快速设置">快速设置</h2>
+          <p>考虑到安同的系统情况可能时有改动，并且源也不少，我们就偷个懒：</p>
+          <p>anthon-apt.sh:</p>
+          <div class="language-plaintext highlighter-rouge">
+            <div class="highlight">
+              <pre class="highlight"><code># AOSC OSes, apt-dpkg
 cat /etc/apt/sources.list | egrep 'mirror|repo' |
 sed -r -e 's@(mirror|repo).anthonos.org@mirrors.ustc.edu.cn/anthon@g' &gt;&gt; /etc/apt/sources.list
 </code></pre>
-                </div>
-              </div>
-              <p>如果你只想用 USTC 镜像的话，勇敢地把 <code class="language-plaintext highlighter-rouge">&gt;&gt;</code> 改成 <code class="language-plaintext highlighter-rouge">&gt;</code> 吧。由于 AOSC OS3 yum 暂时没有 fastestmirror，你需要做一些砍手的工作：</p>
-              <p>anthon-yum.sh:</p>
-              <div class="language-plaintext highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code># AOSC OS3, yum-rpm
+            </div>
+          </div>
+          <p>如果你只想用 USTC 镜像的话，勇敢地把 <code class="language-plaintext highlighter-rouge">&gt;&gt;</code> 改成 <code class="language-plaintext highlighter-rouge">&gt;</code> 吧。由于 AOSC OS3 yum 暂时没有 fastestmirror，你需要做一些砍手的工作：</p>
+          <p>anthon-yum.sh:</p>
+          <div class="language-plaintext highlighter-rouge">
+            <div class="highlight">
+              <pre class="highlight"><code># AOSC OS3, yum-rpm
 sudo sed -r -e -i.orig 's@(mirror|repo).anthonos.org@mirrors.ustc.edu.cn/anthon@g' /etc/yum/repos.d/aosc.repo
 </code></pre>
-                </div>
-              </div>
-              <p>接下来是分系统信息：</p>
-              <h2 id="aosc-os2">AOSC OS2</h2>
-              <p>AOSC OS2 具有多个仓库，均位于 <a href="https://mirrors.ustc.edu.cn/anthon/os2-repo" title="https://mirrors.ustc.edu.cn/anthon/os2-repo">/anthon/os2-repo</a> 下。</p>
-              <p>sources-os2.list:</p>
-              <div class="language-plaintext highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code># /etc/apt/sources.list
+            </div>
+          </div>
+          <p>接下来是分系统信息：</p>
+          <h2 id="aosc-os2">AOSC OS2</h2>
+          <p>AOSC OS2 具有多个仓库，均位于 <a href="https://mirrors.ustc.edu.cn/anthon/os2-repo" title="https://mirrors.ustc.edu.cn/anthon/os2-repo">/anthon/os2-repo</a> 下。</p>
+          <p>sources-os2.list:</p>
+          <div class="language-plaintext highlighter-rouge">
+            <div class="highlight">
+              <pre class="highlight"><code># /etc/apt/sources.list
 deb http://mirrors.ustc.edu.cn/anthon/os2-repo/os2/ # OS2 基础源
 deb http://mirrors.ustc.edu.cn/anthon/os2-repo/os2-anthonos/ # OS2 AnthonOS 源
 deb http://mirrors.ustc.edu.cn/anthon/os2-repo/os2-apps/ # OS2 Apps 半实验源
@@ -234,96 +238,96 @@ deb http://mirrors.ustc.edu.cn/anthon/os2-repo/os2-apps/ # OS2 Apps 半实验源
 # deb http://mirrors.ustc.edu.cn/anthon/os2-repo/os2-centralpoint/ # OS2 CentralPoint 服务器源
 # deb http://mirrors.ustc.edu.cn/anthon/os2-repo/os2-studio/ # OS2 Studio 源
 </code></pre>
-                </div>
-              </div>
-              <hr />
-              <h2 id="aosc-os3">AOSC OS3</h2>
-              <p>AOSC OS3 的 deb 和 rpm 仓库在试验阶段存于 <a href="https://mirrors.ustc.edu.cn/anthon/os3-next/" title="https://mirrors.ustc.edu.cn/anthon/os3-next/">/anthon/os3-next</a>。</p>
-              <h4 id="deb-仓库配置">deb 仓库配置</h4>
-              <p>sources-os3.list:</p>
-              <div class="language-plaintext highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code># /etc/apt/sources.list
+            </div>
+          </div>
+          <hr />
+          <h2 id="aosc-os3">AOSC OS3</h2>
+          <p>AOSC OS3 的 deb 和 rpm 仓库在试验阶段存于 <a href="https://mirrors.ustc.edu.cn/anthon/os3-next/" title="https://mirrors.ustc.edu.cn/anthon/os3-next/">/anthon/os3-next</a>。</p>
+          <h4 id="deb-仓库配置">deb 仓库配置</h4>
+          <p>sources-os3.list:</p>
+          <div class="language-plaintext highlighter-rouge">
+            <div class="highlight">
+              <pre class="highlight"><code># /etc/apt/sources.list
 deb http://mirrors.ustc.edu.cn/anthon/os3-next/os3-dpkg/ # 主源
 </code></pre>
-                </div>
-              </div>
-              <h4 id="rpm-仓库配置">rpm 仓库配置</h4>
-              <p>aosc.repo:</p>
-              <div class="language-plaintext highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code># /etc/yum/repos.d/aosc.repo
+            </div>
+          </div>
+          <h4 id="rpm-仓库配置">rpm 仓库配置</h4>
+          <p>aosc.repo:</p>
+          <div class="language-plaintext highlighter-rouge">
+            <div class="highlight">
+              <pre class="highlight"><code># /etc/yum/repos.d/aosc.repo
 [Official]
 name=AOSC OS3
 baseurl=http://mirrors.ustc.edu.cn/anthon/os3-next/os3-rpm/
 enabled=1
 </code></pre>
-                </div>
-              </div>
-              <h4 id="zypper-用户">Zypper 用户</h4>
-              <div class="language-plaintext highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>zypper ar http://mirrors.ustc.edu.cn/anthon/os3-next/os3-rpm "AOSC OS3"
+            </div>
+          </div>
+          <h4 id="zypper-用户">Zypper 用户</h4>
+          <div class="language-plaintext highlighter-rouge">
+            <div class="highlight">
+              <pre class="highlight"><code>zypper ar http://mirrors.ustc.edu.cn/anthon/os3-next/os3-rpm "AOSC OS3"
 zypper refresh
 </code></pre>
-                </div>
-              </div>
-            </section>
-            <footer class="page__meta">
-              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-11-28">2020 年 11 月 28 日</time></p>
-            </footer>
-            <nav class="pagination">
-              <a href="/wiki/mirrors/help/alpine/" class="pagination--pager" title="Alpine Linux 镜像源使用帮助
+            </div>
+          </div>
+        </section>
+        <footer class="page__meta">
+          <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-11-28">2020 年 11 月 28 日</time></p>
+        </footer>
+        <nav class="pagination">
+          <a href="/wiki/mirrors/help/alpine/" class="pagination--pager" title="Alpine Linux 镜像源使用帮助
 ">上一页</a>
-              <a href="/wiki/mirrors/help/aosp/" class="pagination--pager" title="AOSP(Android) 镜像使用帮助
+          <a href="/wiki/mirrors/help/aosp/" class="pagination--pager" title="AOSP(Android) 镜像使用帮助
 ">下一页</a>
-            </nav>
-          </div>
-        </article>
+        </nav>
       </div>
-    </div>
-    <div id="footer" class="page__footer">
-      <footer>
-        <!-- start custom footer snippets -->
-        <!-- end custom footer snippets -->
-        <div class="footer-row">
-          <div class="footer-block footer__about">
-            <p>中国科学技术大学 Linux 用户协会是由中国科学技术大学在校的 GNU/Linux 爱好者发起并组成的团体，旨在联合科大的 GNU/Linux
-              使用者，搭建信息交流共享的平台，宣传自由软件的价值，提高自由软件社区文化氛围，推广自由软件的应用。</p>
+    </article>
+  </div>
+</div>
+<div id="footer" class="page__footer">
+  <footer>
+    <!-- start custom footer snippets -->
+    <!-- end custom footer snippets -->
+    <div class="footer-row">
+      <div class="footer-block footer__about">
+        <p>中国科学技术大学 Linux 用户协会是由中国科学技术大学在校的 GNU/Linux 爱好者发起并组成的团体，旨在联合科大的 GNU/Linux
+          使用者，搭建信息交流共享的平台，宣传自由软件的价值，提高自由软件社区文化氛围，推广自由软件的应用。</p>
+      </div>
+      <div class="footer-block footer__extras">
+        <div class="footer__contact">
+          <ul>
+            <li>
+              <a href="/wiki/intro/"><i class="fad fa-fw fa-address-card"></i> 关于我们</a>
+            </li>
+            <li>
+              <a href="/wiki/lug/contact/"><i class="fas fa-fw fa-phone-alt"></i> 联系我们</a>
+            </li>
+            <li>
+              <a href="/wiki/lug/contribute/"><i class="fad fa-fw fa-users"></i> 加入我们</a>
+            </li>
+            <li>
+              <a href="/feed/"><i class="fad fa-fw fa-rss" style="--fa-secondary-opacity: 0.6;"></i> RSS 订阅</a>
+            </li>
+            <li>
+              <a href="https://github.com/ustclug/website"><i class="fab fa-fw fa-github"></i> 本站仓库</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__logo">
+          <div class="footer__logo-image">
+            <img src="https://ftp.lug.ustc.edu.cn/misc/logo-white.svg" />
           </div>
-          <div class="footer-block footer__extras">
-            <div class="footer__contact">
-              <ul>
-                <li>
-                  <a href="/wiki/intro/"><i class="fad fa-fw fa-address-card"></i> 关于我们</a>
-                </li>
-                <li>
-                  <a href="/wiki/lug/contact/"><i class="fas fa-fw fa-phone-alt"></i> 联系我们</a>
-                </li>
-                <li>
-                  <a href="/wiki/lug/contribute/"><i class="fad fa-fw fa-users"></i> 加入我们</a>
-                </li>
-                <li>
-                  <a href="/feed/"><i class="fad fa-fw fa-rss" style="--fa-secondary-opacity: 0.6;"></i> RSS 订阅</a>
-                </li>
-                <li>
-                  <a href="https://github.com/ustclug/website"><i class="fab fa-fw fa-github"></i> 本站仓库</a>
-                </li>
-              </ul>
-            </div>
-            <div class="footer__logo">
-              <div class="footer__logo-image">
-                <img src="https://ftp.lug.ustc.edu.cn/misc/logo-white.svg" />
-              </div>
-              <div class="footer__logo-text">
-                <!-- a href="http://www.beian.miit.gov.cn" target="_blank">皖ICP备05002528号</a -->
-              </div>
-            </div>
+          <div class="footer__logo-text">
+            <!-- a href="http://www.beian.miit.gov.cn" target="_blank">皖ICP备05002528号</a -->
           </div>
         </div>
-      </footer>
+      </div>
     </div>
-    <script src="/assets/js/main.min.js"></script>
-    <img src="/static/USTC_logo.svg" style="position: fixed; bottom: -320px; left: -200px; opacity: 0.1; z-index: -100;" />
-  </body>
+  </footer>
+</div>
+<script src="/assets/js/main.min.js"></script>
+<img src="/static/USTC_logo.svg" style="position: fixed; bottom: -320px; left: -200px; opacity: 0.1; z-index: -100;" />
+</body>
 </html>
