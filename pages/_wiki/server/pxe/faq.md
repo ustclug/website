@@ -403,6 +403,7 @@ Windows 9x/XP/NT 用户需要下载安装 [WINGRUB](http://sourceforge.net/proje
 ## 相关链接
 
 - Etherboot
+
   - Homepage http://www.etherboot.org/
   - Wiki http://wiki.etherboot.org/
 
@@ -411,7 +412,7 @@ Windows 9x/XP/NT 用户需要下载安装 [WINGRUB](http://sourceforge.net/proje
 - HOWTO setup a PXE 2.x server under Linux http://clic.mandrakesoft.com/documentation/pxe/
 - Linux Boot http://www.linux-boot.net/
 
-- 基于 NFS*ROOT 的 [Gentoo Linux 的 PXE 安装方法](http://www.gentoo.org.tw/doc/altinstall.xml#doc_chap5)
+- 基于 NFS\*ROOT 的 [Gentoo Linux 的 PXE 安装方法](http://www.gentoo.org.tw/doc/altinstall.xml#doc_chap5)
 - Diskless Nodes with Gentoo http://www.gentoo.org/doc/en/diskless-howto.xml
 - FreeBSD Diskless Clients http://the-labs.com/FreeBSD/Diskless/
 - Network Booting i386 Unix Variants http://www.munts.com/diskless/netboot.html
@@ -448,4 +449,4 @@ Windows 9x/XP/NT 用户需要下载安装 [WINGRUB](http://sourceforge.net/proje
 - [[Wolves\] using GNU Screen to join two terminals?](http://mailman.lug.org.uk/pipermail/wolves/2004-November/010482.html)
 - [Linuxeden 的 GRUB 专区 : 首页](http://grub.linuxeden.com/wakka.php?wakka=%CA%D7%D2%B3)
 - [ParallelKnoppix: Bootable CD to Create a Linux Cluster in 15 Minutes](http://pareto.uab.es/mcreel/ParallelKnoppix/)
-- [PXE 網路開機實作](http://cha.homeip.net/blog/archives/2006/08/pxe.html)*
+- [PXE 網路開機實作](http://cha.homeip.net/blog/archives/2006/08/pxe.html)\*
