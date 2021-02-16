@@ -402,59 +402,50 @@ Windows 9x/XP/NT 用户需要下载安装 [WINGRUB](http://sourceforge.net/proje
 
 ## 相关链接
 
-Etherboot
-Homepage
-http://www.etherboot.org/
-Wiki
-http://wiki.etherboot.org/
+- Etherboot
+  - Homepage http://www.etherboot.org/
+  - Wiki http://wiki.etherboot.org/
 
-Diskless Linux
-http://frank.harvard.edu/~coldwell/diskless/
-PXE Documentation Version 1.0
-HOWTO setup a PXE 2.x server under Linux
-http://clic.mandrakesoft.com/documentation/pxe/
-Linux Boot
-http://www.linux-boot.net/
+- Diskless Linux http://frank.harvard.edu/~coldwell/diskless/
+- PXE Documentation Version 1.0（缺少链接）
+- HOWTO setup a PXE 2.x server under Linux http://clic.mandrakesoft.com/documentation/pxe/
+- Linux Boot http://www.linux-boot.net/
 
-基于 NFS*ROOT 的 [Gentoo Linux 的 PXE 安装方法](http://www.gentoo.org.tw/doc/altinstall.xml#doc_chap5)
-Diskless Nodes with Gentoo
-http://www.gentoo.org/doc/en/diskless-howto.xml
-FreeBSD Diskless Clients
-http://the-labs.com/FreeBSD/Diskless/
-Network Booting i386 Unix Variants
-http://www.munts.com/diskless/netboot.html
-Booting FreeBSD via PXE
-http://www.tnpi.biz/computing/freebsd/pxe-netboot.shtml
-[Remote Network Boot via PXE](http://www.kegel.com/linux/pxe.html)
-[Index of /tweaks/dhcp3](http://debian.jones.dk/tweaks/dhcp3/)
-[如何远程安装 Linux](http://www-900.ibm.com/developerWorks/cn/linux/l-tip-prompt/l-pex/index.shtml)
-[Diskless Linux](http://frank.harvard.edu/~coldwell/diskless/)
-[Etherboot Wiki - Main.HomePage](http://wiki.etherboot.org/)
-[PXE Documentation Version 1.0](http://clic.mandrakesoft.com/documentation/pxe/)
-[Ultimate Boot CD - Overview](http://ubcd.sourceforge.net/index.html)
-[Bootable CD Utilities by reanimatolog - Образы загрузочных дискет и жестких дисков](http://bootcd.narod.ru/images.htm)
-[All-drivers Etherboot floppy & how to install etherboot to a hard disk](http://etherboot.anadex.de/)
-[ROM-o-matic.net](http://rom-o-matic.net/)
-[:: ThinStation - a light, full-featured thin client OS ::](http://thinstation.sourceforge.net/wiki/index.php/ThIndex)
-[Index of /debian/dists/unstable/main/installer-i386/current/images/netboot](http://ftp.us.debian.org/debian/dists/unstable/main/installer-i386/current/images/netboot/)
-[YAGI - [Deep Space DaN\]](http://dan.deam.org/yagi.php)
-[Linux-Boot.net](http://www.linux-boot.net/InitRD/Howto/)
-[Pollix LiveCD](http://moe.tnc.edu.tw/~kendrew/pollix/)
-[Bart's Network Boot Disk](http://www.nu2.nu/bootdisk/network/)
-[Universal TCP/IP Network Bootdisk for M\$ Networks](http://www.netbootdisk.com/download.htm)
-[DOS and W31 utilities for MSDOS, DRDOS, FreeDOS, PCDOS, OpenDOS, and PTSDOS 16 bit DOS versions.](http://www.undercoverdesign.com/dosghost/dos/utildos.htm)
-[Install GNU/Linux without any CD, floppy, USB-key, nor any other removable media](http://marc.herbert.free.fr/linux/win2linstall.html#grub-for-nt)
-[Boosting the power of a DOS image](http://people.cs.uchicago.edu/~gmurali/gui/isodos.html)
-[GRUB4DOS and WINGRUB Project Homepage](http://grub4dos.sourceforge.net/)
-[UBCD for Windows](http://www.ubcd4win.com/downloads.htm)
-[The Labs: FreeBSD Diskless](http://the-labs.com/FreeBSD/Diskless/)
-[Gentoo Linux Documentation -- Diskless Nodes with Gentoo](http://www.gentoo.org/doc/en/diskless-howto.xml)
-[Network Booting Unix Variants](http://www.munts.com/diskless/netboot.html)
-[The Network People, Inc. - FreeBSD 5 PXE boot recipe](http://www.tnpi.biz/computing/freebsd/pxe-netboot.shtml)
-[MorphixWiki! - Qemu](http://am.xs4all.nl/phpwiki/index.php/Qemu)
-[Index of /qemu/utilities/QEMU-HD-Mounter](http://dad-answers.com/qemu/utilities/QEMU-HD-Mounter/)
-[DistroWatch.com: clusterKNOPPIX](http://distrowatch.com/table.php?distribution=clusterknoppix)
-[[Wolves\] using GNU Screen to join two terminals?](http://mailman.lug.org.uk/pipermail/wolves/2004-November/010482.html)
-[Linuxeden 的 GRUB 专区 : 首页](http://grub.linuxeden.com/wakka.php?wakka=%CA%D7%D2%B3)
-[ParallelKnoppix: Bootable CD to Create a Linux Cluster in 15 Minutes](http://pareto.uab.es/mcreel/ParallelKnoppix/)
-[PXE 網路開機實作](http://cha.homeip.net/blog/archives/2006/08/pxe.html)*
+- 基于 NFS*ROOT 的 [Gentoo Linux 的 PXE 安装方法](http://www.gentoo.org.tw/doc/altinstall.xml#doc_chap5)
+- Diskless Nodes with Gentoo http://www.gentoo.org/doc/en/diskless-howto.xml
+- FreeBSD Diskless Clients http://the-labs.com/FreeBSD/Diskless/
+- Network Booting i386 Unix Variants http://www.munts.com/diskless/netboot.html
+- Booting FreeBSD via PXE http://www.tnpi.biz/computing/freebsd/pxe-netboot.shtml
+- [Remote Network Boot via PXE](http://www.kegel.com/linux/pxe.html)
+- [Index of /tweaks/dhcp3](http://debian.jones.dk/tweaks/dhcp3/)
+- [如何远程安装 Linux](http://www-900.ibm.com/developerWorks/cn/linux/l-tip-prompt/l-pex/index.shtml)
+- [Diskless Linux](http://frank.harvard.edu/~coldwell/diskless/)
+- [Etherboot Wiki - Main.HomePage](http://wiki.etherboot.org/)
+- [PXE Documentation Version 1.0](http://clic.mandrakesoft.com/documentation/pxe/)
+- [Ultimate Boot CD - Overview](http://ubcd.sourceforge.net/index.html)
+- [Bootable CD Utilities by reanimatolog - Образы загрузочных дискет и жестких дисков](http://bootcd.narod.ru/images.htm)
+- [All-drivers Etherboot floppy & how to install etherboot to a hard disk](http://etherboot.anadex.de/)
+- [ROM-o-matic.net](http://rom-o-matic.net/)
+- [:: ThinStation - a light, full-featured thin client OS ::](http://thinstation.sourceforge.net/wiki/index.php/ThIndex)
+- [Index of /debian/dists/unstable/main/installer-i386/current/images/netboot](http://ftp.us.debian.org/debian/dists/unstable/main/installer-i386/current/images/netboot/)
+- [YAGI - [Deep Space DaN\]](http://dan.deam.org/yagi.php)
+- [Linux-Boot.net](http://www.linux-boot.net/InitRD/Howto/)
+- [Pollix LiveCD](http://moe.tnc.edu.tw/~kendrew/pollix/)
+- [Bart's Network Boot Disk](http://www.nu2.nu/bootdisk/network/)
+- [Universal TCP/IP Network Bootdisk for M\$ Networks](http://www.netbootdisk.com/download.htm)
+- [DOS and W31 utilities for MSDOS, DRDOS, FreeDOS, PCDOS, OpenDOS, and PTSDOS 16 bit DOS versions.](http://www.undercoverdesign.com/dosghost/dos/utildos.htm)
+- [Install GNU/Linux without any CD, floppy, USB-key, nor any other removable media](http://marc.herbert.free.fr/linux/win2linstall.html#grub-for-nt)
+- [Boosting the power of a DOS image](http://people.cs.uchicago.edu/~gmurali/gui/isodos.html)
+- [GRUB4DOS and WINGRUB Project Homepage](http://grub4dos.sourceforge.net/)
+- [UBCD for Windows](http://www.ubcd4win.com/downloads.htm)
+- [The Labs: FreeBSD Diskless](http://the-labs.com/FreeBSD/Diskless/)
+- [Gentoo Linux Documentation -- Diskless Nodes with Gentoo](http://www.gentoo.org/doc/en/diskless-howto.xml)
+- [Network Booting Unix Variants](http://www.munts.com/diskless/netboot.html)
+- [The Network People, Inc. - FreeBSD 5 PXE boot recipe](http://www.tnpi.biz/computing/freebsd/pxe-netboot.shtml)
+- [MorphixWiki! - Qemu](http://am.xs4all.nl/phpwiki/index.php/Qemu)
+- [Index of /qemu/utilities/QEMU-HD-Mounter](http://dad-answers.com/qemu/utilities/QEMU-HD-Mounter/)
+- [DistroWatch.com: clusterKNOPPIX](http://distrowatch.com/table.php?distribution=clusterknoppix)
+- [[Wolves\] using GNU Screen to join two terminals?](http://mailman.lug.org.uk/pipermail/wolves/2004-November/010482.html)
+- [Linuxeden 的 GRUB 专区 : 首页](http://grub.linuxeden.com/wakka.php?wakka=%CA%D7%D2%B3)
+- [ParallelKnoppix: Bootable CD to Create a Linux Cluster in 15 Minutes](http://pareto.uab.es/mcreel/ParallelKnoppix/)
+- [PXE 網路開機實作](http://cha.homeip.net/blog/archives/2006/08/pxe.html)*
