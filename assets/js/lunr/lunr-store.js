@@ -378,7 +378,7 @@ var store = [{
 "teaser": null
 },{
 "title": "USTC Linux 用户生存指南",
-"excerpt":"本指南指导中科大 Linux 用户如何使用 Linux 完成各门课程。 注意：本指南目前仅包含部分计算机专业本科课程。欢迎其他同学贡献更多内容！ 程序设计 程序设计课程主要讲授 C 语言知识，而 C 语言本身就是用来 UNIX 的原生语言，所以不会有任何障碍。 建议使用 GCC 或 Clang 作为编译器，使用 GDB 作为调试器。可以选用任意一款文本编辑器（Vim、Emacs、Sublime、Atom、VSCode、gedit、Kate 等）或集成开发环境（如 CLion、Geany、KDevelop）。 兼容性：★★★★★ 数据结构 主要讲授数据结构及其 C 语言实现。和程序设计一样没有任何问题。 课本（严蔚敏版数据结构）分光盘版和无盘版。光盘内容为算法和数据结构的演示程序，仅支持 MS-DOS 和 Windows，其功能可完全由 VisuAlgo 替代。所以建议购买无盘版。 兼容性：★★★★★ 模拟与数字电路 旧开发板：Digilent Nexys 2 和 3 均有 Linux 工具，Xilinx ISE 也有 Linux 版本。笔者经验是 Xilinx ISE...","categories": ["Experience"],
+"excerpt":"本指南指导中科大 Linux 用户如何使用 Linux 完成各门课程。 注意：本指南目前仅包含部分计算机专业本科课程。欢迎其他同学贡献更多内容！ 程序设计 程序设计课程主要讲授 C 语言知识，而 C 语言本身就是用来 UNIX 的原生语言，所以不会有任何障碍。 建议使用 GCC 或 Clang 作为编译器，使用 GDB 作为调试器。可以选用任意一款文本编辑器（Vim、Emacs、Sublime、Atom、VSCode、gedit、Kate 等）或集成开发环境（如 CLion、Geany、KDevelop）。 兼容性：★★★★★ 数据结构 主要讲授数据结构及其 C 语言实现。和程序设计一样没有任何问题。 课本（严蔚敏版数据结构）分光盘版和无盘版。光盘内容为算法和数据结构的演示程序，仅支持 MS-DOS 和 Windows，其功能可完全由 VisuAlgo 替代。所以建议购买无盘版。 兼容性：★★★★★ 模拟与数字电路实验 旧开发板：Digilent Nexys 2 和 3 均有 Linux 工具，Xilinx ISE 也有 Linux 版本。笔者经验是 Xilinx ISE...","categories": ["Experience"],
 "tags": ["Courses"],
 "url": "/planet/2018/08/USTC-Linux-user-guide/",
 "teaser": null
@@ -804,7 +804,7 @@ var store = [{
 "teaser": null
 },{
 "title": "USTC Linux 用户生存指南",
-"excerpt":"本指南指导中科大 Linux 用户如何使用 Linux 完成各门课程。 注意：本指南目前仅包含部分计算机专业本科课程。欢迎其他同学贡献更多内容！ 程序设计 程序设计课程主要讲授 C 语言知识，而 C 语言本身就是用来 UNIX 的原生语言，所以不会有任何障碍。 建议使用 GCC 或 Clang 作为编译器，使用 GDB 作为调试器。可以选用任意一款文本编辑器（Vim、Emacs、Sublime、Atom、VSCode、gedit、Kate 等）或集成开发环境（如 CLion、Geany、KDevelop）。 兼容性：★★★★★ 数据结构 主要讲授数据结构及其 C 语言实现。和程序设计一样没有任何问题。 课本（严蔚敏版数据结构）分光盘版和无盘版。光盘内容为算法和数据结构的演示程序，仅支持 MS-DOS 和 Windows，其功能可完全由 VisuAlgo 替代。所以建议购买无盘版。 兼容性：★★★★★ 模拟与数字电路 旧开发板：Digilent Nexys 2 和 3 均有 Linux 工具，Xilinx ISE 也有 Linux 版本。笔者经验是 Xilinx ISE...","categories": ["Experience"],
+"excerpt":"本指南指导中科大 Linux 用户如何使用 Linux 完成各门课程。 注意：本指南目前仅包含部分计算机专业本科课程。欢迎其他同学贡献更多内容！ 程序设计 程序设计课程主要讲授 C 语言知识，而 C 语言本身就是用来 UNIX 的原生语言，所以不会有任何障碍。 建议使用 GCC 或 Clang 作为编译器，使用 GDB 作为调试器。可以选用任意一款文本编辑器（Vim、Emacs、Sublime、Atom、VSCode、gedit、Kate 等）或集成开发环境（如 CLion、Geany、KDevelop）。 兼容性：★★★★★ 数据结构 主要讲授数据结构及其 C 语言实现。和程序设计一样没有任何问题。 课本（严蔚敏版数据结构）分光盘版和无盘版。光盘内容为算法和数据结构的演示程序，仅支持 MS-DOS 和 Windows，其功能可完全由 VisuAlgo 替代。所以建议购买无盘版。 兼容性：★★★★★ 模拟与数字电路实验 旧开发板：Digilent Nexys 2 和 3 均有 Linux 工具，Xilinx ISE 也有 Linux 版本。笔者经验是 Xilinx ISE...","categories": ["Experience"],
 "tags": ["Courses"],
 "url": "/planet/2018/08/USTC-Linux-user-guide/",
 "teaser": null
