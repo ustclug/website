@@ -31,7 +31,7 @@ tags:
 
 旧开发板：Digilent Nexys 2 和 3 均有 Linux 工具，Xilinx ISE 也有 Linux 版本。笔者经验是 Xilinx ISE 可以正常使用。
 
-新开发板(Digilent Nexys 4 DDR)：Xilinx Vivado 有 Linux 版本。可模拟，综合，实现，烧录。（含串口通讯等exe文件的实验可能无法正常开展）
+新开发板(Digilent Nexys 4 DDR)：Xilinx Vivado 有 Linux 版本。可模拟，综合，实现，烧录。（含串口通讯等 exe 文件的实验可能无法正常开展）
 
 注：除了烧录 FPGA，可以完全使用自由软件替代。仿真可以使用 Icarus Verilog 和 GTKWave。
 
@@ -41,7 +41,7 @@ tags:
 
 LC3 Tools 提供 Linux 版本。作业和 Lab 只需提交 PDF 版本。教学资源、课程要求见课本官网或课程官网：http://acsa.ustc.edu.cn/ics/。
 
-[LC3 Tools二进制文件(.AppImage)](https://github.com/chiragsakhuja/lc3tools/releases)
+[LC3 Tools 二进制文件(.AppImage)](https://github.com/chiragsakhuja/lc3tools/releases)
 
 兼容性：★★★★☆
 
