@@ -3,7 +3,7 @@
 
 # 借阅记录
 
-如欲借阅图书，请参阅[图书借阅管理制度](/wiki/lug/borrow_book)。
+如欲借阅图书，请参阅[图书借阅管理制度](/wiki/lug/book/borrow_book/)。
 
 ## 2021 年借阅记录
 
