@@ -27,10 +27,10 @@
 | 数据结构与算法分析                | 胡清宇 | hmsh AT mail.ustc.edu.cn      | 2020-08-30 | \-         | \-   |
 | 数学物理方法习题全解              | 袁一玮 | totoroyyw AT ustclug.org      | 2020-08-31 | 2020-09-02 | \-   |
 | 七周七语言 理解多种编程范型       | 罗丽薇 | loliw AT ustclug.org          | 2020-09-04 | \-         | \-   |
-| 随机过程 （第三版）               | 罗丽薇 | loliw AT ustclug.org          | 2020-09-13 | \-         | \-   |
-| 算法导论（第三版）                | 罗丽薇 | loliw AT ustclug.org          | 2020-09-13 | \-         | \-   |
-| 编译原理（第三版）陈意云 张昱     | 罗丽薇 | loliw AT ustclug.org          | 2020-09-13 | \-         | \-   |
-| 计算机网络-自顶向下方法（第七版） | 罗丽薇 | loliw AT ustclug.org          | 2020-09-13 | \-         | \-   |
+| 随机过程 （第三版）               | 罗丽薇 | loliw AT ustclug.org          | 2020-09-13 | 2021-03-15 | \-   |
+| 算法导论（第三版）                | 罗丽薇 | loliw AT ustclug.org          | 2020-09-13 | 2021-03-15 | \-   |
+| 编译原理（第三版）陈意云 张昱     | 罗丽薇 | loliw AT ustclug.org          | 2020-09-13 | 2021-03-15 | \-   |
+| 计算机网络-自顶向下方法（第七版） | 罗丽薇 | loliw AT ustclug.org          | 2020-09-13 | 2021-03-15 | \-   |
 | 计算机系统概论（英文第二版）      | 余致远 | fishyu AT mail.ustc.edu.cn    | 2020-09-28 | 2020-12-21 | \-   |
 | 机器学习实战                      | 余致远 | fishyu AT mail.ustc.edu.cn    | 2020-09-28 | 2020-12-21 | \-   |
 | 鸟哥的 Linux 私房菜 基础学习篇    | 王若妍 | wry2018zs AT mail.ustc.edu.cn | 2020-10-01 | \-         | \-   |
