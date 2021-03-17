@@ -1014,7 +1014,7 @@ var store = [{
 "teaser": null
 },{
 "title": "借阅记录",
-"excerpt":"如欲借阅图书，请参阅图书借阅管理制度。 2021 年借阅记录 书名 借阅者 联系方式 借阅日期 归还日期 备注 计算机组成与设计-硬件软件接口 蔡智臻 carbyne AT mail.ustc.edu.cn 2021-03-07 - - 运筹学导论 蔡智臻 carbyne AT mail.ustc.edu.cn 2021-03-07 - - Java 编程思想 彭炫超 xc1217@mail.ustc.edu.cn 2021-03-15 - - 从零开始学 Linux 彭炫超 xc1217@mail.ustc.edu.cn 2021-03-15 - - 2020 年借阅记录 书名 借阅者 联系方式 借阅日期 归还日期 备注 陶哲轩实分析 王子博 hypercube...","categories": [],
+"excerpt":"如欲借阅图书，请参阅图书借阅管理制度。 2021 年借阅记录 书名 借阅者 联系方式 借阅日期 归还日期 备注 计算机组成与设计-硬件软件接口 蔡智臻 carbyne AT mail.ustc.edu.cn 2021-03-07 - - 运筹学导论 蔡智臻 carbyne AT mail.ustc.edu.cn 2021-03-07 - - Java 编程思想 彭炫超 xc1217 AT mail.ustc.edu.cn 2021-03-15 - - 从零开始学 Linux 彭炫超 xc1217 AT mail.ustc.edu.cn 2021-03-15 - - 具体数学（第二版） 蔡智臻 carbyne AT mail.ustc.edu.cn 2021-3-17 -...","categories": [],
 "tags": [],
 "url": "/wiki/lug/book/borrow_history/",
 "teaser": null
