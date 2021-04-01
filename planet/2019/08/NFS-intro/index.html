@@ -58,7 +58,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=cb28a7a71">
+    <link rel="stylesheet" href="/assets/css/main.css?v=b2c3cfaa0">
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
       <style>
@@ -194,7 +194,7 @@
               </aside>
               <p>NFS（网络文件系统，Network File System）是一个分布式的文件系统，可以用于在局域网中共享文件。它通常运用在 Unix 与类 Unix 操作系统中。对于 Linux 服务器之间的文件共享来说，NFS 相比于其他的方案（如 Samba）更加方便，性能也更好。对于应用程序来说，NFS 也是透明的。</p>
               <h2 id="简单配置-nfs">简单配置 NFS</h2>
-              <p>我们以两台 Debian 10 的机器为例<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup>简单配置 NFS 服务端。其余的发行版可以查询各自的手册以获取详细信息。</p>
+              <p>我们以两台 Debian 10 的机器为例<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>简单配置 NFS 服务端。其余的发行版可以查询各自的手册以获取详细信息。</p>
               <p>在绝大多数情况下，NFS 支持已经安装在 Linux 内核中。我们可以使用以下命令安装内核态的 NFS 服务器实现：</p>
               <div class="language-shell highlighter-rouge">
                 <div class="highlight">
@@ -203,7 +203,7 @@
                 </div>
               </div>
               <p>（如果有兼容 NFSv2 和 NFSv3 的需求，需要安装 <code class="language-plaintext highlighter-rouge">portmap</code>）</p>
-              <p>出于安全性的考虑<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote">2</a></sup>，我们假设 NFS 共享的根目录是 <code class="language-plaintext highlighter-rouge">/srv/nfs4</code>。 如果需要共享的目录在其他位置，可以使用 bind mount 的方式挂载上去。（当然，对于简单的配置来说，不这样做问题也不大）</p>
+              <p>出于安全性的考虑<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>，我们假设 NFS 共享的根目录是 <code class="language-plaintext highlighter-rouge">/srv/nfs4</code>。 如果需要共享的目录在其他位置，可以使用 bind mount 的方式挂载上去。（当然，对于简单的配置来说，不这样做问题也不大）</p>
               <div class="language-shell highlighter-rouge">
                 <div class="highlight">
                   <pre class="highlight"><code>mount <span class="nt">--bind</span> 实际放置文件的目录 /srv/nfs/your_folder_name
