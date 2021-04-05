@@ -371,6 +371,12 @@ var store = [{
 "url": "/news/2020/12/multitopic-party-2/",
 "teaser": null
 },{
+"title": "无主题小聚",
+"excerpt":"2021 年 3 月 31 日下午，我们在西区 3A108 教室开展了本学期的第一次小聚，由明宇龙和袁一玮两位同学主讲。      从 jQuery 到 React、从 webpack 到 esbuild，前端开发迭代出了纷繁复杂的工具链。 明宇龙同学从 JavaScript 的历史讲起，系统梳理了 Web 前端开发工具的历史沿革，结合自己的学习历程，概述了前端开发的现状。      袁一玮同学则介绍了家庭组网各种方法。开始简略描述了常见的 frp 反代、突破 ISP 的 NAT，到 zerotier 一键组网，再到自己使用 Tinc 和 WireGuard 在本地进行组网和开发不再活跃的 Tinc 所带来的缺陷，最后介绍了使用 OSPF 和 BGP 在内网路由的 dn42、扮演 ISP、注册 ASN、拿到 IPv4 和 IPv6 地址池并进行广播。  ","categories": ["LUG活动"],
+"tags": [],
+"url": "/news/2021/03/multitopic-party/",
+"teaser": null
+},{
 "title": "Hello! LUG Planet",
 "excerpt":"欢迎大家来到 LUG Planet！这是一个刚刚被发现的新星球，百废待兴。本文是 LUG Planet 的说明书，在你入驻之前，不妨先驻足欣赏一下这片风景。😀 LUG Planet 是什么？ LUG Planet 是…… 由 USTCLUG 负责运营和管理的群体博客。 目标读者与参与者： USTCLUG 会员； 认同 USTCLUG 理念的同好； 希望积极参加 USTCLUG 线上活动的朋友。 主要话题为 USTCLUG 社团的活动覆盖范围： UNIX、Linux 及自由/开源软件； Windows 与 Microsoft 新技术； 信息安全； 这些技术与 USTC 的碰撞与融合。 LUG Planet 是精神上的 Linux 文摘 计划的延续。我们认可这个群策群力式的知识汇集的理念，但使用更方便和更自由的形式，从而鼓励大家能更积极地参与到这个项目中来。 订阅我们 你可以做一个默默潜水的读者，也可以在评论区与作者激辩，或者亲自成为写作者。但无论如何，你一定非常关注 LUG Planet 的动态。所以我们提供了多种方式确保你能得到及时的通知： RSS 订阅（推荐）。由...","categories": [],
 "tags": [],
@@ -795,6 +801,12 @@ var store = [{
 "excerpt":"2020 年 12 月 27 日，USTC LUG 和 MSC 在西区 3C101 教室举办了本年度第二次无主题小聚。 金泽文同学介绍了 Serverless Computing，他以一个生动的例子开篇，展示了 Serverless 的巨大优势，随后深入介绍了 Apache OpenWhisk 的具体实现和 Serverless 目前的局限性。 随后，古宜民同学介绍了 GRUB 和 Linux 启动修复，他从 GRUB 在 Linux 启动中的作用开始，讲解并演示了如何在 GRUB 启动失败时进行修复。 接下来，刘紫檀介绍了他近期参与搭建的 Verilog OJ 在线评测系统。 之后，袁一玮同学介绍了手机实现快充的原理，简述 USB-PD 协议的定义。 最后，明宇龙同学即兴发挥，分享了自己使用 AWS Lambda、Azure Function 和 Cloudflare Worker 的心得体会，介绍了自己 Serverless 架构的博客。...","categories": ["LUG活动"],
 "tags": [],
 "url": "/news/2020/12/multitopic-party-2/",
+"teaser": null
+},{
+"title": "无主题小聚",
+"excerpt":"2021 年 3 月 31 日下午，我们在西区 3A108 教室开展了本学期的第一次小聚，由明宇龙和袁一玮两位同学主讲。      从 jQuery 到 React、从 webpack 到 esbuild，前端开发迭代出了纷繁复杂的工具链。 明宇龙同学从 JavaScript 的历史讲起，系统梳理了 Web 前端开发工具的历史沿革，结合自己的学习历程，概述了前端开发的现状。      袁一玮同学则介绍了家庭组网各种方法。开始简略描述了常见的 frp 反代、突破 ISP 的 NAT，到 zerotier 一键组网，再到自己使用 Tinc 和 WireGuard 在本地进行组网和开发不再活跃的 Tinc 所带来的缺陷，最后介绍了使用 OSPF 和 BGP 在内网路由的 dn42、扮演 ISP、注册 ASN、拿到 IPv4 和 IPv6 地址池并进行广播。  ","categories": ["LUG活动"],
+"tags": [],
+"url": "/news/2021/03/multitopic-party/",
 "teaser": null
 },{
 "title": "Hello! LUG Planet",
