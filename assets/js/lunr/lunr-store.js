@@ -1068,7 +1068,7 @@ var store = [{
 "teaser": null
 },{
 "title": "LUG 活动",
-"excerpt":"LUG 活动概述请移步 LUG 首页。 LUG 的所有活动均依照 社团章程 开展。 欢迎订阅 LUG 日历。 2016 年及之后的活动不在这里重复记录小聚信息了，请移步每周小聚页面查看。 Latest Events 日期 时间 地点 内容 2020-12-06 19:30 西区 3A111 Hackergame 2020 颁奖 2020-10-31 12:00 线上（持续一周） 中国科学技术大学第七届信息安全大赛 2020-10-30 19:00 西区 3C104 Hackergame 赛前动员会 2020-10-24 19:00-21:30 西区 3C102 LUG 全员大会 2020-09-26 19:00-21:30 西区 3C103 软件自由日活动 注意：LUD (Linux User...","categories": [],
+"excerpt":"LUG 活动概述请移步 LUG 首页。 LUG 的所有活动均依照 社团章程 开展。 欢迎订阅 LUG 日历。 2016 年及之后的活动不在这里重复记录小聚信息了，请移步每周小聚页面查看。 Latest Events 日期 时间 地点 内容 2021-04-11 14:30-6:00 西区 3C104 Linux 101 第一课 &amp; Linux Install Party 注意：LUD (Linux User Dinner) 均为自愿参加活动，活动费用由参加者分摊，不从社团任何经费报销。关于 LUG 的财务管理制度详情见：/wiki/lug/finance Previous Events 日期 时间 地点 内容 2020-12-06 19:30-21:00 西区 3A111 Hackergame 2020 颁奖...","categories": [],
 "tags": [],
 "url": "/wiki/lug/events/",
 "teaser": null
