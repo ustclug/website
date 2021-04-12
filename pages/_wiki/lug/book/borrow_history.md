@@ -45,7 +45,7 @@
 | 计算机组成与设计-硬件软件接口                     | 樊真幸 | fanzhenxing AT mail.ustc.edu.cn | 2019 年 3 月 1 日   | 2019 年 6 月 ？ 日  | \-             |
 | 算法导论（原书第 3 版）                           | 高志远 | gaozhiyuan AT mail.ustc.edu.cn  | 2019 年 7 月 25 日  | 2019 年 9 月 1 日   | \-             |
 | 编译原理（第 2 版）                               | 高志远 | gaozhiyuan AT mail.ustc.edu.cn  | 2019 年 7 月 25 日  | 2019 年 9 月 1 日   | \-             |
-| Haskell 趣学指南                                  | 张佳   | jzhang19 AT mail.ustc.edu.cn    | 2019 年 8 月 31 日  | \-                  | \-             |
+| Haskell 趣学指南                                  | 张佳   | jzhang19 AT mail.ustc.edu.cn    | 2019 年 8 月 31 日  | 2021 年 4 月 12 日  | \-             |
 | 计算机网络：自顶向下方法 第六版 影印版            | 樊真幸 | fanzhenxing AT mail.ustc.edu.cn | 2019 年 9 月 1 日   | 2020 年 1 月 9 日   | \-             |
 | 计算机网络：自顶向下方法 第四版 影印版            | 段志宇 | wfp AT mail.ustc.edu.cn         | 2019 年 9 月 1 日   | 2020 年 1 月 9 日   | \-             |
 | Head First Python                                 | 王子博 | hypercube AT 0x01.me            | 2019 年 9 月 1 日   | 2019 年 11 月 11 日 | \-             |
