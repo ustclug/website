@@ -377,6 +377,12 @@ var store = [{
 "url": "/news/2021/03/multitopic-party/",
 "teaser": null
 },{
+"title": "「开源软件供应链点亮计划——暑期 2021」USTCLUG 项目提案",
+"excerpt":"「开源软件供应链点亮计划」是由中国科学院软件研究所发起并长期支持一项活动，旨在解决基础开源软件面临的许可、质量、维护和技术支持等问题，进而影响整个软件产业的供应链。而「开源软件供应链点亮计划——暑期 2021」是由中科院软件所与 openEuler 社区共同举办的一项面向高校学生的暑期活动，旨在鼓励在校学生积极参与开源软件的开发维护，促进国内优秀开源软件社区的蓬勃发展。     此活动与 GSoC (Google Summer of Code) 的模式类似：开源项目/社区提供项目需求与导师 (mentor)；学生申请项目通过后利用暑期的时间进行开发，将成果贡献给社区；主办方（中科院软件所与 openEuler 社区）根据评估结果给学生发放奖金。所有参与的社区列表可查看 https://summer.iscas.ac.cn/#/org。   今年夏天，USTCLUG (中科大学生 Linux 用户协会) 计划以社区身份加入此暑期活动。以下是我们计划的项目提案，也欢迎社团的各位同学提出建议。   在报名前，请先阅读由主办方提供的学生指南。  ","categories": [],
+"tags": [],
+"url": "/news/2021/04/opensource-summer-iscas/",
+"teaser": null
+},{
 "title": "Hello! LUG Planet",
 "excerpt":"欢迎大家来到 LUG Planet！这是一个刚刚被发现的新星球，百废待兴。本文是 LUG Planet 的说明书，在你入驻之前，不妨先驻足欣赏一下这片风景。😀 LUG Planet 是什么？ LUG Planet 是…… 由 USTCLUG 负责运营和管理的群体博客。 目标读者与参与者： USTCLUG 会员； 认同 USTCLUG 理念的同好； 希望积极参加 USTCLUG 线上活动的朋友。 主要话题为 USTCLUG 社团的活动覆盖范围： UNIX、Linux 及自由/开源软件； Windows 与 Microsoft 新技术； 信息安全； 这些技术与 USTC 的碰撞与融合。 LUG Planet 是精神上的 Linux 文摘 计划的延续。我们认可这个群策群力式的知识汇集的理念，但使用更方便和更自由的形式，从而鼓励大家能更积极地参与到这个项目中来。 订阅我们 你可以做一个默默潜水的读者，也可以在评论区与作者激辩，或者亲自成为写作者。但无论如何，你一定非常关注 LUG Planet 的动态。所以我们提供了多种方式确保你能得到及时的通知： RSS 订阅（推荐）。由...","categories": [],
 "tags": [],
@@ -807,6 +813,12 @@ var store = [{
 "excerpt":"2021 年 3 月 31 日下午，我们在西区 3A108 教室开展了本学期的第一次小聚，由明宇龙和袁一玮两位同学主讲。      从 jQuery 到 React、从 webpack 到 esbuild，前端开发迭代出了纷繁复杂的工具链。 明宇龙同学从 JavaScript 的历史讲起，系统梳理了 Web 前端开发工具的历史沿革，结合自己的学习历程，概述了前端开发的现状。      袁一玮同学则介绍了家庭组网各种方法。开始简略描述了常见的 frp 反代、突破 ISP 的 NAT，到 zerotier 一键组网，再到自己使用 Tinc 和 WireGuard 在本地进行组网和开发不再活跃的 Tinc 所带来的缺陷，最后介绍了使用 OSPF 和 BGP 在内网路由的 dn42、扮演 ISP、注册 ASN、拿到 IPv4 和 IPv6 地址池并进行广播。  ","categories": ["LUG活动"],
 "tags": [],
 "url": "/news/2021/03/multitopic-party/",
+"teaser": null
+},{
+"title": "「开源软件供应链点亮计划——暑期 2021」USTCLUG 项目提案",
+"excerpt":"「开源软件供应链点亮计划」是由中国科学院软件研究所发起并长期支持一项活动，旨在解决基础开源软件面临的许可、质量、维护和技术支持等问题，进而影响整个软件产业的供应链。而「开源软件供应链点亮计划——暑期 2021」是由中科院软件所与 openEuler 社区共同举办的一项面向高校学生的暑期活动，旨在鼓励在校学生积极参与开源软件的开发维护，促进国内优秀开源软件社区的蓬勃发展。     此活动与 GSoC (Google Summer of Code) 的模式类似：开源项目/社区提供项目需求与导师 (mentor)；学生申请项目通过后利用暑期的时间进行开发，将成果贡献给社区；主办方（中科院软件所与 openEuler 社区）根据评估结果给学生发放奖金。所有参与的社区列表可查看 https://summer.iscas.ac.cn/#/org。   今年夏天，USTCLUG (中科大学生 Linux 用户协会) 计划以社区身份加入此暑期活动。以下是我们计划的项目提案，也欢迎社团的各位同学提出建议。   在报名前，请先阅读由主办方提供的学生指南。  ","categories": [],
+"tags": [],
+"url": "/news/2021/04/opensource-summer-iscas/",
 "teaser": null
 },{
 "title": "Hello! LUG Planet",
