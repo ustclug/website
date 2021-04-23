@@ -250,11 +250,15 @@
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/news/2021/03/multitopic-party/</loc>
-      <lastmod>2021-04-05T10:19:12+08:00</lastmod>
+      <lastmod>2021-04-22T18:59:47+08:00</lastmod>
+    </url>
+    <url>
+      <loc>https://lug.ustc.edu.cn/news/2021/04/linux-101-1/</loc>
+      <lastmod>2021-04-23T19:15:23+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/news/2021/04/opensource-summer-iscas/</loc>
-      <lastmod>2021-04-22T15:09:34+08:00</lastmod>
+      <lastmod>2021-04-23T19:15:23+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/planet/2018/08/hello-lug-planet/</loc>
@@ -542,11 +546,15 @@
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/news/2021/03/multitopic-party/</loc>
-      <lastmod>2021-04-05T10:19:12+08:00</lastmod>
+      <lastmod>2021-04-22T18:59:47+08:00</lastmod>
+    </url>
+    <url>
+      <loc>https://lug.ustc.edu.cn/news/2021/04/linux-101-1/</loc>
+      <lastmod>2021-04-23T19:15:23+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/news/2021/04/opensource-summer-iscas/</loc>
-      <lastmod>2021-04-22T15:09:34+08:00</lastmod>
+      <lastmod>2021-04-23T19:15:23+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/planet/2018/08/hello-lug-planet/</loc>
@@ -618,7 +626,7 @@
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/wiki/greenwarm/xen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8/</loc>
-      <lastmod>2021-04-22T15:10:38+08:00</lastmod>
+      <lastmod>2021-04-23T19:16:20+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/wiki/</loc>
@@ -1309,6 +1317,12 @@
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/categories/lug%E7%BD%91%E7%AB%99/</loc>
+    </url>
+    <url>
+      <loc>https://lug.ustc.edu.cn/categories/linux-101/</loc>
+    </url>
+    <url>
+      <loc>https://lug.ustc.edu.cn/categories/linux-install-party/</loc>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/categories/experience/</loc>
