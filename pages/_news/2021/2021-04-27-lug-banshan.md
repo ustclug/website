@@ -1,6 +1,8 @@
 ---
 title: 2021 Linux 板版衫设计方案征集
-image: https://ftp.lug.ustc.edu.cn/~sirius/banshan.png
+header:
+  image: https://ftp.lug.ustc.edu.cn/%E7%89%88%E8%A1%AB/2019banshan/voting/candidate5/LUG%E7%89%88%E8%A1%AB%E8%AE%BE%E8%AE%A1%E6%8A%95%E7%A8%BF.png
+  overlay_image: false
 author: totoroyyw
 date: "2021-04-27 1:01:00 +0800"
 categories:
