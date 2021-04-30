@@ -19,7 +19,7 @@
     <meta property="og:title" content="1.2 Xen 简介">
     <meta property="og:url" content="https://lug.ustc.edu.cn/wiki/greenwarm/xen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8/">
     <meta property="og:description" content="1.2 Xen 简介">
-    <meta property="article:published_time" content="2021-04-30T19:45:06+08:00">
+    <meta property="article:published_time" content="2021-04-30T19:47:38+08:00">
     <link rel="canonical" href="https://lug.ustc.edu.cn/wiki/greenwarm/xen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8/">
     <script type="application/ld+json">
       {
@@ -56,7 +56,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=d6deb321f">
+    <link rel="stylesheet" href="/assets/css/main.css?v=52372c2c9">
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
       <style>
@@ -113,6 +113,12 @@
                 <a href="https://mirrors.ustc.edu.cn/"><i class="fad fa-lg fa-fw fa-server"></i> Mirrors</a>
               </li>
             </ul>
+            <button class="search__toggle" type="button">
+              <span class="visually-hidden">切换搜索</span>
+              <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+                <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+              </svg>
+            </button>
             <button class="greedy-nav__toggle hidden" type="button">
               <span class="visually-hidden">切换菜单</span>
               <div class="navicon"></div>
@@ -172,7 +178,7 @@
         <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
           <meta itemprop="headline" content="1.2 Xen 简介">
           <meta itemprop="description" content="1.2 Xen 简介">
-          <meta itemprop="datePublished" content="2021-04-30T19:45:06+08:00">
+          <meta itemprop="datePublished" content="2021-04-30T19:47:38+08:00">
           <div class="page__inner-wrap">
             <header>
               <h1 id="page-title" class="page__title" itemprop="headline">1.2 Xen 简介
@@ -531,7 +537,7 @@ nfs_root = '/path/to/root'	# NFS服务器文件系统路径
               <p><a href="/wiki/_detail/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-1882c6?id=greenwarm%3Axen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8" title="系统管理:xen-18.jpg"><img src="/wiki/_media/%e7%b3%bb%e7%bb%9f%e7%ae%a1%e7%90%86/xen-18.html" alt="" /></a> 1-18 虚拟系统管理 然后就可以在图形方式下对虚拟机进行管理了。关于 virt-manager 的详细用法，请参阅相关项目文档。</p>
             </section>
             <footer class="page__meta">
-              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2021-04-30T19:45:06+08:00">2021 年 4 月 30 日</time></p>
+              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2021-04-30T19:47:38+08:00">2021 年 4 月 30 日</time></p>
             </footer>
             <nav class="pagination">
               <a href="/wiki/greenwarm/win32free/" class="pagination--pager" title="Windows 下的开源及优秀免费软件
@@ -541,6 +547,12 @@ nfs_root = '/path/to/root'	# NFS服务器文件系统路径
             </nav>
           </div>
         </article>
+      </div>
+    </div>
+    <div class="search-content">
+      <div class="search-content__inner-wrap">
+        <div class="search-searchbar"></div>
+        <div class="search-hits"></div>
       </div>
     </div>
     <div id="footer" class="page__footer">
@@ -585,6 +597,66 @@ nfs_root = '/path/to/root'	# NFS服务器文件系统路径
       </footer>
     </div>
     <script src="/assets/js/main.min.js"></script>
+    <!-- Including InstantSearch.js library and styling -->
+    <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css">
+    <script>
+      // Instanciating InstantSearch.js with Algolia credentials
+      const search = instantsearch({
+        appId: 'CM5ZKX0CV3',
+        apiKey: 'aa942e5bdda7368300e322cba95f47f6',
+        indexName: 'default',
+        searchParameters: {
+          restrictSearchableAttributes: [
+            'title',
+            'content'
+          ]
+        }
+      });
+      
+      const hitTemplate = function(hit) {
+        const url = hit.url;
+        const title = hit._highlightResult.title.value;
+        const content = hit._highlightResult.html.value;
+      
+        return `
+          <div class="list__item">
+            <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+              <h2 class="archive__item-title" itemprop="headline"><a href="${url}">${title}</a></h2>
+              <div class="archive__item-excerpt" itemprop="description">${content}</div>
+            </article>
+          </div>
+        `;
+      }
+      
+      // Adding searchbar and results widgets
+      search.addWidget(
+        instantsearch.widgets.searchBox({
+          container: '.search-searchbar',
+          poweredBy: true,
+          placeholder: '输入您要搜索的关键词...'
+        })
+      );
+      search.addWidget(
+        instantsearch.widgets.hits({
+          container: '.search-hits',
+          templates: {
+            item: hitTemplate,
+            empty: '无结果',
+          }
+        })
+      );
+      
+      // Starting the search only when toggle is clicked
+      $(document).ready(function () {
+        $(".search__toggle").on("click", function() {
+          if(!search.started) {
+            search.start();
+          }
+        });
+      });
+    </script>
     <img src="/static/USTC_logo.svg" style="position: fixed; bottom: -320px; left: -200px; opacity: 0.1; z-index: -100;" />
   </body>
 </html>
