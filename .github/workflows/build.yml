@@ -86,6 +86,12 @@ jobs:
         git push
         popd &>/dev/null
 
+    - name: Update Algolia index
+      run: bundle exec jekyll algolia push
+      env:
+        ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
+      continue-on-error: true
+
     - name: Call webhook
       if: "github.repository == 'ustclug/website' && github.ref == 'refs/heads/master'"
       env:
