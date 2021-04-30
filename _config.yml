@@ -45,7 +45,7 @@ comments:
   staticman:
     branch               : # "master"
     endpoint             : # "https://{your Staticman v3 API}/v3/entry/github/"
-search                   : false # true, false (default)
+search                   : true # true, false (default)
 search_full_content      : true # true, false (default)
 search_provider          : algolia # lunr (default), algolia, google
 algolia:
