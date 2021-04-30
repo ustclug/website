@@ -5,6 +5,10 @@ body.layout--splash {
     --fa-secondary-opacity: 0.6;
   }
 
+  .greedy-nav .visible-links a:before {
+    background-color: white;
+  }
+
   .page__hero--overlay {
     padding-top: 8em;
   }
