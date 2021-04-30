@@ -1,5 +1,6 @@
 @import "colors";
 @import "home";
+@import "search";
 @import "splash";
 @import "footer";
 
@@ -30,14 +31,15 @@ body {
   border-bottom: none;
   background: $background-color;
 
-  .masthead__menu {
-    .greedy-nav {
-      background: inherit;
+  .greedy-nav {
+    background: inherit;
+  }
 
-      a {
-        color: inherit;
-      }
-    }
+  .greedy-nav > a,
+  .visible-links a,
+  .search__toggle {
+    color: inherit;
+    // text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
   }
 }
 

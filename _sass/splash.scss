@@ -1,4 +1,6 @@
 body.layout--splash {
+  @extend %masthead-immersive;
+
   .masthead {
     height: 0;
     color: white;
