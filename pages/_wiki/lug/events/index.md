@@ -14,11 +14,11 @@ LUG 的所有活动均依照 [社团章程](http://ftp.ustclug.org/社团管理/
 
 ## Latest Events
 
-| 日期       | 时间        | 地点       | 内容                                                                                                                                            |
-| :--------- | :---------- | :--------- | :---------------------------------------------------------------------------------------------------------------------------------------------- |
-| 2021-04-28 | 14:30-18:00 | 西区 3A211 | Linux 101 第三课 [Slides](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2021.04.28-Linux101-%E7%AC%AC%E4%B8%89%E8%AF%BE/slides/Linux101-3.pdf) |
-| 2021-04-18 | 14:30-18:00 | 西区 3C104 | Linux 101 第二课                                                                                                                                |
-| 2021-04-11 | 14:30-18:00 | 西区 3C104 | Linux 101 第一课 & Linux Install Party [Slides](http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2021_Linux101/Linux%20Install%20Party.pdf)        |
+| 日期       | 时间        | 地点       | 内容                                                                                                                                                                  |
+| :--------- | :---------- | :--------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2021-04-28 | 14:30-18:00 | 西区 3A211 | Linux 101 第三课 [Slides](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2021.04.28-Linux101-%E7%AC%AC%E4%B8%89%E8%AF%BE/slides/Linux101-3.pdf)                       |
+| 2021-04-18 | 14:30-18:00 | 西区 3C104 | Linux 101 第二课 [Slides](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2021.04.18_Linux_101_%E7%AC%AC%E4%BA%8C%E8%AF%BE/Linux%20101%E7%AC%AC%E4%BA%8C%E8%AF%BE.pdf) |
+| 2021-04-11 | 14:30-18:00 | 西区 3C104 | Linux 101 第一课 & Linux Install Party [Slides](http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2021_Linux101/Linux%20Install%20Party.pdf)                              |
 
 注意：LUD (Linux User Dinner) 均为自愿参加活动，活动费用由参加者分摊，不从社团任何经费报销。关于 LUG 的财务管理制度详情见：/wiki/lug/finance
 
