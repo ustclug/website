@@ -11,6 +11,12 @@ body.layout--splash {
     background-color: white;
   }
 
+  .greedy-nav__toggle:not(.close) .navicon {
+    &::before, &, &::after {
+      background-color: white;
+    }
+  }
+
   .page__hero--overlay {
     padding-top: 8em;
   }
