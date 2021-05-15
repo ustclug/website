@@ -1,7 +1,7 @@
 source 'https://rubygems.org/'
 
 gem 'jekyll', '~> 4.1.1'
-gem 'minimal-mistakes-jekyll', '~> 4.0', '>= 4.22'
+gem 'minimal-mistakes-jekyll', '~> 4.0', '>= 4.23'
 gem 'liquid-c', '~> 4.0'
 
 if ENV['LSI'] == 'true'
