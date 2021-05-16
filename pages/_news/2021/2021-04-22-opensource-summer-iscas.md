@@ -89,3 +89,40 @@ LICENSE：自选开源协议。对 rsync 的修改需要以 GPL v3 发布。
 - <https://rsync.samba.org/>（Rsync 官方实现）
 - <https://github.com/tuna/rsync>（Rsync-huai 实现）
 - <https://github.com/facebook/rocksdb>（RocksDB 数据库，可作为在实现使用 FUSE 的元数据文件系统的参考）
+
+## 全联通内网守护程序
+
+项目描述：一个组织的鉴权接口、数据库接口等服务都不应在公网公开，而内网（IntraNet）的瓶颈通常会出现在转发流量的网关上，若任意两台机器间直连则可以让总网络压力下降不少（一般需要借助中心节点协助 NAT 后的机器打洞）。Tinc 等优秀项目年久失修、无人维护，WireGuard 等新兴 Site2Site 的虚拟专用网络较轻便简单但是未实现 mesh、会对中心网关产生较大的流量压力。本项目计划构建一个灵活高效的全联通内网守护程序（IntraNet VPN）。
+
+项目难度：中
+
+LICENSE：自选开源协议。
+
+项目社区导师：袁一玮
+
+导师联系方式：totoroyyw AT ustclug.org
+
+合作导师：明宇龙
+
+合作导师联系方式：myl AT ustclug.org
+
+项目产出要求：一个稳定的、全联通内网守护程序，包括以下要求：
+
+- 用户可方便地对内网中的节点进行增删与同步配置（亦可选用其他虚拟专用网络实现作为基础）
+  - 基于 WireGuard，将 AllowedIPs 变为 AllowedMacs（实现基于 Mac 地址而非 IP 地址的配置描述）
+  - 在内网新加入一台机器后，整个内网可以自动更新、同步节点配置（选做）
+- 通过有效性测试，可以在快速路由迭代后实现任意节点间的 mesh 连接
+- 程序尽可能高效，减少内网中较大流量机器的 CPU 压力
+- 可以让两台在 NAT 之后的机器直接相连（选做，假设 NAT 打洞完可以持续使用）
+
+项目技术要求：
+
+- 对 OSI 二层或三层模型有所了解，对内网搭建和架构有所了解
+- 有高性能的网络编程语言的编程能力
+
+相关开源软件仓库列表：
+
+- <https://github.com/cloudflare/boringtun> (Rust 下的用户态 WireGuard 实现)
+- <https://github.com/WireGuard/wireguard-go> (Go 下的 WireGuard 实现)
+- <https://gitlab.com/NickCao/RAIT/> (基于 WireGuard 的三层分布式全联通网络实现，缺少本提案中计划的一些特性)
+- <https://github.com/gsliepen/tinc> (工作在 OSI 二层或三层的全联通网络实现，但其已年久失修，最近一次稳定版 release 是两年前)
