@@ -19,7 +19,7 @@
     <meta property="og:description" content="「开源软件供应链点亮计划」是由中国科学院软件研究所发起并长期支持一项活动，旨在解决基础开源软件面临的许可、质量、维护和技术支持等问题，进而影响整个软件产业的供应链。而「开源软件供应链点亮计划——暑期 2021」是由中科院软件所与 openEuler 社区共同举办的一项面向高校学生的暑期活动，旨在鼓励在校学生积极参与开源软件的开发维护，促进国内优秀开源软件社区的蓬勃发展。">
     <meta property="og:image" content="https://ftp.lug.ustc.edu.cn/photo/opensource-summer-2021.png">
     <meta property="article:published_time" content="2021-04-22T01:00:00+08:00">
-    <meta property="article:modified_time" content="2021-05-08T22:30:12+08:00">
+    <meta property="article:modified_time" content="2021-05-16T16:42:41+08:00">
     <link rel="canonical" href="https://lug.ustc.edu.cn/news/2021/04/opensource-summer-iscas/">
     <script type="application/ld+json">
       {
@@ -56,7 +56,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=e031348d0">
+    <link rel="stylesheet" href="/assets/css/main.css?v=27557e03c">
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
       <style>
@@ -139,7 +139,7 @@
           <meta itemprop="headline" content="「开源软件供应链点亮计划——暑期 2021」USTCLUG 项目提案">
           <meta itemprop="description" content="「开源软件供应链点亮计划」是由中国科学院软件研究所发起并长期支持一项活动，旨在解决基础开源软件面临的许可、质量、维护和技术支持等问题，进而影响整个软件产业的供应链。而「开源软件供应链点亮计划——暑期 2021」是由中科院软件所与 openEuler 社区共同举办的一项面向高校学生的暑期活动，旨在鼓励在校学生积极参与开源软件的开发维护，促进国内优秀开源软件社区的蓬勃发展。">
           <meta itemprop="datePublished" content="2021-04-22T01:00:00+08:00">
-          <meta itemprop="dateModified" content="2021-05-08T22:30:12+08:00">
+          <meta itemprop="dateModified" content="2021-05-16T16:42:41+08:00">
           <div class="page__inner-wrap">
             <header>
               <h1 id="page-title" class="page__title" itemprop="headline">「开源软件供应链点亮计划——暑期 2021」USTCLUG 项目提案
@@ -160,6 +160,7 @@
                   <ul class="toc__menu">
                     <li><a href="#通用反向代理缓存程序">通用反向代理缓存程序</a></li>
                     <li><a href="#rsync-在传统文件系统架构上的性能改进">Rsync 在传统文件系统架构上的性能改进</a></li>
+                    <li><a href="#全连通内网守护程序">全连通内网守护程序</a></li>
                   </ul>
                 </nav>
               </aside>
@@ -232,9 +233,41 @@
                 <li><a href="https://github.com/tuna/rsync">https://github.com/tuna/rsync</a>（Rsync-huai 实现）</li>
                 <li><a href="https://github.com/facebook/rocksdb">https://github.com/facebook/rocksdb</a>（RocksDB 数据库，可作为在实现使用 FUSE 的元数据文件系统的参考）</li>
               </ul>
+              <h2 id="全连通内网守护程序">全连通内网守护程序</h2>
+              <p>项目描述：一个组织的鉴权接口、数据库接口等服务都不应在公网公开，而内网（IntraNet）的瓶颈通常会出现在转发流量的网关上，若任意两台机器间直连则可以让总网络压力下降不少（一般需要借助中心节点协助 NAT 后的机器打洞）。Tinc 等优秀项目年久失修、无人维护，WireGuard 等新兴 Site2Site 的虚拟专用网络较轻便简单但是未实现 mesh、会对中心网关产生较大的流量压力。本项目计划构建一个灵活高效的全连通内网守护程序（IntraNet VPN）。</p>
+              <p>项目难度：中</p>
+              <p>LICENSE：自选开源协议。</p>
+              <p>项目社区导师：袁一玮</p>
+              <p>导师联系方式：totoroyyw AT ustclug.org</p>
+              <p>合作导师：明宇龙</p>
+              <p>合作导师联系方式：myl AT ustclug.org</p>
+              <p>项目产出要求：一个稳定的、全连通内网守护程序，包括以下要求：</p>
+              <ul>
+                <li>用户可方便地对内网中的节点进行增删与同步配置（亦可选用其他虚拟专用网络实现作为基础）
+                  <ul>
+                    <li>基于 WireGuard，将 AllowedIPs 变为 AllowedMacs（实现基于 Mac 地址而非 IP 地址的配置描述）</li>
+                    <li>在内网新加入一台机器后，整个内网可以自动更新、同步节点配置（选做）</li>
+                  </ul>
+                </li>
+                <li>通过有效性测试，可以在快速路由迭代后实现任意节点间的 mesh 连接</li>
+                <li>程序尽可能高效，减少内网中较大流量机器的 CPU 压力</li>
+                <li>可以让两台在 NAT 之后的机器直接相连（选做，假设 NAT 打洞完可以持续使用）</li>
+              </ul>
+              <p>项目技术要求：</p>
+              <ul>
+                <li>对 OSI 二层或三层模型有所了解，对内网搭建和架构有所了解</li>
+                <li>有高性能的网络编程语言的编程能力</li>
+              </ul>
+              <p>相关开源软件仓库列表：</p>
+              <ul>
+                <li><a href="https://github.com/cloudflare/boringtun">https://github.com/cloudflare/boringtun</a> (Rust 下的用户态 WireGuard 实现)</li>
+                <li><a href="https://github.com/WireGuard/wireguard-go">https://github.com/WireGuard/wireguard-go</a> (Go 下的 WireGuard 实现)</li>
+                <li><a href="https://gitlab.com/NickCao/RAIT/">https://gitlab.com/NickCao/RAIT/</a> (基于 WireGuard 的三层分布式全连通网络实现，缺少本提案中计划的一些特性)</li>
+                <li><a href="https://github.com/gsliepen/tinc">https://github.com/gsliepen/tinc</a> (工作在 OSI 二层或三层的全连通网络实现，但其已年久失修，最近一次稳定版 release 是两年前)</li>
+              </ul>
             </section>
             <footer class="page__meta">
-              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2021-05-08">2021 年 5 月 8 日</time></p>
+              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2021-05-16">2021 年 5 月 16 日</time></p>
             </footer>
             <section class="page__share">
               <h4 class="page__share-title">分享</h4>
