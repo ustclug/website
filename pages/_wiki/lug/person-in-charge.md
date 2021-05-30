@@ -9,22 +9,22 @@
 
 ## 主要负责人
 
-| 代号 | 职务         | 姓名   | 邮箱                     |
-| :--- | :----------- | :----- | :----------------------- |
-| CEO  | 执行会长     | 袁一玮 | totoroyyw AT ustclug.org |
-| -    | 执行副会长   | 高泽豫 | zeyugao AT ustclug.org   |
-| -    | 执行副会长   | 李缙   | -                        |
-| CTO  | 技术部部长   | 明宇龙 | myl AT ustclug.org       |
-| -    | 技术部副部长 | 罗丽薇 | loliw AT ustclug.org     |
-| CFO  | 财务部部长   | 邱子悦 | xyy AT ustclug.org       |
-| COO  | 运营部部长   | 罗丽薇 | loliw AT ustclug.org     |
-| CPO  | 资产部部长   | 胡清宇 | -                        |
-| MSC  | MSC 事务     | 陈泳融 | -                        |
-| -    | 团支书       | 胡清宇 | -                        |
-| -    | 社长         | 高泽豫 | zeyugao AT ustclug.org   |
-| -    | 副社长       | 邱子悦 | xyy AT ustclug.org       |
-| -    | 副社长       | 吴雨飞 | -                        |
-| -    | 副社长       | 袁一玮 | totoroyyw AT ustclug.org |
+| 代号 | 职务         | 姓名   | 邮箱 |
+| :--- | :----------- | :----- | :--- |
+| CEO  | 执行会长     | 刘隆邦 |      |
+| -    | 执行副会长   | 蔡智臻 |      |
+| -    | 执行副会长   | 刘正韬 |      |
+| CTO  | 技术部部长   | 邱慕凡 |      |
+| -    | 技术部副部长 | 高泽豫 |      |
+| CFO  | 财务部部长   | 徐奥   |      |
+| COO  | 运营部部长   | 吴雨飞 |      |
+| CPO  | 资产部部长   | 陈泳融 |      |
+| MSC  | MSC 事务     | 陈泳融 |      |
+| -    | 团支书       | 刘隆邦 |      |
+| -    | 社长         | 龚乐   |      |
+| -    | 副社长       | 刘隆邦 |      |
+| -    | 副社长       | 陈泳融 |      |
+| -    | 副社长       | 蔡智臻 |      |
 
 ## LUG 项目负责人
 
@@ -47,6 +47,25 @@
 | 防污染 DNS   | LUG 自建的防污染 DNS 服务器                                  | **yifan**                      |
 
 # 历任负责人
+
+## 2020-2021 届
+
+| 代号 | 职务         | 姓名   | 邮箱                     |
+| :--- | :----------- | :----- | :----------------------- |
+| CEO  | 执行会长     | 袁一玮 | totoroyyw AT ustclug.org |
+| -    | 执行副会长   | 高泽豫 | zeyugao AT ustclug.org   |
+| -    | 执行副会长   | 李缙   | -                        |
+| CTO  | 技术部部长   | 明宇龙 | myl AT ustclug.org       |
+| -    | 技术部副部长 | 罗丽薇 | loliw AT ustclug.org     |
+| CFO  | 财务部部长   | 邱子悦 | xyy AT ustclug.org       |
+| COO  | 运营部部长   | 罗丽薇 | loliw AT ustclug.org     |
+| CPO  | 资产部部长   | 胡清宇 | -                        |
+| MSC  | MSC 事务     | 陈泳融 | -                        |
+| -    | 团支书       | 胡清宇 | -                        |
+| -    | 社长         | 高泽豫 | zeyugao AT ustclug.org   |
+| -    | 副社长       | 邱子悦 | xyy AT ustclug.org       |
+| -    | 副社长       | 吴雨飞 | -                        |
+| -    | 副社长       | 袁一玮 | totoroyyw AT ustclug.org |
 
 ## 2019-2020 届
 
