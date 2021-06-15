@@ -29,12 +29,8 @@
 
 ## IRC 上的 LUG
 
-- 网络：Freenode
-- 频道：#ustc_lug
-
-- ~~存档：/~sadhen/irc.html~~
-- ~~历史存档：/~guo/irc/irclog.txt~~
-- ~~Fishroom 存档：<https://fishroom.tuna.moe/log/ustclug/today>~~
+- 网络：OFTC
+- 频道：#ustclug
 
 ## 面对面交流
 
