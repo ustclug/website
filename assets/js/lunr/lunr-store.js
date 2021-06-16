@@ -408,9 +408,9 @@ var store = [{
 "teaser": null
 },{
 "title": "Linux 101 第四课",
-"excerpt":"2021 年 5 月 16 日，中国科学技术大学 Linux 用户协会在 3C101 教室举办了本学期第四次 Linux 101 课程，本次课程的主要内容是 Linux 下的进程的概念，由主讲同学刘隆邦同学带来课程。   在课堂上，刘隆邦同学准备了大量的演示操作，通过 htop 以及多个小程序展示了进程和信号的概念。   讲稿和活动视频现已上传 LUGFTP：https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2021.05.16_Linux_101_%E7%AC%AC%E5%9B%9B%E8%AF%BE/linux-101-ch04.pdf。  ","categories": ["LUG活动"],
+"excerpt":"2021 年 5 月 16 日，中国科学技术大学 Linux 用户协会在 3C101 教室举办了本学期第四次 Linux 101 课程，本次课程的主要内容是 Linux 下的进程的概念，由主讲同学刘隆邦同学带来课程。   在课堂上，刘隆邦同学准备了大量的演示操作，通过 htop 以及多个小程序展示了进程和信号的概念。   讲稿和活动视频现已上传 LUGFTP：https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2021.05.16_Linux_101_%E7%AC%AC%E5%9B%9B%E8%AF%BE/linux-101-ch04.pdf。  ","categories": ["LUG活动","Linux 101"],
 "tags": [],
-"url": "/news/2021/06/linux101-4/",
+"url": "/news/2021/06/linux-101-4/",
 "teaser": null
 },{
 "title": "Hello! LUG Planet",
@@ -876,9 +876,9 @@ var store = [{
 "teaser": null
 },{
 "title": "Linux 101 第四课",
-"excerpt":"2021 年 5 月 16 日，中国科学技术大学 Linux 用户协会在 3C101 教室举办了本学期第四次 Linux 101 课程，本次课程的主要内容是 Linux 下的进程的概念，由主讲同学刘隆邦同学带来课程。   在课堂上，刘隆邦同学准备了大量的演示操作，通过 htop 以及多个小程序展示了进程和信号的概念。   讲稿和活动视频现已上传 LUGFTP：https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2021.05.16_Linux_101_%E7%AC%AC%E5%9B%9B%E8%AF%BE/linux-101-ch04.pdf。  ","categories": ["LUG活动"],
+"excerpt":"2021 年 5 月 16 日，中国科学技术大学 Linux 用户协会在 3C101 教室举办了本学期第四次 Linux 101 课程，本次课程的主要内容是 Linux 下的进程的概念，由主讲同学刘隆邦同学带来课程。   在课堂上，刘隆邦同学准备了大量的演示操作，通过 htop 以及多个小程序展示了进程和信号的概念。   讲稿和活动视频现已上传 LUGFTP：https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2021.05.16_Linux_101_%E7%AC%AC%E5%9B%9B%E8%AF%BE/linux-101-ch04.pdf。  ","categories": ["LUG活动","Linux 101"],
 "tags": [],
-"url": "/news/2021/06/linux101-4/",
+"url": "/news/2021/06/linux-101-4/",
 "teaser": null
 },{
 "title": "Hello! LUG Planet",
