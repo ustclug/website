@@ -41,7 +41,7 @@ tags:
 - 按照投票人数估计，单件制作成本约为 70 元，如因预定数量提高，单件价格最终低于 70 元，则**结余资金将作为 USTCLUG 社团经费，并公开使用情况**
 - 任何问题请及时通过 goods@ustclug.org 和我们联系，**预定截止后恕不接受退款**
 
-**预定方式：点击文末阅读全文或复制地址 https://forms.office.com/r/tmLyZ97zQ7 到浏览器打开填写，或扫描以下二维码预定。**
+**预定方式：填写 <https://forms.office.com/r/tmLyZ97zQ7> 中的表单，或扫描以下二维码预定。**
 
 ![版衫二维码]({{ site.static_url }}/news/2021-banshan-qrcode.png)
 
