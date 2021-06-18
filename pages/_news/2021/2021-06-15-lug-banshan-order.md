@@ -58,3 +58,7 @@ tags:
 附 2：尺码表
 
 ![尺码表]({{ site.static_url }}/news/2021-banshan-size.png)
+
+附 3：彩蛋
+
+我们也收到了一份娱乐版的版衫，相关的设计文件已经放在 <https://ftp.lug.ustc.edu.cn/%E7%89%88%E8%A1%AB/2021banshan/amusement/>。欢迎感兴趣的同学自行取用 :D
