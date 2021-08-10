@@ -109,7 +109,7 @@ mk (16 级):
 
 使用 Wireshark，支持 Linux。
 
-tky (17 级):
+taoky (17 级):
 
 不同班级的实验会不一样，但是基本上都需要使用 Wireshark。有些实验会有 socket 编程相关的内容，兼容性上没有问题。
 
@@ -121,7 +121,7 @@ mk (16 级):
 
 需要用到 MASM。大概使用 DOSBox 就能应付（？）
 
-tky (17 级):
+taoky (17 级):
 
 我记得我做微机原理实验的时候，开了个 Windows XP 的 VM，毕竟实模式的 DOS 还是有点麻烦的，如果处理不好，每次都要重开 DOSBOX。而 XP 的好处是可以用 NTVDM 直接跑 MASM，并且大部分实验中编译得到的 .com 文件也可以直接跑，只有少部分实验不得不开 DOSBox。
 
@@ -147,7 +147,7 @@ mk (16 级):
 
 PowerDesigner?! 看起来只能 Wine / 虚拟机 了。
 
-tky (17 级):
+taoky (17 级):
 
 我这届金培权老师班级的实验是：实验一写 SQL，实验二用 PowerDesigner 画图，实验三写使用 MySQL 的小 project。实验一和三都可以在 Linux 下顺利完成，只有实验二需要依赖 Windows。
 
@@ -169,7 +169,7 @@ mk (16 级):
 
 兼容性：★★★★★
 
-tky (17 级):
+taoky (17 级):
 
 目前体系结构实验变成了写 Verilog，跑 Vivado。最后一个实验要求运行多 Cache 一致性和 Tomasulo 模拟器，这两个是 Windows 程序。我用 wine 尝试跑过，发现显示有一些问题。
 
@@ -201,13 +201,13 @@ regymm (17 级):
 
 regymm (17 级):
 
-对于大部分实验，只需要处理数据并绘图。[Origin](# Origin) 是”官方推荐“的软件，但是用 [MATLAB](# MATLAB) 或 Python 等可以胜任。
+对于大部分实验，只需要处理数据并绘图。[Origin](#origin) 是”官方推荐“的软件，但是用 [MATLAB](#matlab) 或 Python 等可以胜任。
 
 个别实验似乎会要求用 U 盘拷贝 Origin 文件并课下分析，这就没有办法只能用 Origin 了。而也有个别实验让我觉得 Origin 明显是更加明智的选择。
 
 个别实验需要用（可能是实验室助教自己编写的）基于 MFC 等框架的处理程序，但我遇见的所有情况都是在课上分析完成，并不需要在自己电脑上使用这些程序。
 
-核物理专业实验等需要分析一些专门处理软件（探测器上位机）或示波器导出的数据，但似乎都是纯文本，用 Linux 不会有什么困难。有时也可能使用 [ROOT](# ROOT).
+核物理专业实验等需要分析一些专门处理软件（探测器上位机）或示波器导出的数据，但似乎都是纯文本，用 Linux 不会有什么困难。有时也可能使用 [ROOT](#root).
 
 总之，如果你只需要做一级实验，应该不会遇到任何 Linux 无法处理的情况。然而如果你需要做三级甚至更多级，最好为 corner case 做好准备。对于这一系列本就较为繁琐的课程，从节约时间的角度考虑，装上 Origin 以备不时之需也是应该的，即使是在偶有问题的 wine 上。
 
@@ -217,7 +217,7 @@ regymm (17 级):
 
 regymm (17 级):
 
-除了 C、C++、Fortran 等编程外，可能用到 [MATLAB](# MATLAB)、[Mathematica](# Mathematica)、[Origin ](# Origin) 等，但没有任何一个是必须的。可以根据个人喜好或兼容性选择。
+除了 C、C++、Fortran 等编程外，可能用到 [MATLAB](#matlab)、[Mathematica](#mathematica)、[Origin ](#origin) 等，但没有任何一个是必须的。可以根据个人喜好或兼容性选择。
 
 兼容性：★★★★★
 
@@ -225,7 +225,7 @@ regymm (17 级):
 
 regymm (17 级):
 
-除了基本程序设计软件之外，可能会用到 [MATLAB](# MATLAB).
+除了基本程序设计软件之外，可能会用到 [MATLAB](#matlab).
 
 兼容性：★★★★★
 
@@ -283,7 +283,7 @@ regymm (17 级):
 
 VirtualBox 可以正常运行。
 
-可以考虑 QtiPlot、gnuplot、甚至 [ROOT](# ROOT) 完成绘图。
+可以考虑 QtiPlot、gnuplot、甚至 [ROOT](#root) 完成绘图。
 
 兼容性：★★☆☆☆
 
