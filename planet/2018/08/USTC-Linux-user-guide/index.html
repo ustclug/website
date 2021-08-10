@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <!-- begin _includes/seo.html -->
     <title>USTC Linux 用户生存指南 - LUG @ USTC</title>
-    <meta name="description" content="本指南指导中科大 Linux 用户如何使用 Linux 完成各门课程。“兼容性”仅代表使用 Linux 完成课程的难易程度，与课程本身质量和难度无关。">
+    <meta name="description" content="本指南指导中科大 Linux 用户如何使用 Linux 完成各门课程、处理学业事项，以及运行需要的专业软件。“兼容性”仅代表使用 Linux 完成任务的难易程度，与其他指标（如课程本身质量和难度）无关。">
     <meta name="author" content="Kai Ma">
     <meta property="article:author" content="Kai Ma">
     <meta property="og:type" content="article">
@@ -18,10 +18,10 @@
     <meta property="og:site_name" content="LUG @ USTC">
     <meta property="og:title" content="USTC Linux 用户生存指南">
     <meta property="og:url" content="https://lug.ustc.edu.cn/planet/2018/08/USTC-Linux-user-guide/">
-    <meta property="og:description" content="本指南指导中科大 Linux 用户如何使用 Linux 完成各门课程。“兼容性”仅代表使用 Linux 完成课程的难易程度，与课程本身质量和难度无关。">
+    <meta property="og:description" content="本指南指导中科大 Linux 用户如何使用 Linux 完成各门课程、处理学业事项，以及运行需要的专业软件。“兼容性”仅代表使用 Linux 完成任务的难易程度，与其他指标（如课程本身质量和难度）无关。">
     <meta property="og:image" content="https://lug.ustc.edu.cn/static/splash/galaxy-1.jpg">
     <meta property="article:published_time" content="2018-08-08T00:00:00+08:00">
-    <meta property="article:modified_time" content="2021-08-10T22:53:10+08:00">
+    <meta property="article:modified_time" content="2021-08-10T23:02:31+08:00">
     <link rel="canonical" href="https://lug.ustc.edu.cn/planet/2018/08/USTC-Linux-user-guide/">
     <script type="application/ld+json">
       {
@@ -58,7 +58,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=706ce88c9">
+    <link rel="stylesheet" href="/assets/css/main.css?v=690d6bbd7">
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
       <style>
@@ -173,9 +173,9 @@
         </div>
         <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
           <meta itemprop="headline" content="USTC Linux 用户生存指南">
-          <meta itemprop="description" content="本指南指导中科大 Linux 用户如何使用 Linux 完成各门课程。“兼容性”仅代表使用 Linux 完成课程的难易程度，与课程本身质量和难度无关。">
+          <meta itemprop="description" content="本指南指导中科大 Linux 用户如何使用 Linux 完成各门课程、处理学业事项，以及运行需要的专业软件。“兼容性”仅代表使用 Linux 完成任务的难易程度，与其他指标（如课程本身质量和难度）无关。">
           <meta itemprop="datePublished" content="2018-08-08T00:00:00+08:00">
-          <meta itemprop="dateModified" content="2021-08-10T22:53:10+08:00">
+          <meta itemprop="dateModified" content="2021-08-10T23:02:31+08:00">
           <div class="page__inner-wrap">
             <section class="page__content" itemprop="text">
               <aside class="sidebar__right sticky">
@@ -184,49 +184,62 @@
                     <h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4>
                   </header>
                   <ul class="toc__menu">
-                    <li><a href="#程序设计">程序设计</a></li>
-                    <li><a href="#数据结构">数据结构</a></li>
-                    <li><a href="#模拟与数字电路实验">模拟与数字电路实验</a></li>
-                    <li><a href="#计算机系统概论h">计算机系统概论（H）</a></li>
-                    <li><a href="#计算机组成原理">计算机组成原理</a></li>
-                    <li><a href="#操作系统原理与设计">操作系统原理与设计</a></li>
-                    <li><a href="#编译原理与技术">编译原理与技术</a></li>
-                    <li><a href="#计算机网络">计算机网络</a></li>
-                    <li><a href="#微机原理与系统">微机原理与系统</a></li>
-                    <li><a href="#算法基础">算法基础</a></li>
-                    <li><a href="#数据库系统及应用">数据库系统及应用</a></li>
-                    <li><a href="#人工智能基础">人工智能基础</a></li>
-                    <li><a href="#计算机体系结构">计算机体系结构</a></li>
-                    <li><a href="#大学英语听说-i-iv">大学英语听说 I-IV</a></li>
-                    <li><a href="#金工实习">金工实习</a></li>
-                    <li><a href="#大物实验">大物实验</a></li>
-                    <li><a href="#计算物理">计算物理</a></li>
-                    <li><a href="#计算方法">计算方法</a></li>
-                    <li><a href="#托福">托福</a></li>
-                    <li><a href="#实验报告文书编写">实验报告/文书编写</a></li>
-                    <li><a href="#申请出国">申请出国</a></li>
-                    <li><a href="#matlab">MATLAB</a></li>
-                    <li><a href="#mathematica">Mathematica</a></li>
-                    <li><a href="#origin">Origin</a></li>
-                    <li><a href="#root">ROOT</a></li>
+                    <li><a href="#课程">课程</a>
+                      <ul>
+                        <li><a href="#程序设计">程序设计</a></li>
+                        <li><a href="#数据结构">数据结构</a></li>
+                        <li><a href="#模拟与数字电路实验">模拟与数字电路实验</a></li>
+                        <li><a href="#计算机系统概论h">计算机系统概论（H）</a></li>
+                        <li><a href="#计算机组成原理">计算机组成原理</a></li>
+                        <li><a href="#操作系统原理与设计">操作系统原理与设计</a></li>
+                        <li><a href="#编译原理与技术">编译原理与技术</a></li>
+                        <li><a href="#计算机网络">计算机网络</a></li>
+                        <li><a href="#微机原理与系统">微机原理与系统</a></li>
+                        <li><a href="#算法基础">算法基础</a></li>
+                        <li><a href="#数据库系统及应用">数据库系统及应用</a></li>
+                        <li><a href="#人工智能基础">人工智能基础</a></li>
+                        <li><a href="#计算机体系结构">计算机体系结构</a></li>
+                        <li><a href="#大学英语听说-i-iv">大学英语听说 I-IV</a></li>
+                        <li><a href="#金工实习">金工实习</a></li>
+                        <li><a href="#大物实验">大物实验</a></li>
+                        <li><a href="#计算物理">计算物理</a></li>
+                        <li><a href="#计算方法">计算方法</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#学业杂项">学业杂项</a>
+                      <ul>
+                        <li><a href="#托福">托福</a></li>
+                        <li><a href="#实验报告文书编写">实验报告/文书编写</a></li>
+                        <li><a href="#申请出国">申请出国</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#专业软件">专业软件</a>
+                      <ul>
+                        <li><a href="#matlab">MATLAB</a></li>
+                        <li><a href="#mathematica">Mathematica</a></li>
+                        <li><a href="#origin">Origin</a></li>
+                        <li><a href="#root">ROOT</a></li>
+                      </ul>
+                    </li>
                   </ul>
                 </nav>
               </aside>
-              <p>本指南指导中科大 Linux 用户如何使用 Linux 完成各门课程。“兼容性”仅代表使用 Linux 完成课程的难易程度，与课程本身质量和难度无关。</p>
+              <p>本指南指导中科大 Linux 用户如何使用 Linux 完成各门课程、处理学业事项，以及运行需要的专业软件。“兼容性”仅代表使用 Linux 完成任务的难易程度，与其他指标（如课程本身质量和难度）无关。</p>
               <p><strong><del>注意：本指南目前仅包含部分计算机专业本科课程。</del></strong>欢迎其他同学贡献更多内容！</p>
-              <h2 id="程序设计">程序设计</h2>
+              <h2 id="课程">课程</h2>
+              <h3 id="程序设计">程序设计</h3>
               <p>mk (16 级):</p>
               <p>程序设计课程主要讲授 C 语言知识，而 C 语言本身就是用来 UNIX 的原生语言，所以不会有任何障碍。</p>
               <p>建议使用 GCC 或 Clang 作为编译器，使用 GDB 作为调试器。可以选用任意一款文本编辑器（Vim、Emacs、Sublime、Atom、VSCode、gedit、Kate 等）或集成开发环境（如 CLion、Geany、KDevelop）。</p>
               <p>兼容性：★★★★★</p>
-              <h2 id="数据结构">数据结构</h2>
+              <h3 id="数据结构">数据结构</h3>
               <p>mk (16 级):</p>
               <p>主要讲授数据结构及其 C 语言实现。和程序设计一样没有任何问题。</p>
               <p>课本（严蔚敏版数据结构）分光盘版和无盘版。光盘内容为算法和数据结构的演示程序，仅支持 MS-DOS 和 Windows，其功能可完全由 VisuAlgo 替代。所以建议购买无盘版。</p>
               <p>taoky (17 级):</p>
               <p>补充一点，如果真的要跑光盘的话，用 wine 和 DOSBOX 可以顺利执行。</p>
               <p>兼容性：★★★★★</p>
-              <h2 id="模拟与数字电路实验">模拟与数字电路实验</h2>
+              <h3 id="模拟与数字电路实验">模拟与数字电路实验</h3>
               <p>mk (16 级):</p>
               <p>旧开发板：Digilent Nexys 2 和 3 均有 Linux 工具，Xilinx ISE 也有 Linux 版本。笔者经验是 Xilinx ISE 可以正常使用。</p>
               <p>新开发板(Digilent Nexys 4 DDR)：Xilinx Vivado 有 Linux 版本。可模拟，综合，实现，烧录。（含串口通讯等 exe 文件的实验可能无法正常开展）</p>
@@ -235,14 +248,14 @@
               <p>taoky (17 级):</p>
               <p>我们这一届开始全面用新的开发板 (Nexys 4 DDR)，实验可以完整在 Linux 上完成。（没有见到上面说的串口通讯实验）</p>
               <p>兼容性：★★★★★</p>
-              <h2 id="计算机系统概论h">计算机系统概论（H）</h2>
+              <h3 id="计算机系统概论h">计算机系统概论（H）</h3>
               <p>mk (16 级):</p>
               <p>LC3 Tools 提供 Linux 版本。作业和 Lab 只需提交 PDF 版本。教学资源、课程要求见课本官网或课程官网：http://acsa.ustc.edu.cn/ics/。</p>
               <p><a href="https://github.com/chiragsakhuja/lc3tools/releases">LC3 Tools 二进制文件(.AppImage)</a></p>
               <p>taoky (17 级):</p>
               <p>LC3 Tools Linux version 没有中断的支持。不过我们这一届没有出这个实验。</p>
               <p>兼容性：★★★★☆</p>
-              <h2 id="计算机组成原理">计算机组成原理</h2>
+              <h3 id="计算机组成原理">计算机组成原理</h3>
               <p>mk (16 级):</p>
               <p>实验主要为仿真，FPGA 开发板使用较少。部分仿真实验使用 Xilinx ISE 较为方便。最后的大作业可选烧录到 FPGA 上。</p>
               <p>注意，本课程可能必须使用 Xilinx ISE 进行仿真，因为只有 ISE 支持以直观方式查看「内存」的内容。</p>
@@ -252,21 +265,21 @@
               <p>兼容性：★★★★★</p>
               <p>regymm (17 级):</p>
               <p>注：如果有串口通信实验，在 Linux 上有 picocom 等工具，不必非要使用专门的 exe 软件。</p>
-              <h2 id="操作系统原理与设计">操作系统原理与设计</h2>
+              <h3 id="操作系统原理与设计">操作系统原理与设计</h3>
               <p>mk (16 级):</p>
               <p>操作系统课不可能绕过 Linux！就算是 Windows 用户也会被迫安装 Linux 虚拟机。所以 Linux 用户不会遇到任何问题。</p>
               <p>兼容性：★★★★★</p>
-              <h2 id="编译原理与技术">编译原理与技术</h2>
+              <h3 id="编译原理与技术">编译原理与技术</h3>
               <p>mk (16 级):</p>
               <p>本课程会大量使用开源/自由软件，如 Flex、Bison、ANTLR、LLVM 等。作为 Linux 用户，当然 Feel at home~</p>
               <p>兼容性：★★★★★</p>
-              <h2 id="计算机网络">计算机网络</h2>
+              <h3 id="计算机网络">计算机网络</h3>
               <p>mk (16 级):</p>
               <p>使用 Wireshark，支持 Linux。</p>
               <p>taoky (17 级):</p>
               <p>不同班级的实验会不一样，但是基本上都需要使用 Wireshark。有些实验会有 socket 编程相关的内容，兼容性上没有问题。</p>
               <p>兼容性：★★★★★</p>
-              <h2 id="微机原理与系统">微机原理与系统</h2>
+              <h3 id="微机原理与系统">微机原理与系统</h3>
               <p>mk (16 级):</p>
               <p>需要用到 MASM。大概使用 DOSBox 就能应付（？）</p>
               <p>taoky (17 级):</p>
@@ -275,39 +288,39 @@
               <p>相比于其他依赖 Windows 的实验来说，微机原理比较好的一点是，可以直接开个非常轻量的 Windows XP 虚拟机完成所有实验。不过这门课现在变成选修了。</p>
               <p>BTW: 有同学问如何让 DOSBox 在 Linux 下在当前终端处理输入输出。如果有这样的需求（比如说你在用 VSCode Remote 连到某台机器上做实验），可以尝试 <a href="https://github.com/dosemu2/dosemu2">https://github.com/dosemu2/dosemu2</a>，参考 <a href="https://retrocomputing.stackexchange.com/questions/16173/emulate-a-text-mode-dos-program-using-a-unix-terminal">https://retrocomputing.stackexchange.com/questions/16173/emulate-a-text-mode-dos-program-using-a-unix-terminal</a>。</p>
               <p>兼容性：★★★☆☆</p>
-              <h2 id="算法基础">算法基础</h2>
+              <h3 id="算法基础">算法基础</h3>
               <p>mk (16 级):</p>
               <p>和数据结构差不多，写一些与平台无关的算法代码。</p>
               <p>兼容性：★★★★★</p>
-              <h2 id="数据库系统及应用">数据库系统及应用</h2>
+              <h3 id="数据库系统及应用">数据库系统及应用</h3>
               <p>mk (16 级):</p>
               <p>PowerDesigner?! 看起来只能 Wine / 虚拟机 了。</p>
               <p>taoky (17 级):</p>
               <p>我这届金培权老师班级的实验是：实验一写 SQL，实验二用 PowerDesigner 画图，实验三写使用 MySQL 的小 project。实验一和三都可以在 Linux 下顺利完成，只有实验二需要依赖 Windows。</p>
               <p>兼容性：★★☆☆☆</p>
-              <h2 id="人工智能基础">人工智能基础</h2>
+              <h3 id="人工智能基础">人工智能基础</h3>
               <p>mk (16 级):</p>
               <p>实验与操作系统关系不是很大~</p>
               <p>兼容性：★★★★★</p>
-              <h2 id="计算机体系结构">计算机体系结构</h2>
+              <h3 id="计算机体系结构">计算机体系结构</h3>
               <p>mk (16 级):</p>
               <p>写模拟程序，可以使用任何语言，所以问题不大。</p>
               <p>兼容性：★★★★★</p>
               <p>taoky (17 级):</p>
               <p>目前体系结构实验变成了写 Verilog，跑 Vivado。最后一个实验要求运行多 Cache 一致性和 Tomasulo 模拟器，这两个是 Windows 程序。我用 wine 尝试跑过，发现显示有一些问题。</p>
               <p>兼容性：★★★☆☆</p>
-              <h2 id="大学英语听说-i-iv">大学英语听说 I-IV</h2>
+              <h3 id="大学英语听说-i-iv">大学英语听说 I-IV</h3>
               <p>regymm (17 级):</p>
               <p>这门课可能需要随书附带光盘中的练习资料。自带的练习软件无法在 wine 中运行。然而，光盘中的音频和视频文件均可以直接播放（老师可能也会提到这一点）。</p>
               <p>同时，二教 8 楼等听力考试的机房似乎也在平时开放供同学使用。</p>
               <p>兼容性：★★★☆☆</p>
-              <h2 id="金工实习">金工实习</h2>
+              <h3 id="金工实习">金工实习</h3>
               <p>regymm (17 级):</p>
               <p>需要使用 AutoCAD 和 SolidWorks 完成课后设计作业。<em>或许</em>有自由软件替代。这类软件对图形要求较高，VirtualBox 上表现不佳，我只能选择使用 VMWare。这方面似乎 Linux 上确实无太好的解决方案。</p>
               <p>虚拟仿真实验需要安装科大平台提供的 Windows 程序并在指定浏览器运行。在 VirtualBox 中使用时图形性能十分低下，不影响完成实验但体验不佳。</p>
               <p>如果手头没有性能较好能够在 VMWare 中运行 CAD 软件的机器，可以选择在工院机房完成，那里有性能不错并预装好所需软件的 Windows 机器。</p>
               <p>兼容性：★☆☆☆☆</p>
-              <h2 id="大物实验">大物实验</h2>
+              <h3 id="大物实验">大物实验</h3>
               <p>regymm (17 级):</p>
               <p>对于大部分实验，只需要处理数据并绘图。<a href="#origin">Origin</a> 是”官方推荐“的软件，但是用 <a href="#matlab">MATLAB</a> 或 Python 等可以胜任。</p>
               <p>个别实验似乎会要求用 U 盘拷贝 Origin 文件并课下分析，这就没有办法只能用 Origin 了。而也有个别实验让我觉得 Origin 明显是更加明智的选择。</p>
@@ -315,44 +328,46 @@
               <p>核物理专业实验等需要分析一些专门处理软件（探测器上位机）或示波器导出的数据，但似乎都是纯文本，用 Linux 不会有什么困难。有时也可能使用 <a href="#root">ROOT</a>.</p>
               <p>总之，如果你只需要做一级实验，应该不会遇到任何 Linux 无法处理的情况。然而如果你需要做三级甚至更多级，最好为 corner case 做好准备。对于这一系列本就较为繁琐的课程，从节约时间的角度考虑，装上 Origin 以备不时之需也是应该的，即使是在偶有问题的 wine 上。</p>
               <p>兼容性：★★★★☆（一级二级），★★★☆☆（三级至五十三级）</p>
-              <h2 id="计算物理">计算物理</h2>
+              <h3 id="计算物理">计算物理</h3>
               <p>regymm (17 级):</p>
               <p>除了 C、C++、Fortran 等编程外，可能用到 <a href="#matlab">MATLAB</a>、<a href="#mathematica">Mathematica</a>、<a href="#origin">Origin </a> 等，但没有任何一个是必须的。可以根据个人喜好或兼容性选择。</p>
               <p>兼容性：★★★★★</p>
-              <h2 id="计算方法">计算方法</h2>
+              <h3 id="计算方法">计算方法</h3>
               <p>regymm (17 级):</p>
               <p>除了基本程序设计软件之外，可能会用到 <a href="#matlab">MATLAB</a>.</p>
               <p>兼容性：★★★★★</p>
-              <h2 id="托福">托福</h2>
+              <h2 id="学业杂项">学业杂项</h2>
+              <h3 id="托福">托福</h3>
               <p>regymm (17 级):</p>
               <p>小站托福可以在 Crossover 中较好的运行，有 bug 但并不会在做题过程中出现。不建议在虚拟机中使用，因为音频可能质量下降。</p>
               <p>兼容性：★★★★☆</p>
-              <h2 id="实验报告文书编写">实验报告/文书编写</h2>
+              <h3 id="实验报告文书编写">实验报告/文书编写</h3>
               <p>regymm (17 级):</p>
               <p>无论是 LaTeX、LyX、Texmacs 还是 IDE 如 TexStudio，都有 Linux 版本，甚至可能安装更加容易。</p>
               <p>Word 或 Excel 等格式的文件主要是社团/学生会/班级的填报表格等，WPS for Linux 可以胜任。如果不放心，可以在手机上的 Office 软件中 double check. 另外，我在 Crossover 中安装的 Office 2010 套装运行良好（而 Office 2013 和 Office 2016 经常出现各种问题）。</p>
               <p>兼容性：★★★★☆</p>
-              <h2 id="申请出国">申请出国</h2>
+              <h3 id="申请出国">申请出国</h3>
               <p>regymm (17 级):</p>
               <p>文书可以用 TeX，填写各种申请表也只需要一个 modern 的浏览器。需要在 PDF 中添加注释，或在 Word 文档中编辑的情况很少但确实存在。Linux 上的 Foxit Reader 是不错的 PDF 编辑器，但在这种事情上我还是选择了虚拟机中的福昕企业版（科大正版软件有提供）和较新的 Office 套装。</p>
               <p>兼容性：★★★★★</p>
-              <h2 id="matlab">MATLAB</h2>
+              <h2 id="专业软件">专业软件</h2>
+              <h3 id="matlab">MATLAB</h3>
               <p>regymm (17 级):</p>
               <p>专利软件 MATLAB 是有 Linux 版的，并且科大正版软件有所提供。本人在用 MATLAB 完成计算、绘图、网络编程、Simulink 等任务时均未遇到任何问题。</p>
               <p>然而，如果要使用一些第三方厂商提供的模块和/或进行硬件控制，可能会遇到 Linux 上无法正常使用的情况。</p>
               <p>兼容性：★★★★☆</p>
-              <h2 id="mathematica">Mathematica</h2>
+              <h3 id="mathematica">Mathematica</h3>
               <p>regymm (17 级):</p>
               <p>专利软件 Mathematica 是有 Linux 版的，并且科大正版软件有所提供。尽管界面相比 Windows 版稍丑（个人看法），未遇到任何功能问题。</p>
               <p>兼容性：★★★★★</p>
-              <h2 id="origin">Origin</h2>
+              <h3 id="origin">Origin</h3>
               <p>regymm (17 级):</p>
               <p>专利软件 Origin 是交互式科学绘图和数据分析工具，没有 Linux 版。在 Origin 2017 / Origin 最新版 / wine 32 位 Win10 模式 / wine 64 位 Win10 模式的组合中，大部分可以正常安装运行。</p>
               <p>然而，需要注意的是，尽管大部分功能能正常运行，一些个别功能可能会 fail silently，如果遇到某一操作无法执行，除了自己操作错误外，也可能是其本身的问题。这可能耽误很多时间。</p>
               <p>VirtualBox 可以正常运行。</p>
               <p>可以考虑 QtiPlot、gnuplot、甚至 <a href="#root">ROOT</a> 完成绘图。</p>
               <p>兼容性：★★☆☆☆</p>
-              <h2 id="root">ROOT</h2>
+              <h3 id="root">ROOT</h3>
               <p>regymm (17 级):</p>
               <p>CERN 的 ROOT 同样有原生 Linux 支持。课程提供的程序文件中只可能有个别地方，如文件路径格式等，需要修改。</p>
               <p>兼容性：★★★★★</p>
