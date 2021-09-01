@@ -20,7 +20,7 @@
     <meta property="og:url" content="https://lug.ustc.edu.cn/wiki/user/taoky/ustcnet_troubleshooting/">
     <meta property="og:description" content="校园网问题快速自查指南">
     <meta property="article:published_time" content="2021-09-01T23:13:56+08:00">
-    <meta property="article:modified_time" content="2021-09-01T23:24:52+08:00">
+    <meta property="article:modified_time" content="2021-09-01T23:30:57+08:00">
     <link rel="canonical" href="https://lug.ustc.edu.cn/wiki/user/taoky/ustcnet_troubleshooting/">
     <script type="application/ld+json">
       {
@@ -57,7 +57,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=34b67a7bc">
+    <link rel="stylesheet" href="/assets/css/main.css?v=8ff281a7b">
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
       <style>
@@ -177,7 +177,7 @@
           <meta itemprop="headline" content="校园网问题快速自查指南">
           <meta itemprop="description" content="校园网问题快速自查指南">
           <meta itemprop="datePublished" content="2021-09-01T23:13:56+08:00">
-          <meta itemprop="dateModified" content="2021-09-01T23:24:52+08:00">
+          <meta itemprop="dateModified" content="2021-09-01T23:30:57+08:00">
           <div class="page__inner-wrap">
             <header>
               <h1 id="page-title" class="page__title" itemprop="headline">校园网问题快速自查指南
@@ -197,20 +197,20 @@
                 </nav>
               </aside>
               <p><strong>非官方，并且仍然缺少很多内容。仅供参考。</strong></p>
-              <p>本指南假设已经申请网络通。</p>
+              <p>本指南假设你已经申请网络通，如果你还没有申请网络通，请前往<a href="https://ustcnet.ustc.edu.cn/service/index.php?activeTab=tabWelcome">这里</a>开通服务。</p>
               <h2 id="连接无线热点有线网络后无法连接到网络通">连接无线热点/有线网络后无法连接到网络通</h2>
               <ol>
                 <li>
                   <p>是否分配到了正确的 IP 地址？</p>
-                  <p>如果发现你获得的 IP 地址为 “169” 开头，则说明网络中的 DHCP 服务器出现问题。可能需要等待一段时间或者使用其他方式连接。如果还是连不上，则可能需要联系网络信息中心解决。</p>
+                  <p>如果发现你的 IP 地址开头为 169.254，说明你没有正确通过 DHCP 服务获取 IP 地址，请等待一段时间重新尝试或者使用其他方式连接。如果还是连不上，则可能需要联系网络信息中心解决。</p>
                 </li>
                 <li>
                   <p>DNS 设置是否正确？</p>
-                  <p>在网络通未登录的情况下，机器无法访问校外网络。因此，如果 DNS 设置为了校外的 DNS，则系统在解析 wlt.ustc.edu.cn 域名时就会出错。</p>
+                  <p>在网络通未登录的情况下，机器无法访问校外网络。因此，如果你将 DNS 设置为了校外的 DNS，则系统在解析 wlt.ustc.edu.cn 域名时就会出错。</p>
                   <p>解决方法任选其一：</p>
                   <ul>
-                    <li>删除自定义的 DNS 设置。</li>
-                    <li>将 DNS 设置为 202.38.64.1。</li>
+                    <li>删除自定义的 DNS 设置；</li>
+                    <li>将 DNS 设置为 202.38.64.1；</li>
                     <li>在 hosts 文件中将 <code class="language-plaintext highlighter-rouge">wlt.ustc.edu.cn</code> 域名绑定到 <code class="language-plaintext highlighter-rouge">202.38.64.59</code>（不建议）。</li>
                   </ul>
                 </li>
@@ -223,14 +223,16 @@
               <p>在反馈时务必注意：</p>
               <ol>
                 <li>请先查看 BBS 网络信息中心板块，确认是否有故障公告，或者其他人报告了你的问题。</li>
-                <li>尽可能提供更多的信息，例如：</li>
+                <li>
+                  <p>尽可能提供详细的信息，例如：</p>
+                  <ul>
+                    <li>出现问题时的症状是什么？如果是偶发的问题，出现的频率如何？</li>
+                    <li>你所使用的设备情况、连接校园网的位置与连接方式、你的同学是否出现了你遇到的情况。</li>
+                    <li>如果有能力，请提供技术信息，例如系统的网络设置情况、抓包情况等。</li>
+                  </ul>
+                </li>
               </ol>
-              <ul>
-                <li>出现问题时的症状是什么？如果是偶发的问题，出现的频率如何？</li>
-                <li>你所使用的设备情况、连接校园网的位置与连接方式、你的同学是否出现了你遇到的情况。</li>
-                <li>如果有能力，请提供技术信息，例如系统的网络设置情况、抓包情况等。</li>
-              </ul>
-              <p>足够多的信息可以同时节省你和帮你解决问题的人的时间，这很重要。如果只是说「连不上网怎么办啊」，那么想帮你解决问题的人会感到很困惑的。</p>
+              <p>充足的信息可以同时节省你和帮你解决问题的人的时间，这很重要。如果只是说「连不上网怎么办啊」，那么想帮你解决问题的人会感到很困惑的。</p>
             </section>
             <footer class="page__meta">
               <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2021-09-01">2021 年 9 月 1 日</time></p>
