@@ -9,19 +9,19 @@
   <head>
     <meta charset="utf-8">
     <!-- begin _includes/seo.html -->
-    <title>Linux User Group @ USTC - LUG @ USTC</title>
-    <meta name="description" content="Linux User Group @ USTC">
+    <title>校园网问题快速自查指南 - LUG @ USTC</title>
+    <meta name="description" content="校园网问题快速自查指南">
     <meta name="author" content="USTCLUG">
     <meta property="article:author" content="USTCLUG">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="zh_CN">
     <meta property="og:site_name" content="LUG @ USTC">
-    <meta property="og:title" content="Linux User Group @ USTC">
-    <meta property="og:url" content="https://lug.ustc.edu.cn/wiki/intro_english/">
-    <meta property="og:description" content="Linux User Group @ USTC">
-    <meta property="article:published_time" content="2020-08-08T19:10:06+08:00">
-    <meta property="article:modified_time" content="2020-11-09T14:22:35+08:00">
-    <link rel="canonical" href="https://lug.ustc.edu.cn/wiki/intro_english/">
+    <meta property="og:title" content="校园网问题快速自查指南">
+    <meta property="og:url" content="https://lug.ustc.edu.cn/wiki/user/taoky/ustcnet_troubleshooting/">
+    <meta property="og:description" content="校园网问题快速自查指南">
+    <meta property="article:published_time" content="2021-09-01T23:13:56+08:00">
+    <meta property="article:modified_time" content="2021-09-01T23:24:52+08:00">
+    <link rel="canonical" href="https://lug.ustc.edu.cn/wiki/user/taoky/ustcnet_troubleshooting/">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -174,13 +174,13 @@
           </nav>
         </div>
         <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-          <meta itemprop="headline" content="Linux User Group @ USTC">
-          <meta itemprop="description" content="Linux User Group @ USTC">
-          <meta itemprop="datePublished" content="2020-08-08T19:10:06+08:00">
-          <meta itemprop="dateModified" content="2020-11-09T14:22:35+08:00">
+          <meta itemprop="headline" content="校园网问题快速自查指南">
+          <meta itemprop="description" content="校园网问题快速自查指南">
+          <meta itemprop="datePublished" content="2021-09-01T23:13:56+08:00">
+          <meta itemprop="dateModified" content="2021-09-01T23:24:52+08:00">
           <div class="page__inner-wrap">
             <header>
-              <h1 id="page-title" class="page__title" itemprop="headline">Linux User Group @ USTC
+              <h1 id="page-title" class="page__title" itemprop="headline">校园网问题快速自查指南
               </h1>
             </header>
             <section class="page__content" itemprop="text">
@@ -190,46 +190,55 @@
                     <h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4>
                   </header>
                   <ul class="toc__menu">
-                    <li><a href="#special-events">Special Events</a>
-                      <ul>
-                        <li><a href="#linux-install-party">Linux Install Party</a></li>
-                        <li><a href="#sfd-software-freedom-day">SFD (Software Freedom Day)</a></li>
-                        <li><a href="#lug-weekly-party">LUG Weekly Party</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#network-services">Network Services</a></li>
+                    <li><a href="#连接无线热点有线网络后无法连接到网络通">连接无线热点/有线网络后无法连接到网络通</a></li>
+                    <li><a href="#如何连接-eduroam">如何连接 eduroam</a></li>
+                    <li><a href="#如何咨询反馈问题">如何咨询/反馈问题？</a></li>
                   </ul>
                 </nav>
               </aside>
-              <p>USTC LUG is the abbreviation for Linux User Group (LUG) of University of Science and Technology of China (USTC). USTC LUG is a technology-leading association that consists of the GNU/Linux enthusiasts in USTC. The aim of USTC LUG is to unite the GNU/Linux users in USTC, to build a platform for communicating with each other, sharing the value of free software and promoting free software in the USTC Campus and Hefei City.</p>
-              <p>Founded in 2003, USTC LUG has gone through over 15 years. At present, it is a top university association in Anhui province to promote the free software culture and value as well as one of the well-developing Linux/Free Software student associations in China mainland. Due to the combined efforts of its members and volunteers, USTC LUG has organized a number of meaningful activities, such as the USTC Information Security Contest, GNU/Linux Install Party, Software Freedom Day, Weekly Party and Linux 101 lectures.</p>
-              <p>USTC LUG started the maintenance of the well-known Debian archive mirror <a href="https://debian.ustc.edu.cn">https://debian.ustc.edu.cn</a> in 2003. Now, with better hardware and bandwidth sponsored by USTC, it finally becomes <a href="http://ftp.cn.debian.org/">the official Debian mirror of China</a>. Now it has combined with <a href="https://oss.ustc.edu.cn">https://oss.ustc.edu.cn</a> and became <a href="https://mirrors.ustc.edu.cn">https://mirrors.ustc.edu.cn</a>, an important open-source software mirror in China. With the assistance of the USTC Network Information Center, USTC LUG has set up a PXE network booting system, enabling the whole campus to perform convenient installs and quick experience of Linux. The Library LIIMS System, developed on the base of Campus PXE system, is also developed and under the maintenance of USTC LUG.</p>
-              <p>In recognition of its excellent performance, USTC LUG was awarded the Outstanding Association of USTC in May 2011. USTC LUG was also ranked as a “Four Star” Student Association of USTC in 2012, 2013 and 2014. In 2015, 2016, 2017 and 2018, USTC LUG was ranked as a “Five Star” Student Association of USTC.</p>
-              <p>If you have any problem, please email us at lug &lt; at&gt; ustc.edu.cn.</p>
-              <h2 id="special-events">Special Events</h2>
-              <h3 id="linux-install-party">Linux Install Party</h3>
-              <p>The main purpose of the Linux Install Party is to promote and install Linux on students’ computers, as well as promote and encourage the spirit of open source and free software. Students will have a good experience installing the Linux system painlessly, have professional guidance during their Linux installing process and exchange relevant knowledge of Linux. Each party includes lectures for novices, installation guide step by step, free discussion, and other events.</p>
-              <h3 id="sfd-software-freedom-day">SFD (Software Freedom Day)</h3>
-              <p><a href="/wiki/lug/events/sfd">Software Freedom Day</a> is a non-profit event under the leadership of the Free Software Foundation International (SFI). It is sponsored by supporters of free and open-source software. It aims to provide an information exchange platform for supporters and the hold activities of free and open-source software with other communities.</p>
-              <p>USTC LUG has successfully organized recent Software Freedom Day events in Hefei. This event was once supported by Lemote Technology, Loongson Club, Standard Software, Red Flag Linux, China OSS Promotion Union, Hefei Industrial University, Anhui University and other companies, open-source community and universities. During each event, the guests influential in the field of open-source software in domestic were invited, such as James Zhang (teacher of USTC network center), Mr. Li Zhenning (President of Beijing GUG), Mr. Yao Xinyu (Chairman of Shanghai LUG), Mr. Liu Shiwei (a developer of MIPS), etc. Their speeches address a variety of content.</p>
-              <h3 id="lug-weekly-party">LUG Weekly Party</h3>
-              <p>Since October 2011, we hold a meeting named <a href="/wiki/lug/events/weeklyparty">Weekly Party</a> (or ‘Tech Hangout’) every weekend. A student will be invited to make a presentation about IT technology etc. This meeting is open to all teachers and students. Now, before every Weekly Party, the time, place and introduction of the weekly party will be posted on our mailing list, LUG activities calendar, Notice/Linux forum of USTC BBS, etc.</p>
-              <h2 id="network-services">Network Services</h2>
+              <p><strong>非官方，并且仍然缺少很多内容。仅供参考。</strong></p>
+              <p>本指南假设已经申请网络通。</p>
+              <h2 id="连接无线热点有线网络后无法连接到网络通">连接无线热点/有线网络后无法连接到网络通</h2>
+              <ol>
+                <li>
+                  <p>是否分配到了正确的 IP 地址？</p>
+                  <p>如果发现你获得的 IP 地址为 “169” 开头，则说明网络中的 DHCP 服务器出现问题。可能需要等待一段时间或者使用其他方式连接。如果还是连不上，则可能需要联系网络信息中心解决。</p>
+                </li>
+                <li>
+                  <p>DNS 设置是否正确？</p>
+                  <p>在网络通未登录的情况下，机器无法访问校外网络。因此，如果 DNS 设置为了校外的 DNS，则系统在解析 wlt.ustc.edu.cn 域名时就会出错。</p>
+                  <p>解决方法任选其一：</p>
+                  <ul>
+                    <li>删除自定义的 DNS 设置。</li>
+                    <li>将 DNS 设置为 202.38.64.1。</li>
+                    <li>在 hosts 文件中将 <code class="language-plaintext highlighter-rouge">wlt.ustc.edu.cn</code> 域名绑定到 <code class="language-plaintext highlighter-rouge">202.38.64.59</code>（不建议）。</li>
+                  </ul>
+                </li>
+              </ol>
+              <h2 id="如何连接-eduroam">如何连接 eduroam</h2>
+              <p><a href="https://ustcnet.ustc.edu.cn/2016/0405/c11182a119841/page.htm">https://ustcnet.ustc.edu.cn/2016/0405/c11182a119841/page.htm</a></p>
+              <h2 id="如何咨询反馈问题">如何咨询/反馈问题？</h2>
+              <p>可以向网络信息中心 (<a href="https://ustcnet.ustc.edu.cn/">https://ustcnet.ustc.edu.cn/</a>) 邮件反馈问题，或者在 BBS 的「网络信息中心」板块反馈，或者在报修系统 (<a href="http://baoxiu.ustc.edu.cn/">http://baoxiu.ustc.edu.cn/</a>)报修。</p>
+              <p>（尽管 BBS 已经成为时代的眼泪，但是在向校方部门反馈问题的方面还是有效的）</p>
+              <p>在反馈时务必注意：</p>
+              <ol>
+                <li>请先查看 BBS 网络信息中心板块，确认是否有故障公告，或者其他人报告了你的问题。</li>
+                <li>尽可能提供更多的信息，例如：</li>
+              </ol>
               <ul>
-                <li><a href="/wiki/lug/services/mirrors">Open-Source Software Mirrors</a></li>
-                <li><a href="/wiki/lug/services/pxe">Network Boot Service (PXE)</a></li>
-                <li><a href="/wiki/lug/services/gitlab">GitLab (Self-hosted Git repository hosting service)</a></li>
+                <li>出现问题时的症状是什么？如果是偶发的问题，出现的频率如何？</li>
+                <li>你所使用的设备情况、连接校园网的位置与连接方式、你的同学是否出现了你遇到的情况。</li>
+                <li>如果有能力，请提供技术信息，例如系统的网络设置情况、抓包情况等。</li>
               </ul>
-              <p>You can find us <a href="/wiki/lug/contact">here</a>.</p>
+              <p>足够多的信息可以同时节省你和帮你解决问题的人的时间，这很重要。如果只是说「连不上网怎么办啊」，那么想帮你解决问题的人会感到很困惑的。</p>
             </section>
             <footer class="page__meta">
-              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-11-09">2020 年 11 月 9 日</time></p>
+              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2021-09-01">2021 年 9 月 1 日</time></p>
             </footer>
             <nav class="pagination">
-              <a href="/wiki/intro/" class="pagination--pager" title="中国科学技术大学 Linux 用户协会
+              <a href="/wiki/user/sadhen/" class="pagination--pager" title="About Me
 ">上一页</a>
-              <a href="/wiki/linux_digest/badblocks/" class="pagination--pager" title="使用 badblocks 命令处理硬盘坏道
-">下一页</a>
+              <a href="#" class="pagination--pager disabled">下一页</a>
             </nav>
           </div>
         </article>
