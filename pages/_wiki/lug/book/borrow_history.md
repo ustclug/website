@@ -16,6 +16,7 @@
 | 具体数学（第二版）            | 蔡智臻 | carbyne AT mail.ustc.edu.cn      | 2021-3-17  | \-       | \-   |
 | 计算机网络（第四版）          | 蔡智臻 | carbyne AT mail.ustc.edu.cn      | 2021-3-17  | \-       | \-   |
 | 编译原理（第二版）            | 徐怡   | cqewxji1ella AT mail.ustc.edu.cn | 2021-8-28  | \-       | \-   |
+| 机器学习                     | 蔡智臻 | carbyne AT mail.ustc.edu.cn       | 2021-9-3  | \-       | \-   |
 
 ## 2020 年借阅记录
 
