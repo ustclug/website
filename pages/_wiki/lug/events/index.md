@@ -10,16 +10,13 @@ LUG 的所有活动均依照 [社团章程](http://ftp.ustclug.org/社团管理/
 
 欢迎订阅 [LUG 日历](calendar.md)。
 
-2016 年及之后的活动不在这里重复记录小聚信息了，请移步[每周小聚](weeklyparty.md)页面查看。
+2016 年及之后的小聚就不在这里重复记录了，请移步[每周小聚](weeklyparty.md)页面查看。
 
 ## Latest Events
 
-| 日期       | 时间        | 地点       | 内容                                                                                                                                                                  |
-| :--------- | :---------- | :--------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 2021-05-16 | 14:30-17:30 | 西区 3C101 | Linux 101 第四课 [Slides](http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2021.05.16_Linux_101_%E7%AC%AC%E5%9B%9B%E8%AF%BE/linux-101-ch04.pdf)                          |
-| 2021-04-28 | 14:30-18:00 | 西区 3A211 | Linux 101 第三课 [Slides](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2021.04.28-Linux101-%E7%AC%AC%E4%B8%89%E8%AF%BE/slides/Linux101-3.pdf)                       |
-| 2021-04-18 | 14:30-18:00 | 西区 3C104 | Linux 101 第二课 [Slides](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2021.04.18_Linux_101_%E7%AC%AC%E4%BA%8C%E8%AF%BE/Linux%20101%E7%AC%AC%E4%BA%8C%E8%AF%BE.pdf) |
-| 2021-04-11 | 14:30-18:00 | 西区 3C104 | Linux 101 第一课 & Linux Install Party [Slides](http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2021_Linux101/Linux%20Install%20Party.pdf)                              |
+| 日期       | 时间        | 地点       | 内容       |
+| :--------- | :---------- | :--------- | :--------- |
+| 2021-09-25 | 14:30-17:00 | 西区 3C101 | 软件自由日 |
 
 注意：LUD (Linux User Dinner) 均为自愿参加活动，活动费用由参加者分摊，不从社团任何经费报销。关于 LUG 的财务管理制度详情见：[LUG 财务](/wiki/lug/finance)
 
@@ -27,6 +24,10 @@ LUG 的所有活动均依照 [社团章程](http://ftp.ustclug.org/社团管理/
 
 | 日期          | 时间        | 地点                       | 内容                                                                                                                                                                       |
 | :------------ | :---------- | :------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2021-05-16    | 14:30-17:30 | 西区 3C101                 | Linux 101 第四课 [Slides](http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2021.05.16_Linux_101_%E7%AC%AC%E5%9B%9B%E8%AF%BE/linux-101-ch04.pdf)                               |
+| 2021-04-28    | 14:30-18:00 | 西区 3A211                 | Linux 101 第三课 [Slides](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2021.04.28-Linux101-%E7%AC%AC%E4%B8%89%E8%AF%BE/slides/Linux101-3.pdf)                            |
+| 2021-04-18    | 14:30-18:00 | 西区 3C104                 | Linux 101 第二课 [Slides](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2021.04.18_Linux_101_%E7%AC%AC%E4%BA%8C%E8%AF%BE/Linux%20101%E7%AC%AC%E4%BA%8C%E8%AF%BE.pdf)      |
+| 2021-04-11    | 14:30-18:00 | 西区 3C104                 | Linux 101 第一课 & Linux Install Party [Slides](http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2021_Linux101/Linux%20Install%20Party.pdf)                                   |
 | 2020-12-06    | 19:30-21:00 | 西区 3A111                 | Hackergame 2020 颁奖                                                                                                                                                       |
 | 2020-10-31    | 12:00       | 线上（持续一周）           | 中国科学技术大学第七届信息安全大赛                                                                                                                                         |
 | 2020-10-30    | 19:00-21:30 | 西区 3C104                 | [Hackergame 赛前动员会](http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2020.10.30_Hackergame%E5%8A%A8%E5%91%98%E4%BC%9A/Slides.pdf)                                         |
