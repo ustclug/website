@@ -9,19 +9,19 @@
   <head>
     <meta charset="utf-8">
     <!-- begin _includes/seo.html -->
-    <title>nc 是什么？ - LUG @ USTC</title>
-    <meta name="description" content="nc 是什么？">
+    <title>萌新入门手册：如何使用 nc/ncat？ - LUG @ USTC</title>
+    <meta name="description" content="本文用于介绍信息安全大赛中不少题目需要使用的 nc/ncat 工具。">
     <meta name="author" content="taoky">
     <meta property="article:author" content="taoky">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="zh_CN">
     <meta property="og:site_name" content="LUG @ USTC">
-    <meta property="og:title" content="nc 是什么？">
+    <meta property="og:title" content="萌新入门手册：如何使用 nc/ncat？">
     <meta property="og:url" content="https://lug.ustc.edu.cn/planet/2019/09/how-to-use-nc/">
-    <meta property="og:description" content="nc 是什么？">
+    <meta property="og:description" content="本文用于介绍信息安全大赛中不少题目需要使用的 nc/ncat 工具。">
     <meta property="og:image" content="https://lug.ustc.edu.cn/static/splash/galaxy-1.jpg">
     <meta property="article:published_time" content="2019-09-16T00:00:00+08:00">
-    <meta property="article:modified_time" content="2020-11-09T14:22:35+08:00">
+    <meta property="article:modified_time" content="2021-09-27T21:48:22+08:00">
     <link rel="canonical" href="https://lug.ustc.edu.cn/planet/2019/09/how-to-use-nc/">
     <script type="application/ld+json">
       {
@@ -58,7 +58,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=2f4a4dd22">
+    <link rel="stylesheet" href="/assets/css/main.css?v=e1c71f32e">
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
       <style>
@@ -133,7 +133,7 @@
 >
         <div class="wrapper">
           <h1 id="page-title" class="page__title" itemprop="headline">
-            nc 是什么？
+            萌新入门手册：如何使用 nc/ncat？
           </h1>
           <p class="page__meta">
             <span class="page__meta-date">
@@ -143,7 +143,7 @@
             <span class="page__meta-sep"></span>
             <span class="page__meta-readtime">
               <i class="far fa-clock" aria-hidden="true"></i>
-              2 分钟阅读
+              3 分钟阅读
             </span>
           </p>
         </div>
@@ -172,10 +172,10 @@
           </div>
         </div>
         <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-          <meta itemprop="headline" content="nc 是什么？">
-          <meta itemprop="description" content="nc 是什么？">
+          <meta itemprop="headline" content="萌新入门手册：如何使用 nc/ncat？">
+          <meta itemprop="description" content="本文用于介绍信息安全大赛中不少题目需要使用的 nc/ncat 工具。">
           <meta itemprop="datePublished" content="2019-09-16T00:00:00+08:00">
-          <meta itemprop="dateModified" content="2020-11-09T14:22:35+08:00">
+          <meta itemprop="dateModified" content="2021-09-27T21:48:22+08:00">
           <div class="page__inner-wrap">
             <section class="page__content" itemprop="text">
               <aside class="sidebar__right sticky">
@@ -184,6 +184,7 @@
                     <h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4>
                   </header>
                   <ul class="toc__menu">
+                    <li><a href="#nc-是什么">nc 是什么？</a></li>
                     <li><a href="#如何安装-nc">如何安装 nc？</a>
                       <ul>
                         <li><a href="#使用静态链接的-ncat-程序">使用静态链接的 ncat 程序</a>
@@ -203,6 +204,8 @@
                   </ul>
                 </nav>
               </aside>
+              <p>本文用于介绍信息安全大赛中不少题目需要使用的 nc/ncat 工具。</p>
+              <h2 id="nc-是什么"><code class="language-plaintext highlighter-rouge">nc</code> 是什么？</h2>
               <p><code class="language-plaintext highlighter-rouge">nc/ncat</code> 是 netcat 的缩写，它可以读写 TCP 与 UDP 端口——或许你看不懂这句话，这没有关系。简单地说，它可以在字符界面下，让你和服务器沟通交流。</p>
               <p>一般来说，有很多题目都会要求你使用 <code class="language-plaintext highlighter-rouge">nc</code> 连接到他们的服务器，并且进行交互，获得 flag。</p>
               <h2 id="如何安装-nc">如何安装 <code class="language-plaintext highlighter-rouge">nc</code>？</h2>
@@ -277,11 +280,11 @@ usage: nc [-46AacCDdEFhklMnOortUuvz] [-K tc] [-b boundif] [-i interval] [-p sour
                   <a href="/categories/tech-tutorial" class="page__taxonomy-item" rel="tag">Tech Tutorial</a>
                 </span>
               </p>
-              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-11-09">2020 年 11 月 9 日</time></p>
+              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2021-09-27">2021 年 9 月 27 日</time></p>
             </footer>
             <section class="page__share">
               <h4 class="page__share-title">分享</h4>
-              <a href="https://twitter.com/intent/tweet?text=nc+%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%20https%3A%2F%2Flug.ustc.edu.cn%2Fplanet%2F2019%2F09%2Fhow-to-use-nc%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+              <a href="https://twitter.com/intent/tweet?text=%E8%90%8C%E6%96%B0%E5%85%A5%E9%97%A8%E6%89%8B%E5%86%8C%EF%BC%9A%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8+nc%2Fncat%EF%BC%9F%20https%3A%2F%2Flug.ustc.edu.cn%2Fplanet%2F2019%2F09%2Fhow-to-use-nc%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
               <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flug.ustc.edu.cn%2Fplanet%2F2019%2F09%2Fhow-to-use-nc%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
               <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Flug.ustc.edu.cn%2Fplanet%2F2019%2F09%2Fhow-to-use-nc%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
             </section>
