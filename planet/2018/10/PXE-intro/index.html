@@ -21,7 +21,7 @@
     <meta property="og:description" content="预启动执行环境（Preboot eXecution Environment，PXE，也被称为预执行环境)提供了一种使用网络接口（Network Interface）启动计算机的机制。这种机制让计算机的启动可以不依赖本地数据存储设备（如硬盘）或本地已安装的操作系统。——摘自 Archwiki">
     <meta property="og:image" content="https://lug.ustc.edu.cn/static/splash/galaxy-1.jpg">
     <meta property="article:published_time" content="2018-10-07T00:00:00+08:00">
-    <meta property="article:modified_time" content="2021-09-27T21:48:22+08:00">
+    <meta property="article:modified_time" content="2021-09-27T21:52:59+08:00">
     <link rel="canonical" href="https://lug.ustc.edu.cn/planet/2018/10/PXE-intro/">
     <script type="application/ld+json">
       {
@@ -58,7 +58,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=e1c71f32e">
+    <link rel="stylesheet" href="/assets/css/main.css?v=3e4a20c21">
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
       <style>
@@ -175,7 +175,7 @@
           <meta itemprop="headline" content="一根网线安装 Linux——PXE 介绍">
           <meta itemprop="description" content="预启动执行环境（Preboot eXecution Environment，PXE，也被称为预执行环境)提供了一种使用网络接口（Network Interface）启动计算机的机制。这种机制让计算机的启动可以不依赖本地数据存储设备（如硬盘）或本地已安装的操作系统。——摘自 Archwiki">
           <meta itemprop="datePublished" content="2018-10-07T00:00:00+08:00">
-          <meta itemprop="dateModified" content="2021-09-27T21:48:22+08:00">
+          <meta itemprop="dateModified" content="2021-09-27T21:52:59+08:00">
           <div class="page__inner-wrap">
             <section class="page__content" itemprop="text">
               <aside class="sidebar__right sticky">
@@ -213,9 +213,9 @@
               <p>图书馆内的图书查询机就是用 PXE 启动的，启动镜像叫 liims，里面包含了一个以图书馆透明计算系统为主页的浏览器（主页包括了图书查询，邮箱登录，学习空间预约等功能），还有瀚海星云的 telnet 客户端和彩虹猫，用户也可以自己启动一个虚拟机，用 PXE 启动进入查询系统。</p>
               <h2 id="pxe-怎么用">PXE 怎么用</h2>
               <h3 id="使用条件">使用条件</h3>
-              <p>电脑最好内置有 PXE Boot Agent，并且已经<a href="https://lug.ustc.edu.cn/wiki/server/pxe/faq#如何激活我电脑中的_pxe_boot_agent">激活</a>；没有现成支持的话，有<a href="https://lug.ustc.edu.cn/wiki/server/pxe/faq#我的电脑没有内置_pxe_boot_agent_我该怎么做">几种解决办法</a>。
-                所在的网段最好有能提供正确的 PXE 信息的 DHCP 服务器，以及可以通过 TFTP 数据包的网关；没有的话可以请管理员加以<a href="https://lug.ustc.edu.cn/wiki/server/pxe/faq#我们实验室有自己的网关和dhcp服务器_该如何设置以便子网内的计算机能够访问pxe服务">设置</a>，或自己动手<a href="https://lug.ustc.edu.cn/wiki/server/pxe/faq#如何把某个_pxeustc_上的网络启动系统直接加入_grublilo_的启动菜单">把网络启动系统加入 GRUB/LILO 菜单</a>。
-                如果所在实验室用地址转换/伪装技术建立了自己的子网，则需要<a href="https://lug.ustc.edu.cn/wiki/server/pxe/faq#我们实验室有自己的网关和dhcp服务器_该如何设置以便子网内的计算机能够访问pxe服务">配置</a>。</p>
+              <p>电脑最好内置有 PXE Boot Agent，并且已经<a href="https://lug.ustc.edu.cn/wiki/server/pxe/faq#如何激活我电脑中的-pxe-boot-agent">激活</a>；没有现成支持的话，有<a href="https://lug.ustc.edu.cn/wiki/server/pxe/faq#我的电脑没有内置-pxe-boot-agent我该怎么做">几种解决办法</a>。
+                所在的网段最好有能提供正确的 PXE 信息的 DHCP 服务器，以及可以通过 TFTP 数据包的网关；没有的话可以请管理员加以<a href="https://lug.ustc.edu.cn/wiki/server/pxe/faq#我们实验室有自己的网关和-dhcp-服务器该如何设置以便子网内的计算机能够访问-pxe-服务">设置</a>，或自己动手<a href="https://lug.ustc.edu.cn/wiki/server/pxe/faq#如何把某个-pxeustc-上的网络启动系统直接加入-grublilo-的启动菜单">把网络启动系统加入 GRUB/LILO 菜单</a>。
+                如果所在实验室用地址转换/伪装技术建立了自己的子网，则需要<a href="https://lug.ustc.edu.cn/wiki/server/pxe/faq#我们实验室有自己的网关和-dhcp-服务器该如何设置以便子网内的计算机能够访问-pxe-服务">配置</a>。</p>
               <h4 id="科大校园网">科大校园网</h4>
               <p>连接校园网（一般需要插网线）调节 BIOS 设置进入 PXE 环境即可直接进入 USTC PXE</p>
               <h4 id="非科大校园网">非科大校园网</h4>
