@@ -545,8 +545,11 @@ Dlvl:4 $:62 HP:15(15) Pw:23(23) AC:1 Xp:2 Burdened
 发现，本层有两个下楼梯。这是因为有一个是通往支线任务地精矿洞（Gnomish Mines）的。这个支线较难，如果不是女武神等前期强角色基本不要擅自进入。支线地图是这种风格，周围都是地精 `G`。稍微进去一下，立刻被围攻。幸亏猫比较强打死几只怪。还剩 7 HP 逃了出来。当然，矿洞里装备也很多，我们换了双鞋子，现在 `AC` 是 0，而代价是沉重的盔甲和行动不便。
 
 > `b - an uncursed +0 cloak of magic resistance (being worn)`
+>
 > `p - a +0 splint mail (being worn)`
+>
 > `B - a +0 iron skull cap (being worn)`
+>
 > `I - a +0 pair of hard shoes (being worn)`
 
 ```
