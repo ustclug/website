@@ -8,6 +8,8 @@ pxe.ustc.edu.cn 由中国科大图书馆、网络中心和学生 Linux 用户协
 
 [中国科学技术大学校园网 PXE 服务 FAQ](faq.md)
 
+[Planet: 一根网线安装 Linux——PXE 介绍](/planet/2018/10/PXE-intro/)
+
 如果遇到使用问题，请邮件联系 lug AT ustc.edu.cn。
 
 ## 新版网络启动服务
