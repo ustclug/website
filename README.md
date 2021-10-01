@@ -12,11 +12,15 @@
 
 设置文章作者请在 [`_data/authors.yml`](_data/authors.yml) 中添加作者信息（参考已有内容），然后在页面中指定 `author: key`（只支持一个作者）。
 
-请将图片上传至 [website-static 仓库](https://github.com/ustclug/website-static)，并使用如下格式引用：
+为了避免仓库过度膨胀，请避免将图片上传至本仓库。图片的处理方式有以下几种：
 
-```markdown
-![图片的 alt 文字]({{ site.static_url }}/path/to/image.jpg)
-```
+- 上传至 [website-static 仓库](https://github.com/ustclug/website-static)，并使用如下格式引用：
+
+  ```markdown
+  ![图片的 alt 文字]({{ site.static_url }}/path/to/image.jpg)
+  ```
+  
+- 上传至 LUG FTP，并使用完整路径引用
 
 ## 本地预览与构建
 
