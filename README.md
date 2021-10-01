@@ -19,7 +19,7 @@
   ```markdown
   ![图片的 alt 文字]({{ site.static_url }}/path/to/image.jpg)
   ```
-  
+
 - 上传至 LUG FTP，并使用完整路径引用
 
 ## 本地预览与构建
