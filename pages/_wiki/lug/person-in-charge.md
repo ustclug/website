@@ -13,7 +13,7 @@
 | :--- | :----------- | :----- | :--------------------- |
 | CEO  | 执行会长     | 刘隆邦 | psicmd AT ustclug.org  |
 | -    | 执行副会长   | 蔡智臻 | cat AT ustclug.org     |
-| -    | 执行副会长   | 刘正韬 |                        |
+| -    | 执行副会长   | 刘正韬 | zeka AT ustclug.org    |
 | CTO  | 技术部部长   | 邱慕凡 |                        |
 | -    | 技术部副部长 | 高泽豫 | zeyugao AT ustclug.org |
 | CFO  | 财务部部长   | 徐奥   |                        |
@@ -33,17 +33,16 @@
 
 | 项目         | 简介                                                         | 负责人                         |
 | :----------- | :----------------------------------------------------------- | :----------------------------- |
-| mirrors      | [科大开源软件镜像](https://mirrors.ustc.edu.cn/)             | **cuihao**, zsj, knight, yifan |
-| PXE          | [科大网络启动服务](http://pxe.ustc.edu.cn/)                  | **cuihao**                     |
-| 图书馆查询机 | 基于 PXE 网络启动                                            | **cuihao**, hosiet             |
-| LUG 主页     | (this wiki)                                                  | hosiet                         |
-| 邮件列表     | [LUG 邮件列表](https://lug.ustc.edu.cn/wiki/lug/mailinglist) | stephen, yifan                 |
-| SNS          | 人人, G+, etc                                                | **hosiet**                     |
-| FTP          | https://ftp.ustclug.org/                                     | hosiet, yifan                  |
-| 网络加速服务 |                                                              | yifan                          |
-| freeshell    |                                                              | **alkaid**, zsj, cuihao, yifan |
-| gitlab       | [类似 GitHub 的代码托管服务](https://git.lug.ustc.edu.cn/)   | **knight**, yifan              |
-| DNS          | LUG 权威 DNS 服务器                                          | **roy**                        |
+| mirrors      | [科大开源软件镜像](https://mirrors.ustc.edu.cn/)             | **taoky, ibug**, myl7, yifan   |
+| PXE          | [科大网络启动服务](http://pxe.ustc.edu.cn/)                  | **myl7**                       |
+| 图书馆查询机 | 基于 PXE 网络启动                                            | **myl7**                       |
+| LUG 主页     | 本网站                                                       | *all*                          |
+| 邮件列表     | [LUG 邮件列表](/wiki/lug/mailinglist)                        | stephen, yifan                 |
+| SNS          | 人人, G+, etc                                                |                                |
+| FTP          | https://ftp.lug.ustc.edu.cn/                                 | **taoky**, myl7                |
+| 网络加速服务 |                                                              | **ibug**, stephen, taoky       |
+| GitLab       | [类似 GitHub 的代码托管服务](https://git.lug.ustc.edu.cn/)   | **taoky**, ibug, yifan         |
+| DNS          | LUG 权威 DNS 服务器                                          |                                |
 | 防污染 DNS   | LUG 自建的防污染 DNS 服务器                                  | **yifan**                      |
 
 # 历任负责人
