@@ -7,11 +7,13 @@ tags:
   - 游戏
 ---
 
-#### 教程说明
+<!-- Workaround for jekyll-titles-from-headings -->
+
+## 教程说明
 
 本教程只介绍最基本的操作和游戏刚刚开始阶段的策略，帮助新手活过第一层。引用内容为补充或 Fun facts，可以忽略。图中游戏“截图”均为字符界面的直接复制——虽然没有了颜色或加粗效果，但还是觉得这样更合适一些。
 
-#### 关于
+## 关于
 
 NetHack 是一款历史悠久的 Roguelike 游戏，基于龙与地下城规则，也有着 Roguelike 典型特征：随机生成地图，永久死亡，难度和复杂度非常高。同时，游戏中也融合了各种文化和领域的元素，并且有多种有趣的提示信息和死亡方式。
 
@@ -48,13 +50,13 @@ Dlvl:1 $:11 HP:7(16) Pw:1(2) AC:6 Xp:1
 
 > 贴图模式也是有的，但是不如字符模式经典
 
-#### 安装和配置
+## 安装和配置
 
 如果你使用 Linux 等操作系统，那么 NetHack 多半可以直接从软件源中安装：包名通常为 `nethack` 或 `nethack-console`。如果使用 Windows，可以在[官方网站](https://nethack.org/v366/ports/download-win.html)下载。建议使用默认的英文版。
 
 为了更好地游戏体验，在 Linux 上推荐将以下内容添加至 `~/.nethackrc` 配置文件（这也是 Ubuntu 中自带的配置）。
 
-```
+```dosini
 #
 # System-wide NetHack configuration file for tty-based NetHack.
 #
@@ -86,12 +88,11 @@ MENUCOLOR=" unholy "=red
 MENUCOLOR=" cursed .* (being worn)"=orange&underline
 ```
 
-#### 开局
+## 开局
 
 运行 NetHack 后将看到以下提示：
 
 ```
-
 NetHack, Copyright 1985-2020
          By Stichting Mathematisch Centrum and M. Stephenson.
          Version 3.6.6 Unix, built Mar 18 18:21:43 2020.
@@ -210,7 +211,7 @@ Dlvl:1 $:0 HP:12(12) Pw:7(7) AC:9 Xp:1
 
 那么接下来的任务就是活下去了。毕竟，游戏的目的是在地牢深处找到炎多的护符（Amulet of Yendor）并将其献给自己的神，而不是原地不动。
 
-#### 游戏开始
+## 游戏开始
 
 首先是**移动**。推荐的移动方式是和 Vim 操作类似的 8 个方向的 `hjklyubn`，当然新手用四个方向键也未尝不可。
 
@@ -730,22 +731,15 @@ and 88 pieces of gold, after 3310 moves.
 You were level 4 with a maximum of 29 hit points when you died.
 ```
 
-#### 尾声
+## 尾声
 
 通过本菜鸡的一局典型游戏流程，希望你已经了解了 NetHack 的基本操作，并能够在地下城中跌跌撞撞地存活一段有限大的时间。仍然有非常多重要的机制和操作本教程中没有提及（甚至 BUC 都没有说），这就要各位自己寻找了。对于一般玩家，要胜任这种游戏，作弊、剧透甚至是阅读源代码都是有必要而并不可耻的行为。
 
-#### 参考资料
+## 参考资料
 
-https://nethackwiki.com
-
-https://www.zhihu.com/question/40177337
-
-https://www.melankolia.net/nethack/nethack.guide.html
-
-https://nethack.org/
-
-https://github.com/regymm/nethackassistant
-
-https://alt.org/nethack/
-
-By regymm 2021.9
+- <https://nethackwiki.com>
+- <https://www.zhihu.com/question/40177337>
+- <https://www.melankolia.net/nethack/nethack.guide.html>
+- <https://nethack.org/>
+- <https://github.com/regymm/nethackassistant>
+- <https://alt.org/nethack/>
