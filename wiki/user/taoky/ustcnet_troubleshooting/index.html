@@ -20,7 +20,7 @@
     <meta property="og:url" content="https://lug.ustc.edu.cn/wiki/user/taoky/ustcnet_troubleshooting/">
     <meta property="og:description" content="校园网问题快速自查指南">
     <meta property="article:published_time" content="2021-09-01T23:13:56+08:00">
-    <meta property="article:modified_time" content="2021-10-08T01:16:56+08:00">
+    <meta property="article:modified_time" content="2021-10-18T10:56:35+08:00">
     <link rel="canonical" href="https://lug.ustc.edu.cn/wiki/user/taoky/ustcnet_troubleshooting/">
     <script type="application/ld+json">
       {
@@ -57,7 +57,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=23df0154a">
+    <link rel="stylesheet" href="/assets/css/main.css?v=06dc9122a">
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
       <style>
@@ -177,7 +177,7 @@
           <meta itemprop="headline" content="校园网问题快速自查指南">
           <meta itemprop="description" content="校园网问题快速自查指南">
           <meta itemprop="datePublished" content="2021-09-01T23:13:56+08:00">
-          <meta itemprop="dateModified" content="2021-10-08T01:16:56+08:00">
+          <meta itemprop="dateModified" content="2021-10-18T10:56:35+08:00">
           <div class="page__inner-wrap">
             <header>
               <h1 id="page-title" class="page__title" itemprop="headline">校园网问题快速自查指南
@@ -205,6 +205,7 @@
                 <li>
                   <p>是否分配到了正确的 IP 地址？</p>
                   <p>如果发现你的 IP 地址开头为 169.254，说明你没有正确通过 DHCP 服务获取 IP 地址，请等待一段时间重新尝试或者使用其他方式连接。如果还是连不上，则可能需要联系网络信息中心解决。</p>
+                  <p>有条件的同学可以考虑抓包看流量是否有异常，例如是否有奇怪的 DHCP 或 ARP 流量等。</p>
                 </li>
                 <li>
                   <p>DNS 设置是否正确？</p>
@@ -237,18 +238,22 @@
                 <li>
                   <p>尽可能提供详细的信息，例如：</p>
                   <ul>
-                    <li>出现问题时的症状是什么？如果是偶发的问题，出现的频率如何？</li>
+                    <li>出现问题时的症状是什么？如果是偶发的问题，出现的频率如何？
+                      <ul>
+                        <li>避免使用类似于「网络炸了」等<strong>表意不明而没有信息量</strong>的描述。</li>
+                      </ul>
+                    </li>
                     <li>你所使用的设备情况、连接校园网的位置与连接方式、你的同学是否出现了你遇到的情况。</li>
                     <li>如果有能力，请提供技术信息，例如系统的网络设置情况、抓包情况等。</li>
                   </ul>
                 </li>
               </ol>
-              <p>充足的信息可以同时节省你和帮你解决问题的人的时间，这很重要。如果只是说「连不上网怎么办啊」，那么想帮你解决问题的人会感到很困惑的。</p>
+              <p><strong>充足的信息可以同时节省你和帮你解决问题的人的时间</strong>，这很重要。如果只是说「连不上网怎么办啊」，那么想帮你解决问题的人会感到很困惑的。</p>
               <h2 id="参考">参考</h2>
-              <p>若上述指南并没不能解决你的问题，可以查看<a href="https://netfee.ustc.edu.cn/faq/">网络信息中心用户服务部 FAQ</a> 寻求帮助。</p>
+              <p>若上述指南并没有解决你的问题，可以查看<a href="https://netfee.ustc.edu.cn/faq/">网络信息中心用户服务部 FAQ</a> 寻求帮助。</p>
             </section>
             <footer class="page__meta">
-              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2021-10-08">2021 年 10 月 8 日</time></p>
+              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2021-10-18">2021 年 10 月 18 日</time></p>
             </footer>
             <nav class="pagination">
               <a href="/wiki/user/sadhen/" class="pagination--pager" title="About Me
