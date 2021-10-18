@@ -11,6 +11,6 @@ tags: []
 
 具体格式样例请参考附近的其他文件。
 
-注意：正文部分请勿将 H1/2/3 放在开头，否则 YAML 头中设置的 title 可能会被覆盖。
+注意：正文部分请勿将 H1/2/3 放在开头，否则 YAML 头中设置的 title 可能会被覆盖。（如果必须这么排，可以在前面加 `<!-- Workaround for jekyll-titles-from-headings -->`，但是列表展示的时候会没有内容预览）
 
 [1]: https://mmistakes.github.io/minimal-mistakes/docs/authors/
