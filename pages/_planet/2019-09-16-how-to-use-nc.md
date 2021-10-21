@@ -83,3 +83,12 @@ usage: nc [-46AacCDdEFhklMnOortUuvz] [-K tc] [-b boundif] [-i interval] [-p sour
 {% include figure image_path="/static/planet/nc-1024x596.png" caption="Success!" %}
 
 如果你成功了，那么你可以开始愉快地完成我们的题目了！
+
+除了使用 `nc` 直接与服务器交互之外，也可以编程与服务器交互。例如：
+
+- 在信息安全类的竞赛中一个常用的工具是 Python 的 [`pwntools`](https://docs.pwntools.com/en/stable/intro.html)，具体使用方法可以自行搜索了解。
+- `nc` 也可以使用 `-e` 参数设定交互脚本，可参考[科大信息安全大赛 2018 年「猫咪克星」题目的题解](https://github.com/ustclug/hackergame2018-writeups/blob/master/official/python_simulator/README.md)（部分 `nc` 版本不支持）。
+
+### 注意事项
+
+由于 [tty 默认每行的长度最长为 4096](http://blog.chaitanya.im/4096-limit)，**在粘贴过长的输入时内容可能会被截断**。遇到这种情况时，可以使用文件重定向解决：将需要输入的内容放置在文件中，然后 `cat 你的文件 - | nc 服务器 端口`（Windows cmd.exe 中 `type 你的文件 CON | ncat 服务器 端口`）即可。
