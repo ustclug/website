@@ -9,7 +9,7 @@ Founded in 2003, USTC LUG has gone through over 15 years. At present, it is a to
 
 USTC LUG started the maintenance of the well-known Debian archive mirror <https://debian.ustc.edu.cn> in 2003. Now, with better hardware and bandwidth sponsored by USTC, it finally becomes [the official Debian mirror of China](http://ftp.cn.debian.org/). Now it has combined with <https://oss.ustc.edu.cn> and became <https://mirrors.ustc.edu.cn>, an important open-source software mirror in China. With the assistance of the USTC Network Information Center, USTC LUG has set up a PXE network booting system, enabling the whole campus to perform convenient installs and quick experience of Linux. The Library LIIMS System, developed on the base of Campus PXE system, is also developed and under the maintenance of USTC LUG.
 
-In recognition of its excellent performance, USTC LUG was awarded the Outstanding Association of USTC in May 2011. USTC LUG was also ranked as a “Four Star” Student Association of USTC in 2012, 2013 and 2014. In 2015, 2016, 2017 and 2018, USTC LUG was ranked as a “Five Star” Student Association of USTC.
+In recognition of its excellent performance, USTC LUG was awarded the Outstanding Association of USTC in May 2011. USTC LUG was also ranked as a “Four Star” Student Association of USTC in 2012, 2013 and 2014. From 2015 to 2021 (now), USTC LUG was ranked as a “Five Star” Student Association of USTC.
 
 If you have any problem, please email us at lug &lt; at&gt; ustc.edu.cn.
 
