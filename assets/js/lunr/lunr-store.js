@@ -413,7 +413,7 @@ var store = [{
 "url": "/news/2021/05/linux-101-4/",
 "teaser": null
 },{
-"title": "PCB设计与电子制作入门",
+"title": "PCB 设计与电子制作入门",
 "excerpt":"6 月 5 日，USTC LUG 与无线电协会在西区 3A108 教室举办了主题为“ PCB 设计与电子制作入门”的小聚，由古宜民同学主讲。在介绍了 PCB 设计的基本流程后，他演示了 Altium Designer 和开源工具 KiCAD 的使用，同时分享了自己从设计到联系厂家加工的经验心得。现场同学们积极提问，气氛融洽。   讲稿和活动视频现已上传 LUGFTP：https://ftp.lug.ustc.edu.cn/weekly_party/2021.6.5_PCB%E8%AE%BE%E8%AE%A1%E4%B8%8E%E7%94%B5%E5%AD%90%E5%88%B6%E4%BD%9C%E5%85%A5%E9%97%A8/。  ","categories": ["LUG活动"],
 "tags": [],
 "url": "/news/2021/06/pcb/",
@@ -905,7 +905,7 @@ var store = [{
 "url": "/news/2021/05/linux-101-4/",
 "teaser": null
 },{
-"title": "PCB设计与电子制作入门",
+"title": "PCB 设计与电子制作入门",
 "excerpt":"6 月 5 日，USTC LUG 与无线电协会在西区 3A108 教室举办了主题为“ PCB 设计与电子制作入门”的小聚，由古宜民同学主讲。在介绍了 PCB 设计的基本流程后，他演示了 Altium Designer 和开源工具 KiCAD 的使用，同时分享了自己从设计到联系厂家加工的经验心得。现场同学们积极提问，气氛融洽。   讲稿和活动视频现已上传 LUGFTP：https://ftp.lug.ustc.edu.cn/weekly_party/2021.6.5_PCB%E8%AE%BE%E8%AE%A1%E4%B8%8E%E7%94%B5%E5%AD%90%E5%88%B6%E4%BD%9C%E5%85%A5%E9%97%A8/。  ","categories": ["LUG活动"],
 "tags": [],
 "url": "/news/2021/06/pcb/",
