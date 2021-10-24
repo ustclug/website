@@ -1,5 +1,6 @@
 ---
 ---
+
 # Software Freedom Day
 
 自由软件日是在国际自由软件基金会（SFI）的领导下，由自由/开源软件爱好者自发筹集的非盈利性活动。旨在为自由/开源软件爱好者提供一个信息交流平台，以及联合各社区举办各种自由/开源软件活动。
@@ -22,14 +23,14 @@ SFD，可译为“软件自由日”，顾名思义是对自由、开源软件�
 
 **地点：中国科大西区 3C101**
 
-| 讲者          | 主题                                       | 资料                                                                                                                                                                                                                                         |
-| :------------ | :----------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 蔡智臻        | 《WireGuard 入门》                         | [Slides](http://ftp.lug.ustc.edu.cn/活动/2021.09.25_SFD/slides/CatOverflow_WireGuard.pdf), [Audio](http://ftp.lug.ustc.edu.cn/活动/2021.09.25_SFD/video/CatOverflow_WireGuard%20%28partial%29.ogg)                                           |
-| Zenithal      | 《MirrorZ：从镜像站到镜像站们》            | [Repo](https://github.com/ZenithalHourlyRate/sfd), [Slides](http://ftp.lug.ustc.edu.cn/活动/2021.09.25_SFD/slides/Zenithal_MirrorZ.pdf), [Video](http://ftp.lug.ustc.edu.cn/活动/2021.09.25_SFD/video/Zenithal_MirrorZ.mp4)                  |
-| 曹嘉祺        | 《开源符号计算软件——Maxima 简介》          | [Slides](http://ftp.lug.ustc.edu.cn/活动/2021.09.25_SFD/slides/mkq_Maxima.pptx), [Demo](http://ftp.lug.ustc.edu.cn/活动/2021.09.25_SFD/slides/mkq_Maxima.wxmx), [Video](http://ftp.lug.ustc.edu.cn/活动/2021.09.25_SFD/video/mkq_Maxima.mp4) |
-| 袁保杰        | 闪电演讲：《ConEmu 简介》                  | [Slides](http://ftp.lug.ustc.edu.cn/活动/2021.09.25_SFD/slides/Crabtux_ConEmu.pdf), [Video](http://ftp.lug.ustc.edu.cn/活动/2021.09.25_SFD/video/Crabtux_ConEmu.mp4)                                                                         |
-| 吴峰光        | 闪电演讲：《Nix 包管理器》                 | [Slides](http://ftp.lug.ustc.edu.cn/活动/2021.09.25_SFD/slides/WuFengGuang_Nix.pptx), [Video](http://ftp.lug.ustc.edu.cn/活动/2021.09.25_SFD/video/WuFengGuang_Nix.mp4)                                                                      |
-| Zhou Zhiqiang | 闪电演讲：《Chaos Mesh——光明正大地搞破坏》 | [Slides](http://ftp.lug.ustc.edu.cn/活动/2021.09.25_SFD/slides/ZhouZhiqiang_ChaosMesh.pdf), [Video](http://ftp.lug.ustc.edu.cn/活动/2021.09.25_SFD/video/ZhouZhiqiang_ChaosMesh.mp4)                                                         |
+| 讲者          | 主题                                       | 资料                                                                                                                                                                                                                                            |
+| :------------ | :----------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 蔡智臻        | 《WireGuard 入门》                         | [Slides](https://ftp.lug.ustc.edu.cn/活动/2021.09.25_SFD/slides/CatOverflow_WireGuard.pdf), [Audio](https://ftp.lug.ustc.edu.cn/活动/2021.09.25_SFD/video/CatOverflow_WireGuard%20%28partial%29.ogg)                                            |
+| Zenithal      | 《MirrorZ：从镜像站到镜像站们》            | [Repo](https://github.com/ZenithalHourlyRate/sfd), [Slides](https://ftp.lug.ustc.edu.cn/活动/2021.09.25_SFD/slides/Zenithal_MirrorZ.pdf), [Video](https://ftp.lug.ustc.edu.cn/活动/2021.09.25_SFD/video/Zenithal_MirrorZ.mp4)                   |
+| 曹嘉祺        | 《开源符号计算软件——Maxima 简介》          | [Slides](https://ftp.lug.ustc.edu.cn/活动/2021.09.25_SFD/slides/mkq_Maxima.pptx), [Demo](https://ftp.lug.ustc.edu.cn/活动/2021.09.25_SFD/slides/mkq_Maxima.wxmx), [Video](https://ftp.lug.ustc.edu.cn/活动/2021.09.25_SFD/video/mkq_Maxima.mp4) |
+| 袁保杰        | 闪电演讲：《ConEmu 简介》                  | [Slides](https://ftp.lug.ustc.edu.cn/活动/2021.09.25_SFD/slides/Crabtux_ConEmu.pdf), [Video](https://ftp.lug.ustc.edu.cn/活动/2021.09.25_SFD/video/Crabtux_ConEmu.mp4)                                                                          |
+| 吴峰光        | 闪电演讲：《Nix 包管理器》                 | [Slides](https://ftp.lug.ustc.edu.cn/活动/2021.09.25_SFD/slides/WuFengGuang_Nix.pptx), [Video](https://ftp.lug.ustc.edu.cn/活动/2021.09.25_SFD/video/WuFengGuang_Nix.mp4)                                                                       |
+| Zhou Zhiqiang | 闪电演讲：《Chaos Mesh——光明正大地搞破坏》 | [Slides](https://ftp.lug.ustc.edu.cn/活动/2021.09.25_SFD/slides/ZhouZhiqiang_ChaosMesh.pdf), [Video](https://ftp.lug.ustc.edu.cn/活动/2021.09.25_SFD/video/ZhouZhiqiang_ChaosMesh.mp4)                                                          |
 
 ### 2020 年 SFD
 
@@ -39,14 +40,14 @@ SFD，可译为“软件自由日”，顾名思义是对自由、开源软件�
 
 **地点: 中国科大西区 3C103**
 
-| 讲者   | 主题                                                    | 资料                                                                                                                                  |
-| :----- | :------------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------ |
-| 李威威 | 《PLCT 在 spike 和 qemu 开源项目上的工作》              | [Slides](http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2020.09.26_SFD/slides/plct%20spike_qemu.pptx)                                  |
-| 陈泳融 | 《Swift 项目概况与社区现状》                            | [Slides](http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2020.09.26_SFD/slides/Swift_SFD.pdf)                                           |
-| 明宇龙 | 《Bare metal main function in Rust for OS development》 | [Slides](http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2020.09.26_SFD/slides/OS%20in%20Rust.pptx)                                     |
-| 马凯   | 闪电演讲: 《Emacs 简介》                                | \-                                                                                                                                    |
-| 吴雨飞 | 闪电演讲: 《TiddlyWiki 入门》                           | [Slides by TiddlyWiki](http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2020.09.26_SFD/%E9%97%AA%E7%94%B5%E6%BC%94%E8%AE%B2/TiddlyWiki/) |
-| 明宇龙 | 闪电演讲: 《zsh 的插件管理器 - Antigen》                | \-                                                                                                                                    |
+| 讲者   | 主题                                                    | 资料                                                                                                                                   |
+| :----- | :------------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------- |
+| 李威威 | 《PLCT 在 spike 和 qemu 开源项目上的工作》              | [Slides](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2020.09.26_SFD/slides/plct%20spike_qemu.pptx)                                  |
+| 陈泳融 | 《Swift 项目概况与社区现状》                            | [Slides](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2020.09.26_SFD/slides/Swift_SFD.pdf)                                           |
+| 明宇龙 | 《Bare metal main function in Rust for OS development》 | [Slides](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2020.09.26_SFD/slides/OS%20in%20Rust.pptx)                                     |
+| 马凯   | 闪电演讲: 《Emacs 简介》                                | \-                                                                                                                                     |
+| 吴雨飞 | 闪电演讲: 《TiddlyWiki 入门》                           | [Slides by TiddlyWiki](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2020.09.26_SFD/%E9%97%AA%E7%94%B5%E6%BC%94%E8%AE%B2/TiddlyWiki/) |
+| 明宇龙 | 闪电演讲: 《zsh 的插件管理器 - Antigen》                | \-                                                                                                                                     |
 
 ### 2019 年 SFD
 
@@ -58,14 +59,14 @@ SFD，可译为“软件自由日”，顾名思义是对自由、开源软件�
 
 活动内容:
 
-| 讲者       | 主题                                                | 简介 | 资料                                                                                                                                                                               |
-| :--------- | :-------------------------------------------------- | :--- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Darcy Shen | 《GNU TeXmacs: A Free Scientific Editing Platform》 |      | [Slides (TeXmacs)](http://ftp.lug.ustc.edu.cn/活动/2019.09.21_SFD/slides/GNUTeXmacsSFD2019.tm)                                                                                     |
-| Zibo Wang  | 《开源密码管理器 KeePass》                          |      | [Slides](https://0x01.me/sfd2019/)                                                                                                                                                 |
-| Zitan Liu  | 《从 Makefile 到 Conan：手把手教你构建 C/C++ 项目》 |      | [Slides](http://ftp.lug.ustc.edu.cn/活动/2019.09.21_SFD/slides/Conan/sfd_conan.pdf), [Demo](http://ftp.lug.ustc.edu.cn/活动/2019.09.21_SFD/slides/Conan/LUG_SFD_Make_Conan.tar.gz) |
-| Keyu Tao   | 闪电演讲：《Chisel 简介：有趣的硬件编程语言》       |      | [Slides](http://ftp.lug.ustc.edu.cn/活动/2019.09.21_SFD/slides/闪电演讲/Chisel.pdf)                                                                                                |
-| Jiawei Fu  | 闪电演讲：《Jekyll 介绍》                           |      | [Slides](http://ftp.lug.ustc.edu.cn/活动/2019.09.21_SFD/slides/闪电演讲/Jekyll.pdf)                                                                                                |
-| Wenrui Li  | 闪电演讲：《开源游戏 Teeworlds》                    |      | [Slides](http://ftp.lug.ustc.edu.cn/活动/2019.09.21_SFD/slides/闪电演讲/Teeworlds)                                                                                                 |
+| 讲者       | 主题                                                | 简介 | 资料                                                                                                                                                                                 |
+| :--------- | :-------------------------------------------------- | :--- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Darcy Shen | 《GNU TeXmacs: A Free Scientific Editing Platform》 |      | [Slides (TeXmacs)](https://ftp.lug.ustc.edu.cn/活动/2019.09.21_SFD/slides/GNUTeXmacsSFD2019.tm)                                                                                      |
+| Zibo Wang  | 《开源密码管理器 KeePass》                          |      | [Slides](https://0x01.me/sfd2019/)                                                                                                                                                   |
+| Zitan Liu  | 《从 Makefile 到 Conan：手把手教你构建 C/C++ 项目》 |      | [Slides](https://ftp.lug.ustc.edu.cn/活动/2019.09.21_SFD/slides/Conan/sfd_conan.pdf), [Demo](https://ftp.lug.ustc.edu.cn/活动/2019.09.21_SFD/slides/Conan/LUG_SFD_Make_Conan.tar.gz) |
+| Keyu Tao   | 闪电演讲：《Chisel 简介：有趣的硬件编程语言》       |      | [Slides](https://ftp.lug.ustc.edu.cn/活动/2019.09.21_SFD/slides/闪电演讲/Chisel.pdf)                                                                                                 |
+| Jiawei Fu  | 闪电演讲：《Jekyll 介绍》                           |      | [Slides](https://ftp.lug.ustc.edu.cn/活动/2019.09.21_SFD/slides/闪电演讲/Jekyll.pdf)                                                                                                 |
+| Wenrui Li  | 闪电演讲：《开源游戏 Teeworlds》                    |      | [Slides](https://ftp.lug.ustc.edu.cn/活动/2019.09.21_SFD/slides/闪电演讲/Teeworlds)                                                                                                  |
 
 ### 2018 年 SFD
 
@@ -77,11 +78,11 @@ SFD，可译为“软件自由日”，顾名思义是对自由、开源软件�
 
 活动内容:
 
-| 讲者                         | 主题                                                                                   | 简介 | 资料                                                                                                                                             |
-| :--------------------------- | :------------------------------------------------------------------------------------- | :--- | :----------------------------------------------------------------------------------------------------------------------------------------------- |
-| Huanjie Zhang                | 《科大网络原理和 IPV6 介绍》                                                           |      | [Slides](http://ftp.ustclug.org/活动/2018.09.15_SFD/slides/中国科大IPv6应用实践.pptx)                                                            |
-| DiXing Xu (Linux foundation) | 《A Hands-On Tutorial on using fabric-sdk-py and writing your first dapp with fabric》 |      | [Slides](http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2018.09.15_SFD/slides/Hyperledger%20%E2%80%93%20%E9%A1%B9%E7%9B%AE%E6%A6%82%E8%A7%88.pdf) |
-| Kai Ma                       | 《我已阅读并同意：软件许可证简介》                                                     |      | [Slides](http://ftp.ustclug.org/活动/2018.09.15_SFD/slides/intro-license.tar.xz)                                                                 |
+| 讲者                         | 主题                                                                                   | 简介 | 资料                                                                                                                                              |
+| :--------------------------- | :------------------------------------------------------------------------------------- | :--- | :------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Huanjie Zhang                | 《科大网络原理和 IPV6 介绍》                                                           |      | [Slides](https://ftp.lug.ustc.edu.cn/活动/2018.09.15_SFD/slides/中国科大IPv6应用实践.pptx)                                                        |
+| DiXing Xu (Linux foundation) | 《A Hands-On Tutorial on using fabric-sdk-py and writing your first dapp with fabric》 |      | [Slides](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2018.09.15_SFD/slides/Hyperledger%20%E2%80%93%20%E9%A1%B9%E7%9B%AE%E6%A6%82%E8%A7%88.pdf) |
+| Kai Ma                       | 《我已阅读并同意：软件许可证简介》                                                     |      | [Slides](https://ftp.lug.ustc.edu.cn/活动/2018.09.15_SFD/slides/intro-license.tar.xz)                                                             |
 
 ### 2017 年 SFD
 
@@ -109,11 +110,11 @@ SFD，可译为“软件自由日”，顾名思义是对自由、开源软件�
 
 活动内容:
 
-| 讲者      | 主题                         | 简介 | 资料                                                                                    |
-| :-------- | :--------------------------- | :--- | :-------------------------------------------------------------------------------------- |
-| Gefei Zuo | 《开源通讯软件的加密》       |      | [Slides](http://ftp.ustclug.org/活动/2016.09.15_SFD/slides/tele.html)                   |
-| Bin Li    | 《Ubuntu 和 GNOME 桌面环境》 |      | [Slides](http://ftp.ustclug.org/活动/2016.09.15_SFD/slides/GNOME-USTC-SFD-20160915.pdf) |
-| Gefei Zuo | 《出国网络加速服务架构》     |      | [Slides](http://ftp.ustclug.org/活动/2016.09.15_SFD/slides/vpn.html)                    |
+| 讲者      | 主题                         | 简介 | 资料                                                                                         |
+| :-------- | :--------------------------- | :--- | :------------------------------------------------------------------------------------------- |
+| Gefei Zuo | 《开源通讯软件的加密》       |      | [Slides](https://ftp.lug.ustc.edu.cn/活动/2016.09.15_SFD/slides/tele.html)                   |
+| Bin Li    | 《Ubuntu 和 GNOME 桌面环境》 |      | [Slides](https://ftp.lug.ustc.edu.cn/活动/2016.09.15_SFD/slides/GNOME-USTC-SFD-20160915.pdf) |
+| Gefei Zuo | 《出国网络加速服务架构》     |      | [Slides](https://ftp.lug.ustc.edu.cn/活动/2016.09.15_SFD/slides/vpn.html)                    |
 
 ### 2015 年 SFD
 
@@ -127,10 +128,10 @@ SFD，可译为“软件自由日”，顾名思义是对自由、开源软件�
 
 下面是这次活动内容简介：
 
-| 讲者      | 主题                                                   | 简介 | 资料                                                        |
-| :-------- | :----------------------------------------------------- | :--- | :---------------------------------------------------------- |
-| Chao Ye   | 《What is OpenSouce – From an RedHat engineer's view》 |      |                                                             |
-| Roger Luo | 《Julia —— 科学计算的银弹》                            |      | [Slides](http://ftp.ustclug.org/活动/2015.09.19_SFD/Julia/) |
+| 讲者      | 主题                                                   | 简介 | 资料                                                             |
+| :-------- | :----------------------------------------------------- | :--- | :--------------------------------------------------------------- |
+| Chao Ye   | 《What is OpenSouce – From an RedHat engineer's view》 |      |                                                                  |
+| Roger Luo | 《Julia —— 科学计算的银弹》                            |      | [Slides](https://ftp.lug.ustc.edu.cn/活动/2015.09.19_SFD/Julia/) |
 
 活动新闻稿：[2015 软件自由日中国科大站](/news/2015/09/2015sfd/)
 
@@ -144,13 +145,13 @@ SFD，可译为“软件自由日”，顾名思义是对自由、开源软件�
 
 下面是这次活动内容简介：
 
-| 讲者   | 主题                            | 简介                                                | 资料                                                                                                                                                                                |
-| :----- | :------------------------------ | :-------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 崔灏   | 《Mirrors 是怎样炼成的》        | 从架构到技术，全面展示 Mirrors 背后的故事           | [Slides](http://ftp.ustclug.org/活动/2014.09.20_SFD/幻灯片/cuihao_slides/), [Video](http://ftp.ustclug.org/活动/2014.09.20_SFD/视频/崔灏_mirrors是怎样炼成的.m4v)                   |
-| 刘世伟 | 《在 Linux 下开发电路板 PCB》   | 无论是日常应用还是行业需求，自由软件无处不在        | [Video](http://ftp.ustclug.org/活动/2014.09.20_SFD/视频/刘世伟_在Linux下开发电路板PCB.m4v)                                                                                          |
-| 阴钰   | 《Sage：集大成者》              | Sage —— 一款强大的开源数学软件                      | [Slides](http://ftp.ustclug.org/活动/2014.09.20_SFD/幻灯片/sage.pdf), [Video](http://ftp.ustclug.org/活动/2014.09.20_SFD/视频/阴钰_Sage集大成者.m4v)                                |
-| 张光宇 | 《Firefox OS 移动应用开发入门》 | 用 HTML5 来开发移动应用，一同走进 Firefox OS 的世界 | [Slides](/~zguangyu/sfd-firefoxos.tar.bz2), [Demo](/~zguangyu/browser-app.tar.bz2), [Video](http://ftp.ustclug.org/活动/2014.09.20_SFD/视频/张光宇_Firefox OS 移动应用开发入门.mp4) |
-| 张荣葳 | 《比安全更安全——GnuPG 简介》    | 用技术维护隐私，让互联网世界更为自由                | [Slides](http://ftp.ustclug.org/活动/2014.09.20_SFD/幻灯片/pudh_slide.pdf), [Video](http://ftp.ustclug.org/活动/2014.09.20_SFD/视频/张荣葳_比安全更安全-GnuPG简介.mp4)              |
+| 讲者   | 主题                            | 简介                                                | 资料                                                                                                                                                                                     |
+| :----- | :------------------------------ | :-------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 崔灏   | 《Mirrors 是怎样炼成的》        | 从架构到技术，全面展示 Mirrors 背后的故事           | [Slides](https://ftp.lug.ustc.edu.cn/活动/2014.09.20_SFD/幻灯片/cuihao_slides/), [Video](https://ftp.lug.ustc.edu.cn/活动/2014.09.20_SFD/视频/崔灏_mirrors是怎样炼成的.m4v)              |
+| 刘世伟 | 《在 Linux 下开发电路板 PCB》   | 无论是日常应用还是行业需求，自由软件无处不在        | [Video](https://ftp.lug.ustc.edu.cn/活动/2014.09.20_SFD/视频/刘世伟_在Linux下开发电路板PCB.m4v)                                                                                          |
+| 阴钰   | 《Sage：集大成者》              | Sage —— 一款强大的开源数学软件                      | [Slides](https://ftp.lug.ustc.edu.cn/活动/2014.09.20_SFD/幻灯片/sage.pdf), [Video](https://ftp.lug.ustc.edu.cn/活动/2014.09.20_SFD/视频/阴钰_Sage集大成者.m4v)                           |
+| 张光宇 | 《Firefox OS 移动应用开发入门》 | 用 HTML5 来开发移动应用，一同走进 Firefox OS 的世界 | [Slides](/~zguangyu/sfd-firefoxos.tar.bz2), [Demo](/~zguangyu/browser-app.tar.bz2), [Video](https://ftp.lug.ustc.edu.cn/活动/2014.09.20_SFD/视频/张光宇_Firefox OS 移动应用开发入门.mp4) |
+| 张荣葳 | 《比安全更安全——GnuPG 简介》    | 用技术维护隐私，让互联网世界更为自由                | [Slides](https://ftp.lug.ustc.edu.cn/活动/2014.09.20_SFD/幻灯片/pudh_slide.pdf), [Video](https://ftp.lug.ustc.edu.cn/活动/2014.09.20_SFD/视频/张荣葳_比安全更安全-GnuPG简介.mp4)         |
 
 活动新闻稿：[2014 自由软件日科大站](/news/2014/09/2014-sfd/)
 
@@ -166,7 +167,7 @@ SFD，可译为“软件自由日”，顾名思义是对自由、开源软件�
 
 ## SFD 官方介绍
 
-以下内容来源为[SFD 官方网站](http://www.softwarefreedomday.org/en/sfd)。简体中文翻译由 @hosiet 完成，且并非正式翻译。
+以下内容来源为[SFD 官方网站](https://www.softwarefreedomday.org/about)。简体中文翻译由 @hosiet 完成，且并非正式翻译。
 
 SFD is a worldwide celebration of Free and Open Source Software (FOSS).
 
