@@ -17,6 +17,7 @@
 | 计算机网络（第四版）          | 蔡智臻 | carbyne AT mail.ustc.edu.cn      | 2021-03-17 | 2021-09-04 | \-   |
 | 编译原理（第二版）            | 徐怡   | cqewxji1ella AT mail.ustc.edu.cn | 2021-08-28 | \-         | \-   |
 | 机器学习                      | 蔡智臻 | carbyne AT mail.ustc.edu.cn      | 2021-09-03 | \-         | \-   |
+| 青春咖啡馆                    | 袁一玮 | totoroyyw AT ustclug.org         | 2021-11-25 | \-         | \-   |
 
 ## 2020 年借阅记录
 
