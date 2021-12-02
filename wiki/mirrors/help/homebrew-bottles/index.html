@@ -25,11 +25,11 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-      
+
           "@type": "Person",
           "name": "USTCLUG",
           "url": "https://lug.ustc.edu.cn/"
-      
+
       }
     </script>
     <!-- end _includes/seo.html -->
@@ -57,7 +57,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=2a91fdc2d">
+    <link rel="stylesheet" href="/assets/css/main.css?v=907480033">
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
       <style>
@@ -323,12 +323,12 @@ source ~/.zshrc
           ]
         }
       });
-      
+
       const hitTemplate = function(hit) {
         const url = hit.url;
         const title = hit._highlightResult.title.value;
         const content = hit._highlightResult.html.value;
-      
+
         return `
           <div class="list__item">
             <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
@@ -338,7 +338,7 @@ source ~/.zshrc
           </div>
         `;
       }
-      
+
       // Adding searchbar and results widgets
       search.addWidget(
         instantsearch.widgets.searchBox({
@@ -356,7 +356,7 @@ source ~/.zshrc
           }
         })
       );
-      
+
       // Starting the search only when toggle is clicked
       $(document).ready(function () {
         $(".search__toggle").on("click", function() {

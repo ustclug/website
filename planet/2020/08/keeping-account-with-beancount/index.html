@@ -26,11 +26,11 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-      
+
           "@type": "Person",
           "name": "USTCLUG",
           "url": "https://lug.ustc.edu.cn/"
-      
+
       }
     </script>
     <!-- end _includes/seo.html -->
@@ -58,7 +58,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=2a91fdc2d">
+    <link rel="stylesheet" href="/assets/css/main.css?v=907480033">
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
       <style>
@@ -275,14 +275,14 @@
 <span class="m">2017</span>-<span class="m">01</span>-<span class="m">01</span> <span class="n">open</span> <span class="n">Assets</span>:<span class="n">CN</span>:<span class="n">Web</span>:<span class="n">WeChatPay</span> <span class="n">CNY</span> ; 微信支付
 </code></pre>
                     </div>
-                        </div>
+    </div>
                   <p>有一类针对 AA 付款或者个人向自己借款的账户，需要专门记录。</p>
                   <div class="language-conf highlighter-rouge">
                     <div class="highlight">
                       <pre class="highlight"><code><span class="m">2017</span>-<span class="m">01</span>-<span class="m">01</span> <span class="n">open</span> <span class="n">Assets</span>:<span class="n">Receivables</span>:<span class="n">X</span> ; 对 <span class="n">X</span> 的应收款项
 </code></pre>
                     </div>
-                        </div>
+    </div>
                 </li>
                 <li>
                   <p>Liabilities 负债：本人主要是信用卡和向他人借款的账户，比如：</p>
@@ -293,7 +293,7 @@
 <span class="m">2017</span>-<span class="m">01</span>-<span class="m">01</span> <span class="n">open</span> <span class="n">Liabilities</span>:<span class="n">CreditCard</span>:<span class="n">CN</span>:<span class="n">Huabei</span> <span class="n">CNY</span> ; 花呗
 </code></pre>
                     </div>
-                        </div>
+    </div>
                 </li>
                 <li>
                   <p>Equity 权益（净资产）：目前只有一个用于平衡开户的时候账户资金的权益。</p>
@@ -302,7 +302,7 @@
                       <pre class="highlight"><code><span class="m">1990</span>-<span class="m">01</span>-<span class="m">01</span> <span class="n">open</span> <span class="n">Equity</span>:<span class="n">Opening</span>-<span class="n">Balances</span>
 </code></pre>
                     </div>
-                        </div>
+    </div>
                 </li>
                 <li>
                   <p>Expenses 支出：支出就非常的多样化，可以根据自己需求分门别类，比如：</p>
@@ -319,7 +319,7 @@
 <span class="m">2017</span>-<span class="m">01</span>-<span class="m">01</span> <span class="n">open</span> <span class="n">Expenses</span>:<span class="n">Food</span>:<span class="n">Snack</span> ; 杂食、零食
 </code></pre>
                     </div>
-                        </div>
+    </div>
                   <p>等等……</p>
                 </li>
                 <li>
@@ -331,7 +331,7 @@
 <span class="m">2017</span>-<span class="m">01</span>-<span class="m">01</span> <span class="n">open</span> <span class="n">Income</span>:<span class="n">Others</span>
 </code></pre>
                     </div>
-                        </div>
+    </div>
                 </li>
               </ul>
               <h3 id="主文件设置">主文件设置</h3>
@@ -375,7 +375,7 @@
   ...
 </code></pre>
                     </div>
-                        </div>
+    </div>
                   <p>比如：</p>
                   <div class="language-text highlighter-rouge">
                     <div class="highlight">
@@ -386,7 +386,7 @@
   Liabilities:CreditCard:US:Discover -40 USD
 </code></pre>
                     </div>
-                        </div>
+    </div>
                 </li>
                 <li>
                   <p>多货币转换使用 <code class="language-plaintext highlighter-rouge">@@</code> 作为货币转换即可，货币 Beancount 会进行汇率计算，比如：</p>
@@ -397,7 +397,7 @@
   Liabilities:CreditCard:JP:Rakuten -110000 JPY
 </code></pre>
                     </div>
-                        </div>
+    </div>
                 </li>
                 <li>
                   <p>账户结息：账户的利息肯定难以每日都记录，本人采用 <code class="language-plaintext highlighter-rouge">pad</code>+<code class="language-plaintext highlighter-rouge">balance</code> 断言，每隔一段时间结算一下。</p>
@@ -695,7 +695,7 @@
 <span class="m">2017</span>-<span class="m">01</span>-<span class="m">01</span> <span class="n">custom</span> <span class="s2">"fava-option"</span> <span class="s2">"import-dirs"</span> <span class="s2">"./importers/path/to/csv_tmp/"</span>
 </code></pre>
                     </div>
-                        </div>
+    </div>
                   <p>在 Fava 界面侧栏看到 Importer，并手动导入数据。注 ：Importer 在 Fava 中使用的时候 metadata 会被去除。</p>
                 </li>
                 <li>
@@ -709,7 +709,7 @@
 <span class="m">2099</span>-<span class="m">01</span>-<span class="m">01</span> <span class="n">custom</span> <span class="s2">"fava-sidebar-link"</span> <span class="s2">"All dates"</span> <span class="s2">"/jump?time="</span>
 </code></pre>
                     </div>
-                        </div>
+    </div>
                 </li>
               </ul>
             </section>
@@ -898,12 +898,12 @@
           ]
         }
       });
-      
+
       const hitTemplate = function(hit) {
         const url = hit.url;
         const title = hit._highlightResult.title.value;
         const content = hit._highlightResult.html.value;
-      
+
         return `
           <div class="list__item">
             <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
@@ -913,7 +913,7 @@
           </div>
         `;
       }
-      
+
       // Adding searchbar and results widgets
       search.addWidget(
         instantsearch.widgets.searchBox({
@@ -931,7 +931,7 @@
           }
         })
       );
-      
+
       // Starting the search only when toggle is clicked
       $(document).ready(function () {
         $(".search__toggle").on("click", function() {

@@ -25,11 +25,11 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-      
+
           "@type": "Person",
           "name": "USTCLUG",
           "url": "https://lug.ustc.edu.cn/"
-      
+
       }
     </script>
     <!-- end _includes/seo.html -->
@@ -57,7 +57,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=2a91fdc2d">
+    <link rel="stylesheet" href="/assets/css/main.css?v=907480033">
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
       <style>
@@ -430,7 +430,7 @@ EOF
                       <pre class="highlight"><code>C:\GRLDR="GRUB for DOS"
 </code></pre>
                     </div>
-                        </div>
+    </div>
                 </li>
                 <li>
                   <p>重启，在 Windows 启动菜单中选择 “GRUB for DOS”</p>
@@ -492,7 +492,7 @@ EOF
                       <pre class="highlight"><code># modprobe ip_nat_tftp ip_conntrack_tftp
 </code></pre>
                     </div>
-                        </div>
+    </div>
                   <p>可以在系统启动的时候自动加载这两个内核模块：</p>
                   <div class="language-plaintext highlighter-rouge">
                     <div class="highlight">
@@ -500,7 +500,7 @@ EOF
 # echo ip_conntrack_tftp &gt;&gt; /etc/modules
 </code></pre>
                     </div>
-                        </div>
+    </div>
                 </li>
                 <li>
                   <p>DHCP 服务: 为 PXELinux/Etherboot 提供必要的信息
@@ -513,7 +513,7 @@ EOF
 # /etc/init.d/dhcp3-server restart
 </code></pre>
                     </div>
-                        </div>
+    </div>
                   <p>如果只有较老版本的 ISC DHCP Server，或者其他 DHCP 服务程序，则只需加入以下两项配置信息，一般情况下都不会有问题：</p>
                   <div class="language-plaintext highlighter-rouge">
                     <div class="highlight">
@@ -521,7 +521,7 @@ EOF
 filename     "pxelinux.0";
 </code></pre>
                     </div>
-                        </div>
+    </div>
                 </li>
               </ul>
               <h3 id="可以进一步建立自己的-tftp-服务器所需的文件可以从我们这里取得">可以进一步建立自己的 TFTP 服务器，所需的文件可以从我们这里取得</h3>
@@ -551,7 +551,7 @@ Retype password:
 $1$NcP8o0$DrDhZlUX36Rt6Yzl2RavM/
 </code></pre>
                     </div>
-                        </div>
+    </div>
                 </li>
                 <li>
                   <p>准备好一个 menu.lst</p>
@@ -575,7 +575,7 @@ title dos
   lock
 </code></pre>
                     </div>
-                        </div>
+    </div>
                 </li>
                 <li>
                   <p>编译</p>
@@ -586,7 +586,7 @@ title dos
 # cp netboot/pxegrub /tftpboot/restricted/pxegrub.0
 </code></pre>
                     </div>
-                        </div>
+    </div>
                 </li>
               </ol>
               <p>遗憾的是 pxegrub 已经有些年没更新了，不支持包括 nForce 在内的一些新网卡。 另外还有更严重的<a href="http://wiki.ltsp.org/twiki/bin/view/Ltsp/PXE#PXEGRUB">稳定性问题</a>，估计是至少某些网卡会存在这种问题。</p>
@@ -654,7 +654,7 @@ CONFIG_NFS_V3=y
 CONFIG_ROOT_NFS=y
 </code></pre>
                     </div>
-                        </div>
+    </div>
                 </li>
                 <li>
                   <p>启动此内核时使用参数：</p>
@@ -663,7 +663,7 @@ CONFIG_ROOT_NFS=y
                       <pre class="highlight"><code>root=/dev/nfs nfsroot=202.38.73.198:/croot,rsize=8192,wsize=8192,tcp ip=dhcp
 </code></pre>
                     </div>
-                        </div>
+    </div>
                 </li>
               </ol>
               <h2 id="相关链接">相关链接</h2>
@@ -799,12 +799,12 @@ CONFIG_ROOT_NFS=y
           ]
         }
       });
-      
+
       const hitTemplate = function(hit) {
         const url = hit.url;
         const title = hit._highlightResult.title.value;
         const content = hit._highlightResult.html.value;
-      
+
         return `
           <div class="list__item">
             <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
@@ -814,7 +814,7 @@ CONFIG_ROOT_NFS=y
           </div>
         `;
       }
-      
+
       // Adding searchbar and results widgets
       search.addWidget(
         instantsearch.widgets.searchBox({
@@ -832,7 +832,7 @@ CONFIG_ROOT_NFS=y
           }
         })
       );
-      
+
       // Starting the search only when toggle is clicked
       $(document).ready(function () {
         $(".search__toggle").on("click", function() {
