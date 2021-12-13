@@ -19,13 +19,13 @@ comments: []
 
 界面是那么朴素，年代是那么久远，直到同学们熟悉的命令行的出现，它才褪去了伪装。XP 桌面主题用它的天衣无缝，向同学们证明了 Linux 桌面美化的无限可能。
 
-赵作竑同学借此机会向同学们推荐了 [github.com/b00merang](https://github.com/b00merang), 它可以让同学们的 Linux 桌面风格倒退 20 年，向 Windows XP 看齐，更是建议同学们尝试对 Windows 其他版本进行模仿，以得到更加流畅的体验。
+赵作竑同学借此机会向同学们推荐了演示所用的 [B00merang](https://github.com/B00merang-Project/Windows-XP) 主题, 它可以让同学们的 Linux 桌面风格倒退 20 年，向 Windows XP 看齐，同时建议同学们尝试采用 B00merang 下其他 Windows 版本的主题，以得到形似 Windows 但更加流畅的界面体验。
 
 简单的引入环节后，赵作竑同学向同学们系统地介绍了桌面配置背后的逻辑：
 
 首先将桌面环境的软件分为四类：程序、窗口管理，外设设置（状态栏），桌面常用软件，其他功能。同学们可以从某一类入手，对系统的环境进行调节。
 
-随后赵作竑同学从窗口管理器入手，介绍了平铺式，层叠式和混合式窗口管理器的区别，并举例说明，供大家按喜好选择。顺便推荐了 Arch Wiki 上的窗口管理器页面 [Window manager - ArchWiki (archlinux.org)](https://wiki.archlinux.org/title/Window_manager)，供同学们参考。
+随后赵作竑同学从窗口管理器入手，介绍了平铺式，层叠式和混合式窗口管理器的区别，并举例说明，供大家按喜好选择。顺便推荐了 Arch Wiki 上的窗口管理器页面 [Window manager - ArchWiki](https://wiki.archlinux.org/title/Window_manager)，供同学们参考。
 
 ![](http://ftp.lug.ustc.edu.cn/weekly_party/2021.12.05_Desktop_Show/Photos/20211205_112639578.jpg)
 
