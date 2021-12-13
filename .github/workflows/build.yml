@@ -63,6 +63,8 @@ jobs:
     - name: Run Jekyll Doctor
       run: |
         bundle exec jekyll doctor --trace --profile
+      env:
+        JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Build site
       run: |
