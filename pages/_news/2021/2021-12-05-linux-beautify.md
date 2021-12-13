@@ -39,6 +39,6 @@ comments: []
 
 ![](http://ftp.lug.ustc.edu.cn/weekly_party/2021.12.05_Desktop_Show/Photos/20211205_110621229.jpg)
 
-小聚结束后，陶柯宇同学为同学们演示了参与二课的同学如何将自己的学校账号和 GitHub 账号关联起来：首先访问 <htttps://ghauth.ustclug.org>，依次点击 `Authenticate USTC` 和 `Authenticate GitHub` ，最后点击 token 导出密钥，在二课提交时应将密钥附在提交窗口中。
+小聚结束后，陶柯宇同学为同学们演示了参与二课的同学如何将自己的学校账号和 GitHub 账号关联起来：首先访问 <https://ghauth.ustclug.org>，依次点击 `Authenticate USTC` 和 `Authenticate GitHub` ，最后点击 token 导出密钥，在二课提交时应将密钥附在提交窗口中。
 
 若希望了解小聚的更多细节，可阅读本次讲座的[小聚讲稿](http://ftp.lug.ustc.edu.cn/weekly_party/2021.12.05_Desktop_Show/20211205小聚讲稿.pdf)。
