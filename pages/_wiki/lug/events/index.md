@@ -6,7 +6,7 @@ permalink: /wiki/lug/events/
 
 LUG 活动概述请移步 [LUG 首页](/)。
 
-LUG 的所有活动均依照 [社团章程](https://ftp.lug.ustc.edu.cn/社团管理/章程/2019-章程.pdf) 开展。
+LUG 的所有活动均依照 [社团章程](http://ftp.lug.ustc.edu.cn/%E7%A4%BE%E5%9B%A2%E7%AE%A1%E7%90%86/%E7%AB%A0%E7%A8%8B/2021-%E7%AB%A0%E7%A8%8B.pdf) 开展。
 
 欢迎订阅 [LUG 日历](calendar.md)。
 
