@@ -9,11 +9,11 @@
 
 编辑 `~/.npmrc` ，添加
 
-    registry=https://npm.proxy.ustclug.org/
+    registry=https://npmreg.proxy.ustclug.org/
 
 若不想将本源设置为默认源，只想使用本源安装某个软件包，可在安装包时采用以下用法：
 
-    npm --registry https://npm.proxy.ustclug.org/ install <packagename>
+    npm --registry https://npmreg.proxy.ustclug.org/ install <packagename>
 
 ## 注意事项
 
