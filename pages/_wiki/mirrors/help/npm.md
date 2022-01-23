@@ -9,13 +9,11 @@
 
 编辑 `~/.npmrc` ，添加
 
-    registry=http://npmreg.mirrors.ustc.edu.cn/
+    registry=https://npm.proxy.ustclug.org/
 
 若不想将本源设置为默认源，只想使用本源安装某个软件包，可在安装包时采用以下用法：
 
-    npm --registry http://npmreg.mirrors.ustc.edu.cn install <packagename>
-
-中科大 npm 镜像支持 https 安全连接，如果您的网络运营商部署了缓存设备，或您对所处的网络环境不信任，请使用 `https` 替换上述 URL[^url] 中的 `http` 。
+    npm --registry https://npm.proxy.ustclug.org/ install <packagename>
 
 ## 注意事项
 
