@@ -18,7 +18,7 @@ title                    : "LUG @ USTC"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "USTCLUG"
-description              : "LUG @ USTC 新版网站"
+description              : "中国科学技术大学 Linux 用户协会"
 url                      : "https://lug.ustc.edu.cn"
 static_url               : "/static"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -88,7 +88,7 @@ analytics:
 # Site Author, this is the default
 author:
   name             : "USTCLUG"
-  avatar           : "https://secure.gravatar.com/avatar/94c03bc620ea2cf7dc239ac0535cad8e?s=256&d=identicon&r=g"
+  avatar           : "/static/lug-penguin.png"
   bio              : "中国科学技术大学 Linux 用户协会"
   location         : "USTC"
   links:
@@ -122,7 +122,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/ustclug"
+      # url:
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
@@ -292,7 +292,6 @@ defaults:
         overlay_image: "/static/splash/autumn-1.jpg"
         overlay_filter: 0.2
   - scope:
-      read_time: true
       path: ""
       type: planet
     values:

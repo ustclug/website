@@ -2,11 +2,9 @@ name: build
 
 on:
   push:
-    branches:
-      - '*'
+    branches: ['*']
   pull_request:
-    branches:
-      - '*'
+    branches: ['*']
 
 jobs:
   build:
@@ -22,7 +20,7 @@ jobs:
         ruby-version: 2.7
     - uses: actions/setup-node@v1
       with:
-        node-version: 12
+        node-version: 16
 
     - name: Cache Ruby Bundler
       id: cache
