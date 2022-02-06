@@ -58,7 +58,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=9de747956">
+    <link rel="stylesheet" href="/assets/css/main.css?v=1492a257b">
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
       <style>
@@ -218,8 +218,8 @@
                   <pre class="highlight"><code><span class="cm">/*
  *  hello_mod.c - The simplest kernel module.
  */</span>
-<span class="cp">#include &lt;linux/module.h&gt;	</span><span class="cm">/* Needed by all modules */</span><span class="cp">
-#include &lt;linux/kernel.h&gt;	</span><span class="cm">/* Needed for KERN_INFO */</span><span class="cp">
+<span class="cp">#include</span> <span class="cpf">&lt;linux/module.h&gt;</span><span class="c1">	/* Needed by all modules */</span><span class="cp">
+#include</span> <span class="cpf">&lt;linux/kernel.h&gt;</span><span class="c1">	/* Needed for KERN_INFO */</span><span class="cp">
 </span>
 <span class="kt">int</span> <span class="nf">init_module</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="p">{</span>
