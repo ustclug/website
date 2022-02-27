@@ -11,100 +11,92 @@ redirect_from:
 ---
 
 <style>thead { text-align: center !important; } .amount { text-align: right; }</style>
-<article id="donates">
-    <h2><a href="#donates">捐赠记录</a></h2>
-    <p>
-        捐赠方式请见 <a href="/wiki/lug/finance/donate">LUG 官网</a>。
-        本表记载 2018 年换届后的捐赠记录，根据 LUG 电子账册自动生成。
-        之前的记录见<a href="/wiki/lug/finance/archive">历史存档</a>。
-    </p>
-    <div>
-        <table class="pure-table pure-table-horizontal">
-            <thead>
-                <tr>
-                    <th>日期</th>
-                    <th>捐赠者</th>
-                    <th>数额</th>
-                    <th>用途</th>
-                </tr>
-            </thead>
-            <tbody v-if="records === undefined">
-                <tr>
-                    <td colspan="4">正在加载……</td>
-                </tr>
-            </tbody>
-            <tbody v-else>
-                <tr v-for="i in records">
-                    <td class="date">${i.date}</td>
-                    <td class="payee">${i.payee}</td>
-                    <td class="amount">${i.amount}</td>
-                    <td class="account">${i.account}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</article>
-<article id="servicefunds">
-    <h2><a href="#servicefunds">服务器维护专款</a></h2>
-    <p>
-        本表记载 2018 年换届后的服务器维护专款收支记录，根据 LUG 电子账册自动生成。
-        之前的记录见<a href="/wiki/lug/finance/archive">历史存档</a>。
-        由于换届前的服务器维护专款支出情况记载不明，在此将 2018 年换届时的所有捐款余额均记为服务器维护专款。
-    </p>
-    <div>
-        <table class="pure-table pure-table-horizontal">
-            <thead>
-                <tr>
-                    <th>日期</th>
-                    <th>数额</th>
-                    <th>事由</th>
-                </tr>
-            </thead>
-            <tbody v-if="records === undefined">
-                <tr>
-                    <td colspan="3">正在加载……</td>
-                </tr>
-            </tbody>
-            <tbody v-else>
-                <tr v-for="i in records">
-                    <td class="date">${i.date}</td>
-                    <td class="amount">${i.amount}</td>
-                    <td class="payee">${i.payee}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</article>
-<article id="generalfunds">
-    <h2><a href="#generalfunds">通用经费</a></h2>
-    <p>
-        本表记载 2018 年换届后的通用经费收支记录，根据 LUG 电子账册自动生成。
-        之前的记录见<a href="/wiki/lug/finance/archive">历史存档</a>。
-    </p>
-    <div>
-        <table class="pure-table pure-table-horizontal">
-            <thead>
-                <tr>
-                    <th>日期</th>
-                    <th>数额</th>
-                    <th>事由</th>
-                </tr>
-            </thead>
-            <tbody v-if="records === undefined">
-                <tr>
-                    <td colspan="3">正在加载……</td>
-                </tr>
-            </tbody>
-            <tbody v-else>
-                <tr v-for="i in records">
-                    <td class="date">${i.date}</td>
-                    <td class="amount">${i.amount}</td>
-                    <td class="payee">${i.payee}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</article>
+
+<h2 id="donates">捐赠记录</h2>
+<p>
+    捐赠方式请见 <a href="/wiki/lug/finance/donate">LUG 官网</a>。
+    本表记载 2018 年换届后的捐赠记录，根据 LUG 电子账册自动生成。
+    之前的记录见<a href="/wiki/lug/finance/archive">历史存档</a>。
+</p>
+<table class="pure-table pure-table-horizontal" id="t-donates">
+    <thead>
+        <tr>
+            <th>日期</th>
+            <th>捐赠者</th>
+            <th>数额</th>
+            <th>用途</th>
+        </tr>
+    </thead>
+    <tbody v-if="records === undefined">
+        <tr>
+            <td colspan="4">正在加载……</td>
+        </tr>
+    </tbody>
+    <tbody v-else>
+        <tr v-for="i in records.slice().reverse()">
+            <td class="date">${i.date}</td>
+            <td class="payee">${i.payee}</td>
+            <td class="amount">${i.amount}</td>
+            <td class="account">${i.account}</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="servicefunds">服务器维护专款</h2>
+<p>
+    本表记载 2018 年换届后的服务器维护专款收支记录，根据 LUG 电子账册自动生成。
+    之前的记录见<a href="/wiki/lug/finance/archive">历史存档</a>。
+    由于换届前的服务器维护专款支出情况记载不明，在此将 2018 年换届时的所有捐款余额均记为服务器维护专款。
+</p>
+<table class="pure-table pure-table-horizontal" id="t-servicefunds">
+    <thead>
+        <tr>
+            <th>日期</th>
+            <th>数额</th>
+            <th>事由</th>
+        </tr>
+    </thead>
+    <tbody v-if="records === undefined">
+        <tr>
+            <td colspan="3">正在加载……</td>
+        </tr>
+    </tbody>
+    <tbody v-else>
+        <tr v-for="i in records.slice().reverse()">
+            <td class="date">${i.date}</td>
+            <td class="amount">${i.amount}</td>
+            <td class="payee">${i.payee}</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="generalfunds">通用经费</h2>
+<p>
+    本表记载 2018 年换届后的通用经费收支记录，根据 LUG 电子账册自动生成。
+    之前的记录见<a href="/wiki/lug/finance/archive">历史存档</a>。
+</p>
+<table class="pure-table pure-table-horizontal" id="t-generalfunds">
+    <thead>
+        <tr>
+            <th>日期</th>
+            <th>数额</th>
+            <th>事由</th>
+        </tr>
+    </thead>
+    <tbody v-if="records === undefined">
+        <tr>
+            <td colspan="3">正在加载……</td>
+        </tr>
+    </tbody>
+    <tbody v-else>
+        <tr v-for="i in records.slice().reverse()">
+            <td class="date">${i.date}</td>
+            <td class="amount">${i.amount}</td>
+            <td class="payee">${i.payee}</td>
+        </tr>
+    </tbody>
+</table>
+
 <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 <script>
     function getXMLHttpRequest() {
@@ -117,7 +109,7 @@ redirect_from:
         return xmlHttp;
     }
     app_donates = new Vue({
-        el: '#donates',
+        el: '#t-donates',
         delimiters: ['${', '}'],
         data: {
             records: undefined,
@@ -143,7 +135,7 @@ redirect_from:
         },
     });
     app_servicefunds = new Vue({
-        el: '#servicefunds',
+        el: '#t-servicefunds',
         delimiters: ['${', '}'],
         data: {
             records: undefined,
@@ -165,7 +157,7 @@ redirect_from:
         },
     });
     app_generalfunds = new Vue({
-        el: '#generalfunds',
+        el: '#t-generalfunds',
         delimiters: ['${', '}'],
         data: {
             records: undefined,
