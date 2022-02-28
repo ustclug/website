@@ -132,6 +132,7 @@ redirect_from:
                 xmlHttp.send();
             },
         });
+        return app;
     }
     app_donates = newVueApp("#t-donates", 'https://pages.ustclug.org/ledger/donates.txt', function (record) {
         if (record.payee.endsWith('捐款'))
