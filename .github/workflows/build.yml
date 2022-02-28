@@ -90,6 +90,7 @@ jobs:
       run: bundle exec jekyll algolia push
       env:
         ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
+        JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       continue-on-error: true
 
     - name: Call webhook
