@@ -18,3 +18,6 @@ LICENSE.md
 # temporarily not formatting *.yml and *.scss
 *.yml
 *.scss
+
+# special page imported from external sources
+pages/_wiki/doc/smart-questions.md
