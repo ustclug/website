@@ -15,8 +15,8 @@
 <!-- For all browsers -->
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url | append: '?v=' | append: site.git.last_commit.short_sha }}">
 {% if jekyll.environment == 'production' %}
-  <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
-  <link rel="stylesheet" href="/assets/opensans/open-sans.css" media="invalid" onload="this.media='all'">
+  <link rel="stylesheet" href="/_extra/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
+  <link rel="stylesheet" href="/_extra/open-sans.css" media="invalid" onload="this.media='all'">
 {% else %}
   <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/latest/css/pro.min.css" media="invalid" onload="this.media='all'">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" media="invalid" onload="this.media='all'">
