@@ -291,6 +291,7 @@ defaults:
       header:
         overlay_image: "/static/splash/autumn-1.jpg"
         overlay_filter: 0.2
+      classes: ["news"]
   - scope:
       path: ""
       type: planet
