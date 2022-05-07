@@ -1,22 +1,100 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://lug.ustc.edu.cn/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lug.ustc.edu.cn/" rel="alternate" type="text/html" /><updated>2022-05-04T18:23:02+08:00</updated><id>https://lug.ustc.edu.cn/feed.xml</id><title type="html">LUG @ USTC</title><subtitle>中国科学技术大学 Linux 用户协会</subtitle><author><name>USTCLUG</name></author><entry><title type="html">Linux 101 第三课</title><link href="https://lug.ustc.edu.cn/news/2022/04/linux-101-3/" rel="alternate" type="text/html" title="Linux 101 第三课" /><published>2022-04-17T14:30:00+08:00</published><updated>2022-04-17T19:35:56+08:00</updated><id>https://lug.ustc.edu.cn/news/2022/04/linux-101-3</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2022/04/linux-101-3/"><![CDATA[<p>4 月 17 日下午，Linux 用户协会线上举办了 Linux 101 系列活动的第三课：Linux 环境下的编程。</p>
-      <p>Linux 本身提供的是一个使用计算机的环境，因此，学习 Linux 的过程即是了解如何使用 Linux 完成各项任务的过程。而 Linux 上的编程开发正是使用中无法绕过的一环。本节 Linux 101 由明宇龙同学为我们讲解如何在 Linux 下完成 C/C++, Python 等编程语言的开发。</p>
-      <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2022.4.17_linux_101_%E7%AC%AC%E4%B8%89%E8%AF%BE/intro.png" alt="intro" /></p>
-      <p>首先，明宇龙同学向大家介绍了 C 与 C++ 语言在 Linux 上的开发过程。对于简单的单文件而言，一行 gcc 命令即可完成编译过程。更进一步，我们可以了解到编译过程的四步过程分别由 cpp、cc1、ar、ld 完成。然而在面对多文件大项目时，需要严格的编译顺序管理和并行管理，于是我们使用 make 工具对编译过程进行管理，这涉及到 Makefile 的编写。随着项目增大，文件增多，出现了 cmake 等工具来自动编写管理 Makefile 文件。</p>
-      <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2022.4.17_linux_101_%E7%AC%AC%E4%B8%89%E8%AF%BE/C.png" alt="C" /></p>
-      <p>随后明宇龙同学向我们介绍了 Linux 上 python 环境相关的基础内容，包括 python 的包管理器，python 语法版本变迁以及 python 语言的各种实现，这些内容对于构建符合自身需求和兼容性要求的 python 应用至关重要。</p>
-      <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2022.4.17_linux_101_%E7%AC%AC%E4%B8%89%E8%AF%BE/python.png" alt="python" /></p>
-      <p>在课程最后的提问环节，明宇龙同学细心地为大家解答了 Linux 相关疑问，探讨了从编程环境配置到 LUG 相关的问题，在轻松愉快的氛围中结束了 Linux 101 第三课的讨论。</p>
-      <p>本节课的讲义位于 LUG ftp 上：<a href="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2022.4.17_linux_101_%E7%AC%AC%E4%B8%89%E8%AF%BE/Linux%20101%20%E7%AC%AC%E4%B8%89%E8%AF%BE%EF%BC%9ALinux%20%E4%B8%8A%E7%9A%84%E7%BC%96%E7%A8%8B.pdf">slides</a></p>
-      ]]></content><author><name>psi-cmd</name></author><category term="LUG活动" /><category term="Linux 101" /><summary type="html"><![CDATA[4 月 17 日下午，Linux 用户协会线上举办了 Linux 101 系列活动的第三课：Linux 环境下的编程。]]></summary></entry><entry><title type="html">Linux 101 第二课</title><link href="https://lug.ustc.edu.cn/news/2022/04/linux-101-2/" rel="alternate" type="text/html" title="Linux 101 第二课" /><published>2022-04-03T14:30:00+08:00</published><updated>2022-04-18T21:17:02+08:00</updated><id>https://lug.ustc.edu.cn/news/2022/04/linux-101-2</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2022/04/linux-101-2/"><![CDATA[<p>4 月 3 日下午，Linux 用户协会于线上举办了 Linux 101 系列活动的第二课：命令行界面的使用。</p>
-    <p>命令行界面是 Linux 系统使用的精髓所在，熟练地使用命令行可以让同学们更加高效地在 Linux 系统下处理任务。本节 101 由赵作竑同学为我们进行 shell 相关内容的讲解。</p>
-    <p>初次接触命令行界面（shell），自然应当由简入繁，循序渐进。所以赵作竑同学在带领大家认识并打开 shell 后，首先介绍了几个简单的命令，如 ls、cd、cal、date，让大家清楚命令行的输出格式。</p>
-    <p><img src="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2022.4.3_linux_101_%E7%AC%AC%E4%BA%8C%E8%AF%BE/start.png" alt="start" /></p>
-    <p>稍作了解后，我们需要系统性地学习命令行的使用，而最关键的自然是如何理解命令的帮助文档。赵作竑同学以 ls 命令为例，为我们讲解了其对应文档的结构以及应当如何去理解命令文档。</p>
-    <p><img src="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2022.4.3_linux_101_%E7%AC%AC%E4%BA%8C%E8%AF%BE/ls.png" alt="ls" /></p>
-    <p>由于对命令行的介绍不能脱离对 Linux 系统本身的理解，所以赵作竑同学为我们附带介绍了 Linux 文件系统相关的内容，包括文件类型、文件权限、Linux 下的目录结构，软硬链接等，并介绍创建文件的命令。</p>
-    <p><img src="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2022.4.3_linux_101_%E7%AC%AC%E4%BA%8C%E8%AF%BE/hier.png" alt="hier" /></p>
-    <p>本节课的讲义位于 LUG ftp 上：<a href="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2022.4.3_linux_101_%E7%AC%AC%E4%BA%8C%E8%AF%BE/Linux%20101%20Lesson%202.pdf">slides</a></p>
-    ]]></content><author><name>psi-cmd</name></author><category term="LUG活动" /><category term="Linux 101" /><summary type="html"><![CDATA[4 月 3 日下午，Linux 用户协会于线上举办了 Linux 101 系列活动的第二课：命令行界面的使用。]]></summary></entry><entry><title type="html">Linux 101 第一课</title><link href="https://lug.ustc.edu.cn/news/2022/03/linux-101-1/" rel="alternate" type="text/html" title="Linux 101 第一课" /><published>2022-03-13T14:30:00+08:00</published><updated>2022-03-18T21:00:36+08:00</updated><id>https://lug.ustc.edu.cn/news/2022/03/linux-101-1</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2022/03/linux-101-1/"><![CDATA[<p>3 月 13 日下午，Linux 用户协会在西区 3C101 教室举办了 Linux 101 系列活动的第一课：
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://lug.ustc.edu.cn/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lug.ustc.edu.cn/" rel="alternate" type="text/html" /><updated>2022-05-07T20:41:20+08:00</updated><id>https://lug.ustc.edu.cn/feed.xml</id><title type="html">LUG @ USTC</title><subtitle>中国科学技术大学 Linux 用户协会</subtitle><author><name>USTCLUG</name></author><entry><title type="html">「开源软件供应链点亮计划——暑期 2022」USTCLUG 项目提案</title><link href="https://lug.ustc.edu.cn/news/2022/05/opensource-summer-iscas/" rel="alternate" type="text/html" title="「开源软件供应链点亮计划——暑期 2022」USTCLUG 项目提案" /><published>2022-05-07T01:00:00+08:00</published><updated>2022-05-07T20:39:54+08:00</updated><id>https://lug.ustc.edu.cn/news/2022/05/opensource-summer-iscas</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2022/05/opensource-summer-iscas/"><![CDATA[<p>「开源软件供应链点亮计划」是由中国科学院软件研究所发起并长期支持一项活动，旨在解决基础开源软件面临的许可、质量、维护和技术支持等问题，进而影响整个软件产业的供应链。而<a href="https://summer-ospp.ac.cn/#/homepage">「开源软件供应链点亮计划——暑期 2022」</a>是由中科院软件所与 openEuler 社区共同举办的一项面向高校学生的暑期活动，旨在鼓励在校学生积极参与开源软件的开发维护，促进国内优秀开源软件社区的蓬勃发展。</p>
+      <!--more-->
+      <p>此活动与 GSoC (Google Summer of Code) 的模式类似：开源项目/社区提供项目需求与导师 (mentor)；学生申请项目通过后利用暑期的时间进行开发，将成果贡献给社区；主办方（中科院软件所与 openEuler 社区）根据评估结果给学生发放奖金。所有参与的社区列表可查看 <a href="https://summer-ospp.ac.cn/#/org">https://summer-ospp.ac.cn/#/org</a>。</p>
+      <p>今年夏天，USTCLUG (中科大学生 Linux 用户协会) 计划以社区身份加入此暑期活动。以下是我们计划的项目提案，也欢迎社团的各位同学提出建议。</p>
+      <p><strong>在报名前，请先阅读由主办方提供的<a href="https://summer-ospp.ac.cn/help/student/">学生指南</a>。</strong></p>
+      <h2 id="网络测量系统">网络测量系统</h2>
+      <p>项目描述：在校园网管理中，很多时候我们需要看某个网站/服务器在学校不同地点、不同运营商网络出口下的访问质量，分别到不同机器上手工测试并汇总常常会带来巨大的人工成本，在 <a href="https://ping.chinaz.com/">https://ping.chinaz.com/</a> 或者类似的网站上我们可以很方便的看网站/服务器在全国各地访问的情况，但是可惜网站的主体和客户端都不是开源的。本项目计划建设一个可自己搭建的分布式网络测量系统，架构为控制端 + 多个测量 agent。</p>
+      <p>项目难度：基础</p>
+      <p>LICENSE：自选开源协议</p>
+      <p>项目社区导师：totoroyyw</p>
+      <p>导师联系方式：totoroyyw AT ustclug.org</p>
+      <p>项目产出要求：建设一个可自己搭建的分布式网络测量系统，控制端 + 多个测量 agent：</p>
+      <ul>
+        <li>控制端
+          <ul>
+            <li>控制端提供 Web 界面，接收测试指令、发给测量 agent、收集并展现测量结果</li>
+            <li>对不同级别的用户有权限控制（比如普通用户不能开放 TCP 端口扫描功能）</li>
+          </ul>
+        </li>
+        <li>测量 agent
+          <ul>
+            <li>启动后连接到控制端，接收测试指令、进行测试、返回测试结果</li>
+            <li>隶属于多个组，可以按照组选择运行测量指令</li>
+            <li>docker 封装部署，预计数量在 N*10 量级</li>
+          </ul>
+        </li>
+        <li>测量功能包含多节点 ping、DNS 解析、http/https get、TCP 端口连接测试、TCP 端口扫描、traceroute，具体可以参考相关网站的功能
+          <ul>
+            <li>测量功能方便扩展</li>
+          </ul>
+        </li>
+      </ul>
+      <p>项目技术要求：</p>
+      <ul>
+        <li>掌握网络编程语言</li>
+        <li>拥有 Web 开发能力</li>
+      </ul>
+      <p>相关网站：</p>
+      <ul>
+        <li><a href="https://www.17ce.com/">https://www.17ce.com/</a></li>
+        <li><a href="https://ping.pe/">https://ping.pe/</a></li>
+        <li><a href="https://ping.sx/ping">https://ping.sx/ping</a></li>
+        <li><a href="https://ping.chinaz.com/">https://ping.chinaz.com/</a></li>
+      </ul>
+      <h2 id="网盘睿客网的-sdk-及-rclone-plugin-开发">网盘睿客网的 SDK 及 Rclone plugin 开发</h2>
+      <p>项目描述：中科大校内有一套网盘系统睿客网（英文指代暂规定为 recdrive），此系统目前仅有网页界面而没有命令行接口，因而无法轻松地将睿客网提供的云存储整合到其他系统中。我们计划在此次项目中，为睿客网实现一套 SDK，支持基础的文件 CURD 操作，然后将此 SDK 整合到云存储命令行工具 Rclone 中，提供给用户一份 Rclone plugin 或是直接合并至 Rclone 上游。</p>
+      <p>项目难度：进阶</p>
+      <p>LICENSE：可自选开源协议，但推荐 Apache 2.0</p>
+      <p>项目社区导师：myl7</p>
+      <p>导师联系方式：myl AT ustclug.org</p>
+      <p>项目产出要求：</p>
+      <ul>
+        <li>基础：提供一套 SDK 支持睿客网网盘文件的 CURD
+          <ul>
+            <li>需要保证 Go 中可用以满足下一阶段的条件</li>
+            <li>除 Go 外，可以使用 Rust/C/C++ 编写，只须提供 Go 中调用的方案即可</li>
+            <li>由我们提供测试帐号</li>
+          </ul>
+        </li>
+        <li>进阶：对接 Rclone，提供一份睿客网的 Rclone plugin
+          <ul>
+            <li>Rclone 的各种子功能，如 cache 等，可以酬情对接，以可用为第一要义</li>
+            <li>开发者可以尝试将此功能提交到 Rclone 上游进行合并</li>
+          </ul>
+        </li>
+      </ul>
+      <p>项目技术要求：</p>
+      <ul>
+        <li>掌握 Go 语言，或是掌握 Go 语言 FFI 并掌握另一门可 Go FFI 的语言</li>
+        <li>能理解文件系统语义，对 FUSE 等类似部件有一定了解</li>
+        <li>能阅读以 Rclone 为例的大型 Go 开源项目的源码并分析出扩展时需要对接的部分</li>
+      </ul>
+      <p>相关网站：</p>
+      <ul>
+        <li>睿客网：<a href="https://rec.ustc.edu.cn/">https://rec.ustc.edu.cn/</a></li>
+        <li>Rclone：官网：<a href="https://rclone.org/">https://rclone.org/</a> 源码：<a href="https://github.com/rclone/rclone">https://github.com/rclone/rclone</a></li>
+        <li>一个参考性质的半成品：<a href="https://github.com/myl7/recdrive">https://github.com/myl7/recdrive</a></li>
+      </ul>
+      ]]></content><author><name>totoroyyw</name></author><summary type="html"><![CDATA[「开源软件供应链点亮计划」是由中国科学院软件研究所发起并长期支持一项活动，旨在解决基础开源软件面临的许可、质量、维护和技术支持等问题，进而影响整个软件产业的供应链。而「开源软件供应链点亮计划——暑期 2022」是由中科院软件所与 openEuler 社区共同举办的一项面向高校学生的暑期活动，旨在鼓励在校学生积极参与开源软件的开发维护，促进国内优秀开源软件社区的蓬勃发展。]]></summary></entry><entry><title type="html">Linux 101 第三课</title><link href="https://lug.ustc.edu.cn/news/2022/04/linux-101-3/" rel="alternate" type="text/html" title="Linux 101 第三课" /><published>2022-04-17T14:30:00+08:00</published><updated>2022-04-17T19:35:56+08:00</updated><id>https://lug.ustc.edu.cn/news/2022/04/linux-101-3</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2022/04/linux-101-3/"><![CDATA[<p>4 月 17 日下午，Linux 用户协会线上举办了 Linux 101 系列活动的第三课：Linux 环境下的编程。</p>
+    <p>Linux 本身提供的是一个使用计算机的环境，因此，学习 Linux 的过程即是了解如何使用 Linux 完成各项任务的过程。而 Linux 上的编程开发正是使用中无法绕过的一环。本节 Linux 101 由明宇龙同学为我们讲解如何在 Linux 下完成 C/C++, Python 等编程语言的开发。</p>
+    <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2022.4.17_linux_101_%E7%AC%AC%E4%B8%89%E8%AF%BE/intro.png" alt="intro" /></p>
+    <p>首先，明宇龙同学向大家介绍了 C 与 C++ 语言在 Linux 上的开发过程。对于简单的单文件而言，一行 gcc 命令即可完成编译过程。更进一步，我们可以了解到编译过程的四步过程分别由 cpp、cc1、ar、ld 完成。然而在面对多文件大项目时，需要严格的编译顺序管理和并行管理，于是我们使用 make 工具对编译过程进行管理，这涉及到 Makefile 的编写。随着项目增大，文件增多，出现了 cmake 等工具来自动编写管理 Makefile 文件。</p>
+    <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2022.4.17_linux_101_%E7%AC%AC%E4%B8%89%E8%AF%BE/C.png" alt="C" /></p>
+    <p>随后明宇龙同学向我们介绍了 Linux 上 python 环境相关的基础内容，包括 python 的包管理器，python 语法版本变迁以及 python 语言的各种实现，这些内容对于构建符合自身需求和兼容性要求的 python 应用至关重要。</p>
+    <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2022.4.17_linux_101_%E7%AC%AC%E4%B8%89%E8%AF%BE/python.png" alt="python" /></p>
+    <p>在课程最后的提问环节，明宇龙同学细心地为大家解答了 Linux 相关疑问，探讨了从编程环境配置到 LUG 相关的问题，在轻松愉快的氛围中结束了 Linux 101 第三课的讨论。</p>
+    <p>本节课的讲义位于 LUG ftp 上：<a href="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2022.4.17_linux_101_%E7%AC%AC%E4%B8%89%E8%AF%BE/Linux%20101%20%E7%AC%AC%E4%B8%89%E8%AF%BE%EF%BC%9ALinux%20%E4%B8%8A%E7%9A%84%E7%BC%96%E7%A8%8B.pdf">slides</a></p>
+    ]]></content><author><name>psi-cmd</name></author><category term="LUG活动" /><category term="Linux 101" /><summary type="html"><![CDATA[4 月 17 日下午，Linux 用户协会线上举办了 Linux 101 系列活动的第三课：Linux 环境下的编程。]]></summary></entry><entry><title type="html">Linux 101 第二课</title><link href="https://lug.ustc.edu.cn/news/2022/04/linux-101-2/" rel="alternate" type="text/html" title="Linux 101 第二课" /><published>2022-04-03T14:30:00+08:00</published><updated>2022-04-18T21:17:02+08:00</updated><id>https://lug.ustc.edu.cn/news/2022/04/linux-101-2</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2022/04/linux-101-2/"><![CDATA[<p>4 月 3 日下午，Linux 用户协会于线上举办了 Linux 101 系列活动的第二课：命令行界面的使用。</p>
+  <p>命令行界面是 Linux 系统使用的精髓所在，熟练地使用命令行可以让同学们更加高效地在 Linux 系统下处理任务。本节 101 由赵作竑同学为我们进行 shell 相关内容的讲解。</p>
+  <p>初次接触命令行界面（shell），自然应当由简入繁，循序渐进。所以赵作竑同学在带领大家认识并打开 shell 后，首先介绍了几个简单的命令，如 ls、cd、cal、date，让大家清楚命令行的输出格式。</p>
+  <p><img src="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2022.4.3_linux_101_%E7%AC%AC%E4%BA%8C%E8%AF%BE/start.png" alt="start" /></p>
+  <p>稍作了解后，我们需要系统性地学习命令行的使用，而最关键的自然是如何理解命令的帮助文档。赵作竑同学以 ls 命令为例，为我们讲解了其对应文档的结构以及应当如何去理解命令文档。</p>
+  <p><img src="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2022.4.3_linux_101_%E7%AC%AC%E4%BA%8C%E8%AF%BE/ls.png" alt="ls" /></p>
+  <p>由于对命令行的介绍不能脱离对 Linux 系统本身的理解，所以赵作竑同学为我们附带介绍了 Linux 文件系统相关的内容，包括文件类型、文件权限、Linux 下的目录结构，软硬链接等，并介绍创建文件的命令。</p>
+  <p><img src="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2022.4.3_linux_101_%E7%AC%AC%E4%BA%8C%E8%AF%BE/hier.png" alt="hier" /></p>
+  <p>本节课的讲义位于 LUG ftp 上：<a href="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2022.4.3_linux_101_%E7%AC%AC%E4%BA%8C%E8%AF%BE/Linux%20101%20Lesson%202.pdf">slides</a></p>
+  ]]></content><author><name>psi-cmd</name></author><category term="LUG活动" /><category term="Linux 101" /><summary type="html"><![CDATA[4 月 3 日下午，Linux 用户协会于线上举办了 Linux 101 系列活动的第二课：命令行界面的使用。]]></summary></entry><entry><title type="html">Linux 101 第一课</title><link href="https://lug.ustc.edu.cn/news/2022/03/linux-101-1/" rel="alternate" type="text/html" title="Linux 101 第一课" /><published>2022-03-13T14:30:00+08:00</published><updated>2022-03-18T21:00:36+08:00</updated><id>https://lug.ustc.edu.cn/news/2022/03/linux-101-1</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2022/03/linux-101-1/"><![CDATA[<p>3 月 13 日下午，Linux 用户协会在西区 3C101 教室举办了 Linux 101 系列活动的第一课：
     LIP (Linux Install Party)。</p>
   <p>Linux 用户协会每年都将举办的 Linux 101 系列活动,
     并编写了<a href="https://101.ustclug.org/">在线讲义</a>。
@@ -848,24 +926,4 @@ You were level 4 with a maximum of 29 hit points when you died.
       <li><a href="https://github.com/regymm/nethackassistant">https://github.com/regymm/nethackassistant</a></li>
       <li><a href="https://alt.org/nethack/">https://alt.org/nethack/</a></li>
     </ul>
-    ]]></content><author><name>petergu</name></author><category term="Tutorial" /><category term="游戏" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">2021 软件自由日中国科大站</title><link href="https://lug.ustc.edu.cn/news/2021/09/SFD/" rel="alternate" type="text/html" title="2021 软件自由日中国科大站" /><published>2021-09-25T14:30:00+08:00</published><updated>2021-09-30T19:26:36+08:00</updated><id>https://lug.ustc.edu.cn/news/2021/09/SFD</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2021/09/SFD/"><![CDATA[<p>2021 年 9 月 25 日，开源社区传统活动软件自由日（Software Freedom Day）于下午 2 点 30 分在西区 3C101 教室如期举行，本次活动我们邀请到来自 TUNA 的 Zenithal 同学，以及 18 级曹嘉琪、19 级蔡智臻同学为我们带来精彩的演讲。除此之外，在闪电演讲环节中 21 级新生袁宝杰、科大校友吴峰光、以及来自线上的 Zhou Zhiqiang 三位演讲者的精心准备也为我们带来意外惊喜。</p>
-  <p>得益于第二课堂系统以及社团游园会的宣传，本次活动在新生中的影响力空前，大量新生来到现场参与本次自由软件日活动。也许对于大部分新同学而言，演讲的内容对于他们是陌生的，也无法通过一次演讲对其主 题进行全面地了解和深入的理解，然而演讲的内容仍然可在记忆之中沉淀，形成对技术的认知。</p>
-  <p><img src="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2021.09.25_SFD/photos/EB9E3B0E-A982-412C-B508-81E040F2E45F.jpeg" alt="3C101-满座" /></p>
-  <p>2 点 30 分，简短的活动引入环节扼要地介绍了今日的流程安排和演讲嘉宾后，软件自由日活动正式开始。</p>
-  <p>首先由蔡智臻同学为我们介绍堪称开源界明星的 wireguard 组件。只需寥寥几行配置，活动室的机器和演讲者的主机便处于同一局域网下，继承了 Unix 哲学一贯的简单优雅。随后，蔡智臻同学深入介绍了背后的逻辑——做为内核模块工作时，其将自身模拟为网络设备，复用系统的 TCP/IP 路由表实现网络的通信与中继。在享受嵌入内核模块获得极致的速度提升的同时充分利用了利用已有的路由配置规则，降低了维护者学习记忆的成本，与配置复杂的 IPsec 以及在用户态与内核态往复横跳的 OpenVPN 相比在实际应用层面上高下立判。其实这一思想正是著名的 “一切皆文件” 观点的延续，也由此获得了 Linus 的共鸣 —— “state my love”</p>
-  <p><img src="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2021.09.25_SFD/photos/7E0FDB36-1BD1-4929-8E0A-5BC0B22B5EFF.jpeg" alt="WireGuard 介绍" /></p>
-  <p>了解完网络建构工具，来自 TUNA 协会的 Zenithal 同学为我们带来镜像站联盟计划 —— MirrorZ 项目。Z 同学从镜像站的维护切入主题，先行分享自己的镜像维护历程，让未能经历的同学们一窥镜像维护的琐事。而正是在维护镜像的过程中，Z 同学既看到各大高校镜像站的蓬勃发展，也注意到终端用户存在着信息获取困难，镜像选择不便等问题，以此出发发起 MirrorZ 项目，并获得各大高校镜像站的响应。总而言之，该项目意在完成镜像站之间的信息整合与接口统一工作，并实现自动择优机制。各大镜像站将镜像状态信息推送至 MirrorZ 前端，实现信息的统一呈现。而镜像站针对拉取镜像请求，根据用户的意愿，基于镜像站评分为用户自动跳转至最优镜像，以获得最快的镜像下载速度。和大多数开源软件一样，MirrorZ 受使用过程中的不便性启发，以开源协作的模式解决问题，这样一个开源项目的动机与组织形式，值得开源社区的所有同仁借鉴。</p>
-  <p><img src="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2021.09.25_SFD/photos/1CE61888-C1EE-44CF-9DB1-375980079AAD.jpeg" alt="MirrorZ" /></p>
-  <p>身在科大，自然当对学术上开源软件留心。曹嘉琪同学为我们带来科学计算软件 Maxima 的介绍与基本操作。Maxima 源自于 Macsyma，被 Maple 及 Mathematica 等计算机代数系统所借鉴。在日常计算任务中可以一定程度上替代商业软件 Mathematica。在图形界面 wxMaxima 的帮助下，曹嘉琪同学通过逐条演示的方式，为我们详细介绍了常用的 Maxima 的常用功能 —— 符号计算、数值求解、求导积分、作图 ······ 所见即所得，更直观地让听众了解到 Maxima 的语言风格与使用效果。</p>
-  <p><img src="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2021.09.25_SFD/photos/81655C4C-7987-415D-A16D-4BEACC25B8EE.jpeg" alt="" /></p>
-  <p><img src="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2021.09.25_SFD/photos/C2768EE3-15D3-4289-B1F1-A58711AC2241.jpeg" alt="" /></p>
-  <p>三场演讲结束，欣赏之余未免有些疲倦。正值茶歇，同学们陆续前来领取水和零食。由于错误地预估了参与的人数，零食很快被瓜分完毕。按照往年惯例，现场提供了印有开源软件 logo 的贴纸，做为对自由软件的宣传。贴纸上的符号是开源文化的一部分，而使用贴纸往往可以增强对开源文化的归属感。无论是因为熟悉还是因为好奇，lug 新做的贴纸成功地吸引了一部分同学的注意，前来领取贴纸贴在笔记本上。闪电演讲的名单上多出了一位 21 级的同学袁保杰，想对他所熟悉的开源终端 ConEmu 做一番推荐；一位科大校友，lug 的老社员吴峰光也参与进来，希望向观众介绍 Nix 包管理器；线上的 Zhou Zhiqiang 也提前报名，将为我们带来混沌工程概念，SFD 的下半场，足以令人拭目以待。</p>
-  <p><img src="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2021.09.25_SFD/photos/14FB79FE-3CAD-4708-A9DB-C4B742FEFB1C.jpeg" alt="" /></p>
-  <p>SFD 进入到下半场，首先由袁保杰同学介绍 Windows 平台可定制化终端 ConEmu，其提供了终端背景定制，多窗口，并集成了文件管理器等其他组件，可以在一定程度上缓解 Windows 自带终端对双眼造成的不适。其易于上手的特性对于新人来说更加友好。</p>
-  <p>一味小菜过后，吴峰光校友为我们带来 Nix —— 一个包管理器，或者一种依赖管理思想，该思想正是 “share everything” 和 “share nothing” 的折衷，即 “share when possible”。Nix 完全按照版本依赖要求安装被依赖方的对应版本，将不同版本的软件视为不同的软件，以哈希值决定不同版本的访问路径。这意味着其以完全违反 Linux 所规定的目录结构为代价，获得软件包依赖的绝对正确。理解了其基本思想后，演讲者顺势引入 Nix 语言与 Nix 包配置格式，Nix 的包管理方式由此展现出一个巨大的优势，即在 Nix 包管理系统下，可以让一个系统整体对应唯一的配置文件，环境的复现将通过该统一配置文件的迁移实现。正如刘紫檀同学在讨论过程中所说，Nix 与 Docker 的目标是一致的，该配置文件扮演 dockerfile 的角色。随后是对 Nix 应用的介绍：通过使用 NixOS，所有软件及内核均在 Nix 版本控制之下，可以用于嵌入式、云端部署领域批量化部署等应用场景。虽然 Nix 仍然是一个新兴技术，其由于文档稀少、社区小众造成的入门困难一定程度上限制了其普及速度，其镜像的庞大复杂也为镜像站提供服务造成困难，但 Nix 的未来仍然值得期待。</p>
-  <p><img src="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2021.09.25_SFD/photos/2ED9AEB6-6EC7-4F03-A7D6-329685F48C13.jpeg" alt="" /></p>
-  <p><img src="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2021.09.25_SFD/photos/43233050-7432-4727-8A7F-C82323644E89.jpeg" alt="" /></p>
-  <p>最后，Zhou Zhiqiang 通过线上会议的方式加入现场，为我们带来“混沌工程”这样一个较为陌生的话题。根据演讲者的介绍，所谓混沌工程，即是在实验环境中加入各种具有破坏性的运行干扰，如以一定频率加入延时，篡改目录，假报硬盘故障，切断网络，乃至从集群中离线单节点等，构造一个“稳定产生不稳定因素”的系统。演讲者以 chaos mesh 平台为例，从平台的架构解析混沌系统的一种实现方式，又以一个简单的混沌实验，展示了实验过程中设置的主要参数。随后，演讲者选取了文件系统错误注入，细致地讨论了如何通过 hook 系统调用，随机性篡改函数参数并将错误原封返回，达到模拟错误的目的。混沌系统可以为开源软件的安全性、稳定性提供可行的基准测试方案，为确保开源软件的质量做出贡献。</p>
-  <p><img src="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2021.09.25_SFD/photos/7287B190-E8D3-47D8-ADC9-4C530F86071B.jpeg" alt="" /></p>
-  <p>由于时间原因，两位本来报名了闪电演讲的同学未能演讲，着实遗憾。但分享自由的时光总是短暂，同学们陆续扫码签退，离开会场。原定的聚餐环节由于第二天将有更多 lug 老成员前来临时更改了日期，所以做完善后工作后，几位熟悉的同学在食堂相聚，为今年的 SFD 做上小结。</p>
-  ]]></content><author><name>psi-cmd</name></author><category term="LUG活动" /><summary type="html"><![CDATA[2021 年 9 月 25 日，开源社区传统活动软件自由日（Software Freedom Day）于下午 2 点 30 分在西区 3C101 教室如期举行，本次活动我们邀请到来自 TUNA 的 Zenithal 同学，以及 18 级曹嘉琪、19 级蔡智臻同学为我们带来精彩的演讲。除此之外，在闪电演讲环节中 21 级新生袁宝杰、科大校友吴峰光、以及来自线上的 Zhou Zhiqiang 三位演讲者的精心准备也为我们带来意外惊喜。]]></summary></entry></feed>
+    ]]></content><author><name>petergu</name></author><category term="Tutorial" /><category term="游戏" /><summary type="html"><![CDATA[]]></summary></entry></feed>
