@@ -29,7 +29,7 @@
 | 地区 | 邮件列表                                                                           | Homepage                                                            |
 | ---- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | 上海 | [Shanghai Linux User Group](https://groups.google.com/group/shlug)                 | [SHLUG](http://www.shlug.org/)                                      |
-| 北京 | [Beijing GNU/Linux User Group](https://blug.sh/mailing-list/)                      | [BJLUG](https://blug.sh/)                                           |
+| 北京 | [Beijing GNU/Linux User Group](https://beijinglug.club/mailing-lists/)             | [BLUG](https://beijinglug.club/)                                    |
 | 成都 | [Chengdu Linux User Group](https://groups.google.com/group/cdlug_community)        | [CDLUG](http://www.cdlug.sh/)                                       |
 | 重庆 | [Chongqing Linux User Group](https://groups.google.com/forum/#!forum/chongqinglug) | [CHONGQINGLUG](http://www.chongqinglug.org/)                        |
 | 广州 | [Guangzhou Linux User Group](https://groups.google.com/group/gzlug)                | [GZLUG](http://www.gzlug.org/)                                      |
