@@ -79,7 +79,7 @@ Mplayer 非常强大，不仅对 ffmpeg 的 libavcodec 支持非常好，还能�
 
 Catalyst's Xv implementation is broken (visual glitches, no vsync, wrong colors.) Xv with Catalyst is supposed to only have correct colors when you connect your card to a TV
 
-无语了，不得不承认 M$ PC机本来就不是为Linux设计的，在M$ PC 机诞生之初，在 M\$ PC 里装 Linux 是非法的。就好像现在刷路由器和手机一样，只不过现在只是保修没了而已。
+无语了，不得不承认 M$ PC 机本来就不是为 Linux 设计的，在 M$ PC 机诞生之初，在 M\$ PC 里装 Linux 是非法的。就好像现在刷路由器和手机一样，只不过现在只是保修没了而已。
 
 ### 设置编解码器和输出设备
 

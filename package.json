@@ -16,6 +16,6 @@
   },
   "homepage": "https://lug.ustc.edu.cn",
   "devDependencies": {
-    "prettier": "^2.1.2"
+    "prettier": "^2.6.2"
   }
 }
