@@ -1,91 +1,120 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://lug.ustc.edu.cn/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lug.ustc.edu.cn/" rel="alternate" type="text/html" /><updated>2022-05-12T00:02:09+08:00</updated><id>https://lug.ustc.edu.cn/feed.xml</id><title type="html">LUG @ USTC</title><subtitle>中国科学技术大学 Linux 用户协会</subtitle><author><name>USTCLUG</name></author><entry><title type="html">「开源软件供应链点亮计划——暑期 2022」USTCLUG 项目提案</title><link href="https://lug.ustc.edu.cn/news/2022/05/opensource-summer-iscas/" rel="alternate" type="text/html" title="「开源软件供应链点亮计划——暑期 2022」USTCLUG 项目提案" /><published>2022-05-07T01:00:00+08:00</published><updated>2022-05-07T20:39:54+08:00</updated><id>https://lug.ustc.edu.cn/news/2022/05/opensource-summer-iscas</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2022/05/opensource-summer-iscas/"><![CDATA[<p>「开源软件供应链点亮计划」是由中国科学院软件研究所发起并长期支持一项活动，旨在解决基础开源软件面临的许可、质量、维护和技术支持等问题，进而影响整个软件产业的供应链。而<a href="https://summer-ospp.ac.cn/#/homepage">「开源软件供应链点亮计划——暑期 2022」</a>是由中科院软件所与 openEuler 社区共同举办的一项面向高校学生的暑期活动，旨在鼓励在校学生积极参与开源软件的开发维护，促进国内优秀开源软件社区的蓬勃发展。</p>
-      <!--more-->
-      <p>此活动与 GSoC (Google Summer of Code) 的模式类似：开源项目/社区提供项目需求与导师 (mentor)；学生申请项目通过后利用暑期的时间进行开发，将成果贡献给社区；主办方（中科院软件所与 openEuler 社区）根据评估结果给学生发放奖金。所有参与的社区列表可查看 <a href="https://summer-ospp.ac.cn/#/org">https://summer-ospp.ac.cn/#/org</a>。</p>
-      <p>今年夏天，USTCLUG (中科大学生 Linux 用户协会) 计划以社区身份加入此暑期活动。以下是我们计划的项目提案，也欢迎社团的各位同学提出建议。</p>
-      <p><strong>在报名前，请先阅读由主办方提供的<a href="https://summer-ospp.ac.cn/help/student/">学生指南</a>。</strong></p>
-      <h2 id="网络测量系统">网络测量系统</h2>
-      <p>项目描述：在校园网管理中，很多时候我们需要看某个网站/服务器在学校不同地点、不同运营商网络出口下的访问质量，分别到不同机器上手工测试并汇总常常会带来巨大的人工成本，在 <a href="https://ping.chinaz.com/">https://ping.chinaz.com/</a> 或者类似的网站上我们可以很方便的看网站/服务器在全国各地访问的情况，但是可惜网站的主体和客户端都不是开源的。本项目计划建设一个可自己搭建的分布式网络测量系统，架构为控制端 + 多个测量 agent。</p>
-      <p>项目难度：基础</p>
-      <p>LICENSE：自选开源协议</p>
-      <p>项目社区导师：totoroyyw</p>
-      <p>导师联系方式：totoroyyw AT ustclug.org</p>
-      <p>项目产出要求：建设一个可自己搭建的分布式网络测量系统，控制端 + 多个测量 agent：</p>
-      <ul>
-        <li>控制端
-          <ul>
-            <li>控制端提供 Web 界面，接收测试指令、发给测量 agent、收集并展现测量结果</li>
-            <li>对不同级别的用户有权限控制（比如普通用户不能开放 TCP 端口扫描功能）</li>
-          </ul>
-        </li>
-        <li>测量 agent
-          <ul>
-            <li>启动后连接到控制端，接收测试指令、进行测试、返回测试结果</li>
-            <li>隶属于多个组，可以按照组选择运行测量指令</li>
-            <li>docker 封装部署，预计数量在 N*10 量级</li>
-          </ul>
-        </li>
-        <li>测量功能包含多节点 ping、DNS 解析、http/https get、TCP 端口连接测试、TCP 端口扫描、traceroute，具体可以参考相关网站的功能
-          <ul>
-            <li>测量功能方便扩展</li>
-          </ul>
-        </li>
-      </ul>
-      <p>项目技术要求：</p>
-      <ul>
-        <li>掌握网络编程语言</li>
-        <li>拥有 Web 开发能力</li>
-      </ul>
-      <p>相关网站：</p>
-      <ul>
-        <li><a href="https://www.17ce.com/">https://www.17ce.com/</a></li>
-        <li><a href="https://ping.pe/">https://ping.pe/</a></li>
-        <li><a href="https://ping.sx/ping">https://ping.sx/ping</a></li>
-        <li><a href="https://ping.chinaz.com/">https://ping.chinaz.com/</a></li>
-      </ul>
-      <h2 id="网盘睿客网的-sdk-及-rclone-plugin-开发">网盘睿客网的 SDK 及 Rclone plugin 开发</h2>
-      <p>项目描述：中科大校内有一套网盘系统睿客网（英文指代暂规定为 recdrive），此系统目前仅有网页界面而没有命令行接口，因而无法轻松地将睿客网提供的云存储整合到其他系统中。我们计划在此次项目中，为睿客网实现一套 SDK，支持基础的文件 CURD 操作，然后将此 SDK 整合到云存储命令行工具 Rclone 中，提供给用户一份 Rclone plugin 或是直接合并至 Rclone 上游。</p>
-      <p>项目难度：进阶</p>
-      <p>LICENSE：可自选开源协议，但推荐 Apache 2.0</p>
-      <p>项目社区导师：myl7</p>
-      <p>导师联系方式：myl AT ustclug.org</p>
-      <p>项目产出要求：</p>
-      <ul>
-        <li>基础：提供一套 SDK 支持睿客网网盘文件的 CURD
-          <ul>
-            <li>需要保证 Go 中可用以满足下一阶段的条件</li>
-            <li>除 Go 外，可以使用 Rust/C/C++ 编写，只须提供 Go 中调用的方案即可</li>
-            <li>由我们提供测试帐号</li>
-          </ul>
-        </li>
-        <li>进阶：对接 Rclone，提供一份睿客网的 Rclone plugin
-          <ul>
-            <li>Rclone 的各种子功能，如 cache 等，可以酬情对接，以可用为第一要义</li>
-            <li>开发者可以尝试将此功能提交到 Rclone 上游进行合并</li>
-          </ul>
-        </li>
-      </ul>
-      <p>项目技术要求：</p>
-      <ul>
-        <li>掌握 Go 语言，或是掌握 Go 语言 FFI 并掌握另一门可 Go FFI 的语言</li>
-        <li>能理解文件系统语义，对 FUSE 等类似部件有一定了解</li>
-        <li>能阅读以 Rclone 为例的大型 Go 开源项目的源码并分析出扩展时需要对接的部分</li>
-      </ul>
-      <p>相关网站：</p>
-      <ul>
-        <li>睿客网：<a href="https://rec.ustc.edu.cn/">https://rec.ustc.edu.cn/</a></li>
-        <li>Rclone：官网：<a href="https://rclone.org/">https://rclone.org/</a> 源码：<a href="https://github.com/rclone/rclone">https://github.com/rclone/rclone</a></li>
-        <li>一个参考性质的半成品：<a href="https://github.com/myl7/recdrive">https://github.com/myl7/recdrive</a></li>
-      </ul>
-      ]]></content><author><name>totoroyyw</name></author><summary type="html"><![CDATA[「开源软件供应链点亮计划」是由中国科学院软件研究所发起并长期支持一项活动，旨在解决基础开源软件面临的许可、质量、维护和技术支持等问题，进而影响整个软件产业的供应链。而「开源软件供应链点亮计划——暑期 2022」是由中科院软件所与 openEuler 社区共同举办的一项面向高校学生的暑期活动，旨在鼓励在校学生积极参与开源软件的开发维护，促进国内优秀开源软件社区的蓬勃发展。]]></summary></entry><entry><title type="html">Linux 101 第三课</title><link href="https://lug.ustc.edu.cn/news/2022/04/linux-101-3/" rel="alternate" type="text/html" title="Linux 101 第三课" /><published>2022-04-17T14:30:00+08:00</published><updated>2022-04-17T19:35:56+08:00</updated><id>https://lug.ustc.edu.cn/news/2022/04/linux-101-3</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2022/04/linux-101-3/"><![CDATA[<p>4 月 17 日下午，Linux 用户协会线上举办了 Linux 101 系列活动的第三课：Linux 环境下的编程。</p>
-    <p>Linux 本身提供的是一个使用计算机的环境，因此，学习 Linux 的过程即是了解如何使用 Linux 完成各项任务的过程。而 Linux 上的编程开发正是使用中无法绕过的一环。本节 Linux 101 由明宇龙同学为我们讲解如何在 Linux 下完成 C/C++, Python 等编程语言的开发。</p>
-    <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2022.4.17_linux_101_%E7%AC%AC%E4%B8%89%E8%AF%BE/intro.png" alt="intro" /></p>
-    <p>首先，明宇龙同学向大家介绍了 C 与 C++ 语言在 Linux 上的开发过程。对于简单的单文件而言，一行 gcc 命令即可完成编译过程。更进一步，我们可以了解到编译过程的四步过程分别由 cpp、cc1、ar、ld 完成。然而在面对多文件大项目时，需要严格的编译顺序管理和并行管理，于是我们使用 make 工具对编译过程进行管理，这涉及到 Makefile 的编写。随着项目增大，文件增多，出现了 cmake 等工具来自动编写管理 Makefile 文件。</p>
-    <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2022.4.17_linux_101_%E7%AC%AC%E4%B8%89%E8%AF%BE/C.png" alt="C" /></p>
-    <p>随后明宇龙同学向我们介绍了 Linux 上 python 环境相关的基础内容，包括 python 的包管理器，python 语法版本变迁以及 python 语言的各种实现，这些内容对于构建符合自身需求和兼容性要求的 python 应用至关重要。</p>
-    <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2022.4.17_linux_101_%E7%AC%AC%E4%B8%89%E8%AF%BE/python.png" alt="python" /></p>
-    <p>在课程最后的提问环节，明宇龙同学细心地为大家解答了 Linux 相关疑问，探讨了从编程环境配置到 LUG 相关的问题，在轻松愉快的氛围中结束了 Linux 101 第三课的讨论。</p>
-    <p>本节课的讲义位于 LUG ftp 上：<a href="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2022.4.17_linux_101_%E7%AC%AC%E4%B8%89%E8%AF%BE/Linux%20101%20%E7%AC%AC%E4%B8%89%E8%AF%BE%EF%BC%9ALinux%20%E4%B8%8A%E7%9A%84%E7%BC%96%E7%A8%8B.pdf">slides</a></p>
-    ]]></content><author><name>psi-cmd</name></author><category term="LUG活动" /><category term="Linux 101" /><summary type="html"><![CDATA[4 月 17 日下午，Linux 用户协会线上举办了 Linux 101 系列活动的第三课：Linux 环境下的编程。]]></summary></entry><entry><title type="html">Linux 101 第二课</title><link href="https://lug.ustc.edu.cn/news/2022/04/linux-101-2/" rel="alternate" type="text/html" title="Linux 101 第二课" /><published>2022-04-03T14:30:00+08:00</published><updated>2022-04-18T21:17:02+08:00</updated><id>https://lug.ustc.edu.cn/news/2022/04/linux-101-2</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2022/04/linux-101-2/"><![CDATA[<p>4 月 3 日下午，Linux 用户协会于线上举办了 Linux 101 系列活动的第二课：命令行界面的使用。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://lug.ustc.edu.cn/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lug.ustc.edu.cn/" rel="alternate" type="text/html" /><updated>2022-05-16T21:22:45+08:00</updated><id>https://lug.ustc.edu.cn/feed.xml</id><title type="html">LUG @ USTC</title><subtitle>中国科学技术大学 Linux 用户协会</subtitle><author><name>USTCLUG</name></author><entry><title type="html">复古计算与无线电展</title><link href="https://lug.ustc.edu.cn/news/2022/05/retrocomputing-and-radio-show/" rel="alternate" type="text/html" title="复古计算与无线电展" /><published>2022-05-08T09:00:00+08:00</published><updated>2022-05-16T21:21:06+08:00</updated><id>https://lug.ustc.edu.cn/news/2022/05/retrocomputing-and-radio-show</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2022/05/retrocomputing-and-radio-show/"><![CDATA[<p>2022 年 5 月 8 日下午，由中国科学技术大学学生 Linux 用户协会与学生业余无线电协会承办的复古计算和无线电展活动在中区 3 号楼架空层圆满落幕。本次活动中，由学生业余无线电协会社长刘紫檀及两社社员共同筹借的复古设备得以“重见天日”，向我们再次讲述那个曾经属于它们的时代。</p>
+      <p>摩尔定律曾预言，每隔 18 个月，计算机的性能就将提高一倍。这意味着，短短 20 年，计算设备的性能已经发生了翻天覆地的改变。本次复古计算展，筹办团队不是仅仅满足于让这些被时间淘汰的设备陈列展出，而是将其修复的同时上电运行，让参观者获得属于那个时代的交互、文化和操作体验——可以说是一门让时光“倒流”的艺术。</p>
+      <p>作为常与计算技术打交道的无线电社员与 LUG 社员们，旧式荧屏的辉光对于我们有着莫大的吸引力。在 LUG 活动室中，留存着老一代社员们遗留下来的各种旧硬件，或是龙芯 MIPS 笔记本，或是苹果最后一代 PowerBook。而在网络信息中心的角落，悄然静置着一台 DEC 生产的 80486-DX2 处理器品牌机，即使曾是一个时代算力的骄傲，如今也埋没在故纸堆里。</p>
+      <h2 id="筹备">筹备</h2>
+      <p>或许是听到了这些被时代淘汰的芯片们不甘的叹息，由业余无线电协会会长刘紫檀同学牵头的复古计算展览计划悄然开始筹划。为了搜罗更多更有趣的展品，也为了让喜欢复古计算的同学们看可以更好的参与进来，两社共同成立了复古计算和无线电展筹备 QQ 群，并且通过管指委、Linux 用户协会公众号等多种渠道向校内同学发出征集通告。在同学们的踊跃参与下，展览收集到了计算尺、8086 兼容便携式计算机、486 PC-98 兼容机、PowerBook G4 等复古计算设备，CRT 电视机、VHS 影碟机、收音机、磁带机等复古电器设备。</p>
+      <p>此外，展览展出的展品还得到了校内多位老师的支持。网络信息中心的张焕杰老师得知展览的信息，向筹备同学们借出了曾经在校园网上工作过的 DEC 486 品牌机和 CRT 显示器。科大讯飞的方明老师，则贡献了曾经风靡的 FC 仿制机“小霸王”和电视机，以及几台晶体管收音机。同时，在少年班学院的代镭老师的帮助下，筹备组还借到了存放于少年班学院主控室内的库存串口鼠标器、Maxtor ATA 硬盘等硬件，以及 Windows 98、Visual Studio 6.0 等上个世纪的盒装软件。</p>
+      <p>场地是参观体验中的重要一环。得知两社筹办展览的消息，中校区创新实践基地的崔峰老师同意我们在展览当天使用中校区 3 号楼架空层北侧的场地，并且提供了插线板和桌子来布展。</p>
+      <p>同时，精美的宣传图片则是展现复古计算设备的绝佳方式。在摄影协会的帮助和支持下，筹备组于 4 月 29 日在摄影协会的影棚内拍摄了展品的展示图片，制作海报的同学之后又进行了仔细的排布。</p>
+      <p><img src="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2022.5.8_%E5%A4%8D%E5%8F%A4%E8%AE%A1%E7%AE%97%E4%B8%8E%E6%97%A0%E7%BA%BF%E7%94%B5%E5%B1%95/1652700311336.jpg" alt="展品摄影进行中" /></p>
+      <p>但是，最重要的还是让复古计算设备可以正常运行，提供属于那个时代的操作体验。计划展出的 DEC 486 PC 机，因为原配的 540 MiB 康诺硬盘已经无法正常读取并且引导，筹备组要寻找一块合适的 ATA 硬盘进行替换。同时，该机 BIOS 不支持由 CD-ROM 驱动器进行引导和启动，而 3.5’’软盘驱动器又会在引导时提示读取失败，筹备组同学只能选择将系统镜像直接写入硬盘中。由于该机 BIOS 年代久远，对于硬盘驱动器需要手工设置 C/H/S 参数，而稍后十年中流行的 ATA 硬盘均为数十 GiB，这曾一度对修复工作产生了很大的阻碍。不过终于，在展览前几日，刘紫檀同学利用 86box 和 ATA 标准大概猜测了 BIOS 读取大硬盘时卡住的原因，将 C/H/S 参数手工设置为了 1023/16/63，并且关闭了 13H 磁盘读取中断的”LBA Convert”选项，最后让该机可以成功读取主引导记录，并且引导硬盘中前 503 MiB 安装的 MS-DOS 7.1 和 Windows 98 操作系统。至于展览所展出的 Amstrad PPC512 便携式计算机，则因其软驱只兼容 3.5‘’ 720KiB 磁盘，拷贝内容颇费了一番功夫。</p>
+      <p><img src="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2022.5.8_%E5%A4%8D%E5%8F%A4%E8%AE%A1%E7%AE%97%E4%B8%8E%E6%97%A0%E7%BA%BF%E7%94%B5%E5%B1%95\1652700396251.jpg" alt="尝试用FreeDOS安装Windows98" /></p>
+      <h2 id="展出">展出</h2>
+      <p>时间来到 5 月 8 日，在九点的阳光眷顾不到的架空层实践基地中，摊位已在桌子上铺展开来。近处是无线电设备展区，稍远些是各年代的主机，远处则是与“旧时代计算机“密切相关的 3.5’’，5.25’’和 8’’软盘与盒装 CD-ROM 发行的操作系统和应用软件。大厅中，旧物错落而设，踱步其中，唯有回忆斑驳。社员们和前来参与活动的同学们三两成簇而谈，四五环屏而观。</p>
+      <p>本次展览在复古计算之余，还融入了曾经颇为流行的业余无线电活动的科普介绍。业余无线电协会提供了协谷 G90S 短波电台、ICOM IC-R71E 短波接收机、宝峰 UV-5R 手持电台和德生 PL-680 收音机等设备送展，还有用于拍发等幅电报的多种电键以及配套的天线以供把玩。在中间聊的火热的，正是呼号为 BH6AIK 的业余无线电协会成员张逸凡，他在向围观的同学们细心地介绍业余无线电的玩法与意义，以及设备与通联的基本知识。虽然加入协会的时间尚不足一年，但他在讲解过程中的热情与流利，通联示范中的随性与娴熟，暗示着他已经可以独当一面了。在经过关于频率划分、摩尔斯电码和电波传播规律的科普后，不少同学都对这一爱好表现出浓厚的兴趣，显得跃跃欲试了。协会也在其中安排了一些实践环节，如指导新人使用中国科大业余电台 BY6DX 的呼号通联合肥本地友台，用收音机接收位于陕西西安的中科院国家授时中心播发的摩尔斯电码并解出对应的字母（BPM），聆听来自欧洲和大洋洲的广播节目，空中交通管制（ATC）语音信号等。这些无线电相关的一切都散发着信息超视距传输的魅力。</p>
+      <p><img src="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2022.5.8_%E5%A4%8D%E5%8F%A4%E8%AE%A1%E7%AE%97%E4%B8%8E%E6%97%A0%E7%BA%BF%E7%94%B5%E5%B1%95/image-20220516195330394.png" alt="BH6AIK张逸凡在门外为同学们讲解业余无线电通联" /></p>
+      <p>复古计算的“明星展品”之一是之前由刘紫檀同学负责修复的 DEC 486 微机。来参观的同学，很多都对这台 32MiB 内存，66MHz 主频，并且装有 VGA 显示卡，14GiB 硬盘的“大屁股电脑”展示出了浓厚的兴趣。这台计算机安装有 Windows 98 操作系统，在展览时好奇的同学的帮助下又安装了 Visual C++ 6.0——大家纷纷惊讶于 504MiB 的分区里，操作系统只占用了 250MiB，而编译器和 IDE 也只需百兆出头。看到 IDE 熟悉的界面，有的同学开始体验在 Windows 98 上复习自己的 C 语言程序设计。</p>
+      <p><img src="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2022.5.8_%E5%A4%8D%E5%8F%A4%E8%AE%A1%E7%AE%97%E4%B8%8E%E6%97%A0%E7%BA%BF%E7%94%B5%E5%B1%95/1652700414214.jpg" alt="参观者在体验编程" /></p>
+      <p>“我晕，原来你也网上冲浪啊！”筹办团队中不少人对于互联网最初的记忆，都是拨号上网时调制解调器滴滴答答的拨号声音。本次展览中，筹办团队精心准备了由一台实达 56Kbps 串口调制解调器、一台 TCL 电话交换机和一台 Lenovo ThinkPad X61 笔记本内置的调制解调器组成的简易拨号上网体验平台。安装有 Windows 98 的 DEC 486 微机，通过串口连接实达调制解调器，再通过电话线和电话交换机连接到运行有 PPP 服务的 X61 笔记本，该笔记本再通过以太网连接到作为网关的笔记本，这台笔记本运行有 NAT 服务，可以将数据包转发到 eduroam 无线网。</p>
+      <p>服务配置过程并非是一帆风顺。先是 HyperTerminal 的“非法访问”，再是作为接入服务器的 X61 笔记本上运行的 RRAS 服务无法启动。但好在，各种“复古问题”经过详尽的资料查询和反复实验被一一解决，这台电脑最后终于连上“信息高速公路”，实现了“赛博飞升”，大家激动之余纷纷拍照。</p>
+      <p><img src="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2022.5.8_%E5%A4%8D%E5%8F%A4%E8%AE%A1%E7%AE%97%E4%B8%8E%E6%97%A0%E7%BA%BF%E7%94%B5%E5%B1%95/image-20220516194354873.png" alt="“村通网”的激动时刻" /></p>
+      <p><img src="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2022.5.8_%E5%A4%8D%E5%8F%A4%E8%AE%A1%E7%AE%97%E4%B8%8E%E6%97%A0%E7%BA%BF%E7%94%B5%E5%B1%95\image-20220516193741300.png" alt="撤展时重新展示“村通网”的激动时刻——真是看不够啊" /></p>
+      <p><img src="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2022.5.8_%E5%A4%8D%E5%8F%A4%E8%AE%A1%E7%AE%97%E4%B8%8E%E6%97%A0%E7%BA%BF%E7%94%B5%E5%B1%95/image-20220516194604314.png" alt="“网上冲浪”" /></p>
+      <p>在这台 DEC 486 微机旁边，其貌不扬的“上网本”却内藏玄机。该笔记本采用龙芯中科开发的龙芯 2F 处理器，从 BIOS 到操作系统均为开放源代码的自由软件。不少同学也登入系统，细细欣赏 cpuinfo 中的“ICT Loongson-2”字样。</p>
+      <p>PC-98 是 NEC 公司独立设计的一系列个人电脑产品的略称，而本次展出的“PC-98 兼容机”EPSON PC486NAS2 对于电子音乐和东方 Project 爱好者来说都是不容错过的展品。90 年代的膝上计算机、古铜烁金般的屏幕主色、网点与栅格交织出的纹理细节、略带拖影的视觉效果、干涩又略吵闹的背景音乐，这些要素加在一起，原汁原味的还原了东方 Project 旧作的表现。除东方系列作品外，参展者还特地演示了如何在这一设备上利用合成器进行编曲，着实令人大开眼界。</p>
+      <p><img src="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2022.5.8_%E5%A4%8D%E5%8F%A4%E8%AE%A1%E7%AE%97%E4%B8%8E%E6%97%A0%E7%BA%BF%E7%94%B5%E5%B1%95\image-20220516194052298.png" alt="东方旧作体验" /></p>
+      <p>展览最内侧的设备可谓最为“复古”，一把对数计算尺吸引着不少人的目光。对数计算尺可以比较高效的计算乘法、三角函数和开平方等操作，是计算机出现之前的“利器”。除了计算尺，展览还展出了盒装 CD-ROM 软件和各种型号的软盘。一位参观的同学幽默地表示“今天终于见到了保存按钮的实体手办！” 而 VHS 影碟机、白炽灯和录音机则将时光又偷偷往前拉回了一段时间。</p>
+      <p><img src="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2022.5.8_%E5%A4%8D%E5%8F%A4%E8%AE%A1%E7%AE%97%E4%B8%8E%E6%97%A0%E7%BA%BF%E7%94%B5%E5%B1%95/image-20220516192321270.png" alt="复古电器展示" /></p>
+      <p><img src="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2022.5.8_%E5%A4%8D%E5%8F%A4%E8%AE%A1%E7%AE%97%E4%B8%8E%E6%97%A0%E7%BA%BF%E7%94%B5%E5%B1%95\1652700385643.jpg" alt="1652700385643" /></p>
+      <p>乘兴欣然往，兴尽自然归，大半日的复古计算与无线电展在欢笑中落下帷幕。通过此次活动，同学们对早期的计算设备有了更多的认识。现在不仅是个人计算机，我们随身携带的手机，甚至是手环的计算能力都远超出这些设备。但是正是在这些看似缓慢而又简陋的设备的基础上，人们不断探索与推进，才促使了计算设备功能与性能的大幅发展。</p>
+      ]]></content><author><name>刘隆邦 &amp; 刘紫檀</name></author><category term="LUG活动" /><category term="业余无线电协会活动" /><summary type="html"><![CDATA[2022 年 5 月 8 日下午，由中国科学技术大学学生 Linux 用户协会与学生业余无线电协会承办的复古计算和无线电展活动在中区 3 号楼架空层圆满落幕。本次活动中，由学生业余无线电协会社长刘紫檀及两社社员共同筹借的复古设备得以“重见天日”，向我们再次讲述那个曾经属于它们的时代。]]></summary></entry><entry><title type="html">「开源软件供应链点亮计划——暑期 2022」USTCLUG 项目提案</title><link href="https://lug.ustc.edu.cn/news/2022/05/opensource-summer-iscas/" rel="alternate" type="text/html" title="「开源软件供应链点亮计划——暑期 2022」USTCLUG 项目提案" /><published>2022-05-07T01:00:00+08:00</published><updated>2022-05-07T20:39:54+08:00</updated><id>https://lug.ustc.edu.cn/news/2022/05/opensource-summer-iscas</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2022/05/opensource-summer-iscas/"><![CDATA[<p>「开源软件供应链点亮计划」是由中国科学院软件研究所发起并长期支持一项活动，旨在解决基础开源软件面临的许可、质量、维护和技术支持等问题，进而影响整个软件产业的供应链。而<a href="https://summer-ospp.ac.cn/#/homepage">「开源软件供应链点亮计划——暑期 2022」</a>是由中科院软件所与 openEuler 社区共同举办的一项面向高校学生的暑期活动，旨在鼓励在校学生积极参与开源软件的开发维护，促进国内优秀开源软件社区的蓬勃发展。</p>
+    <!--more-->
+    <p>此活动与 GSoC (Google Summer of Code) 的模式类似：开源项目/社区提供项目需求与导师 (mentor)；学生申请项目通过后利用暑期的时间进行开发，将成果贡献给社区；主办方（中科院软件所与 openEuler 社区）根据评估结果给学生发放奖金。所有参与的社区列表可查看 <a href="https://summer-ospp.ac.cn/#/org">https://summer-ospp.ac.cn/#/org</a>。</p>
+    <p>今年夏天，USTCLUG (中科大学生 Linux 用户协会) 计划以社区身份加入此暑期活动。以下是我们计划的项目提案，也欢迎社团的各位同学提出建议。</p>
+    <p><strong>在报名前，请先阅读由主办方提供的<a href="https://summer-ospp.ac.cn/help/student/">学生指南</a>。</strong></p>
+    <h2 id="网络测量系统">网络测量系统</h2>
+    <p>项目描述：在校园网管理中，很多时候我们需要看某个网站/服务器在学校不同地点、不同运营商网络出口下的访问质量，分别到不同机器上手工测试并汇总常常会带来巨大的人工成本，在 <a href="https://ping.chinaz.com/">https://ping.chinaz.com/</a> 或者类似的网站上我们可以很方便的看网站/服务器在全国各地访问的情况，但是可惜网站的主体和客户端都不是开源的。本项目计划建设一个可自己搭建的分布式网络测量系统，架构为控制端 + 多个测量 agent。</p>
+    <p>项目难度：基础</p>
+    <p>LICENSE：自选开源协议</p>
+    <p>项目社区导师：totoroyyw</p>
+    <p>导师联系方式：totoroyyw AT ustclug.org</p>
+    <p>项目产出要求：建设一个可自己搭建的分布式网络测量系统，控制端 + 多个测量 agent：</p>
+    <ul>
+      <li>控制端
+        <ul>
+          <li>控制端提供 Web 界面，接收测试指令、发给测量 agent、收集并展现测量结果</li>
+          <li>对不同级别的用户有权限控制（比如普通用户不能开放 TCP 端口扫描功能）</li>
+        </ul>
+      </li>
+      <li>测量 agent
+        <ul>
+          <li>启动后连接到控制端，接收测试指令、进行测试、返回测试结果</li>
+          <li>隶属于多个组，可以按照组选择运行测量指令</li>
+          <li>docker 封装部署，预计数量在 N*10 量级</li>
+        </ul>
+      </li>
+      <li>测量功能包含多节点 ping、DNS 解析、http/https get、TCP 端口连接测试、TCP 端口扫描、traceroute，具体可以参考相关网站的功能
+        <ul>
+          <li>测量功能方便扩展</li>
+        </ul>
+      </li>
+    </ul>
+    <p>项目技术要求：</p>
+    <ul>
+      <li>掌握网络编程语言</li>
+      <li>拥有 Web 开发能力</li>
+    </ul>
+    <p>相关网站：</p>
+    <ul>
+      <li><a href="https://www.17ce.com/">https://www.17ce.com/</a></li>
+      <li><a href="https://ping.pe/">https://ping.pe/</a></li>
+      <li><a href="https://ping.sx/ping">https://ping.sx/ping</a></li>
+      <li><a href="https://ping.chinaz.com/">https://ping.chinaz.com/</a></li>
+    </ul>
+    <h2 id="网盘睿客网的-sdk-及-rclone-plugin-开发">网盘睿客网的 SDK 及 Rclone plugin 开发</h2>
+    <p>项目描述：中科大校内有一套网盘系统睿客网（英文指代暂规定为 recdrive），此系统目前仅有网页界面而没有命令行接口，因而无法轻松地将睿客网提供的云存储整合到其他系统中。我们计划在此次项目中，为睿客网实现一套 SDK，支持基础的文件 CURD 操作，然后将此 SDK 整合到云存储命令行工具 Rclone 中，提供给用户一份 Rclone plugin 或是直接合并至 Rclone 上游。</p>
+    <p>项目难度：进阶</p>
+    <p>LICENSE：可自选开源协议，但推荐 Apache 2.0</p>
+    <p>项目社区导师：myl7</p>
+    <p>导师联系方式：myl AT ustclug.org</p>
+    <p>项目产出要求：</p>
+    <ul>
+      <li>基础：提供一套 SDK 支持睿客网网盘文件的 CURD
+        <ul>
+          <li>需要保证 Go 中可用以满足下一阶段的条件</li>
+          <li>除 Go 外，可以使用 Rust/C/C++ 编写，只须提供 Go 中调用的方案即可</li>
+          <li>由我们提供测试帐号</li>
+        </ul>
+      </li>
+      <li>进阶：对接 Rclone，提供一份睿客网的 Rclone plugin
+        <ul>
+          <li>Rclone 的各种子功能，如 cache 等，可以酬情对接，以可用为第一要义</li>
+          <li>开发者可以尝试将此功能提交到 Rclone 上游进行合并</li>
+        </ul>
+      </li>
+    </ul>
+    <p>项目技术要求：</p>
+    <ul>
+      <li>掌握 Go 语言，或是掌握 Go 语言 FFI 并掌握另一门可 Go FFI 的语言</li>
+      <li>能理解文件系统语义，对 FUSE 等类似部件有一定了解</li>
+      <li>能阅读以 Rclone 为例的大型 Go 开源项目的源码并分析出扩展时需要对接的部分</li>
+    </ul>
+    <p>相关网站：</p>
+    <ul>
+      <li>睿客网：<a href="https://rec.ustc.edu.cn/">https://rec.ustc.edu.cn/</a></li>
+      <li>Rclone：官网：<a href="https://rclone.org/">https://rclone.org/</a> 源码：<a href="https://github.com/rclone/rclone">https://github.com/rclone/rclone</a></li>
+      <li>一个参考性质的半成品：<a href="https://github.com/myl7/recdrive">https://github.com/myl7/recdrive</a></li>
+    </ul>
+    ]]></content><author><name>totoroyyw</name></author><summary type="html"><![CDATA[「开源软件供应链点亮计划」是由中国科学院软件研究所发起并长期支持一项活动，旨在解决基础开源软件面临的许可、质量、维护和技术支持等问题，进而影响整个软件产业的供应链。而「开源软件供应链点亮计划——暑期 2022」是由中科院软件所与 openEuler 社区共同举办的一项面向高校学生的暑期活动，旨在鼓励在校学生积极参与开源软件的开发维护，促进国内优秀开源软件社区的蓬勃发展。]]></summary></entry><entry><title type="html">Linux 101 第三课</title><link href="https://lug.ustc.edu.cn/news/2022/04/linux-101-3/" rel="alternate" type="text/html" title="Linux 101 第三课" /><published>2022-04-17T14:30:00+08:00</published><updated>2022-04-17T19:35:56+08:00</updated><id>https://lug.ustc.edu.cn/news/2022/04/linux-101-3</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2022/04/linux-101-3/"><![CDATA[<p>4 月 17 日下午，Linux 用户协会线上举办了 Linux 101 系列活动的第三课：Linux 环境下的编程。</p>
+  <p>Linux 本身提供的是一个使用计算机的环境，因此，学习 Linux 的过程即是了解如何使用 Linux 完成各项任务的过程。而 Linux 上的编程开发正是使用中无法绕过的一环。本节 Linux 101 由明宇龙同学为我们讲解如何在 Linux 下完成 C/C++, Python 等编程语言的开发。</p>
+  <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2022.4.17_linux_101_%E7%AC%AC%E4%B8%89%E8%AF%BE/intro.png" alt="intro" /></p>
+  <p>首先，明宇龙同学向大家介绍了 C 与 C++ 语言在 Linux 上的开发过程。对于简单的单文件而言，一行 gcc 命令即可完成编译过程。更进一步，我们可以了解到编译过程的四步过程分别由 cpp、cc1、ar、ld 完成。然而在面对多文件大项目时，需要严格的编译顺序管理和并行管理，于是我们使用 make 工具对编译过程进行管理，这涉及到 Makefile 的编写。随着项目增大，文件增多，出现了 cmake 等工具来自动编写管理 Makefile 文件。</p>
+  <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2022.4.17_linux_101_%E7%AC%AC%E4%B8%89%E8%AF%BE/C.png" alt="C" /></p>
+  <p>随后明宇龙同学向我们介绍了 Linux 上 python 环境相关的基础内容，包括 python 的包管理器，python 语法版本变迁以及 python 语言的各种实现，这些内容对于构建符合自身需求和兼容性要求的 python 应用至关重要。</p>
+  <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2022.4.17_linux_101_%E7%AC%AC%E4%B8%89%E8%AF%BE/python.png" alt="python" /></p>
+  <p>在课程最后的提问环节，明宇龙同学细心地为大家解答了 Linux 相关疑问，探讨了从编程环境配置到 LUG 相关的问题，在轻松愉快的氛围中结束了 Linux 101 第三课的讨论。</p>
+  <p>本节课的讲义位于 LUG ftp 上：<a href="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2022.4.17_linux_101_%E7%AC%AC%E4%B8%89%E8%AF%BE/Linux%20101%20%E7%AC%AC%E4%B8%89%E8%AF%BE%EF%BC%9ALinux%20%E4%B8%8A%E7%9A%84%E7%BC%96%E7%A8%8B.pdf">slides</a></p>
+  ]]></content><author><name>psi-cmd</name></author><category term="LUG活动" /><category term="Linux 101" /><summary type="html"><![CDATA[4 月 17 日下午，Linux 用户协会线上举办了 Linux 101 系列活动的第三课：Linux 环境下的编程。]]></summary></entry><entry><title type="html">Linux 101 第二课</title><link href="https://lug.ustc.edu.cn/news/2022/04/linux-101-2/" rel="alternate" type="text/html" title="Linux 101 第二课" /><published>2022-04-03T14:30:00+08:00</published><updated>2022-04-18T21:17:02+08:00</updated><id>https://lug.ustc.edu.cn/news/2022/04/linux-101-2</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2022/04/linux-101-2/"><![CDATA[<p>4 月 3 日下午，Linux 用户协会于线上举办了 Linux 101 系列活动的第二课：命令行界面的使用。</p>
   <p>命令行界面是 Linux 系统使用的精髓所在，熟练地使用命令行可以让同学们更加高效地在 Linux 系统下处理任务。本节 101 由赵作竑同学为我们进行 shell 相关内容的讲解。</p>
   <p>初次接触命令行界面（shell），自然应当由简入繁，循序渐进。所以赵作竑同学在带领大家认识并打开 shell 后，首先介绍了几个简单的命令，如 ls、cd、cal、date，让大家清楚命令行的输出格式。</p>
   <p><img src="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2022.4.3_linux_101_%E7%AC%AC%E4%BA%8C%E8%AF%BE/start.png" alt="start" /></p>
@@ -182,748 +211,4 @@
   <p>在进行了短暂的休息后，我们开放了二课签退码，无意参与 LUG 社团章程讨论的同学可以先行离开。在大部分在场同学离开后，我们对章程中的表述进行了修改，并得到了出席社团成员三分之二人数表决通过。章程表述修改如下：</p>
   <p>将《中国科学技术大学学生 Linux 用户协会章程》中第八条末尾 “委员会会长任期⼀年， 不得连任” 表述，修改为 “委员会会长任期⼀年，一般不得连任，特殊情况下最多可连任一届”。</p>
   <p><a href="http://ftp.lug.ustc.edu.cn/%E7%A4%BE%E5%9B%A2%E7%AE%A1%E7%90%86/%E7%AB%A0%E7%A8%8B/2021-%E7%AB%A0%E7%A8%8B.pdf">修改后章程</a>可在 ftp 上查看。</p>
-  ]]></content><author><name>psi-cmd</name></author><category term="LUG活动" /><summary type="html"><![CDATA[2021 年 11 月 17 日，下午 4:30，校学生 Linux 用户协会秋季学期全员大会如期举行，本届全员大会一如既往，承担着向新成员介绍 LUG 社团内部情况的任务，同时也进行了 LUG 章程讨论环节。指导老师与本届负责人悉数到场，为现场的新同学们答疑解惑。部分社团老人也参与到社团建设的讨论中，时刻关注着社团的发展。]]></summary></entry><entry><title type="html">菜鸡写给菜鸡的 NetHack 入门教程</title><link href="https://lug.ustc.edu.cn/planet/2021/09/nethack-gitgud/" rel="alternate" type="text/html" title="菜鸡写给菜鸡的 NetHack 入门教程" /><published>2021-09-27T00:00:00+08:00</published><updated>2021-10-18T09:09:24+08:00</updated><id>https://lug.ustc.edu.cn/planet/2021/09/nethack-gitgud</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2021/09/nethack-gitgud/"><![CDATA[<!-- Workaround for jekyll-titles-from-headings -->
-    <h2 id="教程说明">教程说明</h2>
-    <p>本教程只介绍最基本的操作和游戏刚刚开始阶段的策略，帮助新手活过第一层。引用内容为补充或 Fun facts，可以忽略。图中游戏“截图”均为字符界面的直接复制——虽然没有了颜色或加粗效果，但还是觉得这样更合适一些。</p>
-    <h2 id="关于">关于</h2>
-    <p>NetHack 是一款历史悠久的 Roguelike 游戏，基于龙与地下城规则，也有着 Roguelike 典型特征：随机生成地图，永久死亡，难度和复杂度非常高。同时，游戏中也融合了各种文化和领域的元素，并且有多种有趣的提示信息和死亡方式。</p>
-    <blockquote>
-      <p>总有一二十年才通关的老玩家说 NetHack 不难——或许和某些其他 Roguelike 相比确实如此，但这和你有什么关系呢？</p>
-    </blockquote>
-    <p>此游戏默认只有字符界面，以下为一个游戏画面，可以感受一下：</p>
-    <div class="language-plaintext highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code>This kobold corpse tastes terrible!--More--
-
-                                                       --------
-                      ----------                       |......-
-                      |........|`######################-......|
-                      |........|     -----------       |&lt;.....|
-                      |........|     |.........|  #####.....{.|
-                      |........-#####|.........-###    --------
-                      |........|    #..........|
-                      --------|-     -------.---
-                             ##
-                              ##
-                              #
-                             #
-                     --------.--
-                     |$........|
-                     |.........|
-    ------------    #..........|
-    |.....@.d..|    #|..........
-    |.....^.....#####|....&gt;....|
-    ------------     -----------
-
-Petergu the Stripling          St:15 Dx:14 Co:18 In:9 Wi:7 Ch:10 Lawful
-Dlvl:1 $:11 HP:7(16) Pw:1(2) AC:6 Xp:1
-</code></pre>
-      </div>
-    </div>
-    <blockquote>
-      <p>贴图模式也是有的，但是不如字符模式经典</p>
-    </blockquote>
-    <h2 id="安装和配置">安装和配置</h2>
-    <p>如果你使用 Linux 等操作系统，那么 NetHack 多半可以直接从软件源中安装：包名通常为 <code class="language-plaintext highlighter-rouge">nethack</code> 或 <code class="language-plaintext highlighter-rouge">nethack-console</code>。如果使用 Windows，可以在<a href="https://nethack.org/v366/ports/download-win.html">官方网站</a>下载。建议使用默认的英文版。</p>
-    <p>为了更好地游戏体验，在 Linux 上推荐将以下内容添加至 <code class="language-plaintext highlighter-rouge">~/.nethackrc</code> 配置文件（这也是 Ubuntu 中自带的配置）。</p>
-    <pre><code class="language-dosini">#
-# System-wide NetHack configuration file for tty-based NetHack.
-#
-
-OPTIONS=windowtype:tty,toptenwin,hilite_pet
-OPTIONS=fixinv,safe_pet,sortpack,tombstone,color
-OPTIONS=verbose,news,fruit:potato
-OPTIONS=dogname:Slinky
-OPTIONS=catname:Rex
-OPTIONS=pickup_types:$
-OPTIONS=nomail
-
-# Enable this if you want to see your inventory sorted in alphabetical
-# order by item instead of by index letter:
-# OPTIONS=sortloot:full
-# or if you just want containers sorted:
-# OPTIONS=sortloot:loot
-
-#
-# Some sane menucolor defaults
-#
-
-OPTIONS=menucolors
-MENUCOLOR=" blessed "=green
-MENUCOLOR=" holy "=green
-MENUCOLOR=" uncursed "=yellow
-MENUCOLOR=" cursed "=red
-MENUCOLOR=" unholy "=red
-MENUCOLOR=" cursed .* (being worn)"=orange&amp;underline
-</code></pre>
-    <h2 id="开局">开局</h2>
-    <p>运行 NetHack 后将看到以下提示：</p>
-    <div class="language-plaintext highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code>NetHack, Copyright 1985-2020
-         By Stichting Mathematisch Centrum and M. Stephenson.
-         Version 3.6.6 Unix, built Mar 18 18:21:43 2020.
-         See license for details.
-
-
-Shall I pick character's race, role, gender and alignment for you? [ynaq]
-</code></pre>
-      </div>
-    </div>
-    <p>你可以按 <code class="language-plaintext highlighter-rouge">n</code> 然后自己选择人物的种族（人类，矮人，精灵，地精，兽人）、角色（考古学家、骑士、游客等 13 种）、性别（男、女）和阵营（守序、中立、混乱），或者按 <code class="language-plaintext highlighter-rouge">y</code> 让系统随机选一个。对于新手，女武神（Valkyrie）、野蛮人（Barbarian）和武士（Samurai）是开局较为容易的角色，虽然我觉得巫师（Wizard）的游戏体验比较有趣。</p>
-    <blockquote>
-      <p>性别和阵营可以在游戏中因道具改变</p>
-    </blockquote>
-    <blockquote>
-      <p>每个角色的每个阵营对应一个不同的神。其中僧侣（Monk）的神是中国神话传说中的”人物”：山海经、赤松子和黄帝</p>
-    </blockquote>
-    <p>选好之后根据提示按 <code class="language-plaintext highlighter-rouge">y</code> 开始。出现 <code class="language-plaintext highlighter-rouge">--More--</code> 时说明提示未显示完，按空格到下一句话。</p>
-    <blockquote>
-      <p>被怪打一下后出现 <code class="language-plaintext highlighter-rouge">--More--</code>，下一句话基本是 <code class="language-plaintext highlighter-rouge">You die...</code></p>
-    </blockquote>
-    <div class="language-plaintext highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code>Hello petergu, welcome to NetHack!  You are a neutral male human Wizard.
---More--
-
-
-
-
-  -----
-  |..@|
-  |.f(|
-  |x..|
-  |...|
-  |?..+
-  -----
-
-
-
-
-
-
-
-
-
-Petergu the Evoker             St:9 Dx:8 Co:16 In:17 Wi:14 Ch:11 Neutral
-Dlvl:1 $:0 HP:12(12) Pw:7(7) AC:9 Xp:1
-</code></pre>
-      </div>
-    </div>
-    <p>图中，<code class="language-plaintext highlighter-rouge">@</code> 是你，身边白底（复制出来看不到了）的 <code class="language-plaintext highlighter-rouge">f</code> 是你的宠物猫，<code class="language-plaintext highlighter-rouge">x</code> 是一只怪（grid bug），<code class="language-plaintext highlighter-rouge">+</code> 是关着的门。各种字符代表什么需要慢慢记忆，或者按 <code class="language-plaintext highlighter-rouge">/</code> 然后根据提示再按 <code class="language-plaintext highlighter-rouge">/</code>，移动光标查看地图上的信息，结束按 <code class="language-plaintext highlighter-rouge">ESC</code>。</p>
-    <blockquote>
-      <p>无论任何时候都要仔细阅读提示。这和学习 Linux 命令行是一样的。</p>
-    </blockquote>
-    <p>底栏是各种状态。新手主要要关注的就是 HP，即生命值；AC，Armor Class，代表防御，越低越好；以及可能出现在底栏的其他临时状态，比如失明（Blind）。其他属性的含义可在 Wiki 上查询。</p>
-    <blockquote>
-      <p>HP 降为 0 只是最无聊的死亡方式</p>
-    </blockquote>
-    <p>按 <code class="language-plaintext highlighter-rouge">i</code> 可以打开装备栏查看自己的物品。空格返回。</p>
-    <div class="language-plaintext highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code> Weapons
- a - a blessed +1 quarterstaff (weapon in hands)
- Armor
- b - an uncursed +0 cloak of magic resistance (being worn)
- Scrolls
- i - an uncursed scroll of magic mapping
- j - an uncursed scroll of enchant weapon
- k - an uncursed scroll of remove curse
- Spellbooks
- l - a blessed spellbook of force bolt
- m - an uncursed spellbook of create monster
- Potions
- f - an uncursed potion of gain ability
- g - an uncursed potion of monster detection
- h - an uncursed potion of healing
- Rings
- d - an uncursed ring of fire resistance
- e - an uncursed ring of invisibility
- Wands
- c - a wand of magic missile (0:4)
- Tools
- n - a magic marker (0:55)
- o - an uncursed blindfold
- (end)
-</code></pre>
-      </div>
-    </div>
-    <p>按 <code class="language-plaintext highlighter-rouge">Ctrl-X</code> 可以查看自身可以查看的属性。空格翻页和返回。</p>
-    <blockquote>
-      <p>更多的属性不能自我感觉到，只有特殊情况下才会显示出来</p>
-    </blockquote>
-    <div class="language-plaintext highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code> Petergu the Wizard's attributes:
-
- Background:
-  You are an Evoker, a level 1 male human Wizard.
-  You are neutral, on a mission for Thoth
-  who is opposed by Ptah (lawful) and Anhur (chaotic).
-  You are in the Dungeons of Doom, on level 1.
-  You entered the dungeon 9 turns ago.
-  There is a full moon in effect.
-  You have 0 experience points.
-
- Basics:
-  You have all 12 hit points.
-  You have all 7 energy points (spell power).
-  Your armor class is 9.
-  Your wallet is empty.
-  Autopickup is on for '$' plus thrown.
-
- Current Characteristics:
-  Your strength is 9.
-  Your dexterity is 8.
-  Your constitution is 16.
-  Your intelligence is 17.
- (1 of 2)
-</code></pre>
-      </div>
-    </div>
-    <p>“静态”操作就这些：因为 NetHack 是回合制游戏，你可以随时查看这些信息并在进行动作前充分思考。</p>
-    <p>那么接下来的任务就是活下去了。毕竟，游戏的目的是在地牢深处找到炎多的护符（Amulet of Yendor）并将其献给自己的神，而不是原地不动。</p>
-    <h2 id="游戏开始">游戏开始</h2>
-    <p>首先是<strong>移动</strong>。推荐的移动方式是和 Vim 操作类似的 8 个方向的 <code class="language-plaintext highlighter-rouge">hjklyubn</code>，当然新手用四个方向键也未尝不可。</p>
-    <blockquote>
-      <p>事实上，用方向键移动 as good as dead。按下一个移动键不松手也是常见的死亡原因。</p>
-      <p>可以用大写的 <code class="language-plaintext highlighter-rouge">HJKLYUBN</code> 向一个方向长距离移动</p>
-    </blockquote>
-    <p>比如说，按下箭头或 <code class="language-plaintext highlighter-rouge">j</code> 移动到门边上。移动途中，<code class="language-plaintext highlighter-rouge">x</code> 被猫杀死了。</p>
-    <blockquote>
-      <p><code class="language-plaintext highlighter-rouge">Rex misses the grid bug. Rex bites the grid bug.</code></p>
-      <p><code class="language-plaintext highlighter-rouge">Rex bites the grid bug. The grid bug is killed!</code></p>
-    </blockquote>
-    <blockquote>
-      <p>按 <code class="language-plaintext highlighter-rouge">Ctrl-P</code> 可以查看之前的消息。</p>
-    </blockquote>
-    <blockquote>
-      <p>前期，宠物比你战斗力强也是常有的事</p>
-    </blockquote>
-    <div class="language-plaintext highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code> -----
- |..&lt;|
- |..(|
- |..f|
- |...|
- |..@+
- -----
-</code></pre>
-      </div>
-    </div>
-    <p><strong>开门</strong>才能出去。按 <code class="language-plaintext highlighter-rouge">ol</code> 开右侧（<code class="language-plaintext highlighter-rouge">l</code> 移动方向）的门。之后就可以向右探险了。沿着过道（<code class="language-plaintext highlighter-rouge">#</code>）走了一段，发现没有路了。</p>
-    <div class="language-plaintext highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code>-----
-|..&lt;|
-|..(|
-|...|
-|...|
-|...-#
------#
-     ###
-       #
-       #
-       ###f
-          @
-</code></pre>
-      </div>
-    </div>
-    <p>这也是常见操作：需要搜索以下才能找到路。按 <code class="language-plaintext highlighter-rouge">s</code> <strong>搜索</strong>，或者更常用的，按 <code class="language-plaintext highlighter-rouge">10s</code> 搜索 10 次。如果没有路就再来 10 次。发现了隐藏的门，于是继续开门走进屋子。</p>
-    <div class="language-plaintext highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code>You find a hidden door.
-
-
-
-
-
-  -----
-  |..&lt;|
-  |..(|
-  |...|
-  |...|
-  |...-#
-  -----#
-       ###
-         #
-         #
-         ###f
-            @+
-</code></pre>
-      </div>
-    </div>
-    <p>屋子里有一个 <code class="language-plaintext highlighter-rouge">[</code> ，走到物品上方并按 <code class="language-plaintext highlighter-rouge">,</code> <strong>捡起</strong>。<code class="language-plaintext highlighter-rouge">p - a splint mail.</code>。这是一件盔甲，按 <code class="language-plaintext highlighter-rouge">w</code> <strong>穿戴</strong>，再按 <code class="language-plaintext highlighter-rouge">？</code> 选择可穿戴的物品，<code class="language-plaintext highlighter-rouge">p</code> 选择新捡到的盔甲。<code class="language-plaintext highlighter-rouge">You cannot wear armor over a cloak.</code>，先把外套<strong>脱下</strong>。按 <code class="language-plaintext highlighter-rouge">T</code>，看提示已经脱掉了，再穿盔甲，然后再次 <code class="language-plaintext highlighter-rouge">W</code> 穿上外套。这是可以看见 AC 降为 3，盔甲不错。</p>
-    <blockquote>
-      <p>我们的运气不错。如果发现 <code class="language-plaintext highlighter-rouge">AC</code> 上升，多半是盔甲被诅咒（cursed），并且被诅咒的兵器和物品无法脱下。</p>
-    </blockquote>
-    <div class="language-plaintext highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code>                                             ----------------
-                                            #@d.............|
-  -----                                     f|...............           ....
-  |..&lt;|                                  #### ..............|
-  |..(|                                  ####+ .............+
-  |...|                                  ##    --------- ----
-  |...|                                  ##
-  |...-#                                 ##
-  -----#     ---------                   ##
-       ###   |.......|      -----+----  ###
-         #   |.......|      |.........###
-         #   |.......|      |.......{|####
-         ####|........######-........|
-            #-.......|      |........|
-             |.......|      |..&gt;.....|
-             ---------      |........|
-                            ----------
-
-Petergu the Evoker             St:9 Dx:8 Co:16 In:17 Wi:14 Ch:11 Neutral
-Dlvl:1 $:0 HP:10(12) Pw:7(7) AC:3 Xp:1
-</code></pre>
-      </div>
-    </div>
-    <p>继续探险，开门看见一只豺狼。直接按向右移动的键（<code class="language-plaintext highlighter-rouge">l</code>）<strong>攻击</strong>它。几步之后，狼被打死，你也只剩 8 HP 了。</p>
-    <blockquote>
-      <p>当然，见到怪不掂量一下自己的能力就直接攻击并不是好的策略。</p>
-    </blockquote>
-    <blockquote>
-      <p>比如如果正面击打一个冰冻之眼（Frozen eye），你会被冻住若干回合，然后被旁边路过的小怪打死。</p>
-    </blockquote>
-    <blockquote>
-      <p>可以按 <code class="language-plaintext highlighter-rouge">.</code> 原地休息，这会缓慢回复失去的 HP。</p>
-    </blockquote>
-    <div class="language-plaintext highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code>You kill the jackal!  You hear water falling on coins.
-
-
-
-                                             ----------------
-                                            f@%.............|
-  -----                                     #|...............           ....
-  |..&lt;|                                  #### ..............|
-  |..(|                                  ####+ .............+
-  |...|                                  ##    --------- ----
-  |...|                                  ##
-  |...-#                                 ##
-  -----#     ---------                   ##
-       ###   |.......|      -----+----  ###
-         #   |.......|      |.........###
-         #   |.......|      |.......{|####
-         ####|........######-........|
-            #-.......|      |........|
-             |.......|      |..&gt;.....|
-             ---------      |........|
-                            ----------
-
-Petergu the Evoker             St:9 Dx:8 Co:16 In:17 Wi:14 Ch:11 Neutral
-Dlvl:1 $:0 HP:8(12) Pw:7(7) AC:3 Xp:1
-</code></pre>
-      </div>
-    </div>
-    <p>可以看到提示狼被打死。同时你听到一些声音。</p>
-    <blockquote>
-      <p><code class="language-plaintext highlighter-rouge">You hear water falling on coins.</code> 的意思是本层有喷泉（中间屋子里的 <code class="language-plaintext highlighter-rouge">{</code>）</p>
-    </blockquote>
-    <p>地上的 <code class="language-plaintext highlighter-rouge">%</code> 是狼的尸体。杀死怪物后你多半希望<strong>吃掉</strong>尸体，否则没有食物会饿死。移动到 <code class="language-plaintext highlighter-rouge">%</code> 上方并按 <code class="language-plaintext highlighter-rouge">e</code>，选择 <code class="language-plaintext highlighter-rouge">y</code> 吃掉。</p>
-    <blockquote>
-      <p><code class="language-plaintext highlighter-rouge">You see here a jackal corpse.</code></p>
-      <p><code class="language-plaintext highlighter-rouge">There is a jackal corpse here; eat it? [ynq] (n) y</code></p>
-      <p><code class="language-plaintext highlighter-rouge">This jackal corpse tastes okay. You finish eating the jackal corpse.</code></p>
-    </blockquote>
-    <blockquote>
-      <p>当然，不是什么都能吃。有些怪的尸体会让你中毒。如果因此呕吐，你会变得更饿。然而有些尸体可以让你获得某些能力（比如抵抗中毒、抵抗寒冷等）。如果触摸鸡头蛇怪（cockatrace）的尸体，会变成石头。</p>
-    </blockquote>
-    <p>这时，可以看到我们吃饱了，变得 Satiated。</p>
-    <blockquote>
-      <p>这时继续大量吃东西可能会被噎死。</p>
-    </blockquote>
-    <p>同时发现，有一扇锁着的门。我们目前没有撬锁工具，只能<strong>踢</strong>开。按 <code class="language-plaintext highlighter-rouge">Ctrl-D</code> 然后方向 <code class="language-plaintext highlighter-rouge">h</code> 踢门几次。</p>
-    <div class="language-plaintext highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code>This door is locked.
-
-
-
-                                             ----------------
-                                            #-..............|            -----
-  -----                                     #|.f.............           .....|
-  |..&lt;|                                  ####|..............|
-  |..(|                                  ####+@.............+
-  |...|                                  ##  ----------- ----
-  |...|                                  ##
-  |...-#                                 ##
-  -----#     ---------                   ##
-       ###   |.......|      -----+----  ###
-         #   |.......|      |.........###
-         #   |.......|      |.......{|####
-         ####|........######-........|
-            #-.......|      |........|
-             |.......|      |..&gt;.....|
-             ---------      |........|
-                            ----------
-
-Petergu the Evoker             St:9 Dx:8 Co:16 In:17 Wi:14 Ch:11 Neutral
-Dlvl:1 $:0 HP:9(12) Pw:7(7) AC:3 Xp:1
-</code></pre>
-      </div>
-    </div>
-    <p>我们踢门多次门才打开，中途来了两只狼，第一只被猫一击咬死，第二只也被猫一击咬死。</p>
-    <blockquote>
-      <p><code class="language-plaintext highlighter-rouge">This door is locked.</code></p>
-      <p><code class="language-plaintext highlighter-rouge">WHAMMM!!! Rex misses the jackal.</code></p>
-      <p><code class="language-plaintext highlighter-rouge">WHAMMM!!! Rex bites the jackal. The jackal is killed!</code></p>
-      <p><code class="language-plaintext highlighter-rouge">WHAMMM!!!</code></p>
-      <p><code class="language-plaintext highlighter-rouge">WHAMMM!!!</code></p>
-      <p><code class="language-plaintext highlighter-rouge">WHAMMM!!!</code></p>
-      <p><code class="language-plaintext highlighter-rouge">As you kick the door, it crashes open! The jackal bites!</code></p>
-      <p><code class="language-plaintext highlighter-rouge">Rex misses the jackal.</code></p>
-      <p><code class="language-plaintext highlighter-rouge">You miss the jackal. The jackal bites! Rex bites the jackal.</code></p>
-      <p><code class="language-plaintext highlighter-rouge">The jackal is killed!</code></p>
-    </blockquote>
-    <blockquote>
-      <p>注意到图右边部分显示的房间了吗？因为从隔壁房间的门口“路过”，视野所限只能看到屋内的一部分。字符界面不代表没有光照的处理。</p>
-    </blockquote>
-    <p>一层探险结束后，捡到了一些其他护身符和戒指等。因为捡东西过多，处于 <code class="language-plaintext highlighter-rouge">Burdened</code> 状态。走到 <code class="language-plaintext highlighter-rouge">&gt;</code> 的位置，按 <code class="language-plaintext highlighter-rouge">&gt;</code> <strong>下行</strong>到下一层地牢。</p>
-    <blockquote>
-      <p>负重是非常不好的，但本人就是不想扔东西。</p>
-    </blockquote>
-    <blockquote>
-      <p><code class="language-plaintext highlighter-rouge">You fall down the stairs.</code></p>
-    </blockquote>
-    <blockquote>
-      <p>下楼的时候宠物如果在你身边一格以内，会和你一起下去。否则会被留在原地，并逐渐野化</p>
-    </blockquote>
-    <p>这时候，背包里已经有一些不知道是什么的装备了。</p>
-    <blockquote>
-      <p><code class="language-plaintext highlighter-rouge">r - a sapphire ring</code></p>
-      <p><code class="language-plaintext highlighter-rouge">t - a pyramidal amulet</code></p>
-    </blockquote>
-    <p><strong>鉴定物品</strong>（Identification）是 NetHack 中重要而困难的。最基础的方法就是亲自体验：<code class="language-plaintext highlighter-rouge">P</code> - <code class="language-plaintext highlighter-rouge">?</code> - <code class="language-plaintext highlighter-rouge">t</code> 戴上护身符。好像没什么变化，仍然不知道是什么。按 <code class="language-plaintext highlighter-rouge">R</code> 移除。戒指也一样，什么也没鉴定成。只能作罢。</p>
-    <blockquote>
-      <p>鉴定物品的高级技巧有很多，比如在商店观察卖出价格。</p>
-    </blockquote>
-    <blockquote>
-      <p>NetHack 中每种戒指、护身符和卷轴有不同的外观。每一局游戏中外观和功能的对应保持不变，但不同局游戏的这种对应是随机的。这一点并不是 trivial 的，因为，比如说，戒指的材质（金属、石头等）不一样，从而决定了每一局中玩家能通过变身（polymorph）并吃掉戒指获得何种永久属性。</p>
-    </blockquote>
-    <p>继续同样的探险。看到商店，但我们没有钱，只好离开。</p>
-    <blockquote>
-      <p><code class="language-plaintext highlighter-rouge">"Hello, petergu! Welcome to Akhalataki's used armor dealership!"</code></p>
-    </blockquote>
-    <blockquote>
-      <p>攻击商店老板是非常不明智的行为。但是，如果店内有死亡魔杖（Wand of death），可以用其将老板杀死并获得所有的物品。如果有许愿魔杖（Wand of wishing），可以许愿得到死亡魔杖。这二者的基础价格都是 1200，很容易被认出。</p>
-    </blockquote>
-    <blockquote>
-      <p>如果你是游客（Tourist），并且穿着夏威夷 T 恤（Hawaiian shirt），会被商店老板加价“宰客”。</p>
-    </blockquote>
-    <blockquote>
-      <p>宠物可以捡起商店中的物品并在店门外放下—— shoplifting。</p>
-      <p><code class="language-plaintext highlighter-rouge">You hear someone cursing shoplifters.</code></p>
-    </blockquote>
-    <div class="language-plaintext highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code>         #
-        ##
-        #
-        #
---------|--
-|.......@.|
-|[[[[[[f@[|
-|[[[[[)[[)|
-|))[[.[[[[|
------------
-</code></pre>
-      </div>
-    </div>
-    <p>捡到并戴上一枚红宝石戒指后，发现这是被诅咒的——摘不下来了。然而还不知道它是干什么的，但多半不是什么好东西。</p>
-    <blockquote>
-      <p><code class="language-plaintext highlighter-rouge">E - a cursed ruby ring (on right hand)</code></p>
-    </blockquote>
-    <div class="language-plaintext highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code>You see here a blindfold.  You faint from lack of food.--More--
-
-                                       ------
-                                       |....|
-                                      #......###
-                           ------######|....|  ##     ------
-      ----------------     |....-######|....|   ###   |....|
-      |..............-     |....|#     |....|     ####....F|
-      .......@..F....|     |....|      |....|         |....-##
-      |......f.......|     |..^..      --)---         ------ ###  ------------
-      ---.------------     -|-.--        #                     ###..{........|
-         ###                #            #####                    |..........|
-           ####             #                ##                   |........&gt;.|
-             -.----      ---.-      ----------.--                 ------------
-             |....|      |...|      ............|
-             |....|      |...|      |...........|
-             |....|      |...|      |.&lt;.........+
-             |.....######-...|      |...........|
-             ------      -----      -------------
-
-
-
-Petergu the Evoker             St:8 Dx:8 Co:16 In:17 Wi:14 Ch:11 Neutral
-Dlvl:3 $:28 HP:15(15) Pw:23(23) AC:1 Xp:2 Fainted Burdened Deaf
-</code></pre>
-      </div>
-    </div>
-    <p>不久之后，因饥饿晕倒。戴上的戒指多半是 Ring of hunger。按 <code class="language-plaintext highlighter-rouge">e</code> 吃一个鸡蛋，回过神来。正好背包里有解除诅咒的卷轴，读一个：按 <code class="language-plaintext highlighter-rouge">r</code> - <code class="language-plaintext highlighter-rouge">?</code> - <code class="language-plaintext highlighter-rouge">k</code>。</p>
-    <blockquote>
-      <p><code class="language-plaintext highlighter-rouge">As you read the scroll, it disappears.--More--</code></p>
-      <p><code class="language-plaintext highlighter-rouge">You feel like someone is helping you. Rex misses the lichen.--More--</code></p>
-    </blockquote>
-    <p>然后，戒指就可以摘下来了。</p>
-    <p>又饿了，吃个鸡蛋结果变质了。</p>
-    <blockquote>
-      <p><code class="language-plaintext highlighter-rouge">Blecch! Rotten food! The world spins and goes dark.</code></p>
-    </blockquote>
-    <p>又走了一阵，没有吃的了（因为尸体都让猫吃了），已经晕倒，怎么办？只有神能救我们了。</p>
-    <blockquote>
-      <p><code class="language-plaintext highlighter-rouge">Wizard Needs Food, Badly!</code></p>
-    </blockquote>
-    <p><code class="language-plaintext highlighter-rouge">#pray</code></p>
-    <blockquote>
-      <p><code class="language-plaintext highlighter-rouge">You begin praying to Thoth. You are surrounded by a shimmering light.--More--</code></p>
-      <p><code class="language-plaintext highlighter-rouge">You finish your prayer. You feel that Thoth is well-pleased.--More--</code></p>
-      <p><code class="language-plaintext highlighter-rouge">Your stomach feels content.</code></p>
-    </blockquote>
-    <p><strong>祈祷</strong>是非常强大的——看，这就饱了。但是如果频繁祈祷，神会对我们生气。</p>
-    <blockquote>
-      <p>原地祈祷三次，就会被雷劈死。</p>
-    </blockquote>
-    <div class="language-plaintext highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code>
-
-                                                 --------
-                            ---------------######........#
-           --------         |..@&gt;.........|#     |......|#     -----
-           |......|         |.............|#    #-..B...|#     |...|
-           |...:..|         ---|-----------#    #|......|#     |...|
-           |......|            #   ##   ####    #|.......##    |...|
-           |......|         ##*##########       #.......| #####....|
-           |......|        ##  #    #####     ###-------- #    |...|
-           -----|--       ##   #        #     # #         #    -|---
-                #         #  ###        ##    ##          #     #
-                #        ##  #           #    #           #     #
-                #        #---.------     #    #           #     #
-                #        #|........|    -|----#           ##    ##
-                #       ##|........|    |..|&gt;|#            ####--|---------
-               ##     ### |........|    |....|#               #...........|
-           ----.-     #   |&lt;.......|    |....-#                |..........|
-           |.....######   |........|    ------                 |..........|
-           |...{| ######  .........|                           ------------
-           ------         ----------
-
-Petergu the Evoker             St:9 Dx:8 Co:16 In:17 Wi:14 Ch:11 Neutral
-Dlvl:4 $:62 HP:15(15) Pw:23(23) AC:1 Xp:2 Burdened
-</code></pre>
-      </div>
-    </div>
-    <p>发现，本层有两个下楼梯。这是因为有一个是通往支线任务地精矿洞（Gnomish Mines）的。这个支线较难，如果不是女武神等前期强角色基本不要擅自进入。支线地图是这种风格，周围都是地精 <code class="language-plaintext highlighter-rouge">G</code>。稍微进去一下，立刻被围攻。幸亏猫比较强打死几只怪。还剩 7 HP 逃了出来。当然，矿洞里装备也很多，我们换了双鞋子，现在 <code class="language-plaintext highlighter-rouge">AC</code> 是 0，而代价是沉重的盔甲和行动不便。</p>
-    <blockquote>
-      <p><code class="language-plaintext highlighter-rouge">b - an uncursed +0 cloak of magic resistance (being worn)</code></p>
-      <p><code class="language-plaintext highlighter-rouge">p - a +0 splint mail (being worn)</code></p>
-      <p><code class="language-plaintext highlighter-rouge">B - a +0 iron skull cap (being worn)</code></p>
-      <p><code class="language-plaintext highlighter-rouge">I - a +0 pair of hard shoes (being worn)</code></p>
-    </blockquote>
-    <div class="language-plaintext highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code>   ---
-   |..--
- ---....- -
- |.......|.
-  .........-
-   -.......|
-    -......|
-     -..f..--
-     --.....|
-      -..G..|
-   |....|...| ---
-   | ----.......|
-       -.@......|
-      |.........|
-      |.......---
-      ..*.G.....
-     ------------
-</code></pre>
-      </div>
-    </div>
-    <p>下一层看到一个箱子。可以 <code class="language-plaintext highlighter-rouge">#loot</code> <strong>抢劫</strong>。但箱子上锁了，所以可以踢几脚把锁打开。</p>
-    <blockquote>
-      <p>这么做的代价是箱内的药水和易碎的魔杖会损坏。</p>
-    </blockquote>
-    <blockquote>
-      <p><code class="language-plaintext highlighter-rouge">THUD! You break open the lock!</code></p>
-    </blockquote>
-    <div class="language-plaintext highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code>You see here a large box.
-
-
-                                                           -----
-                  -----------     #########################....|
-                  |.........|    ###########        #      |...|
-                  |.........|    #------      ------       .....
-                  |.........|    #.....| #####...&lt;.|       |...|
-                #`|..f..&gt;...|    #|.....##    |...)|       --.--
-                 #-...@.....+     |....|      |...)|         #
-                 #-----------    #-.----      |....|         #
-                 #####        ##  ##          |....|###      #
-                   # ################        #---.--##############
-                              #              `############ --.-+-|----
-                   .                               ###     ..........|
-                  |.                                       |.........|
-                  |.                                       |...... ..|
-                  |.                                       |.........|
-                  ---                                      |.........|
-                                                           -----------
-
-
-Petergu the Conjurer           St:9 Dx:8 Co:16 In:17 Wi:14 Ch:11 Neutral
-Dlvl:5 $:75 HP:25(25) Pw:31(31) AC:0 Xp:3 Burdened
-</code></pre>
-      </div>
-    </div>
-    <p>然而箱子是空的。</p>
-    <blockquote>
-      <p>你也可以往箱子里放一些东西。</p>
-    </blockquote>
-    <p>下一层看到了一些类似宫殿的东西。中间有先知，可以花 50 块钱向它咨询（<code class="language-plaintext highlighter-rouge">#chat</code>）。</p>
-    <div class="language-plaintext highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code>You see here a statue of a plains centaur.
-
-
-                                                   -------
-             ------------           ###############-....*|
-             |..........|        ####              |.....|
-             ...........| ############        #####-.^....
-             |.....&lt;....|##     #-----|-------#    -------
-             -|----------#       |C.........C.#
-              ############       |.....C.....|#
-                                 |...-----...|
-                                 |...|.{.|...|
-                                 |..@|{.{|C..|
-                                 |.....{.|...|
-                                 |..f-----...|
-                                 |.....C.....|
-                                 |C.........C|
-                                 -------------
-
-
-
-
-Petergu the Conjurer           St:9 Dx:8 Co:16 In:17 Wi:14 Ch:11 Neutral
-Dlvl:6 $:75 HP:25(25) Pw:31(31) AC:0 Xp:3 Burdened
-</code></pre>
-      </div>
-    </div>
-    <p>下一层，遇到一只巨大的蝙蝠（Giant bat），被咬到残血后我们逃跑，但是它追了过来，狭路相逢。</p>
-    <div class="language-plaintext highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code>The giant bat bites!--More--
-
-                                          -----                       -----
-                                          |...|                #######-...|
-                                         #|....#################      |...|
-                                         #-...|#                      |...|
-                                         #|...|                       -...|
-                                         #|...|                       |.&gt;.|
-                                         #-----                       ---.-
-                                         ##                              #
-                                         #                               *
-                                        ###                              #
-                                         # #                             #
-                                         ###                             #
-                                           #                          -|-|-
-                                           #                          |...|
-                                           #                          |...|
-                                          +######B@######`            ...&lt;|
-                                         .|#                          -----
-                                         .-#
-                                         --#
-
-Petergu the Conjurer           St:9 Dx:8 Co:16 In:17 Wi:14 Ch:11 Neutral
-Dlvl:7 $:88 HP:5(29) Pw:43(43) AC:0 Xp:4 Burdened
-</code></pre>
-      </div>
-    </div>
-    <blockquote>
-      <p><code class="language-plaintext highlighter-rouge">You die...--More--</code></p>
-      <p><code class="language-plaintext highlighter-rouge">Do you want your possessions identified? [ynq] (n) </code></p>
-    </blockquote>
-    <p>于是毙命此地。</p>
-    <p>死后游戏会问你要不要看看你的东西到底是什么。你可以看一眼。</p>
-    <div class="language-plaintext highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code> L - 3 uncursed scrolls of blank paper
- R - an uncursed scroll of fire
- Spellbooks
- l - a blessed spellbook of force bolt
- m - an uncursed spellbook of create monster
- x - an uncursed spellbook of slow monster
- Potions
- f - an uncursed potion of gain ability
- g - an uncursed potion of monster detection
- h - an uncursed potion of healing
- G - an uncursed potion of sickness
- O - an uncursed potion of water
- S - a blessed potion of sleeping
- Rings
- d - an uncursed ring of fire resistance
- e - an uncursed ring of invisibility
- r - an uncursed ring of cold resistance
- E - an uncursed ring of aggravate monster
- H - an uncursed ring of sustain ability
- Wands
- c - a wand of magic missile (0:4)
- Tools
- n - a magic marker (0:55)
- (2 of 3)
-</code></pre>
-      </div>
-    </div>
-    <p>通常，如果看了，就会发现背包有至少一件能避免死亡的物品（比如残血之后喝个药之类的，或者这个 magic missile 看起来很 promising）。然而生命只有一次，这就是 Roguelike。</p>
-    <div class="language-plaintext highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code>
-                       ----------
-                      /          \
-                     /    REST    \
-                    /      IN      \
-                   /     PEACE      \
-                  /                  \
-                  |     petergu      |
-                  |      88 Au       |
-                  |   killed by a    |
-                  |    giant bat     |
-                  |                  |
-                  |                  |
-                  |       2021       |
-                 *|     *  *  *      | *
-        _________)/\\_//(\/(/\)/\//\/|_)_______
-
-
-Goodbye petergu the Wizard...
-
-You died in The Dungeons of Doom on dungeon level 7 with 704 points,
-and 88 pieces of gold, after 3310 moves.
-You were level 4 with a maximum of 29 hit points when you died.
-</code></pre>
-      </div>
-    </div>
-    <h2 id="尾声">尾声</h2>
-    <p>通过本菜鸡的一局典型游戏流程，希望你已经了解了 NetHack 的基本操作，并能够在地下城中跌跌撞撞地存活一段有限大的时间。仍然有非常多重要的机制和操作本教程中没有提及（甚至 BUC 都没有说），这就要各位自己寻找了。对于一般玩家，要胜任这种游戏，作弊、剧透甚至是阅读源代码都是有必要而并不可耻的行为。</p>
-    <h2 id="参考资料">参考资料</h2>
-    <ul>
-      <li><a href="https://nethackwiki.com">https://nethackwiki.com</a></li>
-      <li><a href="https://www.zhihu.com/question/40177337">https://www.zhihu.com/question/40177337</a></li>
-      <li><a href="https://www.melankolia.net/nethack/nethack.guide.html">https://www.melankolia.net/nethack/nethack.guide.html</a></li>
-      <li><a href="https://nethack.org/">https://nethack.org/</a></li>
-      <li><a href="https://github.com/regymm/nethackassistant">https://github.com/regymm/nethackassistant</a></li>
-      <li><a href="https://alt.org/nethack/">https://alt.org/nethack/</a></li>
-    </ul>
-    ]]></content><author><name>petergu</name></author><category term="Tutorial" /><category term="游戏" /><summary type="html"><![CDATA[]]></summary></entry></feed>
+  ]]></content><author><name>psi-cmd</name></author><category term="LUG活动" /><summary type="html"><![CDATA[2021 年 11 月 17 日，下午 4:30，校学生 Linux 用户协会秋季学期全员大会如期举行，本届全员大会一如既往，承担着向新成员介绍 LUG 社团内部情况的任务，同时也进行了 LUG 章程讨论环节。指导老师与本届负责人悉数到场，为现场的新同学们答疑解惑。部分社团老人也参与到社团建设的讨论中，时刻关注着社团的发展。]]></summary></entry></feed>
