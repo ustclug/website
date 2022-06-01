@@ -140,16 +140,16 @@
 
 ## 2015-2016 届
 
-| 代号 | 职务   | 姓名   | 邮箱                        |
-| :--- | :----- | :----- | :-------------------------- |
-| CEO  | 会长   | 崔灏   | cuihao.leo AT gmail.com     |
-| COO  | 副会长 | 张静宁 | changchongning AT gmail.com |
-| CIO  | 副会长 | 杨博远 | 073plan AT gmail.com        |
-| CPO  | 副会长 | 左格非 | zgf574564920 AT gmail.com   |
-| CTO  | 技术   | 高一凡 | yifan AT ustclug.org        |
-| CFO  | 财务   | 崔天一 | 1997cui AT gmail.com        |
-| -    | 宣传   | 尤淼   | potatoym AT gmail.com       |
-| CNO  | 外联   | 张振兴 | -                           |
+| 代号 | 职务   | 姓名   | 邮箱                      |
+| :--- | :----- | :----- | :------------------------ |
+| CEO  | 会长   | 崔灏   | cuihao.leo AT gmail.com   |
+| COO  | 副会长 | 张静宁 | jingning42 AT gmail.com   |
+| CIO  | 副会长 | 杨博远 | 073plan AT gmail.com      |
+| CPO  | 副会长 | 左格非 | zgf574564920 AT gmail.com |
+| CTO  | 技术   | 高一凡 | yifan AT ustclug.org      |
+| CFO  | 财务   | 崔天一 | 1997cui AT gmail.com      |
+| -    | 宣传   | 尤淼   | potatoym AT gmail.com     |
+| CNO  | 外联   | 张振兴 | -                         |
 
 ## 2014-2015 届
 
