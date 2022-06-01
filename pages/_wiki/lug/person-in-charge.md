@@ -14,7 +14,7 @@
 | CEO  | 执行会长     | 李博诚 | bcli AT ustclug.org    |
 | -    | 执行副会长   | 袁保杰 |                        |
 | -    | 执行副会长   | 余致远 |                        |
-| CTO  | 技术部部长   | 王永福 |                        |
+| CTO  | 技术部部长   | 王永福 | rtxux AT ustclug.org   |
 | -    | 技术部副部长 | 徐奥   | xuao123 AT ustclug.org |
 | CFO  | 财务部部长   | 廖巍   |                        |
 | COO  | 运营部部长   | 卢星宇 |                        |

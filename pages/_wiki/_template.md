@@ -11,9 +11,8 @@
 
 ```yaml
 ---
-
-## permalink: /wiki/some/path/
-
+permalink: /wiki/some/path/
+---
 ```
 
 除此之外你不需要填写 Front Matter。
@@ -21,4 +20,3 @@
 左侧导航栏在 Git 仓库目录下的 `_data/navigation.yml` 文件中查看与修改。
 
 [1]: https://github.com/benbalter/jekyll-titles-from-headings
-```
