@@ -9,22 +9,22 @@
 
 ## 主要负责人
 
-| 代号 | 职务         | 姓名   | 邮箱                         |
-| :--- | :----------- | :----- | :--------------------------- |
-| CEO  | 执行会长     | 刘隆邦 | psicmd AT ustclug.org        |
-| -    | 执行副会长   | 蔡智臻 | cat AT ustclug.org           |
-| -    | 执行副会长   | 刘正韬 | zeka AT ustclug.org          |
-| CTO  | 技术部部长   | 邱慕凡 | when AT ustclug.org          |
-| -    | 技术部副部长 | 高泽豫 | zeyugao AT ustclug.org       |
-| CFO  | 财务部部长   | 徐奥   | xuao123 AT ustclug.org       |
-| COO  | 运营部部长   | 吴雨飞 | wuyf AT ustclug.org          |
-| CPO  | 资产部部长   | 陈泳融 | yrchen AT ustclug.org        |
-| MSC  | MSC 事务     | 陈泳融 | yrchen AT ustclug.org        |
-| -    | 团支书       | 刘隆邦 | psicmd AT ustclug.org        |
-| -    | 社长         | 龚乐   | justiascarlet AT ustclug.org |
-| -    | 副社长       | 徐奥   | xuao123 AT ustclug.org       |
-| -    | 副社长       | 陈泳融 | yrchen AT ustclug.org        |
-| -    | 副社长       | 蔡智臻 | cat AT ustclug.org           |
+| 代号 | 职务         | 姓名   | 邮箱                   |
+| :--- | :----------- | :----- | :--------------------- |
+| CEO  | 执行会长     | 李博诚 | bcli AT ustclug.org    |
+| -    | 执行副会长   | 袁保杰 |                        |
+| -    | 执行副会长   | 余致远 |                        |
+| CTO  | 技术部部长   | 王永福 |                        |
+| -    | 技术部副部长 | 徐奥   | xuao123 AT ustclug.org |
+| CFO  | 财务部部长   | 廖巍   |                        |
+| COO  | 运营部部长   | 卢星宇 |                        |
+| CPO  | 资产部部长   | 杨柳   |                        |
+| MSC  | MSC 事务     | 邱慕凡 | when AT ustclug.org    |
+| -    | 团支书       | 余致远 |                        |
+| -    | 社长         | 廖巍   |                        |
+| -    | 副社长       | 李博诚 | bcli AT ustclug.org    |
+| -    | 副社长       | 徐奥   | xuao123 AT ustclug.org |
+| -    | 副社长       | 袁保杰 |                        |
 
 ## LUG 项目负责人
 
@@ -46,6 +46,25 @@
 | 防污染 DNS   | LUG 自建的防污染 DNS 服务器                                | **yifan**                    |
 
 # 历任负责人
+
+## 2021 - 2022 届
+
+| 代号 | 职务         | 姓名   | 邮箱                         |
+| :--- | :----------- | :----- | :--------------------------- |
+| CEO  | 执行会长     | 刘隆邦 | psicmd AT ustclug.org        |
+| -    | 执行副会长   | 蔡智臻 | cat AT ustclug.org           |
+| -    | 执行副会长   | 刘正韬 | zeka AT ustclug.org          |
+| CTO  | 技术部部长   | 邱慕凡 | when AT ustclug.org          |
+| -    | 技术部副部长 | 高泽豫 | zeyugao AT ustclug.org       |
+| CFO  | 财务部部长   | 徐奥   | xuao123 AT ustclug.org       |
+| COO  | 运营部部长   | 吴雨飞 | wuyf AT ustclug.org          |
+| CPO  | 资产部部长   | 陈泳融 | yrchen AT ustclug.org        |
+| MSC  | MSC 事务     | 陈泳融 | yrchen AT ustclug.org        |
+| -    | 团支书       | 刘隆邦 | psicmd AT ustclug.org        |
+| -    | 社长         | 龚乐   | justiascarlet AT ustclug.org |
+| -    | 副社长       | 徐奥   | xuao123 AT ustclug.org       |
+| -    | 副社长       | 陈泳融 | yrchen AT ustclug.org        |
+| -    | 副社长       | 蔡智臻 | cat AT ustclug.org           |
 
 ## 2020-2021 届
 
