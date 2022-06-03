@@ -12,7 +12,7 @@
 | 代号 | 职务         | 姓名   | 邮箱                   |
 | :--- | :----------- | :----- | :--------------------- |
 | CEO  | 执行会长     | 李博诚 | bcli AT ustclug.org    |
-| -    | 执行副会长   | 袁保杰 |                        |
+| -    | 执行副会长   | 袁保杰 | crabtux AT ustclug.org |
 | -    | 执行副会长   | 余致远 |                        |
 | CTO  | 技术部部长   | 王永福 | rtxux AT ustclug.org   |
 | -    | 技术部副部长 | 徐奥   | xuao123 AT ustclug.org |
@@ -24,7 +24,7 @@
 | -    | 社长         | 廖巍   |                        |
 | -    | 副社长       | 李博诚 | bcli AT ustclug.org    |
 | -    | 副社长       | 徐奥   | xuao123 AT ustclug.org |
-| -    | 副社长       | 袁保杰 |                        |
+| -    | 副社长       | 袁保杰 | crabtux AT ustclug.org |
 
 ## LUG 项目负责人
 
