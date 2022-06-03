@@ -13,14 +13,14 @@
 | :--- | :----------- | :----- | :--------------------- |
 | CEO  | 执行会长     | 李博诚 | bcli AT ustclug.org    |
 | -    | 执行副会长   | 袁保杰 | crabtux AT ustclug.org |
-| -    | 执行副会长   | 余致远 |                        |
+| -    | 执行副会长   | 余致远 | fish AT ustclug.org    |
 | CTO  | 技术部部长   | 王永福 | rtxux AT ustclug.org   |
 | -    | 技术部副部长 | 徐奥   | xuao123 AT ustclug.org |
 | CFO  | 财务部部长   | 廖巍   |                        |
 | COO  | 运营部部长   | 卢星宇 | zigone AT ustclug.org  |
 | CPO  | 资产部部长   | 杨柳   |                        |
 | MSC  | MSC 事务     | 邱慕凡 | when AT ustclug.org    |
-| -    | 团支书       | 余致远 |                        |
+| -    | 团支书       | 余致远 | fish AT ustclug.org    |
 | -    | 社长         | 廖巍   |                        |
 | -    | 副社长       | 李博诚 | bcli AT ustclug.org    |
 | -    | 副社长       | 徐奥   | xuao123 AT ustclug.org |
