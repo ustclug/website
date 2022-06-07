@@ -12,19 +12,19 @@
 | 代号 | 职务         | 姓名   | 邮箱                   |
 | :--- | :----------- | :----- | :--------------------- |
 | CEO  | 执行会长     | 李博诚 | bcli AT ustclug.org    |
-| -    | 执行副会长   | 袁保杰 |                        |
-| -    | 执行副会长   | 余致远 |                        |
+| -    | 执行副会长   | 袁保杰 | crabtux AT ustclug.org |
+| -    | 执行副会长   | 余致远 | fish AT ustclug.org    |
 | CTO  | 技术部部长   | 王永福 | rtxux AT ustclug.org   |
 | -    | 技术部副部长 | 徐奥   | xuao123 AT ustclug.org |
 | CFO  | 财务部部长   | 廖巍   |                        |
-| COO  | 运营部部长   | 卢星宇 |                        |
+| COO  | 运营部部长   | 卢星宇 | zigone AT ustclug.org  |
 | CPO  | 资产部部长   | 杨柳   |                        |
 | MSC  | MSC 事务     | 邱慕凡 | when AT ustclug.org    |
-| -    | 团支书       | 余致远 |                        |
+| -    | 团支书       | 余致远 | fish AT ustclug.org    |
 | -    | 社长         | 廖巍   |                        |
 | -    | 副社长       | 李博诚 | bcli AT ustclug.org    |
 | -    | 副社长       | 徐奥   | xuao123 AT ustclug.org |
-| -    | 副社长       | 袁保杰 |                        |
+| -    | 副社长       | 袁保杰 | crabtux AT ustclug.org |
 
 ## LUG 项目负责人
 
@@ -140,16 +140,16 @@
 
 ## 2015-2016 届
 
-| 代号 | 职务   | 姓名   | 邮箱                        |
-| :--- | :----- | :----- | :-------------------------- |
-| CEO  | 会长   | 崔灏   | cuihao.leo AT gmail.com     |
-| COO  | 副会长 | 张静宁 | changchongning AT gmail.com |
-| CIO  | 副会长 | 杨博远 | 073plan AT gmail.com        |
-| CPO  | 副会长 | 左格非 | zgf574564920 AT gmail.com   |
-| CTO  | 技术   | 高一凡 | yifan AT ustclug.org        |
-| CFO  | 财务   | 崔天一 | 1997cui AT gmail.com        |
-| -    | 宣传   | 尤淼   | potatoym AT gmail.com       |
-| CNO  | 外联   | 张振兴 | -                           |
+| 代号 | 职务   | 姓名   | 邮箱                      |
+| :--- | :----- | :----- | :------------------------ |
+| CEO  | 会长   | 崔灏   | cuihao.leo AT gmail.com   |
+| COO  | 副会长 | 张静宁 | jingning42 AT gmail.com   |
+| CIO  | 副会长 | 杨博远 | 073plan AT gmail.com      |
+| CPO  | 副会长 | 左格非 | zgf574564920 AT gmail.com |
+| CTO  | 技术   | 高一凡 | yifan AT ustclug.org      |
+| CFO  | 财务   | 崔天一 | 1997cui AT gmail.com      |
+| -    | 宣传   | 尤淼   | potatoym AT gmail.com     |
+| CNO  | 外联   | 张振兴 | -                         |
 
 ## 2014-2015 届
 
