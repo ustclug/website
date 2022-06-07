@@ -3,6 +3,20 @@
 
 # USTC 网络通脚本
 
+## Windows VBScript 版
+
+来源：<https://gist.github.com/iBug/eb6fdbf55465352d6d91b1bdf75ad30f>
+
+```vb
+Dim Http, Username, Password
+Username = "username"
+Password = "password"
+Set Http = CreateObject("MSXML2.XMLHTTP.3.0")
+Http.Open "GET", "http://wlt.ustc.edu.cn/cgi-bin/ip?cmd=set&type=0&exp=0&name=" & Username & "&password=" & Password, False
+Http.Send
+MsgBox "Status: " & Http.Status, 65, "WLT"
+```
+
 ## Bash 版
 
 来源：<http://bbs.ustc.edu.cn/cgi/go?cgi=bbscon&bid=77&fn=M4CAEC63D>
