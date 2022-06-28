@@ -194,19 +194,19 @@
 
 ### Spring 2014
 
-本学期将小聚改为[Linux 入门公开课](/OpenCourse)。
+本学期将小聚改为[Linux 入门公开课](https://ftp.lug.ustc.edu.cn/course/)。
 
-| 名称                              | 讲者   | 文稿                                                                                                                                   | 视频                                         |
-| :-------------------------------- | :----- | :------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------- |
-| 第 1 课：What is Linux?           | 张荣葳 | [Slides](/wiki/lib/exe/fetch.php?tok=2e0867&media=https:%2F%2Flug.ustc.edu.cn%2FOpenCourse%2FLesson1%2FWhat_is_Linux.pdf)              | [Video](/OpenCourse/Lesson1/lesson1.mp4)     |
-| 第 2 课：Linux 基本概念和安装指南 | 张光宇 | [Slides](/wiki/lib/exe/fetch.php?tok=dd38dd&media=https:%2F%2Flug.ustc.edu.cn%2FOpenCourse%2FLesson2%2Flug.pdf)                        | [Video](/OpenCourse/Lesson2/lesson2.mp4)     |
-| 第 3 课：图形界面 VS. 命令行界面  | 崔灏   | [Slides](/wiki/lib/exe/fetch.php?tok=5d048a&media=https:%2F%2Flug.ustc.edu.cn%2FOpenCourse%2FLesson3%2Fslide.pdf)                      | [Video](/OpenCourse/Lesson3/lesson3.mp4)     |
-| 第 4 课：认识各种各样的文件       | 张光宇 | [Slides](/wiki/lib/exe/fetch.php?tok=843ad8&media=https:%2F%2Flug.ustc.edu.cn%2FOpenCourse%2FLesson4%2Flesson4.pdf)                    | [Video](/OpenCourse/Lesson4/lesson4.mp4)     |
-| 第 5 课：bash 基础                | 张荣葳 | [Slides](/wiki/lib/exe/fetch.php?tok=bfdb3a&media=https:%2F%2Flug.ustc.edu.cn%2FOpenCourse%2FLesson5%2Flesson5.pdf)                    | [Video](/OpenCourse/Lesson5/lesson5.mp4)     |
-| 第 6 课：Linux 网络管理介绍       | 贾明皓 | [Slides](/wiki/lib/exe/fetch.php?tok=5886bb&media=https:%2F%2Flug.ustc.edu.cn%2FOpenCourse%2FLesson6%2Flinux_network_introduction.pdf) | [Video](/OpenCourse/Lesson6/lesson6.mp4)     |
-| 第 7 课：如何高效地找东西         | 张荣葳 | ![FIXME](/wiki/lib/images/smileys/fixme.gif)                                                                                           | ![FIXME](/wiki/lib/images/smileys/fixme.gif) |
-| 第 8 课：软件的安装与管理入门     | 杨博远 | [Slides](/wiki/lib/exe/fetch.php?tok=63a7ff&media=https:%2F%2Flug.ustc.edu.cn%2FOpenCourse%2FLesson8%2Flesson8.pdf)                    | [Video](/OpenCourse/Lesson8/lesson8.mp4)     |
-| 第 9 课：正则表达式基础           | 张恒若 | ![FIXME](/wiki/lib/images/smileys/fixme.gif)                                                                                           | [Video](/OpenCourse/Lesson9/lesson9.mp4)     |
+| 名称                              | 讲者   | 文稿                                                                                | 视频                                                            |
+| :-------------------------------- | :----- | :---------------------------------------------------------------------------------- | :-------------------------------------------------------------- |
+| 第 1 课：What is Linux?           | 张荣葳 | [Slides](https://ftp.lug.ustc.edu.cn/course/Lesson1/What_is_Linux.pdf)              | [Video](https://ftp.lug.ustc.edu.cn/course/Lesson1/lesson1.mp4) |
+| 第 2 课：Linux 基本概念和安装指南 | 张光宇 | [Slides](https://ftp.lug.ustc.edu.cn/course/Lesson2/lug.pdf)                        | [Video](https://ftp.lug.ustc.edu.cn/course/Lesson2/lesson2.mp4) |
+| 第 3 课：图形界面 VS. 命令行界面  | 崔灏   | [Slides](https://ftp.lug.ustc.edu.cn/course/Lesson3/lesson3.mp4)                    | [Video](https://ftp.lug.ustc.edu.cn/course/Lesson3/lesson3.mp4) |
+| 第 4 课：认识各种各样的文件       | 张光宇 | [Slides](https://ftp.lug.ustc.edu.cn/course/Lesson4/lesson4.pdf)                    | [Video](https://ftp.lug.ustc.edu.cn/course/Lesson4/lesson4.mp4) |
+| 第 5 课：bash 基础                | 张荣葳 | [Slides](https://ftp.lug.ustc.edu.cn/course/Lesson5/lesson5.pdf)                    | [Video](https://ftp.lug.ustc.edu.cn/course/Lesson5/lesson5.mp4) |
+| 第 6 课：Linux 网络管理介绍       | 贾明皓 | [Slides](https://ftp.lug.ustc.edu.cn/course/Lesson6/linux_network_introduction.pdf) | [Video](https://ftp.lug.ustc.edu.cn/course/Lesson6/lesson6.mp4) |
+| 第 7 课：如何高效地找东西         | 张荣葳 | ![FIXME](/wiki/lib/images/smileys/fixme.gif)                                        | ![FIXME](/wiki/lib/images/smileys/fixme.gif)                    |
+| 第 8 课：软件的安装与管理入门     | 杨博远 | [Slides](https://ftp.lug.ustc.edu.cn/course/Lesson8/lesson8.pdf)                    | [Video](https://ftp.lug.ustc.edu.cn/course/Lesson8/lesson8.mp4) |
+| 第 9 课：正则表达式基础           | 张恒若 | ![FIXME](/wiki/lib/images/smileys/fixme.gif)                                        | [Video](https://ftp.lug.ustc.edu.cn/course/Lesson9/lesson9.mp4) |
 
 ### Fall 2013
 
