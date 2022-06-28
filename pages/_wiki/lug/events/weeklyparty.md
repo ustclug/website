@@ -143,12 +143,12 @@
 
 ### Fall 2016
 
-| 日期       | 主持   | 主题                          | 讲稿                                                                                      |
-| :--------- | :----- | :---------------------------- | :---------------------------------------------------------------------------------------- |
-| 2016-12-18 | 庄思源 | 高性能计算                    | ![FIXME](/wiki/lib/images/smileys/fixme.gif)                                              |
-| 2016-12-11 | 杨博远 | Reproducible Builds in Debian | [PDF](https://ftp.lug.ustc.edu.cn/weekly_party/2016.12.11_reproducible_builds_in_debian/Reproducible%20Builds%20in%20Debian.pdf)   |
-| 2016-12-04 | 张震   | g Summer of Code              | [PDF](https://ftp.lug.ustc.edu.cn/weekly_party/2016.12.04_GSoC_Intro/GSoC-zhen.pdf)       |
-| 2016-11-13 | 高一凡 | Hello OpenPGP                 | [PDF](https://ftp.lug.ustc.edu.cn/weekly_party/2016.11.13_hello_openpgp/HelloOpenPGP.pdf) |
+| 日期       | 主持   | 主题                          | 讲稿                                                                                                                             |
+| :--------- | :----- | :---------------------------- | :------------------------------------------------------------------------------------------------------------------------------- |
+| 2016-12-18 | 庄思源 | 高性能计算                    | ![FIXME](/wiki/lib/images/smileys/fixme.gif)                                                                                     |
+| 2016-12-11 | 杨博远 | Reproducible Builds in Debian | [PDF](https://ftp.lug.ustc.edu.cn/weekly_party/2016.12.11_reproducible_builds_in_debian/Reproducible%20Builds%20in%20Debian.pdf) |
+| 2016-12-04 | 张震   | g Summer of Code              | [PDF](https://ftp.lug.ustc.edu.cn/weekly_party/2016.12.04_GSoC_Intro/GSoC-zhen.pdf)                                              |
+| 2016-11-13 | 高一凡 | Hello OpenPGP                 | [PDF](https://ftp.lug.ustc.edu.cn/weekly_party/2016.11.13_hello_openpgp/HelloOpenPGP.pdf)                                        |
 
 ### Spring 2016
 
