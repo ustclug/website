@@ -13,7 +13,7 @@
 
 ## 技术细节
 
-[图书馆查询机系统](https://docs.ustclug.org/services/pxe/liims/ "serveradm:lib")
+[图书馆查询机系统](https://docs.ustclug.org/services/pxe/liims/ "https://docs.ustclug.org/services/pxe/liims/")
 
 [Github 项目](https://github.com/ustclug/liimstrap "https://github.com/ustclug/liimstrap")
 
