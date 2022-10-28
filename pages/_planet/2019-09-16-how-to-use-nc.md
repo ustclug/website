@@ -91,4 +91,6 @@ usage: nc [-46AacCDdEFhklMnOortUuvz] [-K tc] [-b boundif] [-i interval] [-p sour
 
 ### 注意事项
 
+> 以下内容目前对于比赛中需要 token 的题目不适用，需使用编程方法与题目交互。
+
 由于 [tty 默认每行的长度最长为 4096](http://blog.chaitanya.im/4096-limit)，**在粘贴过长的输入时内容可能会被截断**。遇到这种情况时，可以使用文件重定向解决：将需要输入的内容放置在文件中，然后 `cat 你的文件 - | nc 服务器 端口`（Windows cmd.exe 中 `type 你的文件 CON | ncat 服务器 端口`）即可。
