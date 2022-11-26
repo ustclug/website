@@ -11,15 +11,17 @@ Copyright © 2001,2006,2014 Eric S. Raymond, Rick Moen
 
 原文网址：[http://www.catb.org/~esr/faqs/smart-questions.html](http://www.catb.org/~esr/faqs/smart-questions.html)
 
+中文翻译仓库网址：[https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way)。以下内容来自[简体中文版](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md)。
+
 Copyleft 2001 by D.H.Grand(nOBODY/Ginux), 2010 by Gasolin, 2015 by Ryan Wu
 
 本中文指南是基于原文 3.10 版以及 2010 年由 [Gasolin](https://github.com/gasolin) 所翻译版本的最新翻译；
 
 协助指出翻译问题，**请[发 issue](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/issues/new)，或直接[发 pull request](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/compare) 给我。**
 
-本文另有[繁體中文版](README.md)。
+本文另有[繁體中文版](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README.md)。
 
-## [原文版本历史](history.md)
+## [原文版本历史](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/history.md)
 {: .no_toc }
 
 ## 声明
