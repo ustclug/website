@@ -15,7 +15,7 @@
 
 ## Telegram 上的 LUG
 
-加群链接见 jointele.ustclug.org 的 DNS TXT 记录
+加群链接见 `jointele.ustclug.org` 的 DNS TXT 记录
 
 ## BBS 上的 LUG
 
