@@ -410,7 +410,6 @@ Windows 9x/XP/NT 用户需要下载安装 [WINGRUB](http://sourceforge.net/proje
 - Diskless Linux http://frank.harvard.edu/~coldwell/diskless/
 - PXE Documentation Version 1.0（缺少链接）
 - HOWTO setup a PXE 2.x server under Linux http://clic.mandrakesoft.com/documentation/pxe/
-- Linux Boot http://www.linux-boot.net/
 
 - 基于 NFS\*ROOT 的 [Gentoo Linux 的 PXE 安装方法](http://www.gentoo.org.tw/doc/altinstall.xml#doc_chap5)
 - Diskless Nodes with Gentoo http://www.gentoo.org/doc/en/diskless-howto.xml
@@ -430,7 +429,6 @@ Windows 9x/XP/NT 用户需要下载安装 [WINGRUB](http://sourceforge.net/proje
 - [:: ThinStation - a light, full-featured thin client OS ::](http://thinstation.sourceforge.net/wiki/index.php/ThIndex)
 - [Index of /debian/dists/unstable/main/installer-i386/current/images/netboot](http://ftp.us.debian.org/debian/dists/unstable/main/installer-i386/current/images/netboot/)
 - [YAGI - [Deep Space DaN\]](http://dan.deam.org/yagi.php)
-- [Linux-Boot.net](http://www.linux-boot.net/InitRD/Howto/)
 - [Pollix LiveCD](http://moe.tnc.edu.tw/~kendrew/pollix/)
 - [Bart's Network Boot Disk](http://www.nu2.nu/bootdisk/network/)
 - [Universal TCP/IP Network Bootdisk for M\$ Networks](http://www.netbootdisk.com/download.htm)
