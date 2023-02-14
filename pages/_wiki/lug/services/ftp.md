@@ -31,10 +31,6 @@ LUG FTP 对应域名为 [ftp.lug.ustc.edu.cn](ftp://ftp.lug.ustc.edu.cn/)。
 
 用户名为 `ftp`。请联系管理员以了解详细信息。
 
-### 使用 AFP 协议
-
-AFP (Apple Filing Protocol) 地址： `afp://ftp.lug.ustc.edu.cn/` ，选择 Connect As Guest 即可，对所有文件拥有读取权限。
-
 ## 上传
 
 ### 管理员用户
