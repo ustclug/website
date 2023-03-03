@@ -16,7 +16,7 @@ permalink: /wiki/lug/services/
 
 - 回校访问服务
 
-- 防污染 DNS（校内）
+- ~~防污染 DNS（校内）~~
 
 ### B 级服务
 
