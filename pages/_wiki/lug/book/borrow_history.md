@@ -12,6 +12,7 @@
 | 七周七语言 理解多种编程范型  | 袁一玮 | totoroyyw AT ustclug.org    | 2023-2-18  | 2023-3-7 | \-   |
 | 并行计算 结构·算法·编程      | 徐奥   | xuao123 AT mail.ustc.edu.cn | 2023-03-06 | \-       | \-   |
 | 人工智能 一种现代的方法 3ed. | 徐奥   | xuao123 AT mail.ustc.edu.cn | 2023-03-06 | \-       | \-   |
+| 代数结构                     | 方越   | yuefang@mail.ustc.edu.cn    | 2023-03-13 | \-       | \-   |
 
 ## 2022 年借阅记录
 
