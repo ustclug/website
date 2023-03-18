@@ -27,7 +27,7 @@
 
 **主讲人请注意：**
 
-- 毋忘上传 slides，越早越好(在愿意分享 slides 的前提下) ![FIXME](/wiki/lib/images/smileys/fixme.gif) slides 的版权问题？
+- 毋忘上传 slides，越早越好(在愿意分享 slides 的前提下) ![FIXME]({{ site.static_url }}/wiki/lug/fixme.gif) slides 的版权问题？
 - 在 BBS Linux 发通知时，注意打上 LUG 标签
 - 尽早编辑本 wiki，活动时间以本 wiki 为准
 
@@ -152,7 +152,7 @@
 
 | 日期       | 主持   | 主题                          | 讲稿                                                                                                                             |
 | :--------- | :----- | :---------------------------- | :------------------------------------------------------------------------------------------------------------------------------- |
-| 2016-12-18 | 庄思源 | 高性能计算                    | ![FIXME](/wiki/lib/images/smileys/fixme.gif)                                                                                     |
+| 2016-12-18 | 庄思源 | 高性能计算                    | ![FIXME]({{ site.static_url }}/wiki/lug/fixme.gif)                                                                                     |
 | 2016-12-11 | 杨博远 | Reproducible Builds in Debian | [PDF](https://ftp.lug.ustc.edu.cn/weekly_party/2016.12.11_reproducible_builds_in_debian/Reproducible%20Builds%20in%20Debian.pdf) |
 | 2016-12-04 | 张震   | g Summer of Code              | [PDF](https://ftp.lug.ustc.edu.cn/weekly_party/2016.12.04_GSoC_Intro/GSoC-zhen.pdf)                                              |
 | 2016-11-13 | 高一凡 | Hello OpenPGP                 | [PDF](https://ftp.lug.ustc.edu.cn/weekly_party/2016.11.13_hello_openpgp/HelloOpenPGP.pdf)                                        |
@@ -161,8 +161,8 @@
 
 | 日期       | 主持   | 主题            | 讲稿                                                                                                    | 视频                                                            |
 | :--------- | :----- | :-------------- | :------------------------------------------------------------------------------------------------------ | :-------------------------------------------------------------- |
-| 2016-05-02 | 王子博 | 树莓派智能小车  | ![FIXME](/wiki/lib/images/smileys/fixme.gif)                                                            |                                                                 |
-| 2016-04-17 | 张光宇 | Python 异步编程 | ![FIXME](/wiki/lib/images/smileys/fixme.gif)                                                            |                                                                 |
+| 2016-05-02 | 王子博 | 树莓派智能小车  | ![FIXME]({{ site.static_url }}/wiki/lug/fixme.gif)                                                            |                                                                 |
+| 2016-04-17 | 张光宇 | Python 异步编程 | ![FIXME]({{ site.static_url }}/wiki/lug/fixme.gif)                                                            |                                                                 |
 | 2016-04-03 | 高一凡 | Hello Docker II | [HelloDocker2.pdf](https://ftp.lug.ustc.edu.cn/weekly_party/2016.04.03_hello_docker_2/HelloDocker2.pdf) |                                                                 |
 | 2016-03-27 | 崔灏   | 密码学的故事    | [Text](https://ftp.lug.ustc.edu.cn/weekly_party/2016.03.27_cryptography/slides.md)                      | [World Without Java](https://www.bilibili.com/video/av4199916/) |
 
@@ -170,7 +170,7 @@
 
 | 日期       | 主持   | 主题                                | 讲稿                                                                                                          |
 | :--------- | :----- | :---------------------------------- | :------------------------------------------------------------------------------------------------------------ |
-| 2015-12-12 | 郑子涵 | Advanced C Programming              | ![FIXME](/wiki/lib/images/smileys/fixme.gif)                                                                  |
+| 2015-12-12 | 郑子涵 | Advanced C Programming              | ![FIXME]({{ site.static_url }}/wiki/lug/fixme.gif)                                                                  |
 | 2015-11-22 | 张光宇 | 初识 MongoDB                        | [PDF](https://ftp.lug.ustc.edu.cn/weekly_party/2015.11.22_mongodb/slides.pdf)                                 |
 | 2015-11-15 | 杨博远 | Meet With Linux                     | [PDF](https://ftp.lug.ustc.edu.cn/weekly_party/2015.11.15_meet_with_linux/meet_with_linux.pdf)                |
 | 2015-11-07 | 崔灏   | 操作系统的引导——从 BIOS/MBR 到 UEFI | 作者的 SSD 炸了                                                                                               |
@@ -183,7 +183,7 @@
 | 日期       | 主持   | 主题                    | 讲稿                                                                                                                          |
 | :--------- | :----- | :---------------------- | :---------------------------------------------------------------------------------------------------------------------------- |
 | 2015-05-23 | 高一凡 | Hello Bitcoin           | [Slides](https://ftp.lug.ustc.edu.cn/weekly_party/2015.05.23_hello_bitcoin/HelloBitcoin.pdf)                                  |
-| 2015-05-16 | 李博杰 | 白帽子大赛，黑客不神秘  | ![FIXME](/wiki/lib/images/smileys/fixme.gif)                                                                                  |
+| 2015-05-16 | 李博杰 | 白帽子大赛，黑客不神秘  | ![FIXME]({{ site.static_url }}/wiki/lug/fixme.gif)                                                                                  |
 | 2015-04-18 | 杨博远 | 永远的 autotools （一） | [Slides](https://ftp.lug.ustc.edu.cn/weekly_party/2015.04.18_Autotools/lugweekly_foreverAutotools_1.ppt)                      |
 | 2015-04-12 | 王译锋 | 静态博客实践            | [Slides](https://ftp.lug.ustc.edu.cn/weekly_party/2015.04.12_Hexo/%e9%9d%99%e6%80%81%e5%8d%9a%e5%ae%a2%e5%ae%9e%e8%b7%b5.pdf) |
 
@@ -211,9 +211,9 @@
 | 第 4 课：认识各种各样的文件       | 张光宇 | [Slides](https://ftp.lug.ustc.edu.cn/course/Lesson4/lesson4.pdf)                    | [Video](https://ftp.lug.ustc.edu.cn/course/Lesson4/lesson4.mp4) |
 | 第 5 课：bash 基础                | 张荣葳 | [Slides](https://ftp.lug.ustc.edu.cn/course/Lesson5/lesson5.pdf)                    | [Video](https://ftp.lug.ustc.edu.cn/course/Lesson5/lesson5.mp4) |
 | 第 6 课：Linux 网络管理介绍       | 贾明皓 | [Slides](https://ftp.lug.ustc.edu.cn/course/Lesson6/linux_network_introduction.pdf) | [Video](https://ftp.lug.ustc.edu.cn/course/Lesson6/lesson6.mp4) |
-| 第 7 课：如何高效地找东西         | 张荣葳 | ![FIXME](/wiki/lib/images/smileys/fixme.gif)                                        | ![FIXME](/wiki/lib/images/smileys/fixme.gif)                    |
+| 第 7 课：如何高效地找东西         | 张荣葳 | ![FIXME]({{ site.static_url }}/wiki/lug/fixme.gif)                                        | ![FIXME]({{ site.static_url }}/wiki/lug/fixme.gif)                    |
 | 第 8 课：软件的安装与管理入门     | 杨博远 | [Slides](https://ftp.lug.ustc.edu.cn/course/Lesson8/lesson8.pdf)                    | [Video](https://ftp.lug.ustc.edu.cn/course/Lesson8/lesson8.mp4) |
-| 第 9 课：正则表达式基础           | 张恒若 | ![FIXME](/wiki/lib/images/smileys/fixme.gif)                                        | [Video](https://ftp.lug.ustc.edu.cn/course/Lesson9/lesson9.mp4) |
+| 第 9 课：正则表达式基础           | 张恒若 | ![FIXME]({{ site.static_url }}/wiki/lug/fixme.gif)                                        | [Video](https://ftp.lug.ustc.edu.cn/course/Lesson9/lesson9.mp4) |
 
 ### Fall 2013
 
@@ -258,9 +258,9 @@
 
 | 日期       | 主持   | 主题                     | 简介                                                | 讲稿                                                                                        |
 | :--------- | :----- | :----------------------- | :-------------------------------------------------- | :------------------------------------------------------------------------------------------ |
-| 2012-05-27 | 李喵喵 | HTML5                    | Lightweight JavaScript AVG Backport & Customization | ![FIXME](/wiki/lib/images/smileys/fixme.gif)                                                |
+| 2012-05-27 | 李喵喵 | HTML5                    | Lightweight JavaScript AVG Backport & Customization | ![FIXME]({{ site.static_url }}/wiki/lug/fixme.gif)                                                |
 | 2012-05-20 | 李博杰 | 用 git 进行版本控制      | git 基本操作及其原理 git object hash，历史穿梭      | [slides](http://home.ustc.edu.cn/~boj/lug/git-lecture.pdf)                                  |
-| 2012-04-22 | 顾昊   | 正则表达式               | 正则表达式语法 在 sed、grep、python 中的应用        | ![FIXME](/wiki/lib/images/smileys/fixme.gif)                                                |
+| 2012-04-22 | 顾昊   | 正则表达式               | 正则表达式语法 在 sed、grep、python 中的应用        | ![FIXME]({{ site.static_url }}/wiki/lug/fixme.gif)                                                |
 | 2012-04-14 | 郭家华 | iptables                 | iptables 原理 封包过滤、NAT 转发、指定出口 IP       | [slides](https://ftp.lug.ustc.edu.cn/weekly_party/2012.04.14_iptables/iptables.pdf)         |
 | 2012-04-08 | 祝元宠 | 用 vim 进行 C++开发      | vim 与 gdb 等的整合 vim 插件与资源，vim 键盘图      | [Vim 笔记](/wiki/redsky/vim_note)                                                           |
 | 2012-04-01 | 沈达   | BreAk SHell, touch linux | Bash Scripting 如何使用文档和搜索来解决问题         | [slides](https://ftp.lug.ustc.edu.cn/weekly_party/2012.04.01_bash/lug_bash.pdf)             |
