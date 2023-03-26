@@ -1,5 +1,5 @@
 ---
-title: "LUG小聚-Node.js"
+title: "LUG 小聚：Node.js 介绍"
 author: "zigone"
 date: "2022-10-26 08:00:00 +0800"
 categories:
