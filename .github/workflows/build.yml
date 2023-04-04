@@ -17,12 +17,22 @@ jobs:
         fetch-depth: 0
     - uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 3.1
-        bundler-cache: true
+        ruby-version: 3.0
     - uses: actions/setup-node@v3
       with:
         node-version: 16
 
+    - name: Cache Ruby gems
+      uses: actions/cache@v3
+      env:
+        CACHE_ID: 1
+      with:
+        path: |
+          Gemfile.lock
+          vendor/bundle
+        key: ${{ runner.os }}-bundler-${{ env.CACHE_ID }}-${{ hashFiles('Gemfile') }}
+        restore-keys: |
+          ${{ runner.os }}-bundler-${{ env.CACHE_ID }}-
     - name: Cache Node modules
       uses: actions/cache@v3
       env:
@@ -37,7 +47,7 @@ jobs:
       run: |
         bundle install --path=vendor/bundle --jobs=4 --retry=3
         bundle clean
-        npm install
+        npm install --also=dev
 
     - name: Prettier check
       run: |

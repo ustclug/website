@@ -6,7 +6,12 @@ gem 'liquid-c', '~> 4.0'
 
 if ENV['LSI'] == 'true'
   gem 'classifier-reborn'
-  gem 'gsl'
+
+  if Gem::Version.new(RUBY_VERSION) >= Gem::Version.new('3.0.0')
+    gem 'gsl', git: 'https://github.com/SciRuby/rb-gsl.git', ref: '103a3e1'
+  else
+    gem 'gsl'
+  end
 end
 
 group :jekyll_plugins do
