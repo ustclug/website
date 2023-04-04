@@ -29,7 +29,7 @@ $colors: aliceblue, antiquewhite, aqua, aquamarine, azure, beige, bisque, black,
   steelblue, tan, teal, thistle, tomato, turquoise, violet, wheat, white, whitesmoke, yellow, yellowgreen;
 
 @each $color in $colors {
-  .text-#{$color} {
+  .text-#{"" + $color} {
     color: $color !important;
   }
 }
