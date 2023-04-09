@@ -1,32 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://lug.ustc.edu.cn/feed/news.xml" rel="self" type="application/atom+xml" /><link href="https://lug.ustc.edu.cn/" rel="alternate" type="text/html" /><updated>2023-04-07T17:53:02+08:00</updated><id>https://lug.ustc.edu.cn/feed/news.xml</id><title type="html">LUG @ USTC | News</title><subtitle>中国科学技术大学 Linux 用户协会</subtitle><author><name>USTCLUG</name></author><entry><title type="html">中国科学技术大学第九届信息安全大赛圆满落幕</title><link href="https://lug.ustc.edu.cn/news/2023/03/hackergame-award-ceremony/" rel="alternate" type="text/html" title="中国科学技术大学第九届信息安全大赛圆满落幕" /><published>2023-03-19T15:00:00+08:00</published><updated>2023-03-26T20:36:42+08:00</updated><id>https://lug.ustc.edu.cn/news/2023/03/hackergame-award-ceremony</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2023/03/hackergame-award-ceremony/"><![CDATA[<p>中国科学技术大学第九届信息安全大赛圆满落幕。</p>
-      <p>2023 年 3 月 19 日下午，中国科学技术大学第九届信息安全大赛颁奖仪式在西区 3B103 举行。网络空间安全学院谭勇书记、USTC-NEBULA 战队指导老师吴文涛老师、本届比赛负责人、USTC-NEBULA 战队成员、本届比赛参赛选手出席了本次颁奖典礼。</p>
-      <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2023.3.19_hackergame2022%E9%A2%81%E5%A5%96/photo/hackergame%E9%A2%81%E5%A5%96-1.jpg" alt="1jpg" />
-        <img src="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2023.3.19_hackergame2022%E9%A2%81%E5%A5%96/photo/hackergame%E9%A2%81%E5%A5%96-2.jpg" alt="" /></p>
-      <p>谭勇书记发表了颁奖致辞。他鼓励同学们通过比赛提高分析问题和实际解决问题的能力，并分享了自己在研究生期间动手参与项目的经历。他号召同学们积极参与实践，希望本次信息安全大赛能够成为同学们展示科大风采的起点，为更多更广的比赛和活动奠定基础。根据得分结果，中国科学技术大学第九届信息安全大赛校内组评选出一等奖 1 名、二等奖 5 名、三等奖 25 名、新生奖 2 名、分类奖 4 名以及一血奖 18 名。谭勇书记和吴文涛老师为获奖同学颁发了奖项。</p>
-      <p><img src="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2023.3.19_hackergame2022%E9%A2%81%E5%A5%96/photo/hackergame%E9%A2%81%E5%A5%96-4.jpg" alt="" /></p>
-      <p>刘成龙同学荣获一等奖。</p>
-      <p><img src="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2023.3.19_hackergame2022%E9%A2%81%E5%A5%96/photo/hackergame%E9%A2%81%E5%A5%96-6.jpg" alt="" /></p>
-      <p>刘良宇、甘文迪、卢天祥、毛浩宇、武汉同学荣获二等奖。</p>
-      <p>刘威、叶知易、吴远韬、陈思、郝英屹、许睿达、郑逸、吕思源、余达一、牛楚蒙、谭旭、熊轶旸、李蔚林、叶升宇、李翰阳、舒英特、李远航、彭博、王星河、郑闻杰、郭耸霄、洪文杰、高宇、杨柳、黄科鑫同学荣获三等奖。</p>
-      <p><img src="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2023.3.19_hackergame2022%E9%A2%81%E5%A5%96/photo/hackergame%E9%A2%81%E5%A5%96-8.jpg" alt="" /></p>
-      <p>叶知易、吕思源同学荣获新生特别奖。</p>
-      <p><img src="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2023.3.19_hackergame2022%E9%A2%81%E5%A5%96/photo/hackergame%E9%A2%81%E5%A5%96-13.jpg" alt="" /></p>
-      <p>刘良宇、刘成龙、陈思、黄科鑫分别在综合技能（general）、 程序逆向与漏洞利用（binary）、密码学与数学（math）、网站安全（web）获得分类奖。</p>
-      <p><img src="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2023.3.19_hackergame2022%E9%A2%81%E5%A5%96/photo/hackergame%E9%A2%81%E5%A5%96-14.jpg" alt="" /></p>
-      <p>关佳旺、刘良宇、马瑞丰、卢天祥、刘成龙、罗浩铭、郑逸、吴正旭、贺若舟、刘泽仁、甘文迪、王星河、陈思、李蔚林、叶知易、郝英屹、何昕、牛楚蒙作为各题目的首位答对者，荣获了一血奖。</p>
-      <p><img src="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2023.3.19_hackergame2022%E9%A2%81%E5%A5%96/photo/hackergame%E9%A2%81%E5%A5%96-11.jpg" alt="" /></p>
-      <p>中国科学技术大学第九届信息安全大赛由中国科学技术大学网络空间安全学院、中国科学技术大学团委、中国科学技术大学管指委主办，中国科学技术大学学生 Linux 用户协会、中国科学技术大学微软学生俱乐部、中国科学技术大学 NEBULA 战队和中国科学技术大学信息安全俱乐部承办。此外，东北大学 NEX 信息安全创新团队、复旦大学信息网络安全协会、复旦大学六星战队、国防科技大学 BOI 战队、哈尔滨工业大学 Linux 开源学生俱乐部、哈尔滨工业大学紫丁香 CTF 俱乐部、吉林大学 Linux 用户协会、吉林大学 Spirit 战队、南京航空航天大学 Asuri 信息安全战队、同济大学 xd1ddw 战队、西安电子科技大学信息安全协会、浙江大学 AAA 战队（Azure Assassin Alliance）、中国海洋大学 Blue-Whale 战队、中山大学互联网与开源技术协会和中山大学 W4terDr0p 战队也参与了此次比赛的协办。</p>
-      <p><img src="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2023.3.19_hackergame2022%E9%A2%81%E5%A5%96/photo/hackergame%E9%A2%81%E5%A5%96-12.jpg" alt="" /></p>
-      <p>本届比赛于 10 月 22 日中午 12:00 正式开启，历时七天，参赛人数超过 4500 人，刷新了历史记录。比赛共设置了约 25 道题目，涵盖了综合技能、程序逆向与漏洞利用、密码学与数学、Web 安全等多个方向。命题延续了往届的优良特色，努力结合科大特色，坚持向新生倾斜，控制题目难度梯度，强调引导和教育工作。正如信息安全的千变万化，每道题目各有其独有的魅力。《旅行照片 2.0》通过照片追随学长脚步；《关于 RoboGame 的轮子永远调不准速度这件事》、《线路板》、《片上系统》等题目则是做了硬件里的信息安全的尝试。比赛选手们则通过洞幽察微，打破常规，综合运用方法技能，勇攀信息安全的高峰。</p>
-      <p>官方题解和参赛选手的解答公布于 <a href="https://github.com/USTC-Hackergame/hackergame2022-writeups">hackergame2022-writeups</a> ，欢迎大家学习交流。</p>
-      ]]></content><author><name>Zigone</name></author><summary type="html"><![CDATA[中国科学技术大学第九届信息安全大赛圆满落幕。]]></summary></entry><entry><title type="html">Linux 101 讲义修订</title><link href="https://lug.ustc.edu.cn/news/2023/03/linux101-revision/" rel="alternate" type="text/html" title="Linux 101 讲义修订" /><published>2023-03-01T08:00:00+08:00</published><updated>2023-03-26T22:02:34+08:00</updated><id>https://lug.ustc.edu.cn/news/2023/03/linux101-revision</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2023/03/linux101-revision/"><![CDATA[<p>2023 年 2 月，USTCLUG 成员对 Linux 101 讲义进行了审阅和修订。</p>
-    <p>主要工作：</p>
-    <ul>
-      <li>将涉及到接近生命周期末期的发行版（例如 Ubuntu 18.04）的教程内容替换为最新版本（Ubuntu 22.04）的教程内容。</li>
-      <li>对教程中可能存在的错误进行修改，对教程中有不足的部分进行补充。</li>
-    </ul>
-    <p>具体修改内容可参见 GitHub 仓库：<a href="https://github.com/ustclug/Linux101-docs/pulls">ustclug/Linux101-docs</a></p>
-    ]]></content><author><name>Zigone</name></author><summary type="html"><![CDATA[2023 年 2 月，USTCLUG 成员对 Linux 101 讲义进行了审阅和修订。]]></summary></entry><entry><title type="html">LCPU x USTCLUG 联合沙龙：Xmake 和墨干编辑器</title><link href="https://lug.ustc.edu.cn/news/2022/10/gathering-xmake/" rel="alternate" type="text/html" title="LCPU x USTCLUG 联合沙龙：Xmake 和墨干编辑器" /><published>2022-10-27T08:00:00+08:00</published><updated>2023-03-26T22:02:34+08:00</updated><id>https://lug.ustc.edu.cn/news/2022/10/gathering-xmake</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2022/10/gathering-xmake/"><![CDATA[<p>2022 年 10 月 27 日晚 19:00，北京大学学生 Linux 俱乐部与中国科学技术大学 Linux 用户协会举办了联合沙龙。本次沙龙邀请到了 Xmake 的主要开发者 Ruki 和墨者实验室的开发者们，向参与者们介绍了这两个工具的用途和优势。
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://lug.ustc.edu.cn/feed/news.xml" rel="self" type="application/atom+xml" /><link href="https://lug.ustc.edu.cn/" rel="alternate" type="text/html" /><updated>2023-04-09T13:35:02+08:00</updated><id>https://lug.ustc.edu.cn/feed/news.xml</id><title type="html">LUG @ USTC | News</title><subtitle>中国科学技术大学 Linux 用户协会</subtitle><author><name>USTCLUG</name></author><entry><title type="html">Linux Install Party 2023</title><link href="https://lug.ustc.edu.cn/news/2023/04/Linux_Install_Party_2023/" rel="alternate" type="text/html" title="Linux Install Party 2023" /><published>2023-04-02T19:00:00+08:00</published><updated>2023-04-09T13:34:06+08:00</updated><id>https://lug.ustc.edu.cn/news/2023/04/Linux_Install_Party_2023</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2023/04/Linux_Install_Party_2023/"><![CDATA[<p>Linux Install Party 是中国科学技术大学 Linux 用户协会每年必办的活动，通过手把手帮助同学们安装 Linux，来增进大家对 Linux 了解，宣传开源和自由软件精神。</p>
+      <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2023.4.2_linux_101_%E7%AC%AC%E4%B8%80%E8%AF%BE_Linux_Install_Party/poster/poster.svg" alt="poster" /></p>
+      <p>2023 年 4 月 2 日下午， Linux Install Party 作为本期 Linux 101 课程的第一课在 3C101 举行。由廖巍同学和王永福同学介绍了 Linux 的来源、优点和各大发行版的区别之后，令人心动的 Linux 安装就正式开始了。</p>
+      <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2023.4.2_linux_101_%E7%AC%AC%E4%B8%80%E8%AF%BE_Linux_Install_Party/photo/photo_2023-04-03_15-32-28.jpg" alt="photo1" /></p>
+      <p>本次活动我们尝试了多种 Linux 的安装体验方式，如注册使用 Vlab ，尝试 Windows Subsystem for Linux ，安装打包好的 Linux 虚拟机镜像，在虚拟机中体验安装过程和直接真机安装。</p>
+      <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2023.4.2_linux_101_%E7%AC%AC%E4%B8%80%E8%AF%BE_Linux_Install_Party/photo/IMG_20230402_155005.jpg" alt="photo1" /></p>
+      <p>很多同学在使用虚拟机体验 Linux 之后决定腾出硬盘空间来安装双系统。在确认相应分区无重要数据后，使用 Windows 的压缩卷功能腾出用来安装的空间。随后在 BIOS 中关闭安全启动并选择使用 U 盘引导，最后在 Ventoy 的列表中选择相应发行版的安装镜像就能进行相应的安装。</p>
+      <p>因为在 Mac 上的 Linux 安装比较复杂，同为 Mac 用户的会长李博诚负责为同学们的安装过程进行指导。</p>
+      <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2023.4.2_linux_101_%E7%AC%AC%E4%B8%80%E8%AF%BE_Linux_Install_Party/photo/IMG_20230402_154958.jpg" alt="photo2" /></p>
+      <p>时间很快来到了六点，同学们纷纷带着各个 Linux 发行版满意地离开了教室，相信 Linux 和自由软件们可以自此常伴大家。</p>
+      <p>我们本次的讲解视频回放已上传到 <a href="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2023.4.2_linux_101_%E7%AC%AC%E4%B8%80%E8%AF%BE_Linux_Install_Party/video/VID_20230402_144841.mp4">LUG FTP</a>，欢迎观看。</p>
+      ]]></content><author><name>Zigone</name></author><category term="LUG 活动" /><category term="linux-install-party" /><summary type="html"><![CDATA[Linux Install Party 是中国科学技术大学 Linux 用户协会每年必办的活动，通过手把手帮助同学们安装 Linux，来增进大家对 Linux 了解，宣传开源和自由软件精神。]]></summary></entry><entry><title type="html">中国科学技术大学第九届信息安全大赛圆满落幕</title><link href="https://lug.ustc.edu.cn/news/2023/03/hackergame-award-ceremony/" rel="alternate" type="text/html" title="中国科学技术大学第九届信息安全大赛圆满落幕" /><published>2023-03-19T15:00:00+08:00</published><updated>2023-03-26T20:36:42+08:00</updated><id>https://lug.ustc.edu.cn/news/2023/03/hackergame-award-ceremony</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2023/03/hackergame-award-ceremony/"><![CDATA[<p>中国科学技术大学第九届信息安全大赛圆满落幕。</p>
+    <p>2023 年 3 月 19 日下午，中国科学技术大学第九届信息安全大赛颁奖仪式在西区 3B103 举行。网络空间安全学院谭勇书记、USTC-NEBULA 战队指导老师吴文涛老师、本届比赛负责人、USTC-NEBULA 战队成员、本届比赛参赛选手出席了本次颁奖典礼。</p>
+    <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2023.3.19_hackergame2022%E9%A2%81%E5%A5%96/photo/hackergame%E9%A2%81%E5%A5%96-1.jpg" alt="1jpg" />
+      <img src="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2023.3.19_hackergame2022%E9%A2%81%E5%A5%96/photo/hackergame%E9%A2%81%E5%A5%96-2.jpg" alt="" /></p>
+    <p>谭勇书记发表了颁奖致辞。他鼓励同学们通过比赛提高分析问题和实际解决问题的能力，并分享了自己在研究生期间动手参与项目的经历。他号召同学们积极参与实践，希望本次信息安全大赛能够成为同学们展示科大风采的起点，为更多更广的比赛和活动奠定基础。根据得分结果，中国科学技术大学第九届信息安全大赛校内组评选出一等奖 1 名、二等奖 5 名、三等奖 25 名、新生奖 2 名、分类奖 4 名以及一血奖 18 名。谭勇书记和吴文涛老师为获奖同学颁发了奖项。</p>
+    <p><img src="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2023.3.19_hackergame2022%E9%A2%81%E5%A5%96/photo/hackergame%E9%A2%81%E5%A5%96-4.jpg" alt="" /></p>
+    <p>刘成龙同学荣获一等奖。</p>
+    <p><img src="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2023.3.19_hackergame2022%E9%A2%81%E5%A5%96/photo/hackergame%E9%A2%81%E5%A5%96-6.jpg" alt="" /></p>
+    <p>刘良宇、甘文迪、卢天祥、毛浩宇、武汉同学荣获二等奖。</p>
+    <p>刘威、叶知易、吴远韬、陈思、郝英屹、许睿达、郑逸、吕思源、余达一、牛楚蒙、谭旭、熊轶旸、李蔚林、叶升宇、李翰阳、舒英特、李远航、彭博、王星河、郑闻杰、郭耸霄、洪文杰、高宇、杨柳、黄科鑫同学荣获三等奖。</p>
+    <p><img src="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2023.3.19_hackergame2022%E9%A2%81%E5%A5%96/photo/hackergame%E9%A2%81%E5%A5%96-8.jpg" alt="" /></p>
+    <p>叶知易、吕思源同学荣获新生特别奖。</p>
+    <p><img src="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2023.3.19_hackergame2022%E9%A2%81%E5%A5%96/photo/hackergame%E9%A2%81%E5%A5%96-13.jpg" alt="" /></p>
+    <p>刘良宇、刘成龙、陈思、黄科鑫分别在综合技能（general）、 程序逆向与漏洞利用（binary）、密码学与数学（math）、网站安全（web）获得分类奖。</p>
+    <p><img src="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2023.3.19_hackergame2022%E9%A2%81%E5%A5%96/photo/hackergame%E9%A2%81%E5%A5%96-14.jpg" alt="" /></p>
+    <p>关佳旺、刘良宇、马瑞丰、卢天祥、刘成龙、罗浩铭、郑逸、吴正旭、贺若舟、刘泽仁、甘文迪、王星河、陈思、李蔚林、叶知易、郝英屹、何昕、牛楚蒙作为各题目的首位答对者，荣获了一血奖。</p>
+    <p><img src="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2023.3.19_hackergame2022%E9%A2%81%E5%A5%96/photo/hackergame%E9%A2%81%E5%A5%96-11.jpg" alt="" /></p>
+    <p>中国科学技术大学第九届信息安全大赛由中国科学技术大学网络空间安全学院、中国科学技术大学团委、中国科学技术大学管指委主办，中国科学技术大学学生 Linux 用户协会、中国科学技术大学微软学生俱乐部、中国科学技术大学 NEBULA 战队和中国科学技术大学信息安全俱乐部承办。此外，东北大学 NEX 信息安全创新团队、复旦大学信息网络安全协会、复旦大学六星战队、国防科技大学 BOI 战队、哈尔滨工业大学 Linux 开源学生俱乐部、哈尔滨工业大学紫丁香 CTF 俱乐部、吉林大学 Linux 用户协会、吉林大学 Spirit 战队、南京航空航天大学 Asuri 信息安全战队、同济大学 xd1ddw 战队、西安电子科技大学信息安全协会、浙江大学 AAA 战队（Azure Assassin Alliance）、中国海洋大学 Blue-Whale 战队、中山大学互联网与开源技术协会和中山大学 W4terDr0p 战队也参与了此次比赛的协办。</p>
+    <p><img src="http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2023.3.19_hackergame2022%E9%A2%81%E5%A5%96/photo/hackergame%E9%A2%81%E5%A5%96-12.jpg" alt="" /></p>
+    <p>本届比赛于 10 月 22 日中午 12:00 正式开启，历时七天，参赛人数超过 4500 人，刷新了历史记录。比赛共设置了约 25 道题目，涵盖了综合技能、程序逆向与漏洞利用、密码学与数学、Web 安全等多个方向。命题延续了往届的优良特色，努力结合科大特色，坚持向新生倾斜，控制题目难度梯度，强调引导和教育工作。正如信息安全的千变万化，每道题目各有其独有的魅力。《旅行照片 2.0》通过照片追随学长脚步；《关于 RoboGame 的轮子永远调不准速度这件事》、《线路板》、《片上系统》等题目则是做了硬件里的信息安全的尝试。比赛选手们则通过洞幽察微，打破常规，综合运用方法技能，勇攀信息安全的高峰。</p>
+    <p>官方题解和参赛选手的解答公布于 <a href="https://github.com/USTC-Hackergame/hackergame2022-writeups">hackergame2022-writeups</a> ，欢迎大家学习交流。</p>
+    ]]></content><author><name>Zigone</name></author><summary type="html"><![CDATA[中国科学技术大学第九届信息安全大赛圆满落幕。]]></summary></entry><entry><title type="html">Linux 101 讲义修订</title><link href="https://lug.ustc.edu.cn/news/2023/03/linux101-revision/" rel="alternate" type="text/html" title="Linux 101 讲义修订" /><published>2023-03-01T08:00:00+08:00</published><updated>2023-03-26T22:02:34+08:00</updated><id>https://lug.ustc.edu.cn/news/2023/03/linux101-revision</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2023/03/linux101-revision/"><![CDATA[<p>2023 年 2 月，USTCLUG 成员对 Linux 101 讲义进行了审阅和修订。</p>
+  <p>主要工作：</p>
+  <ul>
+    <li>将涉及到接近生命周期末期的发行版（例如 Ubuntu 18.04）的教程内容替换为最新版本（Ubuntu 22.04）的教程内容。</li>
+    <li>对教程中可能存在的错误进行修改，对教程中有不足的部分进行补充。</li>
+  </ul>
+  <p>具体修改内容可参见 GitHub 仓库：<a href="https://github.com/ustclug/Linux101-docs/pulls">ustclug/Linux101-docs</a></p>
+  ]]></content><author><name>Zigone</name></author><summary type="html"><![CDATA[2023 年 2 月，USTCLUG 成员对 Linux 101 讲义进行了审阅和修订。]]></summary></entry><entry><title type="html">LCPU x USTCLUG 联合沙龙：Xmake 和墨干编辑器</title><link href="https://lug.ustc.edu.cn/news/2022/10/gathering-xmake/" rel="alternate" type="text/html" title="LCPU x USTCLUG 联合沙龙：Xmake 和墨干编辑器" /><published>2022-10-27T08:00:00+08:00</published><updated>2023-03-26T22:02:34+08:00</updated><id>https://lug.ustc.edu.cn/news/2022/10/gathering-xmake</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2022/10/gathering-xmake/"><![CDATA[<p>2022 年 10 月 27 日晚 19:00，北京大学学生 Linux 俱乐部与中国科学技术大学 Linux 用户协会举办了联合沙龙。本次沙龙邀请到了 Xmake 的主要开发者 Ruki 和墨者实验室的开发者们，向参与者们介绍了这两个工具的用途和优势。
     <img src="https://ftp.lug.ustc.edu.cn/weekly_party/2022.11.27_Xmake%26mogan/1.png" alt="联合沙龙" />
     Xmake 是广受赞誉的轻量级跨平台自动构建工具，可以帮助开发者快速构建和打包应用程序，同时也支持远程构建和缓存等功能，可以理解为 Build backend + Project Generator + Package Manager + [Remote|Distributed] Build + Cache 的集大成者。Ruki 向我们介绍了 Xmake 的使用和开发历程。接下来介绍的墨干编辑器就是用 Xmake 构建的。</p>
   <p>墨干编辑器，是墨者实验室开发的 GNU TeXmacs 的衍生版，对于论文等公式符号密集型写作。它提供了许多强大的功能，如实时预览、即时渲染、公式编辑、多平台支持等。开发者们从使用方法、工程结构、实际教学使用体验等多角度为我们介绍了墨干编辑器。他们的官网是 https://mogan.app 欢迎大家尝试。</p>
@@ -189,13 +200,4 @@
     <li>Rclone：官网：<a href="https://rclone.org/">https://rclone.org/</a> 源码：<a href="https://github.com/rclone/rclone">https://github.com/rclone/rclone</a></li>
     <li>一个参考性质的半成品：<a href="https://github.com/myl7/recdrive">https://github.com/myl7/recdrive</a></li>
   </ul>
-  ]]></content><author><name>totoroyyw</name></author><summary type="html"><![CDATA[「开源软件供应链点亮计划」是由中国科学院软件研究所发起并长期支持一项活动，旨在解决基础开源软件面临的许可、质量、维护和技术支持等问题，进而影响整个软件产业的供应链。而「开源软件供应链点亮计划——暑期 2022」是由中科院软件所与 openEuler 社区共同举办的一项面向高校学生的暑期活动，旨在鼓励在校学生积极参与开源软件的开发维护，促进国内优秀开源软件社区的蓬勃发展。]]></summary></entry><entry><title type="html">Linux 101 第三课</title><link href="https://lug.ustc.edu.cn/news/2022/04/linux-101-3/" rel="alternate" type="text/html" title="Linux 101 第三课" /><published>2022-04-17T14:30:00+08:00</published><updated>2022-04-17T19:35:56+08:00</updated><id>https://lug.ustc.edu.cn/news/2022/04/linux-101-3</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2022/04/linux-101-3/"><![CDATA[<p>4 月 17 日下午，Linux 用户协会线上举办了 Linux 101 系列活动的第三课：Linux 环境下的编程。</p>
-  <p>Linux 本身提供的是一个使用计算机的环境，因此，学习 Linux 的过程即是了解如何使用 Linux 完成各项任务的过程。而 Linux 上的编程开发正是使用中无法绕过的一环。本节 Linux 101 由明宇龙同学为我们讲解如何在 Linux 下完成 C/C++, Python 等编程语言的开发。</p>
-  <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2022.4.17_linux_101_%E7%AC%AC%E4%B8%89%E8%AF%BE/intro.png" alt="intro" /></p>
-  <p>首先，明宇龙同学向大家介绍了 C 与 C++ 语言在 Linux 上的开发过程。对于简单的单文件而言，一行 gcc 命令即可完成编译过程。更进一步，我们可以了解到编译过程的四步过程分别由 cpp、cc1、ar、ld 完成。然而在面对多文件大项目时，需要严格的编译顺序管理和并行管理，于是我们使用 make 工具对编译过程进行管理，这涉及到 Makefile 的编写。随着项目增大，文件增多，出现了 cmake 等工具来自动编写管理 Makefile 文件。</p>
-  <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2022.4.17_linux_101_%E7%AC%AC%E4%B8%89%E8%AF%BE/C.png" alt="C" /></p>
-  <p>随后明宇龙同学向我们介绍了 Linux 上 python 环境相关的基础内容，包括 python 的包管理器，python 语法版本变迁以及 python 语言的各种实现，这些内容对于构建符合自身需求和兼容性要求的 python 应用至关重要。</p>
-  <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2022.4.17_linux_101_%E7%AC%AC%E4%B8%89%E8%AF%BE/python.png" alt="python" /></p>
-  <p>在课程最后的提问环节，明宇龙同学细心地为大家解答了 Linux 相关疑问，探讨了从编程环境配置到 LUG 相关的问题，在轻松愉快的氛围中结束了 Linux 101 第三课的讨论。</p>
-  <p>本节课的讲义位于 LUG ftp 上：<a href="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2022.4.17_linux_101_%E7%AC%AC%E4%B8%89%E8%AF%BE/Linux%20101%20%E7%AC%AC%E4%B8%89%E8%AF%BE%EF%BC%9ALinux%20%E4%B8%8A%E7%9A%84%E7%BC%96%E7%A8%8B.pdf">slides</a></p>
-  ]]></content><author><name>psi-cmd</name></author><category term="LUG活动" /><category term="Linux 101" /><summary type="html"><![CDATA[4 月 17 日下午，Linux 用户协会线上举办了 Linux 101 系列活动的第三课：Linux 环境下的编程。]]></summary></entry></feed>
+  ]]></content><author><name>totoroyyw</name></author><summary type="html"><![CDATA[「开源软件供应链点亮计划」是由中国科学院软件研究所发起并长期支持一项活动，旨在解决基础开源软件面临的许可、质量、维护和技术支持等问题，进而影响整个软件产业的供应链。而「开源软件供应链点亮计划——暑期 2022」是由中科院软件所与 openEuler 社区共同举办的一项面向高校学生的暑期活动，旨在鼓励在校学生积极参与开源软件的开发维护，促进国内优秀开源软件社区的蓬勃发展。]]></summary></entry></feed>
