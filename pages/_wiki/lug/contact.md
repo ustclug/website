@@ -11,7 +11,7 @@
 
 ## 参与邮件列表讨论（推荐）
 
-[点击此处了解详情](/wiki/lug/mailinglist)
+[点击此处了解详情](mailinglist.md)
 
 ## Telegram 上的 LUG
 

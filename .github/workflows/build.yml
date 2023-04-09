@@ -12,19 +12,29 @@ jobs:
     env:
       LSI: 'true'
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
         fetch-depth: 0
     - uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 2.7
-        bundler-cache: true
-    - uses: actions/setup-node@v1
+        ruby-version: '3.0'
+    - uses: actions/setup-node@v3
       with:
         node-version: 16
 
+    - name: Cache Ruby gems
+      uses: actions/cache@v3
+      env:
+        CACHE_ID: 1
+      with:
+        path: |
+          Gemfile.lock
+          vendor/bundle
+        key: ${{ runner.os }}-bundler-${{ env.CACHE_ID }}-${{ hashFiles('Gemfile') }}
+        restore-keys: |
+          ${{ runner.os }}-bundler-${{ env.CACHE_ID }}-
     - name: Cache Node modules
-      uses: actions/cache@v2
+      uses: actions/cache@v3
       env:
         CACHE_ID: 1
       with:
@@ -35,9 +45,10 @@ jobs:
 
     - name: Install dependencies
       run: |
-        bundle install --path=vendor/bundle --jobs=4 --retry=3
+        bundle config set --local path vendor/bundle
+        bundle install --jobs=4 --retry=3
         bundle clean
-        npm install
+        npm install --include=dev
 
     - name: Prettier check
       run: |
@@ -59,7 +70,6 @@ jobs:
       run: |
         bundle exec jekyll build --trace --profile
         : > _site/.nojekyll
-        echo -n 'beta.ustclug.org' > _site/CNAME
       env:
         JEKYLL_ENV: production
         JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

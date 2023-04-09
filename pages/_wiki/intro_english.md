@@ -1,7 +1,7 @@
 ---
 ---
 
-## Linux User Group @ USTC
+# Linux User Group @ USTC
 
 USTC LUG is the abbreviation for Linux User Group (LUG) of University of Science and Technology of China (USTC). USTC LUG is a technology-leading association that consists of the GNU/Linux enthusiasts in USTC. The aim of USTC LUG is to unite the GNU/Linux users in USTC, to build a platform for communicating with each other, sharing the value of free software and promoting free software in the USTC Campus and Hefei City.
 
