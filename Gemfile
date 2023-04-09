@@ -34,3 +34,5 @@ group :jekyll_plugins do
   gem 'jekyll-paginate-v2', '>= 3.0.0'
   gem 'jekyll-algolia'
 end
+
+gem "webrick", "~> 1.8"
