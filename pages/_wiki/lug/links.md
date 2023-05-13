@@ -16,6 +16,7 @@
 ## 姊妹社团
 
 - [清华大学 TUNA 协会](https://tuna.moe/)
+- [齐鲁工业大学网络运维](https://wlyw.qlu.edu.cn/)
 
 ## 开源社区
 
