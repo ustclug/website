@@ -13,7 +13,7 @@
 | 并行计算 结构·算法·编程      | 徐奥   | xuao123 AT mail.ustc.edu.cn | 2023-03-06 | \-       | \-   |
 | 人工智能 一种现代的方法 3ed. | 徐奥   | xuao123 AT mail.ustc.edu.cn | 2023-03-06 | \-       | \-   |
 | 代数结构                     | 方越   | yuefang AT mail.ustc.edu.cn | 2023-03-13 | \-       | \-   |
-| 信息论基础（第二版）         | 袁保杰 | crabtux AT mail.ustc.edu.cn | 2023-04-07 | \-       | \-   |
+| 信息论基础（第二版）         | 袁保杰 | crabtux AT mail.ustc.edu.cn | 2023-04-07 | 2023-05-31 | \-   |
 
 ## 2022 年借阅记录
 
