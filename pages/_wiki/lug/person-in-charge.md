@@ -9,22 +9,22 @@
 
 ## 主要负责人
 
-| 代号 | 职务         | 姓名   | 邮箱                  |
-| :--- | :----------- | :----- | :-------------------- |
-| CEO  | 执行会长     | 廖巍   | flurry AT ustclug.org |
-| -    | 执行副会长   | 刘良宇 |                       |
-| -    | 执行副会长   | 杨柳   | and AT ustclug.org    |
-| CTO  | 技术部部长   | 郑雨霏 |                       |
-| -    | 技术部副部长 | 郑钊雨 |                       |
-| CFO  | 财务部部长   | 王永福 | rtxux AT ustclug.org  |
-| COO  | 运营部部长   | 方越   |                       |
-| CPO  | 资产部部长   | 封霁芩 |                       |
-| MSC  | MSC 事务     | 金文丁 |                       |
-| -    | 团支书       | 封霁芩 |                       |
-| -    | 社长         | 方越   |                       |
-| -    | 副社长       | 刘良宇 |                       |
-| -    | 副社长       | 金文丁 |                       |
-| -    | 副社长       | 马天开 |                       |
+| 代号 | 职务         | 姓名   | 邮箱                      |
+| :--- | :----------- | :----- | :------------------------ |
+| CEO  | 执行会长     | 廖巍   | flurry AT ustclug.org     |
+| -    | 执行副会长   | 刘良宇 | lly AT ustclug.org        |
+| -    | 执行副会长   | 杨柳   | and AT ustclug.org        |
+| CTO  | 技术部部长   | 郑雨霏 | ritaanthem AT ustclug.org |
+| -    | 技术部副部长 | 郑钊雨 | fchwpo AT ustclug.org     |
+| CFO  | 财务部部长   | 王永福 | rtxux AT ustclug.org      |
+| COO  | 运营部部长   | 方越   | yuefang AT ustclug.org    |
+| CPO  | 资产部部长   | 封霁芩 | CaptchaAC AT ustclug.org  |
+| MSC  | MSC 事务     | 金文丁 | pro AT ustclug.org        |
+| -    | 团支书       | 封霁芩 | CaptchaAC AT ustclug.org  |
+| -    | 社长         | 方越   | yuefang AT ustclug.org    |
+| -    | 副社长       | 刘良宇 | lly AT ustclug.org        |
+| -    | 副社长       | 金文丁 | pro AT ustclug.org        |
+| -    | 副社长       | 马天开 | tiankaima AT ustclug.org  |
 
 # 历任负责人
 
