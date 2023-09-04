@@ -18,7 +18,7 @@ redirect_from: /wiki/user/taoky/ustcnet_troubleshooting/
   - 大部分校内资源使用的域名都以 `.ustc.edu.cn` 结尾；类似地，使用 `.ustc.edu.cn` 域名的资源也大多数是校内资源。
   - 对应校园网的 IP 地址范围可以参考[这里](https://git.ustc.edu.cn/ustcnic/docs/-/blob/master/IP_AS.md)。
 - 通过 IPv6 访问校内和校外资源（IPv6 的出校权限是完全开放的）
-- 连接 eduroam（**注意**：eduroam 需要一个网络通账号，但不需要该账号开启了出校权限）
+- 连接 eduroam（**注意**：eduroam 需要一个开启了出校权限的网络通账号，但可以没有国际权限）
 
 特别地，以下情况与网络通无关：
 
@@ -42,7 +42,8 @@ redirect_from: /wiki/user/taoky/ustcnet_troubleshooting/
 
    - 删除自定义的 DNS 设置；
    - 将 DNS 设置为 202.38.64.1；
-   - 在 hosts 文件中将 `wlt.ustc.edu.cn` 域名绑定到 `202.38.64.59`（不建议）。
+   - 直接访问 [202.38.64.59](http://202.38.64.59)；
+   - 不推荐的做法：<s>在 hosts 文件中将 `wlt.ustc.edu.cn` 域名绑定到 `202.38.64.59`</s>。
 
    （对于新电脑）一些现代浏览器会自动打开「启用基于 HTTPS 的 DNS」（DoH）功能，和上面的原因一样，会造成网络通域名解析出错，且默认提供商（Cloudflare）在大陆体验不佳，建议关闭该功能。各浏览器设置路径如下：
 
