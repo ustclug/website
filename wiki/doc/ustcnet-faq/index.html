@@ -20,7 +20,7 @@
     <meta property="og:url" content="https://lug.ustc.edu.cn/wiki/doc/ustcnet-faq/">
     <meta property="og:description" content="校园网常见问题与快速自查指南">
     <meta property="article:published_time" content="2023-09-04T20:16:55+08:00">
-    <meta property="article:modified_time" content="2023-09-04T20:16:55+08:00">
+    <meta property="article:modified_time" content="2023-09-04T21:41:43+08:00">
     <link rel="canonical" href="https://lug.ustc.edu.cn/wiki/doc/ustcnet-faq/">
     <script type="application/ld+json">
       {
@@ -57,7 +57,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=dc0d18af7">
+    <link rel="stylesheet" href="/assets/css/main.css?v=a24c75f68">
     <link rel="stylesheet" href="/_extra/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <link rel="stylesheet" href="/_extra/open-sans.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
@@ -178,7 +178,7 @@
           <meta itemprop="headline" content="校园网常见问题与快速自查指南">
           <meta itemprop="description" content="校园网常见问题与快速自查指南">
           <meta itemprop="datePublished" content="2023-09-04T20:16:55+08:00">
-          <meta itemprop="dateModified" content="2023-09-04T20:16:55+08:00">
+          <meta itemprop="dateModified" content="2023-09-04T21:41:43+08:00">
           <div class="page__inner-wrap">
             <header>
               <h1 id="page-title" class="page__title" itemprop="headline">校园网常见问题与快速自查指南
@@ -217,7 +217,7 @@
                   </ul>
                 </li>
                 <li>通过 IPv6 访问校内和校外资源（IPv6 的出校权限是完全开放的）</li>
-                <li>连接 eduroam（<strong>注意</strong>：eduroam 需要一个网络通账号，但不需要该账号开启了出校权限）</li>
+                <li>连接 eduroam（<strong>注意</strong>：eduroam 需要一个开启了出校权限的网络通账号，但可以没有国际权限）</li>
               </ul>
               <p>特别地，以下情况与网络通无关：</p>
               <ul>
@@ -238,7 +238,8 @@
                   <ul>
                     <li>删除自定义的 DNS 设置；</li>
                     <li>将 DNS 设置为 202.38.64.1；</li>
-                    <li>在 hosts 文件中将 <code class="language-plaintext highlighter-rouge">wlt.ustc.edu.cn</code> 域名绑定到 <code class="language-plaintext highlighter-rouge">202.38.64.59</code>（不建议）。</li>
+                    <li>直接访问 <a href="http://202.38.64.59">202.38.64.59</a></li>
+                    <li>不推荐的做法：<s>在 hosts 文件中将 `wlt.ustc.edu.cn` 域名绑定到 `202.38.64.59`</s>。</li>
                   </ul>
                   <p>（对于新电脑）一些现代浏览器会自动打开「启用基于 HTTPS 的 DNS」（DoH）功能，和上面的原因一样，会造成网络通域名解析出错，且默认提供商（Cloudflare）在大陆体验不佳，建议关闭该功能。各浏览器设置路径如下：</p>
                   <ul>
