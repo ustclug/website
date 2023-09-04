@@ -53,3 +53,5 @@ wiki:
         url: /wiki/lug/resources/
       - title: '<i class="fad fa-lg fa-fw fa-server"></i> 服务器新闻'
         url: 'https://servers.ustclug.org/'
+      - title: '<i class="fas fa-lg fa-fw fa-question-square"></i> 校园网常见问题'
+        url: /wiki/doc/ustcnet-faq/
