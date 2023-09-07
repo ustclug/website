@@ -59,7 +59,7 @@ redirect_from: /wiki/user/taoky/ustcnet_troubleshooting/
 
 ## 如何连接 eduroam
 
-<https://ustcnet.ustc.edu.cn/2016/0405/c11182a119841/page.htm>
+<https://ustcnet.ustc.edu.cn/2016/0405/c33584a592061/page.htm>
 
 ## 如何咨询/反馈问题？
 
