@@ -1428,7 +1428,7 @@ var store = [{
 "teaser": null
 },{
 "title": "联系我们",
-"excerpt":"官方邮件地址      您可以向我们直接发送电子邮件。   参与邮件列表讨论（推荐）   点击此处了解详情   Telegram 上的 LUG   加群链接见 jointele.ustclug.org 的 DNS TXT 记录   BBS 上的 LUG   前往瀚海星云 BBS Linux 版与我们讨论。   QQ 群上的 LUG   适合于即时性较强的讨论，较正式的讨论还请使用官方邮件列表。      QQ 群: 群号请查看 qq.ustclug.org 的 DNS TXT 记录。校内学生请联系管理员了解详情。   IRC 上的 LUG      网络：OFTC   频道：#ustclug   面对面交流   USTC LUG 在校内的活动室：      西区：西区图书馆 206 室   东区：东区图书馆 605 室（已搬迁）   你也可以在 LUG 举办的各类活动中找到 LUG 的成员并当面进行交流。   QQ 公众号   QQ: 2786229166      微信公众号   ID: ustclug  Name: 中科大 LUG      社交网络上的 LUG   快来关注 SNS 上的 LUG 账户吧！LUG 活动通告，Linux 使用技巧、业界新闻应有尽有！    注意：以下账号目前缺乏维护。      Twitter: @USTCLUG   人人：USTCLUG   豆瓣：科大 LUG   更多信息，请参阅LUG 宣传账号一览  ","categories": [],
+"excerpt":"官方邮件地址      您可以向我们直接发送电子邮件。   参与邮件列表讨论（推荐）   点击此处了解详情   Telegram 上的 LUG   加群链接见 jointele.ustclug.org 的 DNS TXT 记录   BBS 上的 LUG   前往瀚海星云 BBS Linux 版与我们讨论。   QQ 群上的 LUG   适合于即时性较强的讨论，较正式的讨论还请使用官方邮件列表。      QQ 群: 群号请查看 qq.ustclug.org 的 DNS TXT 记录。校内学生请联系管理员了解详情。   IRC 上的 LUG      网络：OFTC   频道：#ustclug   面对面交流   USTC LUG 在校内的活动室：      西区：西区图书馆 206 室   东区：东区图书馆 605 室（已搬迁）   高新校区：高新图书馆 604B 研讨室   你也可以在 LUG 举办的各类活动中找到 LUG 的成员并当面进行交流。   QQ 公众号   QQ: 2786229166      微信公众号   ID: ustclug  Name: 中科大 LUG      社交网络上的 LUG   快来关注 SNS 上的 LUG 账户吧！LUG 活动通告，Linux 使用技巧、业界新闻应有尽有！    注意：以下账号目前缺乏维护。      Twitter: @USTCLUG   人人：USTCLUG   豆瓣：科大 LUG   更多信息，请参阅LUG 宣传账号一览  ","categories": [],
 "tags": [],
 "url": "/wiki/lug/contact/",
 "teaser": null
