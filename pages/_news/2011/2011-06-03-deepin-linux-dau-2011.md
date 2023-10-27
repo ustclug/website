@@ -1,9 +1,9 @@
 ---
-title: Deepin Linux DAU '2011大会花絮
+title: Deepin Linux DAU '2011 大会花絮
 author: Stephen
 date: "2011-06-03 10:36:40 +0800"
 categories:
-  - LUG活动
+  - LUG 活动
 tags:
   - deepin
   - Linux
@@ -15,14 +15,14 @@ comments:
     author_url: ""
     date: "2012-07-20 02:09:00 +0800"
     date_gmt: "2012-07-19 18:09:00 +0800"
-    content: 其实留言可以换一个插件吧，这个插件感觉很不好用的说，还不如wp原带的，求交流，http://moper.me
+    content: 其实留言可以换一个插件吧，这个插件感觉很不好用的说，还不如 wp 原带的，求交流，http://moper.me
   - id: 225
     author: Aenon SUN
     author_email: s.sn.giraffe@gmail.com
     author_url: http://aenon.me/
     date: "2012-12-16 13:43:00 +0800"
     date_gmt: "2012-12-16 05:43:00 +0800"
-    content: Disqus 是目前最好的選擇了吧…… 不如WP原帶的是什麼心態？
+    content: Disqus 是目前最好的選擇了吧…… 不如 WP 原帶的是什麼心態？
 ---
 
 2011 年 5 月 28 日，我有幸受邀代表中科大 LUG 前往武汉参加了 Deepin Linux 开发者和用户大会。此行遇见了很多开源界的知名牛人，收获颇多。由于许多 Linux 站点都已经对此次会议有十分详细的报导，因此我就不再赘述具体的会议过程，而是更多的介绍些花絮吧。

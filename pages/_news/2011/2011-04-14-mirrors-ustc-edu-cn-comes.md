@@ -1,9 +1,9 @@
 ---
-title: mirrors.ustc.edu.cn开张啦！
+title: mirrors.ustc.edu.cn 开张啦！
 author: Stephen
 date: "2011-04-14 01:55:12 +0800"
 categories:
-  - LUG活动
+  - LUG 活动
 tags:
   - LUG
   - mirrors.ustc.edu.cn
@@ -15,7 +15,7 @@ comments:
     date: "2011-12-03 00:05:50 +0800"
     date_gmt: "2011-12-02 16:05:50 +0800"
     content:
-      "请问mirrors.ustc.edu是什么?\r\n\r\n为什么我下载firefox的时候会出现firefox setup 8.0.1 exe.
+      "请问 mirrors.ustc.edu 是什么？\r\n\r\n为什么我下载 firefox 的时候会出现 firefox setup 8.0.1 exe.
       from mirrors.ustc.edu.cn?\r\n\r\n谢谢你的解答"
   - id: 37
     author: redsky0802
@@ -23,7 +23,7 @@ comments:
     author_url: ""
     date: "2011-12-03 01:10:56 +0800"
     date_gmt: "2011-12-02 17:10:56 +0800"
-    content: 你好，mirrors.ustc.edu.cn是科大开源软件镜像站，这里有包括firefox在内的大量开源软件的镜像。你下载firefox的时候，有可能会从多个镜像中选择一个最近或者最快的镜像站点下载。
+    content: 你好，mirrors.ustc.edu.cn 是科大开源软件镜像站，这里有包括 firefox 在内的大量开源软件的镜像。你下载 firefox 的时候，有可能会从多个镜像中选择一个最近或者最快的镜像站点下载。
   - id: 48
     author: Aenon
     author_email: s.sn.giraffe@gmail.com
@@ -31,8 +31,8 @@ comments:
     date: "2011-12-19 10:10:50 +0800"
     date_gmt: "2011-12-19 02:10:50 +0800"
     content:
-      "你好，mirrors.ustc.edu.cn 是中科大Linux用户组维护的开源软件镜像，其中包括了 Mozilla 的软件源。\r\n\r\nFirefox
-      会根据你的ip自动选择最近的镜像站点，所以你可能会从这里下载到firefox. 无论从哪个镜像下载，下载下来的文件内容是一样的。"
+      "你好，mirrors.ustc.edu.cn 是中科大 Linux 用户组维护的开源软件镜像，其中包括了 Mozilla 的软件源。\r\n\r\nFirefox
+      会根据你的 ip 自动选择最近的镜像站点，所以你可能会从这里下载到 firefox. 无论从哪个镜像下载，下载下来的文件内容是一样的。"
 ---
 
 经过大半周的迁移和新脚本的测试，现在 mirrors.ustc.edu.cn 已经基本稳定了。
@@ -67,12 +67,12 @@ http/ftp/rsync
 
 debian.ustc.edu.cn 和 oss.ustc.edu.cn 两个域名已经设置为 mirrors.ustc.edu.cn 的别名，大多数镜像的相对地址没有改变，所以大家基本上不需要对原有设置进行修改（如 sources.list），可以继续正常使用。但是以下镜像用户请注意：
 
-1.  gentoo 用户，原 portage 地址： rsync://oss.ustc.edu.cn/pub/gentoo-portage  已经调整为： rsync://mirrors.ustc.edu.cn/gentoo-portage
+1.  gentoo 用户，原 portage 地址：rsync://oss.ustc.edu.cn/pub/gentoo-portage  已经调整为：rsync://mirrors.ustc.edu.cn/gentoo-portage
 1.  cygwin 用户，原 cygwin 源地址： [http://oss.ustc.edu.cn/cygwin/cygwin/](http://oss.ustc.edu.cn/cygwin/cygwin/) 已经调整为： [http://mirrors.ustc.edu.cn/cygwin/](http://mirrors.ustc.edu.cn/cygwin/)
 1.  原 ubuntu cdimage 地址： [http://debian.ustc.edu.cn/ubuntu-cd](http://debian.ustc.edu.cn/ubuntu-cd) 已经调整为： [http://mirrors.ustc.edu.cn/ubuntu-releases](http://mirrors.ustc.edu.cn/ubuntu-releases)
 1.  原 fedora linux 地址： [http://oss.ustc.edu.cn/fedora/](http://oss.ustc.edu.cn/fedora/) 已经调整为： [http://mirrors.ustc.edu.cn/fedora/linux/](http://mirrors.ustc.edu.cn/fedora/linux/)
 1.  centos.ustc 用户，请修改自己的 CentOS-Base.repo 和 epel.repo，将文件中的域名 centos.ustc.edu.cn  修改为  mirrors.ustc.edu.cn
-1.  linux-2.6.git 用户，请修改 origin 地址： git remote set-url origin git://mirrors.ustc.edu.cn/linux-2.6.git
+1.  linux-2.6.git 用户，请修改 origin 地址：git remote set-url origin git://mirrors.ustc.edu.cn/linux-2.6.git
 
 ## 使用帮助：
 

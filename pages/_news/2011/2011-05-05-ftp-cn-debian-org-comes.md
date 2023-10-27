@@ -1,25 +1,25 @@
 ---
-title: Debian中国官方镜像：ftp.cn.debian.org
+title: Debian 中国官方镜像：ftp.cn.debian.org
 author: Stephen
 date: "2011-05-05 02:03:26 +0800"
 categories:
-  - LUG活动
+  - LUG 活动
 tags:
   - mirrors.ustc.edu.cn
   - debian
   - ftp.cn.debian.org
 comments:
   - id: 227
-    author: OpenWares | Open Source and Free Matters &raquo; 搭建debian源镜像服务器
+    author: OpenWares | Open Source and Free Matters &raquo; 搭建 debian 源镜像服务器
     author_email: ""
     author_url: http://openwares.net/linux/setup_debian_archive_mirror.html
     date: "2013-01-30 09:16:13 +0800"
     date_gmt: "2013-01-30 01:16:13 +0800"
     content:
       "[...] TO=&#8221;/srv/mirrors/debian/&#8221; ##镜像源存放位置 RSYNC_HOST=&#8221;ftp.cn.debian.org&#8221;
-      ##镜像自哪个外部源,debian中国官方源镜像是最佳选择，当然ftp.tw.debian.org,ftp.kr.debian.org和ftp.jp.debian.org速度也很快，中国官方源镜像由中国科技大学维护
+      ##镜像自哪个外部源，debian 中国官方源镜像是最佳选择，当然 ftp.tw.debian.org,ftp.kr.debian.org 和 ftp.jp.debian.org 速度也很快，中国官方源镜像由中国科技大学维护
       ARCH_EXCLUDE=&#8221;alpha arm armel armhf hppa hurd-i386 i386 ia64 kfreebsd-amd64
-      kfreebsd-i386 m68k mipsel mips powerpc s390 s390x sh sparc source&#8221; ##排除的架构，此处只保留amd64源，source源也排除，只镜像必要的，尽量节省硬盘空间。
+      kfreebsd-i386 m68k mipsel mips powerpc s390 s390x sh sparc source&#8221; ##排除的架构，此处只保留 amd64 源，source 源也排除，只镜像必要的，尽量节省硬盘空间。
       [...]"
   - id: 1319
     author: 教你如何升级 UBUNTU/DEBIAN 系统版本和更新补丁 | VoBe

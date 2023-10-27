@@ -4,7 +4,7 @@ image: https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2019.08.31_%E6%96%B0%E7%94
 author: taoky
 date: "2019-09-15 12:00:00 +0800"
 categories:
-  - LUG活动
+  - LUG 活动
 tags: []
 comments: []
 ---

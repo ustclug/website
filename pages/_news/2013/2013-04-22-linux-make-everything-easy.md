@@ -1,9 +1,9 @@
 ---
-title: "“Linux让一切变得简单”活动"
+title: "“Linux 让一切变得简单”活动"
 author: boj
 date: "2013-04-22 18:10:33 +0800"
 categories:
-  - LUG活动
+  - LUG 活动
 tags:
   - USTC_LUG
 comments: []

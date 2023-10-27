@@ -1,10 +1,10 @@
 ---
-title: 定制PXE Live系统
+title: 定制 PXE Live 系统
 author: Stephen
 date: "2011-05-24 02:03:48 +0800"
 categories:
   - 经验分享
-  - USTC网络启动服务
+  - USTC 网络启动服务
 tags:
   - PXE
   - deepin
@@ -16,14 +16,14 @@ comments:
     author_url: ""
     date: "2012-07-20 02:10:00 +0800"
     date_gmt: "2012-07-19 18:10:00 +0800"
-    content: 这个蛮不错，不知道怎样才能与你们交流？有qq群什么的吗？
+    content: 这个蛮不错，不知道怎样才能与你们交流？有 qq 群什么的吗？
   - id: 213
     author: copper
     author_email: worldwar@mail.ustc.edu.cn
     author_url: ""
     date: "2012-08-16 17:20:00 +0800"
     date_gmt: "2012-08-16 09:20:00 +0800"
-    content: 邮件列表。不适用qq
+    content: 邮件列表。不适用 qq
   - id: 214
     author: moper
     author_email: i@moper.me

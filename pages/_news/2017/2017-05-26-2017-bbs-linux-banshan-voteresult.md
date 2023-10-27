@@ -3,7 +3,7 @@ title: 2017 Linux 板版衫投票结果公示
 author: Boyuan Yang
 date: "2017-05-26 11:42:28 +0800"
 categories:
-  - LUG活动
+  - LUG 活动
 tags: []
 comments:
   - id: 1792

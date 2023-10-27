@@ -4,7 +4,7 @@ image: https://ftp.lug.ustc.edu.cn/%E7%89%88%E8%A1%AB/2019banshan/final/%E6%95%8
 author: sirius1242
 date: "2019-06-12 20:31:06 +0800"
 categories:
-  - LUG活动
+  - LUG 活动
 tags:
   - LUG
   - 版衫

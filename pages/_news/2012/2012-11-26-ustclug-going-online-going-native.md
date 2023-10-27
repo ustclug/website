@@ -3,7 +3,7 @@ title: 科大 LUG Linux User Party 活动成功举行
 author: Aenon
 date: "2012-11-26 00:21:14 +0800"
 categories:
-  - LUG活动
+  - LUG 活动
 tags:
   - Linux User Party
 comments:
@@ -41,7 +41,7 @@ comments:
     author_url: ""
     date: "2013-11-11 12:44:00 +0800"
     date_gmt: "2013-11-11 04:44:00 +0800"
-    content: USTC真好，开源氛围很浓。
+    content: USTC 真好，开源氛围很浓。
 ---
 
 高速发展的互联网改变着人类的生活方式，而基于 Linux 的 Web 技术支撑起了当今互联网的大厦。“Let's Build -- Building the Next-generation Web & Architecture”的大标题投影在东区水上报告厅，2012 年 11 月 24 日下午，科大 LUG 以“Going Online, Going Native”为主题的 Linux User Party 活动举行。Guide to Node.js，Linux 高性能计算集群，iptables 灵活网络配置，LUG Services 项目启动……内容充实的讲座持续了四个小时，从不同角度讲述了 Linux 在 Web Services、科学计算和我们生活中的应用，描绘了 LUG Services 的美丽蓝图。
@@ -54,7 +54,7 @@ Node.js 强大的性能背后隐藏着编程和调试的困难，例如通过回
 
 演讲结束后，同学们提出了“现有系统是否应该换用 Node.js”、“为什么现在 Web 开发用的更多是 PHP”、“Node.js 是否对系统资源消耗很多，是否对硬件配置有较高要求”等很多有趣的问题，郭家宝一一作答，希望我们以更开放的心态迎接新技术。每位提问的观众都收到了一份 Ubuntu 的精美礼品。
 
-第二个演讲的是科大超算中心李会民老师。2012 年世界排名前 500 的超级计算机中，运行 Linux 的占 90%以上，只有一两台运行的是 Windows 系统，Linux 在高性能计算领域占据统治地位。这场讲座带领我们从 Linux 这个自由的集市中寻找到合适的工具，让身边的计算资源发挥作用。
+第二个演讲的是科大超算中心李会民老师。2012 年世界排名前 500 的超级计算机中，运行 Linux 的占 90% 以上，只有一两台运行的是 Windows 系统，Linux 在高性能计算领域占据统治地位。这场讲座带领我们从 Linux 这个自由的集市中寻找到合适的工具，让身边的计算资源发挥作用。
 
 短短的一个小时，李会民老师以较快的语速，全面讲解了高性能计算集群：
 

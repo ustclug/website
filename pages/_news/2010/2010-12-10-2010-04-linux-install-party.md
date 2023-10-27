@@ -1,9 +1,9 @@
 ---
-title: 2010年4月 Linux Install Party
+title: 2010 年 4 月 Linux Install Party
 author: Stephen
 date: "2010-12-10 00:15:47 +0800"
 categories:
-  - LUG活动
+  - LUG 活动
 tags:
   - Linux User Party
   - Linux Install Party
@@ -29,17 +29,17 @@ Linux Install Party 是中国科学技术大学 Linux 用户协会一年一度�
 
 以下是活动现场的照片：
 
-![祝元宠介绍Linux发行版](https://ftp.lug.ustc.edu.cn/wp-content/gallery/2010-10-linux-install-party/0e477596eb5207a03450ba42380e3029-media_-900x569.jpg)
+![祝元宠介绍 Linux 发行版](https://ftp.lug.ustc.edu.cn/wp-content/gallery/2010-10-linux-install-party/0e477596eb5207a03450ba42380e3029-media_-900x569.jpg)
 
 ![顾昊主持活动](https://ftp.lug.ustc.edu.cn/wp-content/gallery/2010-10-linux-install-party/25c97261058603def86ce06eb7658ee5-media_-900x675.jpg)
 
-![张成介绍PXE系统](https://ftp.lug.ustc.edu.cn/wp-content/gallery/2010-10-linux-install-party/412c3e1c3deee95e4ef420eeab5ca5d9-media_-900x675.jpg)
+![张成介绍 PXE 系统](https://ftp.lug.ustc.edu.cn/wp-content/gallery/2010-10-linux-install-party/412c3e1c3deee95e4ef420eeab5ca5d9-media_-900x675.jpg)
 
-![现场安装Linux](https://ftp.lug.ustc.edu.cn/wp-content/gallery/2010-10-linux-install-party/48cdecdf722670c42569c24aaaafee69-media_-900x675.jpg)
+![现场安装 Linux](https://ftp.lug.ustc.edu.cn/wp-content/gallery/2010-10-linux-install-party/48cdecdf722670c42569c24aaaafee69-media_-900x675.jpg)
 
 ![横幅](https://ftp.lug.ustc.edu.cn/wp-content/gallery/2010-10-linux-install-party/banner.jpg)
 
-![张昊翀介绍Linux安装相关知识](https://ftp.lug.ustc.edu.cn/wp-content/gallery/2010-10-linux-install-party/d2c6410dcb7985e82d6c2b1ea489805c-media_-900x675.jpg)
+![张昊翀介绍 Linux 安装相关知识](https://ftp.lug.ustc.edu.cn/wp-content/gallery/2010-10-linux-install-party/d2c6410dcb7985e82d6c2b1ea489805c-media_-900x675.jpg)
 
 ![礼物](https://ftp.lug.ustc.edu.cn/wp-content/gallery/2010-10-linux-install-party/deeef91b86a84755ba62acb543ac1871-media_-900x675.jpg)
 

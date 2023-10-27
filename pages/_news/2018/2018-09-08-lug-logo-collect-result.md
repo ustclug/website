@@ -4,7 +4,7 @@ image: https://ftp.lug.ustc.edu.cn/~sirius/logo-two.png
 author: sirius1242
 date: "2018-09-08 21:10:26 +0800"
 categories:
-  - LUG活动
+  - LUG 活动
 tags: []
 ---
 
@@ -14,7 +14,7 @@ tags: []
 
 经过一段时间的征集和评选，我们得到了如下 LOGO 征集活动的结果：
 
-<!--| 奖项 | 获奖者|
+<!--| 奖项 | 获奖者 |
 | --- | ------------ |
 | 一等奖 | Archlinuxcn 成员张盛宇 |
 | 二等奖 | 崔灏，严鲸鲸 |

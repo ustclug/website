@@ -1,9 +1,9 @@
 ---
-title: 2010年自由软件日（合肥站）
+title: 2010 年自由软件日（合肥站）
 author: Stephen
 date: "2010-09-29 00:45:36 +0800"
 categories:
-  - LUG活动
+  - LUG 活动
 tags:
   - USTC_LUG
   - SFD
@@ -42,12 +42,12 @@ comments:
 
 ![短信投票系统介绍](https://ftp.lug.ustc.edu.cn/wp-content/gallery/2010-09-sfd/sfd10_05.jpg)
 
-![KDE桌面展示](https://ftp.lug.ustc.edu.cn/wp-content/gallery/2010-09-sfd/sfd10_06.jpg)
+![KDE 桌面展示](https://ftp.lug.ustc.edu.cn/wp-content/gallery/2010-09-sfd/sfd10_06.jpg)
 
-![Linux娱乐和工作](https://ftp.lug.ustc.edu.cn/wp-content/gallery/2010-09-sfd/sfd10_07.jpg)
+![Linux 娱乐和工作](https://ftp.lug.ustc.edu.cn/wp-content/gallery/2010-09-sfd/sfd10_07.jpg)
 
-![启动U盘原理和应用](https://ftp.lug.ustc.edu.cn/wp-content/gallery/2010-09-sfd/sfd10_08.jpg)
+![启动 U 盘原理和应用](https://ftp.lug.ustc.edu.cn/wp-content/gallery/2010-09-sfd/sfd10_08.jpg)
 
-![启动U盘展示](https://ftp.lug.ustc.edu.cn/wp-content/gallery/2010-09-sfd/sfd10_09.jpg)
+![启动 U 盘展示](https://ftp.lug.ustc.edu.cn/wp-content/gallery/2010-09-sfd/sfd10_09.jpg)
 
-![VIM编程环境](https://ftp.lug.ustc.edu.cn/wp-content/gallery/2010-09-sfd/sfd10_10.jpg)
+![VIM 编程环境](https://ftp.lug.ustc.edu.cn/wp-content/gallery/2010-09-sfd/sfd10_10.jpg)

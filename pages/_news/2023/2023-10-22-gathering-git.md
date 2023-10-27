@@ -3,8 +3,8 @@ title: "LUG 小聚：Git 简介与使用心得分享"
 author: "aka-dag"
 date: "2023-10-22 21:00:00 +0800"
 categories:
-  - LUG活动
-  - LUG小聚
+  - LUG 活动
+  - LUG 小聚
 tags: []
 ---
 

@@ -3,7 +3,7 @@ title: "Hackergame 2022 动员会"
 author: "zigone"
 date: "2022-10-22 09:00:00 +0800"
 categories:
-  - LUG活动
+  - LUG 活动
 tags: []
 ---
 

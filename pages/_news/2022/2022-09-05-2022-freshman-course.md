@@ -3,7 +3,7 @@ title: "2022 秋季学期新生系列活动"
 author: "zigone"
 date: "2022-09-05 09:00:00 +0800"
 categories:
-  - LUG活动
+  - LUG 活动
 tags: []
 ---
 

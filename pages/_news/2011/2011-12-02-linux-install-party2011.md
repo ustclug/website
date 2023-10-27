@@ -1,9 +1,9 @@
 ---
-title: Linux Install Party又来了，就在本周日！
+title: Linux Install Party 又来了，就在本周日！
 author: Aenon
 date: "2011-12-02 22:54:26 +0800"
 categories:
-  - LUG活动
+  - LUG 活动
 tags:
   - Linux Install Party
 comments:
@@ -40,9 +40,9 @@ comments:
     content: |-
       這是因爲你的電腦重啓了，而且你插着網綫，而且你的電腦支持網絡啓動並且設置網絡啓動優先級高於硬盤，所以電腦從網絡啓動了。這不是黑屏，也和你電腦上已經裝有的系統沒有任何關係。
 
-      如果你不想從網絡啓動，只要在bios裏的boot選單中刪除網絡啓動這一項就可以了。至於你電腦上正在運行的系統爲什麼會重啓，我覺得可能是你裝了不穩定的軟件，或者是電腦溫度過高。
+      如果你不想從網絡啓動，只要在 bios 裏的 boot 選單中刪除網絡啓動這一項就可以了。至於你電腦上正在運行的系統爲什麼會重啓，我覺得可能是你裝了不穩定的軟件，或者是電腦溫度過高。
 
-      如果有其他事情需要聯繫lug，請發送郵件到 lug AT ustc.edu.cn
+      如果有其他事情需要聯繫 lug，請發送郵件到 lug AT ustc.edu.cn
   - id: 198
     author: 雨帆
     author_email: syhily@gmail.com

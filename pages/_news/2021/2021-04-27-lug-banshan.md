@@ -6,7 +6,7 @@ header:
 author: totoroyyw
 date: "2021-04-27 1:01:00 +0800"
 categories:
-  - LUG活动
+  - LUG 活动
 tags:
   - LUG
   - 版衫
@@ -27,8 +27,8 @@ tags:
 
 ## 投稿方式
 
-- **方式１**：回复瀚海星云 BBS 的[征集贴](https://bbs.ustc.edu.cn/cgi/bbscon?bn=Linux&fn=M6087D60B&num=20000)，以附件形式附上设计图
-- **方式２**：发邮件至 [lug@ustc.edu.cn](mailto:lug@ustc.edu.cn)，标题「2021 版衫设计方案投稿」
+- **方式 1**：回复瀚海星云 BBS 的[征集贴](https://bbs.ustc.edu.cn/cgi/bbscon?bn=Linux&fn=M6087D60B&num=20000)，以附件形式附上设计图
+- **方式 2**：发邮件至 [lug@ustc.edu.cn](mailto:lug@ustc.edu.cn)，标题「2021 版衫设计方案投稿」
 
 ## 方案选择
 

@@ -1,9 +1,9 @@
 ---
-title: LUG版衫制作手册
+title: LUG 版衫制作手册
 author: jenny42
 date: "2015-09-13 21:38:09 +0800"
 categories:
-  - LUG活动
+  - LUG 活动
 tags:
   - 版衫
 comments: []

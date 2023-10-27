@@ -1,9 +1,9 @@
 ---
-title: 2013科大LUG Linux User Party
+title: 2013 科大 LUG Linux User Party
 author: Guangyu Zhang
 date: "2013-12-16 22:26:34 +0800"
 categories:
-  - LUG活动
+  - LUG 活动
 tags:
   - Linux User Party
 comments: []

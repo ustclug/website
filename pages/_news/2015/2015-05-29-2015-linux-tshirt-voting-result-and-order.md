@@ -1,9 +1,9 @@
 ---
-title: 2015年BBS Linux板板衫预定说明！
+title: 2015 年 BBS Linux 板板衫预定说明！
 author: jenny42
 date: "2015-05-29 11:39:02 +0800"
 categories:
-  - LUG活动
+  - LUG 活动
 tags:
   - news
   - 版衫
@@ -35,7 +35,7 @@ comments:
     author_url: ""
     date: "2015-06-01 08:35:57 +0800"
     date_gmt: "2015-06-01 00:35:57 +0800"
-    content: 貌似最终配图把方案8和10搞反了，方案八应该是小角马小企鹅那款，16票。
+    content: 貌似最终配图把方案 8 和 10 搞反了，方案八应该是小角马小企鹅那款，16 票。
   - id: 1301
     author: adongfan
     author_email: fad2012@mail.ustc.edu.cn
@@ -44,12 +44,12 @@ comments:
     date_gmt: "2015-06-01 03:20:53 +0800"
     content: 支持，已下单付款！
   - id: 1324
-    author: LUG版衫制作手册 | Linux User Group @USTC
+    author: LUG 版衫制作手册 | Linux User Group @USTC
     author_email: ""
     author_url: https://lug.ustc.edu.cn/blog/2015/09/lug-banshan-commission-guide/
     date: "2015-09-13 21:40:41 +0800"
     date_gmt: "2015-09-13 13:40:41 +0800"
-    content: "[&#8230;] 2015年BBS Linux板板衫预定说明！ 2015 年 05 月 29 日 [&#8230;]"
+    content: "[&#8230;] 2015 年 BBS Linux 板板衫预定说明！2015 年 05 月 29 日 [&#8230;]"
 ---
 
 # 投票结果
@@ -72,7 +72,7 @@ comments:
 投票总票数 = 158 票
 ```
 
-![（问卷星投票和BBS投票的总和）](https://ftp.lug.ustc.edu.cn/wp-content/uploads/2015/05/合集.png)
+![（问卷星投票和 BBS 投票的总和）](https://ftp.lug.ustc.edu.cn/wp-content/uploads/2015/05/合集.png)
 
 # 2015 版衫效果图
 

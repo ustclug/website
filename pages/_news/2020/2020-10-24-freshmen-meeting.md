@@ -6,7 +6,7 @@ header:
 author: hqy
 date: "2020-10-25 16:40:00 +0800"
 categories:
-  - LUG活动
+  - LUG 活动
 tags: []
 comments: []
 ---

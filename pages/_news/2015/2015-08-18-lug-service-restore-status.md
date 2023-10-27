@@ -1,9 +1,9 @@
 ---
-title: LUG部分服务恢复情况
+title: LUG 部分服务恢复情况
 author: Boyuan Yang
 date: "2015-08-18 16:09:52 +0800"
 categories:
-  - LUG服务
+  - LUG 服务
 tags:
   - USTC_LUG
   - server

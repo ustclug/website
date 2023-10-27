@@ -1,9 +1,9 @@
 ---
-title: LUG带同学们走进神秘的网络中心机房
+title: LUG 带同学们走进神秘的网络中心机房
 author: 1997cui
 date: "2016-10-25 22:04:43 +0800"
 categories:
-  - LUG活动
+  - LUG 活动
 tags:
   - LUG
   - USTC_LUG

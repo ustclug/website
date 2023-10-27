@@ -3,7 +3,7 @@ title: Blog 服务器宕机
 author: Boyuan Yang
 date: "2014-12-18 09:20:22 +0800"
 categories:
-  - LUG服务
+  - LUG 服务
 tags:
   - server
 comments:

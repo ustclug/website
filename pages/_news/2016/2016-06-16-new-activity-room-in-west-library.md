@@ -3,7 +3,7 @@ title: 西区图书馆新活动室启用
 author: Boyuan Yang
 date: "2016-06-16 15:28:55 +0800"
 categories:
-  - LUG活动
+  - LUG 活动
 tags:
   - LUG
   - USTC_LUG
@@ -13,7 +13,7 @@ comments: []
 
 2016 年 6 月 16 日，LUG 西区新活动室启用，并成为今后唯一的社团活动室。一部分 LUG 成员在当日早上从东区图书馆 605 老活动室与东图一楼将大部分活动材料与各类物品搬迁到了西区活动室。
 
-![LUG西区新活动室外景](https://ftp.lug.ustc.edu.cn/wp-content/uploads/2016/06/IMG_20160616_133655_compressed.jpg)
+![LUG 西区新活动室外景](https://ftp.lug.ustc.edu.cn/wp-content/uploads/2016/06/IMG_20160616_133655_compressed.jpg)
 
 新的西区活动室仍然由图书馆提供，位于西区图书馆 206 室。具体地点在西区图书馆主楼二楼西北角，十分接近原 308 活动室。
 

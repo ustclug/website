@@ -3,7 +3,7 @@ title: "无主题小聚"
 author: wyf
 date: "2020-12-27 17:30:00 +0800"
 categories:
-  - LUG活动
+  - LUG 活动
 tags: []
 ---
 

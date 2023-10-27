@@ -4,7 +4,7 @@ image: https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2019.01.03_Hackergame_%E9%
 author: sirius1242
 date: "2019-01-05 14:47:29 +0800"
 categories:
-  - LUG活动
+  - LUG 活动
 tags: []
 ---
 

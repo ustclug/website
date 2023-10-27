@@ -1,9 +1,9 @@
 ---
-title: 5月30日服务器宕机说明
+title: 5 月 30 日服务器宕机说明
 author: Boyuan Yang
 date: "2015-06-01 16:22:02 +0800"
 categories:
-  - LUG服务
+  - LUG 服务
 tags: []
 comments: []
 ---

@@ -3,8 +3,8 @@ title: "LCPU x USTCLUG 联合沙龙：Xmake 和墨干编辑器"
 author: "zigone"
 date: "2022-10-27 08:00:00 +0800"
 categories:
-  - LUG活动
-  - LUG小聚
+  - LUG 活动
+  - LUG 小聚
 tags: []
 ---
 

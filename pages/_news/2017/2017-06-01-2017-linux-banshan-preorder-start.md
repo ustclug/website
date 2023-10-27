@@ -3,7 +3,7 @@ title: 2017 Linux 板版衫预订开始！
 author: Boyuan Yang
 date: "2017-06-01 09:20:27 +0800"
 categories:
-  - LUG活动
+  - LUG 活动
 tags: []
 comments:
   - id: 1801
@@ -15,7 +15,7 @@ comments:
     content: 哈哈哈吼啊！
 ---
 
-经过紧张的投票，我们决定使用方案１作为今年版衫。
+经过紧张的投票，我们决定使用方案 1 作为今年版衫。
 
 BBS 相同文章联动：[点我](https://bbs.ustc.edu.cn/cgi/bbscon?bn=Linux&fn=M592ED048)
 
@@ -37,7 +37,7 @@ BBS 相同文章联动：[点我](https://bbs.ustc.edu.cn/cgi/bbscon?bn=Linux&fn
 
 #### 预订方法
 
-1.  转账到支付宝帐号 crtmike (At) hotmail.com 姓名：马凯；头像为浑天仪。建议备注姓名+手机号以便追溯！
+1.  转账到支付宝帐号 crtmike (At) hotmail.com 姓名：马凯；头像为浑天仪。建议备注姓名 + 手机号以便追溯！
 1.  [填写表单 https://t.cn/RSfG5md](https://t.cn/RSfG5md) 如果购买多件烦请分别多次填写！
 
 #### 预订说明
@@ -49,9 +49,9 @@ BBS 相同文章联动：[点我](https://bbs.ustc.edu.cn/cgi/bbscon?bn=Linux&fn
 
 如果有其他问题，请咨询：
 
-LUG 邮箱： lug (at) ustc.edu.cn
+LUG 邮箱：lug (at) ustc.edu.cn
 
-负责人 QQ： 515166698
+负责人 QQ：515166698
 
 ### 设计图展示
 

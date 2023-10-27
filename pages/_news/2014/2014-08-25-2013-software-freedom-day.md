@@ -3,7 +3,7 @@ title: 2013 Software Freedom Day 合肥站
 author: Guangyu Zhang
 date: "2014-08-25 17:21:18 +0800"
 categories:
-  - LUG活动
+  - LUG 活动
 tags:
   - LUG
   - USTC_LUG
@@ -11,7 +11,7 @@ tags:
 comments: []
 ---
 
-2013 年 9 月 21 日下午 2：30，中国科学技术大学校 Linux 用户协会在合肥市与全球几百所高校和组织一道，举办了 2013 年软件自由日庆祝活动。
+2013 年 9 月 21 日下午 2:30，中国科学技术大学校 Linux 用户协会在合肥市与全球几百所高校和组织一道，举办了 2013 年软件自由日庆祝活动。
 
 本次活动邀请到了上海 Linux User Group 负责人姚欣宇。他同时也是项目托管平台 GitCafe 的创始人兼 Team Leader。他这次为我们带来的话题是 Git 入门介绍。姚欣宇并不是第一次参加我们协会的活动，在 2011 年的 Linux User Party，我们也曾邀请姚欣宇来为我们分享他的 Linux 经历。
 
@@ -39,7 +39,7 @@ comments: []
 
 ![2013 SFD Git 简明入门](https://ftp.lug.ustc.edu.cn/wp-content/uploads/2014/08/2013sfd-git1.jpg)
 
-![2013 SFD Git 简明入门2](https://ftp.lug.ustc.edu.cn/wp-content/uploads/2014/08/2013sfd-git2.jpg)
+![2013 SFD Git 简明入门 2](https://ftp.lug.ustc.edu.cn/wp-content/uploads/2014/08/2013sfd-git2.jpg)
 
 接下来由杨国鑫同学带来《华丽的发行版——OpenSUSE》
 

@@ -3,7 +3,7 @@ title: 服务器宕机通知（已恢复）
 author: taoky
 date: "2020-01-06 23:34:34 +0800"
 categories:
-  - LUG服务器
+  - LUG 服务器
 tags: []
 ---
 

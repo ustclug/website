@@ -4,7 +4,7 @@ header:
 author: psi-cmd
 date: "2021-12-12 14:30:00 +0800"
 categories:
-  - LUG活动
+  - LUG 活动
 tags: []
 comments: []
 ---

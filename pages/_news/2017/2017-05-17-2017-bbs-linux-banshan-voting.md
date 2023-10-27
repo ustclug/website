@@ -3,7 +3,7 @@ title: 2017 Linux 板版衫候选方案公布与投票
 author: Boyuan Yang
 date: "2017-05-17 10:49:31 +0800"
 categories:
-  - LUG活动
+  - LUG 活动
 tags:
   - LUG
   - 版衫

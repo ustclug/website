@@ -6,7 +6,7 @@ header:
 author: Kiyoaki
 date: "2021-06-15 18:00:00 +0800"
 categories:
-  - LUG活动
+  - LUG 活动
 tags:
   - LUG
   - 版衫

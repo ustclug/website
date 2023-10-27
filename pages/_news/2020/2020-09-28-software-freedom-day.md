@@ -6,7 +6,7 @@ header:
 author: elsagranger
 date: "2020-09-28 14:46:58 +0800"
 categories:
-  - LUG活动
+  - LUG 活动
 tags: []
 comments: []
 ---

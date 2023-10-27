@@ -4,7 +4,7 @@ header:
 author: psi-cmd
 date: "2021-12-05 14:30:00 +0800"
 categories:
-  - LUG活动
+  - LUG 活动
 tags: []
 comments: []
 ---
@@ -19,7 +19,7 @@ comments: []
 
 界面是那么朴素，年代是那么久远，直到同学们熟悉的命令行的出现，它才褪去了伪装。XP 桌面主题用它的天衣无缝，向同学们证明了 Linux 桌面美化的无限可能。
 
-赵作竑同学借此机会向同学们推荐了演示所用的 [B00merang](https://github.com/B00merang-Project/Windows-XP) 主题, 它可以让同学们的 Linux 桌面审美风格倒退 20 年，向 Windows XP 看齐，同时建议同学们尝试采用 B00merang 下其他 Windows 版本的主题，以得到形似 Windows 但更加流畅的界面体验。
+赵作竑同学借此机会向同学们推荐了演示所用的 [B00merang](https://github.com/B00merang-Project/Windows-XP) 主题，它可以让同学们的 Linux 桌面审美风格倒退 20 年，向 Windows XP 看齐，同时建议同学们尝试采用 B00merang 下其他 Windows 版本的主题，以得到形似 Windows 但更加流畅的界面体验。
 
 简单的引入环节后，赵作竑同学向同学们系统地介绍了桌面配置背后的逻辑：
 

@@ -4,7 +4,7 @@ image: https://ftp.lug.ustc.edu.cn/wp-content/uploads/2018-06-14-server-down.png
 author: hejiyan
 date: "2018-06-14 01:10:50 +0800"
 categories:
-  - LUG服务器
+  - LUG 服务器
 tags: []
 ---
 
@@ -15,7 +15,7 @@ tags: []
 - 主页 (wiki)：[https://lug.ustc.edu.cn/](https://lug.ustc.edu.cn/) （已恢复）
 - 代码托管平台：[https://git.ustclug.org/](https://git.ustclug.org/) （已恢复，建议用户切换新地址：git.lug.ustc.edu.cn）
 - LUG FTP：[https://ftp.lug.ustc.edu.cn/](https://ftp.lug.ustc.edu.cn/) （已恢复）
-- 反向代理：\*.proxy.ustclug.org （已恢复）
+- 反向代理：\*.proxy.ustclug.org（已恢复）
 
 如果您使用上述服务时遇到问题，请向我们反馈。
 
@@ -54,7 +54,7 @@ tags: []
 - 网络加速服务
 - 防污染 DNS
 - 主页 (wiki)：[https://lug.ustc.edu.cn/](https://lug.ustc.edu.cn/) （已恢复）
-- 反向代理：\*.proxy.ustclug.org （已恢复）
+- 反向代理：\*.proxy.ustclug.org（已恢复）
 - VPN 在线申请系统
 - 轻量级网络加速服务
 - 服务器统一认证：ldap.ustclug.org

@@ -1,9 +1,9 @@
 ---
-title: 2015 瀚海星云BBS 板板衫方案
+title: 2015 瀚海星云 BBS 板板衫方案
 author: jenny42
 date: "2015-05-21 18:23:11 +0800"
 categories:
-  - LUG活动
+  - LUG 活动
 tags:
   - 版衫
 comments:
@@ -13,23 +13,23 @@ comments:
     author_url: ""
     date: "2015-05-22 10:50:03 +0800"
     date_gmt: "2015-05-22 02:50:03 +0800"
-    content: 我这可以提供靠谱的底衫，也是挑了非常多家挑出来的。质量好，深色T的色牢度非常好。我在科大西区，直接电话我吧138六六108644 :-)
+    content: 我这可以提供靠谱的底衫，也是挑了非常多家挑出来的。质量好，深色 T 的色牢度非常好。我在科大西区，直接电话我吧 138 六六 108644 :-)
   - id: 1293
-    author: 2015BBSLinux板衫 投票结果与预定！ | Linux User Group @USTC
+    author: 2015BBSLinux 板衫 投票结果与预定！ | Linux User Group @USTC
     author_email: ""
     author_url: https://lug.ustc.edu.cn/blog/2015/05/2015-banshan-voting-result/
     date: "2015-05-29 11:39:08 +0800"
     date_gmt: "2015-05-29 03:39:08 +0800"
     content: "[&#8230;] 这次版衫制作，征集到的设计方案 最后的投票结果是： [&#8230;]"
   - id: 1294
-    author: 2015BBSLinux板衫 投票结果 | Linux User Group @USTC
+    author: 2015BBSLinux 板衫 投票结果 | Linux User Group @USTC
     author_email: ""
     author_url: https://lug.ustc.edu.cn/blog/2015/05/2015-linux-tshirt-voting-result-and-order/
     date: "2015-05-29 12:32:30 +0800"
     date_gmt: "2015-05-29 04:32:30 +0800"
     content: "[&#8230;] 这次版衫制作，征集到的设计方案 最后的投票结果是： [&#8230;]"
   - id: 1323
-    author: LUG版衫制作手册 | Linux User Group @USTC
+    author: LUG 版衫制作手册 | Linux User Group @USTC
     author_email: ""
     author_url: https://lug.ustc.edu.cn/blog/2015/09/lug-banshan-commission-guide/
     date: "2015-09-13 21:38:21 +0800"
