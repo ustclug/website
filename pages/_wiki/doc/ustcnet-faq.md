@@ -36,7 +36,7 @@ redirect_from: /wiki/user/taoky/ustcnet_troubleshooting/
 
 2. DNS 设置是否正确？
 
-   在网络通未登录的情况下，机器无法访问校外网络。因此，如果你将 DNS 设置为了校外的 DNS，则系统在解析 wlt.ustc.edu.cn 域名时就会出错。
+   在网络通未登录的情况下，机器无法访问校外网络。因此，如果你将 DNS 设置为了校外的 DNS，则系统在解析 `wlt.ustc.edu.cn` 域名时就会出错。
 
    解决方法任选其一：
 
@@ -47,9 +47,9 @@ redirect_from: /wiki/user/taoky/ustcnet_troubleshooting/
 
    （对于新电脑）一些现代浏览器会自动打开「启用基于 HTTPS 的 DNS」（DoH）功能，和上面的原因一样，会造成网络通域名解析出错，且默认提供商（Cloudflare）在大陆体验不佳，建议关闭该功能。各浏览器设置路径如下：
 
-   - Chrome：设置 - 安全 - 使用安全 DNS
-   - Firefox：常规 - 网络设置 - 启用基于 HTTPS 的 DNS
-   - Edge：隐私、搜索和服务 - 安全性 - 使用安全的 DNS 指定如何查找网站的网络地址
+   - Chrome：设置 → 安全 → 使用安全 DNS
+   - Firefox：常规 → 网络设置 → 启用基于 HTTPS 的 DNS
+   - Edge：隐私、搜索和服务 → 安全性 → 使用安全的 DNS 指定如何查找网站的网络地址
 
 ### 连接网络通 1 出口（教育网出口）后发现有奇怪的 IP 连接自己电脑的端口
 
@@ -65,11 +65,11 @@ redirect_from: /wiki/user/taoky/ustcnet_troubleshooting/
 
 ### 使用 Thunderbird 连接科大邮箱
 
-由于 Thunderbird 某次版本升级后默认配置与邮箱服务器不兼容，因此除常规配置外，还需要修改以下配置：Edit -> Settings，在 "General" 中拖到最下面选择 "Config Editor..."。在新弹出的高级配置的标签中输入 utf8，将 `mail.server.default.allow_utf8_accept` 的值从 true 改成 false。这个设置不会影响其他邮箱的使用。
+由于 Thunderbird 某次版本升级后默认配置与邮箱服务器不兼容，因此除常规配置外，还需要修改以下配置：Edit → Settings，在 General 中拖到最下面选择 Config Editor...。在新弹出的高级配置的标签中输入 utf8，将 `mail.server.default.allow_utf8_accept` 的值从 true 改成 false。这个设置不会影响其他邮箱的使用。
 
 ## 如何咨询/反馈问题？
 
-可以向网络信息中心 (<https://ustcnet.ustc.edu.cn/>) 邮件反馈问题，或者在 BBS 的「网络信息中心」板块反馈，或者在报修系统 (<https://baoxiu.ustc.edu.cn/>) 报修。
+可以向网络信息中心（<https://ustcnet.ustc.edu.cn/>）邮件反馈问题，或者在 BBS 的「网络信息中心」板块反馈，或者在报修系统（<https://baoxiu.ustc.edu.cn/>）报修。
 
 （尽管 BBS 已经成为时代的眼泪，但是在向校方部门反馈问题的方面还是有效的）
 
