@@ -9,18 +9,18 @@
   <head>
     <meta charset="utf-8">
     <!-- begin _includes/seo.html -->
-    <title>Linux 版版聚 - LUG @ USTC</title>
-    <meta name="description" content="">
+    <title>LUG 小聚：Debug 原理与演示 - LUG @ USTC</title>
+    <meta name="description" content="2023 年 12 月 9 日，校学生 Linux 用户协会举办了一场小聚活动。本次小聚是由 Linux 用户协会的廖巍同学为我们带来的关于 debug 的原理与演示。">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="zh_CN">
     <meta property="og:site_name" content="LUG @ USTC">
-    <meta property="og:title" content="Linux 版版聚">
-    <meta property="og:url" content="https://lug.ustc.edu.cn/news/2011/05/linux-e7-89-88-e7-89-88-e8-81-9a/">
-    <meta property="og:description" content="">
+    <meta property="og:title" content="LUG 小聚：Debug 原理与演示">
+    <meta property="og:url" content="https://lug.ustc.edu.cn/news/2023/12/gathering-debug/">
+    <meta property="og:description" content="2023 年 12 月 9 日，校学生 Linux 用户协会举办了一场小聚活动。本次小聚是由 Linux 用户协会的廖巍同学为我们带来的关于 debug 的原理与演示。">
     <meta property="og:image" content="https://lug.ustc.edu.cn/static/splash/autumn-1.jpg">
-    <meta property="article:published_time" content="2011-05-11T01:20:26+08:00">
-    <meta property="article:modified_time" content="2023-10-27T13:53:52+08:00">
-    <link rel="canonical" href="https://lug.ustc.edu.cn/news/2011/05/linux-e7-89-88-e7-89-88-e8-81-9a/">
+    <meta property="article:published_time" content="2023-12-09T19:00:00+08:00">
+    <meta property="article:modified_time" content="2023-12-11T15:02:07+08:00">
+    <link rel="canonical" href="https://lug.ustc.edu.cn/news/2023/12/gathering-debug/">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -132,22 +132,22 @@
 >
         <div class="wrapper">
           <h1 id="page-title" class="page__title" itemprop="headline">
-            Linux 版版聚
+            LUG 小聚：Debug 原理与演示
           </h1>
           <p class="page__meta">
             <span class="page__meta-date">
               <i class="far fa-calendar-alt" aria-hidden="true"></i>
-              <time datetime="2011-05-11T01:20:26+08:00">2011 年 5 月 11 日</time>
+              <time datetime="2023-12-09T19:00:00+08:00">2023 年 12 月 9 日</time>
             </span>
           </p>
         </div>
       </div>
       <div id="main" role="main">
         <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-          <meta itemprop="headline" content="Linux 版版聚">
-          <meta itemprop="description" content="">
-          <meta itemprop="datePublished" content="2011-05-11T01:20:26+08:00">
-          <meta itemprop="dateModified" content="2023-10-27T13:53:52+08:00">
+          <meta itemprop="headline" content="LUG 小聚：Debug 原理与演示">
+          <meta itemprop="description" content="2023 年 12 月 9 日，校学生 Linux 用户协会举办了一场小聚活动。本次小聚是由 Linux 用户协会的廖巍同学为我们带来的关于 debug 的原理与演示。">
+          <meta itemprop="datePublished" content="2023-12-09T19:00:00+08:00">
+          <meta itemprop="dateModified" content="2023-12-11T15:02:07+08:00">
           <div class="page__inner-wrap">
             <section class="page__content" itemprop="text">
               <aside class="sidebar__right sticky">
@@ -157,65 +157,38 @@
                   </header>
                 </nav>
               </aside>
-              <p><img src="https://ftp.lug.ustc.edu.cn/wp-content/gallery/2011-05-bbq/dscf2776.jpg" alt="" /></p>
-              <p><img src="https://ftp.lug.ustc.edu.cn/wp-content/gallery/2011-05-bbq/dscf2794.jpg" alt="" /></p>
-              <p><img src="https://ftp.lug.ustc.edu.cn/wp-content/gallery/2011-05-bbq/dscf2796.jpg" alt="" /></p>
-              <p><img src="https://ftp.lug.ustc.edu.cn/wp-content/gallery/2011-05-bbq/dscf2798.jpg" alt="" /></p>
-              <p><img src="https://ftp.lug.ustc.edu.cn/wp-content/gallery/2011-05-bbq/dscf2802.jpg" alt="" /></p>
-              <p><img src="https://ftp.lug.ustc.edu.cn/wp-content/gallery/2011-05-bbq/dscf2803.jpg" alt="" /></p>
-              <p><img src="https://ftp.lug.ustc.edu.cn/wp-content/gallery/2011-05-bbq/dscf2804.jpg" alt="" /></p>
-              <p><img src="https://ftp.lug.ustc.edu.cn/wp-content/gallery/2011-05-bbq/dscf2806.jpg" alt="" /></p>
-              <p><img src="https://ftp.lug.ustc.edu.cn/wp-content/gallery/2011-05-bbq/dscf2807.jpg" alt="" /></p>
-              <p><img src="https://ftp.lug.ustc.edu.cn/wp-content/gallery/2011-05-bbq/dscf2808.jpg" alt="" /></p>
-              <p><img src="https://ftp.lug.ustc.edu.cn/wp-content/gallery/2011-05-bbq/dscf2809.jpg" alt="" /></p>
-              <p><img src="https://ftp.lug.ustc.edu.cn/wp-content/gallery/2011-05-bbq/dscf2777.jpg" alt="" /></p>
-              <p><img src="https://ftp.lug.ustc.edu.cn/wp-content/gallery/2011-05-bbq/DSCF2778.JPG" alt="" /></p>
-              <p><img src="https://ftp.lug.ustc.edu.cn/wp-content/gallery/2011-05-bbq/DSCF2780.JPG" alt="" /></p>
-              <p><img src="https://ftp.lug.ustc.edu.cn/wp-content/gallery/2011-05-bbq/DSCF2781.JPG" alt="" /></p>
-              <p><img src="https://ftp.lug.ustc.edu.cn/wp-content/gallery/2011-05-bbq/DSCF2782.JPG" alt="" /></p>
-              <p><img src="https://ftp.lug.ustc.edu.cn/wp-content/gallery/2011-05-bbq/DSCF2783.JPG" alt="" /></p>
-              <p><img src="https://ftp.lug.ustc.edu.cn/wp-content/gallery/2011-05-bbq/DSCF2784.JPG" alt="" /></p>
-              <p><img src="https://ftp.lug.ustc.edu.cn/wp-content/gallery/2011-05-bbq/DSCF2786.JPG" alt="" /></p>
-              <p><img src="https://ftp.lug.ustc.edu.cn/wp-content/gallery/2011-05-bbq/DSCF2788.JPG" alt="" /></p>
-              <p><img src="https://ftp.lug.ustc.edu.cn/wp-content/gallery/2011-05-bbq/DSCF2789.JPG" alt="" /></p>
-              <p><img src="https://ftp.lug.ustc.edu.cn/wp-content/gallery/2011-05-bbq/DSCF2790.JPG" alt="" /></p>
-              <p><img src="https://ftp.lug.ustc.edu.cn/wp-content/gallery/2011-05-bbq/DSCF2791.JPG" alt="" /></p>
-              <p><img src="https://ftp.lug.ustc.edu.cn/wp-content/gallery/2011-05-bbq/DSCF2792.JPG" alt="" /></p>
-              <p><img src="https://ftp.lug.ustc.edu.cn/wp-content/gallery/2011-05-bbq/DSCF2793.JPG" alt="" /></p>
-              <p><img src="https://ftp.lug.ustc.edu.cn/wp-content/gallery/2011-05-bbq/DSCF2795.JPG" alt="" /></p>
-              <p><img src="https://ftp.lug.ustc.edu.cn/wp-content/gallery/2011-05-bbq/DSCF2797.JPG" alt="" /></p>
-              <p><img src="https://ftp.lug.ustc.edu.cn/wp-content/gallery/2011-05-bbq/DSCF2799.JPG" alt="" /></p>
-              <p><img src="https://ftp.lug.ustc.edu.cn/wp-content/gallery/2011-05-bbq/DSCF2800.JPG" alt="" /></p>
-              <p><img src="https://ftp.lug.ustc.edu.cn/wp-content/gallery/2011-05-bbq/DSCF2810.JPG" alt="" /></p>
-              <p><img src="https://ftp.lug.ustc.edu.cn/wp-content/gallery/2011-05-bbq/DSCF2811.JPG" alt="" /></p>
+              <p>2023 年 12 月 9 日，校学生 Linux 用户协会举办了一场小聚活动。本次小聚是由 Linux 用户协会的廖巍同学为我们带来的关于 debug 的原理与演示。</p>
+              <p><img src="https://ftp.lug.ustc.edu.cn/weekly_party/2023.12.09_Debug/photo/photo_2023-12-09_15-36-35.jpg" alt="" /></p>
+              <p>廖同学首先从 debug 的基本概念入手，向大家解释了它在软件开发中的关键作用。通过生动的例子和清晰的讲解，她让大家更加理解了程序中 bug 的危害、 debug 的重要性以及在编程过程中如何有效运用它来解决问题。</p>
+              <p><img src="https://ftp.lug.ustc.edu.cn/weekly_party/2023.12.09_Debug/photo/ppt-01.png" alt="" /></p>
+              <p><img src="https://ftp.lug.ustc.edu.cn/weekly_party/2023.12.09_Debug/photo/ppt-02.png" alt="" /></p>
+              <p>接下来，廖同学详述了五个流程来高效地进行 debug：从复现问题出发，到收集与 bug 相关的线索、最终的问题定位，再到尝试修复这一类的 bug 而并非针对性地解决单个问题，最终对代码进行全面的测试以防引入新的 bug。</p>
+              <p><img src="http://ftp.lug.ustc.edu.cn/weekly_party/2023.12.09_Debug/photo/ppt-03.png" alt="" /></p>
+              <p>随后，廖同学展示了一系列实际案例，演示了常见的 bug 出现场景以及如何通过 debug 工具（如 gdb 等）逐步定位和修复问题。她的演示不仅涉及了常见的语法错误，还包括了一些更复杂的逻辑错误和运行时错误，让观众从不同层面深入了解 debug 的应用。</p>
+              <p><img src="http://ftp.lug.ustc.edu.cn/weekly_party/2023.12.09_Debug/photo/ppt-04.png" alt="" /></p>
+              <p>活动现场，同学们积极提问，与廖同学进行深入交流，使整个演示更加生动有趣。廖同学不仅耐心回答了问题，还分享了一些自己在实际项目中遇到的挑战和解决方案，为大家提供了宝贵的经验。</p>
+              <p>最后，到场的同学们纷纷表示受益匪浅，对于 debug 有了更深层次的理解。活动的成功举办不仅展现了同学们的学习热情，也为大家提供了一个共同成长的平台。期待未来社团活动中能有更多类似的精彩分享，共同探讨技术前沿。</p>
             </section>
             <footer class="page__meta">
               <p class="page__taxonomy">
-                <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 标签: </strong>
-                <span itemprop="keywords">
-                  <a href="/tags/bbs" class="page__taxonomy-item" rel="tag">BBS</a><span class="sep">, </span>
-                  <a href="/tags/%E7%89%88%E8%81%9A" class="page__taxonomy-item" rel="tag">版聚</a>
-                </span>
-              </p>
-              <p class="page__taxonomy">
                 <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 分类: </strong>
                 <span itemprop="keywords">
+                  <a href="/categories/lug-%E5%B0%8F%E8%81%9A" class="page__taxonomy-item" rel="tag">LUG 小聚</a><span class="sep">, </span>
                   <a href="/categories/lug-%E6%B4%BB%E5%8A%A8" class="page__taxonomy-item" rel="tag">LUG 活动</a>
                 </span>
               </p>
-              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2023-10-27">2023 年 10 月 27 日</time></p>
+              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2023-12-11">2023 年 12 月 11 日</time></p>
             </footer>
             <section class="page__share">
               <h4 class="page__share-title">分享</h4>
-              <a href="https://twitter.com/intent/tweet?text=Linux+%E7%89%88%E7%89%88%E8%81%9A%20https%3A%2F%2Flug.ustc.edu.cn%2Fnews%2F2011%2F05%2Flinux-e7-89-88-e7-89-88-e8-81-9a%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flug.ustc.edu.cn%2Fnews%2F2011%2F05%2Flinux-e7-89-88-e7-89-88-e8-81-9a%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
-              <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Flug.ustc.edu.cn%2Fnews%2F2011%2F05%2Flinux-e7-89-88-e7-89-88-e8-81-9a%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+              <a href="https://twitter.com/intent/tweet?text=LUG+%E5%B0%8F%E8%81%9A%EF%BC%9ADebug+%E5%8E%9F%E7%90%86%E4%B8%8E%E6%BC%94%E7%A4%BA%20https%3A%2F%2Flug.ustc.edu.cn%2Fnews%2F2023%2F12%2Fgathering-debug%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flug.ustc.edu.cn%2Fnews%2F2023%2F12%2Fgathering-debug%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+              <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Flug.ustc.edu.cn%2Fnews%2F2023%2F12%2Fgathering-debug%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
             </section>
             <nav class="pagination">
-              <a href="/news/2011/05/ftp-cn-debian-org-comes/" class="pagination--pager" title="Debian 中国官方镜像：ftp.cn.debian.org
+              <a href="/news/2023/10/Hackergame2023-pep-rally/" class="pagination--pager" title="Hackergame 2023 动员会
 ">上一页</a>
-              <a href="/news/2011/05/customize-pxe-live-system/" class="pagination--pager" title="定制 PXE Live 系统
-">下一页</a>
+              <a href="#" class="pagination--pager disabled">下一页</a>
             </nav>
           </div>
         </article>
