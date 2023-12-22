@@ -31,11 +31,11 @@
 | ---- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | 上海 | [Shanghai Linux User Group](https://groups.google.com/group/shlug)                 | [SHLUG](http://www.shlug.org/)                                      |
 | 北京 | [Beijing GNU/Linux User Group](https://beijinglug.club/mailing-lists/)             | [BLUG](https://beijinglug.club/)                                    |
-| 成都 | [Chengdu Linux User Group](https://groups.google.com/group/cdlug_community)        | [CDLUG](http://www.cdlug.sh/)                                       |
+| 成都 | [Chengdu Linux User Group](https://groups.google.com/group/cdlug_community)        | [CDLUG](https://cdlug.org/)                                         |
 | 重庆 | [Chongqing Linux User Group](https://groups.google.com/forum/#!forum/chongqinglug) | [CHONGQINGLUG](http://www.chongqinglug.org/)                        |
-| 广州 | [Guangzhou Linux User Group](https://groups.google.com/group/gzlug)                | [GZLUG](http://www.gzlug.org/)                                      |
+| 广州 | [Guangzhou Linux User Group](https://groups.google.com/group/gzlug)                |                                                                     |
 | 杭州 | [Hangzhou Linux User Group](https://groups.google.com/group/hzlug)                 |                                                                     |
-| 南京 | [Nanjing Linux User Group](https://groups.google.com/group/njlug)                  | [NANJINGLUG](http://nanjinglug.org/)                                |
+| 南京 | [Nanjing Linux User Group](https://groups.google.com/group/njlug)                  |                                                                     |
 | 深圳 | [Shenzhen Linux User Group](https://groups.google.com/group/szlug)                 |                                                                     |
 | 天津 | [Tianjing Linux User Group](https://groups.google.com/group/tjlug)                 |                                                                     |
 | 香港 |                                                                                    | [Hong Kong Linux User Group](http://www.linux.org.hk/)              |
