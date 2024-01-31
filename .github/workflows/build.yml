@@ -12,18 +12,18 @@ jobs:
     env:
       LSI: 'true'
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         fetch-depth: 0
     - uses: ruby/setup-ruby@v1
       with:
         ruby-version: '3.0'
-    - uses: actions/setup-node@v3
+    - uses: actions/setup-node@v4
       with:
         node-version: 16
 
     - name: Cache Ruby gems
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       env:
         CACHE_ID: 1
       with:
@@ -34,7 +34,7 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-bundler-${{ env.CACHE_ID }}-
     - name: Cache Node modules
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       env:
         CACHE_ID: 1
       with:
@@ -58,7 +58,7 @@ jobs:
       run: npm run fix
     - name: Submit PR for prettier fix
       if: "failure() && steps.prettier.outcome == 'failure' && github.ref == 'refs/heads/master'"
-      uses: peter-evans/create-pull-request@v5
+      uses: peter-evans/create-pull-request@v6
       with:
         commit-message: 'Prettier auto fix from GitHub Actions run ${{ github.run_number }}'
         assignees: '${{ github.actor }}'
