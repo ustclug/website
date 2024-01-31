@@ -15,6 +15,6 @@
 
 [图书馆查询机系统](https://docs.ustclug.org/services/pxe/liims/ "https://docs.ustclug.org/services/pxe/liims/")
 
-[Github 项目](https://github.com/ustclug/liimstrap "https://github.com/ustclug/liimstrap")
+[GitHub 项目](https://github.com/ustclug/liimstrap "https://github.com/ustclug/liimstrap")
 
 查询机运行状况监控：[图书馆查询机状态](http://pxe.ustc.edu.cn:3000/ "http://pxe.ustc.edu.cn:3000")

@@ -17,7 +17,7 @@ USTC LUG 邮件列表所有帖子都永久存档、公开可见：
 
 ## 如何加入
 
-加入邮件列表的方法很简单：发送一封邮件到 ustc_lug+subscribe AT googlegroups.com （请把 AT 替换成@）某些邮箱不支持邮箱地址中的加号“+”。
+加入邮件列表的方法很简单：发送一封邮件到 ustc\_lug+subscribe AT googlegroups.com（请把 AT 替换成 `@`）某些邮箱不支持邮箱地址中的加号“+”。
 
 此时您会收到一封来自 Google Groups 的确认邮件。可以根据确认邮件的内容，直接回复任意内容，或点击确认邮件中的链接来加入邮件列表。
 
@@ -35,7 +35,7 @@ USTC LUG 邮件列表所有帖子都永久存档、公开可见：
 
 ## 如何回复
 
-直接回复就行了！回复会被发到 ustc_lug AT googlegroups.com，然后邮件列表的提供商 (Google) 会把这封邮件转发给所有加入邮件列表的人。新人发布回复时需要审核，请耐心等待。
+直接回复就行了！回复会被发到 ustc\_lug AT googlegroups.com，然后邮件列表的提供商 (Google) 会把这封邮件转发给所有加入邮件列表的人。新人发布回复时需要审核，请耐心等待。
 
 细心的同学可能注意到了：“From”一栏填的是发件人的私人邮件地址啊，为什么回复会被送到邮件列表呢？那是因为邮件中设置了 `Reply-To: ustc_lug AT googlegroups.com` 。如果你在用 Gmail，可以用“Show Original”功能来了解邮件协议的更多信息。
 
@@ -49,7 +49,7 @@ USTC LUG 邮件列表所有帖子都永久存档、公开可见：
 
 ## 如何发新主题
 
-直接向 ustc_lug AT googlegroups.com （请把 AT 替换成@）发邮件就行了，Google Groups 会帮您转发给所有加入邮件列表的人。新人发布主题时需要审核，请耐心等待。
+直接向 ustc\_lug AT googlegroups.com （请把 AT 替换成@）发邮件就行了，Google Groups 会帮您转发给所有加入邮件列表的人。新人发布主题时需要审核，请耐心等待。
 
 1. “如何回复”中列出的 Tips 仍然适用
 
@@ -61,8 +61,8 @@ USTC LUG 邮件列表所有帖子都永久存档、公开可见：
 
 在邮件列表中，你所提技术问题的解答很大程度上取决于提问的方式与解决此问题的难度，本文将教你如何提问才更有可能得到满意的答复。推荐大家在提问之前看看。
 
-原文： <http://www.catb.org/esr/faqs/smart-questions.html>
+原文：<http://www.catb.org/esr/faqs/smart-questions.html>
 
-中文版： [提问的智慧](/wiki/doc/smart-questions "doc:smart-questions")
+中文版：[提问的智慧](../doc/smart-questions.md)
 
 [^html]: HyperText Markup Language

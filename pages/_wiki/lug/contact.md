@@ -25,7 +25,7 @@
 
 适合于即时性较强的讨论，较正式的讨论还请使用官方邮件列表。
 
-- QQ 群: 群号请查看 `qq.ustclug.org` 的 DNS TXT 记录。校内学生请联系管理员了解详情。
+- QQ 群：群号请查看 `qq.ustclug.org` 的 DNS TXT 记录。校内学生请联系管理员了解详情。
 
 ## IRC 上的 LUG
 
@@ -44,14 +44,14 @@ USTC LUG 在校内的活动室：
 
 ## QQ 公众号
 
-QQ: 2786229166
+QQ：2786229166
 
 ![ustclug_qq.png]({{ site.static_url }}/wiki/lug/ustclug_qq.png)
 
 ## 微信公众号
 
-ID: ustclug  
-Name: 中科大 LUG
+ID：ustclug  
+Name：中科大 LUG
 
 ![ustclug_mama.jpg]({{ site.static_url }}/wiki/lug/ustclug_mama.jpg)
 
@@ -62,8 +62,8 @@ Name: 中科大 LUG
 **<i class="fas fa-exclamation-triangle"></i> 注意：**以下账号目前缺乏维护。
 {: .notice--warning }
 
-- Twitter: [@USTCLUG](http://www.twitter.com/ustclug/)
-- 人人：[USTCLUG](http://www.renren.com/profile.do?id=345760436)
-- 豆瓣：[科大 LUG](http://www.douban.com/people/ustclug/)
+- Twitter: [@USTCLUG](https://www.twitter.com/ustclug/)
+- 人人：[USTCLUG](https://www.renren.com/profile.do?id=345760436)
+- 豆瓣：[科大 LUG](https://www.douban.com/people/ustclug/)
 
-更多信息，请参阅[LUG 宣传账号一览](/wiki/lug/sns)
+更多信息，请参阅[LUG 宣传账号一览](sns.md)。

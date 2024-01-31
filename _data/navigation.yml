@@ -17,6 +17,8 @@ wiki:
         url: /
       - title: '<i class="fad fa-lg fa-fw fa-newspaper"></i> LUG 新闻'
         url: /news/
+      - title: '<i class="fad fa-lg fa-fw fa-certificate"></i> LUG 服务'
+        url: /wiki/lug/services/
       - title: '<i class="fad fa-lg fa-fw fa-link"></i> 友情链接'
         url: /wiki/lug/links/
       - title: '<i class="fad fa-lg fa-fw fa-database"></i> 开源软件镜像'
