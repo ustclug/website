@@ -48,7 +48,7 @@ permalink: /wiki/
 - IRC/Telegram 在线及时聊天，[点击此处](/wiki/lug/contact)了解加入方式，平台互联由 TUNA 提供支持
 - 瀚海星云 BBS: [瀚海星云 BBS Linux 版](https://bbs.ustc.edu.cn/cgi/bbsdoc?board=Linux)
 - 官方邮箱: ![]({{ site.static_url }}/email.png)
-- 活动室: 西区图书馆 206 室
+- 活动室: 西区图书馆 403 室
 - 更多联系方式请 [戳这里](/wiki/lug/contact)
 
 ## 协会 LOGO
