@@ -20,7 +20,7 @@
     <meta property="og:url" content="https://lug.ustc.edu.cn/wiki/scripts/wlt/">
     <meta property="og:description" content="USTC 网络通脚本">
     <meta property="article:published_time" content="2020-08-09T15:07:59+08:00">
-    <meta property="article:modified_time" content="2022-06-07T12:10:12+08:00">
+    <meta property="article:modified_time" content="2024-04-19T20:26:12+08:00">
     <link rel="canonical" href="https://lug.ustc.edu.cn/wiki/scripts/wlt/">
     <script type="application/ld+json">
       {
@@ -57,7 +57,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=9e961c9fa8">
+    <link rel="stylesheet" href="/assets/css/main.css?v=0b7a3d9203">
     <link rel="stylesheet" href="/_extra/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <link rel="stylesheet" href="/_extra/open-sans.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
@@ -180,7 +180,7 @@
           <meta itemprop="headline" content="USTC 网络通脚本">
           <meta itemprop="description" content="USTC 网络通脚本">
           <meta itemprop="datePublished" content="2020-08-09T15:07:59+08:00">
-          <meta itemprop="dateModified" content="2022-06-07T12:10:12+08:00">
+          <meta itemprop="dateModified" content="2024-04-19T20:26:12+08:00">
           <div class="page__inner-wrap">
             <header>
               <h1 id="page-title" class="page__title" itemprop="headline">USTC 网络通脚本
@@ -193,13 +193,114 @@
                     <h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4>
                   </header>
                   <ul class="toc__menu">
+                    <li><a href="#parameters">参数说明</a></li>
                     <li><a href="#windows-vbscript-版">Windows VBScript 版</a></li>
-                    <li><a href="#bash-版">Bash 版</a></li>
-                    <li><a href="#bash-简化版">Bash 简化版</a></li>
+                    <li><a href="#shell-版">Shell 版</a>
+                      <ul>
+                        <li><a href="#使用-wget">使用 Wget</a></li>
+                        <li><a href="#使用-curl">使用 cURL</a></li>
+                      </ul>
+                    </li>
                     <li><a href="#perl-版">Perl 版</a></li>
                   </ul>
                 </nav>
               </aside>
+              <h2 id="parameters">参数说明</h2>
+              <p>所有脚本都是直接调用网络通接口的，因此脚本中的参数完全相同。</p>
+              <ul>
+                <li>
+                  <p><code class="language-plaintext highlighter-rouge">cmd=set</code> 为固定参数，无需修改。</p>
+                </li>
+                <li>
+                  <p><code class="language-plaintext highlighter-rouge">name=</code> 为用户名，即你的网络通账号；<code class="language-plaintext highlighter-rouge">password=</code> 为你的网络通密码。</p>
+                </li>
+                <li>
+                  <p><code class="language-plaintext highlighter-rouge">type=</code> 参数表示选择出口，取值与含义如下：</p>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th style="text-align: center"><code class="language-plaintext highlighter-rouge">type=</code></th>
+                        <th style="text-align: center">出口</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="text-align: center">0</td>
+                        <td style="text-align: center">教育网出口</td>
+                      </tr>
+                      <tr>
+                        <td style="text-align: center">1</td>
+                        <td style="text-align: center">电信出口</td>
+                      </tr>
+                      <tr>
+                        <td style="text-align: center">2</td>
+                        <td style="text-align: center">联通出口</td>
+                      </tr>
+                      <tr>
+                        <td style="text-align: center">3</td>
+                        <td style="text-align: center">电信出口 2</td>
+                      </tr>
+                      <tr>
+                        <td style="text-align: center">4</td>
+                        <td style="text-align: center">联通出口 2</td>
+                      </tr>
+                      <tr>
+                        <td style="text-align: center">5</td>
+                        <td style="text-align: center">电信出口 3</td>
+                      </tr>
+                      <tr>
+                        <td style="text-align: center">6</td>
+                        <td style="text-align: center">联通出口 3</td>
+                      </tr>
+                      <tr>
+                        <td style="text-align: center">7</td>
+                        <td style="text-align: center">教育网出口 2</td>
+                      </tr>
+                      <tr>
+                        <td style="text-align: center">8</td>
+                        <td style="text-align: center">移动测试国际出口</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </li>
+                <li>
+                  <p><code class="language-plaintext highlighter-rouge">exp=</code> 参数表示登录时长，即自动退出登录的时间，取值与含义如下：</p>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th style="text-align: right"><code class="language-plaintext highlighter-rouge">exp=</code></th>
+                        <th style="text-align: center">登录时长</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="text-align: right">0</td>
+                        <td style="text-align: center">永久</td>
+                      </tr>
+                      <tr>
+                        <td style="text-align: right">120</td>
+                        <td style="text-align: center">动态</td>
+                      </tr>
+                      <tr>
+                        <td style="text-align: right">3600</td>
+                        <td style="text-align: center">1 小时</td>
+                      </tr>
+                      <tr>
+                        <td style="text-align: right">14400</td>
+                        <td style="text-align: center">4 小时</td>
+                      </tr>
+                      <tr>
+                        <td style="text-align: right">39600</td>
+                        <td style="text-align: center">11 小时</td>
+                      </tr>
+                      <tr>
+                        <td style="text-align: right">50400</td>
+                        <td style="text-align: center">14 小时</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </li>
+              </ul>
               <h2 id="windows-vbscript-版">Windows VBScript 版</h2>
               <p>来源：<a href="https://gist.github.com/iBug/eb6fdbf55465352d6d91b1bdf75ad30f">https://gist.github.com/iBug/eb6fdbf55465352d6d91b1bdf75ad30f</a></p>
               <div class="language-vb highlighter-rouge">
@@ -214,64 +315,29 @@
 </code></pre>
                 </div>
               </div>
-              <h2 id="bash-版">Bash 版</h2>
-              <p>来源：<a href="http://bbs.ustc.edu.cn/cgi/go?cgi=bbscon&amp;bid=77&amp;fn=M4CAEC63D">http://bbs.ustc.edu.cn/cgi/go?cgi=bbscon&amp;bid=77&amp;fn=M4CAEC63D</a></p>
-              <p>wlt.sh:</p>
-              <div class="language-sh highlighter-rouge">
+              <h2 id="shell-版">Shell 版</h2>
+              <p>适用于 macOS、Linux 和各类 Unix 系统，也包括 Windows Subsystem for Linux。</p>
+              <p>来源：</p>
+              <ul>
+                <li><a href="http://bbs.ustc.edu.cn/cgi/go?cgi=bbscon&amp;bid=77&amp;fn=M4CAEC63D">http://bbs.ustc.edu.cn/cgi/go?cgi=bbscon&amp;bid=77&amp;fn=M4CAEC63D</a></li>
+                <li><a href="http://bbs.ustc.edu.cn/cgi/bbscon?bn=USTCnet&amp;fn=M52FAC28D">http://bbs.ustc.edu.cn/cgi/bbscon?bn=USTCnet&amp;fn=M52FAC28D</a></li>
+                <li>由 LUG @ USTC 更新</li>
+              </ul>
+              <h3 id="使用-wget">使用 Wget</h3>
+              <div class="language-shell highlighter-rouge">
                 <div class="highlight">
-                  <pre class="highlight"><code><span class="c">#!/bin/bash</span>
- 
-curl <span class="nt">-c</span> /tmp/wlt <span class="s2">"http://wlt.ustc.edu.cn/cgi-bin/ip?cmd=login&amp;name=yourname&amp;password=yourpass"</span> <span class="o">&gt;</span> /dev/null
-curl <span class="nt">-b</span> /tmp/wlt <span class="s2">"http://wlt.ustc.edu.cn/cgi-bin/ip?cmd=set&amp;type=6&amp;exp=0"</span> <span class="o">&gt;</span> /dev/null
-<span class="nb">rm</span> /tmp/wlt
+                  <pre class="highlight"><code><span class="c">#!/bin/sh</span>
+wget <span class="nt">--post-data</span><span class="o">=</span><span class="s2">"cmd=set&amp;name=用户名&amp;password=密码&amp;type=0&amp;exp=0"</span> <span class="se">\</span>
+  http://wlt.ustc.edu.cn/cgi-bin/ip <span class="nt">-O</span> -
 </code></pre>
                 </div>
               </div>
-              <p>脚本说明：<br />
-                其中 yourname 和 yourpass 分别是用户名密码，</p>
-              <div class="language-plaintext highlighter-rouge">
+              <h3 id="使用-curl">使用 cURL</h3>
+              <div class="language-shell highlighter-rouge">
                 <div class="highlight">
-                  <pre class="highlight"><code>  type =
-     0 -- 教育网出口
-     1 -- 电信出口
-     2 -- 联通出口
-     3 -- 电信出口2
-     4 -- 联通出口2
-     5 -- 电信出口3
-     6 -- 联通出口3
-     7 -- 教育网出口2
-     8 -- 移动测试国际出口
-
-
-  exp =
-    0     -- 永久
-    120   -- 动态
-    3600  -- 1小时
-    14400 -- 4小时
-    39600 -- 11小时
-    50400 -- 14小时
-</code></pre>
-                </div>
-              </div>
-              <h2 id="bash-简化版">Bash 简化版</h2>
-              <p>来源：<a href="http://bbs.ustc.edu.cn/cgi/bbscon?bn=USTCnet&amp;fn=M52FAC28D">http://bbs.ustc.edu.cn/cgi/bbscon?bn=USTCnet&amp;fn=M52FAC28D</a></p>
-              <p>cURL 版本</p>
-              <p>wlt.sh:</p>
-              <div class="language-sh highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="c">#!/bin/bash</span>
-curl <span class="nt">--data</span> <span class="s2">"name=user&amp;password=pass&amp;cmd=set&amp;type=出口&amp;exp=time"</span> <span class="se">\</span>
-http://wlt.ustc.edu.cn/cgi-bin/ip
-</code></pre>
-                </div>
-              </div>
-              <p>Wget 版本</p>
-              <p>wlt.sh:</p>
-              <div class="language-sh highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="c">#!/bin/bash</span>
-wget <span class="nt">--post-data</span><span class="o">=</span><span class="s2">"name=user&amp;password=pass&amp;cmd=set&amp;type=出口&amp;exp=time"</span> <span class="se">\</span>
-http://wlt.ustc.edu.cn/cgi-bin/ip <span class="nt">-O</span> -
+                  <pre class="highlight"><code><span class="c">#!/bin/sh</span>
+curl <span class="nt">-d</span> <span class="s2">"cmd=set&amp;name=用户名&amp;password=密码&amp;type=0&amp;exp=0"</span> <span class="se">\</span>
+  http://wlt.ustc.edu.cn/cgi-bin/ip
 </code></pre>
                 </div>
               </div>
@@ -360,7 +426,7 @@ http://wlt.ustc.edu.cn/cgi-bin/ip <span class="nt">-O</span> -
               </div>
             </section>
             <footer class="page__meta">
-              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2022-06-07">2022 年 6 月 7 日</time></p>
+              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2024-04-19">2024 年 4 月 19 日</time></p>
             </footer>
             <nav class="pagination">
               <a href="/wiki/scripts/ssh_proxy/" class="pagination--pager" title="ssh 代理
