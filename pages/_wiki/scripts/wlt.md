@@ -3,6 +3,39 @@
 
 # USTC 网络通脚本
 
+## 参数说明 {#parameters}
+
+所有脚本都是直接调用网络通接口的，因此脚本中的参数完全相同。
+
+- `cmd=set` 为固定参数，无需修改。
+
+- `name=` 为用户名，即你的网络通账号；`password=` 为你的网络通密码。
+
+- `type=` 参数表示选择出口，取值与含义如下：
+
+    | `type=` |       出口       |
+    | :-----: | :--------------: |
+    |    0    |    教育网出口    |
+    |    1    |     电信出口     |
+    |    2    |     联通出口     |
+    |    3    |    电信出口 2    |
+    |    4    |    联通出口 2    |
+    |    5    |    电信出口 3    |
+    |    6    |    联通出口 3    |
+    |    7    |   教育网出口 2   |
+    |    8    | 移动测试国际出口 |
+
+- `exp=` 参数表示登录时长，即自动退出登录的时间，取值与含义如下：
+
+    | `exp=` | 登录时长 |
+    | -----: | :------: |
+    |      0 |   永久   |
+    |    120 |   动态   |
+    |   3600 |  1 小时  |
+    |  14400 |  4 小时  |
+    |  39600 | 11 小时  |
+    |  50400 | 14 小时  |
+
 ## Windows VBScript 版
 
 来源：<https://gist.github.com/iBug/eb6fdbf55465352d6d91b1bdf75ad30f>
@@ -17,65 +50,30 @@ Http.Send
 MsgBox "Status: " & Http.Status, 65, "WLT"
 ```
 
-## Bash 版
+## Shell 版
 
-来源：<http://bbs.ustc.edu.cn/cgi/go?cgi=bbscon&bid=77&fn=M4CAEC63D>
+适用于 macOS、Linux 和各类 Unix 系统，也包括 Windows Subsystem for Linux。
 
-wlt.sh:
+来源：
 
-```sh
-#!/bin/bash
- 
-curl -c /tmp/wlt "http://wlt.ustc.edu.cn/cgi-bin/ip?cmd=login&name=yourname&password=yourpass" > /dev/null
-curl -b /tmp/wlt "http://wlt.ustc.edu.cn/cgi-bin/ip?cmd=set&type=6&exp=0" > /dev/null
-rm /tmp/wlt
+- <http://bbs.ustc.edu.cn/cgi/go?cgi=bbscon&bid=77&fn=M4CAEC63D>
+- <http://bbs.ustc.edu.cn/cgi/bbscon?bn=USTCnet&fn=M52FAC28D>
+- 由 LUG @ USTC 更新
+
+### 使用 Wget
+
+```shell
+#!/bin/sh
+wget --post-data="cmd=set&name=用户名&password=密码&type=0&exp=0" \
+  http://wlt.ustc.edu.cn/cgi-bin/ip -O -
 ```
 
-脚本说明：  
-其中 yourname 和 yourpass 分别是用户名密码，
+### 使用 cURL
 
-      type =
-         0 -- 教育网出口
-         1 -- 电信出口
-         2 -- 联通出口
-         3 -- 电信出口2
-         4 -- 联通出口2
-         5 -- 电信出口3
-         6 -- 联通出口3
-         7 -- 教育网出口2
-         8 -- 移动测试国际出口
-
-
-      exp =
-        0     -- 永久
-        120   -- 动态
-        3600  -- 1小时
-        14400 -- 4小时
-        39600 -- 11小时
-        50400 -- 14小时
-
-## Bash 简化版
-
-来源：<http://bbs.ustc.edu.cn/cgi/bbscon?bn=USTCnet&fn=M52FAC28D>
-
-cURL 版本
-
-wlt.sh:
-
-```sh
-#!/bin/bash
-curl --data "name=user&password=pass&cmd=set&type=出口&exp=time" \
-http://wlt.ustc.edu.cn/cgi-bin/ip
-```
-
-Wget 版本
-
-wlt.sh:
-
-```sh
-#!/bin/bash
-wget --post-data="name=user&password=pass&cmd=set&type=出口&exp=time" \
-http://wlt.ustc.edu.cn/cgi-bin/ip -O -
+```shell
+#!/bin/sh
+curl -d "cmd=set&name=用户名&password=密码&type=0&exp=0" \
+  http://wlt.ustc.edu.cn/cgi-bin/ip
 ```
 
 基于以上命令的一个交互式 POSIX Shell Script: <https://github.com/hosiet/wlt>
