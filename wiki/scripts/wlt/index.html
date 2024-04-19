@@ -20,7 +20,7 @@
     <meta property="og:url" content="https://lug.ustc.edu.cn/wiki/scripts/wlt/">
     <meta property="og:description" content="USTC 网络通脚本">
     <meta property="article:published_time" content="2020-08-09T15:07:59+08:00">
-    <meta property="article:modified_time" content="2024-04-19T20:26:12+08:00">
+    <meta property="article:modified_time" content="2024-04-19T20:52:57+08:00">
     <link rel="canonical" href="https://lug.ustc.edu.cn/wiki/scripts/wlt/">
     <script type="application/ld+json">
       {
@@ -57,7 +57,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=0b7a3d9203">
+    <link rel="stylesheet" href="/assets/css/main.css?v=a4ee1f9c62">
     <link rel="stylesheet" href="/_extra/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <link rel="stylesheet" href="/_extra/open-sans.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
@@ -180,7 +180,7 @@
           <meta itemprop="headline" content="USTC 网络通脚本">
           <meta itemprop="description" content="USTC 网络通脚本">
           <meta itemprop="datePublished" content="2020-08-09T15:07:59+08:00">
-          <meta itemprop="dateModified" content="2024-04-19T20:26:12+08:00">
+          <meta itemprop="dateModified" content="2024-04-19T20:52:57+08:00">
           <div class="page__inner-wrap">
             <header>
               <h1 id="page-title" class="page__title" itemprop="headline">USTC 网络通脚本
@@ -193,7 +193,6 @@
                     <h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4>
                   </header>
                   <ul class="toc__menu">
-                    <li><a href="#parameters">参数说明</a></li>
                     <li><a href="#windows-vbscript-版">Windows VBScript 版</a></li>
                     <li><a href="#shell-版">Shell 版</a>
                       <ul>
@@ -201,18 +200,22 @@
                         <li><a href="#使用-curl">使用 cURL</a></li>
                       </ul>
                     </li>
-                    <li><a href="#perl-版">Perl 版</a></li>
+                    <li><a href="#其他版本">其他版本</a></li>
                   </ul>
                 </nav>
               </aside>
-              <h2 id="parameters">参数说明</h2>
-              <p>所有脚本都是直接调用网络通接口的，因此脚本中的参数完全相同。</p>
+              <p>网络通采用简单的 HTTP 接口处理登录、开通出校权限等操作，因此不同的脚本都是调用这个 HTTP 接口，参数也完全相同。</p>
+              <p>网络通的地址为 <a href="http://wlt.ustc.edu.cn/cgi-bin/ip">http://wlt.ustc.edu.cn/cgi-bin/ip</a>，常用操作包括参数 <code class="language-plaintext highlighter-rouge">cmd=set&amp;name=用户名&amp;password=密码&amp;type=0&amp;exp=0</code>。</p>
+              <p>所有参数都可以通过 GET 或 POST 方法传递，各参数的解释如下：</p>
               <ul>
                 <li>
-                  <p><code class="language-plaintext highlighter-rouge">cmd=set</code> 为固定参数，无需修改。</p>
+                  <p><code class="language-plaintext highlighter-rouge">cmd=set</code> 为固定参数，无需修改。（另有 <code class="language-plaintext highlighter-rouge">cmd=login</code> 可以登录，但需要保存 cookie。既然脚本中可以不使用 cookie 直接设置出口，也就没有必要使用 <code class="language-plaintext highlighter-rouge">cmd=login</code> 了。）</p>
                 </li>
                 <li>
-                  <p><code class="language-plaintext highlighter-rouge">name=</code> 为用户名，即你的网络通账号；<code class="language-plaintext highlighter-rouge">password=</code> 为你的网络通密码。</p>
+                  <p><code class="language-plaintext highlighter-rouge">name=</code> 为用户名，即你的网络通账号。</p>
+                </li>
+                <li>
+                  <p><code class="language-plaintext highlighter-rouge">password=</code> 为你的网络通密码。</p>
                 </li>
                 <li>
                   <p><code class="language-plaintext highlighter-rouge">type=</code> 参数表示选择出口，取值与含义如下：</p>
@@ -262,6 +265,8 @@
                       </tr>
                     </tbody>
                   </table>
+                  <p>各出口的具体含义请参考<a href="http://wlt.ustc.edu.cn/link.html">网络通的说明</a>。</p>
+                  <p>注：参数取值等于网页上的出口编号减去 1。</p>
                 </li>
                 <li>
                   <p><code class="language-plaintext highlighter-rouge">exp=</code> 参数表示登录时长，即自动退出登录的时间，取值与含义如下：</p>
@@ -279,7 +284,7 @@
                       </tr>
                       <tr>
                         <td style="text-align: right">120</td>
-                        <td style="text-align: center">动态</td>
+                        <td style="text-align: center">动态*</td>
                       </tr>
                       <tr>
                         <td style="text-align: right">3600</td>
@@ -299,9 +304,12 @@
                       </tr>
                     </tbody>
                   </table>
+                  <p>注：除了 0 和 120 以外的数值都是秒数。</p>
+                  <p>注 2：“动态”是一个现已不存在的选项，但仍能在 BBS 上找到一些线索，其含义未知。</p>
                 </li>
               </ul>
               <h2 id="windows-vbscript-版">Windows VBScript 版</h2>
+              <p>VBScript 是 Windows 系统自带的脚本语言，可以直接运行。</p>
               <p>来源：<a href="https://gist.github.com/iBug/eb6fdbf55465352d6d91b1bdf75ad30f">https://gist.github.com/iBug/eb6fdbf55465352d6d91b1bdf75ad30f</a></p>
               <div class="language-vb highlighter-rouge">
                 <div class="highlight">
@@ -321,7 +329,7 @@
               <ul>
                 <li><a href="http://bbs.ustc.edu.cn/cgi/go?cgi=bbscon&amp;bid=77&amp;fn=M4CAEC63D">http://bbs.ustc.edu.cn/cgi/go?cgi=bbscon&amp;bid=77&amp;fn=M4CAEC63D</a></li>
                 <li><a href="http://bbs.ustc.edu.cn/cgi/bbscon?bn=USTCnet&amp;fn=M52FAC28D">http://bbs.ustc.edu.cn/cgi/bbscon?bn=USTCnet&amp;fn=M52FAC28D</a></li>
-                <li>由 LUG @ USTC 更新</li>
+                <li>由 LUG @ USTC 维护更新。</li>
               </ul>
               <h3 id="使用-wget">使用 Wget</h3>
               <div class="language-shell highlighter-rouge">
@@ -342,88 +350,10 @@ curl <span class="nt">-d</span> <span class="s2">"cmd=set&amp;name=用户名&amp
                 </div>
               </div>
               <p>基于以上命令的一个交互式 POSIX Shell Script: <a href="https://github.com/hosiet/wlt">https://github.com/hosiet/wlt</a></p>
-              <h2 id="perl-版">Perl 版</h2>
-              <p>来源：<a href="https://bbs.ustc.edu.cn/cgi/go?cgi=bbscon&amp;bid=77&amp;fn=M41770FCB">https://bbs.ustc.edu.cn/cgi/go?cgi=bbscon&amp;bid=77&amp;fn=M41770FCB</a></p>
-              <p>wlt.pl:</p>
-              <div class="language-perl highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code><span class="c1">#!/usr/bin/perl</span>
-
-<span class="nv">$wget</span><span class="o">=</span><span class="p">"</span><span class="s2">/usr/bin/wget</span><span class="p">";</span>
-<span class="nv">$name</span><span class="o">=</span><span class="p">"</span><span class="s2">xxxx</span><span class="p">";</span>
-<span class="nv">$password</span><span class="o">=</span><span class="p">"</span><span class="s2">xxxx</span><span class="p">";</span>
-<span class="nv">$url</span><span class="o">=</span><span class="p">"</span><span class="s2">http://wlt.ustc.edu.cn/cgi-bin/ip ;
-</span><span class="si">$log</span><span class="s2">=</span><span class="p">"</span><span class="sr">/dev/null</span><span class="p">"</span><span class="s2">;
-</span><span class="si">$page</span><span class="s2">=</span><span class="p">"</span><span class="sr">/tmp/</span><span class="nv">wlt_state</span><span class="p">"</span><span class="s2">;
-</span><span class="si">$cookies</span><span class="s2">=</span><span class="p">"</span><span class="sr">/tmp/</span><span class="nv">wlt_cookies</span><span class="p">"</span><span class="s2">;
-
-</span><span class="si">@type</span><span class="s2">=( </span><span class="p">"</span><span class="err">教育网出口</span><span class="p">(</span><span class="err">国内</span><span class="p">)"</span><span class="s2">,
-        </span><span class="p">"</span><span class="err">电信网出口</span><span class="p">(</span><span class="err">国际</span><span class="p">,</span><span class="err">到教育网走教育网</span><span class="p">,</span><span class="err">缺省</span><span class="p">)"</span><span class="s2">,
-        </span><span class="p">"</span><span class="err">网通网出口</span><span class="p">(</span><span class="err">国际</span><span class="p">,</span><span class="err">到教育网走教育网</span><span class="p">)"</span><span class="s2">,
-        </span><span class="p">"</span><span class="err">电信网出口</span><span class="mi">2</span><span class="p">(</span><span class="err">国际</span><span class="p">,</span><span class="err">到教育网免费地址走教育网</span><span class="p">)"</span><span class="s2">,
-        </span><span class="p">"</span><span class="err">网通网出口</span><span class="mi">2</span><span class="p">(</span><span class="err">国际</span><span class="p">,</span><span class="err">到教育网免费地址走教育网</span><span class="p">)"</span><span class="s2">,
-        </span><span class="p">"</span><span class="err">电信网出口</span><span class="mi">3</span><span class="p">(</span><span class="err">国际</span><span class="p">,</span><span class="err">文献出口</span><span class="p">)"</span><span class="s2">,
-        </span><span class="p">"</span><span class="err">网通网出口</span><span class="mi">3</span><span class="p">(</span><span class="err">国际</span><span class="p">,</span><span class="err">到教育网走教育网</span><span class="p">,</span><span class="err">到电信走电信</span><span class="p">)"</span><span class="s2">);
-</span><span class="si">@exp</span><span class="s2">=   (     0,    120,    3600,         14400,    39600,    50400);
-</span><span class="si">@expstr</span><span class="s2">=(</span><span class="p">"</span><span class="err">永久</span><span class="p">"</span><span class="s2">, </span><span class="p">"</span><span class="err">动态</span><span class="p">"</span><span class="s2">, </span><span class="p">"</span><span class="mi">1</span><span class="err">小时</span><span class="p">"</span><span class="s2">, </span><span class="p">"</span><span class="mi">4</span><span class="err">小时</span><span class="p">,</span> <span class="err">缺省</span><span class="p">"</span><span class="s2">, </span><span class="p">"</span><span class="mi">11</span><span class="err">小时</span><span class="p">"</span><span class="s2">, </span><span class="p">"</span><span class="mi">14</span><span class="err">小时</span><span class="p">"</span><span class="s2">);
-
-# 登录网络通，用--keep-session-cookies和--save-cookies得到Cookies
-</span><span class="si">$cmd</span><span class="s2">=</span><span class="p">"</span><span class="nv">cmd</span><span class="o">=</span><span class="nv">login</span><span class="p">"</span><span class="s2">;
-# 这个输出页面不需要，只需要得到cookies
-</span><span class="si">$options</span><span class="s2">=</span><span class="p">"</span><span class="o">-</span><span class="nv">o</span> <span class="nv">$log</span> <span class="o">-</span><span class="nv">O</span> <span class="nv">$log</span> <span class="o">--</span><span class="nv">keep</span><span class="o">-</span><span class="nv">session</span><span class="o">-</span><span class="nv">cookies</span> <span class="o">--</span><span class="nv">save</span><span class="o">-</span><span class="nv">cookies</span> <span class="nv">$cookies</span> <span class="o">--</span><span class="nv">post</span><span class="o">-</span>
-<span class="nv">data</span> <span class="o">\</span><span class="p">"</span><span class="si">$cmd</span><span class="s2">&amp;name=</span><span class="si">$name</span><span class="s2">&amp;password=</span><span class="si">$password</span><span class="se">\"</span><span class="p">";</span>
-<span class="nv">$command</span><span class="o">=</span><span class="p">"</span><span class="si">$wget</span><span class="s2"> </span><span class="si">$options</span><span class="s2"> </span><span class="si">$url</span><span class="p">";</span>
-<span class="nb">system</span> <span class="nv">$command</span><span class="p">;</span>
-
-<span class="k">print</span> <span class="p">"</span><span class="s2">请选择出口：</span><span class="se">\n</span><span class="p">";</span>
-<span class="nv">$i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-<span class="k">foreach</span> <span class="p">(</span><span class="nv">@type</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">print</span> <span class="p">"</span><span class="se">\t</span><span class="p">",</span> <span class="nv">$i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="p">"</span><span class="s2">: </span><span class="si">$type</span><span class="s2">[</span><span class="si">$i</span><span class="s2">]</span><span class="se">\n</span><span class="p">";</span>
-        <span class="nv">$i</span><span class="o">=</span><span class="nv">$i</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="k">print</span> <span class="p">"</span><span class="s2">注：选择出口2、3无法使用的某些电子资源，使用出口4、5、6可能可以正常使用</span><span class="se">\n</span><span class="s2">
-</span><span class="p">";</span>
-<span class="k">print</span> <span class="p">"</span><span class="s2">[1-7] </span><span class="p">";</span>
-<span class="nv">$type</span><span class="o">=&lt;</span><span class="bp">STDIN</span><span class="o">&gt;</span><span class="p">;</span>
-<span class="nv">$type</span><span class="o">=</span><span class="nv">$type</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-<span class="nv">$typestr</span><span class="o">=</span><span class="nv">$type</span><span class="p">[</span><span class="nv">$type</span><span class="p">];</span>
-
-<span class="k">print</span> <span class="p">"</span><span class="s2">使用时限：</span><span class="se">\n</span><span class="p">";</span>
-<span class="nv">$i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-<span class="k">foreach</span> <span class="p">(</span><span class="nv">@exp</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">print</span> <span class="p">"</span><span class="se">\t</span><span class="p">",</span> <span class="nv">$i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="p">"</span><span class="s2">: </span><span class="si">$exp</span><span class="s2">[</span><span class="si">$i</span><span class="s2">]s, </span><span class="si">$expstr</span><span class="s2">[</span><span class="si">$i</span><span class="s2">]</span><span class="se">\n</span><span class="p">";</span>
-        <span class="nv">$i</span><span class="o">=</span><span class="nv">$i</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="k">print</span> <span class="p">"</span><span class="s2">[1-6] </span><span class="p">";</span>
-<span class="nv">$exp</span><span class="o">=&lt;</span><span class="bp">STDIN</span><span class="o">&gt;</span><span class="p">;</span>
-<span class="nv">$exp</span><span class="o">=</span><span class="nv">$exp</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-<span class="nv">$expstr</span><span class="o">=</span><span class="nv">$expstr</span><span class="p">[</span><span class="nv">$exp</span><span class="p">];</span>
-<span class="nv">$exp</span><span class="o">=</span><span class="nv">$exp</span><span class="p">[</span><span class="nv">$exp</span><span class="p">];</span>
-
-<span class="nv">$cmd</span><span class="o">=</span><span class="p">"</span><span class="s2">cmd=set</span><span class="p">";</span>
-<span class="c1"># 利用Cookies选择出口和时限</span>
-<span class="nv">$options</span><span class="o">=</span><span class="p">"</span><span class="s2">-o </span><span class="si">$log</span><span class="s2"> -O </span><span class="si">$page</span><span class="s2"> --load-cookies </span><span class="si">$cookies</span><span class="s2"> --post-data </span><span class="se">\"</span><span class="si">$cmd</span><span class="s2">&amp;name=</span><span class="si">$name</span><span class="s2">
-&amp;password=</span><span class="si">$password</span><span class="s2">&amp;type=</span><span class="si">$type</span><span class="s2">&amp;exp=</span><span class="si">$exp</span><span class="se">\"</span><span class="p">";</span>
-<span class="nv">$command</span><span class="o">=</span><span class="p">"</span><span class="si">$wget</span><span class="s2"> </span><span class="si">$options</span><span class="s2"> </span><span class="si">$url</span><span class="p">";</span>
-<span class="c1">#print $command,"\n";</span>
-<span class="nb">system</span> <span class="nv">$command</span><span class="p">;</span>
-
-<span class="c1"># 输出网络通使用记录</span>
-<span class="c1">#print "\t\t\t$name 的网络通状态：\n\t$typestr\t$expstr\n";</span>
-<span class="nb">open</span> <span class="nv">PAGE</span><span class="p">,</span> <span class="nv">$page</span><span class="p">;</span>
-<span class="nv">@page</span><span class="o">=&lt;</span><span class="nv">PAGE</span><span class="o">&gt;</span><span class="p">;</span>
-<span class="nb">close</span> <span class="nv">PAGE</span><span class="p">;</span>
-<span class="k">foreach</span> <span class="nv">$line</span> <span class="p">(</span><span class="nb">grep</span><span class="p">(</span><span class="sr">/^&lt;tr&gt;&lt;td&gt;.*&lt;\/td&gt;&lt;\/tr&gt;$/</span><span class="p">,</span> <span class="nv">@page</span><span class="p">))</span> <span class="p">{</span>
-        <span class="nb">chomp</span> <span class="nv">$line</span><span class="p">;</span>
-        <span class="nv">$line</span><span class="o">=~</span><span class="sr">s!&lt;tr&gt;&lt;td&gt;!!</span><span class="p">;</span>
-        <span class="nv">$line</span><span class="o">=~</span><span class="sr">s!&lt;/td&gt;&lt;td&gt;! [!</span><span class="p">;</span>
-        <span class="nv">$line</span><span class="o">=~</span><span class="sr">s!&lt;/td&gt;&lt;td&gt;!] !</span><span class="p">;</span>
-        <span class="nv">$line</span><span class="o">=~</span><span class="sr">s!&lt;/td&gt;&lt;/tr&gt;!!</span><span class="p">;</span>
-        <span class="k">print</span> <span class="nv">$line</span><span class="p">,"</span><span class="se">\n</span><span class="p">";</span>
-<span class="p">}</span>
-</code></pre>
-                </div>
-              </div>
+              <h2 id="其他版本">其他版本</h2>
+              <ul>
+                <li>Perl 版：<a href="https://bbs.ustc.edu.cn/cgi/go?cgi=bbscon&amp;bid=77&amp;fn=M41770FCB">https://bbs.ustc.edu.cn/cgi/go?cgi=bbscon&amp;bid=77&amp;fn=M41770FCB</a></li>
+              </ul>
             </section>
             <footer class="page__meta">
               <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2024-04-19">2024 年 4 月 19 日</time></p>
