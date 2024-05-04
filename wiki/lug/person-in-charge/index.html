@@ -1,7 +1,7 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
-  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Minimal Mistakes Jekyll Theme 4.25.1 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
@@ -57,7 +57,7 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=594f0c234d">
+    <link rel="stylesheet" href="/assets/css/main.css?v=121da7d91c">
     <link rel="stylesheet" href="/_extra/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <link rel="stylesheet" href="/_extra/open-sans.css" media="invalid" onload="this.media='all'">
     <!--[if IE]>
@@ -86,9 +86,6 @@
         <li><a href="#footer" class="screen-reader-shortcut">转到底部</a></li>
       </ul>
     </nav>
-    <!--[if lt IE 9]>
-      <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
-    <![endif]-->
     <div class="masthead">
       <div class="masthead__inner-wrap">
         <div class="masthead__menu">
@@ -176,17 +173,19 @@
             </ul>
           </nav>
         </div>
-        <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+        <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
           <meta itemprop="headline" content="LUG 负责人">
           <meta itemprop="description" content="LUG 负责人">
           <meta itemprop="datePublished" content="2020-07-31T17:22:23+08:00">
           <meta itemprop="dateModified" content="2024-01-31T23:53:57+08:00">
           <div class="page__inner-wrap">
             <header>
-              <h1 id="page-title" class="page__title" itemprop="headline">LUG 负责人
+              <h1 id="page-title" class="page__title p-name" itemprop="headline">
+                <a href="https://lug.ustc.edu.cn/wiki/lug/person-in-charge/" class="u-url" itemprop="url">LUG 负责人
+                </a>
               </h1>
             </header>
-            <section class="page__content" itemprop="text">
+            <section class="page__content e-content" itemprop="text">
               <aside class="sidebar__right sticky">
                 <nav class="toc">
                   <header>
@@ -1192,62 +1191,84 @@
       </footer>
     </div>
     <script src="/assets/js/main.min.js"></script>
-    <!-- Including InstantSearch.js library and styling -->
-    <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css">
     <script>
-      // Instanciating InstantSearch.js with Algolia credentials
-      const search = instantsearch({
-        appId: 'CM5ZKX0CV3',
-        apiKey: 'aa942e5bdda7368300e322cba95f47f6',
-        indexName: 'default',
-        searchParameters: {
-          restrictSearchableAttributes: [
-            'title',
-            'content'
-          ]
-        }
-      });
+      // Including InstantSearch.js library and styling
+      const loadSearch = function() {
+        const loadCSS = function(src) {
+          var link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.type = 'text/css';
+          link.href = src;
+          link.media = 'all';
+          document.head.appendChild(link);
+        };
 
-      const hitTemplate = function(hit) {
-        const url = hit.url;
-        const title = hit._highlightResult.title.value;
-        const content = hit._highlightResult.html.value;
+        var script = document.createElement('script');
+        script.setAttribute("type", "text/javascript");
+        script.setAttribute("src", "https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js");
+        script.addEventListener("load", function() {
+          // Instantiating InstantSearch.js with Algolia credentials
+          const search = instantsearch({
+            appId: 'CM5ZKX0CV3',
+            apiKey: 'aa942e5bdda7368300e322cba95f47f6',
+            indexName: 'default',
+            searchParameters: {
+              restrictSearchableAttributes: ['title', 'content']
+            }
+          });
 
-        return `
-          <div class="list__item">
-            <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-              <h2 class="archive__item-title" itemprop="headline"><a href="${url}">${title}</a></h2>
-              <div class="archive__item-excerpt" itemprop="description">${content}</div>
-            </article>
-          </div>
-        `;
-      }
+          const hitTemplate = function(hit) {
+            const url = hit.url;
+            const hightlight = hit._highlightResult;
+            const title = hightlight.title && hightlight.title.value  || "";
+            const content = hightlight.html && hightlight.html.value  || "";
 
-      // Adding searchbar and results widgets
-      search.addWidget(
-        instantsearch.widgets.searchBox({
-          container: '.search-searchbar',
-          poweredBy: true,
-          placeholder: '输入您要搜索的关键词...'
-        })
-      );
-      search.addWidget(
-        instantsearch.widgets.hits({
-          container: '.search-hits',
-          templates: {
-            item: hitTemplate,
-            empty: '无结果',
+            return `
+              <div class="list__item">
+                <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                  <h2 class="archive__item-title" itemprop="headline"><a href="${url}">${title}</a></h2>
+                  <div class="archive__item-excerpt" itemprop="description">${content}</div>
+                </article>
+              </div>
+            `;
           }
-        })
-      );
+
+          // Adding searchbar and results widgets
+          search.addWidget(
+            instantsearch.widgets.searchBox({
+              container: '.search-searchbar',
+              poweredBy: true,
+              placeholder: '输入您要搜索的关键词...'
+            })
+          );
+          search.addWidget(
+            instantsearch.widgets.hits({
+              container: '.search-hits',
+              templates: {
+                item: hitTemplate,
+                empty: '无结果',
+              }
+            })
+          );
+
+          if (!search.started) {
+            search.start();
+          }
+        });
+        document.body.appendChild(script);
+
+        loadCSS("https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css");
+        loadCSS("https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css");
+      };
 
       // Starting the search only when toggle is clicked
-      $(document).ready(function () {
+      $(document).ready(function() {
+        var scriptLoaded = false;
+
         $(".search__toggle").on("click", function() {
-          if(!search.started) {
-            search.start();
+          if (!scriptLoaded) {
+            loadSearch();
+            scriptLoaded = true;
           }
         });
       });
