@@ -65,7 +65,9 @@ redirect_from: /wiki/user/taoky/ustcnet_troubleshooting/
 
 ### 使用 Thunderbird 连接科大邮箱
 
-由于 Thunderbird 某次版本升级后默认配置与邮箱服务器不兼容，因此除常规配置外，还需要修改以下配置：Edit → Settings，在 General 中拖到最下面选择 Config Editor...。在新弹出的高级配置的标签中输入 utf8，将 `mail.server.default.allow_utf8_accept` 的值从 true 改成 false。这个设置不会影响其他邮箱的使用。
+~~由于 Thunderbird 某次版本升级后默认配置与邮箱服务器不兼容，因此除常规配置外，还需要修改以下配置：Edit → Settings，在 General 中拖到最下面选择 Config Editor...。在新弹出的高级配置的标签中输入 utf8，将 `mail.server.default.allow_utf8_accept` 的值从 true 改成 false。这个设置不会影响其他邮箱的使用。~~
+
+新版邮箱不再需要特殊设置。
 
 ## 如何咨询/反馈问题？
 
