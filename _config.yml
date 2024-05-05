@@ -28,6 +28,7 @@ logo                     : "/static/lug-penguin.png" # path of logo image to dis
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : # true, false (default)
 words_per_minute         : 350
+enable_copy_code_button  : true
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
