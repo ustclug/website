@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.25.1 by Michael Rose
+  Minimal Mistakes Jekyll Theme 4.26.0 by Michael Rose
   Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
@@ -23,19 +23,8 @@
     <meta property="article:published_time" content="2019-09-17T00:00:00+08:00">
     <meta property="article:modified_time" content="2020-11-09T14:22:35+08:00">
     <link rel="canonical" href="https://lug.ustc.edu.cn/planet/2019/09/raspberry-4/">
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-
-          "@type": "Person",
-          "name": "USTCLUG",
-          "url": "https://lug.ustc.edu.cn/"
-
-      }
-    </script>
     <!-- end _includes/seo.html -->
     <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="LUG @ USTC Feed">
-    <!-- https://t.co/dKP3o1e -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="apple-touch-icon" sizes="57x57" href="/static/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/static/favicon/apple-icon-60x60.png">
@@ -54,27 +43,14 @@
     <meta name="msapplication-TileColor" content="#f3f6f6">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#f3f6f6">
-    <script>
+    <script type="text/javascript">
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+      window.enable_copy_code_button = true;
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=121da7d91c">
+    <link rel="stylesheet" href="/assets/css/main.css?v=3ea9158f69">
     <link rel="stylesheet" href="/_extra/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <link rel="stylesheet" href="/_extra/open-sans.css" media="invalid" onload="this.media='all'">
-    <!--[if IE]>
-      <style>
-        /* old IE unsupported flexbox fixes */
-        .greedy-nav .site-title {
-          padding-right: 3em;
-        }
-        .greedy-nav button {
-          position: absolute;
-          top: 0;
-          right: 0;
-          height: 100%;
-        }
-      </style>
-    <![endif]-->
     <!-- start custom head snippets -->
     <!-- insert favicons. use https://realfavicongenerator.net/ -->
     <!-- end custom head snippets -->
@@ -97,19 +73,39 @@
             </a>
             <ul class="visible-links">
               <li class="masthead__menu-item">
-                <a href="/wiki/"><i class="fad fa-lg fa-fw fa-star-shooting"></i> Wiki</a>
+                <a
+                href="/wiki/"
+                
+                
+              ><i class="fad fa-lg fa-fw fa-star-shooting"></i> Wiki</a>
               </li>
               <li class="masthead__menu-item">
-                <a href="/news/"><i class="fad fa-lg fa-fw fa-newspaper"></i> News</a>
+                <a
+                href="/news/"
+                
+                
+              ><i class="fad fa-lg fa-fw fa-newspaper"></i> News</a>
               </li>
               <li class="masthead__menu-item">
-                <a href="/planet/"><i class="fad fa-lg fa-fw fa-planet-ringed fa-swap-opacity"></i> Planet</a>
+                <a
+                href="/planet/"
+                
+                
+              ><i class="fad fa-lg fa-fw fa-planet-ringed fa-swap-opacity"></i> Planet</a>
               </li>
               <li class="masthead__menu-item">
-                <a href="https://github.com/ustclug"><i class="fab fa-lg fa-fw fa-github"></i> GitHub</a>
+                <a
+                href="https://github.com/ustclug"
+                
+                
+              ><i class="fab fa-lg fa-fw fa-github"></i> GitHub</a>
               </li>
               <li class="masthead__menu-item">
-                <a href="https://mirrors.ustc.edu.cn/"><i class="fad fa-lg fa-fw fa-server"></i> Mirrors</a>
+                <a
+                href="https://mirrors.ustc.edu.cn/"
+                
+                
+              ><i class="fad fa-lg fa-fw fa-server"></i> Mirrors</a>
               </li>
             </ul>
             <button class="search__toggle" type="button">
@@ -173,13 +169,13 @@
             </div>
           </div>
         </div>
-        <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+        <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
           <meta itemprop="headline" content="【译稿】树莓派 4 评测与基准测试：与树莓派 3B+ 相比的改进">
           <meta itemprop="description" content="原文地址：https://ibugone.com/blog/2019/09/raspberry-pi-4-review-benchmark/，作者为 @iBug 同学。以下为翻译部分。">
           <meta itemprop="datePublished" content="2019-09-17T00:00:00+08:00">
           <meta itemprop="dateModified" content="2020-11-09T14:22:35+08:00">
           <div class="page__inner-wrap">
-            <section class="page__content e-content" itemprop="text">
+            <section class="page__content" itemprop="text">
               <aside class="sidebar__right sticky">
                 <nav class="toc">
                   <header>
@@ -340,8 +336,7 @@ sysbench <span class="nt">--test</span><span class="o">=</span>cpu <span class="
 </code></pre>
                 </div>
               </div>
-              <figure class="">
-                <img src="/static/planet/sysbench-cpu.png" alt="" />
+              <figure class=""><img src="/static/planet/sysbench-cpu.png" alt="" />
                 <figcaption>
                   SysBench CPU 性能，单位为秒，越低越好
                 </figcaption>
@@ -359,8 +354,7 @@ sysbench <span class="nt">--test</span><span class="o">=</span>memory <span clas
 </code></pre>
                 </div>
               </div>
-              <figure class="">
-                <img src="/static/planet/sysbench-memory.png" alt="" />
+              <figure class=""><img src="/static/planet/sysbench-memory.png" alt="" />
                 <figcaption>
                   SysBench 内存性能，单位为每秒指令数，越高越好
                 </figcaption>
@@ -369,8 +363,7 @@ sysbench <span class="nt">--test</span><span class="o">=</span>memory <span clas
               <p>一件有意思的事情是，我没有包含“1 MiB Read MT”（1 MiB 单块，读取，多线程）这一列。SysBench 在两块树莓派上都给我返回了超过 200 GB/s 的结果，有时候结果还高达 500 GB/s。这显然太滑稽了，所以我直接忽略了那个结果。</p>
               <h3 id="fio-microsd-卡速度测试">FIO microSD 卡速度测试</h3>
               <p>此测试结果依赖于 microSD 卡本身，所以我拿出了我拥有的最快的 SD 卡：Lexar 667x 128 GB microSD 卡，外观类似下面这张图：</p>
-              <figure class="">
-                <img src="/static/planet/microsd-card-1024x752.jpg" alt="" /></figure>
+              <figure class=""><img src="/static/planet/microsd-card-1024x752.jpg" alt="" /></figure>
               <p>我使用 <code class="language-plaintext highlighter-rouge">fio</code> 作为磁盘（microSD 卡）I/O 性能测试工具。因为我更熟悉 Crystal DiskMark，我调整了 <code class="language-plaintext highlighter-rouge">fio</code> 的参数，以与其一致。</p>
               <div class="language-shell highlighter-rouge">
                 <div class="highlight">
@@ -386,8 +379,7 @@ sysbench <span class="nt">--test</span><span class="o">=</span>memory <span clas
 </code></pre>
                 </div>
               </div>
-              <figure class="">
-                <img src="/static/planet/fio-microsd.png" alt="" />
+              <figure class=""><img src="/static/planet/fio-microsd.png" alt="" />
                 <figcaption>
                   MicroSD 性能，单位为 MB/s，越高越好
                 </figcaption>
@@ -402,8 +394,7 @@ sysbench <span class="nt">--test</span><span class="o">=</span>memory <span clas
 </code></pre>
                 </div>
               </div>
-              <figure class="">
-                <img src="/static/planet/p7zip.png" alt="" />
+              <figure class=""><img src="/static/planet/p7zip.png" alt="" />
                 <figcaption>
                   p7zip 基准测试，越高越好
                 </figcaption>
@@ -420,8 +411,7 @@ openssl speed <span class="nt">-evp</span> sha256
 </code></pre>
                 </div>
               </div>
-              <figure class="">
-                <img src="/static/planet/openssl.png" alt="" />
+              <figure class=""><img src="/static/planet/openssl.png" alt="" />
                 <figcaption>
                   OpenSSL 基准测试，单位为 MB/s，越高越好
                 </figcaption>
@@ -430,8 +420,7 @@ openssl speed <span class="nt">-evp</span> sha256
               <p>树莓派 4 将 300 Mbps 以太网升级到了真正的千兆网口，如果你打算用它来当离线下载器或者 NAS 的话，这是极好的。这里我跑了两个测试，看看网络究竟如何。</p>
               <h4 id="curl-文件下载测试">CURL 文件下载测试</h4>
               <p>这项测试非常简单：使用 cURL 从局域网机器下载文件，查看速度。</p>
-              <figure class="">
-                <img src="/static/planet/cURL.png" alt="" />
+              <figure class=""><img src="/static/planet/cURL.png" alt="" />
                 <figcaption>
                   cURL 下载速度，单位为 MB/s，越高越好
                 </figcaption>
@@ -446,8 +435,7 @@ siege <span class="nt">-c</span> 25 <span class="nt">-r</span> 400 <span class="
 </code></pre>
                 </div>
               </div>
-              <figure class="">
-                <img src="/static/planet/nginx.png" alt="" />
+              <figure class=""><img src="/static/planet/nginx.png" alt="" />
                 <figcaption>
                   NGINX 性能，单位为请求数每秒，越高越好
                 </figcaption>
@@ -471,8 +459,7 @@ siege <span class="nt">-c</span> 25 <span class="nt">-r</span> 400 <span class="
                 </div>
               </div>
               <p>Ruby 测试就简单很多：使用 Jekyll 构建<a href="https://ibugone.com/">我的站点</a>，查看消耗的时间。</p>
-              <figure class="">
-                <img src="/static/planet/python-ruby.png" alt="" />
+              <figure class=""><img src="/static/planet/python-ruby.png" alt="" />
                 <figcaption>
                   应用程序性能，单位为秒，越低越好
                 </figcaption>
@@ -489,8 +476,7 @@ siege <span class="nt">-c</span> 25 <span class="nt">-r</span> 400 <span class="
 </code></pre>
                 </div>
               </div>
-              <figure class="">
-                <img src="/static/planet/fio-usb.png" alt="" />
+              <figure class=""><img src="/static/planet/fio-usb.png" alt="" />
                 <figcaption>
                   USB 速度，单位为 MB/s，越高越好
                 </figcaption>

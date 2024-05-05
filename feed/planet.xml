@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://lug.ustc.edu.cn/feed/planet.xml" rel="self" type="application/atom+xml" /><link href="https://lug.ustc.edu.cn/" rel="alternate" type="text/html" /><updated>2024-05-04T23:38:15+08:00</updated><id>https://lug.ustc.edu.cn/feed/planet.xml</id><title type="html">LUG @ USTC | Planet</title><subtitle>中国科学技术大学 Linux 用户协会</subtitle><author><name>USTCLUG</name></author><entry><title type="html">菜鸡写给菜鸡的 NetHack 入门教程</title><link href="https://lug.ustc.edu.cn/planet/2021/09/nethack-gitgud/" rel="alternate" type="text/html" title="菜鸡写给菜鸡的 NetHack 入门教程" /><published>2021-09-27T00:00:00+08:00</published><updated>2021-10-18T09:09:24+08:00</updated><id>https://lug.ustc.edu.cn/planet/2021/09/nethack-gitgud</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2021/09/nethack-gitgud/"><![CDATA[<!-- Workaround for jekyll-titles-from-headings -->
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://lug.ustc.edu.cn/feed/planet.xml" rel="self" type="application/atom+xml" /><link href="https://lug.ustc.edu.cn/" rel="alternate" type="text/html" /><updated>2024-05-05T20:36:57+08:00</updated><id>https://lug.ustc.edu.cn/feed/planet.xml</id><title type="html">LUG @ USTC | Planet</title><subtitle>中国科学技术大学 Linux 用户协会</subtitle><author><name>USTCLUG</name></author><entry><title type="html">菜鸡写给菜鸡的 NetHack 入门教程</title><link href="https://lug.ustc.edu.cn/planet/2021/09/nethack-gitgud/" rel="alternate" type="text/html" title="菜鸡写给菜鸡的 NetHack 入门教程" /><published>2021-09-27T00:00:00+08:00</published><updated>2021-10-18T09:09:24+08:00</updated><id>https://lug.ustc.edu.cn/planet/2021/09/nethack-gitgud</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2021/09/nethack-gitgud/"><![CDATA[<!-- Workaround for jekyll-titles-from-headings -->
         <h2 id="教程说明">教程说明</h2>
         <p>本教程只介绍最基本的操作和游戏刚刚开始阶段的策略，帮助新手活过第一层。引用内容为补充或 Fun facts，可以忽略。图中游戏“截图”均为字符界面的直接复制——虽然没有了颜色或加粗效果，但还是觉得这样更合适一些。</p>
         <h2 id="关于">关于</h2>
@@ -1806,8 +1806,7 @@ sysbench <span class="nt">--test</span><span class="o">=</span>cpu <span class="
 </code></pre>
     </div>
   </div>
-  <figure class="">
-    <img src="/static/planet/sysbench-cpu.png" alt="" />
+  <figure class=""><img src="/static/planet/sysbench-cpu.png" alt="" />
     <figcaption>
       SysBench CPU 性能，单位为秒，越低越好
     </figcaption>
@@ -1825,8 +1824,7 @@ sysbench <span class="nt">--test</span><span class="o">=</span>memory <span clas
 </code></pre>
     </div>
   </div>
-  <figure class="">
-    <img src="/static/planet/sysbench-memory.png" alt="" />
+  <figure class=""><img src="/static/planet/sysbench-memory.png" alt="" />
     <figcaption>
       SysBench 内存性能，单位为每秒指令数，越高越好
     </figcaption>
@@ -1835,8 +1833,7 @@ sysbench <span class="nt">--test</span><span class="o">=</span>memory <span clas
   <p>一件有意思的事情是，我没有包含“1 MiB Read MT”（1 MiB 单块，读取，多线程）这一列。SysBench 在两块树莓派上都给我返回了超过 200 GB/s 的结果，有时候结果还高达 500 GB/s。这显然太滑稽了，所以我直接忽略了那个结果。</p>
   <h3 id="fio-microsd-卡速度测试">FIO microSD 卡速度测试</h3>
   <p>此测试结果依赖于 microSD 卡本身，所以我拿出了我拥有的最快的 SD 卡：Lexar 667x 128 GB microSD 卡，外观类似下面这张图：</p>
-  <figure class="">
-    <img src="/static/planet/microsd-card-1024x752.jpg" alt="" /></figure>
+  <figure class=""><img src="/static/planet/microsd-card-1024x752.jpg" alt="" /></figure>
   <p>我使用 <code class="language-plaintext highlighter-rouge">fio</code> 作为磁盘（microSD 卡）I/O 性能测试工具。因为我更熟悉 Crystal DiskMark，我调整了 <code class="language-plaintext highlighter-rouge">fio</code> 的参数，以与其一致。</p>
   <div class="language-shell highlighter-rouge">
     <div class="highlight">
@@ -1852,8 +1849,7 @@ sysbench <span class="nt">--test</span><span class="o">=</span>memory <span clas
 </code></pre>
     </div>
   </div>
-  <figure class="">
-    <img src="/static/planet/fio-microsd.png" alt="" />
+  <figure class=""><img src="/static/planet/fio-microsd.png" alt="" />
     <figcaption>
       MicroSD 性能，单位为 MB/s，越高越好
     </figcaption>
@@ -1868,8 +1864,7 @@ sysbench <span class="nt">--test</span><span class="o">=</span>memory <span clas
 </code></pre>
     </div>
   </div>
-  <figure class="">
-    <img src="/static/planet/p7zip.png" alt="" />
+  <figure class=""><img src="/static/planet/p7zip.png" alt="" />
     <figcaption>
       p7zip 基准测试，越高越好
     </figcaption>
@@ -1886,8 +1881,7 @@ openssl speed <span class="nt">-evp</span> sha256
 </code></pre>
     </div>
   </div>
-  <figure class="">
-    <img src="/static/planet/openssl.png" alt="" />
+  <figure class=""><img src="/static/planet/openssl.png" alt="" />
     <figcaption>
       OpenSSL 基准测试，单位为 MB/s，越高越好
     </figcaption>
@@ -1896,8 +1890,7 @@ openssl speed <span class="nt">-evp</span> sha256
   <p>树莓派 4 将 300 Mbps 以太网升级到了真正的千兆网口，如果你打算用它来当离线下载器或者 NAS 的话，这是极好的。这里我跑了两个测试，看看网络究竟如何。</p>
   <h4 id="curl-文件下载测试">CURL 文件下载测试</h4>
   <p>这项测试非常简单：使用 cURL 从局域网机器下载文件，查看速度。</p>
-  <figure class="">
-    <img src="/static/planet/cURL.png" alt="" />
+  <figure class=""><img src="/static/planet/cURL.png" alt="" />
     <figcaption>
       cURL 下载速度，单位为 MB/s，越高越好
     </figcaption>
@@ -1912,8 +1905,7 @@ siege <span class="nt">-c</span> 25 <span class="nt">-r</span> 400 <span class="
 </code></pre>
     </div>
   </div>
-  <figure class="">
-    <img src="/static/planet/nginx.png" alt="" />
+  <figure class=""><img src="/static/planet/nginx.png" alt="" />
     <figcaption>
       NGINX 性能，单位为请求数每秒，越高越好
     </figcaption>
@@ -1937,8 +1929,7 @@ siege <span class="nt">-c</span> 25 <span class="nt">-r</span> 400 <span class="
     </div>
   </div>
   <p>Ruby 测试就简单很多：使用 Jekyll 构建<a href="https://ibugone.com/">我的站点</a>，查看消耗的时间。</p>
-  <figure class="">
-    <img src="/static/planet/python-ruby.png" alt="" />
+  <figure class=""><img src="/static/planet/python-ruby.png" alt="" />
     <figcaption>
       应用程序性能，单位为秒，越低越好
     </figcaption>
@@ -1955,8 +1946,7 @@ siege <span class="nt">-c</span> 25 <span class="nt">-r</span> 400 <span class="
 </code></pre>
     </div>
   </div>
-  <figure class="">
-    <img src="/static/planet/fio-usb.png" alt="" />
+  <figure class=""><img src="/static/planet/fio-usb.png" alt="" />
     <figcaption>
       USB 速度，单位为 MB/s，越高越好
     </figcaption>
@@ -1982,8 +1972,7 @@ siege <span class="nt">-c</span> 25 <span class="nt">-r</span> 400 <span class="
   <h3 id="windows">Windows</h3>
   <p>直接双击，你会看到一个窗口一扫而过——这是正常现象。你需要使用「命令提示符」或者「PowerShell」来访问这个程序。</p>
   <p>Windows 10 中，你可以使用资源管理器 -&gt; 文件来在你存放 <code class="language-plaintext highlighter-rouge">nc</code> 的目录中打开命令提示符或 PowerShell。</p>
-  <figure class="">
-    <img src="/static/planet/explorer-1024x510.png" alt="" />
+  <figure class=""><img src="/static/planet/explorer-1024x510.png" alt="" />
     <figcaption>
       在 Windows 资源管理器中打开命令提示符或 PowerShell
     </figcaption>
@@ -1995,8 +1984,7 @@ siege <span class="nt">-c</span> 25 <span class="nt">-r</span> 400 <span class="
     <li>如果你使用的是命令提示符（黑色背景），输入 <code class="language-plaintext highlighter-rouge">ncat</code>（根据 <code class="language-plaintext highlighter-rouge">nc</code> 对应的名称不同而不同）。</li>
   </ul>
   <p>当显示以下内容时，说明你成功运行了它。</p>
-  <figure class="">
-    <img src="/static/planet/cmdncat-1024x596.png" alt="" />
+  <figure class=""><img src="/static/planet/cmdncat-1024x596.png" alt="" />
     <figcaption>
       成功运行 <code class="language-plaintext highlighter-rouge">ncat</code>
     </figcaption>
@@ -2018,8 +2006,7 @@ usage: nc [-46AacCDdEFhklMnOortUuvz] [-K tc] [-b boundif] [-i interval] [-p sour
   <p>我们可以使用 <code class="language-plaintext highlighter-rouge">nc</code>，尝试一次与网页服务器的连接，以百度为例。</p>
   <p>输入 <code class="language-plaintext highlighter-rouge">nc www.baidu.com 80</code>（或者 <code class="language-plaintext highlighter-rouge">ncat www.baidu.com 80</code>，或者 <code class="language-plaintext highlighter-rouge">./ncat www.baidu.com 80</code>，请根据以上的介绍自行修改），程序会等待你的输入。</p>
   <p>输入 <code class="language-plaintext highlighter-rouge">GET / HTTP/1.0</code>。这表示，我们使用 <code class="language-plaintext highlighter-rouge">HTTP/1.0</code> 这个协议版本，用 <code class="language-plaintext highlighter-rouge">GET</code> 的方式请求根 <code class="language-plaintext highlighter-rouge">/</code>。输入两下回车，代表我们的 HTTP 请求完成。如果你的网络畅通，百度的网页服务器会立刻返回大量信息，可以自行搜索，了解它们的含义。现在，你成功（在不使用浏览器的情况下）完成了一次与百度网站的连接！</p>
-  <figure class="">
-    <img src="/static/planet/nc-1024x596.png" alt="" />
+  <figure class=""><img src="/static/planet/nc-1024x596.png" alt="" />
     <figcaption>
       Success!
     </figcaption>
@@ -2082,15 +2069,13 @@ usage: nc [-46AacCDdEFhklMnOortUuvz] [-K tc] [-b boundif] [-i interval] [-p sour
   <p>当然啦。（虽然可能有点麻烦）</p>
   <h3 id="windows">Windows</h3>
   <p>下面以一台在同一局域网的 Windows 10 机器为例。在「启用或关闭 Windows 功能」中添加 NFS 客户端支持。</p>
-  <figure class="">
-    <img src="/static/planet/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7-2019-08-28-13.57.03-1.png" alt="" />
+  <figure class=""><img src="/static/planet/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7-2019-08-28-13.57.03-1.png" alt="" />
     <figcaption>
       Windows 功能 =&gt; NFS 服务 =&gt; NFS 客户端
     </figcaption>
   </figure>
   <p>此客户端会在系统中安装 <code class="language-plaintext highlighter-rouge">mount</code> 等工具。</p>
-  <figure class="">
-    <img src="/static/planet/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7-2019-08-28-13.59.48-1-1024x824.png" alt="" />
+  <figure class=""><img src="/static/planet/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7-2019-08-28-13.59.48-1-1024x824.png" alt="" />
     <figcaption>
       Windows 版本 <code class="language-plaintext highlighter-rouge">mount</code> 的使用帮助
     </figcaption>
@@ -2098,15 +2083,13 @@ usage: nc [-46AacCDdEFhklMnOortUuvz] [-K tc] [-b boundif] [-i interval] [-p sour
   <p>如果我们需要挂载上面那个服务器的共享，可以输入以下命令：</p>
   <pre><code class="language-cmd">mount \\服务器名称\共享路径 设备名（盘符）
 </code></pre>
-  <figure class="">
-    <img src="/static/planet/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7-2019-08-28-14.10.47.png" alt="" />
+  <figure class=""><img src="/static/planet/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7-2019-08-28-14.10.47.png" alt="" />
     <figcaption>
       大概是成功挂载了
     </figcaption>
   </figure>
   <p>只不过……好像哪里不太对劲？</p>
-  <figure class="">
-    <img src="/static/planet/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7-2019-08-28-14.14.09-1024x555.png" alt="" />
+  <figure class=""><img src="/static/planet/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7-2019-08-28-14.14.09-1024x555.png" alt="" />
     <figcaption>
       中文的文件名变成了乱码
     </figcaption>
@@ -2202,8 +2185,7 @@ chain ${210:string}lpxelinux.0
   <p>另外 iPXE 也可以刻录到 usb 上，这样主机如果想用 PXE 就可以用 usb 启动 iPXE （如果主机自带的 PXE 比较弱），然后使用上面的命令进入 USTC PXE 了。 iPXE 的 usb 镜像可以从 http://boot.ipxe.org/ipxe.usb 下载，然后用 <code class="language-plaintext highlighter-rouge">dd if=ipxe.usb of=/dev/sdX </code>来刻录。</p>
   <p>下载 iso 作为虚拟光驱挂载在虚拟机上，从 CD 启动，</p>
   <h2 id="pxe-有什么">PXE 有什么</h2>
-  <figure class="">
-    <img src="/static/planet/2018-08-11-1720-ScreenShot.png" alt="" />
+  <figure class=""><img src="/static/planet/2018-08-11-1720-ScreenShot.png" alt="" />
     <figcaption>
       PXE 的启动菜单
     </figcaption>
@@ -2232,8 +2214,7 @@ chain ${210:string}lpxelinux.0
   <ul>
     <li>
       <p>Hardware Detection Tools (hdt)</p>
-      <figure class="">
-        <img src="/static/planet/2018-08-11-1726-ScreenShot.png" alt="" />
+      <figure class=""><img src="/static/planet/2018-08-11-1726-ScreenShot.png" alt="" />
         <figcaption>
           hdt 中的查看硬盘信息部分
         </figcaption>

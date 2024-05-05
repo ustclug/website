@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.25.1 by Michael Rose
+  Minimal Mistakes Jekyll Theme 4.26.0 by Michael Rose
   Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
@@ -23,19 +23,8 @@
     <meta property="article:published_time" content="2019-09-16T00:00:00+08:00">
     <meta property="article:modified_time" content="2022-10-28T11:15:51+08:00">
     <link rel="canonical" href="https://lug.ustc.edu.cn/planet/2019/09/how-to-use-nc/">
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-
-          "@type": "Person",
-          "name": "USTCLUG",
-          "url": "https://lug.ustc.edu.cn/"
-
-      }
-    </script>
     <!-- end _includes/seo.html -->
     <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="LUG @ USTC Feed">
-    <!-- https://t.co/dKP3o1e -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="apple-touch-icon" sizes="57x57" href="/static/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/static/favicon/apple-icon-60x60.png">
@@ -54,27 +43,14 @@
     <meta name="msapplication-TileColor" content="#f3f6f6">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#f3f6f6">
-    <script>
+    <script type="text/javascript">
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+      window.enable_copy_code_button = true;
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=121da7d91c">
+    <link rel="stylesheet" href="/assets/css/main.css?v=3ea9158f69">
     <link rel="stylesheet" href="/_extra/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <link rel="stylesheet" href="/_extra/open-sans.css" media="invalid" onload="this.media='all'">
-    <!--[if IE]>
-      <style>
-        /* old IE unsupported flexbox fixes */
-        .greedy-nav .site-title {
-          padding-right: 3em;
-        }
-        .greedy-nav button {
-          position: absolute;
-          top: 0;
-          right: 0;
-          height: 100%;
-        }
-      </style>
-    <![endif]-->
     <!-- start custom head snippets -->
     <!-- insert favicons. use https://realfavicongenerator.net/ -->
     <!-- end custom head snippets -->
@@ -97,19 +73,39 @@
             </a>
             <ul class="visible-links">
               <li class="masthead__menu-item">
-                <a href="/wiki/"><i class="fad fa-lg fa-fw fa-star-shooting"></i> Wiki</a>
+                <a
+                href="/wiki/"
+                
+                
+              ><i class="fad fa-lg fa-fw fa-star-shooting"></i> Wiki</a>
               </li>
               <li class="masthead__menu-item">
-                <a href="/news/"><i class="fad fa-lg fa-fw fa-newspaper"></i> News</a>
+                <a
+                href="/news/"
+                
+                
+              ><i class="fad fa-lg fa-fw fa-newspaper"></i> News</a>
               </li>
               <li class="masthead__menu-item">
-                <a href="/planet/"><i class="fad fa-lg fa-fw fa-planet-ringed fa-swap-opacity"></i> Planet</a>
+                <a
+                href="/planet/"
+                
+                
+              ><i class="fad fa-lg fa-fw fa-planet-ringed fa-swap-opacity"></i> Planet</a>
               </li>
               <li class="masthead__menu-item">
-                <a href="https://github.com/ustclug"><i class="fab fa-lg fa-fw fa-github"></i> GitHub</a>
+                <a
+                href="https://github.com/ustclug"
+                
+                
+              ><i class="fab fa-lg fa-fw fa-github"></i> GitHub</a>
               </li>
               <li class="masthead__menu-item">
-                <a href="https://mirrors.ustc.edu.cn/"><i class="fad fa-lg fa-fw fa-server"></i> Mirrors</a>
+                <a
+                href="https://mirrors.ustc.edu.cn/"
+                
+                
+              ><i class="fad fa-lg fa-fw fa-server"></i> Mirrors</a>
               </li>
             </ul>
             <button class="search__toggle" type="button">
@@ -173,13 +169,13 @@
             </div>
           </div>
         </div>
-        <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+        <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
           <meta itemprop="headline" content="萌新入门手册：如何使用 nc/ncat？">
           <meta itemprop="description" content="本文用于介绍信息安全大赛中不少题目需要使用的 nc/ncat 工具。">
           <meta itemprop="datePublished" content="2019-09-16T00:00:00+08:00">
           <meta itemprop="dateModified" content="2022-10-28T11:15:51+08:00">
           <div class="page__inner-wrap">
-            <section class="page__content e-content" itemprop="text">
+            <section class="page__content" itemprop="text">
               <aside class="sidebar__right sticky">
                 <nav class="toc">
                   <header>
@@ -225,8 +221,7 @@
               <h3 id="windows">Windows</h3>
               <p>直接双击，你会看到一个窗口一扫而过——这是正常现象。你需要使用「命令提示符」或者「PowerShell」来访问这个程序。</p>
               <p>Windows 10 中，你可以使用资源管理器 -&gt; 文件来在你存放 <code class="language-plaintext highlighter-rouge">nc</code> 的目录中打开命令提示符或 PowerShell。</p>
-              <figure class="">
-                <img src="/static/planet/explorer-1024x510.png" alt="" />
+              <figure class=""><img src="/static/planet/explorer-1024x510.png" alt="" />
                 <figcaption>
                   在 Windows 资源管理器中打开命令提示符或 PowerShell
                 </figcaption>
@@ -238,8 +233,7 @@
                 <li>如果你使用的是命令提示符（黑色背景），输入 <code class="language-plaintext highlighter-rouge">ncat</code>（根据 <code class="language-plaintext highlighter-rouge">nc</code> 对应的名称不同而不同）。</li>
               </ul>
               <p>当显示以下内容时，说明你成功运行了它。</p>
-              <figure class="">
-                <img src="/static/planet/cmdncat-1024x596.png" alt="" />
+              <figure class=""><img src="/static/planet/cmdncat-1024x596.png" alt="" />
                 <figcaption>
                   成功运行 <code class="language-plaintext highlighter-rouge">ncat</code>
                 </figcaption>
@@ -261,8 +255,7 @@ usage: nc [-46AacCDdEFhklMnOortUuvz] [-K tc] [-b boundif] [-i interval] [-p sour
               <p>我们可以使用 <code class="language-plaintext highlighter-rouge">nc</code>，尝试一次与网页服务器的连接，以百度为例。</p>
               <p>输入 <code class="language-plaintext highlighter-rouge">nc www.baidu.com 80</code>（或者 <code class="language-plaintext highlighter-rouge">ncat www.baidu.com 80</code>，或者 <code class="language-plaintext highlighter-rouge">./ncat www.baidu.com 80</code>，请根据以上的介绍自行修改），程序会等待你的输入。</p>
               <p>输入 <code class="language-plaintext highlighter-rouge">GET / HTTP/1.0</code>。这表示，我们使用 <code class="language-plaintext highlighter-rouge">HTTP/1.0</code> 这个协议版本，用 <code class="language-plaintext highlighter-rouge">GET</code> 的方式请求根 <code class="language-plaintext highlighter-rouge">/</code>。输入两下回车，代表我们的 HTTP 请求完成。如果你的网络畅通，百度的网页服务器会立刻返回大量信息，可以自行搜索，了解它们的含义。现在，你成功（在不使用浏览器的情况下）完成了一次与百度网站的连接！</p>
-              <figure class="">
-                <img src="/static/planet/nc-1024x596.png" alt="" />
+              <figure class=""><img src="/static/planet/nc-1024x596.png" alt="" />
                 <figcaption>
                   Success!
                 </figcaption>
