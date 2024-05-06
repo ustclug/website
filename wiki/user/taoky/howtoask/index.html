@@ -1,0 +1,676 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.0 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="zh" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <!-- begin _includes/seo.html -->
+    <title>提问指南 - LUG @ USTC</title>
+    <meta name="description" content="提问指南">
+    <meta name="author" content="USTCLUG">
+    <meta property="article:author" content="USTCLUG">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="LUG @ USTC">
+    <meta property="og:title" content="提问指南">
+    <meta property="og:url" content="https://lug.ustc.edu.cn/wiki/user/taoky/howtoask/">
+    <meta property="og:description" content="提问指南">
+    <meta property="article:published_time" content="2024-05-06T18:57:44+08:00">
+    <meta property="article:modified_time" content="2024-05-06T18:59:07+08:00">
+    <link rel="canonical" href="https://lug.ustc.edu.cn/wiki/user/taoky/howtoask/">
+    <!-- end _includes/seo.html -->
+    <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="LUG @ USTC Feed">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="57x57" href="/static/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/static/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/static/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/static/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/static/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/static/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/static/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/static/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/static/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/static/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/static/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#f3f6f6">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#f3f6f6">
+    <script type="text/javascript">
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+      window.enable_copy_code_button = true;
+    </script>
+    <!-- For all browsers -->
+    <link rel="stylesheet" href="/assets/css/main.css?v=1b043a29dd">
+    <link rel="stylesheet" href="/_extra/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
+    <link rel="stylesheet" href="/_extra/open-sans.css" media="invalid" onload="this.media='all'">
+    <!-- start custom head snippets -->
+    <!-- insert favicons. use https://realfavicongenerator.net/ -->
+    <!-- end custom head snippets -->
+  </head>
+  <body class="layout--single">
+    <nav class="skip-links">
+      <ul>
+        <li><a href="#site-nav" class="screen-reader-shortcut">转到主导航栏</a></li>
+        <li><a href="#main" class="screen-reader-shortcut">转到内容</a></li>
+        <li><a href="#footer" class="screen-reader-shortcut">转到底部</a></li>
+      </ul>
+    </nav>
+    <div class="masthead">
+      <div class="masthead__inner-wrap">
+        <div class="masthead__menu">
+          <nav id="site-nav" class="greedy-nav">
+            <a class="site-logo" href="/"><img src="/static/lug-penguin.png" alt="LUG @ USTC"></a>
+            <a class="site-title" href="/">
+              LUG @ USTC
+            </a>
+            <ul class="visible-links">
+              <li class="masthead__menu-item">
+                <a
+                href="/wiki/"
+                
+                
+              ><i class="fad fa-lg fa-fw fa-star-shooting"></i> Wiki</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a
+                href="/news/"
+                
+                
+              ><i class="fad fa-lg fa-fw fa-newspaper"></i> News</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a
+                href="/planet/"
+                
+                
+              ><i class="fad fa-lg fa-fw fa-planet-ringed fa-swap-opacity"></i> Planet</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a
+                href="https://github.com/ustclug"
+                
+                
+              ><i class="fab fa-lg fa-fw fa-github"></i> GitHub</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a
+                href="https://mirrors.ustc.edu.cn/"
+                
+                
+              ><i class="fad fa-lg fa-fw fa-server"></i> Mirrors</a>
+              </li>
+            </ul>
+            <button class="search__toggle" type="button">
+              <span class="visually-hidden">切换搜索</span>
+              <i class="fas fa-search"></i>
+            </button>
+            <button class="greedy-nav__toggle hidden" type="button">
+              <span class="visually-hidden">切换菜单</span>
+              <div class="navicon"></div>
+            </button>
+            <ul class="hidden-links hidden"></ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="initial-content">
+      <div id="main" role="main">
+        <div class="sidebar sticky">
+          <nav class="nav__list">
+            <input id="ac-toc" name="accordion-toc" type="checkbox" />
+            <label for="ac-toc">切换菜单</label>
+            <ul class="nav__items">
+              <li>
+                <span class="nav__sub-title">LUG @ USTC</span>
+                <ul>
+                  <li><a href="/"><i class="fad fa-lg fa-fw fa-home"></i> LUG 首页</a></li>
+                  <li><a href="/news/"><i class="fad fa-lg fa-fw fa-newspaper"></i> LUG 新闻</a></li>
+                  <li><a href="/wiki/lug/services/"><i class="fad fa-lg fa-fw fa-certificate"></i> LUG 服务</a></li>
+                  <li><a href="/wiki/lug/links/"><i class="fad fa-lg fa-fw fa-link"></i> 友情链接</a></li>
+                  <li><a href="/wiki/server/mirrors/"><i class="fad fa-lg fa-fw fa-database"></i> 开源软件镜像</a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="nav__sub-title">活动</span>
+                <ul>
+                  <li><a href="/wiki/lug/events/"><i class="fad fa-lg fa-fw fa-sparkles"></i> LUG 活动</a></li>
+                  <li><a href="/wiki/lug/events/weeklyparty/"><i class="fad fa-lg fa-fw fa-users-class"></i> 每周小聚</a></li>
+                  <li><a href="https://101.lug.ustc.edu.cn/"><i class="fad fa-lg fa-fw fa-graduation-cap"></i> Linux 101</a></li>
+                  <li><a href="/wiki/lug/mailinglist/"><i class="fad fa-lg fa-fw fa-envelope-open-text"></i> 邮件列表</a></li>
+                  <li><a href="/wiki/lug/book/"><i class="fad fa-lg fa-fw fa-books"></i> LUG 书库</a></li>
+                  <li><a href="/wiki/lug/finance/"><i class="fad fa-lg fa-fw fa-piggy-bank"></i> LUG 财务</a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="nav__sub-title">联系</span>
+                <ul>
+                  <li><a href="/wiki/lug/person-in-charge/"><i class="fad fa-lg fa-fw fa-user-tie"></i> LUG 负责人</a></li>
+                  <li><a href="/wiki/lug/contact/"><i class="fas fa-lg fa-fw fa-phone-alt"></i> 联系我们</a></li>
+                  <li><a href="/wiki/lug/contribute/"><i class="fad fa-lg fa-fw fa-users-medical"></i> 加入我们</a></li>
+                  <li><a href="/wiki/lug/finance/donate/"><i class="fad fa-lg fa-fw fa-donate"></i> 捐赠我们</a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="nav__sub-title">资源</span>
+                <ul>
+                  <li><a href="/wiki/linux_digest/"><i class="fad fa-lg fa-fw fa-book"></i> Linux 文摘</a></li>
+                  <li><a href="/wiki/lug/resources/"><i class="fad fa-lg fa-fw fa-bookmark"></i> 资源导航</a></li>
+                  <li><a href="https://servers.ustclug.org/"><i class="fad fa-lg fa-fw fa-server"></i> 服务器新闻</a></li>
+                  <li><a href="/wiki/doc/ustcnet-faq/"><i class="fas fa-lg fa-fw fa-question-square"></i> 校园网常见问题</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+          <meta itemprop="headline" content="提问指南">
+          <meta itemprop="description" content="提问指南">
+          <meta itemprop="datePublished" content="2024-05-06T18:57:44+08:00">
+          <meta itemprop="dateModified" content="2024-05-06T18:59:07+08:00">
+          <div class="page__inner-wrap">
+            <header>
+              <h1 id="page-title" class="page__title" itemprop="headline">
+                <a href="https://lug.ustc.edu.cn/wiki/user/taoky/howtoask/" itemprop="url">提问指南
+                </a>
+              </h1>
+            </header>
+            <section class="page__content" itemprop="text">
+              <aside class="sidebar__right sticky">
+                <nav class="toc">
+                  <header>
+                    <h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4>
+                  </header>
+                  <ul class="toc__menu">
+                    <li><a href="#为什么需要再写一份这样的指南">为什么需要再写一份这样的指南</a></li>
+                    <li><a href="#提问之前">提问之前</a>
+                      <ul>
+                        <li><a href="#阅读已有的信息">阅读已有的信息</a></li>
+                        <li><a href="#利用搜索引擎等工具">利用搜索引擎等工具</a>
+                          <ul>
+                            <li><a href="#选择搜索引擎">选择搜索引擎</a></li>
+                            <li><a href="#搜索相关项目的手册faq-等信息">搜索相关项目的手册/FAQ 等信息</a></li>
+                            <li><a href="#使用合适的查询">使用合适的查询</a></li>
+                            <li><a href="#筛选结果">筛选结果</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#其他信息">其他信息</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#提问时的注意事项">提问时的注意事项</a>
+                      <ul>
+                        <li><a href="#避免-x-y-型问题">避免 X-Y 型问题</a></li>
+                        <li><a href="#避免在吗有人吗">避免「在吗」/「有人吗」</a></li>
+                        <li><a href="#避免有没有人懂">避免「有没有人懂」</a></li>
+                        <li><a href="#尽可能提供最小可复现样例">尽可能提供「最小可复现样例」</a></li>
+                        <li><a href="#提供必要的问题描述与相关信息">提供必要的问题描述与相关信息</a></li>
+                        <li><a href="#使用-snippetgistpastebin-类型服务放问题相关的代码与报错">使用 Snippet/Gist/Pastebin 类型服务放问题相关的代码与报错</a></li>
+                        <li><a href="#避免拍屏">避免拍屏</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#如果没有人回答">如果没有人回答</a></li>
+                    <li><a href="#附录如何正确向大语言模型提问">附录：如何正确向大语言模型提问</a>
+                      <ul>
+                        <li><a href="#阅读本部分前先阅读正文内容">阅读本部分前，先阅读正文内容</a></li>
+                        <li><a href="#be-concise">Be concise</a></li>
+                        <li><a href="#提问语言">提问语言</a></li>
+                        <li><a href="#避免超长的对话">避免超长的对话</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+              </aside>
+              <p class="notice--warning"><strong><i class="fas fa-exclamation-triangle"></i> 注意：</strong>本文为草稿，内容可能随时更改。</p>
+              <p>License: CC-BY-NC-SA 4.0</p>
+              <h2 id="为什么需要再写一份这样的指南">为什么需要再写一份这样的指南</h2>
+              <p>关于如何提问，有一些相关的文档，诸如：</p>
+              <ul>
+                <li>提问的智慧（<a href="http://www.catb.org/~esr/faqs/smart-questions.html">原文</a>，<a href="https://lug.ustc.edu.cn/wiki/doc/smart-questions/">中文</a>）</li>
+                <li><a href="https://github.com/tangx/Stop-Ask-Questions-The-Stupid-Ways/blob/master/README.md">别像弱智一样提问</a></li>
+              </ul>
+              <p>本文不是这些文档的替代，而是旨在用简洁、清晰、友好的语言表述与提问相关的注意事项，并且给出相关的正例与反例（真实的例子会做匿名化处理），以便快速了解相关的注意点。</p>
+              <p>也需要注意的是，以下内容不是能够机械性执行的检查单，注意需要「具体问题具体分析」。</p>
+              <h2 id="提问之前">提问之前</h2>
+              <p>请先尝试自己解决问题：有的时候解决方法比想像的要简单得多（并且自己解决也比问别人快得多）。以下会给出一些问题解决的通用思路。</p>
+              <h3 id="阅读已有的信息">阅读已有的信息</h3>
+              <p>很多时候遇到的问题会伴随着错误信息，至少分一点点耐心去读一下错误信息可能对解决问题很有帮助。如果有能力的话，尝试从日志等地方收集相关的信息也很可能会有帮助。</p>
+              <p>当然不少错误信息都是英语，不过能来到科大的同学高考大概都是需要考英语的，错误信息大部分时候都不会包含长难复杂句式（比高考英语的难阅读理解简单）。实在不行的话，借助词典或者机器翻译软件（考虑近年深度学习的巨大进步，2024 年的机器翻译发展水平已经很高了；并且计算机领域的词汇也就那些），也可以帮助阅读并尝试理解含义。</p>
+              <ul>
+                <li>
+                  <p>反例：镜像站怎么挂了</p>
+                  <p>对应提问的截图中的错误信息节选：</p>
+                  <div class="language-console highlighter-rouge">
+                    <div class="highlight">
+                      <pre class="highlight"><code><span class="go">E: 无法下载 http://mirrors.ustc.edu.cn/ubuntu/pool/main/g/gcc-11/g%2b%2b-11_11.3.0-1ubuntu%7e22.04_amd64.deb  404  Not Found [IP: 202.38.95.110 443]
+E: 有几个软件包无法下载，要不运行 apt-get update 或者加上 --fix-missing 的选项再试试？
+</span><span class="gp">user@hostname:~/桌面$</span><span class="w">
+</span></code></pre>
+                    </div>
+    </div>
+                  <p>这里从图上命令输出的最后一行就可以看到，<code class="language-plaintext highlighter-rouge">apt</code> 给出了运行 <code class="language-plaintext highlighter-rouge">apt-get update</code> 的建议。如果甚至都没有去试一试就直接截个图问别人，那么很不幸，得不到好脸色恐怕也是意料之中的事情。</p>
+                </li>
+                <li>
+                  <p>反例：为什么我装不了 pytorch</p>
+                  <p>执行的命令与错误信息：</p>
+                  <div class="language-console highlighter-rouge">
+                    <div class="highlight">
+                      <pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>pip <span class="nb">install </span>pytorch
+<span class="go">Collecting pytorch
+  Downloading pytorch-1.0.2.tar.gz (689 bytes)
+  Preparing metadata (setup.py) ... done
+Building wheels for collected packages: pytorch
+  Building wheel for pytorch (setup.py) ... error
+  error: subprocess-exited-with-error
+
+  × python setup.py bdist_wheel did not run successfully.
+  │ exit code: 1
+</span><span class="gp">  ╰─&gt;</span><span class="w"> </span><span class="o">[</span>6 lines of output]
+<span class="go">      Traceback (most recent call last):
+</span><span class="gp">        File "&lt;string&gt;</span><span class="s2">", line 2, in &lt;module&gt;
+</span><span class="gp">        File "&lt;pip-setuptools-caller&gt;</span><span class="s2">"</span>, line 34, <span class="k">in</span> &lt;module&gt;
+<span class="gp">        File "/tmp/pip-install-ol4_fzbu/pytorch_308e04ef51d74e3a93b1f4be765a77bd/setup.py", line 15, in &lt;module&gt;</span><span class="w">
+</span><span class="go">          raise Exception(message)
+      Exception: You tried to install "pytorch". The package named for PyTorch is "torch"
+      [end of output]
+
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for pytorch
+  Running setup.py clean for pytorch
+Failed to build pytorch
+ERROR: Could not build wheels for pytorch, which is required to install pyproject.toml-based projects
+
+</span><span class="gp">[notice] A new release of pip is available: 23.2.1 -&gt;</span><span class="w"> </span>24.0
+<span class="go">[notice] To update, run: pip install --upgrade pip
+</span></code></pre>
+                    </div>
+    </div>
+                  <p>可以看到，异常（exception）的内容是 <code class="language-plaintext highlighter-rouge">You tried to install "pytorch". The package named for PyTorch is "torch"</code>，意思就是说，要安装的东西的名字应该是 torch 而不是 pytorch，所以解决方法就是跑的命令从 <code class="language-plaintext highlighter-rouge">pip install pytorch</code> 改成 <code class="language-plaintext highlighter-rouge">pip install torch</code>。</p>
+                </li>
+                <li>
+                  <p>反例：为什么我的程序编译不了</p>
+                  <div class="language-console highlighter-rouge">
+                    <div class="highlight">
+                      <pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>gcc myporgram.c
+<span class="go">cc1: fatal error: myporgram.c: No such file or directory
+compilation terminated.
+</span></code></pre>
+                    </div>
+    </div>
+                  <p>可以看到，输出中报错信息明确了是 <code class="language-plaintext highlighter-rouge">No such file or directory</code>（没有对应的文件或文件夹），代表给的文件程序找不到。仔细检查可以发现是命令里面把名字敲错了。</p>
+                </li>
+              </ul>
+              <h3 id="利用搜索引擎等工具">利用搜索引擎等工具</h3>
+              <p>尽管近两年大语言模型发展迅速，但是搜索引擎在解决问题上仍然有着不可或缺的作用。</p>
+              <h4 id="选择搜索引擎">选择搜索引擎</h4>
+              <p>作为业界不成文的「共识」，对常用搜索引擎的排序是：谷歌 &gt; 必应国际版 &gt; 必应国内版 &gt; 百度。可以都试试，根据自己的实际情况选择。</p>
+              <h4 id="搜索相关项目的手册faq-等信息">搜索相关项目的手册/FAQ 等信息</h4>
+              <p>在某些场景下，直接搜索对应项目的帮助文档、手册、FAQ 等是比搜索报错信息更好的选择。例如，如果我在使用 Python 的 <code class="language-plaintext highlighter-rouge">argparse</code> 模块时遇到了问题，可能最好的方式是先搜索其手册信息，在手册中寻找需要的内容：</p>
+              <pre><code class="language-plain">python argparse
+</code></pre>
+              <p>（这么搜索对于合格的搜索引擎，足以将其手册等关键信息排在结果最前面）</p>
+              <h4 id="使用合适的查询">使用合适的查询</h4>
+              <p>最简单的几个技巧：</p>
+              <ul>
+                <li>去掉「为什么」这样的副词与「的」这样的助词</li>
+                <li>使用空格分割搜索关键词</li>
+                <li>去掉只在你的计算机上有的信息（比如说用户名、主机名——比如如果你的用户名是 john123，并且搜索的时候带上了输出里面的 john123，那么搜索引擎可能会尽量匹配结果里面有 john123 的结果，这在几乎所有的时候都是不符合预期的）</li>
+                <li>可能需要去掉查询里面的横线 <code class="language-plaintext highlighter-rouge">-</code>：搜索引擎很可能将其解释为「以横线（减号）开头的查询词不允许包含在结果中」</li>
+              </ul>
+              <p>作为一个例子，对于下面这个「问题」：</p>
+              <pre><code class="language-plain">为什么我运行 apt update 会输出这个：
+Reading package lists... Done
+E: Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)
+E: Unable to lock directory /var/lib/apt/lists/
+W: Problem unlinking the file /var/cache/apt/pkgcache.bin - RemoveCaches (13: Permission denied)
+W: Problem unlinking the file /var/cache/apt/srcpkgcache.bin - RemoveCaches (13: Permission denied)
+</code></pre>
+              <p>首先判断（最）重要的信息，并且调整：</p>
+              <pre><code class="language-plain">为什么我运行 apt update 会输出这个：E: Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)
+</code></pre>
+              <p>然后使用上面的简单策略处理查询：</p>
+              <pre><code class="language-plain">apt update 输出 E: Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)
+</code></pre>
+              <p>（「输出」这两个字甚至也可以不要）</p>
+              <p>直接贴到任何搜索引擎（必应/谷歌），甚至百度给出的结果链接都是对应的解决方法。</p>
+              <h4 id="筛选结果">筛选结果</h4>
+              <p>搜索引擎可能会返回广告，可以考虑为自己的浏览器安装反广告扩展（例如 uBlock Origin）排除这一部分内容。</p>
+              <p>有一小部分网站（大多出于商业目的）会不加选择地收集垃圾内容，并且不择手段让搜索引擎相信它们包含有效的信息。这些网站被称为「内容农场」。这些网站的内容当然对解决你的问题也基本上不会有帮助。有关内容农场的特征等信息，可以阅读「少数派」的文章：<a href="https://sspai.com/post/69407">清理「内容农场」，还你清爽的 Google 中文搜索体验</a>。</p>
+              <p>对于搜索得到的结果，目前普遍（同样不成文）的认识是：一些网站的内容质量（例如 CSDN）普遍比其他的更低，中文结果的平均质量比英文结果低（很遗憾，这也是为什么更推荐使用英文搜索的重要原因之一）。在逐渐使用搜索引擎的过程中，对不同结果的质量也可以有更清晰的判断。</p>
+              <h3 id="其他信息">其他信息</h3>
+              <p>从 2023 年初开始，大语言模型（GPT 等）逐渐普及。询问大语言模型同样也是很有效的问题解决途径（并且确实比真人更有耐心）。不过，这不代表不需要任何技巧，大语言模型就会自动施展魔法解决所有问题。有关详细信息，请参考本文「附录：如何正确向大语言模型提问」。</p>
+              <h2 id="提问时的注意事项">提问时的注意事项</h2>
+              <h3 id="避免-x-y-型问题">避免 X-Y 型问题</h3>
+              <p>X-Y 型问题指代这样一种情况：你遇到了 X 问题，你相信用 Y 方法可以解决 X 问题，但是不知道怎么使用，因此向别人提问如何使用 Y 的问题，而不告诉其他人 X 问题的内容。如果用 Y 方法解决 X 问题的思路是错误的，那么这样的提问就是浪费时间。</p>
+              <p>在去年（2023）离世的陈皓先生曾在他的博客中介绍了 X-Y 型问题（<a href="https://web.archive.org/web/20240309145853/https://coolshell.cn/articles/10804.html">Web Archive</a>），由于其原始博客目前无法直接访问，以下摘录了其中提及的例子。</p>
+              <ul>
+                <li>
+                  <p>例子 1：获取字符串后三位字符？</p>
+                  <pre><code class="language-dialog">Q: 我怎么用 Shell 取得一个字符串的后 3 位字符？
+A1: 如果这个字符的变量是$foo，你可以这样来 echo ${foo:-3}
+A2: 为什么你要取后 3 位？你想干什么？
+Q: 其实我就想取文件的扩展名
+A1: 我靠，原来你要干这事，那我的方法不对，文件的扩展名并不保证一定有 3 位啊。
+A1: 如果你的文件必然有扩展名的话，你可以这样来：echo ${foo##*.}
+</code></pre>
+                </li>
+                <li>
+                  <p>例子 2：获取文件大小？</p>
+                  <pre><code class="language-dialog">Q: 问一下大家，我如何得到一个文件的大小
+A1: size = ls -l $file  | awk '{print $5}'
+Q: 哦，要是这个文件名是个目录呢？
+A2: 用 du 吧
+A3: 不好意思，你到底是要文件的大小还是目录的大小？你到底要干什么？
+Q: 我想把一个目录下的每个文件的每个块（第一个块有 512 个字节）拿出来做 md5，并且计算他们的大小……
+A1: 哦，你可以使用 dd 吧。
+A2: dd 不行吧。
+A3: 你用 md5 来计算这些块的目的是什么？你究竟想干什么啊？
+Q: 其实，我想写一个网盘，对于小文件就直接传输了，对于大文件我想分块做增量同步。
+A2: 用 rsync 啊，你妹！
+</code></pre>
+                </li>
+              </ul>
+              <h3 id="避免在吗有人吗">避免「在吗」/「有人吗」</h3>
+              <p>在私聊的场合下，直接提问比先只问「在吗」是更好、效率更高的选择，否则参考这个（虚构的）例子：</p>
+              <pre><code class="language-dialog">A (8:00): 在吗？
+B (13:00): 怎么了？
+A (15:00): 我遇到了 XXXXXXX 错误，然后 YYYY 命令跑不了，怎么办？
+B (16:00): 你应该 ZZZZZZZ
+</code></pre>
+              <p>对比一下直接问：</p>
+              <pre><code class="language-dialog">A (8:00): Hi，我遇到了 XXXXXXX 错误，然后 YYYY 命令跑不了，怎么办？
+B (13:00): 这样，你应该 ZZZZZZZ
+</code></pre>
+              <p>同样在群聊的场景下，直接问问题比问「有人吗」是更好的选择——毕竟其他人有充分的理由不理你（当然，如果你是群里的大红人，可能是另外一回事）。</p>
+              <h3 id="避免有没有人懂">避免「有没有人懂」</h3>
+              <p>一个糟糕的例子是在群聊里面问：</p>
+              <pre><code class="language-plain">有没有人懂 C++？有个问题想问问
+</code></pre>
+              <p>原因如下：</p>
+              <ul>
+                <li>C++ 是非常复杂的，没有多少人真的懂/精通 C++。对很多别的领域也是类似的。</li>
+                <li>就算真的有人懂，懂的人很可能也不想在群里（通过回答这样的问题）夸耀自己很懂。而不太懂的人就更没有兴趣看你的问题了。</li>
+                <li>很多时候对应的问题即使是不精通相关领域的人也可以回答，对应的问题可能是某种常识。</li>
+              </ul>
+              <p>一个改善后相对好一些的提问是：</p>
+              <pre><code class="language-plain">我遇到了一个问题，我的 C++ 程序需要运行一个 CUDA kernel，我要怎么写 cmake 来编译这个 kernel 并且让我的程序调用？
+</code></pre>
+              <p>相关论述可参考 <a href="https://fars.ee/~justask.html">不要问有没有人，请直接问</a>。</p>
+              <h3 id="尽可能提供最小可复现样例">尽可能提供「最小可复现样例」</h3>
+              <p>很少会有人愿意自愿帮助别人调试几百行的代码，或者配置一致的非常复杂的环境，因此<strong>最小可复现样例</strong>（Minimal reproducible example，MRE）可以很大程度帮助他人调试，并且在某些情况下甚至可以直接定位问题。最小可复现样例一般是一个<strong>完整</strong>的程序代码或者执行流程，与产生错误<strong>无关的部分不包含</strong>在这样的样例里面。</p>
+              <p>一种类型的反例是：只给了一段无法直接编译的很长的函数，函数里面调用了各种第三方库或者自己的结构体/类的方法，但是这些信息不在提供的内容中，这会给解决问题带来不小的困难。</p>
+              <h3 id="提供必要的问题描述与相关信息">提供必要的问题描述与相关信息</h3>
+              <p>必要的描述与信息可能包括：</p>
+              <ul>
+                <li>具体问题是什么</li>
+                <li>引发问题的命令/代码</li>
+                <li>报错信息</li>
+                <li>自己尝试过用什么方法解决</li>
+                <li>系统与软件的版本信息（例如，如果你想在一个主要讨论 Linux 的群里面问 Windows 下的问题，务必把这一点说清楚）</li>
+              </ul>
+              <h3 id="使用-snippetgistpastebin-类型服务放问题相关的代码与报错">使用 Snippet/Gist/Pastebin 类型服务放问题相关的代码与报错</h3>
+              <p>代码和报错信息可能会非常长，此时截图或者直接文本贴到群聊里面可能不是一个合适的选择</p>
+              <ul>
+                <li>截图，特别是代码，如果其他人想跑你的代码，OCR 可能会有问题，而且也没有人会想自己人肉 OCR。</li>
+                <li>对于比较长的信息，直接发送会影响其他人阅读前面的信息，并且不美观（特别是不支持代码块样式的聊天软件，例如 QQ/微信）</li>
+              </ul>
+              <p>尽管诸如聊天等场景下可以上传文件，在一些场合直接上传文件可能会不受欢迎（例如群聊的管理员可能不希望群共享文件里面都是乱七八糟的代码）。一些网站提供了存储长文本的功能（注意一些网站可能无法直接访问）：</p>
+              <ul>
+                <li>GitHub 对应 <a href="https://gist.github.com/">GitHub Gist</a></li>
+                <li>GitLab 对应其 <a href="https://gitlab.com/dashboard/snippets">Snippets</a> 功能</li>
+                <li>独立的 Pastebin 类型服务，例如 <a href="https://paste.ubuntu.com/">Ubuntu pastebin</a>，<a href="http://Pastebin.com">Pastebin.com</a> 等</li>
+              </ul>
+              <p>对于科大校内的同学，可以使用校内 GitLab（<a href="https://git.ustc.edu.cn/">超算中心</a> 或 <a href="https://git.lug.ustc.edu.cn/">LUG</a>）的 Snippets。</p>
+              <h3 id="避免拍屏">避免拍屏</h3>
+              <p>除非实在无法截图，否则不要拍屏，因为：</p>
+              <ul>
+                <li>不美观</li>
+                <li>字/图像可能会拍不清楚</li>
+                <li>其他人可能需要扭脖子才能正确看到内容</li>
+              </ul>
+              <h2 id="如果没有人回答">如果没有人回答</h2>
+              <p>没有人回答问题 ≠ 被无视，在群聊中，如果认真提问却没有人回答，更有可能发生的事情是：看到问题的人完全不知道如何解决，仅此而已。同时也需要注意，群聊中（或者论坛中）的其他与你素不相识的人也没有必须回答问题的义务。</p>
+              <p>可以考虑从以下一些方式解决问题：</p>
+              <ul>
+                <li>线下咨询。
+                  <ul>
+                    <li>Tip: LUG 在西区与高新区的活动室，只要房间里有人就可以进来（可以来之前在群里问一下）</li>
+                  </ul>
+                </li>
+                <li>向对应服务/软件的维护人员提交工单
+                  <ul>
+                    <li>Tip: 科大网络信息中心报修系统 <a href="https://baoxiu.ustc.edu.cn/">https://baoxiu.ustc.edu.cn/</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <h2 id="附录如何正确向大语言模型提问">附录：如何正确向大语言模型提问</h2>
+              <h3 id="阅读本部分前先阅读正文内容">阅读本部分前，先阅读正文内容</h3>
+              <p>对人类有效的提问策略，大多对大语言模型也有效。</p>
+              <h3 id="be-concise">Be concise</h3>
+              <p>有的时候（特别是对规模很大的语言模型），大语言模型会事无巨细地列出从安装到写代码的每一步，但是很多时候这样是没有必要的：浪费 token（钱），而且在生成实际解决问题的内容之前还要等废话说完。</p>
+              <p>这种情况可以使用特征工程的手段缓解：通过显式告诉模型简洁输出内容来加速输出、节约成本。可以对比下面两个例子：</p>
+              <ul>
+                <li>
+                  <p>原始例子</p>
+                  <pre><code class="language-dialog">Human: 如何在 Linux 下让 IPMI 向操作系统发送 NMI 信号？
+GPT: 在 Linux 下通过 IPMI (Intelligent Platform Management Interface) 向系统发送 NMI（非屏蔽中断）信号，可以用于触发内核转储或进行内核调试。下面是具体的步骤：
+
+1. **确认 IPMI 设备正常工作**：
+   在 Linux 系统上，你首先需要确保 IPMI 模块已经加载到内核中。使用以下命令检查：
+   ```bash
+lsmod | grep ipmi
+   ```
+   如果没有列出相关模块（比如 `ipmi_msghandler`，`ipmi_devintf`），你需要加载它们：
+   ```bash
+sudo modprobe ipmi_devintf
+sudo modprobe ipmi_si
+   ```
+
+2. **安装必要的工具**：
+   使用 `ipmitool` 命令可以管理并控制 IPMI 设备。确保此工具已安装：
+   ```bash
+sudo apt-get install ipmitool   # Debian/Ubuntu
+sudo yum install ipmitool       # CentOS
+   ```
+
+3. **发送 NMI 信号**：
+   使用 `ipmitool` 命令发出 NMI 到操作系统：
+   ```bash
+sudo ipmitool chassis power diag
+   ```
+   这个命令会向系统发送一个 NMI 信号。
+
+4. **观察系统响应**：
+   确保你的系统配置为在收到 NMI 时采取相应的动作。通常，Linux 内核会在接收到 NMI 时打印状态信息到系统日志中。你可以通过查看 `/var/log/syslog` 或使用 `dmesg` 命令来查看这些信息。
+
+Linux 系统默认可能不响应 NMI 信号，特别是在进行内核崩溃 (kernel crash) 调试时需要特别配置。这可能涉及到设置如何处理 NMI 的内核参数，例如启用 `kernel.nmi_watchdog=1` 来启用 NMI 监视狗，或者通过 `sysctl` 命令设置相应的内核参数。你也可能需要设置系统以便在接收到 NMI 时生成内核转储文件（vmcore 文件），通过配置 kdump/kexec 工具来完成。
+
+这些步駐會从 IPMI 软件层面向操作系统发送 NMI 信号，具体的系统响应和处理方式则需要根据你的系统配置和需求进行相应的设置。
+</code></pre>
+                </li>
+                <li>
+                  <p>末尾添加 <code class="language-plaintext highlighter-rouge">Be concise</code></p>
+                  <pre><code class="language-dialog">Human: 如何在 Linux 下让 IPMI 向操作系统发送 NMI 信号？Be concise
+GPT: 要在 Linux 下通过 IPMI 让 BMC 向操作系统发送 NMI（Non-Maskable Interrupt，即不可屏蔽中断）信号，你可以使用 `ipmitool` 工具。该工具允许你与服务器的 BMC 进行交互，并执行各种管理命令。
+
+请按照以下步骤操作：
+
+1. 确保你的机器上安装了 `ipmitool`。如果没有安装，你可以通过包管理器来安装它。例如，在基于 Debian 的系统上，使用：
+   ```bash
+sudo apt-get install ipmitool
+   ```
+
+2. 使用 `ipmitool` 发送 NMI 到操作系统。你需要确保有适当的权限来执行此操作。使用以下命令：
+   ```bash
+sudo ipmitool chassis power diag
+   ```
+
+这条命令告诉 BMC 发送 NMI 到主机的 CPU。此操作通常用于诊断目的。
+
+**注意事项**：
+- 确保在安全与必要的情况下执行此操作，因为 NMI 通常用于非常特殊的诊断过程，可能会导致系统崩溃或其他不稳定的行为。
+- 你可能需要根据你服务器的 IPMI 版本和配置调整命令。有时，硬件或固件的不同版本可能会影响命令的效果。
+- 保证你有服务器的管理员权限，因为发送 NMI 信号通常需要较高的权限。
+</code></pre>
+                </li>
+              </ul>
+              <h3 id="提问语言">提问语言</h3>
+              <p>由于大语言模型的训练语料很多时候英文的数据量远大于中文，因此使用英文提问得到的结果质量可能比中文提问更好。国产的大语言模型可能可以缓解这个问题。</p>
+              <h3 id="避免超长的对话">避免超长的对话</h3>
+              <p>大语言模型（GPT）的工作模式简单来讲是：每次用户发送消息时，GPT 都会从最开头开始分析内容，到用户本次发送的信息结束后再开始生成。这样带来了两个问题：</p>
+              <ul>
+                <li>对于超长的对话，每一次继续对话都会浪费不少的钱——假设当前的对话前，大语言模型分析了一个很长的网页，花费了一块钱，那么基于这段对话作为背景，<strong>每次</strong>发送一条消息，都会再花一块钱。</li>
+                <li>相比于短文本，GPT 对长文本更容易产生「<strong>幻觉</strong>」，即更容易输出与实际情况不相符的内容。</li>
+              </ul>
+            </section>
+            <footer class="page__meta">
+              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2024-05-06">2024 年 5 月 6 日</time></p>
+            </footer>
+            <nav class="pagination">
+              <a href="/wiki/user/sadhen/" class="pagination--pager" title="About Me
+">上一页</a>
+              <a href="/wiki/user/vastuniverse/lug-upgrade-failure/" class="pagination--pager" title="lug.ustc.edu.cn 系统升级失误
+">下一页</a>
+            </nav>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div class="search-content">
+      <div class="search-content__inner-wrap">
+        <div class="search-searchbar"></div>
+        <div class="search-hits"></div>
+      </div>
+    </div>
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+        <!-- end custom footer snippets -->
+        <div class="footer-row">
+          <div class="footer-block footer__about">
+            <p>中国科学技术大学 Linux 用户协会是由中国科学技术大学在校的 GNU/Linux 爱好者发起并组成的团体，旨在联合科大的 GNU/Linux
+              使用者，搭建信息交流共享的平台，宣传自由软件的价值，提高自由软件社区文化氛围，推广自由软件的应用。</p>
+          </div>
+          <div class="footer-block footer__extras">
+            <div class="footer__contact">
+              <ul>
+                <li>
+                  <a href="/wiki/intro/"><i class="fad fa-fw fa-address-card"></i> 关于我们</a>
+                </li>
+                <li>
+                  <a href="/wiki/lug/contact/"><i class="fas fa-fw fa-phone-alt"></i> 联系我们</a>
+                </li>
+                <li>
+                  <a href="/wiki/lug/contribute/"><i class="fad fa-fw fa-users"></i> 加入我们</a>
+                </li>
+                <li>
+                  <a href="/feed/"><i class="fad fa-fw fa-rss" style="--fa-secondary-opacity: 0.6;"></i> RSS 订阅</a>
+                </li>
+                <li>
+                  <a href="https://github.com/ustclug/website"><i class="fab fa-fw fa-github"></i> 本站仓库</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__logo">
+              <div class="footer__logo-image">
+                <img src="https://ftp.lug.ustc.edu.cn/misc/logo-white.svg" />
+              </div>
+              <div class="footer__logo-text">
+                <!-- a href="http://www.beian.miit.gov.cn" target="_blank">皖ICP备05002528号</a -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="/assets/js/main.min.js"></script>
+    <script>
+      // Including InstantSearch.js library and styling
+      const loadSearch = function() {
+        const loadCSS = function(src) {
+          var link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.type = 'text/css';
+          link.href = src;
+          link.media = 'all';
+          document.head.appendChild(link);
+        };
+
+        var script = document.createElement('script');
+        script.setAttribute("type", "text/javascript");
+        script.setAttribute("src", "https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js");
+        script.addEventListener("load", function() {
+          // Instantiating InstantSearch.js with Algolia credentials
+          const search = instantsearch({
+            appId: 'CM5ZKX0CV3',
+            apiKey: 'aa942e5bdda7368300e322cba95f47f6',
+            indexName: 'default',
+            searchParameters: {
+              restrictSearchableAttributes: ['title', 'content']
+            }
+          });
+
+          const hitTemplate = function(hit) {
+            const url = hit.url;
+            const hightlight = hit._highlightResult;
+            const title = hightlight.title && hightlight.title.value  || "";
+            const content = hightlight.html && hightlight.html.value  || "";
+
+            return `
+              <div class="list__item">
+                <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                  <h2 class="archive__item-title" itemprop="headline"><a href="${url}">${title}</a></h2>
+                  <div class="archive__item-excerpt" itemprop="description">${content}</div>
+                </article>
+              </div>
+            `;
+          }
+
+          // Adding searchbar and results widgets
+          search.addWidget(
+            instantsearch.widgets.searchBox({
+              container: '.search-searchbar',
+              poweredBy: true,
+              placeholder: '输入您要搜索的关键词...'
+            })
+          );
+          search.addWidget(
+            instantsearch.widgets.hits({
+              container: '.search-hits',
+              templates: {
+                item: hitTemplate,
+                empty: '无结果',
+              }
+            })
+          );
+
+          if (!search.started) {
+            search.start();
+          }
+        });
+        document.body.appendChild(script);
+
+        loadCSS("https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css");
+        loadCSS("https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css");
+      };
+
+      // Starting the search only when toggle is clicked
+      $(document).ready(function() {
+        var scriptLoaded = false;
+
+        $(".search__toggle").on("click", function() {
+          if (!scriptLoaded) {
+            loadSearch();
+            scriptLoaded = true;
+          }
+        });
+      });
+    </script>
+    <img src="/static/USTC_logo.svg" style="position: fixed; bottom: -320px; left: -200px; opacity: 0.1; z-index: -100;" />
+  </body>
+</html>
