@@ -99,7 +99,7 @@ License: CC-BY-NC-SA 4.0
 
 在某些场景下，直接搜索对应项目的帮助文档、手册、FAQ 等是比搜索报错信息更好的选择。例如，如果我在使用 Python 的 `argparse` 模块时遇到了问题，可能最好的方式是先搜索其手册信息，在手册中寻找需要的内容：
 
-```plain
+```
 python argparse
 ```
 
@@ -116,7 +116,7 @@ python argparse
 
 作为一个例子，对于下面这个「问题」：
 
-```plain
+```
 为什么我运行 apt update 会输出这个：
 Reading package lists... Done
 E: Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)
@@ -127,13 +127,13 @@ W: Problem unlinking the file /var/cache/apt/srcpkgcache.bin - RemoveCaches (13:
 
 首先判断（最）重要的信息，并且调整：
 
-```plain
+```
 为什么我运行 apt update 会输出这个：E: Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)
 ```
 
 然后使用上面的简单策略处理查询：
 
-```plain
+```
 apt update 输出 E: Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)
 ```
 
@@ -163,7 +163,7 @@ X-Y 型问题指代这样一种情况：你遇到了 X 问题，你相信用 Y �
 
 - 例子 1：获取字符串后三位字符？
 
-  ```dialog
+  ```
   Q: 我怎么用 Shell 取得一个字符串的后 3 位字符？
   A1: 如果这个字符的变量是$foo，你可以这样来 echo ${foo:-3}
   A2: 为什么你要取后 3 位？你想干什么？
@@ -174,7 +174,7 @@ X-Y 型问题指代这样一种情况：你遇到了 X 问题，你相信用 Y �
 
 - 例子 2：获取文件大小？
 
-  ```dialog
+  ```
   Q: 问一下大家，我如何得到一个文件的大小
   A1: size = ls -l $file  | awk '{print $5}'
   Q: 哦，要是这个文件名是个目录呢？
@@ -192,7 +192,7 @@ X-Y 型问题指代这样一种情况：你遇到了 X 问题，你相信用 Y �
 
 在私聊的场合下，直接提问比先只问「在吗」是更好、效率更高的选择，否则参考这个（虚构的）例子：
 
-```dialog
+```
 A (8:00): 在吗？
 B (13:00): 怎么了？
 A (15:00): 我遇到了 XXXXXXX 错误，然后 YYYY 命令跑不了，怎么办？
@@ -201,7 +201,7 @@ B (16:00): 你应该 ZZZZZZZ
 
 对比一下直接问：
 
-```dialog
+```
 A (8:00): Hi，我遇到了 XXXXXXX 错误，然后 YYYY 命令跑不了，怎么办？
 B (13:00): 这样，你应该 ZZZZZZZ
 ```
@@ -212,7 +212,7 @@ B (13:00): 这样，你应该 ZZZZZZZ
 
 一个糟糕的例子是在群聊里面问：
 
-```plain
+```
 有没有人懂 C++？有个问题想问问
 ```
 
@@ -224,7 +224,7 @@ B (13:00): 这样，你应该 ZZZZZZZ
 
 一个改善后相对好一些的提问是：
 
-```plain
+```
 我遇到了一个问题，我的 C++ 程序需要运行一个 CUDA kernel，我要怎么写 cmake 来编译这个 kernel 并且让我的程序调用？
 ```
 
@@ -278,7 +278,7 @@ B (13:00): 这样，你应该 ZZZZZZZ
 - 线下咨询。
   - Tip: LUG 在西区与高新区的活动室，只要房间里有人就可以进来（可以来之前在群里问一下）
 - 向对应服务/软件的维护人员提交工单
-  - Tip: 科大网络信息中心报修系统 [https://baoxiu.ustc.edu.cn/](https://baoxiu.ustc.edu.cn/)
+  - Tip: 科大网络信息中心报修系统 <https://baoxiu.ustc.edu.cn/>
 
 ## 附录：如何正确向大语言模型提问
 
@@ -294,32 +294,32 @@ B (13:00): 这样，你应该 ZZZZZZZ
 
 - 原始例子
 
-  ````dialog
+  ````
   Human: 如何在 Linux 下让 IPMI 向操作系统发送 NMI 信号？
   GPT: 在 Linux 下通过 IPMI (Intelligent Platform Management Interface) 向系统发送 NMI（非屏蔽中断）信号，可以用于触发内核转储或进行内核调试。下面是具体的步骤：
 
   1. **确认 IPMI 设备正常工作**：
      在 Linux 系统上，你首先需要确保 IPMI 模块已经加载到内核中。使用以下命令检查：
      ```bash
-  lsmod | grep ipmi
+     lsmod | grep ipmi
      ```
      如果没有列出相关模块（比如 `ipmi_msghandler`，`ipmi_devintf`），你需要加载它们：
      ```bash
-  sudo modprobe ipmi_devintf
-  sudo modprobe ipmi_si
+     sudo modprobe ipmi_devintf
+     sudo modprobe ipmi_si
      ```
 
   2. **安装必要的工具**：
      使用 `ipmitool` 命令可以管理并控制 IPMI 设备。确保此工具已安装：
      ```bash
-  sudo apt-get install ipmitool   # Debian/Ubuntu
-  sudo yum install ipmitool       # CentOS
+     sudo apt-get install ipmitool   # Debian/Ubuntu
+     sudo yum install ipmitool       # CentOS
      ```
 
   3. **发送 NMI 信号**：
      使用 `ipmitool` 命令发出 NMI 到操作系统：
      ```bash
-  sudo ipmitool chassis power diag
+     sudo ipmitool chassis power diag
      ```
      这个命令会向系统发送一个 NMI 信号。
 
@@ -333,7 +333,7 @@ B (13:00): 这样，你应该 ZZZZZZZ
 
 - 末尾添加 `Be concise`
 
-  ````dialog
+  ````
   Human: 如何在 Linux 下让 IPMI 向操作系统发送 NMI 信号？Be concise
   GPT: 要在 Linux 下通过 IPMI 让 BMC 向操作系统发送 NMI（Non-Maskable Interrupt，即不可屏蔽中断）信号，你可以使用 `ipmitool` 工具。该工具允许你与服务器的 BMC 进行交互，并执行各种管理命令。
 
@@ -341,12 +341,12 @@ B (13:00): 这样，你应该 ZZZZZZZ
 
   1. 确保你的机器上安装了 `ipmitool`。如果没有安装，你可以通过包管理器来安装它。例如，在基于 Debian 的系统上，使用：
      ```bash
-  sudo apt-get install ipmitool
+     sudo apt-get install ipmitool
      ```
 
   2. 使用 `ipmitool` 发送 NMI 到操作系统。你需要确保有适当的权限来执行此操作。使用以下命令：
      ```bash
-  sudo ipmitool chassis power diag
+     sudo ipmitool chassis power diag
      ```
 
   这条命令告诉 BMC 发送 NMI 到主机的 CPU。此操作通常用于诊断目的。
