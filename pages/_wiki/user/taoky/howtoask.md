@@ -40,8 +40,9 @@ License: CC-BY-NC-SA 4.0
   ```
 
   这里从图上命令输出的最后一行就可以看到，`apt` 给出了运行 `apt-get update` 的建议。如果甚至都没有去试一试就直接截个图问别人，那么很不幸，得不到好脸色恐怕也是意料之中的事情。
+
 - 反例：为什么我装不了 pytorch
-  
+
   执行的命令与错误信息：
 
   ```console
@@ -75,6 +76,7 @@ License: CC-BY-NC-SA 4.0
   ```
 
   可以看到，异常（exception）的内容是 `You tried to install "pytorch". The package named for PyTorch is "torch"`，意思就是说，要安装的东西的名字应该是 torch 而不是 pytorch，所以解决方法就是跑的命令从 `pip install pytorch` 改成 `pip install torch`。
+
 - 反例：为什么我的程序编译不了
 
   ```console
@@ -274,9 +276,9 @@ B (13:00): 这样，你应该 ZZZZZZZ
 可以考虑从以下一些方式解决问题：
 
 - 线下咨询。
-    - Tip: LUG 在西区与高新区的活动室，只要房间里有人就可以进来（可以来之前在群里问一下）
+  - Tip: LUG 在西区与高新区的活动室，只要房间里有人就可以进来（可以来之前在群里问一下）
 - 向对应服务/软件的维护人员提交工单
-    - Tip: 科大网络信息中心报修系统 [https://baoxiu.ustc.edu.cn/](https://baoxiu.ustc.edu.cn/)
+  - Tip: 科大网络信息中心报修系统 [https://baoxiu.ustc.edu.cn/](https://baoxiu.ustc.edu.cn/)
 
 ## 附录：如何正确向大语言模型提问
 
