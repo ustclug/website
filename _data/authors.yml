@@ -47,3 +47,11 @@ petergu:
     - label: GitHub
       icon: fab fa-fw fa-github
       url: https://github.com/ustcpetergu
+
+tiankaima:
+  name: tiankaima
+  avatar: "https://avatars.githubusercontent.com/u/91816094?v=4"
+  links:
+    - label: GitHub
+      icon: fab fa-fw fa-github
+      url: https://github.com/tiankaima
