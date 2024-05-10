@@ -1,15 +1,269 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://lug.ustc.edu.cn/feed/planet.xml" rel="self" type="application/atom+xml" /><link href="https://lug.ustc.edu.cn/" rel="alternate" type="text/html" /><updated>2024-05-06T19:09:40+08:00</updated><id>https://lug.ustc.edu.cn/feed/planet.xml</id><title type="html">LUG @ USTC | Planet</title><subtitle>中国科学技术大学 Linux 用户协会</subtitle><author><name>USTCLUG</name></author><entry><title type="html">菜鸡写给菜鸡的 NetHack 入门教程</title><link href="https://lug.ustc.edu.cn/planet/2021/09/nethack-gitgud/" rel="alternate" type="text/html" title="菜鸡写给菜鸡的 NetHack 入门教程" /><published>2021-09-27T00:00:00+08:00</published><updated>2021-10-18T09:09:24+08:00</updated><id>https://lug.ustc.edu.cn/planet/2021/09/nethack-gitgud</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2021/09/nethack-gitgud/"><![CDATA[<!-- Workaround for jekyll-titles-from-headings -->
-        <h2 id="教程说明">教程说明</h2>
-        <p>本教程只介绍最基本的操作和游戏刚刚开始阶段的策略，帮助新手活过第一层。引用内容为补充或 Fun facts，可以忽略。图中游戏“截图”均为字符界面的直接复制——虽然没有了颜色或加粗效果，但还是觉得这样更合适一些。</p>
-        <h2 id="关于">关于</h2>
-        <p>NetHack 是一款历史悠久的 Roguelike 游戏，基于龙与地下城规则，也有着 Roguelike 典型特征：随机生成地图，永久死亡，难度和复杂度非常高。同时，游戏中也融合了各种文化和领域的元素，并且有多种有趣的提示信息和死亡方式。</p>
-        <blockquote>
-          <p>总有一二十年才通关的老玩家说 NetHack 不难——或许和某些其他 Roguelike 相比确实如此，但这和你有什么关系呢？</p>
-        </blockquote>
-        <p>此游戏默认只有字符界面，以下为一个游戏画面，可以感受一下：</p>
-        <div class="language-plaintext highlighter-rouge">
-          <div class="highlight">
-            <pre class="highlight"><code>This kobold corpse tastes terrible!--More--
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://lug.ustc.edu.cn/feed/planet.xml" rel="self" type="application/atom+xml" /><link href="https://lug.ustc.edu.cn/" rel="alternate" type="text/html" /><updated>2024-05-10T20:26:35+08:00</updated><id>https://lug.ustc.edu.cn/feed/planet.xml</id><title type="html">LUG @ USTC | Planet</title><subtitle>中国科学技术大学 Linux 用户协会</subtitle><author><name>USTCLUG</name></author><entry><title type="html">使用 Rclone 备份 OneDrive 内容</title><link href="https://lug.ustc.edu.cn/planet/2024/05/onedrive-backup-with-rclone/" rel="alternate" type="text/html" title="使用 Rclone 备份 OneDrive 内容" /><published>2024-05-10T00:00:00+08:00</published><updated>2024-05-10T20:25:51+08:00</updated><id>https://lug.ustc.edu.cn/planet/2024/05/onedrive-backup-with-rclone</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2024/05/onedrive-backup-with-rclone/"><![CDATA[<p>本文用于介绍如何使用 Rclone 备份 OneDrive 内容。</p>
+      <h2 id="rclone-简介">Rclone 简介</h2>
+      <p>Rclone 是一个命令行工具，用于同步文件和目录到和从云存储服务。它支持 Google Drive、Amazon S3、Dropbox、Microsoft OneDrive、Yandex Disk、Box 和其他一些云存储服务。Rclone 是一个 Go 程序，可以在 Windows、macOS、Linux 和其他操作系统上运行。</p>
+      <h2 id="安装-rclone">安装 Rclone</h2>
+      <p>Rclone 官方的下载链接在 <a href="https://rclone.org/downloads/">这里</a>。你可以根据自己的操作系统下载对应的版本。</p>
+      <p>部分常见的包管理工具也提供了 Rclone 的安装方式，例如：</p>
+      <ul>
+        <li>
+          <p>在 Windows 上，你可以使用 Chocolatey 安装 Rclone：</p>
+          <div class="language-bash highlighter-rouge">
+            <div class="highlight">
+              <pre class="highlight"><code>choco <span class="nb">install </span>rclone
+</code></pre>
+            </div>
+    </div>
+        </li>
+        <li>
+          <p>在 Windows 上，你也可以使用 Winget 安装 Rclone：</p>
+          <div class="language-bash highlighter-rouge">
+            <div class="highlight">
+              <pre class="highlight"><code>winget <span class="nb">install </span>Rclone.Rclone
+</code></pre>
+            </div>
+    </div>
+        </li>
+        <li>
+          <p>在 macOS 上，你可以使用 Homebrew 安装 Rclone：</p>
+          <div class="language-bash highlighter-rouge">
+            <div class="highlight">
+              <pre class="highlight"><code>brew <span class="nb">install </span>rclone
+</code></pre>
+            </div>
+    </div>
+        </li>
+        <li>
+          <p>在 Ubuntu 上，你可以使用 apt 安装 Rclone：</p>
+          <div class="language-bash highlighter-rouge">
+            <div class="highlight">
+              <pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>rclone
+</code></pre>
+            </div>
+    </div>
+        </li>
+        <li>
+          <p>更多包管理器的安装方法可以参考 <a href="https://rclone.org/install/#package-manager">Rclone 官方文档</a>。</p>
+        </li>
+      </ul>
+      <p>运行 <code class="language-plaintext highlighter-rouge">rclone --version</code> 来检查 Rclone 是否安装成功，如果正常，你应该类似看到如下输出：</p>
+      <div class="language-console highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>rclone <span class="nt">--version</span>
+<span class="go">rclone v1.66.0
+- os/version: darwin 14.5 (64 bit)
+- os/kernel: 23.5.0 (arm64)
+- os/type: darwin
+- os/arch: arm64 (ARMv8 compatible)
+- go/version: go1.22.1
+- go/linking: dynamic
+- go/tags: none
+</span></code></pre>
+        </div>
+      </div>
+      <h2 id="配置-rclone">配置 Rclone</h2>
+      <p>我们在这里以 <code class="language-plaintext highlighter-rouge">mail.ustc.edu.cn</code> 为例，做一个 step-by-step 的教程：</p>
+      <div class="language-bash highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code>rclone config
+</code></pre>
+        </div>
+      </div>
+      <div class="language-console highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="go">No remotes found, make a new one?
+n) New remote
+s) Set configuration password
+q) Quit config
+</span><span class="gp">n/s/q&gt;</span><span class="w">
+</span></code></pre>
+        </div>
+      </div>
+      <p>输入 <code class="language-plaintext highlighter-rouge">n</code>，然后回车。</p>
+      <div class="language-console highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="go">Enter name for new remote.
+</span><span class="gp">name&gt;</span><span class="w">
+</span></code></pre>
+        </div>
+      </div>
+      <p>输入一个名字，这里我们输入 <code class="language-plaintext highlighter-rouge">onedrive</code>，然后回车。</p>
+      <div class="language-console highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="go">Option Storage.
+Type of storage to configure.
+Choose a number from below, or type in your own value.
+ 1 / 1Fichier
+   \ (fichier)
+ 2 / Akamai NetStorage
+   \ (netstorage)
+ 3 / Alias for an existing remote
+   \ (alias)
+ 4 / Amazon S3 Compliant Storage Providers including AWS, Alibaba, ArvanCloud, Ceph, ChinaMobile, Cloudflare, DigitalOcean, Dreamhost, GCS, HuaweiOBS, IBMCOS, IDrive, IONOS, LyveCloud, Leviia, Liara, Linode, Minio, Netease, Petabox, RackCorp, Rclone, Scaleway, SeaweedFS, StackPath, Storj, Synology, TencentCOS, Wasabi, Qiniu and others
+   \ (s3)
+
+</span><span class="c">...
+</span><span class="go">
+33 / Microsoft OneDrive
+   \ (onedrive)
+
+</span><span class="c">...
+</span><span class="go">
+</span><span class="gp">Storage&gt;</span><span class="w">
+</span></code></pre>
+        </div>
+      </div>
+      <p>输入 <code class="language-plaintext highlighter-rouge">33</code>，然后回车。</p>
+      <div class="language-console highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="go">Option client_id.
+OAuth Client Id.
+Leave blank normally.
+Enter a value. Press Enter to leave empty.
+</span><span class="gp">client_id&gt;</span><span class="w">
+</span><span class="go">
+Option client_secret.
+OAuth Client Secret.
+Leave blank normally.
+Enter a value. Press Enter to leave empty.
+</span><span class="gp">client_secret&gt;</span><span class="w">
+</span><span class="go">
+Option region.
+Choose national cloud region for OneDrive.
+Choose a number from below, or type in your own string value.
+Press Enter for the default (global).
+ 1 / Microsoft Cloud Global
+   \ (global)
+ 2 / Microsoft Cloud for US Government
+   \ (us)
+ 3 / Microsoft Cloud Germany
+   \ (de)
+ 4 / Azure and Office 365 operated by Vnet Group in China
+   \ (cn)
+</span><span class="gp">region&gt;</span><span class="w">
+</span><span class="go">
+Edit advanced config?
+y) Yes
+n) No (default)
+</span><span class="gp">y/n&gt;</span><span class="w">
+</span><span class="go">
+Use web browser to automatically authenticate rclone with remote?
+ * Say Y if the machine running rclone has a web browser you can use
+ * Say N if running rclone on a (remote) machine without web browser access
+If not sure try Y. If Y failed, try N.
+
+y) Yes (default)
+n) No
+</span><span class="gp">y/n&gt;</span><span class="w">
+</span></code></pre>
+        </div>
+      </div>
+      <p>这里我们都直接回车，不输入任何内容。(五次回车)</p>
+      <p>在这其中会弹出一个网页，让你登录你的 OneDrive 账号，然后授权 Rclone 访问你的 OneDrive 账号。</p>
+      <div class="language-console highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="go">Option config_type.
+Type of connection
+Choose a number from below, or type in an existing string value.
+Press Enter for the default (onedrive).
+ 1 / OneDrive Personal or Business
+   \ (onedrive)
+ 2 / Root Sharepoint site
+   \ (sharepoint)
+   / Sharepoint site name or URL
+ 3 | E.g. mysite or https://contoso.sharepoint.com/sites/mysite
+   \ (url)
+ 4 / Search for a Sharepoint site
+   \ (search)
+ 5 / Type in driveID (advanced)
+   \ (driveid)
+ 6 / Type in SiteID (advanced)
+   \ (siteid)
+   / Sharepoint server-relative path (advanced)
+ 7 | E.g. /teams/hr
+   \ (path)
+</span><span class="gp">config_type&gt;</span><span class="w">
+</span></code></pre>
+        </div>
+      </div>
+      <p>这里我们直接回车，不输入任何内容。</p>
+      <div class="language-console highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="go">Option config_driveid.
+Select drive you want to use
+Choose a number from below, or type in your own string value.
+Press Enter for the default (b!****************************************************************).
+ 1 / OneDrive (business)
+   \ (b!****************************************************************)
+</span><span class="gp">config_driveid&gt;</span><span class="w">
+</span><span class="go">
+Drive OK?
+
+Found drive "root" of type "business"
+URL: https://mailustceducn-my.sharepoint.com/personal/tiankaima_mail_ustc_edu_cn/Documents
+
+y) Yes (default)
+n) No
+</span><span class="gp">y/n&gt;</span><span class="w">
+</span><span class="go">
+Configuration complete.
+Options:
+- type: onedrive
+- token:
+***
+- drive_id: b!****************************************************************
+- drive_type: business
+Keep this "onedrive" remote?
+y) Yes this is OK (default)
+e) Edit this remote
+d) Delete this remote
+</span><span class="gp">y/e/d&gt;</span><span class="w">
+</span></code></pre>
+        </div>
+      </div>
+      <p>依旧是直接回车，不输入任何内容。</p>
+      <div class="language-console highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="go">Current remotes:
+
+Name                 Type
+====                 ====
+onedrive             onedrive
+
+e) Edit existing remote
+n) New remote
+d) Delete remote
+r) Rename remote
+c) Copy remote
+s) Set configuration password
+q) Quit config
+</span><span class="gp">e/n/d/r/c/s/q&gt;</span><span class="w">
+</span></code></pre>
+        </div>
+      </div>
+      <p>输入 <code class="language-plaintext highlighter-rouge">q</code>，然后回车。现在我们已经配置好了 Rclone。</p>
+      <h2 id="将文件从-onedrive-备份到本地">将文件从 OneDrive 备份到本地</h2>
+      <div class="language-console highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="go">rclone copy onedrive: /path/to/local/folder
+</span></code></pre>
+        </div>
+      </div>
+      <h2 id="总结">总结</h2>
+      <p>Rclone 是个非常强大的工具，支持的云存储服务也非常多，你可以通过 <code class="language-plaintext highlighter-rouge">rclone config</code> 来配置其他的云存储服务。</p>
+      <p>限于篇幅和时间关系，本文只介绍了 Rclone 的基本使用方法，更多的功能和用法请参考 <a href="https://rclone.org/docs/">Rclone 官方文档</a>。</p>
+      <p>如果您对这篇内容有任何问题或建议，欢迎 <a href="https://lug.ustc.edu.cn/wiki/lug/contact/">联系我们</a>。</p>
+      ]]></content><author><name>tiankaima</name></author><category term="Tech Tutorial" /><category term="rclone" /><category term="OneDrive" /><summary type="html"><![CDATA[本文用于介绍如何使用 Rclone 备份 OneDrive 内容。]]></summary></entry><entry><title type="html">菜鸡写给菜鸡的 NetHack 入门教程</title><link href="https://lug.ustc.edu.cn/planet/2021/09/nethack-gitgud/" rel="alternate" type="text/html" title="菜鸡写给菜鸡的 NetHack 入门教程" /><published>2021-09-27T00:00:00+08:00</published><updated>2021-10-18T09:09:24+08:00</updated><id>https://lug.ustc.edu.cn/planet/2021/09/nethack-gitgud</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2021/09/nethack-gitgud/"><![CDATA[<!-- Workaround for jekyll-titles-from-headings -->
+      <h2 id="教程说明">教程说明</h2>
+      <p>本教程只介绍最基本的操作和游戏刚刚开始阶段的策略，帮助新手活过第一层。引用内容为补充或 Fun facts，可以忽略。图中游戏“截图”均为字符界面的直接复制——虽然没有了颜色或加粗效果，但还是觉得这样更合适一些。</p>
+      <h2 id="关于">关于</h2>
+      <p>NetHack 是一款历史悠久的 Roguelike 游戏，基于龙与地下城规则，也有着 Roguelike 典型特征：随机生成地图，永久死亡，难度和复杂度非常高。同时，游戏中也融合了各种文化和领域的元素，并且有多种有趣的提示信息和死亡方式。</p>
+      <blockquote>
+        <p>总有一二十年才通关的老玩家说 NetHack 不难——或许和某些其他 Roguelike 相比确实如此，但这和你有什么关系呢？</p>
+      </blockquote>
+      <p>此游戏默认只有字符界面，以下为一个游戏画面，可以感受一下：</p>
+      <div class="language-plaintext highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code>This kobold corpse tastes terrible!--More--
 
                                                        --------
                       ----------                       |......-
@@ -34,15 +288,15 @@
 Petergu the Stripling          St:15 Dx:14 Co:18 In:9 Wi:7 Ch:10 Lawful
 Dlvl:1 $:11 HP:7(16) Pw:1(2) AC:6 Xp:1
 </code></pre>
-          </div>
         </div>
-        <blockquote>
-          <p>贴图模式也是有的，但是不如字符模式经典</p>
-        </blockquote>
-        <h2 id="安装和配置">安装和配置</h2>
-        <p>如果你使用 Linux 等操作系统，那么 NetHack 多半可以直接从软件源中安装：包名通常为 <code class="language-plaintext highlighter-rouge">nethack</code> 或 <code class="language-plaintext highlighter-rouge">nethack-console</code>。如果使用 Windows，可以在<a href="https://nethack.org/v366/ports/download-win.html">官方网站</a>下载。建议使用默认的英文版。</p>
-        <p>为了更好地游戏体验，在 Linux 上推荐将以下内容添加至 <code class="language-plaintext highlighter-rouge">~/.nethackrc</code> 配置文件（这也是 Ubuntu 中自带的配置）。</p>
-        <pre><code class="language-dosini">#
+      </div>
+      <blockquote>
+        <p>贴图模式也是有的，但是不如字符模式经典</p>
+      </blockquote>
+      <h2 id="安装和配置">安装和配置</h2>
+      <p>如果你使用 Linux 等操作系统，那么 NetHack 多半可以直接从软件源中安装：包名通常为 <code class="language-plaintext highlighter-rouge">nethack</code> 或 <code class="language-plaintext highlighter-rouge">nethack-console</code>。如果使用 Windows，可以在<a href="https://nethack.org/v366/ports/download-win.html">官方网站</a>下载。建议使用默认的英文版。</p>
+      <p>为了更好地游戏体验，在 Linux 上推荐将以下内容添加至 <code class="language-plaintext highlighter-rouge">~/.nethackrc</code> 配置文件（这也是 Ubuntu 中自带的配置）。</p>
+      <pre><code class="language-dosini">#
 # System-wide NetHack configuration file for tty-based NetHack.
 #
 
@@ -72,11 +326,11 @@ MENUCOLOR=" cursed "=red
 MENUCOLOR=" unholy "=red
 MENUCOLOR=" cursed .* (being worn)"=orange&amp;underline
 </code></pre>
-        <h2 id="开局">开局</h2>
-        <p>运行 NetHack 后将看到以下提示：</p>
-        <div class="language-plaintext highlighter-rouge">
-          <div class="highlight">
-            <pre class="highlight"><code>NetHack, Copyright 1985-2020
+      <h2 id="开局">开局</h2>
+      <p>运行 NetHack 后将看到以下提示：</p>
+      <div class="language-plaintext highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code>NetHack, Copyright 1985-2020
          By Stichting Mathematisch Centrum and M. Stephenson.
          Version 3.6.6 Unix, built Mar 18 18:21:43 2020.
          See license for details.
@@ -84,22 +338,22 @@ MENUCOLOR=" cursed .* (being worn)"=orange&amp;underline
 
 Shall I pick character's race, role, gender and alignment for you? [ynaq]
 </code></pre>
-          </div>
         </div>
-        <p>你可以按 <code class="language-plaintext highlighter-rouge">n</code> 然后自己选择人物的种族（人类，矮人，精灵，地精，兽人）、角色（考古学家、骑士、游客等 13 种）、性别（男、女）和阵营（守序、中立、混乱），或者按 <code class="language-plaintext highlighter-rouge">y</code> 让系统随机选一个。对于新手，女武神（Valkyrie）、野蛮人（Barbarian）和武士（Samurai）是开局较为容易的角色，虽然我觉得巫师（Wizard）的游戏体验比较有趣。</p>
-        <blockquote>
-          <p>性别和阵营可以在游戏中因道具改变</p>
-        </blockquote>
-        <blockquote>
-          <p>每个角色的每个阵营对应一个不同的神。其中僧侣（Monk）的神是中国神话传说中的”人物”：山海经、赤松子和黄帝</p>
-        </blockquote>
-        <p>选好之后根据提示按 <code class="language-plaintext highlighter-rouge">y</code> 开始。出现 <code class="language-plaintext highlighter-rouge">--More--</code> 时说明提示未显示完，按空格到下一句话。</p>
-        <blockquote>
-          <p>被怪打一下后出现 <code class="language-plaintext highlighter-rouge">--More--</code>，下一句话基本是 <code class="language-plaintext highlighter-rouge">You die...</code></p>
-        </blockquote>
-        <div class="language-plaintext highlighter-rouge">
-          <div class="highlight">
-            <pre class="highlight"><code>Hello petergu, welcome to NetHack!  You are a neutral male human Wizard.
+      </div>
+      <p>你可以按 <code class="language-plaintext highlighter-rouge">n</code> 然后自己选择人物的种族（人类，矮人，精灵，地精，兽人）、角色（考古学家、骑士、游客等 13 种）、性别（男、女）和阵营（守序、中立、混乱），或者按 <code class="language-plaintext highlighter-rouge">y</code> 让系统随机选一个。对于新手，女武神（Valkyrie）、野蛮人（Barbarian）和武士（Samurai）是开局较为容易的角色，虽然我觉得巫师（Wizard）的游戏体验比较有趣。</p>
+      <blockquote>
+        <p>性别和阵营可以在游戏中因道具改变</p>
+      </blockquote>
+      <blockquote>
+        <p>每个角色的每个阵营对应一个不同的神。其中僧侣（Monk）的神是中国神话传说中的”人物”：山海经、赤松子和黄帝</p>
+      </blockquote>
+      <p>选好之后根据提示按 <code class="language-plaintext highlighter-rouge">y</code> 开始。出现 <code class="language-plaintext highlighter-rouge">--More--</code> 时说明提示未显示完，按空格到下一句话。</p>
+      <blockquote>
+        <p>被怪打一下后出现 <code class="language-plaintext highlighter-rouge">--More--</code>，下一句话基本是 <code class="language-plaintext highlighter-rouge">You die...</code></p>
+      </blockquote>
+      <div class="language-plaintext highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code>Hello petergu, welcome to NetHack!  You are a neutral male human Wizard.
 --More--
 
 
@@ -124,20 +378,20 @@ Shall I pick character's race, role, gender and alignment for you? [ynaq]
 Petergu the Evoker             St:9 Dx:8 Co:16 In:17 Wi:14 Ch:11 Neutral
 Dlvl:1 $:0 HP:12(12) Pw:7(7) AC:9 Xp:1
 </code></pre>
-          </div>
         </div>
-        <p>图中，<code class="language-plaintext highlighter-rouge">@</code> 是你，身边白底（复制出来看不到了）的 <code class="language-plaintext highlighter-rouge">f</code> 是你的宠物猫，<code class="language-plaintext highlighter-rouge">x</code> 是一只怪（grid bug），<code class="language-plaintext highlighter-rouge">+</code> 是关着的门。各种字符代表什么需要慢慢记忆，或者按 <code class="language-plaintext highlighter-rouge">/</code> 然后根据提示再按 <code class="language-plaintext highlighter-rouge">/</code>，移动光标查看地图上的信息，结束按 <code class="language-plaintext highlighter-rouge">ESC</code>。</p>
-        <blockquote>
-          <p>无论任何时候都要仔细阅读提示。这和学习 Linux 命令行是一样的。</p>
-        </blockquote>
-        <p>底栏是各种状态。新手主要要关注的就是 HP，即生命值；AC，Armor Class，代表防御，越低越好；以及可能出现在底栏的其他临时状态，比如失明（Blind）。其他属性的含义可在 Wiki 上查询。</p>
-        <blockquote>
-          <p>HP 降为 0 只是最无聊的死亡方式</p>
-        </blockquote>
-        <p>按 <code class="language-plaintext highlighter-rouge">i</code> 可以打开装备栏查看自己的物品。空格返回。</p>
-        <div class="language-plaintext highlighter-rouge">
-          <div class="highlight">
-            <pre class="highlight"><code> Weapons
+      </div>
+      <p>图中，<code class="language-plaintext highlighter-rouge">@</code> 是你，身边白底（复制出来看不到了）的 <code class="language-plaintext highlighter-rouge">f</code> 是你的宠物猫，<code class="language-plaintext highlighter-rouge">x</code> 是一只怪（grid bug），<code class="language-plaintext highlighter-rouge">+</code> 是关着的门。各种字符代表什么需要慢慢记忆，或者按 <code class="language-plaintext highlighter-rouge">/</code> 然后根据提示再按 <code class="language-plaintext highlighter-rouge">/</code>，移动光标查看地图上的信息，结束按 <code class="language-plaintext highlighter-rouge">ESC</code>。</p>
+      <blockquote>
+        <p>无论任何时候都要仔细阅读提示。这和学习 Linux 命令行是一样的。</p>
+      </blockquote>
+      <p>底栏是各种状态。新手主要要关注的就是 HP，即生命值；AC，Armor Class，代表防御，越低越好；以及可能出现在底栏的其他临时状态，比如失明（Blind）。其他属性的含义可在 Wiki 上查询。</p>
+      <blockquote>
+        <p>HP 降为 0 只是最无聊的死亡方式</p>
+      </blockquote>
+      <p>按 <code class="language-plaintext highlighter-rouge">i</code> 可以打开装备栏查看自己的物品。空格返回。</p>
+      <div class="language-plaintext highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code> Weapons
  a - a blessed +1 quarterstaff (weapon in hands)
  Armor
  b - an uncursed +0 cloak of magic resistance (being worn)
@@ -162,15 +416,15 @@ Dlvl:1 $:0 HP:12(12) Pw:7(7) AC:9 Xp:1
  o - an uncursed blindfold
  (end)
 </code></pre>
-          </div>
         </div>
-        <p>按 <code class="language-plaintext highlighter-rouge">Ctrl-X</code> 可以查看自身可以查看的属性。空格翻页和返回。</p>
-        <blockquote>
-          <p>更多的属性不能自我感觉到，只有特殊情况下才会显示出来</p>
-        </blockquote>
-        <div class="language-plaintext highlighter-rouge">
-          <div class="highlight">
-            <pre class="highlight"><code> Petergu the Wizard's attributes:
+      </div>
+      <p>按 <code class="language-plaintext highlighter-rouge">Ctrl-X</code> 可以查看自身可以查看的属性。空格翻页和返回。</p>
+      <blockquote>
+        <p>更多的属性不能自我感觉到，只有特殊情况下才会显示出来</p>
+      </blockquote>
+      <div class="language-plaintext highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code> Petergu the Wizard's attributes:
 
  Background:
   You are an Evoker, a level 1 male human Wizard.
@@ -195,30 +449,30 @@ Dlvl:1 $:0 HP:12(12) Pw:7(7) AC:9 Xp:1
   Your intelligence is 17.
  (1 of 2)
 </code></pre>
-          </div>
         </div>
-        <p>“静态”操作就这些：因为 NetHack 是回合制游戏，你可以随时查看这些信息并在进行动作前充分思考。</p>
-        <p>那么接下来的任务就是活下去了。毕竟，游戏的目的是在地牢深处找到炎多的护符（Amulet of Yendor）并将其献给自己的神，而不是原地不动。</p>
-        <h2 id="游戏开始">游戏开始</h2>
-        <p>首先是<strong>移动</strong>。推荐的移动方式是和 Vim 操作类似的 8 个方向的 <code class="language-plaintext highlighter-rouge">hjklyubn</code>，当然新手用四个方向键也未尝不可。</p>
-        <blockquote>
-          <p>事实上，用方向键移动 as good as dead。按下一个移动键不松手也是常见的死亡原因。</p>
-          <p>可以用大写的 <code class="language-plaintext highlighter-rouge">HJKLYUBN</code> 向一个方向长距离移动</p>
-        </blockquote>
-        <p>比如说，按下箭头或 <code class="language-plaintext highlighter-rouge">j</code> 移动到门边上。移动途中，<code class="language-plaintext highlighter-rouge">x</code> 被猫杀死了。</p>
-        <blockquote>
-          <p><code class="language-plaintext highlighter-rouge">Rex misses the grid bug. Rex bites the grid bug.</code></p>
-          <p><code class="language-plaintext highlighter-rouge">Rex bites the grid bug. The grid bug is killed!</code></p>
-        </blockquote>
-        <blockquote>
-          <p>按 <code class="language-plaintext highlighter-rouge">Ctrl-P</code> 可以查看之前的消息。</p>
-        </blockquote>
-        <blockquote>
-          <p>前期，宠物比你战斗力强也是常有的事</p>
-        </blockquote>
-        <div class="language-plaintext highlighter-rouge">
-          <div class="highlight">
-            <pre class="highlight"><code> -----
+      </div>
+      <p>“静态”操作就这些：因为 NetHack 是回合制游戏，你可以随时查看这些信息并在进行动作前充分思考。</p>
+      <p>那么接下来的任务就是活下去了。毕竟，游戏的目的是在地牢深处找到炎多的护符（Amulet of Yendor）并将其献给自己的神，而不是原地不动。</p>
+      <h2 id="游戏开始">游戏开始</h2>
+      <p>首先是<strong>移动</strong>。推荐的移动方式是和 Vim 操作类似的 8 个方向的 <code class="language-plaintext highlighter-rouge">hjklyubn</code>，当然新手用四个方向键也未尝不可。</p>
+      <blockquote>
+        <p>事实上，用方向键移动 as good as dead。按下一个移动键不松手也是常见的死亡原因。</p>
+        <p>可以用大写的 <code class="language-plaintext highlighter-rouge">HJKLYUBN</code> 向一个方向长距离移动</p>
+      </blockquote>
+      <p>比如说，按下箭头或 <code class="language-plaintext highlighter-rouge">j</code> 移动到门边上。移动途中，<code class="language-plaintext highlighter-rouge">x</code> 被猫杀死了。</p>
+      <blockquote>
+        <p><code class="language-plaintext highlighter-rouge">Rex misses the grid bug. Rex bites the grid bug.</code></p>
+        <p><code class="language-plaintext highlighter-rouge">Rex bites the grid bug. The grid bug is killed!</code></p>
+      </blockquote>
+      <blockquote>
+        <p>按 <code class="language-plaintext highlighter-rouge">Ctrl-P</code> 可以查看之前的消息。</p>
+      </blockquote>
+      <blockquote>
+        <p>前期，宠物比你战斗力强也是常有的事</p>
+      </blockquote>
+      <div class="language-plaintext highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code> -----
  |..&lt;|
  |..(|
  |..f|
@@ -226,12 +480,12 @@ Dlvl:1 $:0 HP:12(12) Pw:7(7) AC:9 Xp:1
  |..@+
  -----
 </code></pre>
-          </div>
         </div>
-        <p><strong>开门</strong>才能出去。按 <code class="language-plaintext highlighter-rouge">ol</code> 开右侧（<code class="language-plaintext highlighter-rouge">l</code> 移动方向）的门。之后就可以向右探险了。沿着过道（<code class="language-plaintext highlighter-rouge">#</code>）走了一段，发现没有路了。</p>
-        <div class="language-plaintext highlighter-rouge">
-          <div class="highlight">
-            <pre class="highlight"><code>-----
+      </div>
+      <p><strong>开门</strong>才能出去。按 <code class="language-plaintext highlighter-rouge">ol</code> 开右侧（<code class="language-plaintext highlighter-rouge">l</code> 移动方向）的门。之后就可以向右探险了。沿着过道（<code class="language-plaintext highlighter-rouge">#</code>）走了一段，发现没有路了。</p>
+      <div class="language-plaintext highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code>-----
 |..&lt;|
 |..(|
 |...|
@@ -244,12 +498,12 @@ Dlvl:1 $:0 HP:12(12) Pw:7(7) AC:9 Xp:1
        ###f
           @
 </code></pre>
-          </div>
         </div>
-        <p>这也是常见操作：需要搜索以下才能找到路。按 <code class="language-plaintext highlighter-rouge">s</code> <strong>搜索</strong>，或者更常用的，按 <code class="language-plaintext highlighter-rouge">10s</code> 搜索 10 次。如果没有路就再来 10 次。发现了隐藏的门，于是继续开门走进屋子。</p>
-        <div class="language-plaintext highlighter-rouge">
-          <div class="highlight">
-            <pre class="highlight"><code>You find a hidden door.
+      </div>
+      <p>这也是常见操作：需要搜索以下才能找到路。按 <code class="language-plaintext highlighter-rouge">s</code> <strong>搜索</strong>，或者更常用的，按 <code class="language-plaintext highlighter-rouge">10s</code> 搜索 10 次。如果没有路就再来 10 次。发现了隐藏的门，于是继续开门走进屋子。</p>
+      <div class="language-plaintext highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code>You find a hidden door.
 
 
 
@@ -268,15 +522,15 @@ Dlvl:1 $:0 HP:12(12) Pw:7(7) AC:9 Xp:1
          ###f
             @+
 </code></pre>
-          </div>
         </div>
-        <p>屋子里有一个 <code class="language-plaintext highlighter-rouge">[</code> ，走到物品上方并按 <code class="language-plaintext highlighter-rouge">,</code> <strong>捡起</strong>。<code class="language-plaintext highlighter-rouge">p - a splint mail.</code>。这是一件盔甲，按 <code class="language-plaintext highlighter-rouge">w</code> <strong>穿戴</strong>，再按 <code class="language-plaintext highlighter-rouge">？</code> 选择可穿戴的物品，<code class="language-plaintext highlighter-rouge">p</code> 选择新捡到的盔甲。<code class="language-plaintext highlighter-rouge">You cannot wear armor over a cloak.</code>，先把外套<strong>脱下</strong>。按 <code class="language-plaintext highlighter-rouge">T</code>，看提示已经脱掉了，再穿盔甲，然后再次 <code class="language-plaintext highlighter-rouge">W</code> 穿上外套。这是可以看见 AC 降为 3，盔甲不错。</p>
-        <blockquote>
-          <p>我们的运气不错。如果发现 <code class="language-plaintext highlighter-rouge">AC</code> 上升，多半是盔甲被诅咒（cursed），并且被诅咒的兵器和物品无法脱下。</p>
-        </blockquote>
-        <div class="language-plaintext highlighter-rouge">
-          <div class="highlight">
-            <pre class="highlight"><code>                                             ----------------
+      </div>
+      <p>屋子里有一个 <code class="language-plaintext highlighter-rouge">[</code> ，走到物品上方并按 <code class="language-plaintext highlighter-rouge">,</code> <strong>捡起</strong>。<code class="language-plaintext highlighter-rouge">p - a splint mail.</code>。这是一件盔甲，按 <code class="language-plaintext highlighter-rouge">w</code> <strong>穿戴</strong>，再按 <code class="language-plaintext highlighter-rouge">？</code> 选择可穿戴的物品，<code class="language-plaintext highlighter-rouge">p</code> 选择新捡到的盔甲。<code class="language-plaintext highlighter-rouge">You cannot wear armor over a cloak.</code>，先把外套<strong>脱下</strong>。按 <code class="language-plaintext highlighter-rouge">T</code>，看提示已经脱掉了，再穿盔甲，然后再次 <code class="language-plaintext highlighter-rouge">W</code> 穿上外套。这是可以看见 AC 降为 3，盔甲不错。</p>
+      <blockquote>
+        <p>我们的运气不错。如果发现 <code class="language-plaintext highlighter-rouge">AC</code> 上升，多半是盔甲被诅咒（cursed），并且被诅咒的兵器和物品无法脱下。</p>
+      </blockquote>
+      <div class="language-plaintext highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code>                                             ----------------
                                             #@d.............|
   -----                                     f|...............           ....
   |..&lt;|                                  #### ..............|
@@ -297,21 +551,21 @@ Dlvl:1 $:0 HP:12(12) Pw:7(7) AC:9 Xp:1
 Petergu the Evoker             St:9 Dx:8 Co:16 In:17 Wi:14 Ch:11 Neutral
 Dlvl:1 $:0 HP:10(12) Pw:7(7) AC:3 Xp:1
 </code></pre>
-          </div>
         </div>
-        <p>继续探险，开门看见一只豺狼。直接按向右移动的键（<code class="language-plaintext highlighter-rouge">l</code>）<strong>攻击</strong>它。几步之后，狼被打死，你也只剩 8 HP 了。</p>
-        <blockquote>
-          <p>当然，见到怪不掂量一下自己的能力就直接攻击并不是好的策略。</p>
-        </blockquote>
-        <blockquote>
-          <p>比如如果正面击打一个冰冻之眼（Frozen eye），你会被冻住若干回合，然后被旁边路过的小怪打死。</p>
-        </blockquote>
-        <blockquote>
-          <p>可以按 <code class="language-plaintext highlighter-rouge">.</code> 原地休息，这会缓慢回复失去的 HP。</p>
-        </blockquote>
-        <div class="language-plaintext highlighter-rouge">
-          <div class="highlight">
-            <pre class="highlight"><code>You kill the jackal!  You hear water falling on coins.
+      </div>
+      <p>继续探险，开门看见一只豺狼。直接按向右移动的键（<code class="language-plaintext highlighter-rouge">l</code>）<strong>攻击</strong>它。几步之后，狼被打死，你也只剩 8 HP 了。</p>
+      <blockquote>
+        <p>当然，见到怪不掂量一下自己的能力就直接攻击并不是好的策略。</p>
+      </blockquote>
+      <blockquote>
+        <p>比如如果正面击打一个冰冻之眼（Frozen eye），你会被冻住若干回合，然后被旁边路过的小怪打死。</p>
+      </blockquote>
+      <blockquote>
+        <p>可以按 <code class="language-plaintext highlighter-rouge">.</code> 原地休息，这会缓慢回复失去的 HP。</p>
+      </blockquote>
+      <div class="language-plaintext highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code>You kill the jackal!  You hear water falling on coins.
 
 
 
@@ -336,29 +590,29 @@ Dlvl:1 $:0 HP:10(12) Pw:7(7) AC:3 Xp:1
 Petergu the Evoker             St:9 Dx:8 Co:16 In:17 Wi:14 Ch:11 Neutral
 Dlvl:1 $:0 HP:8(12) Pw:7(7) AC:3 Xp:1
 </code></pre>
-          </div>
         </div>
-        <p>可以看到提示狼被打死。同时你听到一些声音。</p>
-        <blockquote>
-          <p><code class="language-plaintext highlighter-rouge">You hear water falling on coins.</code> 的意思是本层有喷泉（中间屋子里的 <code class="language-plaintext highlighter-rouge">{</code>）</p>
-        </blockquote>
-        <p>地上的 <code class="language-plaintext highlighter-rouge">%</code> 是狼的尸体。杀死怪物后你多半希望<strong>吃掉</strong>尸体，否则没有食物会饿死。移动到 <code class="language-plaintext highlighter-rouge">%</code> 上方并按 <code class="language-plaintext highlighter-rouge">e</code>，选择 <code class="language-plaintext highlighter-rouge">y</code> 吃掉。</p>
-        <blockquote>
-          <p><code class="language-plaintext highlighter-rouge">You see here a jackal corpse.</code></p>
-          <p><code class="language-plaintext highlighter-rouge">There is a jackal corpse here; eat it? [ynq] (n) y</code></p>
-          <p><code class="language-plaintext highlighter-rouge">This jackal corpse tastes okay. You finish eating the jackal corpse.</code></p>
-        </blockquote>
-        <blockquote>
-          <p>当然，不是什么都能吃。有些怪的尸体会让你中毒。如果因此呕吐，你会变得更饿。然而有些尸体可以让你获得某些能力（比如抵抗中毒、抵抗寒冷等）。如果触摸鸡头蛇怪（cockatrace）的尸体，会变成石头。</p>
-        </blockquote>
-        <p>这时，可以看到我们吃饱了，变得 Satiated。</p>
-        <blockquote>
-          <p>这时继续大量吃东西可能会被噎死。</p>
-        </blockquote>
-        <p>同时发现，有一扇锁着的门。我们目前没有撬锁工具，只能<strong>踢</strong>开。按 <code class="language-plaintext highlighter-rouge">Ctrl-D</code> 然后方向 <code class="language-plaintext highlighter-rouge">h</code> 踢门几次。</p>
-        <div class="language-plaintext highlighter-rouge">
-          <div class="highlight">
-            <pre class="highlight"><code>This door is locked.
+      </div>
+      <p>可以看到提示狼被打死。同时你听到一些声音。</p>
+      <blockquote>
+        <p><code class="language-plaintext highlighter-rouge">You hear water falling on coins.</code> 的意思是本层有喷泉（中间屋子里的 <code class="language-plaintext highlighter-rouge">{</code>）</p>
+      </blockquote>
+      <p>地上的 <code class="language-plaintext highlighter-rouge">%</code> 是狼的尸体。杀死怪物后你多半希望<strong>吃掉</strong>尸体，否则没有食物会饿死。移动到 <code class="language-plaintext highlighter-rouge">%</code> 上方并按 <code class="language-plaintext highlighter-rouge">e</code>，选择 <code class="language-plaintext highlighter-rouge">y</code> 吃掉。</p>
+      <blockquote>
+        <p><code class="language-plaintext highlighter-rouge">You see here a jackal corpse.</code></p>
+        <p><code class="language-plaintext highlighter-rouge">There is a jackal corpse here; eat it? [ynq] (n) y</code></p>
+        <p><code class="language-plaintext highlighter-rouge">This jackal corpse tastes okay. You finish eating the jackal corpse.</code></p>
+      </blockquote>
+      <blockquote>
+        <p>当然，不是什么都能吃。有些怪的尸体会让你中毒。如果因此呕吐，你会变得更饿。然而有些尸体可以让你获得某些能力（比如抵抗中毒、抵抗寒冷等）。如果触摸鸡头蛇怪（cockatrace）的尸体，会变成石头。</p>
+      </blockquote>
+      <p>这时，可以看到我们吃饱了，变得 Satiated。</p>
+      <blockquote>
+        <p>这时继续大量吃东西可能会被噎死。</p>
+      </blockquote>
+      <p>同时发现，有一扇锁着的门。我们目前没有撬锁工具，只能<strong>踢</strong>开。按 <code class="language-plaintext highlighter-rouge">Ctrl-D</code> 然后方向 <code class="language-plaintext highlighter-rouge">h</code> 踢门几次。</p>
+      <div class="language-plaintext highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code>This door is locked.
 
 
 
@@ -383,63 +637,63 @@ Dlvl:1 $:0 HP:8(12) Pw:7(7) AC:3 Xp:1
 Petergu the Evoker             St:9 Dx:8 Co:16 In:17 Wi:14 Ch:11 Neutral
 Dlvl:1 $:0 HP:9(12) Pw:7(7) AC:3 Xp:1
 </code></pre>
-          </div>
         </div>
-        <p>我们踢门多次门才打开，中途来了两只狼，第一只被猫一击咬死，第二只也被猫一击咬死。</p>
-        <blockquote>
-          <p><code class="language-plaintext highlighter-rouge">This door is locked.</code></p>
-          <p><code class="language-plaintext highlighter-rouge">WHAMMM!!! Rex misses the jackal.</code></p>
-          <p><code class="language-plaintext highlighter-rouge">WHAMMM!!! Rex bites the jackal. The jackal is killed!</code></p>
-          <p><code class="language-plaintext highlighter-rouge">WHAMMM!!!</code></p>
-          <p><code class="language-plaintext highlighter-rouge">WHAMMM!!!</code></p>
-          <p><code class="language-plaintext highlighter-rouge">WHAMMM!!!</code></p>
-          <p><code class="language-plaintext highlighter-rouge">As you kick the door, it crashes open! The jackal bites!</code></p>
-          <p><code class="language-plaintext highlighter-rouge">Rex misses the jackal.</code></p>
-          <p><code class="language-plaintext highlighter-rouge">You miss the jackal. The jackal bites! Rex bites the jackal.</code></p>
-          <p><code class="language-plaintext highlighter-rouge">The jackal is killed!</code></p>
-        </blockquote>
-        <blockquote>
-          <p>注意到图右边部分显示的房间了吗？因为从隔壁房间的门口“路过”，视野所限只能看到屋内的一部分。字符界面不代表没有光照的处理。</p>
-        </blockquote>
-        <p>一层探险结束后，捡到了一些其他护身符和戒指等。因为捡东西过多，处于 <code class="language-plaintext highlighter-rouge">Burdened</code> 状态。走到 <code class="language-plaintext highlighter-rouge">&gt;</code> 的位置，按 <code class="language-plaintext highlighter-rouge">&gt;</code> <strong>下行</strong>到下一层地牢。</p>
-        <blockquote>
-          <p>负重是非常不好的，但本人就是不想扔东西。</p>
-        </blockquote>
-        <blockquote>
-          <p><code class="language-plaintext highlighter-rouge">You fall down the stairs.</code></p>
-        </blockquote>
-        <blockquote>
-          <p>下楼的时候宠物如果在你身边一格以内，会和你一起下去。否则会被留在原地，并逐渐野化</p>
-        </blockquote>
-        <p>这时候，背包里已经有一些不知道是什么的装备了。</p>
-        <blockquote>
-          <p><code class="language-plaintext highlighter-rouge">r - a sapphire ring</code></p>
-          <p><code class="language-plaintext highlighter-rouge">t - a pyramidal amulet</code></p>
-        </blockquote>
-        <p><strong>鉴定物品</strong>（Identification）是 NetHack 中重要而困难的。最基础的方法就是亲自体验：<code class="language-plaintext highlighter-rouge">P</code> - <code class="language-plaintext highlighter-rouge">?</code> - <code class="language-plaintext highlighter-rouge">t</code> 戴上护身符。好像没什么变化，仍然不知道是什么。按 <code class="language-plaintext highlighter-rouge">R</code> 移除。戒指也一样，什么也没鉴定成。只能作罢。</p>
-        <blockquote>
-          <p>鉴定物品的高级技巧有很多，比如在商店观察卖出价格。</p>
-        </blockquote>
-        <blockquote>
-          <p>NetHack 中每种戒指、护身符和卷轴有不同的外观。每一局游戏中外观和功能的对应保持不变，但不同局游戏的这种对应是随机的。这一点并不是 trivial 的，因为，比如说，戒指的材质（金属、石头等）不一样，从而决定了每一局中玩家能通过变身（polymorph）并吃掉戒指获得何种永久属性。</p>
-        </blockquote>
-        <p>继续同样的探险。看到商店，但我们没有钱，只好离开。</p>
-        <blockquote>
-          <p><code class="language-plaintext highlighter-rouge">"Hello, petergu! Welcome to Akhalataki's used armor dealership!"</code></p>
-        </blockquote>
-        <blockquote>
-          <p>攻击商店老板是非常不明智的行为。但是，如果店内有死亡魔杖（Wand of death），可以用其将老板杀死并获得所有的物品。如果有许愿魔杖（Wand of wishing），可以许愿得到死亡魔杖。这二者的基础价格都是 1200，很容易被认出。</p>
-        </blockquote>
-        <blockquote>
-          <p>如果你是游客（Tourist），并且穿着夏威夷 T 恤（Hawaiian shirt），会被商店老板加价“宰客”。</p>
-        </blockquote>
-        <blockquote>
-          <p>宠物可以捡起商店中的物品并在店门外放下—— shoplifting。</p>
-          <p><code class="language-plaintext highlighter-rouge">You hear someone cursing shoplifters.</code></p>
-        </blockquote>
-        <div class="language-plaintext highlighter-rouge">
-          <div class="highlight">
-            <pre class="highlight"><code>         #
+      </div>
+      <p>我们踢门多次门才打开，中途来了两只狼，第一只被猫一击咬死，第二只也被猫一击咬死。</p>
+      <blockquote>
+        <p><code class="language-plaintext highlighter-rouge">This door is locked.</code></p>
+        <p><code class="language-plaintext highlighter-rouge">WHAMMM!!! Rex misses the jackal.</code></p>
+        <p><code class="language-plaintext highlighter-rouge">WHAMMM!!! Rex bites the jackal. The jackal is killed!</code></p>
+        <p><code class="language-plaintext highlighter-rouge">WHAMMM!!!</code></p>
+        <p><code class="language-plaintext highlighter-rouge">WHAMMM!!!</code></p>
+        <p><code class="language-plaintext highlighter-rouge">WHAMMM!!!</code></p>
+        <p><code class="language-plaintext highlighter-rouge">As you kick the door, it crashes open! The jackal bites!</code></p>
+        <p><code class="language-plaintext highlighter-rouge">Rex misses the jackal.</code></p>
+        <p><code class="language-plaintext highlighter-rouge">You miss the jackal. The jackal bites! Rex bites the jackal.</code></p>
+        <p><code class="language-plaintext highlighter-rouge">The jackal is killed!</code></p>
+      </blockquote>
+      <blockquote>
+        <p>注意到图右边部分显示的房间了吗？因为从隔壁房间的门口“路过”，视野所限只能看到屋内的一部分。字符界面不代表没有光照的处理。</p>
+      </blockquote>
+      <p>一层探险结束后，捡到了一些其他护身符和戒指等。因为捡东西过多，处于 <code class="language-plaintext highlighter-rouge">Burdened</code> 状态。走到 <code class="language-plaintext highlighter-rouge">&gt;</code> 的位置，按 <code class="language-plaintext highlighter-rouge">&gt;</code> <strong>下行</strong>到下一层地牢。</p>
+      <blockquote>
+        <p>负重是非常不好的，但本人就是不想扔东西。</p>
+      </blockquote>
+      <blockquote>
+        <p><code class="language-plaintext highlighter-rouge">You fall down the stairs.</code></p>
+      </blockquote>
+      <blockquote>
+        <p>下楼的时候宠物如果在你身边一格以内，会和你一起下去。否则会被留在原地，并逐渐野化</p>
+      </blockquote>
+      <p>这时候，背包里已经有一些不知道是什么的装备了。</p>
+      <blockquote>
+        <p><code class="language-plaintext highlighter-rouge">r - a sapphire ring</code></p>
+        <p><code class="language-plaintext highlighter-rouge">t - a pyramidal amulet</code></p>
+      </blockquote>
+      <p><strong>鉴定物品</strong>（Identification）是 NetHack 中重要而困难的。最基础的方法就是亲自体验：<code class="language-plaintext highlighter-rouge">P</code> - <code class="language-plaintext highlighter-rouge">?</code> - <code class="language-plaintext highlighter-rouge">t</code> 戴上护身符。好像没什么变化，仍然不知道是什么。按 <code class="language-plaintext highlighter-rouge">R</code> 移除。戒指也一样，什么也没鉴定成。只能作罢。</p>
+      <blockquote>
+        <p>鉴定物品的高级技巧有很多，比如在商店观察卖出价格。</p>
+      </blockquote>
+      <blockquote>
+        <p>NetHack 中每种戒指、护身符和卷轴有不同的外观。每一局游戏中外观和功能的对应保持不变，但不同局游戏的这种对应是随机的。这一点并不是 trivial 的，因为，比如说，戒指的材质（金属、石头等）不一样，从而决定了每一局中玩家能通过变身（polymorph）并吃掉戒指获得何种永久属性。</p>
+      </blockquote>
+      <p>继续同样的探险。看到商店，但我们没有钱，只好离开。</p>
+      <blockquote>
+        <p><code class="language-plaintext highlighter-rouge">"Hello, petergu! Welcome to Akhalataki's used armor dealership!"</code></p>
+      </blockquote>
+      <blockquote>
+        <p>攻击商店老板是非常不明智的行为。但是，如果店内有死亡魔杖（Wand of death），可以用其将老板杀死并获得所有的物品。如果有许愿魔杖（Wand of wishing），可以许愿得到死亡魔杖。这二者的基础价格都是 1200，很容易被认出。</p>
+      </blockquote>
+      <blockquote>
+        <p>如果你是游客（Tourist），并且穿着夏威夷 T 恤（Hawaiian shirt），会被商店老板加价“宰客”。</p>
+      </blockquote>
+      <blockquote>
+        <p>宠物可以捡起商店中的物品并在店门外放下—— shoplifting。</p>
+        <p><code class="language-plaintext highlighter-rouge">You hear someone cursing shoplifters.</code></p>
+      </blockquote>
+      <div class="language-plaintext highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code>         #
         ##
         #
         #
@@ -450,15 +704,15 @@ Dlvl:1 $:0 HP:9(12) Pw:7(7) AC:3 Xp:1
 |))[[.[[[[|
 -----------
 </code></pre>
-          </div>
         </div>
-        <p>捡到并戴上一枚红宝石戒指后，发现这是被诅咒的——摘不下来了。然而还不知道它是干什么的，但多半不是什么好东西。</p>
-        <blockquote>
-          <p><code class="language-plaintext highlighter-rouge">E - a cursed ruby ring (on right hand)</code></p>
-        </blockquote>
-        <div class="language-plaintext highlighter-rouge">
-          <div class="highlight">
-            <pre class="highlight"><code>You see here a blindfold.  You faint from lack of food.--More--
+      </div>
+      <p>捡到并戴上一枚红宝石戒指后，发现这是被诅咒的——摘不下来了。然而还不知道它是干什么的，但多半不是什么好东西。</p>
+      <blockquote>
+        <p><code class="language-plaintext highlighter-rouge">E - a cursed ruby ring (on right hand)</code></p>
+      </blockquote>
+      <div class="language-plaintext highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code>You see here a blindfold.  You faint from lack of food.--More--
 
                                        ------
                                        |....|
@@ -483,35 +737,35 @@ Dlvl:1 $:0 HP:9(12) Pw:7(7) AC:3 Xp:1
 Petergu the Evoker             St:8 Dx:8 Co:16 In:17 Wi:14 Ch:11 Neutral
 Dlvl:3 $:28 HP:15(15) Pw:23(23) AC:1 Xp:2 Fainted Burdened Deaf
 </code></pre>
-          </div>
         </div>
-        <p>不久之后，因饥饿晕倒。戴上的戒指多半是 Ring of hunger。按 <code class="language-plaintext highlighter-rouge">e</code> 吃一个鸡蛋，回过神来。正好背包里有解除诅咒的卷轴，读一个：按 <code class="language-plaintext highlighter-rouge">r</code> - <code class="language-plaintext highlighter-rouge">?</code> - <code class="language-plaintext highlighter-rouge">k</code>。</p>
-        <blockquote>
-          <p><code class="language-plaintext highlighter-rouge">As you read the scroll, it disappears.--More--</code></p>
-          <p><code class="language-plaintext highlighter-rouge">You feel like someone is helping you. Rex misses the lichen.--More--</code></p>
-        </blockquote>
-        <p>然后，戒指就可以摘下来了。</p>
-        <p>又饿了，吃个鸡蛋结果变质了。</p>
-        <blockquote>
-          <p><code class="language-plaintext highlighter-rouge">Blecch! Rotten food! The world spins and goes dark.</code></p>
-        </blockquote>
-        <p>又走了一阵，没有吃的了（因为尸体都让猫吃了），已经晕倒，怎么办？只有神能救我们了。</p>
-        <blockquote>
-          <p><code class="language-plaintext highlighter-rouge">Wizard Needs Food, Badly!</code></p>
-        </blockquote>
-        <p><code class="language-plaintext highlighter-rouge">#pray</code></p>
-        <blockquote>
-          <p><code class="language-plaintext highlighter-rouge">You begin praying to Thoth. You are surrounded by a shimmering light.--More--</code></p>
-          <p><code class="language-plaintext highlighter-rouge">You finish your prayer. You feel that Thoth is well-pleased.--More--</code></p>
-          <p><code class="language-plaintext highlighter-rouge">Your stomach feels content.</code></p>
-        </blockquote>
-        <p><strong>祈祷</strong>是非常强大的——看，这就饱了。但是如果频繁祈祷，神会对我们生气。</p>
-        <blockquote>
-          <p>原地祈祷三次，就会被雷劈死。</p>
-        </blockquote>
-        <div class="language-plaintext highlighter-rouge">
-          <div class="highlight">
-            <pre class="highlight"><code>
+      </div>
+      <p>不久之后，因饥饿晕倒。戴上的戒指多半是 Ring of hunger。按 <code class="language-plaintext highlighter-rouge">e</code> 吃一个鸡蛋，回过神来。正好背包里有解除诅咒的卷轴，读一个：按 <code class="language-plaintext highlighter-rouge">r</code> - <code class="language-plaintext highlighter-rouge">?</code> - <code class="language-plaintext highlighter-rouge">k</code>。</p>
+      <blockquote>
+        <p><code class="language-plaintext highlighter-rouge">As you read the scroll, it disappears.--More--</code></p>
+        <p><code class="language-plaintext highlighter-rouge">You feel like someone is helping you. Rex misses the lichen.--More--</code></p>
+      </blockquote>
+      <p>然后，戒指就可以摘下来了。</p>
+      <p>又饿了，吃个鸡蛋结果变质了。</p>
+      <blockquote>
+        <p><code class="language-plaintext highlighter-rouge">Blecch! Rotten food! The world spins and goes dark.</code></p>
+      </blockquote>
+      <p>又走了一阵，没有吃的了（因为尸体都让猫吃了），已经晕倒，怎么办？只有神能救我们了。</p>
+      <blockquote>
+        <p><code class="language-plaintext highlighter-rouge">Wizard Needs Food, Badly!</code></p>
+      </blockquote>
+      <p><code class="language-plaintext highlighter-rouge">#pray</code></p>
+      <blockquote>
+        <p><code class="language-plaintext highlighter-rouge">You begin praying to Thoth. You are surrounded by a shimmering light.--More--</code></p>
+        <p><code class="language-plaintext highlighter-rouge">You finish your prayer. You feel that Thoth is well-pleased.--More--</code></p>
+        <p><code class="language-plaintext highlighter-rouge">Your stomach feels content.</code></p>
+      </blockquote>
+      <p><strong>祈祷</strong>是非常强大的——看，这就饱了。但是如果频繁祈祷，神会对我们生气。</p>
+      <blockquote>
+        <p>原地祈祷三次，就会被雷劈死。</p>
+      </blockquote>
+      <div class="language-plaintext highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code>
 
                                                  --------
                             ---------------######........#
@@ -536,18 +790,18 @@ Dlvl:3 $:28 HP:15(15) Pw:23(23) AC:1 Xp:2 Fainted Burdened Deaf
 Petergu the Evoker             St:9 Dx:8 Co:16 In:17 Wi:14 Ch:11 Neutral
 Dlvl:4 $:62 HP:15(15) Pw:23(23) AC:1 Xp:2 Burdened
 </code></pre>
-          </div>
         </div>
-        <p>发现，本层有两个下楼梯。这是因为有一个是通往支线任务地精矿洞（Gnomish Mines）的。这个支线较难，如果不是女武神等前期强角色基本不要擅自进入。支线地图是这种风格，周围都是地精 <code class="language-plaintext highlighter-rouge">G</code>。稍微进去一下，立刻被围攻。幸亏猫比较强打死几只怪。还剩 7 HP 逃了出来。当然，矿洞里装备也很多，我们换了双鞋子，现在 <code class="language-plaintext highlighter-rouge">AC</code> 是 0，而代价是沉重的盔甲和行动不便。</p>
-        <blockquote>
-          <p><code class="language-plaintext highlighter-rouge">b - an uncursed +0 cloak of magic resistance (being worn)</code></p>
-          <p><code class="language-plaintext highlighter-rouge">p - a +0 splint mail (being worn)</code></p>
-          <p><code class="language-plaintext highlighter-rouge">B - a +0 iron skull cap (being worn)</code></p>
-          <p><code class="language-plaintext highlighter-rouge">I - a +0 pair of hard shoes (being worn)</code></p>
-        </blockquote>
-        <div class="language-plaintext highlighter-rouge">
-          <div class="highlight">
-            <pre class="highlight"><code>   ---
+      </div>
+      <p>发现，本层有两个下楼梯。这是因为有一个是通往支线任务地精矿洞（Gnomish Mines）的。这个支线较难，如果不是女武神等前期强角色基本不要擅自进入。支线地图是这种风格，周围都是地精 <code class="language-plaintext highlighter-rouge">G</code>。稍微进去一下，立刻被围攻。幸亏猫比较强打死几只怪。还剩 7 HP 逃了出来。当然，矿洞里装备也很多，我们换了双鞋子，现在 <code class="language-plaintext highlighter-rouge">AC</code> 是 0，而代价是沉重的盔甲和行动不便。</p>
+      <blockquote>
+        <p><code class="language-plaintext highlighter-rouge">b - an uncursed +0 cloak of magic resistance (being worn)</code></p>
+        <p><code class="language-plaintext highlighter-rouge">p - a +0 splint mail (being worn)</code></p>
+        <p><code class="language-plaintext highlighter-rouge">B - a +0 iron skull cap (being worn)</code></p>
+        <p><code class="language-plaintext highlighter-rouge">I - a +0 pair of hard shoes (being worn)</code></p>
+      </blockquote>
+      <div class="language-plaintext highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code>   ---
    |..--
  ---....- -
  |.......|.
@@ -565,18 +819,18 @@ Dlvl:4 $:62 HP:15(15) Pw:23(23) AC:1 Xp:2 Burdened
       ..*.G.....
      ------------
 </code></pre>
-          </div>
         </div>
-        <p>下一层看到一个箱子。可以 <code class="language-plaintext highlighter-rouge">#loot</code> <strong>抢劫</strong>。但箱子上锁了，所以可以踢几脚把锁打开。</p>
-        <blockquote>
-          <p>这么做的代价是箱内的药水和易碎的魔杖会损坏。</p>
-        </blockquote>
-        <blockquote>
-          <p><code class="language-plaintext highlighter-rouge">THUD! You break open the lock!</code></p>
-        </blockquote>
-        <div class="language-plaintext highlighter-rouge">
-          <div class="highlight">
-            <pre class="highlight"><code>You see here a large box.
+      </div>
+      <p>下一层看到一个箱子。可以 <code class="language-plaintext highlighter-rouge">#loot</code> <strong>抢劫</strong>。但箱子上锁了，所以可以踢几脚把锁打开。</p>
+      <blockquote>
+        <p>这么做的代价是箱内的药水和易碎的魔杖会损坏。</p>
+      </blockquote>
+      <blockquote>
+        <p><code class="language-plaintext highlighter-rouge">THUD! You break open the lock!</code></p>
+      </blockquote>
+      <div class="language-plaintext highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code>You see here a large box.
 
 
                                                            -----
@@ -601,16 +855,16 @@ Dlvl:4 $:62 HP:15(15) Pw:23(23) AC:1 Xp:2 Burdened
 Petergu the Conjurer           St:9 Dx:8 Co:16 In:17 Wi:14 Ch:11 Neutral
 Dlvl:5 $:75 HP:25(25) Pw:31(31) AC:0 Xp:3 Burdened
 </code></pre>
-          </div>
         </div>
-        <p>然而箱子是空的。</p>
-        <blockquote>
-          <p>你也可以往箱子里放一些东西。</p>
-        </blockquote>
-        <p>下一层看到了一些类似宫殿的东西。中间有先知，可以花 50 块钱向它咨询（<code class="language-plaintext highlighter-rouge">#chat</code>）。</p>
-        <div class="language-plaintext highlighter-rouge">
-          <div class="highlight">
-            <pre class="highlight"><code>You see here a statue of a plains centaur.
+      </div>
+      <p>然而箱子是空的。</p>
+      <blockquote>
+        <p>你也可以往箱子里放一些东西。</p>
+      </blockquote>
+      <p>下一层看到了一些类似宫殿的东西。中间有先知，可以花 50 块钱向它咨询（<code class="language-plaintext highlighter-rouge">#chat</code>）。</p>
+      <div class="language-plaintext highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code>You see here a statue of a plains centaur.
 
 
                                                    -------
@@ -635,12 +889,12 @@ Dlvl:5 $:75 HP:25(25) Pw:31(31) AC:0 Xp:3 Burdened
 Petergu the Conjurer           St:9 Dx:8 Co:16 In:17 Wi:14 Ch:11 Neutral
 Dlvl:6 $:75 HP:25(25) Pw:31(31) AC:0 Xp:3 Burdened
 </code></pre>
-          </div>
         </div>
-        <p>下一层，遇到一只巨大的蝙蝠（Giant bat），被咬到残血后我们逃跑，但是它追了过来，狭路相逢。</p>
-        <div class="language-plaintext highlighter-rouge">
-          <div class="highlight">
-            <pre class="highlight"><code>The giant bat bites!--More--
+      </div>
+      <p>下一层，遇到一只巨大的蝙蝠（Giant bat），被咬到残血后我们逃跑，但是它追了过来，狭路相逢。</p>
+      <div class="language-plaintext highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code>The giant bat bites!--More--
 
                                           -----                       -----
                                           |...|                #######-...|
@@ -665,17 +919,17 @@ Dlvl:6 $:75 HP:25(25) Pw:31(31) AC:0 Xp:3 Burdened
 Petergu the Conjurer           St:9 Dx:8 Co:16 In:17 Wi:14 Ch:11 Neutral
 Dlvl:7 $:88 HP:5(29) Pw:43(43) AC:0 Xp:4 Burdened
 </code></pre>
-          </div>
         </div>
-        <blockquote>
-          <p><code class="language-plaintext highlighter-rouge">You die...--More--</code></p>
-          <p><code class="language-plaintext highlighter-rouge">Do you want your possessions identified? [ynq] (n) </code></p>
-        </blockquote>
-        <p>于是毙命此地。</p>
-        <p>死后游戏会问你要不要看看你的东西到底是什么。你可以看一眼。</p>
-        <div class="language-plaintext highlighter-rouge">
-          <div class="highlight">
-            <pre class="highlight"><code> L - 3 uncursed scrolls of blank paper
+      </div>
+      <blockquote>
+        <p><code class="language-plaintext highlighter-rouge">You die...--More--</code></p>
+        <p><code class="language-plaintext highlighter-rouge">Do you want your possessions identified? [ynq] (n) </code></p>
+      </blockquote>
+      <p>于是毙命此地。</p>
+      <p>死后游戏会问你要不要看看你的东西到底是什么。你可以看一眼。</p>
+      <div class="language-plaintext highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code> L - 3 uncursed scrolls of blank paper
  R - an uncursed scroll of fire
  Spellbooks
  l - a blessed spellbook of force bolt
@@ -700,12 +954,12 @@ Dlvl:7 $:88 HP:5(29) Pw:43(43) AC:0 Xp:4 Burdened
  n - a magic marker (0:55)
  (2 of 3)
 </code></pre>
-          </div>
         </div>
-        <p>通常，如果看了，就会发现背包有至少一件能避免死亡的物品（比如残血之后喝个药之类的，或者这个 magic missile 看起来很 promising）。然而生命只有一次，这就是 Roguelike。</p>
-        <div class="language-plaintext highlighter-rouge">
-          <div class="highlight">
-            <pre class="highlight"><code>
+      </div>
+      <p>通常，如果看了，就会发现背包有至少一件能避免死亡的物品（比如残血之后喝个药之类的，或者这个 magic missile 看起来很 promising）。然而生命只有一次，这就是 Roguelike。</p>
+      <div class="language-plaintext highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code>
                        ----------
                       /          \
                      /    REST    \
@@ -729,28 +983,28 @@ You died in The Dungeons of Doom on dungeon level 7 with 704 points,
 and 88 pieces of gold, after 3310 moves.
 You were level 4 with a maximum of 29 hit points when you died.
 </code></pre>
-          </div>
         </div>
-        <h2 id="尾声">尾声</h2>
-        <p>通过本菜鸡的一局典型游戏流程，希望你已经了解了 NetHack 的基本操作，并能够在地下城中跌跌撞撞地存活一段有限大的时间。仍然有非常多重要的机制和操作本教程中没有提及（甚至 BUC 都没有说），这就要各位自己寻找了。对于一般玩家，要胜任这种游戏，作弊、剧透甚至是阅读源代码都是有必要而并不可耻的行为。</p>
-        <h2 id="参考资料">参考资料</h2>
-        <ul>
-          <li><a href="https://nethackwiki.com">https://nethackwiki.com</a></li>
-          <li><a href="https://www.zhihu.com/question/40177337">https://www.zhihu.com/question/40177337</a></li>
-          <li><a href="https://www.melankolia.net/nethack/nethack.guide.html">https://www.melankolia.net/nethack/nethack.guide.html</a></li>
-          <li><a href="https://nethack.org/">https://nethack.org/</a></li>
-          <li><a href="https://github.com/regymm/nethackassistant">https://github.com/regymm/nethackassistant</a></li>
-          <li><a href="https://alt.org/nethack/">https://alt.org/nethack/</a></li>
-        </ul>
-        ]]></content><author><name>petergu</name></author><category term="Tutorial" /><category term="游戏" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">用 Python 处理大物实验数据</title><link href="https://lug.ustc.edu.cn/planet/2021/01/physexp-using-python/" rel="alternate" type="text/html" title="用 Python 处理大物实验数据" /><published>2021-01-25T00:00:00+08:00</published><updated>2021-01-26T19:25:49+08:00</updated><id>https://lug.ustc.edu.cn/planet/2021/01/physexp-using-python</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2021/01/physexp-using-python/"><![CDATA[<p>身为某<a href="http://世界一流退学.com">世界一流退学</a>的学生，大物实验自然是逃不过。本人有幸选择了大物实验最多的专业方向，从一级做到六级，直到上学期刚刚结束。大物实验里数据处理是占了很多时间的，那么怎么才能「优雅」地完成这一工作呢？</p>
-      <h2 id="开始">开始</h2>
-      <p>大一的时候讲座推荐的软件是 Origin，画图、拟合等虽然方便，但完全鼠标操作，并且只有 Windows 上能运行，Wine 上有时会遇到个别功能不好用，很影响体验（当时我的电脑配置不好，玩不起虚拟机）。思来想去，还是觉得 Python 比较自然，于是故事就这样开始了。</p>
-      <p>在一级、二级大物中，需求基本是：散点画图（有时是对数）、线性拟合、组合的画图，以及不确定度计算和一般的数值计算。输入输出方面，要手工输入有时候多达几页的手写数据，画出来的图打印上交、计算出的结果手写进实验报告。</p>
-      <p>Python 做这些事情其实都不困难。画图用 Matplotlib 非常方便，也可以直接保存图片。数据计算自然是 NumPy。线性拟合的话，最初选择了 SciPy。输入输出还是比较基本，从文件读入。</p>
-      <p>于是，第一个实验「自由落体」的数据和处理就是这样：</p>
-      <div class="language-plaintext highlighter-rouge">
-        <div class="highlight">
-          <pre class="highlight"><code>#光电门间距 H cm
+      </div>
+      <h2 id="尾声">尾声</h2>
+      <p>通过本菜鸡的一局典型游戏流程，希望你已经了解了 NetHack 的基本操作，并能够在地下城中跌跌撞撞地存活一段有限大的时间。仍然有非常多重要的机制和操作本教程中没有提及（甚至 BUC 都没有说），这就要各位自己寻找了。对于一般玩家，要胜任这种游戏，作弊、剧透甚至是阅读源代码都是有必要而并不可耻的行为。</p>
+      <h2 id="参考资料">参考资料</h2>
+      <ul>
+        <li><a href="https://nethackwiki.com">https://nethackwiki.com</a></li>
+        <li><a href="https://www.zhihu.com/question/40177337">https://www.zhihu.com/question/40177337</a></li>
+        <li><a href="https://www.melankolia.net/nethack/nethack.guide.html">https://www.melankolia.net/nethack/nethack.guide.html</a></li>
+        <li><a href="https://nethack.org/">https://nethack.org/</a></li>
+        <li><a href="https://github.com/regymm/nethackassistant">https://github.com/regymm/nethackassistant</a></li>
+        <li><a href="https://alt.org/nethack/">https://alt.org/nethack/</a></li>
+      </ul>
+      ]]></content><author><name>petergu</name></author><category term="Tutorial" /><category term="游戏" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">用 Python 处理大物实验数据</title><link href="https://lug.ustc.edu.cn/planet/2021/01/physexp-using-python/" rel="alternate" type="text/html" title="用 Python 处理大物实验数据" /><published>2021-01-25T00:00:00+08:00</published><updated>2021-01-26T19:25:49+08:00</updated><id>https://lug.ustc.edu.cn/planet/2021/01/physexp-using-python</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2021/01/physexp-using-python/"><![CDATA[<p>身为某<a href="http://世界一流退学.com">世界一流退学</a>的学生，大物实验自然是逃不过。本人有幸选择了大物实验最多的专业方向，从一级做到六级，直到上学期刚刚结束。大物实验里数据处理是占了很多时间的，那么怎么才能「优雅」地完成这一工作呢？</p>
+    <h2 id="开始">开始</h2>
+    <p>大一的时候讲座推荐的软件是 Origin，画图、拟合等虽然方便，但完全鼠标操作，并且只有 Windows 上能运行，Wine 上有时会遇到个别功能不好用，很影响体验（当时我的电脑配置不好，玩不起虚拟机）。思来想去，还是觉得 Python 比较自然，于是故事就这样开始了。</p>
+    <p>在一级、二级大物中，需求基本是：散点画图（有时是对数）、线性拟合、组合的画图，以及不确定度计算和一般的数值计算。输入输出方面，要手工输入有时候多达几页的手写数据，画出来的图打印上交、计算出的结果手写进实验报告。</p>
+    <p>Python 做这些事情其实都不困难。画图用 Matplotlib 非常方便，也可以直接保存图片。数据计算自然是 NumPy。线性拟合的话，最初选择了 SciPy。输入输出还是比较基本，从文件读入。</p>
+    <p>于是，第一个实验「自由落体」的数据和处理就是这样：</p>
+    <div class="language-plaintext highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code>#光电门间距 H cm
 #数量级
 e -2
 90.0	90.0	90.0	80.0	80.0	80.0	70.0	70.0	70.0	60.0	60.0	60.0	50.0	50.0	50.0	40.0	40.0	40.0	30.0	30.0	30.0	20.0	20.0	20.0
@@ -758,11 +1012,11 @@ e -2
 e -3
 331.6	331.5	331.8	307.9	307.9	307.9	282.9	282.8	282.9	255.8	255.7	255.7	226.9	227.0	226.9	195.2	195.2	195.2	159.9	159.9	159.8	119.2	119.1	119.2
 </code></pre>
-        </div>
       </div>
-      <div class="language-python highlighter-rouge">
-        <div class="highlight">
-          <pre class="highlight"><code><span class="c1">#!/usr/bin/env python3
+    </div>
+    <div class="language-python highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code><span class="c1">#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 </span><span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
 <span class="kn">import</span> <span class="n">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
@@ -817,57 +1071,57 @@ e -3
 <span class="n">plt</span><span class="p">.</span><span class="nf">savefig</span><span class="p">(</span><span class="sh">'</span><span class="s">pic.png</span><span class="sh">'</span><span class="p">)</span>
 <span class="n">plt</span><span class="p">.</span><span class="nf">show</span><span class="p">()</span>
 </code></pre>
-        </div>
       </div>
-      <p><img src="/static/planet/2021-01-25-physexp-using-python-1.png" alt="1" /></p>
-      <p>只是画了张图就这么麻烦，很明显，除了练习了 Python 之外，和 Origin 相比生产力负提升。</p>
-      <p>之后的问题就是简化这些过程了。</p>
-      <h2 id="两年之后">两年之后</h2>
-      <p>经过一年多的开发，我将一些常用的画图和数据处理操作打包成库，并添加了方便的文件输入和自动生成 docx 文件的功能。同时将 Python 包 <code class="language-plaintext highlighter-rouge">physicsexp</code> 发布到了 PyPI（和 AUR 一样，在 PyPI 发布包的门槛几乎没有）。</p>
-      <p>这里以三级大物 β 射线吸收为例。现在，读入文件只需要这样：</p>
-      <div class="language-python highlighter-rouge">
-        <div class="highlight">
-          <pre class="highlight"><code><span class="n">fin</span> <span class="o">=</span> <span class="nf">open</span><span class="p">(</span><span class="sh">'</span><span class="s">./data.txt</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">r</span><span class="sh">'</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="sh">'</span><span class="s">utf-8</span><span class="sh">'</span><span class="p">)</span>
+    </div>
+    <p><img src="/static/planet/2021-01-25-physexp-using-python-1.png" alt="1" /></p>
+    <p>只是画了张图就这么麻烦，很明显，除了练习了 Python 之外，和 Origin 相比生产力负提升。</p>
+    <p>之后的问题就是简化这些过程了。</p>
+    <h2 id="两年之后">两年之后</h2>
+    <p>经过一年多的开发，我将一些常用的画图和数据处理操作打包成库，并添加了方便的文件输入和自动生成 docx 文件的功能。同时将 Python 包 <code class="language-plaintext highlighter-rouge">physicsexp</code> 发布到了 PyPI（和 AUR 一样，在 PyPI 发布包的门槛几乎没有）。</p>
+    <p>这里以三级大物 β 射线吸收为例。现在，读入文件只需要这样：</p>
+    <div class="language-python highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code><span class="n">fin</span> <span class="o">=</span> <span class="nf">open</span><span class="p">(</span><span class="sh">'</span><span class="s">./data.txt</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">r</span><span class="sh">'</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="sh">'</span><span class="s">utf-8</span><span class="sh">'</span><span class="p">)</span>
 <span class="n">pos</span> <span class="o">=</span> <span class="nf">readoneline</span><span class="p">(</span><span class="n">fin</span><span class="p">)</span>
 <span class="n">N</span> <span class="o">=</span> <span class="nf">readoneline</span><span class="p">(</span><span class="n">fin</span><span class="p">)</span>
 <span class="n">Al_num</span> <span class="o">=</span> <span class="nf">readoneline</span><span class="p">(</span><span class="n">fin</span><span class="p">)</span>
 <span class="n">Cnt</span> <span class="o">=</span> <span class="nf">readoneline</span><span class="p">(</span><span class="n">fin</span><span class="p">)</span>
 <span class="n">fin</span><span class="p">.</span><span class="nf">close</span><span class="p">()</span>
 </code></pre>
-        </div>
       </div>
-      <p>数据做图也只要一行代码，一张图上多个曲线也只是一个参数的事，比如这是一张有三条线的图：</p>
-      <div class="language-python highlighter-rouge">
-        <div class="highlight">
-          <pre class="highlight"><code><span class="nf">simple_plot</span><span class="p">(</span><span class="n">Momentum</span><span class="p">,</span> <span class="n">Emeasure</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">issetrange</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">dot</span><span class="o">=</span><span class="sh">'</span><span class="s">+</span><span class="sh">'</span><span class="p">,</span> <span class="n">lab</span><span class="o">=</span><span class="sh">'</span><span class="s">测量动能</span><span class="sh">'</span><span class="p">)</span>
+    </div>
+    <p>数据做图也只要一行代码，一张图上多个曲线也只是一个参数的事，比如这是一张有三条线的图：</p>
+    <div class="language-python highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code><span class="nf">simple_plot</span><span class="p">(</span><span class="n">Momentum</span><span class="p">,</span> <span class="n">Emeasure</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">issetrange</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">dot</span><span class="o">=</span><span class="sh">'</span><span class="s">+</span><span class="sh">'</span><span class="p">,</span> <span class="n">lab</span><span class="o">=</span><span class="sh">'</span><span class="s">测量动能</span><span class="sh">'</span><span class="p">)</span>
 <span class="nf">simple_plot</span><span class="p">(</span><span class="n">Momentum</span><span class="p">,</span> <span class="n">Eclassic</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">issetrange</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">dot</span><span class="o">=</span><span class="sh">'</span><span class="s">*</span><span class="sh">'</span><span class="p">,</span> <span class="n">lab</span><span class="o">=</span><span class="sh">'</span><span class="s">经典动能</span><span class="sh">'</span><span class="p">)</span>
 <span class="nf">simple_plot</span><span class="p">(</span><span class="n">Momentum</span><span class="p">,</span> <span class="n">Erela</span><span class="p">,</span> <span class="n">dot</span><span class="o">=</span><span class="sh">'</span><span class="s">o</span><span class="sh">'</span><span class="p">,</span> <span class="n">save</span><span class="o">=</span><span class="sh">'</span><span class="s">1.png</span><span class="sh">'</span><span class="p">,</span> <span class="n">issetrange</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">xlab</span><span class="o">=</span><span class="sh">'</span><span class="s">$pc/MeV$</span><span class="sh">'</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="sh">'</span><span class="s">$E/MeV$</span><span class="sh">'</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="sh">'</span><span class="s">电子动能随动量变化曲线</span><span class="sh">'</span><span class="p">,</span> <span class="n">lab</span><span class="o">=</span><span class="sh">'</span><span class="s">相对论动能</span><span class="sh">'</span><span class="p">)</span>
 </code></pre>
-        </div>
       </div>
-      <p>画图并线性拟合也是非常常见的操作，于是也加入了库：</p>
-      <div class="language-python highlighter-rouge">
-        <div class="highlight">
-          <pre class="highlight"><code><span class="n">slope</span><span class="p">,</span> <span class="n">intercept</span> <span class="o">=</span> <span class="nf">simple_linear_plot</span><span class="p">(</span><span class="n">Al_Real</span><span class="p">,</span> <span class="n">CntLn</span><span class="p">,</span> <span class="n">xlab</span><span class="o">=</span><span class="sh">'</span><span class="s">质量厚度$g/cm^{-2}$</span><span class="sh">'</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="sh">'</span><span class="s">选区计数率对数(射线强度)</span><span class="sh">'</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="sh">'</span><span class="s">半对数曲线曲线</span><span class="sh">'</span><span class="p">,</span> <span class="n">save</span><span class="o">=</span><span class="sh">'</span><span class="s">3.png</span><span class="sh">'</span><span class="p">)</span>
+    </div>
+    <p>画图并线性拟合也是非常常见的操作，于是也加入了库：</p>
+    <div class="language-python highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code><span class="n">slope</span><span class="p">,</span> <span class="n">intercept</span> <span class="o">=</span> <span class="nf">simple_linear_plot</span><span class="p">(</span><span class="n">Al_Real</span><span class="p">,</span> <span class="n">CntLn</span><span class="p">,</span> <span class="n">xlab</span><span class="o">=</span><span class="sh">'</span><span class="s">质量厚度$g/cm^{-2}$</span><span class="sh">'</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="sh">'</span><span class="s">选区计数率对数(射线强度)</span><span class="sh">'</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="sh">'</span><span class="s">半对数曲线曲线</span><span class="sh">'</span><span class="p">,</span> <span class="n">save</span><span class="o">=</span><span class="sh">'</span><span class="s">3.png</span><span class="sh">'</span><span class="p">)</span>
 <span class="nf">print</span><span class="p">(</span><span class="o">-</span><span class="n">slope</span><span class="p">)</span>
 <span class="nf">print</span><span class="p">(</span><span class="n">math</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="mf">1e4</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="o">-</span><span class="n">slope</span><span class="p">))</span>
 <span class="nf">print</span><span class="p">((</span><span class="n">math</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="n">Cnt</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">-</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">math</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">-</span> <span class="n">intercept</span><span class="p">)</span> <span class="o">/</span> <span class="n">slope</span><span class="p">)</span>
 </code></pre>
-        </div>
       </div>
-      <p>最后，一行代码将所有的数据和图片生成直接可以打印的 docx 文件，包含名字和日期：</p>
-      <div class="language-python highlighter-rouge">
-        <div class="highlight">
-          <pre class="highlight"><code><span class="nf">gendocx</span><span class="p">(</span><span class="sh">'</span><span class="s">gen.docx</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">1.png</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">2.png</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">3.png</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">slope, intercept: %f %f</span><span class="sh">'</span> <span class="o">%</span> <span class="p">(</span><span class="n">slope</span><span class="p">,</span> <span class="n">intercept</span><span class="p">))</span>
+    </div>
+    <p>最后，一行代码将所有的数据和图片生成直接可以打印的 docx 文件，包含名字和日期：</p>
+    <div class="language-python highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code><span class="nf">gendocx</span><span class="p">(</span><span class="sh">'</span><span class="s">gen.docx</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">1.png</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">2.png</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">3.png</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">slope, intercept: %f %f</span><span class="sh">'</span> <span class="o">%</span> <span class="p">(</span><span class="n">slope</span><span class="p">,</span> <span class="n">intercept</span><span class="p">))</span>
 </code></pre>
-        </div>
       </div>
-      <p>文件如图所示，可以直接拿去打印了：</p>
-      <p><img src="/static/planet/2021-01-25-physexp-using-python-2.png" alt="2" /></p>
-      <p>下面是整体代码：</p>
-      <div class="language-python highlighter-rouge">
-        <div class="highlight">
-          <pre class="highlight"><code><span class="c1">#!/usr/bin/env python3
+    </div>
+    <p>文件如图所示，可以直接拿去打印了：</p>
+    <p><img src="/static/planet/2021-01-25-physexp-using-python-2.png" alt="2" /></p>
+    <p>下面是整体代码：</p>
+    <div class="language-python highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code><span class="c1">#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 </span>
 <span class="kn">from</span> <span class="n">physicsexp.mainfunc</span> <span class="kn">import</span> <span class="o">*</span>
@@ -927,27 +1181,27 @@ e -3
 
 <span class="nf">gendocx</span><span class="p">(</span><span class="sh">'</span><span class="s">gen.docx</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">1.png</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">2.png</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">3.png</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">slope, intercept: %f %f</span><span class="sh">'</span> <span class="o">%</span> <span class="p">(</span><span class="n">slope</span><span class="p">,</span> <span class="n">intercept</span><span class="p">))</span>
 </code></pre>
-        </div>
       </div>
-      <p>整个代码不含空行和注释共 46 行，而上面的自由落体代码 45 行。可见包装程度还是不错的。先计算然后画这三张图，写上面的代码和 Origin 相比哪个更快呢？还是看个人习惯，反正我是比较习惯代码。至少，这说明了大物实验需要的数据处理还是有很多相似点的，以至于打包一些函数可以提高一些生产力。</p>
-      <p>当然，这只是一个例子，对于个别实验，不管怎么处理都是要多花写时间的（直流辉光等离子体，说的就是你）。</p>
-      <p>你可能会问，为什么没有误差分析的功能。这确实是一个问题：计算 A 类和 B 类不确定度等不同实验差别很大，水平有限，我能做的除了将常数打表提供最基础的功能外，好像就没什么了。并且，开发得差不多时已经到二级中期了，算不确定度也不常见了（所以，别被一级吓怕了），所以这部分也没怎么测试过，属于 TODO。</p>
-      <h2 id="迟到的-jupyter-notebook">迟到的 Jupyter Notebook</h2>
-      <p>以上还是标准的 Python，但五级大物时，我尝试了仅一次就发现明显 Jupyter Notebook 更适合做类似的工作——尽管它不能用 Vim 编辑代码！这下子，数据直接输入在 Notebook 里就好了，画图也是所见即所得，不用等一张一张弹出来了。而进行临时的运算也不必影响正常流程。如图：</p>
-      <p><img src="/static/planet/2021-01-25-physexp-using-python-3.png" alt="3" /></p>
-      <p>既然都到了 Jupyter ，如果<strong>多人合作</strong>的话，<a href="https://github.com/jupyterhub/jupyterhub">JupyterHub</a> 是非常不错的选择，可以多个人在一台服务器上使用 Jupyter Notebook 。我之前配置的是每个用户一个隔离的 Docker 容器，里面的 Python 已经装好了包，可以直接使用，同时挂载了一个共享空间可以分享写好的 Notebook 。其实 JupyterHub 有用 Github 帐号登录之类的权限管理功能，但当时我们是几个认识的人合作，就没有管这些。</p>
-      <p>具体的代码在我的 <a href="https://github.com/ustcpetergu/physicsexp">GitHub</a> 上，如果有人在写大物实验报告的过程中无聊了想找个地方摸鱼浪费点时间，不妨来看看。</p>
-      <h2 id="总结">总结</h2>
-      <p>如果您想尝试用 Python 处理大物实验数据，我可以比较负责地说对于 95% 以上的实验是完全没有问题的。使用 NumPy 和 SciPy 计算， Matplotlib 做图，配以 docx 生成、Jupyter Notebook 或 JupyterHub 团队合作，可以比较轻松（但不意味着节省时间）地完成所有需要的操作，并可以通过包装库提高效率。</p>
-      <p>之前也有学长学姐尝试过类似的大物实验自动化项目，但因为暂时无法全部找到并对比，这里就不说了。大一的时候确实是想搞一套自动化程度很高的东西，但水平实在有限，并且不同的实验处理过程不太一样，一己之力完成每一个实验专属的程序也不太现实，所以结果就是自己挖了个坑并跳进去出不来：有时想想，或许还是左手卡西欧 991 右手座标纸来得快一些呢！</p>
-      ]]></content><author><name>petergu</name></author><category term="USTC" /><category term="大物实验" /><category term="Python" /><summary type="html"><![CDATA[身为某世界一流退学的学生，大物实验自然是逃不过。本人有幸选择了大物实验最多的专业方向，从一级做到六级，直到上学期刚刚结束。大物实验里数据处理是占了很多时间的，那么怎么才能「优雅」地完成这一工作呢？]]></summary></entry><entry><title type="html">在 Linux 内核中测试程序性能</title><link href="https://lug.ustc.edu.cn/planet/2020/12/tic-toc-in-kernel/" rel="alternate" type="text/html" title="在 Linux 内核中测试程序性能" /><published>2020-12-19T00:00:00+08:00</published><updated>2020-12-19T16:01:47+08:00</updated><id>https://lug.ustc.edu.cn/planet/2020/12/tic-toc-in-kernel</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2020/12/tic-toc-in-kernel/"><![CDATA[<p>本学期，我担任了李诚老师编译原理课程的助教。在课程实验中，我们基于 LLVM 构建了一套编译系统，其中一个实验需要编写后端优化算法。为了评估学生们的优化代码，我们需要比较优化前后的代码（在这里是 LLVM IR）的性能。我们通过统计程序运行的时间来比较代码的性能，但是用户程序会受到<a href="https://101.lug.ustc.edu.cn/Ch04/#schedule">内核调度</a>。因为不是连续执行程序，所以受到调度造成的延迟会导致统计到的时间出现噪音，这些噪音可能会让测试结果不准确<del>甚至影响到了同学们的分数</del>。最开始，我想到是不是可以统计指令数来评估性能，打算用 <code class="language-plaintext highlighter-rouge">perf stat</code> 进行测试。然而，我们提供的实验环境基于虚拟机，<a href="https://www.virtualbox.org/ticket/10754?cversion=0&amp;cnum_hist=5">VirtualBox</a> 和 <a href="https://github.com/microsoft/WSL/issues/4678">WSL</a> 都没有实现相关的虚拟寄存器，要让同学们方便地使用该指令会比较困难，只得作罢。这时，我突然想到，内核线程可以不受到调度，那么使用内核线程是不是可以更精确的测量时间呢？于是我便开始了尝试。</p>
-    <p>注：由于原本目的是用于 LLVM IR，所以使用了 <code class="language-plaintext highlighter-rouge">clang</code> 来编译内核，没有这种需求可以完全无视 <code class="language-plaintext highlighter-rouge">clang</code>。</p>
-    <h2 id="编写内核模块">编写内核模块</h2>
-    <h3 id="超简单的内核模块编写方法">超简单的内核模块编写方法</h3>
-    <p>为了创建内核线程，我们可以构建一个内核模块，由它来执行相关的函数。构建一个基础的内核模块非常简单，这里我们 参考 <a href="https://tldp.org/LDP/lkmpg/2.6/html/x121.html"><strong>The Linux Kernel Module Programming Guide</strong></a>：</p>
-    <div class="language-c highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code><span class="cm">/*
+    </div>
+    <p>整个代码不含空行和注释共 46 行，而上面的自由落体代码 45 行。可见包装程度还是不错的。先计算然后画这三张图，写上面的代码和 Origin 相比哪个更快呢？还是看个人习惯，反正我是比较习惯代码。至少，这说明了大物实验需要的数据处理还是有很多相似点的，以至于打包一些函数可以提高一些生产力。</p>
+    <p>当然，这只是一个例子，对于个别实验，不管怎么处理都是要多花写时间的（直流辉光等离子体，说的就是你）。</p>
+    <p>你可能会问，为什么没有误差分析的功能。这确实是一个问题：计算 A 类和 B 类不确定度等不同实验差别很大，水平有限，我能做的除了将常数打表提供最基础的功能外，好像就没什么了。并且，开发得差不多时已经到二级中期了，算不确定度也不常见了（所以，别被一级吓怕了），所以这部分也没怎么测试过，属于 TODO。</p>
+    <h2 id="迟到的-jupyter-notebook">迟到的 Jupyter Notebook</h2>
+    <p>以上还是标准的 Python，但五级大物时，我尝试了仅一次就发现明显 Jupyter Notebook 更适合做类似的工作——尽管它不能用 Vim 编辑代码！这下子，数据直接输入在 Notebook 里就好了，画图也是所见即所得，不用等一张一张弹出来了。而进行临时的运算也不必影响正常流程。如图：</p>
+    <p><img src="/static/planet/2021-01-25-physexp-using-python-3.png" alt="3" /></p>
+    <p>既然都到了 Jupyter ，如果<strong>多人合作</strong>的话，<a href="https://github.com/jupyterhub/jupyterhub">JupyterHub</a> 是非常不错的选择，可以多个人在一台服务器上使用 Jupyter Notebook 。我之前配置的是每个用户一个隔离的 Docker 容器，里面的 Python 已经装好了包，可以直接使用，同时挂载了一个共享空间可以分享写好的 Notebook 。其实 JupyterHub 有用 Github 帐号登录之类的权限管理功能，但当时我们是几个认识的人合作，就没有管这些。</p>
+    <p>具体的代码在我的 <a href="https://github.com/ustcpetergu/physicsexp">GitHub</a> 上，如果有人在写大物实验报告的过程中无聊了想找个地方摸鱼浪费点时间，不妨来看看。</p>
+    <h2 id="总结">总结</h2>
+    <p>如果您想尝试用 Python 处理大物实验数据，我可以比较负责地说对于 95% 以上的实验是完全没有问题的。使用 NumPy 和 SciPy 计算， Matplotlib 做图，配以 docx 生成、Jupyter Notebook 或 JupyterHub 团队合作，可以比较轻松（但不意味着节省时间）地完成所有需要的操作，并可以通过包装库提高效率。</p>
+    <p>之前也有学长学姐尝试过类似的大物实验自动化项目，但因为暂时无法全部找到并对比，这里就不说了。大一的时候确实是想搞一套自动化程度很高的东西，但水平实在有限，并且不同的实验处理过程不太一样，一己之力完成每一个实验专属的程序也不太现实，所以结果就是自己挖了个坑并跳进去出不来：有时想想，或许还是左手卡西欧 991 右手座标纸来得快一些呢！</p>
+    ]]></content><author><name>petergu</name></author><category term="USTC" /><category term="大物实验" /><category term="Python" /><summary type="html"><![CDATA[身为某世界一流退学的学生，大物实验自然是逃不过。本人有幸选择了大物实验最多的专业方向，从一级做到六级，直到上学期刚刚结束。大物实验里数据处理是占了很多时间的，那么怎么才能「优雅」地完成这一工作呢？]]></summary></entry><entry><title type="html">在 Linux 内核中测试程序性能</title><link href="https://lug.ustc.edu.cn/planet/2020/12/tic-toc-in-kernel/" rel="alternate" type="text/html" title="在 Linux 内核中测试程序性能" /><published>2020-12-19T00:00:00+08:00</published><updated>2020-12-19T16:01:47+08:00</updated><id>https://lug.ustc.edu.cn/planet/2020/12/tic-toc-in-kernel</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2020/12/tic-toc-in-kernel/"><![CDATA[<p>本学期，我担任了李诚老师编译原理课程的助教。在课程实验中，我们基于 LLVM 构建了一套编译系统，其中一个实验需要编写后端优化算法。为了评估学生们的优化代码，我们需要比较优化前后的代码（在这里是 LLVM IR）的性能。我们通过统计程序运行的时间来比较代码的性能，但是用户程序会受到<a href="https://101.lug.ustc.edu.cn/Ch04/#schedule">内核调度</a>。因为不是连续执行程序，所以受到调度造成的延迟会导致统计到的时间出现噪音，这些噪音可能会让测试结果不准确<del>甚至影响到了同学们的分数</del>。最开始，我想到是不是可以统计指令数来评估性能，打算用 <code class="language-plaintext highlighter-rouge">perf stat</code> 进行测试。然而，我们提供的实验环境基于虚拟机，<a href="https://www.virtualbox.org/ticket/10754?cversion=0&amp;cnum_hist=5">VirtualBox</a> 和 <a href="https://github.com/microsoft/WSL/issues/4678">WSL</a> 都没有实现相关的虚拟寄存器，要让同学们方便地使用该指令会比较困难，只得作罢。这时，我突然想到，内核线程可以不受到调度，那么使用内核线程是不是可以更精确的测量时间呢？于是我便开始了尝试。</p>
+  <p>注：由于原本目的是用于 LLVM IR，所以使用了 <code class="language-plaintext highlighter-rouge">clang</code> 来编译内核，没有这种需求可以完全无视 <code class="language-plaintext highlighter-rouge">clang</code>。</p>
+  <h2 id="编写内核模块">编写内核模块</h2>
+  <h3 id="超简单的内核模块编写方法">超简单的内核模块编写方法</h3>
+  <p>为了创建内核线程，我们可以构建一个内核模块，由它来执行相关的函数。构建一个基础的内核模块非常简单，这里我们 参考 <a href="https://tldp.org/LDP/lkmpg/2.6/html/x121.html"><strong>The Linux Kernel Module Programming Guide</strong></a>：</p>
+  <div class="language-c highlighter-rouge">
+    <div class="highlight">
+      <pre class="highlight"><code><span class="cm">/*
  *  hello_mod.c - The simplest kernel module.
  */</span>
 <span class="cp">#include</span> <span class="cpf">&lt;linux/module.h&gt;</span><span class="c1">	/* Needed by all modules */</span><span class="cp">
@@ -968,12 +1222,12 @@ e -3
 	<span class="n">printk</span><span class="p">(</span><span class="n">KERN_INFO</span> <span class="s">"Goodbye world.</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre>
-      </div>
     </div>
-    <p>然后再加上一个简单的 Makefile：</p>
-    <div class="language-makefile highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code><span class="c"># obj-m 告诉构建系统以模块编译，编译目标是 hello.ko
+  </div>
+  <p>然后再加上一个简单的 Makefile：</p>
+  <div class="language-makefile highlighter-rouge">
+    <div class="highlight">
+      <pre class="highlight"><code><span class="c"># obj-m 告诉构建系统以模块编译，编译目标是 hello.ko
 </span><span class="nv">obj-m</span> <span class="o">+=</span> hello.o
 <span class="nv">hello-objs</span> <span class="o">:=</span> hello_mod.o
 
@@ -983,16 +1237,16 @@ e -3
 <span class="nl">clean</span><span class="o">:</span>
 	make <span class="nt">-C</span> /lib/modules/<span class="p">$(</span>shell <span class="nb">uname</span> <span class="nt">-r</span><span class="p">)</span>/build <span class="nv">M</span><span class="o">=</span><span class="p">$(</span>PWD<span class="p">)</span> clean
 </code></pre>
-      </div>
     </div>
-    <p>这样，一个超简单的内核模块就完成啦！</p>
-    <p>为了编译内核模块，我们需要有头文件，在 Ubuntu 上可以安装 <code class="language-plaintext highlighter-rouge">linux-headers-&lt;version&gt;</code> 来实现。又或者你像我一样需要用到 <code class="language-plaintext highlighter-rouge">clang</code> ，那就下载 Linux 源码重新编译安装（PS：如果全量编译搭配 VSCode 补全体验很好）。在这之后，运行 <code class="language-plaintext highlighter-rouge">sudo make CC=/path/to/clang</code> 就可以编译这个模块了。编译完成后，会发现目录下多出来一个叫 <code class="language-plaintext highlighter-rouge">hello.ko</code> 的文件，它就是我们编译得到的内核模块。</p>
-    <p>在这个模块中，<code class="language-plaintext highlighter-rouge">init_module</code> 会在模块被载入时调用，而 <code class="language-plaintext highlighter-rouge">cleanup_module</code> 会被模块被卸载时被调用。通过 <code class="language-plaintext highlighter-rouge">insmod hello.ko</code>，可以载入它，而 <code class="language-plaintext highlighter-rouge">rmmod hello</code> 可以卸载这个模块。<code class="language-plaintext highlighter-rouge">printk</code>会将日志打印到内核的日志中，调用 <code class="language-plaintext highlighter-rouge">dmesg</code> 可以看到模块打印的欢迎和告别信息。</p>
-    <h3 id="tic-toc-">Tic-Toc …</h3>
-    <p>虽然已经编写了一个模块，但是它啥都干不来，我们还得实现计时功能。在编写用户态程序时，语言库里通常有获取当前时间的函数，内核也一样。我们可以通过<code class="language-plaintext highlighter-rouge">ktime.h</code> 中的 <code class="language-plaintext highlighter-rouge">ktime_get</code> 来获取时间，大概的逻辑如下：</p>
-    <div class="language-c highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code><span class="n">ktime_t</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">;</span>
+  </div>
+  <p>这样，一个超简单的内核模块就完成啦！</p>
+  <p>为了编译内核模块，我们需要有头文件，在 Ubuntu 上可以安装 <code class="language-plaintext highlighter-rouge">linux-headers-&lt;version&gt;</code> 来实现。又或者你像我一样需要用到 <code class="language-plaintext highlighter-rouge">clang</code> ，那就下载 Linux 源码重新编译安装（PS：如果全量编译搭配 VSCode 补全体验很好）。在这之后，运行 <code class="language-plaintext highlighter-rouge">sudo make CC=/path/to/clang</code> 就可以编译这个模块了。编译完成后，会发现目录下多出来一个叫 <code class="language-plaintext highlighter-rouge">hello.ko</code> 的文件，它就是我们编译得到的内核模块。</p>
+  <p>在这个模块中，<code class="language-plaintext highlighter-rouge">init_module</code> 会在模块被载入时调用，而 <code class="language-plaintext highlighter-rouge">cleanup_module</code> 会被模块被卸载时被调用。通过 <code class="language-plaintext highlighter-rouge">insmod hello.ko</code>，可以载入它，而 <code class="language-plaintext highlighter-rouge">rmmod hello</code> 可以卸载这个模块。<code class="language-plaintext highlighter-rouge">printk</code>会将日志打印到内核的日志中，调用 <code class="language-plaintext highlighter-rouge">dmesg</code> 可以看到模块打印的欢迎和告别信息。</p>
+  <h3 id="tic-toc-">Tic-Toc …</h3>
+  <p>虽然已经编写了一个模块，但是它啥都干不来，我们还得实现计时功能。在编写用户态程序时，语言库里通常有获取当前时间的函数，内核也一样。我们可以通过<code class="language-plaintext highlighter-rouge">ktime.h</code> 中的 <code class="language-plaintext highlighter-rouge">ktime_get</code> 来获取时间，大概的逻辑如下：</p>
+  <div class="language-c highlighter-rouge">
+    <div class="highlight">
+      <pre class="highlight"><code><span class="n">ktime_t</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">;</span>
 <span class="n">u64</span> <span class="n">dur_ns</span><span class="p">;</span>
 <span class="n">start</span> <span class="o">=</span> <span class="n">ktime_get</span><span class="p">();</span>
 <span class="n">foo</span><span class="p">();</span> <span class="c1">// 被测试的函数</span>
@@ -1000,27 +1254,27 @@ e -3
 <span class="n">dur_ns</span> <span class="o">=</span> <span class="n">ktime_to_ns</span><span class="p">(</span><span class="n">ktime_sub</span><span class="p">(</span><span class="n">end</span><span class="p">,</span> <span class="n">start</span><span class="p">));</span>
 <span class="n">printk</span><span class="p">(</span><span class="n">KERN_INFO</span> <span class="s">"foo runtime: %lluns"</span><span class="p">,</span> <span class="n">dur_ns</span><span class="p">);</span>
 </code></pre>
-      </div>
     </div>
-    <p>看得出来，内核里的函数接口也很平易近人，简单几行就把我们最核心的算法实现完了。</p>
-    <h3 id="怎么使用它">怎么使用它？</h3>
-    <p>现在，我们已经知道了如何统计时间，还得设计一个接口来让人触发相关的功能。虽然让模块在初始化时运行也不是不行，但是扩展性就变得太糟糕了。我决定用 <a href="https://en.wikipedia.org/wiki/Procfs">procfs</a> 来设计一个接口。Procfs 来源于 UNIX 哲学中一切皆文件的思想，它把系统运行时的一些信息用文件目录的形式展示出来，这样可以通过简单的文件操作（比如 <code class="language-plaintext highlighter-rouge">cat</code>、管道等）来访问和控制系统相关的参数，你可以通过 <code class="language-plaintext highlighter-rouge">/proc/</code> 目录访问里面的内容。</p>
-    <p>在初始化的时候，我们通过 <code class="language-plaintext highlighter-rouge">proc_mkdir</code> 和 <code class="language-plaintext highlighter-rouge">proc_create</code> 可以像普通的文件系统一样在 <code class="language-plaintext highlighter-rouge">/proc/</code> 目录下创建目录和文件：</p>
-    <div class="language-c highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code><span class="c1">// 在 /proc/ 下创建一个目录</span>
+  </div>
+  <p>看得出来，内核里的函数接口也很平易近人，简单几行就把我们最核心的算法实现完了。</p>
+  <h3 id="怎么使用它">怎么使用它？</h3>
+  <p>现在，我们已经知道了如何统计时间，还得设计一个接口来让人触发相关的功能。虽然让模块在初始化时运行也不是不行，但是扩展性就变得太糟糕了。我决定用 <a href="https://en.wikipedia.org/wiki/Procfs">procfs</a> 来设计一个接口。Procfs 来源于 UNIX 哲学中一切皆文件的思想，它把系统运行时的一些信息用文件目录的形式展示出来，这样可以通过简单的文件操作（比如 <code class="language-plaintext highlighter-rouge">cat</code>、管道等）来访问和控制系统相关的参数，你可以通过 <code class="language-plaintext highlighter-rouge">/proc/</code> 目录访问里面的内容。</p>
+  <p>在初始化的时候，我们通过 <code class="language-plaintext highlighter-rouge">proc_mkdir</code> 和 <code class="language-plaintext highlighter-rouge">proc_create</code> 可以像普通的文件系统一样在 <code class="language-plaintext highlighter-rouge">/proc/</code> 目录下创建目录和文件：</p>
+  <div class="language-c highlighter-rouge">
+    <div class="highlight">
+      <pre class="highlight"><code><span class="c1">// 在 /proc/ 下创建一个目录</span>
 <span class="k">if</span> <span class="p">((</span><span class="n">root</span> <span class="o">=</span> <span class="n">proc_mkdir</span><span class="p">(</span><span class="n">proc_dirname</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">))</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
     <span class="k">return</span> <span class="o">-</span><span class="n">EEXIST</span><span class="p">;</span>
 <span class="c1">// 在 /proc/&lt;proc_dirname&gt;/ 目录下创建一个文件，并让该文件使用 bench_fops</span>
 <span class="k">if</span> <span class="p">(</span><span class="n">proc_create</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="mo">0444</span><span class="p">,</span> <span class="n">root</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">bench_fops</span><span class="p">)</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
     <span class="k">return</span> <span class="o">-</span><span class="n">ENOMEM</span><span class="p">;</span>
 </code></pre>
-      </div>
     </div>
-    <p>这里的 <code class="language-plaintext highlighter-rouge">bench_fops</code> 是一个类型为 <code class="language-plaintext highlighter-rouge">struct file_operations</code> 的结构体。它能为这个文件注册功能，比如 open、read、write 等。在内核中设计一个文件系统也需要实现类似的操作，万幸的是， procfs 下不需要实现 <a href="https://en.wikipedia.org/wiki/POSIX">POSIX</a> 语义。在这里，我希望只要有 <code class="language-plaintext highlighter-rouge">write</code> 被调用时，就会运行我的测试程序，这样我只要在 shell 中用 <code class="language-plaintext highlighter-rouge">echo</code> 和管道重定向就能调用它了：</p>
-    <div class="language-c highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code><span class="c1">// 所有参数都用不到，我们只希望触发一次测试</span>
+  </div>
+  <p>这里的 <code class="language-plaintext highlighter-rouge">bench_fops</code> 是一个类型为 <code class="language-plaintext highlighter-rouge">struct file_operations</code> 的结构体。它能为这个文件注册功能，比如 open、read、write 等。在内核中设计一个文件系统也需要实现类似的操作，万幸的是， procfs 下不需要实现 <a href="https://en.wikipedia.org/wiki/POSIX">POSIX</a> 语义。在这里，我希望只要有 <code class="language-plaintext highlighter-rouge">write</code> 被调用时，就会运行我的测试程序，这样我只要在 shell 中用 <code class="language-plaintext highlighter-rouge">echo</code> 和管道重定向就能调用它了：</p>
+  <div class="language-c highlighter-rouge">
+    <div class="highlight">
+      <pre class="highlight"><code><span class="c1">// 所有参数都用不到，我们只希望触发一次测试</span>
 <span class="kt">ssize_t</span> <span class="nf">run_bench</span><span class="p">(</span><span class="k">struct</span> <span class="n">file</span> <span class="o">*</span><span class="n">filp</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="n">__user</span> <span class="o">*</span><span class="n">buf</span><span class="p">,</span>
                   <span class="kt">size_t</span> <span class="n">len</span><span class="p">,</span> <span class="n">loff_t</span> <span class="o">*</span><span class="n">ppos</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// 测试相关的函数</span>
@@ -1036,32 +1290,32 @@ e -3
 	<span class="p">.</span><span class="n">write</span>		<span class="o">=</span> <span class="n">run_bench</span>
 <span class="p">}</span>
 </code></pre>
-      </div>
     </div>
-    <p>模块功能已经完成了，最后得给模块取个好听的名字。我把英文中表示时间流逝的 tic-toc （tick-tock） 和表示内核的 kernel 合在一起，就变成了 tiktok。</p>
-    <h2 id="链接函数">链接函数</h2>
-    <p>我本以为编写了寥寥数行 tiktok，将 LLVM IR 编译到目标文件再链接到模块上便可以了。然而经过测试，这样做会导致进程一直无法返回。经过反汇编比较了同一段代码在内核模块里编译的结果和外部产生的结果后，我才理解是因为编译选项不同导致了内存布局的差别，这使得默认参数编译的代码无法在内核中使用。由于内核编译选项繁杂，根据不同架构也会产生不同的选项，我们必须把代码放置进内核的构建系统内来让它产生内核想要的汇编（现在的内核中禁用了浮点数，所以浮点计算就无法测试了）。对于普通的 c 文件，只需要在 Makefile 中加上几句，比如：</p>
-    <div class="language-makefile highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code><span class="nv">hello-objs</span> <span class="o">:=</span> hello_mod.o another_file.o
+  </div>
+  <p>模块功能已经完成了，最后得给模块取个好听的名字。我把英文中表示时间流逝的 tic-toc （tick-tock） 和表示内核的 kernel 合在一起，就变成了 tiktok。</p>
+  <h2 id="链接函数">链接函数</h2>
+  <p>我本以为编写了寥寥数行 tiktok，将 LLVM IR 编译到目标文件再链接到模块上便可以了。然而经过测试，这样做会导致进程一直无法返回。经过反汇编比较了同一段代码在内核模块里编译的结果和外部产生的结果后，我才理解是因为编译选项不同导致了内存布局的差别，这使得默认参数编译的代码无法在内核中使用。由于内核编译选项繁杂，根据不同架构也会产生不同的选项，我们必须把代码放置进内核的构建系统内来让它产生内核想要的汇编（现在的内核中禁用了浮点数，所以浮点计算就无法测试了）。对于普通的 c 文件，只需要在 Makefile 中加上几句，比如：</p>
+  <div class="language-makefile highlighter-rouge">
+    <div class="highlight">
+      <pre class="highlight"><code><span class="nv">hello-objs</span> <span class="o">:=</span> hello_mod.o another_file.o
 </code></pre>
-      </div>
     </div>
-    <p>但是 LLVM IR 还需要一些技巧来骗过编译系统才行。我把自制编译器产生的 IR 文件改成了 .c 文件，并修改了 Makefile：</p>
-    <div class="language-makefile highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code><span class="nv">hello-objs</span> <span class="o">:=</span> hello_mod.o another_file.o
+  </div>
+  <p>但是 LLVM IR 还需要一些技巧来骗过编译系统才行。我把自制编译器产生的 IR 文件改成了 .c 文件，并修改了 Makefile：</p>
+  <div class="language-makefile highlighter-rouge">
+    <div class="highlight">
+      <pre class="highlight"><code><span class="nv">hello-objs</span> <span class="o">:=</span> hello_mod.o another_file.o
 <span class="nv">CFLAGS_another_file.o</span> <span class="o">:=</span> <span class="nt">-O0</span> <span class="nt">-x</span> ir
 </code></pre>
-      </div>
     </div>
-    <p>内核编译系统会在产生 another_file.o 时将这里的 <code class="language-plaintext highlighter-rouge">-O0 -x ir</code> 传给编译器，这让编译器知道接下来要读的语言是 LLVM IR，并且关掉大部分优化（这样才能体现出自制编译器中的优化效果）。由于 LLVM IR 编译时会忽略一些选项，所以我让编译器在产生中间代码时就加上了属性来确保编译正确。</p>
-    <p>虽然知道了怎么链接函数，但是内核是无法链接库函数的，而 IO 函数也无法直接在内核中使用。对此，我们可以修改相关的函数，在 tiktok 实现相似的功能。比如， <code class="language-plaintext highlighter-rouge">printf</code> 可以转换成 <code class="language-plaintext highlighter-rouge">printk</code>，而 <code class="language-plaintext highlighter-rouge">exit</code> 可以换成内核中的 <code class="language-plaintext highlighter-rouge">do_exit</code>。<code class="language-plaintext highlighter-rouge">malloc</code> 和 <code class="language-plaintext highlighter-rouge">free</code> 比较复杂，内核中的内存可没有进程那样退出就自动释放这么好的待遇。所以，在内核中必须得手动维护每一次分配和释放，避免出现事故导致 panic 或者内存泄漏（当然我很懒，课程不需要我就都没实现）。</p>
-    <h2 id="一个小测试">一个小测试</h2>
-    <p>既然实现完了，我们进行一个测试来检验 tiktok 的功能：</p>
-    <div class="language-c highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code><span class="cp">#define OUT_LOOP 100
+  </div>
+  <p>内核编译系统会在产生 another_file.o 时将这里的 <code class="language-plaintext highlighter-rouge">-O0 -x ir</code> 传给编译器，这让编译器知道接下来要读的语言是 LLVM IR，并且关掉大部分优化（这样才能体现出自制编译器中的优化效果）。由于 LLVM IR 编译时会忽略一些选项，所以我让编译器在产生中间代码时就加上了属性来确保编译正确。</p>
+  <p>虽然知道了怎么链接函数，但是内核是无法链接库函数的，而 IO 函数也无法直接在内核中使用。对此，我们可以修改相关的函数，在 tiktok 实现相似的功能。比如， <code class="language-plaintext highlighter-rouge">printf</code> 可以转换成 <code class="language-plaintext highlighter-rouge">printk</code>，而 <code class="language-plaintext highlighter-rouge">exit</code> 可以换成内核中的 <code class="language-plaintext highlighter-rouge">do_exit</code>。<code class="language-plaintext highlighter-rouge">malloc</code> 和 <code class="language-plaintext highlighter-rouge">free</code> 比较复杂，内核中的内存可没有进程那样退出就自动释放这么好的待遇。所以，在内核中必须得手动维护每一次分配和释放，避免出现事故导致 panic 或者内存泄漏（当然我很懒，课程不需要我就都没实现）。</p>
+  <h2 id="一个小测试">一个小测试</h2>
+  <p>既然实现完了，我们进行一个测试来检验 tiktok 的功能：</p>
+  <div class="language-c highlighter-rouge">
+    <div class="highlight">
+      <pre class="highlight"><code><span class="cp">#define OUT_LOOP 100
 </span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
     <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
     <span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
@@ -1080,98 +1334,98 @@ e -3
     <span class="k">return</span> <span class="n">a</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
-      </div>
     </div>
-    <p>上面是一段进行一些无意义计算的代码，我们修改 <code class="language-plaintext highlighter-rouge">OUT_LOOPS</code> 的大小（100、99、98）来比较不同方法的灵敏度。除了普通的 time 测量，我还加入了一组使用 <code class="language-plaintext highlighter-rouge">taskset(1)</code> 的对照组。 <code class="language-plaintext highlighter-rouge">taskset</code> 控制了程序的亲核性，这使得程序总能被调度到同一个核上，减少了跨核导致的缓存失效开销。为了减少随机误差，每种配置我都运行进行了 100 次函数得到虚列。实验数据可以在<a href="https://github.com/gloit042/tiktok/tree/main/bench">这里</a>查看。要反映灵敏度，我们无法直接拿不同方法的结果进行比较，而是要在同一个方法内看看能否显著区分出不同循环次数带来运行时间差距（约为 1%~%2）。短暂尝试了复习概率论和数理统计后，我谷歌到了 <a href="https://en.wikipedia.org/wiki/Kolmogorov%E2%80%93Smirnov_test">K-S 检验</a> （Kolmogorov-Smirnov test），对于两组输入数据它可以检验它们是否同分布。这里我们假设实际运行时间是固有的，而调度等开销造成的是一个均匀同分布的随机误差。如果测量工具对两种配置得到的两组数据无法拒绝同分布假设，我们可以认为它无法准确得检测出程序性能的差异（统计全忘光了，我不知道我在说啥，如果有误欢迎指正）。我使用了 <code class="language-plaintext highlighter-rouge">scipy.stat.kstest</code> 来进行了 K-S 检验，结果如下表 （p 值小于 0.05 拒绝同分布假设）：</p>
-    <table>
-      <thead>
-        <tr>
-          <th style="text-align: center">p 值</th>
-          <th style="text-align: center">98-99</th>
-          <th style="text-align: center">99-100</th>
-          <th style="text-align: center">98-100</th>
-          <th style="text-align: center">98-98</th>
-          <th style="text-align: center">99-99</th>
-          <th style="text-align: center">100-100</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td style="text-align: center">normal_time</td>
-          <td style="text-align: center">$2.11*10^{-1}$</td>
-          <td style="text-align: center">$5.83*10^{-1}$</td>
-          <td style="text-align: center">$3.68*10^{-1}$</td>
-          <td style="text-align: center">$3.6*10^{-2}$</td>
-          <td style="text-align: center">$5.83*10^{-1}$</td>
-          <td style="text-align: center">$1.29*10^{-3}$</td>
-        </tr>
-        <tr>
-          <td style="text-align: center">taskset_time</td>
-          <td style="text-align: center">$1.56*10^{-2}$</td>
-          <td style="text-align: center">$2.11*10^{-1}$</td>
-          <td style="text-align: center">$3.21*10^{-5}$</td>
-          <td style="text-align: center">$8.15*10^{-1}$</td>
-          <td style="text-align: center">$8.15*10^{-1}$</td>
-          <td style="text-align: center">$2.4*10^{-2}$</td>
-        </tr>
-        <tr>
-          <td style="text-align: center">tiktok</td>
-          <td style="text-align: center">$3.73*10^{-36}$</td>
-          <td style="text-align: center">$6.31*10^{-19}$</td>
-          <td style="text-align: center">$2.6*10^{-38}$</td>
-          <td style="text-align: center">$4.11*10^{-43}$</td>
-          <td style="text-align: center">$1.41*10^{-28}$</td>
-          <td style="text-align: center">$2.24*10^{-4}$</td>
-        </tr>
-      </tbody>
-    </table>
-    <p>gg，完全没有用，连同一个配置都分不清楚。虽然占据了一个核，但是虚拟机本身也在被调度，这个误差并不满足我们的假设。但是，还不能放弃，还可以抢救一下，我把 tiktok 放裸机上测试了一下，得到的结果如下：</p>
-    <table>
-      <thead>
-        <tr>
-          <th style="text-align: center">p 值</th>
-          <th style="text-align: center">98-99</th>
-          <th style="text-align: center">99-100</th>
-          <th style="text-align: center">98-100</th>
-          <th style="text-align: center">98-98</th>
-          <th style="text-align: center">99-99</th>
-          <th style="text-align: center">100-100</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td style="text-align: center">normal_time</td>
-          <td style="text-align: center">$4.04*10^{-35}$</td>
-          <td style="text-align: center">$2.82*10^{-1}$</td>
-          <td style="text-align: center">$3.05*10^{-31}$</td>
-          <td style="text-align: center">$8.15*10^{-1}$</td>
-          <td style="text-align: center">$5.83*10^{-1}$</td>
-          <td style="text-align: center">$1.54*10^{-1}$</td>
-        </tr>
-        <tr>
-          <td style="text-align: center">taskset_time</td>
-          <td style="text-align: center">$1.42*10^{-51}$</td>
-          <td style="text-align: center">$3.64*10^{-2}$</td>
-          <td style="text-align: center">$4.39*10^{-55}$</td>
-          <td style="text-align: center">$5.39*10^{-1}$</td>
-          <td style="text-align: center">$9.08*10^{-1}$</td>
-          <td style="text-align: center">$2.11*10^{-1}$</td>
-        </tr>
-        <tr>
-          <td style="text-align: center">tiktok</td>
-          <td style="text-align: center">$2.20*10^{-59}$</td>
-          <td style="text-align: center">$4.39*10^{-55}$</td>
-          <td style="text-align: center">$2.20*10^{-59}$</td>
-          <td style="text-align: center">$2.11*10^{-1}$</td>
-          <td style="text-align: center">$7.02*10^{-1}$</td>
-          <td style="text-align: center">$2.11*10^{-1}$</td>
-        </tr>
-      </tbody>
-    </table>
-    <p>在裸机上，tiktok 的优势就体现了出来，它比 <code class="language-plaintext highlighter-rouge">taskset</code> 要更加灵敏一点。然而裸机上使用 <code class="language-plaintext highlighter-rouge">perf stat</code>就可以看到更加精确的指令数结果…</p>
-    <h2 id="小结">小结</h2>
-    <p>虽然 tiktok 被证明没有太多实际价值，但是研究的过程中我还是学到了挺多 Linux 内核编译系统的知识。我想分享一下这个过程，是因为我觉得这很有趣。如果你对 tiktok 感兴趣，它在我的 <a href="https://github.com/gloit042/tiktok">Github</a> 上，它比本文介绍的要稍微复杂一丢丢。如果你想要了解更多关于 Linux 内核的内容，网络上有许多很好的资料。至于编译课程，我估计细小的差距是没法在虚拟机里准确测量了，还是要尽量避开这种测试样例（Windows 上应该也有工具，但是不太方便）。</p>
-    ]]></content><author><name>gloit</name></author><category term="Technology" /><category term="Benchmark" /><category term="Kernel" /><category term="LLVM" /><summary type="html"><![CDATA[本学期，我担任了李诚老师编译原理课程的助教。在课程实验中，我们基于 LLVM 构建了一套编译系统，其中一个实验需要编写后端优化算法。为了评估学生们的优化代码，我们需要比较优化前后的代码（在这里是 LLVM IR）的性能。我们通过统计程序运行的时间来比较代码的性能，但是用户程序会受到内核调度。因为不是连续执行程序，所以受到调度造成的延迟会导致统计到的时间出现噪音，这些噪音可能会让测试结果不准确甚至影响到了同学们的分数。最开始，我想到是不是可以统计指令数来评估性能，打算用 perf stat 进行测试。然而，我们提供的实验环境基于虚拟机，VirtualBox 和 WSL 都没有实现相关的虚拟寄存器，要让同学们方便地使用该指令会比较困难，只得作罢。这时，我突然想到，内核线程可以不受到调度，那么使用内核线程是不是可以更精确的测量时间呢？于是我便开始了尝试。]]></summary></entry><entry><title type="html">使用 Beancount 进行记账并自动记录一卡通消费</title><link href="https://lug.ustc.edu.cn/planet/2020/08/keeping-account-with-beancount/" rel="alternate" type="text/html" title="使用 Beancount 进行记账并自动记录一卡通消费" /><published>2020-08-06T00:00:00+08:00</published><updated>2020-11-09T14:22:35+08:00</updated><id>https://lug.ustc.edu.cn/planet/2020/08/keeping-account-with-beancount</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2020/08/keeping-account-with-beancount/"><![CDATA[<p>本文首发于 <a href="https://charlesliu7.github.io/blackboard/2019/07/24/beancount/">https://charlesliu7.github.io/blackboard/2019/07/24/beancount/</a></p>
+  </div>
+  <p>上面是一段进行一些无意义计算的代码，我们修改 <code class="language-plaintext highlighter-rouge">OUT_LOOPS</code> 的大小（100、99、98）来比较不同方法的灵敏度。除了普通的 time 测量，我还加入了一组使用 <code class="language-plaintext highlighter-rouge">taskset(1)</code> 的对照组。 <code class="language-plaintext highlighter-rouge">taskset</code> 控制了程序的亲核性，这使得程序总能被调度到同一个核上，减少了跨核导致的缓存失效开销。为了减少随机误差，每种配置我都运行进行了 100 次函数得到虚列。实验数据可以在<a href="https://github.com/gloit042/tiktok/tree/main/bench">这里</a>查看。要反映灵敏度，我们无法直接拿不同方法的结果进行比较，而是要在同一个方法内看看能否显著区分出不同循环次数带来运行时间差距（约为 1%~%2）。短暂尝试了复习概率论和数理统计后，我谷歌到了 <a href="https://en.wikipedia.org/wiki/Kolmogorov%E2%80%93Smirnov_test">K-S 检验</a> （Kolmogorov-Smirnov test），对于两组输入数据它可以检验它们是否同分布。这里我们假设实际运行时间是固有的，而调度等开销造成的是一个均匀同分布的随机误差。如果测量工具对两种配置得到的两组数据无法拒绝同分布假设，我们可以认为它无法准确得检测出程序性能的差异（统计全忘光了，我不知道我在说啥，如果有误欢迎指正）。我使用了 <code class="language-plaintext highlighter-rouge">scipy.stat.kstest</code> 来进行了 K-S 检验，结果如下表 （p 值小于 0.05 拒绝同分布假设）：</p>
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: center">p 值</th>
+        <th style="text-align: center">98-99</th>
+        <th style="text-align: center">99-100</th>
+        <th style="text-align: center">98-100</th>
+        <th style="text-align: center">98-98</th>
+        <th style="text-align: center">99-99</th>
+        <th style="text-align: center">100-100</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: center">normal_time</td>
+        <td style="text-align: center">$2.11*10^{-1}$</td>
+        <td style="text-align: center">$5.83*10^{-1}$</td>
+        <td style="text-align: center">$3.68*10^{-1}$</td>
+        <td style="text-align: center">$3.6*10^{-2}$</td>
+        <td style="text-align: center">$5.83*10^{-1}$</td>
+        <td style="text-align: center">$1.29*10^{-3}$</td>
+      </tr>
+      <tr>
+        <td style="text-align: center">taskset_time</td>
+        <td style="text-align: center">$1.56*10^{-2}$</td>
+        <td style="text-align: center">$2.11*10^{-1}$</td>
+        <td style="text-align: center">$3.21*10^{-5}$</td>
+        <td style="text-align: center">$8.15*10^{-1}$</td>
+        <td style="text-align: center">$8.15*10^{-1}$</td>
+        <td style="text-align: center">$2.4*10^{-2}$</td>
+      </tr>
+      <tr>
+        <td style="text-align: center">tiktok</td>
+        <td style="text-align: center">$3.73*10^{-36}$</td>
+        <td style="text-align: center">$6.31*10^{-19}$</td>
+        <td style="text-align: center">$2.6*10^{-38}$</td>
+        <td style="text-align: center">$4.11*10^{-43}$</td>
+        <td style="text-align: center">$1.41*10^{-28}$</td>
+        <td style="text-align: center">$2.24*10^{-4}$</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>gg，完全没有用，连同一个配置都分不清楚。虽然占据了一个核，但是虚拟机本身也在被调度，这个误差并不满足我们的假设。但是，还不能放弃，还可以抢救一下，我把 tiktok 放裸机上测试了一下，得到的结果如下：</p>
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: center">p 值</th>
+        <th style="text-align: center">98-99</th>
+        <th style="text-align: center">99-100</th>
+        <th style="text-align: center">98-100</th>
+        <th style="text-align: center">98-98</th>
+        <th style="text-align: center">99-99</th>
+        <th style="text-align: center">100-100</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: center">normal_time</td>
+        <td style="text-align: center">$4.04*10^{-35}$</td>
+        <td style="text-align: center">$2.82*10^{-1}$</td>
+        <td style="text-align: center">$3.05*10^{-31}$</td>
+        <td style="text-align: center">$8.15*10^{-1}$</td>
+        <td style="text-align: center">$5.83*10^{-1}$</td>
+        <td style="text-align: center">$1.54*10^{-1}$</td>
+      </tr>
+      <tr>
+        <td style="text-align: center">taskset_time</td>
+        <td style="text-align: center">$1.42*10^{-51}$</td>
+        <td style="text-align: center">$3.64*10^{-2}$</td>
+        <td style="text-align: center">$4.39*10^{-55}$</td>
+        <td style="text-align: center">$5.39*10^{-1}$</td>
+        <td style="text-align: center">$9.08*10^{-1}$</td>
+        <td style="text-align: center">$2.11*10^{-1}$</td>
+      </tr>
+      <tr>
+        <td style="text-align: center">tiktok</td>
+        <td style="text-align: center">$2.20*10^{-59}$</td>
+        <td style="text-align: center">$4.39*10^{-55}$</td>
+        <td style="text-align: center">$2.20*10^{-59}$</td>
+        <td style="text-align: center">$2.11*10^{-1}$</td>
+        <td style="text-align: center">$7.02*10^{-1}$</td>
+        <td style="text-align: center">$2.11*10^{-1}$</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>在裸机上，tiktok 的优势就体现了出来，它比 <code class="language-plaintext highlighter-rouge">taskset</code> 要更加灵敏一点。然而裸机上使用 <code class="language-plaintext highlighter-rouge">perf stat</code>就可以看到更加精确的指令数结果…</p>
+  <h2 id="小结">小结</h2>
+  <p>虽然 tiktok 被证明没有太多实际价值，但是研究的过程中我还是学到了挺多 Linux 内核编译系统的知识。我想分享一下这个过程，是因为我觉得这很有趣。如果你对 tiktok 感兴趣，它在我的 <a href="https://github.com/gloit042/tiktok">Github</a> 上，它比本文介绍的要稍微复杂一丢丢。如果你想要了解更多关于 Linux 内核的内容，网络上有许多很好的资料。至于编译课程，我估计细小的差距是没法在虚拟机里准确测量了，还是要尽量避开这种测试样例（Windows 上应该也有工具，但是不太方便）。</p>
+  ]]></content><author><name>gloit</name></author><category term="Technology" /><category term="Benchmark" /><category term="Kernel" /><category term="LLVM" /><summary type="html"><![CDATA[本学期，我担任了李诚老师编译原理课程的助教。在课程实验中，我们基于 LLVM 构建了一套编译系统，其中一个实验需要编写后端优化算法。为了评估学生们的优化代码，我们需要比较优化前后的代码（在这里是 LLVM IR）的性能。我们通过统计程序运行的时间来比较代码的性能，但是用户程序会受到内核调度。因为不是连续执行程序，所以受到调度造成的延迟会导致统计到的时间出现噪音，这些噪音可能会让测试结果不准确甚至影响到了同学们的分数。最开始，我想到是不是可以统计指令数来评估性能，打算用 perf stat 进行测试。然而，我们提供的实验环境基于虚拟机，VirtualBox 和 WSL 都没有实现相关的虚拟寄存器，要让同学们方便地使用该指令会比较困难，只得作罢。这时，我突然想到，内核线程可以不受到调度，那么使用内核线程是不是可以更精确的测量时间呢？于是我便开始了尝试。]]></summary></entry><entry><title type="html">使用 Beancount 进行记账并自动记录一卡通消费</title><link href="https://lug.ustc.edu.cn/planet/2020/08/keeping-account-with-beancount/" rel="alternate" type="text/html" title="使用 Beancount 进行记账并自动记录一卡通消费" /><published>2020-08-06T00:00:00+08:00</published><updated>2020-11-09T14:22:35+08:00</updated><id>https://lug.ustc.edu.cn/planet/2020/08/keeping-account-with-beancount</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2020/08/keeping-account-with-beancount/"><![CDATA[<p>本文首发于 <a href="https://charlesliu7.github.io/blackboard/2019/07/24/beancount/">https://charlesliu7.github.io/blackboard/2019/07/24/beancount/</a></p>
   <p>偶尔看到了复式记账这个概念，对精细记账的我而言很受用，选择 Beancount 这样的开源工具的原因莫过于账本数据完全由自己掌握，而不是被各大 APP
     所保管。本文从一次个人实践的角度来说明一下复式记账的使用。</p>
   <p>本篇文章是一个从零开始的个人实践记录，涵盖 <strong>文件组织 -&gt; 基本账本书写 -&gt; 爬取一卡通数据并自动记录</strong>，供同样使用 Beancount
@@ -2392,127 +2646,4 @@ chain ${210:string}lpxelinux.0
   <p>regymm (17 级):</p>
   <p>CERN 的 ROOT 同样有原生 Linux 支持。课程提供的程序文件中只可能有个别地方，如文件路径格式等，需要修改。</p>
   <p>兼容性：★★★★★</p>
-  ]]></content><author><name>Kai Ma</name></author><category term="Experience" /><category term="Courses" /><summary type="html"><![CDATA[本指南指导中科大 Linux 用户如何使用 Linux 完成各门课程、处理学业事项，以及运行需要的专业软件。“兼容性”仅代表使用 Linux 完成任务的难易程度，与其他指标（如课程本身质量和难度）无关。]]></summary></entry><entry><title type="html">Hello! LUG Planet</title><link href="https://lug.ustc.edu.cn/planet/2018/08/hello-lug-planet/" rel="alternate" type="text/html" title="Hello! LUG Planet" /><published>2018-08-07T00:00:00+08:00</published><updated>2021-01-26T19:25:49+08:00</updated><id>https://lug.ustc.edu.cn/planet/2018/08/hello-lug-planet</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2018/08/hello-lug-planet/"><![CDATA[<p>欢迎大家来到 LUG Planet！这是一个刚刚被发现的新星球，百废待兴。本文是 LUG Planet 的说明书，在你入驻之前，不妨先驻足欣赏一下这片风景。😀</p>
-  <h2 id="lug-planet-是什么">LUG Planet 是什么？</h2>
-  <p>LUG Planet 是……</p>
-  <ul>
-    <li>由 USTCLUG 负责运营和管理的<strong>群体博客</strong>。</li>
-    <li>目标读者与参与者：
-      <ol>
-        <li>USTCLUG 会员；</li>
-        <li>认同 USTCLUG 理念的同好；</li>
-        <li>希望积极参加 USTCLUG 线上活动的朋友。</li>
-      </ol>
-    </li>
-    <li>主要话题为 USTCLUG 社团的活动覆盖范围：
-      <ol>
-        <li>UNIX、Linux 及自由/开源软件；</li>
-        <li>Windows 与 Microsoft 新技术；</li>
-        <li>信息安全；</li>
-        <li>这些技术与 USTC 的碰撞与融合。</li>
-      </ol>
-    </li>
-  </ul>
-  <p>LUG Planet 是精神上的 <a href="/wiki/linux_digest">Linux 文摘</a> 计划的延续。我们认可这个群策群力式的知识汇集的理念，但使用更方便和更自由的形式，从而鼓励大家能更积极地参与到这个项目中来。</p>
-  <h2 id="订阅我们">订阅我们</h2>
-  <p>你可以做一个默默潜水的读者，也可以在评论区与作者激辩，或者亲自成为写作者。但无论如何，你一定非常关注 LUG Planet 的动态。所以我们提供了多种方式确保你能得到及时的通知：</p>
-  <ul>
-    <li><strong><a href="https://lug.ustc.edu.cn/feed/planet.xml">RSS 订阅</a></strong>（推荐）。由 LUG Planet 本身提供的服务，最完善且及时；</li>
-    <li><strong>QQ 公众号</strong>。QQ 号：2786229166；</li>
-    <li><strong>微信公众号</strong>。ID：ustclug；</li>
-    <li><del><strong>Telegram 频道</strong>。邀请链接：<a href="https://t.me/lug_planet">https://t.me/lug_planet</a>。</del></li>
-  </ul>
-  <p>免责声明：我们可能不会将所有动态都公布在这些信息渠道上。</p>
-  <p>如果你想“共襄盛举”，加入写作者的行列，就请仔细阅读下面的内容，确保我们达成共识～</p>
-  <h2 id="运作方式">运作方式</h2>
-  <p>作为一个群体博客，LUG Planet 严重依赖于<strong>各位作者的辛勤劳动</strong>，没有内容，博客将不能称为博客。虽然为时尚早，但请允许我在此提前表示感谢！ 🙂</p>
-  <p>在 LUG Planet 上，主要有两种角色类型：作者和编辑。下面我们详细介绍这两类角色的职责。如果你不认可其中的某些条款，请与我们联络并陈述理由。</p>
-  <p>（其实还有“牛顿”——运维人员，不过就让他们继续呆在幕后吧～）</p>
-  <h3 id="作者">作者</h3>
-  <p>任何人都可以成为作者！我们不限制你的身份，无论你是否是 USTC 的学生、校友、老师，只要你认同 USTCLUG 的理念，我们就欢迎你的来稿。</p>
-  <p>参与的方法很简单，只需为 <a href="https://github.com/ustclug/website">本网站仓库</a> 提交 Pull request 即可（如果文章包含图片等大二进制文件，需要将相关文件 PR 到 <a href="https://github.com/ustclug/website-static">网站静态内容仓库</a>）。具体操作细节可参考 <a href="https://github.com/ustclug/website/blob/master/README.md">仓库 README</a> 与 <a href="https://github.com/ustclug/website/blob/master/pages/_planet/_template.md">Planet 文章模板</a></p>
-  <p>如果觉得麻烦，可以使用邮件（见文章最后）等方式单独联系我们，我们可以帮助排版并发布 :-)</p>
-  <p><strong>（在未来我们会根据反馈定期对文章进行评选，优秀作品的作者有机会得到我们的奖品哦~）</strong></p>
-  <p>与此同时，作者应该承担如下责任：</p>
-  <ol>
-    <li>遵守 <a href="/wiki/lug/services/rules">LUG 网络服务总则</a>；</li>
-    <li>对内容的真实性、有效性和合法性负责；</li>
-    <li>配合编辑对稿件质量进行提升。</li>
-  </ol>
-  <p>发布后，我们鼓励作者根据读者的评论持续改进文章质量。</p>
-  <p>任何作品的著作权属于原作者，但如果你想在 LUG Planet 这个平台上发布作品，需要同意：</p>
-  <ol>
-    <li>USTCLUG 可以对这些内容进行再分发，即可以在 LUG Planet 及其他 LUG 官方信息渠道（包括但不限于 QQ 空间、Telegram 频道等）重发布；</li>
-    <li>USTCLUG 可以对这些内容进行微小修改。我们不会改变文意，大概是帮助你修改一些错别字和术语大小写等等细枝末节的问题；</li>
-    <li>USTCLUG 可以使用 USTCLUG 的名义对这些作品进行宣传；</li>
-    <li>文章发布以“现状”发布。不同版本的同一作品，其授权许可应该是互相独立的。在 LUG Planet 上发布作品就代表你同意：即使未来变更作品的许可协议，已被发布的版本将仍然按原有协议许可给 USTCLUG 展示或以上述被提及的方式继续使用。在未作出特别陈述的情况下，在 LUG Planet 上编辑你撰写的已经发布的文章默认继续使用上一个版本的许可协议。（简单说，就是一旦你的文章被发布，就无法撤回了。但你有权选择将新版本的文章不授权给 LUG Planet 使用。）</li>
-  </ol>
-  <p>为了方便起见，除了这些条款，你应该允许你的作品在 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 (国际)</a> 协议下发布，同时同意上面的附加条款。这是因为我们不是律师，所以选择一个已经写好的许可证书。</p>
-  <p>这里需要提醒一下，虽然文章的版权仍然属于原作者，但发布与否是由编辑决定的。</p>
-  <h3 id="编辑">编辑</h3>
-  <ol>
-    <li><del>审核评论及垃圾评论清理；</del></li>
-    <li>审核稿件是否适合发布在 LUG Planet 上；</li>
-    <li>在能力范围内，协助作者确认发布该文章是合法的（但不提供任何担保）；</li>
-    <li>在能力范围内，协助作者改进文章质量。</li>
-  </ol>
-  <h2 id="投稿标准与类型">投稿标准与类型</h2>
-  <p>为了鼓励大家能积极投稿而不要过多地考虑质量问题，我们设立的标准非常宽松：</p>
-  <ol>
-    <li>合法；</li>
-    <li>内容长度不少于三句话；</li>
-    <li>使用简体中文（汉语普通话），正确使用标点符号；</li>
-    <li>语句通顺，正确输入专有名词的大小写，不故意欺骗读者；</li>
-    <li>符合本博客的活动主题。</li>
-  </ol>
-  <p>我们特别欢迎以下类型投稿：</p>
-  <ul>
-    <li>小聚话题的延伸</li>
-    <li>折腾的心得体会</li>
-    <li>自由/开源软件教程</li>
-    <li>有趣的自由/开源软件的推介</li>
-    <li>通俗易懂的技术内幕</li>
-  </ul>
-  <p>但如果你要长篇连载（连载篇数大于等于 3），那么请向编辑们证明你能完结这个系列！</p>
-  <p>上面说得可能有些抽象，下面举几个例子吧。当然，不限于这些例子。</p>
-  <ul>
-    <li>你是小聚的主讲人。讲完后意犹未尽，那么你可以在这里进一步阐述；</li>
-    <li>你是小聚的听众之一。听完后意犹未尽，那么你可以在这里发表你的看法并进行延伸讨论；</li>
-    <li>你是 Linux 新手，不管是安装还是维护 Linux 都有了自己的独特的心得和体会，那么我们也欢迎你在这里发布；</li>
-    <li>你解决了 Linux 在某种硬件上的兼容性问题，而在互联网的其他地方并不能找到解决方案，那么我们特别欢迎你在这里发布；</li>
-    <li>你对某种 Microsoft 新技术有一定了解，那么我们欢迎你在这里向大家介绍。</li>
-  </ul>
-  <p>标准很宽松，话虽这么说，但我们仍然有“禁区”。下面这些话题是我们认为不适宜的：</p>
-  <ol>
-    <li>过偏过难的技术向文章
-      <ul>
-        <li>过于专门的文章我们也许无力审核</li>
-        <li>读者面过于狭窄，且可能与 LUG Planet 目标读者重叠较小，发布在 LUG Planet 上“性价比”较低</li>
-      </ul>
-    </li>
-    <li>业界资讯
-      <ul>
-        <li>这类文章时效性强，与更偏向于积累知识的 LUG Planet 不太搭调</li>
-        <li>我们认为这类文章有更好的资讯站点</li>
-      </ul>
-    </li>
-    <li>商业广告及赞助内容
-      <ul>
-        <li>USTCLUG 是一个不营利的学生社团</li>
-      </ul>
-    </li>
-    <li>与 LUG 主题没有任何关系的内容
-      <ul>
-        <li>包括但不限于新式永动机设计、大陆漂移学说不成立的分析、相对论错误的第 114514 种证明</li>
-        <li>编辑和读者对这些内容都不感兴趣，所以不能发布</li>
-      </ul>
-    </li>
-    <li>其他任何编辑认为不适宜的内容</li>
-  </ol>
-  <h2 id="联系方式">联系方式</h2>
-  <p>如果你有任何有关文章发表上的问题、或任何对 LUG Planet 发展上的建议，请立即与我们联络。联系邮箱：<a href="mailto:planet@ustclug.org">planet@ustclug.org</a>。</p>
-  <p>目前 LUG Planet 不知道谁在负责 😥</p>
-  <h2 id="更新日志">更新日志</h2>
-  <p>2021-01-24: 删除了有关 Wordpress 的内容，并更新了订阅方式。</p>
-  <p>2021-01-26: 更新了投稿操作细节。</p>
-  ]]></content><author><name>USTCLUG</name></author><summary type="html"><![CDATA[欢迎大家来到 LUG Planet！这是一个刚刚被发现的新星球，百废待兴。本文是 LUG Planet 的说明书，在你入驻之前，不妨先驻足欣赏一下这片风景。😀]]></summary></entry></feed>
+  ]]></content><author><name>Kai Ma</name></author><category term="Experience" /><category term="Courses" /><summary type="html"><![CDATA[本指南指导中科大 Linux 用户如何使用 Linux 完成各门课程、处理学业事项，以及运行需要的专业软件。“兼容性”仅代表使用 Linux 完成任务的难易程度，与其他指标（如课程本身质量和难度）无关。]]></summary></entry></feed>

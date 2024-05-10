@@ -1,0 +1,700 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.0 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="zh" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <!-- begin _includes/seo.html -->
+    <title>使用 Rclone 备份 OneDrive 内容 - LUG @ USTC</title>
+    <meta name="description" content="本文用于介绍如何使用 Rclone 备份 OneDrive 内容。">
+    <meta name="author" content="tiankaima">
+    <meta property="article:author" content="tiankaima">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="LUG @ USTC">
+    <meta property="og:title" content="使用 Rclone 备份 OneDrive 内容">
+    <meta property="og:url" content="https://lug.ustc.edu.cn/planet/2024/05/onedrive-backup-with-rclone/">
+    <meta property="og:description" content="本文用于介绍如何使用 Rclone 备份 OneDrive 内容。">
+    <meta property="og:image" content="https://lug.ustc.edu.cn/static/splash/galaxy-1.jpg">
+    <meta property="article:published_time" content="2024-05-10T00:00:00+08:00">
+    <meta property="article:modified_time" content="2024-05-10T20:25:51+08:00">
+    <link rel="canonical" href="https://lug.ustc.edu.cn/planet/2024/05/onedrive-backup-with-rclone/">
+    <!-- end _includes/seo.html -->
+    <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="LUG @ USTC Feed">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="57x57" href="/static/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/static/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/static/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/static/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/static/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/static/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/static/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/static/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/static/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/static/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/static/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#f3f6f6">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#f3f6f6">
+    <script type="text/javascript">
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+      window.enable_copy_code_button = true;
+    </script>
+    <!-- For all browsers -->
+    <link rel="stylesheet" href="/assets/css/main.css?v=2a4a1ab04a">
+    <link rel="stylesheet" href="/_extra/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
+    <link rel="stylesheet" href="/_extra/open-sans.css" media="invalid" onload="this.media='all'">
+    <!-- start custom head snippets -->
+    <!-- insert favicons. use https://realfavicongenerator.net/ -->
+    <!-- end custom head snippets -->
+  </head>
+  <body class="layout--single">
+    <nav class="skip-links">
+      <ul>
+        <li><a href="#site-nav" class="screen-reader-shortcut">转到主导航栏</a></li>
+        <li><a href="#main" class="screen-reader-shortcut">转到内容</a></li>
+        <li><a href="#footer" class="screen-reader-shortcut">转到底部</a></li>
+      </ul>
+    </nav>
+    <div class="masthead">
+      <div class="masthead__inner-wrap">
+        <div class="masthead__menu">
+          <nav id="site-nav" class="greedy-nav">
+            <a class="site-logo" href="/"><img src="/static/lug-penguin.png" alt="LUG @ USTC"></a>
+            <a class="site-title" href="/">
+              LUG @ USTC
+            </a>
+            <ul class="visible-links">
+              <li class="masthead__menu-item">
+                <a
+                href="/wiki/"
+                
+                
+              ><i class="fad fa-lg fa-fw fa-star-shooting"></i> Wiki</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a
+                href="/news/"
+                
+                
+              ><i class="fad fa-lg fa-fw fa-newspaper"></i> News</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a
+                href="/planet/"
+                
+                
+              ><i class="fad fa-lg fa-fw fa-planet-ringed fa-swap-opacity"></i> Planet</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a
+                href="https://github.com/ustclug"
+                
+                
+              ><i class="fab fa-lg fa-fw fa-github"></i> GitHub</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a
+                href="https://mirrors.ustc.edu.cn/"
+                
+                
+              ><i class="fad fa-lg fa-fw fa-server"></i> Mirrors</a>
+              </li>
+            </ul>
+            <button class="search__toggle" type="button">
+              <span class="visually-hidden">切换搜索</span>
+              <i class="fas fa-search"></i>
+            </button>
+            <button class="greedy-nav__toggle hidden" type="button">
+              <span class="visually-hidden">切换菜单</span>
+              <div class="navicon"></div>
+            </button>
+            <ul class="hidden-links hidden"></ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="initial-content">
+      <div class="page__hero--overlay"
+  style=" background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/static/splash/galaxy-1.jpg');"
+>
+        <div class="wrapper">
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            使用 Rclone 备份 OneDrive 内容
+          </h1>
+          <p class="page__meta">
+            <span class="page__meta-date">
+              <i class="far fa-calendar-alt" aria-hidden="true"></i>
+              <time datetime="2024-05-10T00:00:00+08:00">2024 年 5 月 10 日</time>
+            </span>
+            <span class="page__meta-sep"></span>
+            <span class="page__meta-readtime">
+              <i class="far fa-clock" aria-hidden="true"></i>
+              3 分钟阅读
+            </span>
+          </p>
+        </div>
+      </div>
+      <div id="main" role="main">
+        <div class="sidebar sticky">
+          <div itemscope itemtype="https://schema.org/Person" class="h-card">
+            <div class="author__avatar">
+              <a href="https://lug.ustc.edu.cn/">
+                <img src="https://avatars.githubusercontent.com/u/91816094?v=4" alt="tiankaima" itemprop="image" class="u-photo">
+              </a>
+            </div>
+            <div class="author__content">
+              <h3 class="author__name p-name" itemprop="name">
+                <a class="u-url" rel="me" href="https://lug.ustc.edu.cn/" itemprop="url">tiankaima</a>
+              </h3>
+            </div>
+            <div class="author__urls-wrapper">
+              <button class="btn btn--inverse">关注</button>
+              <ul class="author__urls social-icons">
+                <li><a href="https://github.com/tiankaima" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+                <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+              </ul>
+            </div>
+          </div>
+        </div>
+        <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+          <meta itemprop="headline" content="使用 Rclone 备份 OneDrive 内容">
+          <meta itemprop="description" content="本文用于介绍如何使用 Rclone 备份 OneDrive 内容。">
+          <meta itemprop="datePublished" content="2024-05-10T00:00:00+08:00">
+          <meta itemprop="dateModified" content="2024-05-10T20:25:51+08:00">
+          <div class="page__inner-wrap">
+            <section class="page__content" itemprop="text">
+              <aside class="sidebar__right sticky">
+                <nav class="toc">
+                  <header>
+                    <h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4>
+                  </header>
+                  <ul class="toc__menu">
+                    <li><a href="#rclone-简介">Rclone 简介</a></li>
+                    <li><a href="#安装-rclone">安装 Rclone</a></li>
+                    <li><a href="#配置-rclone">配置 Rclone</a></li>
+                    <li><a href="#将文件从-onedrive-备份到本地">将文件从 OneDrive 备份到本地</a></li>
+                    <li><a href="#总结">总结</a></li>
+                  </ul>
+                </nav>
+              </aside>
+              <p>本文用于介绍如何使用 Rclone 备份 OneDrive 内容。</p>
+              <h2 id="rclone-简介">Rclone 简介</h2>
+              <p>Rclone 是一个命令行工具，用于同步文件和目录到和从云存储服务。它支持 Google Drive、Amazon S3、Dropbox、Microsoft OneDrive、Yandex Disk、Box 和其他一些云存储服务。Rclone 是一个 Go 程序，可以在 Windows、macOS、Linux 和其他操作系统上运行。</p>
+              <h2 id="安装-rclone">安装 Rclone</h2>
+              <p>Rclone 官方的下载链接在 <a href="https://rclone.org/downloads/">这里</a>。你可以根据自己的操作系统下载对应的版本。</p>
+              <p>部分常见的包管理工具也提供了 Rclone 的安装方式，例如：</p>
+              <ul>
+                <li>
+                  <p>在 Windows 上，你可以使用 Chocolatey 安装 Rclone：</p>
+                  <div class="language-bash highlighter-rouge">
+                    <div class="highlight">
+                      <pre class="highlight"><code>choco <span class="nb">install </span>rclone
+</code></pre>
+                    </div>
+    </div>
+                </li>
+                <li>
+                  <p>在 Windows 上，你也可以使用 Winget 安装 Rclone：</p>
+                  <div class="language-bash highlighter-rouge">
+                    <div class="highlight">
+                      <pre class="highlight"><code>winget <span class="nb">install </span>Rclone.Rclone
+</code></pre>
+                    </div>
+    </div>
+                </li>
+                <li>
+                  <p>在 macOS 上，你可以使用 Homebrew 安装 Rclone：</p>
+                  <div class="language-bash highlighter-rouge">
+                    <div class="highlight">
+                      <pre class="highlight"><code>brew <span class="nb">install </span>rclone
+</code></pre>
+                    </div>
+    </div>
+                </li>
+                <li>
+                  <p>在 Ubuntu 上，你可以使用 apt 安装 Rclone：</p>
+                  <div class="language-bash highlighter-rouge">
+                    <div class="highlight">
+                      <pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>rclone
+</code></pre>
+                    </div>
+    </div>
+                </li>
+                <li>
+                  <p>更多包管理器的安装方法可以参考 <a href="https://rclone.org/install/#package-manager">Rclone 官方文档</a>。</p>
+                </li>
+              </ul>
+              <p>运行 <code class="language-plaintext highlighter-rouge">rclone --version</code> 来检查 Rclone 是否安装成功，如果正常，你应该类似看到如下输出：</p>
+              <div class="language-console highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>rclone <span class="nt">--version</span>
+<span class="go">rclone v1.66.0
+- os/version: darwin 14.5 (64 bit)
+- os/kernel: 23.5.0 (arm64)
+- os/type: darwin
+- os/arch: arm64 (ARMv8 compatible)
+- go/version: go1.22.1
+- go/linking: dynamic
+- go/tags: none
+</span></code></pre>
+                </div>
+              </div>
+              <h2 id="配置-rclone">配置 Rclone</h2>
+              <p>我们在这里以 <code class="language-plaintext highlighter-rouge">mail.ustc.edu.cn</code> 为例，做一个 step-by-step 的教程：</p>
+              <div class="language-bash highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>rclone config
+</code></pre>
+                </div>
+              </div>
+              <div class="language-console highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="go">No remotes found, make a new one?
+n) New remote
+s) Set configuration password
+q) Quit config
+</span><span class="gp">n/s/q&gt;</span><span class="w">
+</span></code></pre>
+                </div>
+              </div>
+              <p>输入 <code class="language-plaintext highlighter-rouge">n</code>，然后回车。</p>
+              <div class="language-console highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="go">Enter name for new remote.
+</span><span class="gp">name&gt;</span><span class="w">
+</span></code></pre>
+                </div>
+              </div>
+              <p>输入一个名字，这里我们输入 <code class="language-plaintext highlighter-rouge">onedrive</code>，然后回车。</p>
+              <div class="language-console highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="go">Option Storage.
+Type of storage to configure.
+Choose a number from below, or type in your own value.
+ 1 / 1Fichier
+   \ (fichier)
+ 2 / Akamai NetStorage
+   \ (netstorage)
+ 3 / Alias for an existing remote
+   \ (alias)
+ 4 / Amazon S3 Compliant Storage Providers including AWS, Alibaba, ArvanCloud, Ceph, ChinaMobile, Cloudflare, DigitalOcean, Dreamhost, GCS, HuaweiOBS, IBMCOS, IDrive, IONOS, LyveCloud, Leviia, Liara, Linode, Minio, Netease, Petabox, RackCorp, Rclone, Scaleway, SeaweedFS, StackPath, Storj, Synology, TencentCOS, Wasabi, Qiniu and others
+   \ (s3)
+
+</span><span class="c">...
+</span><span class="go">
+33 / Microsoft OneDrive
+   \ (onedrive)
+
+</span><span class="c">...
+</span><span class="go">
+</span><span class="gp">Storage&gt;</span><span class="w">
+</span></code></pre>
+                </div>
+              </div>
+              <p>输入 <code class="language-plaintext highlighter-rouge">33</code>，然后回车。</p>
+              <div class="language-console highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="go">Option client_id.
+OAuth Client Id.
+Leave blank normally.
+Enter a value. Press Enter to leave empty.
+</span><span class="gp">client_id&gt;</span><span class="w">
+</span><span class="go">
+Option client_secret.
+OAuth Client Secret.
+Leave blank normally.
+Enter a value. Press Enter to leave empty.
+</span><span class="gp">client_secret&gt;</span><span class="w">
+</span><span class="go">
+Option region.
+Choose national cloud region for OneDrive.
+Choose a number from below, or type in your own string value.
+Press Enter for the default (global).
+ 1 / Microsoft Cloud Global
+   \ (global)
+ 2 / Microsoft Cloud for US Government
+   \ (us)
+ 3 / Microsoft Cloud Germany
+   \ (de)
+ 4 / Azure and Office 365 operated by Vnet Group in China
+   \ (cn)
+</span><span class="gp">region&gt;</span><span class="w">
+</span><span class="go">
+Edit advanced config?
+y) Yes
+n) No (default)
+</span><span class="gp">y/n&gt;</span><span class="w">
+</span><span class="go">
+Use web browser to automatically authenticate rclone with remote?
+ * Say Y if the machine running rclone has a web browser you can use
+ * Say N if running rclone on a (remote) machine without web browser access
+If not sure try Y. If Y failed, try N.
+
+y) Yes (default)
+n) No
+</span><span class="gp">y/n&gt;</span><span class="w">
+</span></code></pre>
+                </div>
+              </div>
+              <p>这里我们都直接回车，不输入任何内容。(五次回车)</p>
+              <p>在这其中会弹出一个网页，让你登录你的 OneDrive 账号，然后授权 Rclone 访问你的 OneDrive 账号。</p>
+              <div class="language-console highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="go">Option config_type.
+Type of connection
+Choose a number from below, or type in an existing string value.
+Press Enter for the default (onedrive).
+ 1 / OneDrive Personal or Business
+   \ (onedrive)
+ 2 / Root Sharepoint site
+   \ (sharepoint)
+   / Sharepoint site name or URL
+ 3 | E.g. mysite or https://contoso.sharepoint.com/sites/mysite
+   \ (url)
+ 4 / Search for a Sharepoint site
+   \ (search)
+ 5 / Type in driveID (advanced)
+   \ (driveid)
+ 6 / Type in SiteID (advanced)
+   \ (siteid)
+   / Sharepoint server-relative path (advanced)
+ 7 | E.g. /teams/hr
+   \ (path)
+</span><span class="gp">config_type&gt;</span><span class="w">
+</span></code></pre>
+                </div>
+              </div>
+              <p>这里我们直接回车，不输入任何内容。</p>
+              <div class="language-console highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="go">Option config_driveid.
+Select drive you want to use
+Choose a number from below, or type in your own string value.
+Press Enter for the default (b!****************************************************************).
+ 1 / OneDrive (business)
+   \ (b!****************************************************************)
+</span><span class="gp">config_driveid&gt;</span><span class="w">
+</span><span class="go">
+Drive OK?
+
+Found drive "root" of type "business"
+URL: https://mailustceducn-my.sharepoint.com/personal/tiankaima_mail_ustc_edu_cn/Documents
+
+y) Yes (default)
+n) No
+</span><span class="gp">y/n&gt;</span><span class="w">
+</span><span class="go">
+Configuration complete.
+Options:
+- type: onedrive
+- token:
+***
+- drive_id: b!****************************************************************
+- drive_type: business
+Keep this "onedrive" remote?
+y) Yes this is OK (default)
+e) Edit this remote
+d) Delete this remote
+</span><span class="gp">y/e/d&gt;</span><span class="w">
+</span></code></pre>
+                </div>
+              </div>
+              <p>依旧是直接回车，不输入任何内容。</p>
+              <div class="language-console highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="go">Current remotes:
+
+Name                 Type
+====                 ====
+onedrive             onedrive
+
+e) Edit existing remote
+n) New remote
+d) Delete remote
+r) Rename remote
+c) Copy remote
+s) Set configuration password
+q) Quit config
+</span><span class="gp">e/n/d/r/c/s/q&gt;</span><span class="w">
+</span></code></pre>
+                </div>
+              </div>
+              <p>输入 <code class="language-plaintext highlighter-rouge">q</code>，然后回车。现在我们已经配置好了 Rclone。</p>
+              <h2 id="将文件从-onedrive-备份到本地">将文件从 OneDrive 备份到本地</h2>
+              <div class="language-console highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="go">rclone copy onedrive: /path/to/local/folder
+</span></code></pre>
+                </div>
+              </div>
+              <h2 id="总结">总结</h2>
+              <p>Rclone 是个非常强大的工具，支持的云存储服务也非常多，你可以通过 <code class="language-plaintext highlighter-rouge">rclone config</code> 来配置其他的云存储服务。</p>
+              <p>限于篇幅和时间关系，本文只介绍了 Rclone 的基本使用方法，更多的功能和用法请参考 <a href="https://rclone.org/docs/">Rclone 官方文档</a>。</p>
+              <p>如果您对这篇内容有任何问题或建议，欢迎 <a href="https://lug.ustc.edu.cn/wiki/lug/contact/">联系我们</a>。</p>
+            </section>
+            <footer class="page__meta">
+              <p class="page__taxonomy">
+                <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 标签: </strong>
+                <span itemprop="keywords">
+                  <a href="/tags/onedrive" class="page__taxonomy-item p-category" rel="tag">OneDrive</a><span class="sep">, </span>
+                  <a href="/tags/rclone" class="page__taxonomy-item p-category" rel="tag">rclone</a>
+                </span>
+              </p>
+              <p class="page__taxonomy">
+                <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 分类: </strong>
+                <span itemprop="keywords">
+                  <a href="/categories/tech-tutorial" class="page__taxonomy-item p-category" rel="tag">Tech Tutorial</a>
+                </span>
+              </p>
+              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2024-05-10">2024 年 5 月 10 日</time></p>
+            </footer>
+            <section class="page__share">
+              <h4 class="page__share-title">分享</h4>
+              <a href="https://twitter.com/intent/tweet?text=%E4%BD%BF%E7%94%A8+Rclone+%E5%A4%87%E4%BB%BD+OneDrive+%E5%86%85%E5%AE%B9%20https%3A%2F%2Flug.ustc.edu.cn%2Fplanet%2F2024%2F05%2Fonedrive-backup-with-rclone%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flug.ustc.edu.cn%2Fplanet%2F2024%2F05%2Fonedrive-backup-with-rclone%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+              <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://lug.ustc.edu.cn/planet/2024/05/onedrive-backup-with-rclone/" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+            </section>
+            <nav class="pagination">
+              <a href="/planet/2021/09/nethack-gitgud/" class="pagination--pager" title="菜鸡写给菜鸡的 NetHack 入门教程
+">上一页</a>
+              <a href="#" class="pagination--pager disabled">下一页</a>
+            </nav>
+          </div>
+        </article>
+        <div class="page__related">
+          <h2 class="page__related-title">猜您还喜欢</h2>
+          <div class="grid__wrapper">
+            <div class="grid__item">
+              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                <h2 class="archive__item-title no_toc" itemprop="headline">
+                  <a href="/planet/2021/09/nethack-gitgud/" rel="permalink">菜鸡写给菜鸡的 NetHack 入门教程
+                  </a>
+                </h2>
+                <p class="page__meta">
+                  <span class="page__meta-date">
+                    <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                    <time datetime="2021-09-27T00:00:00+08:00">2021 年 9 月 27 日</time>
+                  </span>
+                  <span class="page__meta-sep"></span>
+                  <span class="page__meta-readtime">
+                    <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+                    13 分钟阅读
+                  </span>
+                </p>
+                <p class="archive__item-excerpt" itemprop="description">
+                </p>
+              </article>
+            </div>
+            <div class="grid__item">
+              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                <h2 class="archive__item-title no_toc" itemprop="headline">
+                  <a href="/planet/2021/01/physexp-using-python/" rel="permalink">用 Python 处理大物实验数据
+                  </a>
+                </h2>
+                <p class="page__meta">
+                  <span class="page__meta-date">
+                    <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                    <time datetime="2021-01-25T00:00:00+08:00">2021 年 1 月 25 日</time>
+                  </span>
+                  <span class="page__meta-sep"></span>
+                  <span class="page__meta-readtime">
+                    <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+                    6 分钟阅读
+                  </span>
+                </p>
+                <p class="archive__item-excerpt" itemprop="description">身为某世界一流退学的学生，大物实验自然是逃不过。本人有幸选择了大物实验最多的专业方向，从一级做到六级，直到上学期刚刚结束。大物实验里数据处理是占了很多时间的，那么怎么才能「优雅」地完成这一工作呢？
+                </p>
+              </article>
+            </div>
+            <div class="grid__item">
+              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                <h2 class="archive__item-title no_toc" itemprop="headline">
+                  <a href="/planet/2020/12/tic-toc-in-kernel/" rel="permalink">在 Linux 内核中测试程序性能
+                  </a>
+                </h2>
+                <p class="page__meta">
+                  <span class="page__meta-date">
+                    <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                    <time datetime="2020-12-19T00:00:00+08:00">2020 年 12 月 19 日</time>
+                  </span>
+                  <span class="page__meta-sep"></span>
+                  <span class="page__meta-readtime">
+                    <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+                    8 分钟阅读
+                  </span>
+                </p>
+                <p class="archive__item-excerpt" itemprop="description">本学期，我担任了李诚老师编译原理课程的助教。在课程实验中，我们基于 LLVM 构建了一套编译系统，其中一个实验需要编写后端优化算法。为了评估学生们的优化代码，我们需要比较优化前后的代码（在这里是 LLVM IR）的性能。我们通过统计程序运行的时间来比较代码的性能，但是用户程序会受到内核调度。因为不是连续执行程序，...</p>
+              </article>
+            </div>
+            <div class="grid__item">
+              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                <h2 class="archive__item-title no_toc" itemprop="headline">
+                  <a href="/planet/2020/08/keeping-account-with-beancount/" rel="permalink">使用 Beancount 进行记账并自动记录一卡通消费
+                  </a>
+                </h2>
+                <p class="page__meta">
+                  <span class="page__meta-date">
+                    <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                    <time datetime="2020-08-06T00:00:00+08:00">2020 年 8 月 6 日</time>
+                  </span>
+                  <span class="page__meta-sep"></span>
+                  <span class="page__meta-readtime">
+                    <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+                    9 分钟阅读
+                  </span>
+                </p>
+                <p class="archive__item-excerpt" itemprop="description">本文首发于 https://charlesliu7.github.io/blackboard/2019/07/24/beancount/
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="search-content">
+      <div class="search-content__inner-wrap">
+        <div class="search-searchbar"></div>
+        <div class="search-hits"></div>
+      </div>
+    </div>
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+        <!-- end custom footer snippets -->
+        <div class="footer-row">
+          <div class="footer-block footer__about">
+            <p>中国科学技术大学 Linux 用户协会是由中国科学技术大学在校的 GNU/Linux 爱好者发起并组成的团体，旨在联合科大的 GNU/Linux
+              使用者，搭建信息交流共享的平台，宣传自由软件的价值，提高自由软件社区文化氛围，推广自由软件的应用。</p>
+          </div>
+          <div class="footer-block footer__extras">
+            <div class="footer__contact">
+              <ul>
+                <li>
+                  <a href="/wiki/intro/"><i class="fad fa-fw fa-address-card"></i> 关于我们</a>
+                </li>
+                <li>
+                  <a href="/wiki/lug/contact/"><i class="fas fa-fw fa-phone-alt"></i> 联系我们</a>
+                </li>
+                <li>
+                  <a href="/wiki/lug/contribute/"><i class="fad fa-fw fa-users"></i> 加入我们</a>
+                </li>
+                <li>
+                  <a href="/feed/"><i class="fad fa-fw fa-rss" style="--fa-secondary-opacity: 0.6;"></i> RSS 订阅</a>
+                </li>
+                <li>
+                  <a href="https://github.com/ustclug/website"><i class="fab fa-fw fa-github"></i> 本站仓库</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__logo">
+              <div class="footer__logo-image">
+                <img src="https://ftp.lug.ustc.edu.cn/misc/logo-white.svg" />
+              </div>
+              <div class="footer__logo-text">
+                <!-- a href="http://www.beian.miit.gov.cn" target="_blank">皖ICP备05002528号</a -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="/assets/js/main.min.js"></script>
+    <script>
+      // Including InstantSearch.js library and styling
+      const loadSearch = function() {
+        const loadCSS = function(src) {
+          var link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.type = 'text/css';
+          link.href = src;
+          link.media = 'all';
+          document.head.appendChild(link);
+        };
+
+        var script = document.createElement('script');
+        script.setAttribute("type", "text/javascript");
+        script.setAttribute("src", "https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js");
+        script.addEventListener("load", function() {
+          // Instantiating InstantSearch.js with Algolia credentials
+          const search = instantsearch({
+            appId: 'CM5ZKX0CV3',
+            apiKey: 'aa942e5bdda7368300e322cba95f47f6',
+            indexName: 'default',
+            searchParameters: {
+              restrictSearchableAttributes: ['title', 'content']
+            }
+          });
+
+          const hitTemplate = function(hit) {
+            const url = hit.url;
+            const hightlight = hit._highlightResult;
+            const title = hightlight.title && hightlight.title.value  || "";
+            const content = hightlight.html && hightlight.html.value  || "";
+
+            return `
+              <div class="list__item">
+                <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                  <h2 class="archive__item-title" itemprop="headline"><a href="${url}">${title}</a></h2>
+                  <div class="archive__item-excerpt" itemprop="description">${content}</div>
+                </article>
+              </div>
+            `;
+          }
+
+          // Adding searchbar and results widgets
+          search.addWidget(
+            instantsearch.widgets.searchBox({
+              container: '.search-searchbar',
+              poweredBy: true,
+              placeholder: '输入您要搜索的关键词...'
+            })
+          );
+          search.addWidget(
+            instantsearch.widgets.hits({
+              container: '.search-hits',
+              templates: {
+                item: hitTemplate,
+                empty: '无结果',
+              }
+            })
+          );
+
+          if (!search.started) {
+            search.start();
+          }
+        });
+        document.body.appendChild(script);
+
+        loadCSS("https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css");
+        loadCSS("https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css");
+      };
+
+      // Starting the search only when toggle is clicked
+      $(document).ready(function() {
+        var scriptLoaded = false;
+
+        $(".search__toggle").on("click", function() {
+          if (!scriptLoaded) {
+            loadSearch();
+            scriptLoaded = true;
+          }
+        });
+      });
+    </script>
+    <img src="/static/USTC_logo.svg" style="position: fixed; bottom: -320px; left: -200px; opacity: 0.1; z-index: -100;" />
+  </body>
+</html>
