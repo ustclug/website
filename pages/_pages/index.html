@@ -73,8 +73,8 @@ header:
     <h3 class="archive__subtitle">
       <a href="{{ "/news/" | relative_url }}">最新文章</a>
     </h3>
-    {%- comment %} Don't concat planet as it may require auditing by tw. {% endcomment -%}
-    {% assign posts = site.news | sort: 'date' | reverse %}
+    {%- comment %} Combined news and planet {% endcomment -%}
+    {% assign posts = site.news | concat: site.planet | sort: 'date' | reverse %}
     {% for post in posts limit: 5 %}
       {% include archive-single.html %}
     {% endfor %}
