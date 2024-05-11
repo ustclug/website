@@ -1,5 +1,5 @@
 ---
-permalink: /wiki/server/pxe/faq/
+redirect_from: /wiki/server/pxe/faq/
 ---
 
 # 中国科学技术大学校园网 PXE 服务 FAQ
@@ -60,9 +60,9 @@ dosnet 是由以下工具整合而成：
 
 ### 享受 PXE.USTC 服务需要什么软硬件环境？
 
-您的电脑最好内置有 PXE Boot Agent，并且已经[激活](https://lug.ustc.edu.cn/wiki/server/pxe/faq#如何激活我电脑中的_pxe_boot_agent)；没有现成支持的话，有[几种解决办法](https://lug.ustc.edu.cn/wiki/server/pxe/faq#我的电脑没有内置_pxe_boot_agent_我该怎么做)。
-您所在的网段最好有能提供正确的 PXE 信息的 DHCP 服务器，以及可以通过 TFTP 数据包的网关；没有的话可以请管理员加以[设置](https://lug.ustc.edu.cn/wiki/server/pxe/faq#我们实验室有自己的网关和dhcp服务器_该如何设置以便子网内的计算机能够访问pxe服务)，或自己动手[把网络启动系统加入 GRUB/LILO 菜单](https://lug.ustc.edu.cn/wiki/server/pxe/faq#如何把某个_pxeustc_上的网络启动系统直接加入_grublilo_的启动菜单)。
-如果您所在实验室用地址转换/伪装技术建立了自己的子网，则需要[配置](https://lug.ustc.edu.cn/wiki/server/pxe/faq#我们实验室有自己的网关和dhcp服务器_该如何设置以便子网内的计算机能够访问pxe服务)。
+您的电脑最好内置有 PXE Boot Agent，并且已经[激活](#如何激活我电脑中的_pxe_boot_agent)；没有现成支持的话，有[几种解决办法](#我的电脑没有内置_pxe_boot_agent_我该怎么做)。
+您所在的网段最好有能提供正确的 PXE 信息的 DHCP 服务器，以及可以通过 TFTP 数据包的网关；没有的话可以请管理员加以[设置](#我们实验室有自己的网关和dhcp服务器_该如何设置以便子网内的计算机能够访问pxe服务)，或自己动手[把网络启动系统加入 GRUB/LILO 菜单](#如何把某个_pxeustc_上的网络启动系统直接加入_grublilo_的启动菜单)。
+如果您所在实验室用地址转换/伪装技术建立了自己的子网，则需要[配置](#我们实验室有自己的网关和dhcp服务器_该如何设置以便子网内的计算机能够访问pxe服务)。
 
 ### 如何激活我电脑中的 PXE Boot Agent？
 
@@ -101,7 +101,7 @@ Boot Device Prioty:
 
 ### 我的电脑没有内置 PXE Boot Agent，我该怎么做？
 
-可以自己制作包含 PXE Boot Agent 的[启动软盘](https://lug.ustc.edu.cn/wiki/server/pxe/faq#如何制作_pxe_启动软盘)/[EEPROM](https://lug.ustc.edu.cn/wiki/server/pxe/faq#如何制作_pxe_eeprom)，也可以把它加入引导程序的[启动菜单](https://lug.ustc.edu.cn/wiki/server/pxe/faq#如何把_pxe_boot_agent_加入_grublilo_的启动菜单)。
+可以自己制作包含 PXE Boot Agent 的[启动软盘](如何制作_pxe_启动软盘)/[EEPROM](如何制作_pxe_eeprom)，也可以把它加入引导程序的[启动菜单](如何把_pxe_boot_agent_加入_grublilo_的启动菜单)。
 
 ### 如何制作 PXE 启动软盘？
 
@@ -138,8 +138,8 @@ Boot Device Prioty:
 5. 单击网页第四项中的 “Get ROM” 按钮下载它帮你动态生成的启动文件
 6. 将此文件放入 /boot 目录，并加入 GRUB 配置如下：
 
-```
-# cat>>/boot/grub/menu.lst<<EOF
+```console
+# cat >> /boot/grub/menu.lst << EOF
 title           etherboot
 root            (hd0,2)
 kernel          /boot/eb-5.3.12-forcedeth.zlilo
@@ -154,7 +154,7 @@ Windows 9x/XP/NT 用户需要下载安装 [WINGRUB](http://sourceforge.net/proje
 
 以我的系统为例：
 
-```
+```console
 # aptitude install tftp
 # mkdir /boot/knoppix ; cd /boot/knoppix
 # tftp pxe.ustc.edu.cn
@@ -179,7 +179,7 @@ Windows 9x/XP/NT 用户需要下载安装 [GRUB4DOS](http://sourceforge.net/proj
 
 2. 将如下一行拷贝到 C:\boot.ini 文件中去（一般是作为它的最后一行）：
 
-   ```
+   ```ini
    C:\GRLDR="GRUB for DOS"
    ```
 
@@ -203,7 +203,7 @@ Windows 9x/XP/NT 用户需要下载安装 [GRUB4DOS](http://sourceforge.net/proj
 
 下面的 linux 命令序列可以把 knoppix 3.7 安装到 /dev/hda2(空闲空间>700MB)：
 
-```
+```console
 # wget ftp://202.38.64.123/pub/linux/iso/Knoppix-3.7/KNOPPIX_V3.7-2004-12-08-EN.iso
 # mkdir /mnt/knoppix-iso
 # mount -o loop KNOPPIX_V3.7-2004-12-08-EN.iso /mnt/knoppix-iso
@@ -240,13 +240,13 @@ Windows 9x/XP/NT 用户需要下载安装 [WINGRUB](http://sourceforge.net/proje
 
 - 网关: 允许 tftp 数据包顺利通过
 
-  ```
+  ```console
   # modprobe ip_nat_tftp ip_conntrack_tftp
   ```
 
   可以在系统启动的时候自动加载这两个内核模块：
 
-  ```
+  ```console
   # echo ip_nat_tftp >> /etc/modules
   # echo ip_conntrack_tftp >> /etc/modules
   ```
@@ -254,7 +254,7 @@ Windows 9x/XP/NT 用户需要下载安装 [WINGRUB](http://sourceforge.net/proje
 - DHCP 服务: 为 PXELinux/Etherboot 提供必要的信息
   以安装有 dhcp3-server 的 debian 系统为例：
 
-  ```
+  ```console
   # cd /etc/dhcp3
   # wget http://pxe.ustc.edu.cn/dhcpd.pxe.conf
   # echo 'include "/etc/dhcp3/dhcpd.pxe.conf";' >> dhcpd.conf
@@ -263,14 +263,14 @@ Windows 9x/XP/NT 用户需要下载安装 [WINGRUB](http://sourceforge.net/proje
 
   如果只有较老版本的 ISC DHCP Server，或者其他 DHCP 服务程序，则只需加入以下两项配置信息，一般情况下都不会有问题：
 
-  ```
+  ```shell
   next-server  pxe.ustc.edu.cn;
   filename     "pxelinux.0";
   ```
 
 ### 可以进一步建立自己的 TFTP 服务器，所需的文件可以从我们这里取得
 
-```
+```console
 # aptitude install tftpd-hpa
 # mount pxe.ustc.edu.cn:/tftpboot /tftpboot
 # cp /tftpboot/tftpd-hpa /etc/default
@@ -291,7 +291,7 @@ Windows 9x/XP/NT 用户需要下载安装 [WINGRUB](http://sourceforge.net/proje
 
 1. 准备好 MD5 加密的口令
 
-   ```
+   ```console
    # grub-md5-crypt
    Password:
    Retype password:
@@ -300,7 +300,7 @@ Windows 9x/XP/NT 用户需要下载安装 [WINGRUB](http://sourceforge.net/proje
 
 2. 准备好一个 menu.lst
 
-   ```
+   ```console
    # cat /tftpboot/restricted/menu.lst
    password --md5 $1$NcP8o0$DrDhZlUX36Rt6Yzl2RavM/
    dhcp
@@ -321,7 +321,7 @@ Windows 9x/XP/NT 用户需要下载安装 [WINGRUB](http://sourceforge.net/proje
 
 3. 编译
 
-   ```
+   ```console
    # ./configure --disable-auto-linux-mem-opt --enable-preset-menu=/tftpboot/restricted/menu.lst --enable-diskless --enable-via-rhine
    # make
    # cp netboot/pxegrub /tftpboot/restricted/pxegrub.0
@@ -364,7 +364,7 @@ Windows 9x/XP/NT 用户需要下载安装 [WINGRUB](http://sourceforge.net/proje
 
 1. 定制编译一个包含所有必要的网卡驱动，以及如下选项：
 
-   ```
+   ```console
    # Networking options
    # Under "Device Drivers ---> Networking support ---> Networking options"
 
@@ -396,7 +396,7 @@ Windows 9x/XP/NT 用户需要下载安装 [WINGRUB](http://sourceforge.net/proje
 
 2. 启动此内核时使用参数：
 
-   ```
+   ```shell
    root=/dev/nfs nfsroot=202.38.73.198:/croot,rsize=8192,wsize=8192,tcp ip=dhcp
    ```
 
@@ -404,18 +404,18 @@ Windows 9x/XP/NT 用户需要下载安装 [WINGRUB](http://sourceforge.net/proje
 
 - Etherboot
 
-  - Homepage http://www.etherboot.org/
-  - Wiki http://wiki.etherboot.org/
+  - Homepage <http://www.etherboot.org/>
+  - Wiki <http://wiki.etherboot.org/>
 
-- Diskless Linux http://frank.harvard.edu/~coldwell/diskless/
+- Diskless Linux <http://frank.harvard.edu/~coldwell/diskless/>
 - PXE Documentation Version 1.0（缺少链接）
-- HOWTO setup a PXE 2.x server under Linux http://clic.mandrakesoft.com/documentation/pxe/
+- HOWTO setup a PXE 2.x server under Linux <http://clic.mandrakesoft.com/documentation/pxe/>
 
 - 基于 NFS\*ROOT 的 [Gentoo Linux 的 PXE 安装方法](http://www.gentoo.org.tw/doc/altinstall.xml#doc_chap5)
-- Diskless Nodes with Gentoo http://www.gentoo.org/doc/en/diskless-howto.xml
-- FreeBSD Diskless Clients http://the-labs.com/FreeBSD/Diskless/
-- Network Booting i386 Unix Variants http://www.munts.com/diskless/netboot.html
-- Booting FreeBSD via PXE http://www.tnpi.biz/computing/freebsd/pxe-netboot.shtml
+- Diskless Nodes with Gentoo <http://www.gentoo.org/doc/en/diskless-howto.xml>
+- FreeBSD Diskless Clients <http://the-labs.com/FreeBSD/Diskless/>
+- Network Booting i386 Unix Variants <http://www.munts.com/diskless/netboot.html>
+- Booting FreeBSD via PXE <http://www.tnpi.biz/computing/freebsd/pxe-netboot.shtml>
 - [Remote Network Boot via PXE](http://www.kegel.com/linux/pxe.html)
 - [Index of /tweaks/dhcp3](http://debian.jones.dk/tweaks/dhcp3/)
 - [如何远程安装 Linux](http://www-900.ibm.com/developerWorks/cn/linux/l-tip-prompt/l-pex/index.shtml)
@@ -444,7 +444,7 @@ Windows 9x/XP/NT 用户需要下载安装 [WINGRUB](http://sourceforge.net/proje
 - [MorphixWiki! - Qemu](http://am.xs4all.nl/phpwiki/index.php/Qemu)
 - [Index of /qemu/utilities/QEMU-HD-Mounter](http://dad-answers.com/qemu/utilities/QEMU-HD-Mounter/)
 - [DistroWatch.com: clusterKNOPPIX](http://distrowatch.com/table.php?distribution=clusterknoppix)
-- [[Wolves\] using GNU Screen to join two terminals?](http://mailman.lug.org.uk/pipermail/wolves/2004-November/010482.html)
+- [\[Wolves\] using GNU Screen to join two terminals?](http://mailman.lug.org.uk/pipermail/wolves/2004-November/010482.html)
 - [Linuxeden 的 GRUB 专区 : 首页](http://grub.linuxeden.com/wakka.php?wakka=%CA%D7%D2%B3)
 - [ParallelKnoppix: Bootable CD to Create a Linux Cluster in 15 Minutes](http://pareto.uab.es/mcreel/ParallelKnoppix/)
 - [PXE 網路開機實作](http://cha.homeip.net/blog/archives/2006/08/pxe.html)\*
