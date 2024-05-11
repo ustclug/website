@@ -1,5 +1,4 @@
 ---
-permalink: /wiki/server/pxe/
 ---
 
 # 中国科学技术大学网络启动服务
@@ -14,7 +13,7 @@ pxe.ustc.edu.cn 由中国科大图书馆、网络中心和学生 Linux 用户协
 
 ## 新版网络启动服务
 
-基于 GRUB 的新版网络启动服务支持**传统 PXE 模式**和**UEFI 模式**的网络启动。代码位于 https://github.com/ustclug/simple-pxe
+基于 GRUB 的新版网络启动服务支持**传统 PXE 模式**和**UEFI 模式**的网络启动。代码位于 <https://github.com/ustclug/simple-pxe>
 
 校内 DHCP 服务会自动推送网络启动配置，只要在 BIOS 设置中开启网络启动就可以了。
 
