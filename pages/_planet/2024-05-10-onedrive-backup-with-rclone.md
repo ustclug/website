@@ -108,7 +108,7 @@ Choose a number from below, or type in your own value.
 Storage>
 ```
 
-输入 `33`，然后回车。
+输入 `onedrive`，然后回车。
 
 ```console
 Option client_id.
@@ -238,7 +238,7 @@ e/n/d/r/c/s/q>
 ## 将文件从 OneDrive 备份到本地
 
 ```console
-rclone copy onedrive: /path/to/local/folder
+rclone copy onedrive: /path/to/local/folder -P
 ```
 
 ## 总结
