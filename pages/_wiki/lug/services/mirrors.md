@@ -15,17 +15,17 @@ redirect_from: /wiki/server/mirrors/
 
 ## 机器域名
 
-IPv4/v6: mirrors.ustc.edu.cn（能解析出教育网/电信/移动/联通/v6 地址）  
-v4-only: ipv4.mirrors.ustc.edu.cn（能解析出教育网/电信/移动/联通地址）  
-v6-only: ipv6.mirrors.ustc.edu.cn
+- IPv4/v6: mirrors.ustc.edu.cn（能解析出教育网/电信/移动/联通/v6 地址）
+- v4-only: ipv4.mirrors.ustc.edu.cn（能解析出教育网/电信/移动/联通地址）
+- v6-only: ipv6.mirrors.ustc.edu.cn
 
 在有些地方 DNS 会解析出电信地址，但可能使用教育网地址访问更快，这时可以通过修改 hosts 指定强制使用教育网地址访问。
 
-教育网 IP：202.38.95.110 (cernet.mirrors.ustc.edu.cn)  
-电信 IP：202.141.160.110 (chinanet.mirrors.ustc.edu.cn)  
-移动 IP：202.141.176.110 (cmcc.mirrors.ustc.edu.cn)  
-联通 IP：218.104.71.170 (unicom.mirrors.ustc.edu.cn)  
-IPv6：2001:da8:d800:95::110
+- 教育网 IP：202.38.95.110 (cernet.mirrors.ustc.edu.cn)
+- 电信 IP：202.141.160.110 (chinanet.mirrors.ustc.edu.cn)
+- 移动 IP：202.141.176.110 (cmcc.mirrors.ustc.edu.cn)
+- 联通 IP：218.104.71.170 (unicom.mirrors.ustc.edu.cn)
+- IPv6：2001:da8:d800:95::110
 
 ## 支持的访问方式
 

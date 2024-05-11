@@ -22,7 +22,7 @@ wiki:
       - title: '<i class="fad fa-lg fa-fw fa-link"></i> 友情链接'
         url: /wiki/lug/links/
       - title: '<i class="fad fa-lg fa-fw fa-database"></i> 开源软件镜像'
-        url: /wiki/server/mirrors/
+        url: /wiki/lug/services/mirrors/
   - title: 活动
     children:
       - title: '<i class="fad fa-lg fa-fw fa-sparkles"></i> LUG 活动'
