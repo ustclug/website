@@ -212,7 +212,7 @@
 | 日期       | 主持   | 主题                   | 讲稿                                                                                         | 视频                                                                                                       |
 | :--------- | :----- | :--------------------- | :------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------- |
 | 2014-12-13 | 康雷   | Tornado 开发简介与实例 | [Slides](https://ftp.lug.ustc.edu.cn/weekly_party/2014.12.13_Tornado/LUG_tornado.pdf)        |                                                                                                            |
-| 2014-11-22 | 沈达   | TeXmacs 入门讲座       | [Slides](/wiki/_media/lug/texmacs_intro.pdf) [Code](/wiki/_media/lug/graph.tar.gz)    |                                                                                                            |
+| 2014-11-22 | 沈达   | TeXmacs 入门讲座       | [Slides](/wiki/_media/lug/texmacs_intro.pdf) [Code](/wiki/_media/lug/graph.tar.gz)           |                                                                                                            |
 | 2014-11-08 | 张光宇 | Clojure 简介           | [Slides](/wiki/_media/lug/weekly-clojure.pdf)                                                | [Video](https://ftp.lug.ustc.edu.cn/weekly_party/2014.11.08_Clojure/wp-clojure.mp4)                        |
 | 2014-11-01 | 张荣葳 | 你所不知道的 DNS       | [Slides](https://ftp.lug.ustc.edu.cn/weekly_party/2014.11.01_DNS_and_DNSSec/DNS.pdf)         | [Video](https://ftp.lug.ustc.edu.cn/weekly_party/2014.11.01_DNS_and_DNSSec/2014.11.01_你所不知道的DNS.mp4) |
 | 2014-10-25 | 李博杰 | 云上的服务，你我共享   | [Slides](https://ftp.lug.ustc.edu.cn/weekly_party/2014.10.25_cloud_service/CloudService.pdf) |                                                                                                            |
@@ -245,7 +245,7 @@
 | 2013-11-10 | 李博杰 | Linux 路由与 iptables 配置        |                                                                                |
 | 2013-11-02 | 陆颖潮 | Latex 入门                        |                                                                                |
 | 2013-10-26 | 张光宇 | Doxygen 入门                      |                                                                                |
-| 2013-10-20 | 崔灏   | 可爱的 Python                     | [Slides (FIXME)](/oldwiki/_media/lug/slides20131020.zip)                               |
+| 2013-10-20 | 崔灏   | 可爱的 Python                     | [Slides (FIXME)](/oldwiki/_media/lug/slides20131020.zip)                       |
 | 2013-10-13 | 朱晟菁 | 编辑器之战                        |                                                                                |
 | 2013-09-30 | 张荣葳 | Linux 入门基础知识                |                                                                                |
 
