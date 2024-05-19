@@ -4,6 +4,9 @@ redirect_from: /wiki/server/pxe/faq/
 
 # 中国科学技术大学校园网 PXE 服务 FAQ
 
+**<i class="fas fa-exclamation-triangle"></i> 注意：**以下内容已经严重过时，仅供参考。
+{: .notice--warning }
+
 ## 一般用户
 
 ### 什么是 PXE

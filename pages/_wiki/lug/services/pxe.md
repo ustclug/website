@@ -8,7 +8,9 @@ redirect_from: /wiki/server/pxe/
 
 随着我校网络设施的不断升级和发展，网络应用在科研工作和日常生活中发挥着日益重要的作用。同时，PXE 相关的技术在这些年中也有了很大的发展，可以为大家提供更多更实用的服务。现在支持引导 Debian、Ubuntu、Arch Linux、CentOS 等常见 Linux/UNIX 发行版安装镜像或 LiveCD，同时还提供 Clonezilla、GParted Live 等实用系统维护工具。
 
-[中国科学技术大学校园网 PXE 服务 FAQ](pxe-faq.md)
+[技术文档](https://docs.ustclug.org/services/pxe/)
+
+~~[中国科学技术大学校园网 PXE 服务 FAQ](pxe-faq.md)~~ 过时信息，仅供参考。
 
 [Planet: 一根网线安装 Linux——PXE 介绍](/planet/2018/10/PXE-intro/)
 
@@ -16,9 +18,12 @@ redirect_from: /wiki/server/pxe/
 
 ## 新版网络启动服务
 
-基于 GRUB 的新版网络启动服务支持**传统 PXE 模式**和**UEFI 模式**的网络启动。代码位于 <https://github.com/ustclug/simple-pxe>
+基于 GRUB 的新版网络启动服务支持**传统 PXE 模式**和 **UEFI 模式**的网络启动。代码位于 <https://github.com/ustclug/simple-pxe>
 
 校内 DHCP 服务会自动推送网络启动配置，只要在 BIOS 设置中开启网络启动就可以了。
+
+**<i class="fas fa-exclamation-triangle"></i> 注意：**UEFI 模式网络启动不支持安全启动（Secure Boot），需要先行在 UEFI 配置中关闭。
+{: .notice--warning }
 
 ### 从本地 GRUB2 加载（UEFI）
 
@@ -54,8 +59,13 @@ mcopy grub.efi '::/EFI/BOOT/bootx64.efi' -i floppy.img
 ```shell
 dhcp
 set 210:string http://202.38.93.94/boot/tftp/
+# 如果是传统 BIOS 启动，执行以下命令：
 chain ${210:string}pxelinux.0
+# 否则执行以下命令：
+chain ${210:string}bootx64.efi
 ```
+
+也可以使用我们提供的[打包了 iPXE 脚本的 ISO](https://ftp.lug.ustc.edu.cn/PXE/image/ustc.ipxe.iso)，脚本中会自动判断当前的启动方式，并且执行对应的链式启动镜像。
 
 ## 旧版网络启动服务
 
