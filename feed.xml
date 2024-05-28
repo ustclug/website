@@ -1,54 +1,69 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://lug.ustc.edu.cn/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lug.ustc.edu.cn/" rel="alternate" type="text/html" /><updated>2024-05-20T01:21:27+08:00</updated><id>https://lug.ustc.edu.cn/feed.xml</id><title type="html">LUG @ USTC</title><subtitle>中国科学技术大学 Linux 用户协会</subtitle><author><name>USTCLUG</name></author><entry><title type="html">使用 Rclone 备份 OneDrive 内容</title><link href="https://lug.ustc.edu.cn/planet/2024/05/onedrive-backup-with-rclone/" rel="alternate" type="text/html" title="使用 Rclone 备份 OneDrive 内容" /><published>2024-05-10T00:00:00+08:00</published><updated>2024-05-11T14:48:35+08:00</updated><id>https://lug.ustc.edu.cn/planet/2024/05/onedrive-backup-with-rclone</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2024/05/onedrive-backup-with-rclone/"><![CDATA[<p>本文用于介绍如何使用 Rclone 备份 OneDrive 内容。</p>
-      <h2 id="rclone-简介">Rclone 简介</h2>
-      <p>Rclone 是一个命令行工具，用于同步文件和目录到和从云存储服务。它支持 Google Drive、Amazon S3、Dropbox、Microsoft OneDrive、Yandex Disk、Box 和其他一些云存储服务。Rclone 是一个 Go 程序，可以在 Windows、macOS、Linux 和其他操作系统上运行。</p>
-      <h2 id="安装-rclone">安装 Rclone</h2>
-      <p>Rclone 官方的下载链接在 <a href="https://rclone.org/downloads/">这里</a>。你可以根据自己的操作系统下载对应的版本。</p>
-      <p>部分常见的包管理工具也提供了 Rclone 的安装方式，例如：</p>
-      <ul>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://lug.ustc.edu.cn/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lug.ustc.edu.cn/" rel="alternate" type="text/html" /><updated>2024-05-28T15:35:13+08:00</updated><id>https://lug.ustc.edu.cn/feed.xml</id><title type="html">LUG @ USTC</title><subtitle>中国科学技术大学 Linux 用户协会</subtitle><author><name>USTCLUG</name></author><entry><title type="html">USTCLUG 西区活动室搬迁</title><link href="https://lug.ustc.edu.cn/news/2024/05/403/" rel="alternate" type="text/html" title="USTCLUG 西区活动室搬迁" /><published>2024-05-28T15:00:00+08:00</published><updated>2024-05-28T15:33:36+08:00</updated><id>https://lug.ustc.edu.cn/news/2024/05/403</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2024/05/403/"><![CDATA[<p>2024 年 4 月中旬，USTCLUG 西区活动室正式搬迁至西区图书馆 403 研讨室。</p>
+      <p>403 研讨室指路：</p>
+      <ol>
         <li>
-          <p>在 Windows 上，你可以使用 Chocolatey 安装 Rclone：</p>
-          <div class="language-bash highlighter-rouge">
-            <div class="highlight">
-              <pre class="highlight"><code>choco <span class="nb">install </span>rclone
+          <p>图书馆进门后，通过两侧的楼梯上四楼，如图：
+            <img src="https://ftp.lug.ustc.edu.cn/misc/403/2024-05-28_14-53-30.png" alt="" />
+            <img src="https://ftp.lug.ustc.edu.cn/misc/403/photo_2024-05-26_21-56-13.jpg" alt="" />
+            <img src="https://ftp.lug.ustc.edu.cn/misc/403/photo_2024-05-26_21-56-17.jpg" alt="" /></p>
+          <p>注意：电梯无法直达 403 研讨室，需要先乘坐到三楼，再通过楼梯步行至四楼。</p>
+        </li>
+        <li>
+          <p>403 室位于走廊中间，如图：
+            <img src="https://ftp.lug.ustc.edu.cn/misc/403/photo_2024-05-28_15-05-25.jpg" alt="" /></p>
+        </li>
+      </ol>
+      ]]></content><author><name>aka-dag</name></author><summary type="html"><![CDATA[2024 年 4 月中旬，USTCLUG 西区活动室正式搬迁至西区图书馆 403 研讨室。]]></summary></entry><entry><title type="html">使用 Rclone 备份 OneDrive 内容</title><link href="https://lug.ustc.edu.cn/planet/2024/05/onedrive-backup-with-rclone/" rel="alternate" type="text/html" title="使用 Rclone 备份 OneDrive 内容" /><published>2024-05-10T00:00:00+08:00</published><updated>2024-05-11T14:48:35+08:00</updated><id>https://lug.ustc.edu.cn/planet/2024/05/onedrive-backup-with-rclone</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2024/05/onedrive-backup-with-rclone/"><![CDATA[<p>本文用于介绍如何使用 Rclone 备份 OneDrive 内容。</p>
+    <h2 id="rclone-简介">Rclone 简介</h2>
+    <p>Rclone 是一个命令行工具，用于同步文件和目录到和从云存储服务。它支持 Google Drive、Amazon S3、Dropbox、Microsoft OneDrive、Yandex Disk、Box 和其他一些云存储服务。Rclone 是一个 Go 程序，可以在 Windows、macOS、Linux 和其他操作系统上运行。</p>
+    <h2 id="安装-rclone">安装 Rclone</h2>
+    <p>Rclone 官方的下载链接在 <a href="https://rclone.org/downloads/">这里</a>。你可以根据自己的操作系统下载对应的版本。</p>
+    <p>部分常见的包管理工具也提供了 Rclone 的安装方式，例如：</p>
+    <ul>
+      <li>
+        <p>在 Windows 上，你可以使用 Chocolatey 安装 Rclone：</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>choco <span class="nb">install </span>rclone
 </code></pre>
-            </div>
+          </div>
     </div>
-        </li>
-        <li>
-          <p>在 Windows 上，你也可以使用 Winget 安装 Rclone：</p>
-          <div class="language-bash highlighter-rouge">
-            <div class="highlight">
-              <pre class="highlight"><code>winget <span class="nb">install </span>Rclone.Rclone
+      </li>
+      <li>
+        <p>在 Windows 上，你也可以使用 Winget 安装 Rclone：</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>winget <span class="nb">install </span>Rclone.Rclone
 </code></pre>
-            </div>
+          </div>
     </div>
-        </li>
-        <li>
-          <p>在 macOS 上，你可以使用 Homebrew 安装 Rclone：</p>
-          <div class="language-bash highlighter-rouge">
-            <div class="highlight">
-              <pre class="highlight"><code>brew <span class="nb">install </span>rclone
+      </li>
+      <li>
+        <p>在 macOS 上，你可以使用 Homebrew 安装 Rclone：</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>brew <span class="nb">install </span>rclone
 </code></pre>
-            </div>
+          </div>
     </div>
-        </li>
-        <li>
-          <p>在 Ubuntu 上，你可以使用 apt 安装 Rclone：</p>
-          <div class="language-bash highlighter-rouge">
-            <div class="highlight">
-              <pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>rclone
+      </li>
+      <li>
+        <p>在 Ubuntu 上，你可以使用 apt 安装 Rclone：</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>rclone
 </code></pre>
-            </div>
+          </div>
     </div>
-        </li>
-        <li>
-          <p>更多包管理器的安装方法可以参考 <a href="https://rclone.org/install/#package-manager">Rclone 官方文档</a>。</p>
-        </li>
-      </ul>
-      <p>运行 <code class="language-plaintext highlighter-rouge">rclone --version</code> 来检查 Rclone 是否安装成功，如果正常，你应该类似看到如下输出：</p>
-      <div class="language-console highlighter-rouge">
-        <div class="highlight">
-          <pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>rclone <span class="nt">--version</span>
+      </li>
+      <li>
+        <p>更多包管理器的安装方法可以参考 <a href="https://rclone.org/install/#package-manager">Rclone 官方文档</a>。</p>
+      </li>
+    </ul>
+    <p>运行 <code class="language-plaintext highlighter-rouge">rclone --version</code> 来检查 Rclone 是否安装成功，如果正常，你应该类似看到如下输出：</p>
+    <div class="language-console highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>rclone <span class="nt">--version</span>
 <span class="go">rclone v1.66.0
 - os/version: darwin 14.5 (64 bit)
 - os/kernel: 23.5.0 (arm64)
@@ -58,38 +73,38 @@
 - go/linking: dynamic
 - go/tags: none
 </span></code></pre>
-        </div>
       </div>
-      <h2 id="配置-rclone">配置 Rclone</h2>
-      <p>我们在这里以 <code class="language-plaintext highlighter-rouge">mail.ustc.edu.cn</code> 为例，做一个 step-by-step 的教程：</p>
-      <div class="language-bash highlighter-rouge">
-        <div class="highlight">
-          <pre class="highlight"><code>rclone config
+    </div>
+    <h2 id="配置-rclone">配置 Rclone</h2>
+    <p>我们在这里以 <code class="language-plaintext highlighter-rouge">mail.ustc.edu.cn</code> 为例，做一个 step-by-step 的教程：</p>
+    <div class="language-bash highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code>rclone config
 </code></pre>
-        </div>
       </div>
-      <div class="language-console highlighter-rouge">
-        <div class="highlight">
-          <pre class="highlight"><code><span class="go">No remotes found, make a new one?
+    </div>
+    <div class="language-console highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code><span class="go">No remotes found, make a new one?
 n) New remote
 s) Set configuration password
 q) Quit config
 </span><span class="gp">n/s/q&gt;</span><span class="w">
 </span></code></pre>
-        </div>
       </div>
-      <p>输入 <code class="language-plaintext highlighter-rouge">n</code>，然后回车。</p>
-      <div class="language-console highlighter-rouge">
-        <div class="highlight">
-          <pre class="highlight"><code><span class="go">Enter name for new remote.
+    </div>
+    <p>输入 <code class="language-plaintext highlighter-rouge">n</code>，然后回车。</p>
+    <div class="language-console highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code><span class="go">Enter name for new remote.
 </span><span class="gp">name&gt;</span><span class="w">
 </span></code></pre>
-        </div>
       </div>
-      <p>输入一个名字，这里我们输入 <code class="language-plaintext highlighter-rouge">onedrive</code>，然后回车。</p>
-      <div class="language-console highlighter-rouge">
-        <div class="highlight">
-          <pre class="highlight"><code><span class="go">Option Storage.
+    </div>
+    <p>输入一个名字，这里我们输入 <code class="language-plaintext highlighter-rouge">onedrive</code>，然后回车。</p>
+    <div class="language-console highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code><span class="go">Option Storage.
 Type of storage to configure.
 Choose a number from below, or type in your own value.
  1 / 1Fichier
@@ -110,12 +125,12 @@ Choose a number from below, or type in your own value.
 </span><span class="go">
 </span><span class="gp">Storage&gt;</span><span class="w">
 </span></code></pre>
-        </div>
       </div>
-      <p>输入 <code class="language-plaintext highlighter-rouge">onedrive</code>，然后回车。</p>
-      <div class="language-console highlighter-rouge">
-        <div class="highlight">
-          <pre class="highlight"><code><span class="go">Option client_id.
+    </div>
+    <p>输入 <code class="language-plaintext highlighter-rouge">onedrive</code>，然后回车。</p>
+    <div class="language-console highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code><span class="go">Option client_id.
 OAuth Client Id.
 Leave blank normally.
 Enter a value. Press Enter to leave empty.
@@ -155,13 +170,13 @@ y) Yes (default)
 n) No
 </span><span class="gp">y/n&gt;</span><span class="w">
 </span></code></pre>
-        </div>
       </div>
-      <p>这里我们都直接回车，不输入任何内容。(五次回车)</p>
-      <p>在这其中会弹出一个网页，让你登录你的 OneDrive 账号，然后授权 Rclone 访问你的 OneDrive 账号。</p>
-      <div class="language-console highlighter-rouge">
-        <div class="highlight">
-          <pre class="highlight"><code><span class="go">Option config_type.
+    </div>
+    <p>这里我们都直接回车，不输入任何内容。(五次回车)</p>
+    <p>在这其中会弹出一个网页，让你登录你的 OneDrive 账号，然后授权 Rclone 访问你的 OneDrive 账号。</p>
+    <div class="language-console highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code><span class="go">Option config_type.
 Type of connection
 Choose a number from below, or type in an existing string value.
 Press Enter for the default (onedrive).
@@ -183,12 +198,12 @@ Press Enter for the default (onedrive).
    \ (path)
 </span><span class="gp">config_type&gt;</span><span class="w">
 </span></code></pre>
-        </div>
       </div>
-      <p>这里我们直接回车，不输入任何内容。</p>
-      <div class="language-console highlighter-rouge">
-        <div class="highlight">
-          <pre class="highlight"><code><span class="go">Option config_driveid.
+    </div>
+    <p>这里我们直接回车，不输入任何内容。</p>
+    <div class="language-console highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code><span class="go">Option config_driveid.
 Select drive you want to use
 Choose a number from below, or type in your own string value.
 Press Enter for the default (b!****************************************************************).
@@ -218,12 +233,12 @@ e) Edit this remote
 d) Delete this remote
 </span><span class="gp">y/e/d&gt;</span><span class="w">
 </span></code></pre>
-        </div>
       </div>
-      <p>依旧是直接回车，不输入任何内容。</p>
-      <div class="language-console highlighter-rouge">
-        <div class="highlight">
-          <pre class="highlight"><code><span class="go">Current remotes:
+    </div>
+    <p>依旧是直接回车，不输入任何内容。</p>
+    <div class="language-console highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code><span class="go">Current remotes:
 
 Name                 Type
 ====                 ====
@@ -238,32 +253,32 @@ s) Set configuration password
 q) Quit config
 </span><span class="gp">e/n/d/r/c/s/q&gt;</span><span class="w">
 </span></code></pre>
-        </div>
       </div>
-      <p>输入 <code class="language-plaintext highlighter-rouge">q</code>，然后回车。现在我们已经配置好了 Rclone。</p>
-      <h2 id="将文件从-onedrive-备份到本地">将文件从 OneDrive 备份到本地</h2>
-      <div class="language-console highlighter-rouge">
-        <div class="highlight">
-          <pre class="highlight"><code><span class="go">rclone copy onedrive: /path/to/local/folder -P
+    </div>
+    <p>输入 <code class="language-plaintext highlighter-rouge">q</code>，然后回车。现在我们已经配置好了 Rclone。</p>
+    <h2 id="将文件从-onedrive-备份到本地">将文件从 OneDrive 备份到本地</h2>
+    <div class="language-console highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code><span class="go">rclone copy onedrive: /path/to/local/folder -P
 </span></code></pre>
-        </div>
       </div>
-      <h2 id="总结">总结</h2>
-      <p>Rclone 是个非常强大的工具，支持的云存储服务也非常多，你可以通过 <code class="language-plaintext highlighter-rouge">rclone config</code> 来配置其他的云存储服务。</p>
-      <p>限于篇幅和时间关系，本文只介绍了 Rclone 的基本使用方法，更多的功能和用法请参考 <a href="https://rclone.org/docs/">Rclone 官方文档</a>。</p>
-      <p>如果您对这篇内容有任何问题或建议，欢迎 <a href="https://lug.ustc.edu.cn/wiki/lug/contact/">联系我们</a>。</p>
-      ]]></content><author><name>tiankaima</name></author><category term="Tech Tutorial" /><category term="rclone" /><category term="OneDrive" /><summary type="html"><![CDATA[本文用于介绍如何使用 Rclone 备份 OneDrive 内容。]]></summary></entry><entry><title type="html">Linux 图形堆栈初探</title><link href="https://lug.ustc.edu.cn/news/2024/04/gathering-linux-graphics-journey/" rel="alternate" type="text/html" title="Linux 图形堆栈初探" /><published>2024-04-21T15:00:00+08:00</published><updated>2024-04-24T16:09:07+08:00</updated><id>https://lug.ustc.edu.cn/news/2024/04/gathering-linux-graphics-journey</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2024/04/gathering-linux-graphics-journey/"><![CDATA[<p>2024 年 3 月 31 日，校学生 Linux 用户协会举办了一场小聚活动。本次小聚为刘紫檀同学为我们带来的关于 Linux 图形堆栈的介绍。</p>
-    <p><img src="https://ftp.lug.ustc.edu.cn/weekly_party/2024.04.21_Linux_Graphics_Journey/photo/C674688314E3F9149BAEAD6DE8A024EA.jpg" alt="" /></p>
-    <p>在活动的开始，刘紫檀同学介绍了他本人阅读图形栈程序的心得体会，同时分享了自己编写的一个能够便捷阅读 Archlinux 源码的脚本。刘同学认为在阅读程序时需要了解功能间的界面，并以 Wayland 协议来举例说明。</p>
-    <p><img src="https://ftp.lug.ustc.edu.cn/weekly_party/2024.04.21_Linux_Graphics_Journey/photo/6C0D0AD15BB58A9211D3F4AD0F0F42C8.png" alt="" /></p>
-    <p>随后，刘紫檀介绍了 GUI 程序的基本构成。刘同学向大家展示了 CLI 与 GUI 程序代码，解释了其基本的组成部分，由实现最基础的功能到处理复杂的用户需求。</p>
-    <p><img src="https://ftp.lug.ustc.edu.cn/weekly_party/2024.04.21_Linux_Graphics_Journey/photo/F939405C44EA3364304AE83FA5AF7FAD.png" alt="" /></p>
-    <p>刘紫檀重点介绍了 GUI 程序绘制技术的演进，以 PC /Linux 上的图形显示为主线进行了整理。首先刘同学介绍了帧缓冲设备（fbdev），给大家展示了历代不同产商生产的显卡，并说明了帧缓冲设备的工作流程与基本操作。紧接着，刘同学介绍了历史悠久的 X 窗口系统、早期与现代的 DRI、DRM 框架等，在最后介绍了 Wayland 协议。</p>
-    <p><img src="https://ftp.lug.ustc.edu.cn/weekly_party/2024.04.21_Linux_Graphics_Journey/photo/88F681B958C76D6F349FB070DB260E8D.jpg" alt="" /></p>
-    <p>活动接近尾声，刘同学用一张图表梳理了今天小聚的内容脉络，与现场的同学们展开了相关的交流。</p>
-    <p><img src="https://ftp.lug.ustc.edu.cn/weekly_party/2024.04.21_Linux_Graphics_Journey/photo/D145719FD50F4095BBA726CF654291A3.png" alt="" /></p>
-    <p>小聚录像已上传至 ftp：<a href="https://ftp.lug.ustc.edu.cn/weekly_party/2024.04.21_Linux_Graphics_Journey/video/Linux_Graphics_Journey.mp4">Linux 图形堆栈初探</a></p>
-    ]]></content><author><name>aka-dag</name></author><category term="LUG 活动" /><category term="LUG 小聚" /><summary type="html"><![CDATA[2024 年 3 月 31 日，校学生 Linux 用户协会举办了一场小聚活动。本次小聚为刘紫檀同学为我们带来的关于 Linux 图形堆栈的介绍。]]></summary></entry><entry><title type="html">Linux 101 第三课</title><link href="https://lug.ustc.edu.cn/news/2024/04/Linux101-3/" rel="alternate" type="text/html" title="Linux 101 第三课" /><published>2024-04-14T14:30:00+08:00</published><updated>2024-04-18T10:57:55+08:00</updated><id>https://lug.ustc.edu.cn/news/2024/04/Linux101-3</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2024/04/Linux101-3/"><![CDATA[<p>2024 年 4 月 14 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C102 教室举办 Linux 101 系列活动的第三课：进程、前后台、服务与例行性任务。</p>
+    </div>
+    <h2 id="总结">总结</h2>
+    <p>Rclone 是个非常强大的工具，支持的云存储服务也非常多，你可以通过 <code class="language-plaintext highlighter-rouge">rclone config</code> 来配置其他的云存储服务。</p>
+    <p>限于篇幅和时间关系，本文只介绍了 Rclone 的基本使用方法，更多的功能和用法请参考 <a href="https://rclone.org/docs/">Rclone 官方文档</a>。</p>
+    <p>如果您对这篇内容有任何问题或建议，欢迎 <a href="https://lug.ustc.edu.cn/wiki/lug/contact/">联系我们</a>。</p>
+    ]]></content><author><name>tiankaima</name></author><category term="Tech Tutorial" /><category term="rclone" /><category term="OneDrive" /><summary type="html"><![CDATA[本文用于介绍如何使用 Rclone 备份 OneDrive 内容。]]></summary></entry><entry><title type="html">Linux 图形堆栈初探</title><link href="https://lug.ustc.edu.cn/news/2024/04/gathering-linux-graphics-journey/" rel="alternate" type="text/html" title="Linux 图形堆栈初探" /><published>2024-04-21T15:00:00+08:00</published><updated>2024-04-24T16:09:07+08:00</updated><id>https://lug.ustc.edu.cn/news/2024/04/gathering-linux-graphics-journey</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2024/04/gathering-linux-graphics-journey/"><![CDATA[<p>2024 年 3 月 31 日，校学生 Linux 用户协会举办了一场小聚活动。本次小聚为刘紫檀同学为我们带来的关于 Linux 图形堆栈的介绍。</p>
+  <p><img src="https://ftp.lug.ustc.edu.cn/weekly_party/2024.04.21_Linux_Graphics_Journey/photo/C674688314E3F9149BAEAD6DE8A024EA.jpg" alt="" /></p>
+  <p>在活动的开始，刘紫檀同学介绍了他本人阅读图形栈程序的心得体会，同时分享了自己编写的一个能够便捷阅读 Archlinux 源码的脚本。刘同学认为在阅读程序时需要了解功能间的界面，并以 Wayland 协议来举例说明。</p>
+  <p><img src="https://ftp.lug.ustc.edu.cn/weekly_party/2024.04.21_Linux_Graphics_Journey/photo/6C0D0AD15BB58A9211D3F4AD0F0F42C8.png" alt="" /></p>
+  <p>随后，刘紫檀介绍了 GUI 程序的基本构成。刘同学向大家展示了 CLI 与 GUI 程序代码，解释了其基本的组成部分，由实现最基础的功能到处理复杂的用户需求。</p>
+  <p><img src="https://ftp.lug.ustc.edu.cn/weekly_party/2024.04.21_Linux_Graphics_Journey/photo/F939405C44EA3364304AE83FA5AF7FAD.png" alt="" /></p>
+  <p>刘紫檀重点介绍了 GUI 程序绘制技术的演进，以 PC /Linux 上的图形显示为主线进行了整理。首先刘同学介绍了帧缓冲设备（fbdev），给大家展示了历代不同产商生产的显卡，并说明了帧缓冲设备的工作流程与基本操作。紧接着，刘同学介绍了历史悠久的 X 窗口系统、早期与现代的 DRI、DRM 框架等，在最后介绍了 Wayland 协议。</p>
+  <p><img src="https://ftp.lug.ustc.edu.cn/weekly_party/2024.04.21_Linux_Graphics_Journey/photo/88F681B958C76D6F349FB070DB260E8D.jpg" alt="" /></p>
+  <p>活动接近尾声，刘同学用一张图表梳理了今天小聚的内容脉络，与现场的同学们展开了相关的交流。</p>
+  <p><img src="https://ftp.lug.ustc.edu.cn/weekly_party/2024.04.21_Linux_Graphics_Journey/photo/D145719FD50F4095BBA726CF654291A3.png" alt="" /></p>
+  <p>小聚录像已上传至 ftp：<a href="https://ftp.lug.ustc.edu.cn/weekly_party/2024.04.21_Linux_Graphics_Journey/video/Linux_Graphics_Journey.mp4">Linux 图形堆栈初探</a></p>
+  ]]></content><author><name>aka-dag</name></author><category term="LUG 活动" /><category term="LUG 小聚" /><summary type="html"><![CDATA[2024 年 3 月 31 日，校学生 Linux 用户协会举办了一场小聚活动。本次小聚为刘紫檀同学为我们带来的关于 Linux 图形堆栈的介绍。]]></summary></entry><entry><title type="html">Linux 101 第三课</title><link href="https://lug.ustc.edu.cn/news/2024/04/Linux101-3/" rel="alternate" type="text/html" title="Linux 101 第三课" /><published>2024-04-14T14:30:00+08:00</published><updated>2024-04-18T10:57:55+08:00</updated><id>https://lug.ustc.edu.cn/news/2024/04/Linux101-3</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2024/04/Linux101-3/"><![CDATA[<p>2024 年 4 月 14 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C102 教室举办 Linux 101 系列活动的第三课：进程、前后台、服务与例行性任务。</p>
   <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2024.04.14_Linux_101_%E7%AC%AC%E4%B8%89%E8%AF%BE/photo/EF632DA1CAC133C5A4168A203C912F0E.jpg" alt="" /></p>
   <p>本次活动由协会副会长刘良宇同学为大家带来相关内容的讲解。刘良宇首先向大家介绍了 Linux 下的进程这一概念，紧接着便展示了如何使用简单的命令来查看系统当前进程，如 ps、htop 等。随后，刘同学介绍了信号的概念，并用一个表格简单明了地向大家说明了一些常用的信号以及其概念。</p>
   <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2024.04.14_Linux_101_%E7%AC%AC%E4%B8%89%E8%AF%BE/photo/image.png" alt="alt text" /></p>
@@ -344,15 +359,4 @@ q) Quit config
   <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2023.10.27_Hackergame%E5%8A%A8%E5%91%98%E4%BC%9A/photo/4.jpg" alt="" /></p>
   <p>整个动员会充满了技术氛围，参与者们积极互动，踊跃提问，展示了大家对技术挑战的浓厚兴趣。通过本次动员会，参赛者不仅获得了宝贵的比赛信息和解题思路，还有机会加入 NEBULA 战队，与志同道合的伙伴一起挑战技术巅峰。</p>
   <p>Hackergame 2023 动员会为比赛的顺利进行提供了有力支持。希望更多的同学能够积极参与比赛，锻炼自己的技术能力，同时也感谢 NEBULA 战队为大家提供了如此精彩的分享和招新机会。期待能在比赛中见证同学们的精彩表现！</p>
-  ]]></content><author><name>aka-dag</name></author><category term="LUG 活动" /><summary type="html"><![CDATA[校学生 Linux 用户协会于 2023 年 10 月 27 日晚 19:00 举办了中国科学技术大学第十届信息安全大赛（Hackergame 2023）动员会，旨在为参赛者提供比赛规则、流程和常用工具的介绍，帮助大家更好地准备比赛。]]></summary></entry><entry><title type="html">LUG 小聚：Git 简介与使用心得分享</title><link href="https://lug.ustc.edu.cn/news/2023/10/gathering-git/" rel="alternate" type="text/html" title="LUG 小聚：Git 简介与使用心得分享" /><published>2023-10-22T21:00:00+08:00</published><updated>2023-11-19T15:32:22+08:00</updated><id>https://lug.ustc.edu.cn/news/2023/10/gathering-git</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2023/10/gathering-git/"><![CDATA[<p>2023 年 10 月 22 日，校学生 Linux 用户协会举办了一场小聚活动。本次小聚是由王永福同学为我们带来的关于 Git 的简介与使用心得分享。</p>
-  <p><img src="https://ftp.lug.ustc.edu.cn/weekly_party/2023.10.22_Git%20%E5%B0%8F%E8%81%9A/photo/git%E5%BC%80%E5%9C%BA.jpg" alt="" /></p>
-  <p>Git 是一款开源的分布式版本控制软件，多用于项目的管理与合作开发，能够便捷地进行开发历史回溯。Git 由一系列的小工具组成，配合使用以完成工作任务。</p>
-  <p><img src="https://ftp.lug.ustc.edu.cn/weekly_party/2023.10.22_Git%20%E5%B0%8F%E8%81%9A/photo/fire.png" alt="" /></p>
-  <p>首先，王永福同学从创建工作目录、初始化 Git 版本库、编辑文件、添加到暂存区、进行最终的提交等方面演示了 Git 的基本操作，给线上线下的同学们一个对 Git 使用的直观理解。</p>
-  <p><img src="https://ftp.lug.ustc.edu.cn/weekly_party/2023.10.22_Git%20%E5%B0%8F%E8%81%9A/photo/%E7%AC%AC%E4%B8%80%E6%AD%A5.png" alt="" /></p>
-  <p>紧接着，王同学结合他上述操作为大家讲明了 Git 的基本工作原理。工作区中含有一个 .git 目录，存放着 Git 版本库。Git 所有东西都是对象存储的，基本命令可以将文件在工作区与版本库间移动。每个提交（commit）构成了一个节点，Git 对分支的生成、合并与并行合作都有较好的支持。</p>
-  <p><img src="https://ftp.lug.ustc.edu.cn/weekly_party/2023.10.22_Git%20%E5%B0%8F%E8%81%9A/photo/git%E5%9F%BA%E6%9C%AC%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86.png" alt="" /></p>
-  <p>在介绍完基础知识后，王同学也同样介绍了 Git 的一些进阶使用技巧，如分支（branch）相关操作、代码托管等等，同时也列举出了 Git 的常用命令并对其进行解释。为了对开发历史版本有更直观的了解，王同学推荐了几款图形化工具，其中重点展示了 VSCode 与 GitLens 的协同工作效果。</p>
-  <p><img src="https://ftp.lug.ustc.edu.cn/weekly_party/2023.10.22_Git%20%E5%B0%8F%E8%81%9A/photo/vsc-gitlens.png" alt="" /></p>
-  <p>小聚接近尾声，王同学在最后分享了自己 Windows 与 Linux 协同工作时的心得体会，也提供了更深入了解 Git 操作的渠道。分享结束后，现场的同学积极提问，这周的小聚便在热烈的讨论声中画上了句号。</p>
-  ]]></content><author><name>aka-dag</name></author><category term="LUG 活动" /><category term="LUG 小聚" /><summary type="html"><![CDATA[2023 年 10 月 22 日，校学生 Linux 用户协会举办了一场小聚活动。本次小聚是由王永福同学为我们带来的关于 Git 的简介与使用心得分享。]]></summary></entry></feed>
+  ]]></content><author><name>aka-dag</name></author><category term="LUG 活动" /><summary type="html"><![CDATA[校学生 Linux 用户协会于 2023 年 10 月 27 日晚 19:00 举办了中国科学技术大学第十届信息安全大赛（Hackergame 2023）动员会，旨在为参赛者提供比赛规则、流程和常用工具的介绍，帮助大家更好地准备比赛。]]></summary></entry></feed>
