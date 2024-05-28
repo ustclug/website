@@ -188,6 +188,23 @@ X-Y 型问题指代这样一种情况：你遇到了 X 问题，你相信用 Y �
   A2: 用 rsync 啊，你妹！
   ```
 
+另外这是一个大幅简略后实际出现的例子：
+
+```
+Q: 有没有人在导入的时候遇到 TypeError: Can't create an SSLContext object without an ssl module? 的报错？
+A1: 你编译的时候没加 ssl 模块吗
+Q: 加了，我看了 csdn 上的教程 [截图]
+A2: 你这教程怎么把源代码目录移动到 /usr/lib 下面啊，换个教程吧
+A3: 等等，为什么你要自己编译 python？你在用什么发行版？
+Q: Ubuntu 20.04，我没找到 python3 在哪里
+A3: 20.04 不是自带的 Python 3.8 吗？这个不够用吗？
+Q: 不是，我直接跑 python 出来的是 python2
+A2: 装 python-is-python3
+A3: 20.04 源里面也有 3.9，可以直接 install python3.9
+```
+
+提问者的问题在于：**他实际的问题是「如何在 Ubuntu 20.04 下默认使用 Python3」，而不是「如何安装 Python3」**。
+
 ### 避免「在吗」/「有人吗」
 
 在私聊的场合下，直接提问比先只问「在吗」是更好、效率更高的选择，否则参考这个（虚构的）例子：
