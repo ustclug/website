@@ -10,8 +10,6 @@ redirect_from: /wiki/server/pxe/
 
 [技术文档](https://docs.ustclug.org/services/pxe/)
 
-~~[中国科学技术大学校园网 PXE 服务 FAQ](pxe-faq.md)~~ 过时信息，仅供参考。
-
 [Planet: 一根网线安装 Linux——PXE 介绍](/planet/2018/10/PXE-intro/)
 
 如果遇到使用问题，请邮件联系 lug AT ustc.edu.cn。

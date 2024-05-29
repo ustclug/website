@@ -221,9 +221,9 @@ LVM 能让您调节逻辑卷的体积，你可以调整适合文件系统的体�
 问题 6：What is the install location?
 
           输入要安装的虚拟机的源文件路径，GTES11目前支持NFS, FTP和HTTP三种方式。例如：
-     nfs:my.nfs.server.com:/path/to/test/gtes11vm
-     ftp://my.ftp.server.com/path/to/test/gtes11vm
-     http://my.http.server.com/path/to/test/gtes11vm
+     nfs:my.nfs.example.com:/path/to/test/gtes11vm
+     ftp://my.ftp.example.com/path/to/test/gtes11vm
+     http://my.http.example.com/path/to/test/gtes11vm
 
 对以上问题作出相应的回答以后，接下来的 GTES11 虚拟机安装就变得很容易了。如果选择支持图形方式，一个 VNC 窗口就会弹出来，如下图所示。
 
