@@ -25,7 +25,7 @@
 
 适合于即时性较强的讨论，较正式的讨论还请使用官方邮件列表。
 
-- QQ 群：群号请查看 `qq.ustclug.org` 的 DNS TXT 记录。校内学生请联系管理员了解详情。
+QQ 群群号请查看 `qq.ustclug.org` 的 DNS TXT 记录。校内学生请联系管理员了解详情。
 
 ## IRC 上的 LUG
 
@@ -67,4 +67,4 @@ Name：中科大 LUG
 - 人人：[USTCLUG](https://www.renren.com/profile.do?id=345760436)
 - 豆瓣：[科大 LUG](https://www.douban.com/people/ustclug/)
 
-更多信息，请参阅[LUG 宣传账号一览](sns.md)。
+更多信息，请参阅 [LUG 宣传账号一览](sns.md)。
