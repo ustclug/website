@@ -59,4 +59,4 @@ Designed by Shengyu Zhang on 2018-08-30
 
 ## 协会章程
 
-LUG 的所有活动均依照[协会章程](http://ftp.lug.ustc.edu.cn/%E7%A4%BE%E5%9B%A2%E7%AE%A1%E7%90%86/%E7%AB%A0%E7%A8%8B/2021-%E7%AB%A0%E7%A8%8B.pdf)开展。
+LUG 的所有活动均依照[协会章程](https://ftp.lug.ustc.edu.cn/%E7%A4%BE%E5%9B%A2%E7%AE%A1%E7%90%86/%E7%AB%A0%E7%A8%8B/current/constitution.pdf)开展。
