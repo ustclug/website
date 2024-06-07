@@ -9,20 +9,22 @@
 
 ## 主要负责人
 
-| 代号      | 职务                  | 姓名   | 邮箱                     |
-| :-------- | :-------------------- | :----- | :----------------------- |
-| CEO       | 执行会长              | 罗嘉宏 | luojh AT ustclug.org     |
-| -         | 执行副会长            | 马天开 | tiankaima AT ustclug.org |
-| -         | 执行副会长            | 金文丁 | pro AT ustclug.org       |
-| CTO       | 技术部部长            | 杨广源 |                          |
-| -         | 技术部副部长          | 王昊元 |                          |
-| CFO       | 财务部部长            | 谢子郁 |                          |
-| COO & MSC | 运营部部长 & MSC 事务 | 马天开 | tiankaima AT ustclug.org |
-| -         | 团支书                | 谢子郁 |                          |
-| -         | 社长                  | 罗嘉宏 |                          |
-| -         | 副社长                | 王昊元 |                          |
-| -         | 副社长                | 杨广源 |                          |
-| -         | 副社长                | 马天开 | tiankaima AT ustclug.org |
+| 代号      | 职务                  | 姓名   | 邮箱                        |
+| :-------- | :-------------------- | :----- | :-------------------------- |
+| CEO       | 执行会长              | 罗嘉宏 | luojh AT ustclug.org        |
+| -         | 执行副会长            | 马天开 | tiankaima AT ustclug.org    |
+| -         | 执行副会长            | 金文丁 | pro AT ustclug.org          |
+| CTO       | 技术部部长            | 杨广源 |                             |
+| -         | 技术部副部长          | 王昊元 | mirageturtle AT ustclug.org |
+| CFO       | 财务部部长            | 谢子郁 |                             |
+| COO & MSC | 运营部部长 & MSC 事务 | 马天开 | tiankaima AT ustclug.org    |
+| -         | 团支书                | 谢子郁 |                             |
+| -         | 社长                  | 罗嘉宏 | luojh AT ustclug.org        |
+| -         | 副社长                | 王昊元 | mirageturtle AT ustclug.org |
+| -         | 副社长                | 杨广源 |                             |
+| -         | 副社长                | 马天开 | tiankaima AT ustclug.org    |
+
+_更多联系信息正在更新过程中_
 
 ## 历任负责人
 

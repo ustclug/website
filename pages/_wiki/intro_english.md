@@ -5,7 +5,7 @@
 
 USTC LUG is the abbreviation for Linux User Group (LUG) of University of Science and Technology of China (USTC). USTC LUG is a technology-leading association that consists of the GNU/Linux enthusiasts in USTC. The aim of USTC LUG is to unite the GNU/Linux users in USTC, to build a platform for communicating with each other, sharing the value of free software and promoting free software in the USTC Campus and Hefei City.
 
-Founded in 2003, USTC LUG has gone through over 15 years. At present, it is a top university association in Anhui province to promote the free software culture and value as well as one of the well-developing Linux/Free Software student associations in China mainland. Due to the combined efforts of its members and volunteers, USTC LUG has organized a number of meaningful activities, such as the USTC Information Security Contest, GNU/Linux Install Party, Software Freedom Day, Weekly Party and Linux 101 lectures.
+Founded in 2003, USTC LUG has gone through over 20 years. At present, it is a top university association in Anhui province to promote the free software culture and value as well as one of the well-developing Linux/Free Software student associations in China mainland. Due to the combined efforts of its members and volunteers, USTC LUG has organized a number of meaningful activities, such as the USTC Information Security Contest, GNU/Linux Install Party, Software Freedom Day, Weekly Party and Linux 101 lectures.
 
 USTC LUG started the maintenance of the well-known Debian archive mirror <https://debian.ustc.edu.cn> in 2003. Now, with better hardware and bandwidth sponsored by USTC, it finally becomes [the official Debian mirror of China](http://ftp.cn.debian.org/). Now it has combined with <https://oss.ustc.edu.cn> and became <https://mirrors.ustc.edu.cn>, an important open-source software mirror in China. With the assistance of the USTC Network Information Center, USTC LUG has set up a PXE network booting system, enabling the whole campus to perform convenient installs and quick experience of Linux. The Library LIIMS System, developed on the base of Campus PXE system, is also developed and under the maintenance of USTC LUG.
 
@@ -35,4 +35,8 @@ Since October 2011, we hold a meeting named [Weekly Party](/wiki/lug/events/week
 - [Network Boot Service (PXE)](/wiki/lug/services/pxe)
 - [GitLab (Self-hosted Git repository hosting service)](/wiki/lug/services/gitlab)
 
+## Contact us & more information
+
 You can find us [here](/wiki/lug/contact).
+
+Reach [wiki main page](/wiki/) for more info about USTC LUG.
