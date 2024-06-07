@@ -272,7 +272,7 @@ defaults:
       toc: true
       toc_sticky: true
       toc_label: 目录
-      share: true
+      share: false
       related: true
       header:
         show_overlay_excerpt: false
