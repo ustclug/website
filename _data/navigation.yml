@@ -57,3 +57,5 @@ wiki:
         url: 'https://servers.ustclug.org/'
       - title: '<i class="fas fa-lg fa-fw fa-question-square"></i> 校园网常见问题'
         url: /wiki/doc/ustcnet-faq/
+      - title: '<i class="fas fa-lg fa-fw fa-universal-access"></i> 提问指南'
+        url: /wiki/doc/howtoask/
