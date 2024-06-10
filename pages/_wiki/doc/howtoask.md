@@ -1,10 +1,8 @@
 ---
+redirect_from: /wiki/user/taoky/howtoask/
 ---
 
 # 提问指南
-
-**<i class="fas fa-exclamation-triangle"></i> 注意：**本文为草稿，内容可能随时更改。
-{: .notice--warning }
 
 License: CC-BY-NC-SA 4.0
 
