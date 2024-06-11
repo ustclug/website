@@ -108,6 +108,7 @@ jobs:
         popd &>/dev/null
 
     - name: Update Algolia index
+      if: github.ref == 'refs/heads/master'
       run: bundle exec jekyll algolia push
       env:
         ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
