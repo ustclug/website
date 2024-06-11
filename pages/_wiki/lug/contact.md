@@ -7,7 +7,7 @@
 
 ![]({{ site.static_url }}/email.png)
 
-您可以向我们直接发送电子邮件。
+您可以向我们直接发送电子邮件。如需联系*LUG 负责人*，请转至[负责人](person-in-charge.md)页面。但是，仍然推荐使用上面的公用邮件地址。
 
 ## 参与邮件列表讨论（推荐）
 
@@ -64,7 +64,7 @@ Name：中科大 LUG
 {: .notice--warning }
 
 - Twitter: [@USTCLUG](https://www.twitter.com/ustclug/)
-- 人人：[USTCLUG](https://www.renren.com/profile.do?id=345760436)
-- 豆瓣：[科大 LUG](https://www.douban.com/people/ustclug/)
+- ~~人人：[USTCLUG](https://www.renren.com/profile.do?id=345760436)~~ （原因：_已停用_）
+- ~~豆瓣：[科大 LUG](https://www.douban.com/people/ustclug/)~~ （原因：_状态异常_）
 
 更多信息，请参阅 [LUG 宣传账号一览](sns.md)。
