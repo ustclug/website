@@ -3,6 +3,8 @@
 
 # Linux 用户管理
 
+提示：Linux 101 中有与本文内容相关的章节，点击[这里](https://101.lug.ustc.edu.cn/Ch05/)来跳转到这一章节。
+
 ### Linux 用户管理涉及的文件
 
 #### /etc/passwd
