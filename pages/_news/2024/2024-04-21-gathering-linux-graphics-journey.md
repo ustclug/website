@@ -8,7 +8,7 @@ categories:
 tags: []
 ---
 
-2024 年 3 月 31 日，校学生 Linux 用户协会举办了一场小聚活动。本次小聚为刘紫檀同学为我们带来的关于 Linux 图形堆栈的介绍。
+2024 年 4 月 21 日，校学生 Linux 用户协会举办了一场小聚活动。本次小聚为刘紫檀同学为我们带来的关于 Linux 图形堆栈的介绍。
 
 ![](https://ftp.lug.ustc.edu.cn/weekly_party/2024.04.21_Linux_Graphics_Journey/photo/C674688314E3F9149BAEAD6DE8A024EA.jpg)
 
