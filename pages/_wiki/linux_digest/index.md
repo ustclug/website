@@ -37,7 +37,7 @@ permalink: /wiki/linux_digest/
 | [ed 使用方法](ed_editor_usage "linux_digest:ed_editor_usage")                               |      |
 | [lftp 使用方法](lftp "linux_digest:lftp")                                                   |      |
 | [使用 badblocks 命令处理硬盘坏道](badblocks "linux_digest:badblocks")                       |      |
-| [Linux 用户管理](user_adm "linux_digest:user_adm")                                          |      |
+| [Linux 用户管理](user_adm "linux_digest:user_adm") : Linux 101 第 5 章                      |      |
 | [ExPASy 的 ps_scan 在 linux 下的简明配置指南](expasy-ps_scan "linux_digest:expasy-ps_scan") |      |
 
 #### 用户文章

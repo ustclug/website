@@ -111,7 +111,7 @@ python argparse
 - 使用空格分割搜索关键词
 - 去掉只在你的计算机上有的信息（比如说用户名、主机名——比如如果你的用户名是 john123，并且搜索的时候带上了输出里面的 john123，那么搜索引擎可能会尽量匹配结果里面有 john123 的结果，这在几乎所有的时候都是不符合预期的）
 - 可能需要去掉查询里面的横线 `-`：搜索引擎很可能将其解释为「以横线（减号）开头的查询词不允许包含在结果中」
-- 善于使用搜索引擎的特殊功能，例如在Bing搜索中，使用双引号 `"<Something>"` 可以要求结果中必须含有被双引号（注意是半角双引号 `"` ）括起的内容，使用加号 `+<Some query>` 开头可以强制其搜索您给出的所有内容。有关Bing的此类特殊功能（称为*search operators*），Microsoft提供了[文档](https://support.microsoft.com/en-us/topic/advanced-search-options-b92e25f1-0085-4271-bdf9-14aaea720930)，其他搜索引擎也可能有类似的功能。
+- 善于使用搜索引擎的特殊功能，例如在 Bing 搜索中，使用双引号 `"<Something>"` 可以要求结果中必须含有被双引号（注意是半角双引号 `"` ）括起的内容，使用加号 `+<Some query>` 开头可以强制其搜索您给出的所有内容。有关 Bing 的此类特殊功能（称为*search operators*），Microsoft 提供了[文档](https://support.microsoft.com/en-us/topic/advanced-search-options-b92e25f1-0085-4271-bdf9-14aaea720930)，其他搜索引擎也可能有类似的功能。
 
 作为一个例子，对于下面这个「问题」：
 
