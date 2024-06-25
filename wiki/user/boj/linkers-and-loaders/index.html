@@ -20,7 +20,7 @@
     <meta property="og:url" content="https://lug.ustc.edu.cn/wiki/user/boj/linkers-and-loaders/">
     <meta property="og:description" content="《程序员的自我修养》读书笔记">
     <meta property="article:published_time" content="2020-08-09T15:07:59+08:00">
-    <meta property="article:modified_time" content="2021-01-15T23:26:59+08:00">
+    <meta property="article:modified_time" content="2024-06-25T23:05:24+08:00">
     <link rel="canonical" href="https://lug.ustc.edu.cn/wiki/user/boj/linkers-and-loaders/">
     <!-- end _includes/seo.html -->
     <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="LUG @ USTC Feed">
@@ -47,7 +47,7 @@
       window.enable_copy_code_button = true;
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=1cea2e077e">
+    <link rel="stylesheet" href="/assets/css/main.css?v=ea586972ea">
     <link rel="stylesheet" href="/_extra/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <link rel="stylesheet" href="/_extra/open-sans.css" media="invalid" onload="this.media='all'">
     <!-- start custom head snippets -->
@@ -174,7 +174,7 @@
           <meta itemprop="headline" content="《程序员的自我修养》读书笔记">
           <meta itemprop="description" content="《程序员的自我修养》读书笔记">
           <meta itemprop="datePublished" content="2020-08-09T15:07:59+08:00">
-          <meta itemprop="dateModified" content="2021-01-15T23:26:59+08:00">
+          <meta itemprop="dateModified" content="2024-06-25T23:05:24+08:00">
           <div class="page__inner-wrap">
             <header>
               <h1 id="page-title" class="page__title" itemprop="headline">
@@ -232,11 +232,15 @@
               <p>李博杰 (bojieli AT gmail DOT com) 最后修改：2012-06-01</p>
               <p>近来在郭家华的推荐下，读了 LUG 书库的《程序员的自我修养——链接、装载与库》一书，有种相见恨晚的感觉。然而快到期末考试了，没有时间把全书读完，因此只写了一部分。</p>
               <p>我读技术类图书有个习惯，或者说是毛病：经常是先想想如果是自己设计这个系统会采用怎样的一种机制，然后再去读书中所讲的实现方式。由于计算机应用系统的设计不是什么算法难题，一般都能设计出一套像模像样的机制；然而从结构的优雅性角度考虑，我设计的机制有时充斥着一些与 UNIX 文化不符的元素。本文撷取链接、装载与库中的几个设计点，与大家分享我个人的想法与 UNIX/Linux 大师的设计。</p>
-              <p>There are two ways of constructing a software design. One is to make it so simple that there are obviously no deficiencies; the other is to make it so complicated that there are no obvious deficiencies. The first method is far more difficult. – The Emperor’s Old Clothes, CACM February 1981</p>
-              <p>有两种方式构建软件：一种是把它设计得如此简单以至于明显没有缺陷，另一种是把它设计得如此复杂以至于没有明显的缺陷；前一种的难度大得多。——Hoare 于图灵奖演讲《皇帝的旧衣》</p>
+              <blockquote>
+                <p>There are two ways of constructing a software design. One is to make it so simple that there are obviously no deficiencies; the other is to make it so complicated that there are no obvious deficiencies. The first method is far more difficult. – The Emperor’s Old Clothes, CACM February 1981</p>
+              </blockquote>
+              <blockquote>
+                <p>有两种方式构建软件：一种是把它设计得如此简单以至于明显没有缺陷，另一种是把它设计得如此复杂以至于没有明显的缺陷；前一种的难度大得多。——Hoare 于图灵奖演讲《皇帝的旧衣》</p>
+              </blockquote>
               <h2 id="0-关于编译的闲扯">0 关于编译的闲扯</h2>
               <h3 id="01-可执行文件--编译--汇编">0.1 可执行文件 ≠ 编译 + 汇编</h3>
-              <p>我们知道，C 语言经过编译器能生成汇编码，再经过汇编器能生成机器码。这对于我们在 C 语言学习阶段所编写的几十行、数百行的小程序似乎是没有问题的。反正整个源代码位于同一个.c 文件中，只要处理库文件就行了。</p>
+              <p>我们知道，C 语言经过编译器能生成汇编码，再经过汇编器能生成机器码。这对于我们在 C 语言学习阶段所编写的几十行、数百行的小程序似乎是没有问题的。反正整个源代码位于同一个 .c 文件中，只要处理库文件就行了。</p>
               <p>针对这样的应用场景，我设想的执行过程：</p>
               <ul>
                 <li>
@@ -249,7 +253,7 @@
                   <p>程序需要获取环境变量和参数，那么规定规定 argc 存储在 0x70000000，紧接着是指向参数字符串的 argc 个指针（argv）；环境变量也可以人为规定一个地址；</p>
                 </li>
                 <li>
-                  <p>这个固定的点由编译器放一段“桩代码”（stub），唯一的作用就是把 argc 和**argv 压栈，调用 main 函数；从 main 函数返回时将栈恢复到初始状态，将 main 函数的返回值返回给操作系统。</p>
+                  <p>这个固定的点由编译器放一段“桩代码”（stub），唯一的作用就是把 <code class="language-plaintext highlighter-rouge">argc</code> 和 <code class="language-plaintext highlighter-rouge">**argv</code> 压栈，调用 main 函数；从 main 函数返回时将栈恢复到初始状态，将 main 函数的返回值返回给操作系统。</p>
                 </li>
               </ul>
               <p>我最初设想的编译过程：printf 等标准库函数肯定是有源代码的，那么只要把这些库函数的源代码复制到源文件里就可以编译了，不会出现函数名找不到的问题。这时，可执行文件 = 编译 + 汇编。</p>
@@ -281,11 +285,11 @@
                   <p>尽管命名是严谨的，但几千万行的内核难免有 extern 的符号“擦枪走火”的问题，显式规定依赖关系更好。</p>
                 </li>
               </ul>
-              <p>更严肃地说，这是一个封装方面的问题。我一直认为程序的一个模块应该对其他模块“充分开放”，这样才便于了解对方模块的内部原理，编写“有针对性”的代码；我知道这违反了封装的基本原则。《人月神话》第一版中也阐述了这种对封装的忧虑，然而在二十周年纪念版中 Brooks 转变了观点，认为封装是正确的。微软的 Office 系列程序对彼此的内部有着密切（或称杂乱）的了解，这在某种程度上使得系列软件的集成度更高，然而在软件整体的稳定性上付出了沉重的代价，更不用说与其他软件的互操作性了。编写一个有着杂乱内部了解的程序是信手拈来的，然而随后的维护工作会使人抓狂。M$善于先做一个“能用就行”的系统，然后在其基础上修修补补，这更多是基于商业上的考虑；与完美主义的 UNIX 文化格格不入。</p>
+              <p>更严肃地说，这是一个封装方面的问题。我一直认为程序的一个模块应该对其他模块“充分开放”，这样才便于了解对方模块的内部原理，编写“有针对性”的代码；我知道这违反了封装的基本原则。《人月神话》第一版中也阐述了这种对封装的忧虑，然而在二十周年纪念版中 Brooks 转变了观点，认为封装是正确的。微软的 Office 系列程序对彼此的内部有着密切（或称杂乱）的了解，这在某种程度上使得系列软件的集成度更高，然而在软件整体的稳定性上付出了沉重的代价，更不用说与其他软件的互操作性了。编写一个有着杂乱内部了解的程序是信手拈来的，然而随后的维护工作会使人抓狂。M$ 善于先做一个“能用就行”的系统，然后在其基础上修修补补，这更多是基于商业上的考虑；与完美主义的 UNIX 文化格格不入。</p>
               <p>事实上，我自己编写的程序之所以没有变成一团乱麻，是因为在开始设计时已经定义了较为清晰的边界，只是没有把这些边界显式规定下来。但在多人合作中，靠文档规定这些接口和边界，远不如使用编程语言内置的机制，用逻辑的形式（如 include、类的继承、Makefile）把各模块的接口和关系明确定义。“制度是死的，人是活的”，靠自觉维护代码的内部边界，不如立下制度，“一百年不改变”，遇到实在绕不过去的大变动再去修改制度。经过一年的思考，我认为软件工程界的普遍观点是正确的。</p>
               <h3 id="03-abi">0.3 ABI</h3>
               <p>扯远了。前面提到了函数调用，其实这里已经引出了二进制接口的问题。我最初学习 C 语言时，老师说 C 语言的函数调用方式是调用者把参数压栈，函数内把参数从栈中取出来；现在想，如果函数的参数个数很少，整个函数又不适合内联，则反复压栈的开销是较大的，为什么不规定第一个参数在第一个寄存器，第二个参数在第二个寄存器……呢？其实栈传参和寄存器传参就是两种不同的方式。容易想象不同的编译器如果采用不同的传参方式，甚或同一种编译器的不同编译参数指定了不同的传参方式，则生成的二进制文件是无法链接到一起使用的。</p>
-              <p>ABI（Application Binary Interface）的问题还包括（我不懂 C++，所以有关 C++的没有列出）：</p>
+              <p>ABI（Application Binary Interface）的问题还包括（我不懂 C++，所以有关 C++ 的没有列出）：</p>
               <ul>
                 <li>
                   <p>内置类型（int、float 等）的大小</p>
@@ -326,7 +330,7 @@
               <p>第一个问题不难解决。尽管每个函数的虚拟内存地址不能确定，但其相对调用点的偏移是可以确定的。处理器的寻址模式有相对寻址，那么在同一文件内的目标码之间进行相对寻址即可。</p>
               <p>第二个问题：让 C 编译器事先载入所有待编译的源代码、“预编译”、安排所有符号的位置、“正式编译”并不是一个好主意。首先，无法把库编译成二进制文件发行，每次都必须将所有代码连同库的源码一同编译，太耗时，这是无法接受的；其次，C 编译器承担了过多的责任，成为一个庞大而臃肿的整体，不利于编译系统的模块化。在 UNIX 中，高效的进程生成、丰富而简洁的进程间通讯机制（如管道、重定向、socket）、一切皆文件的统一性理念鼓励让众多协作的小工具（如 cc、as、ld、make）组成一个内部边界清晰的大型系统。</p>
               <p>由于机器码中没有“函数”“变量”的概念，一切都是内存地址，单个文件编译出的机器码本身难以表示对外部函数和变量的引用，在指令内部相对寻址偏移的一丁点空间也很难同时描述清楚所引用的是哪个外部符号和相对符号的偏移。</p>
-              <p>我的想法是，既然从机器码查符号的方式走不通，那就反过来建立索引，在“中间格式”中存储一张表，存储所有机器码中引用了外部函数和变量的指令位置、所引用符号的名称，而机器码中相应指令的相对寻址偏移只需存储相对变量基址的偏移（不能简单填 0，数组元素 int a[10]的地址就要在符号 a 地址上加上 10*sizeof(int)）。</p>
+              <p>我的想法是，既然从机器码查符号的方式走不通，那就反过来建立索引，在“中间格式”中存储一张表，存储所有机器码中引用了外部函数和变量的指令位置、所引用符号的名称，而机器码中相应指令的相对寻址偏移只需存储相对变量基址的偏移（不能简单填 0，数组元素 <code class="language-plaintext highlighter-rouge">int a[10]</code> 的地址就要在符号 a 地址上加上 <code class="language-plaintext highlighter-rouge">10*sizeof(int)</code>）。</p>
               <p>在链接时：</p>
               <ul>
                 <li>
@@ -336,14 +340,14 @@
                   <p>为所有符号安排在虚拟内存中的位置；</p>
                 </li>
                 <li>
-                  <p>根据“引用表”找到所有需要修改的指令，依次将它们的寻址偏移修改成正确的值。这计算起来很容易：相对寻址偏移=目标符号的虚拟内存位置-当前指令的虚拟内存位置+相对符号基址的偏移（早先保存在相对寻址偏移的数值）。当时我没考虑绝对寻址，其实类似：绝对寻址偏移=目标符号的虚拟内存地址+相对符号基址的偏移。当然，要确定所用寻址方式和偏移在指令中的位置，肯定是要根据指令的格式“对症下药”的。</p>
+                  <p>根据“引用表”找到所有需要修改的指令，依次将它们的寻址偏移修改成正确的值。这计算起来很容易：<code class="language-plaintext highlighter-rouge">相对寻址偏移=目标符号的虚拟内存位置 - 当前指令的虚拟内存位置 + 相对符号基址的偏移（早先保存在相对寻址偏移的数值）</code>。当时我没考虑绝对寻址，其实类似：<code class="language-plaintext highlighter-rouge">绝对寻址偏移=目标符号的虚拟内存地址 + 相对符号基址的偏移</code>。当然，要确定所用寻址方式和偏移在指令中的位置，肯定是要根据指令的格式“对症下药”的。</p>
                 </li>
               </ul>
               <p>这就是传说中的“重定位”（Relocation）过程，而这张“引用表”就是“重定位表”，“中间文件”则是“可重定位文件”。</p>
               <p>我当时还在为这个“引用表”存储在哪里担忧，如何把这些数据与机器码分开呢？所幸可执行文件格式的设计者早就考虑了这个问题：目标文件中不只存在要载入内存的代码和数据。</p>
               <h2 id="2-目标文件">2 目标文件</h2>
               <h3 id="21-目标文件结构">2.1 目标文件结构</h3>
-              <p>目标文件不能只是一堆机器码。很多文件格式有文件开头的 magic number，例如脚本文件的第一行是“#!/path/to/interpreter”，微软的 Word 97/2003 文档开头 7 个字节是 D0CF11E。这些 magic number 一方面是为了使用 file 等命令查询文件类型，在 Linux 桌面环境中调用相关的程序打开文件；对于可执行文件有更重要的意义：Linux 中的 execve 系统调用会读取文件的前 128 个字节，匹配合适的可执行文件装载过程，例如看到“#!”两个字节开头的文件就知道是应该调用#! 后面的解释器来解释执行，看到“0x7F e l f”四个字节开头的文件就知道是 ELF 可执行文件，看到“cafe”四个字节开头的文件就知道是 Java 可执行文件（为什么用 cafe 而不是 java？）。</p>
+              <p>目标文件不能只是一堆机器码。很多文件格式有文件开头的 magic number，例如脚本文件的第一行是“#!/path/to/interpreter”，微软的 Word 97/2003 文档开头 7 个字节是 D0CF11E。这些 magic number 一方面是为了使用 file 等命令查询文件类型，在 Linux 桌面环境中调用相关的程序打开文件；对于可执行文件有更重要的意义：Linux 中的 execve 系统调用会读取文件的前 128 个字节，匹配合适的可执行文件装载过程，例如看到“#!”两个字节开头的文件就知道是应该调用 <code class="language-plaintext highlighter-rouge">#!</code> 后面的解释器来解释执行，看到“0x7F e l f”四个字节开头的文件就知道是 ELF 可执行文件，看到“cafe”四个字节开头的文件就知道是 Java 可执行文件（为什么用 cafe 而不是 java？）。</p>
               <p>ELF 文件的头部除了 magic number，还需要指定 ELF 文件类型（可重定位？可执行？共享目标文件？UNIX 中文件的类型不是通过扩展名判断的）、ELF 版本（在文件格式中加入版本信息有助于提高可扩展性）、运行平台、ABI、段表描述符等多种信息。如果不符合当前环境，内核会拒绝执行，而不是执行到一半发现错误再不明不白地退出，这也是一种错误预防机制。</p>
               <p>目标文件中需要存储哪些信息呢？</p>
               <ul>
@@ -354,7 +358,7 @@
                   <p>程序里的所有数据都是可读写的吗？用 const 声明的变量、字符串常量并不需要写，那么在加载的时候将其映射为只读，可以增强程序的安全性；嵌入式系统的烧写器可以将其写入 ROM，节约宝贵的 RAM 空间。看来需要一个只读数据段。</p>
                 </li>
                 <li>
-                  <p>在计算机竞赛中，我们常常在程序的开头声明一个 a[2000][2000]的全局大数组，这个数组显然不能存储在数据段里，不然可执行文件的大小就有数 MB。因此未初始化数据存储在 BSS 段中。操作系统中装载可执行文件的例程在进程初始化时，分配这么大的一块内存空间就行了。</p>
+                  <p>在计算机竞赛中，我们常常在程序的开头声明一个 <code class="language-plaintext highlighter-rouge">a[2000][2000]</code> 的全局大数组，这个数组显然不能存储在数据段里，不然可执行文件的大小就有数 MB。因此未初始化数据存储在 BSS 段中。操作系统中装载可执行文件的例程在进程初始化时，分配这么大的一块内存空间就行了。</p>
                 </li>
                 <li>
                   <p>前面提到的重定位表也是需要存储的。</p>
@@ -369,72 +373,71 @@
                   <p>后面要提到的动态链接信息（.dynamic）</p>
                 </li>
                 <li>
-                  <p>程序初始化与终结代码，用于 C++全局构造与析构。把这些代码放在代码段的开头、结尾行不行呢？不行，因为多个目标文件链接起来时，这些初始化操作仍然要放在新目标文件的开头结尾，而链接器是无法分辨代码段中哪些是初始化代码的。逻辑上不同的东西不应该放在一起；一种信息只要不太浪费空间、影响性能，就可以被保留；如果图省事把信息丢弃了，那么后面的处理过程再想用到就不可能了。</p>
+                  <p>程序初始化与终结代码，用于 C++ 全局构造与析构。把这些代码放在代码段的开头、结尾行不行呢？不行，因为多个目标文件链接起来时，这些初始化操作仍然要放在新目标文件的开头结尾，而链接器是无法分辨代码段中哪些是初始化代码的。逻辑上不同的东西不应该放在一起；一种信息只要不太浪费空间、影响性能，就可以被保留；如果图省事把信息丢弃了，那么后面的处理过程再想用到就不可能了。</p>
                 </li>
               </ul>
               <p>由于目标文件中要存储多种类型的信息，需要一种分节机制，将每种信息放在一节里，逻辑清晰。这里的“节”（section）也常被称为“段”，不过不要与内存中的“segment”混淆。分段有利也有弊，一个麻烦之处就是 ELF 文件存储的偏移信息要同时指定段名和在此段中的偏移。ELF 文件中除文件头外最重要的结构就是段表（section header table）了，它以结构体数组的形式描述了 ELF 各个节（段）的信息，例如段名、段长、在文件中的偏移、读写权限等。</p>
               <h3 id="22-符号表">2.2 符号表</h3>
               <p>在关于重定位机制的讨论中，我最初的想法就是在重定位表中保存符号名的字符串。被高级语言惯坏了的我们可以将字符串作为基本数据类型，但在 C 语言的结构体中变长字符串需要用指针指向一段结构体以外的空间来存储。那么字符串放在每段的最后，还是集中放在整个目标文件的最后，还是散落在任意的位置？不论怎样，乱堆乱放的字符串都对文件格式的统一性造成了破坏。程序中还要在内存中的字符串指针、文件中字符串的偏移量之间来回转换，没有统一的机制简直是一场噩梦。</p>
-              <p>ELF 文件格式中，存在两个专门的字符串表（section）：.strtab 用于普通字符串，如符号名；.shstrtab 用于段表中用到的字符串，如段名。（我不明白段表为什么得到了特殊待遇）字符串的存储方式很简单，每个字符串末尾用“\0”作为分界。注意到段名本身也是存储在字符串表中的，那么找到字符串表所在段就成了一个“鸡生蛋，蛋生鸡”的问题。事实上，ELF 文件头中的 e <em>shstrndx 就是.shstrtab 段在段表中的下标，而段表在文件中的偏移是 ELF 文件头中 e</em> shoff 指定的。ELF 文件格式中这种一环扣一环的事情还真不少。</p>
+              <p>ELF 文件格式中，存在两个专门的字符串表（section）：.strtab 用于普通字符串，如符号名；.shstrtab 用于段表中用到的字符串，如段名。（我不明白段表为什么得到了特殊待遇）。字符串的存储方式很简单，每个字符串末尾用“\0”作为分界。注意到段名本身也是存储在字符串表中的，那么找到字符串表所在段就成了一个“鸡生蛋，蛋生鸡”的问题。事实上，ELF 文件头中的 <code class="language-plaintext highlighter-rouge">e_shstrndx</code> 就是 <code class="language-plaintext highlighter-rouge">.shstrtab</code> 段在段表中的下标，而段表在文件中的偏移是 ELF 文件头中 <code class="language-plaintext highlighter-rouge">e_shoff</code> 指定的。ELF 文件格式中这种一环扣一环的事情还真不少。</p>
               <p>有了保存字符串的机制，存储各种符号就只需要指定其在字符串表中的下标（即第几个字符串）了。这样机器码中“放不下”的函数名、变量名就可以放到字符串表中，这需要做一个从符号在机器码中的位置到字符串表中符号名的映射。这个映射就是“符号表”（.symtab section）。事实上，符号表中的每一个结构体不仅描述了符号所在段、符号在段内的偏移、符号名在字符串表中的下标，还描述了符号类型（数据对象、函数、段、文件名等）、符号所对应数据类型的大小等。</p>
-              <p>符号表在动态语言的解释过程中是起到关键作用的。以 PHP 为例，“变量的变量”（即 $a=“varname”; $varname=100; $$a 的值为 100）“执行动态生成代码”等“可怕”的功能，在 PHP 解释器中是用一个从变量名到内存中存储地址的映射实现的。</p>
+              <p>符号表在动态语言的解释过程中是起到关键作用的。以 PHP 为例，“变量的变量”（即 <code class="language-plaintext highlighter-rouge">$a="varname"; $varname=100;</code>，<code class="language-plaintext highlighter-rouge">$$a</code> 的值为 100）“执行动态生成代码”等“可怕”的功能，在 PHP 解释器中是用一个从变量名到内存中存储地址的映射实现的。</p>
               <p>事实上，PHP 的 Zend 引擎内部使用结构体 zval 来表示变量。用强类型实现弱类型并不复杂：</p>
-              <div class="language-plaintext highlighter-rouge">
+              <div class="language-c highlighter-rouge">
                 <div class="highlight">
-                  <pre class="highlight"><code>typedef struct _zval_struct {
-	zvalue_value value;	// 变量的值
-	zend_uint refcount;	// 引用计数，用于写时复制
-	zend_uchar type;	// 变量类型
-	zend_uchar is_ref;	// 是否是引用（如果是引用，则写时不复制）
-} zval;
-
-typedef union _zvalue_value {
-	long lval;		// 整数类型（包括bool）、资源类型（用整数表示资源序号，类似C中的文件描述符）
-	double dval;		// 浮点类型
-	struct {
-		char *val;
-		int len;
-	} str;			// 字符串类型
-	HashTable * ht;		// 关联数组类型（关联数组类似Python中的字典）（用hash表存储）
-	zend_object_value obj;	// 对象类型
-} zvalue_value;
+                  <pre class="highlight"><code><span class="k">typedef</span> <span class="k">struct</span> <span class="n">_zval_struct</span> <span class="p">{</span>
+	<span class="n">zvalue_value</span> <span class="n">value</span><span class="p">;</span>	<span class="c1">// 变量的值</span>
+	<span class="n">zend_uint</span> <span class="n">refcount</span><span class="p">;</span>	<span class="c1">// 引用计数，用于写时复制</span>
+	<span class="n">zend_uchar</span> <span class="n">type</span><span class="p">;</span>	<span class="c1">// 变量类型</span>
+	<span class="n">zend_uchar</span> <span class="n">is_ref</span><span class="p">;</span>	<span class="c1">// 是否是引用（如果是引用，则写时不复制）</span>
+<span class="p">}</span> <span class="n">zval</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="k">union</span> <span class="n">_zvalue_value</span> <span class="p">{</span>
+	<span class="kt">long</span> <span class="n">lval</span><span class="p">;</span>		<span class="c1">// 整数类型（包括 bool）、资源类型（用整数表示资源序号，类似 C 中的文件描述符）</span>
+	<span class="kt">double</span> <span class="n">dval</span><span class="p">;</span>		<span class="c1">// 浮点类型</span>
+	<span class="k">struct</span> <span class="p">{</span>
+		<span class="kt">char</span> <span class="o">*</span><span class="n">val</span><span class="p">;</span>
+		<span class="kt">int</span> <span class="n">len</span><span class="p">;</span>
+	<span class="p">}</span> <span class="n">str</span><span class="p">;</span>			<span class="c1">// 字符串类型</span>
+	<span class="n">HashTable</span> <span class="o">*</span> <span class="n">ht</span><span class="p">;</span>		<span class="c1">// 关联数组类型（关联数组类似 Python 中的字典）（用 hash 表存储）</span>
+	<span class="n">zend_object_value</span> <span class="n">obj</span><span class="p">;</span>	<span class="c1">// 对象类型</span>
+<span class="p">}</span> <span class="n">zvalue_value</span><span class="p">;</span>
 </code></pre>
                 </div>
               </div>
               <p>这不是一个很难想到的解决方案，当时设想做 C 语言在线解释器时就提出了类似的方案，以在弱类型的 javascript 中表示强类型的 C 变量。</p>
               <p>在 Zend 引擎中，变量（zval）存储在 hash 表形式的符号表中，其 key 为变量名，value 为 zval。全局符号表保存了顶层作用域（即不在任何类、函数内）的变量，每个函数和类的方法在执行期间还有自己的一个符号表。调用一个函数或类的方法时，会为它创建一个符号表并设为活动（active）符号表，所有函数内定义的变量都保存在这个符号表中，从函数返回时销毁这个符号表。在函数或方法之外时，才会使用全局符号表。PHP 有个很奇怪的规定，在函数内使用全局变量需要用 global 声明，恐怕是与符号表有关吧。</p>
-              <p>PHP 的函数是全局的，因此并不存储在符号表里。函数分为内部函数（internal function）和用户函数（user function），内部函数（用 C 写成的 PHP 核心及扩展中的函数）存储在函数表里，用户函数（用 PHP 写的函数）指向它的 Opcode（中间码）序列。由于本文重点不是 PHP，有兴趣的读者请自行参阅 zend <em>internal</em> function、zend <em>op</em> array、zend <em>function 三个结构体。类中的方法是有作用域（仅对类的实例有效）的，因而上述三个结构体中都有一个指向“类”（zend</em> class <em>entry）的指针。执行一个函数时，如果在内部函数表中找到了作用域内的函数，则直接调用之；不然，在用户函数中寻找作用域内的函数，并调用 zend</em> execute 执行其 opcode。</p>
-              <div class="language-plaintext highlighter-rouge">
+              <p>PHP 的函数是全局的，因此并不存储在符号表里。函数分为内部函数（internal function）和用户函数（user function），内部函数（用 C 写成的 PHP 核心及扩展中的函数）存储在函数表里，用户函数（用 PHP 写的函数）指向它的 Opcode（中间码）序列。由于本文重点不是 PHP，有兴趣的读者请自行参阅 <code class="language-plaintext highlighter-rouge">zend_internal_function</code>、<code class="language-plaintext highlighter-rouge">zend_op_array</code>、<code class="language-plaintext highlighter-rouge">zend_function</code> 三个结构体。类中的方法是有作用域（仅对类的实例有效）的，因而上述三个结构体中都有一个指向“类”（<code class="language-plaintext highlighter-rouge">zend_class_entry</code>）的指针。执行一个函数时，如果在内部函数表中找到了作用域内的函数，则直接调用之；不然，在用户函数中寻找作用域内的函数，并调用 <code class="language-plaintext highlighter-rouge">zend_execute</code> 执行其 opcode。</p>
+              <div class="language-c highlighter-rouge">
                 <div class="highlight">
-                  <pre class="highlight"><code>struct _zend_op {
-	opcode_handler_t handler;	// 处理函数，与opcode对应
-	znode result;			// 操作结果
-	znode op1;			// 操作数1
-	znode op2;			// 操作数2，不是每个操作都会同时使用result、op1、op2
-	ulong extended_value;		// 执行过程中需要的其他信息，是一组flags
-	uint lineno;			// 源码中的行号（调试和错误处理时用）
-	zend_uchar opcode;		// 操作类型，可以认为是指令（例如FETCH_W是以写的方式获取变量到“寄存器”，ASSIGN是赋值，ECHO是显示）
-}
+                  <pre class="highlight"><code><span class="k">struct</span> <span class="n">_zend_op</span> <span class="p">{</span>
+	<span class="n">opcode_handler_t</span> <span class="n">handler</span><span class="p">;</span>	<span class="c1">// 处理函数，与 opcode 对应</span>
+	<span class="n">znode</span> <span class="n">result</span><span class="p">;</span>			<span class="c1">// 操作结果</span>
+	<span class="n">znode</span> <span class="n">op1</span><span class="p">;</span>			<span class="c1">// 操作数 1</span>
+	<span class="n">znode</span> <span class="n">op2</span><span class="p">;</span>			<span class="c1">// 操作数 2，不是每个操作都会同时使用 result、op1、op2</span>
+	<span class="n">ulong</span> <span class="n">extended_value</span><span class="p">;</span>		<span class="c1">// 执行过程中需要的其他信息，是一组 flags</span>
+	<span class="n">uint</span> <span class="n">lineno</span><span class="p">;</span>			<span class="c1">// 源码中的行号（调试和错误处理时用）</span>
+	<span class="n">zend_uchar</span> <span class="n">opcode</span><span class="p">;</span>		<span class="c1">// 操作类型，可以认为是指令（例如 FETCH_W 是以写的方式获取变量到“寄存器”，ASSIGN 是赋值，ECHO 是显示）</span>
+<span class="p">}</span>
 
-typedef struct _znode {
-	// 操作数类型：常量、变量（用户可见的）、临时变量（引擎内部的）、编译后的变量（有点像寄存器，为了避免每次使用变量都去hash表里查询，效率太低）
-	int op_type;
-	union {
-		zval constant;			// 常量
-		zend_uint var;			// 变量（可见、临时）
-		zend_uint opline_num; /* Needs to be signed */
-		zend_op_array *op_array;
-		zend_op *jmp_addr;
-		struct {
-			zend_uint var; /* dummy */
-			zend_uint type;
-		} EA;				// 编译后的变量
-	} u;
-} znode;
+<span class="k">typedef</span> <span class="k">struct</span> <span class="n">_znode</span> <span class="p">{</span>
+	<span class="c1">// 操作数类型：常量、变量（用户可见的）、临时变量（引擎内部的）、编译后的变量（有点像寄存器，为了避免每次使用变量都去 hash 表里查询，效率太低）</span>
+	<span class="kt">int</span> <span class="n">op_type</span><span class="p">;</span>
+	<span class="k">union</span> <span class="p">{</span>
+		<span class="n">zval</span> <span class="n">constant</span><span class="p">;</span>			<span class="c1">// 常量</span>
+		<span class="n">zend_uint</span> <span class="n">var</span><span class="p">;</span>			<span class="c1">// 变量（可见、临时）</span>
+		<span class="n">zend_uint</span> <span class="n">opline_num</span><span class="p">;</span> <span class="cm">/* Needs to be signed */</span>
+		<span class="n">zend_op_array</span> <span class="o">*</span><span class="n">op_array</span><span class="p">;</span>
+		<span class="n">zend_op</span> <span class="o">*</span><span class="n">jmp_addr</span><span class="p">;</span>
+		<span class="k">struct</span> <span class="p">{</span>
+			<span class="n">zend_uint</span> <span class="n">var</span><span class="p">;</span> <span class="cm">/* dummy */</span>
+			<span class="n">zend_uint</span> <span class="n">type</span><span class="p">;</span>
+		<span class="p">}</span> <span class="n">EA</span><span class="p">;</span>				<span class="c1">// 编译后的变量</span>
+	<span class="p">}</span> <span class="n">u</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">znode</span><span class="p">;</span>
 </code></pre>
                 </div>
               </div>
-              <p>回到 C 语言目标文件中的符号表，有个目前看来并不严重的问题：同名 extern 符号在不同文件中代表同一个符号，重复定义是不允许的；然而，汇编语言的程序可没有 extern 机制，如果一个汇编语言程序定义了 main 函数，那么所有与之链接的 C 程序都不能定义 main 函数。不像 PHP 中每个作用域都有一个动态的符号表，目标文件中的符号表只能有一个，而且必须在编译时确定。为此，UNIX 下的 C 语言规定所有全局符号名前加上下划线，称为符号修饰；目前 MSVC 保留着这个传统，而 GCC 默认已经去掉了。然而，在 C++语言中，符号管理就没有这么简单了。首先，C++允许多个不同参数类型的函数拥有一样的名字，这要求修饰后的符号名反映参数的类型信息；其次，不同的命名空间、类中可以有同名符号，这要求修饰后的符号名反映命名空间、类的信息。具体的符号修饰策略就见仁见智了。</p>
+              <p>回到 C 语言目标文件中的符号表，有个目前看来并不严重的问题：同名 extern 符号在不同文件中代表同一个符号，重复定义是不允许的；然而，汇编语言的程序可没有 extern 机制，如果一个汇编语言程序定义了 main 函数，那么所有与之链接的 C 程序都不能定义 main 函数。不像 PHP 中每个作用域都有一个动态的符号表，目标文件中的符号表只能有一个，而且必须在编译时确定。为此，UNIX 下的 C 语言规定所有全局符号名前加上下划线，称为符号修饰；目前 MSVC 保留着这个传统，而 GCC 默认已经去掉了。然而，在 C++ 语言中，符号管理就没有这么简单了。首先，C++ 允许多个不同参数类型的函数拥有一样的名字，这要求修饰后的符号名反映参数的类型信息；其次，不同的命名空间、类中可以有同名符号，这要求修饰后的符号名反映命名空间、类的信息。具体的符号修饰策略就见仁见智了。</p>
               <p>了解了目标文件的格式，前面的链接机制还要完善几处细节：</p>
               <ul>
                 <li>
@@ -448,10 +451,10 @@ typedef struct _znode {
                 </li>
               </ul>
               <h3 id="23-弱符号与弱引用">2.3 弱符号与弱引用</h3>
-              <p>我们在编写程序时，有时希望函数拥有可变个数的参数，例如一个函数后面几个参数很少用到，则平时不写以使用默认值，需要时再填上这些参数。这可以用 C 语言的可变参数机制实现。类似地，我们可能希望从一个库中选出某些功能模块，制成若干有不同功能的版本，而不改变库的链接特性；或者用自定义的库函数覆盖库中的函数。这些在 C++中可以用类的继承和函数的重载很好地实现，但 C 语言的使用者们怎么办？GCC 提供了“弱符号”机制，需要在符号定义前加入</p>
-              <div class="language-plaintext highlighter-rouge">
+              <p>我们在编写程序时，有时希望函数拥有可变个数的参数，例如一个函数后面几个参数很少用到，则平时不写以使用默认值，需要时再填上这些参数。这可以用 C 语言的可变参数机制实现。类似地，我们可能希望从一个库中选出某些功能模块，制成若干有不同功能的版本，而不改变库的链接特性；或者用自定义的库函数覆盖库中的函数。这些在 C++ 中可以用类的继承和函数的重载很好地实现，但 C 语言的使用者们怎么办？GCC 提供了“弱符号”机制，需要在符号定义前加入</p>
+              <div class="language-c highlighter-rouge">
                 <div class="highlight">
-                  <pre class="highlight"><code>__attribute__((weak))
+                  <pre class="highlight"><code><span class="n">__attribute__</span><span class="p">((</span><span class="n">weak</span><span class="p">))</span>
 </code></pre>
                 </div>
               </div>
@@ -468,16 +471,16 @@ typedef struct _znode {
                 </li>
               </ul>
               <p>编译器将未初始化的全局变量定义作为弱符号处理，以便链接器在链接过程中确定其大小并最终在 BSS 段中分配空间。因此，同名全局变量只能被初始化一次，而未初始化的同名全局变量可以在若干个文件中出现。这也是必要的：某个公共头文件定义了一些公用的全局变量，每个源文件都直接或间接包含之，则源文件编译成的每个可重定位文件都包含这些全局变量的定义，这些可重定位文件要能正常链接才行。</p>
-              <p>弱符号在 ELF 文件的符号表中“符号所在段”设为 SHN <em>COMMON。与之对应，在当前 ELF 文件中未定义的符号设为 SHN</em> UNDEF，包含绝对的值的符号（包括强符号、文件名等）设为 SHN_ABS。</p>
+              <p>弱符号在 ELF 文件的符号表中“符号所在段”设为 <code class="language-plaintext highlighter-rouge">SHN_COMMON</code>。与之对应，在当前 ELF 文件中未定义的符号设为 <code class="language-plaintext highlighter-rouge">SHN_UNDEF</code>，包含绝对的值的符号（包括强符号、文件名等）设为 <code class="language-plaintext highlighter-rouge">SHN_ABS</code>。</p>
               <p>符号的定义有强弱，那么符号的引用呢？GCC 还提供了“弱引用”机制，在符号声明前加入</p>
-              <div class="language-plaintext highlighter-rouge">
+              <div class="language-c highlighter-rouge">
                 <div class="highlight">
-                  <pre class="highlight"><code>__attribute__((weakref))
+                  <pre class="highlight"><code><span class="n">__attribute__</span><span class="p">((</span><span class="n">weakref</span><span class="p">))</span>
 </code></pre>
                 </div>
               </div>
               <p>关键字，则如果该符号未定义，GCC 将不报错，而用一个特殊值（0）替代之，程序将有机会在不提供此功能的情况下运行，而不是无法链接成功，使得程序的功能更便于裁剪和组合。</p>
-              <p>弱引用在 ELF 文件的符号表中“符号绑定信息”设为 STB <em>WEAK。与之对应，对目标文件外部可见（如使用 extern 声明的）全局符号设为 STB</em> GLOBAL，对外不可见的局部符号设为 STB_LOCAL。</p>
+              <p>弱引用在 ELF 文件的符号表中“符号绑定信息”设为 <code class="language-plaintext highlighter-rouge">STB_WEAK</code>。与之对应，对目标文件外部可见（如使用 extern 声明的）全局符号设为 <code class="language-plaintext highlighter-rouge">STB_GLOBAL</code>，对外不可见的局部符号设为 <code class="language-plaintext highlighter-rouge">STB_LOCAL</code>。</p>
               <h2 id="3-动态链接">3 动态链接</h2>
               <h3 id="31-装载的困境">3.1 装载的困境</h3>
               <p>我们已经知道可执行文件是分为若干段的，而这些段中有的是数据，有的是代码，还有的是字符串表等不需要在运行时装载入内存的信息。因此，开始运行一个进程并不是将文件读入内存，并跳转到起始地址这么简单。当然，一个段是否需要装入并不是很难判断的。</p>
@@ -493,13 +496,25 @@ typedef struct _znode {
                   <p>操作系统维护一个“动态链接库表”，记录了系统中的所有动态链接库及其导出函数的声明。</p>
                 </li>
                 <li>
-                  <p>操作系统提供一个执行动态链接库函数的系统调用：execfunc(char *function <em>name, …)。 - execfunc 第一个参数是指向 function</em> name 的指针；</p>
+                  <p>操作系统提供一个执行动态链接库函数的系统调用：<code class="language-plaintext highlighter-rouge">execfunc(char *function_name, …)</code>。</p>
                   <ul>
+                    <li>
+                      <p>execfunc 第一个参数是指向 <code class="language-plaintext highlighter-rouge">function_name</code> 的指针；</p>
+                    </li>
                     <li>
                       <p>随后的参数是原函数的参数（类似 C 语言的可变参数机制）；</p>
                     </li>
                     <li>
-                      <p>function <em>name 是可执行文件中的一个字符串常量； - execfunc 的返回值存放在 ABI 约定的地方（如整数类型、浮点类型分别规定一个寄存器传参）； - execfunc 不是一个 C 语言意义的函数，因其返回值类型不确定。 * 操作系统提供一个查询动态链接库表的系统调用：queryfunc(char *function</em> name)，返回此函数的参数和返回值类型，以便编译器处理。</p>
+                      <p><code class="language-plaintext highlighter-rouge">function_name</code> 是可执行文件中的一个字符串常量；</p>
+                    </li>
+                    <li>
+                      <p>execfunc 的返回值存放在 ABI 约定的地方（如整数类型、浮点类型分别规定一个寄存器传参）；</p>
+                    </li>
+                    <li>
+                      <p>execfunc 不是一个 C 语言意义的函数，因其返回值类型不确定。</p>
+                      <ul>
+                        <li>操作系统提供一个查询动态链接库表的系统调用：<code class="language-plaintext highlighter-rouge">queryfunc(char *function_name)</code>，返回此函数的参数和返回值类型，以便编译器处理。</li>
+                      </ul>
                     </li>
                   </ul>
                 </li>
@@ -557,14 +572,23 @@ typedef struct _znode {
                   <p>操作系统仍然要维护动态链接库表。</p>
                 </li>
                 <li>
-                  <p>操作系统提供一个加载动态链接库函数的系统调用：void loadfunc(char *function <em>name)。 - loadfunc 第一个参数是指向 function</em> name 的指针；</p>
+                  <p>操作系统提供一个加载动态链接库函数的系统调用：<code class="language-plaintext highlighter-rouge">void loadfunc(char *function_name)</code>。</p>
                   <ul>
                     <li>
-                      <p>function <em>name 是可执行文件中的一个字符串常量； * 操作系统仍然提供查询动态链接库表的系统调用。 * 编译器遇到一个不能“内部决议”的函数名： - 查询动态链接库表； - 把调用动态链接库的函数的 call 指令的目标地址改成 loadfunc； - 增加一个字符串常量 function</em> name 表示函数名；</p>
+                      <p>loadfunc 第一个参数是指向 <code class="language-plaintext highlighter-rouge">function_name</code> 的指针；</p>
                     </li>
+                    <li><code class="language-plaintext highlighter-rouge">function_name</code> 是可执行文件中的一个字符串常量；</li>
+                    <li>操作系统仍然提供查询动态链接库表的系统调用。</li>
+                    <li>编译器遇到一个不能“内部决议”的函数名：
+                      <ul>
+                        <li>查询动态链接库表；</li>
+                      </ul>
+                    </li>
+                    <li>把调用动态链接库的函数的 call 指令的目标地址改成 loadfunc；</li>
                     <li>
-                      <p>在 call 指令前加入一条将字符串常量指针入栈的指令（假设参数是通过栈传递的，其他参数已在这条指令之前入栈）。</p>
+                      <p>增加一个字符串常量 <code class="language-plaintext highlighter-rouge">function_name</code> 表示函数名；</p>
                     </li>
+                    <li>在 call 指令前加入一条将字符串常量指针入栈的指令（假设参数是通过栈传递的，其他参数已在这条指令之前入栈）。</li>
                   </ul>
                 </li>
                 <li>
@@ -585,15 +609,16 @@ typedef struct _znode {
                     <li>
                       <p>如果此动态链接库尚未加载，找到加载这个动态链接库的一块内存空间；对目标文件进行重定位；加载重定位后的目标文件；</p>
                     </li>
-                    <li>
-                      <p>下面是几条关键的汇编指令：设置代码段为可写；（有点 hacker 的意味了）</p>
+                    <li>下面是几条关键的汇编指令：
+                      <ul>
+                        <li>设置代码段为可写；（有点 hacker 的意味了）</li>
+                        <li>基于调用栈中的返回地址，修改返回地址所对应指令（即 <code class="language-plaintext highlighter-rouge">call loadfunc</code>）为 <code class="language-plaintext highlighter-rouge">call function_name</code>；（修改寻址偏移）</li>
+                        <li>将 <code class="language-plaintext highlighter-rouge">call function_name</code> 的前一条指令（即字符串常量指针入栈）修改为 nop；（再也不需要它了）</li>
+                        <li>修改返回地址为其前一条指令；（使返回后调用 <code class="language-plaintext highlighter-rouge">function_name</code>）</li>
+                        <li>设置代码段为只读（可有可无）。</li>
+                      </ul>
                     </li>
-                    <li>
-                      <p>基于调用栈中的返回地址，修改返回地址所对应指令（即 call loadfunc）为 call function <em>name；（修改寻址偏移） - 将 call function</em> name 的前一条指令（即字符串常量指针入栈）修改为 nop；（再也不需要它了）</p>
-                    </li>
-                    <li>
-                      <p>修改返回地址为其前一条指令；（使返回后调用 function <em>name） - 设置代码段为只读（可有可无）。 * loadfunc 返回后，就会调用 function</em> name，而此时参数已经准备好，而函数的返回值部分我们压根就没碰，第一次调用将顺利进行；</p>
-                    </li>
+                    <li>loadfunc 返回后，就会调用 <code class="language-plaintext highlighter-rouge">function_name</code>，而此时参数已经准备好，而函数的返回值部分我们压根就没碰，第一次调用将顺利进行；</li>
                   </ul>
                 </li>
                 <li>
@@ -623,10 +648,10 @@ typedef struct _znode {
               <p>在编译可执行文件时，一般并未生成地址无关代码，因而被 extern 声明的共享库变量作为未初始化数据被放在 BSS 段；然而，这些数据在共享库中也有一份（可能是已初始化的）副本。共享库做出妥协，在动态链接时将全局偏移表中的相应条目指向 BSS 段中的数据，可能还要用共享库中的副本将其初始化。事实上，在生成地址无关代码时，编译器并不知道 extern 是同一模块中其他文件中定义的全局变量，还是一个跨模块调用，因此只好统一按照地址无关的方式将其放入全局偏移表。</p>
               <h4 id="数据中的跨模块地址引用">数据中的跨模块地址引用</h4>
               <p>例如这样一段常见的代码：</p>
-              <div class="language-plaintext highlighter-rouge">
+              <div class="language-c highlighter-rouge">
                 <div class="highlight">
-                  <pre class="highlight"><code>extern int a;
-int *b = &amp;a;
+                  <pre class="highlight"><code><span class="k">extern</span> <span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
+<span class="kt">int</span> <span class="o">*</span><span class="n">b</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">;</span>
 </code></pre>
                 </div>
               </div>
@@ -647,17 +672,17 @@ int *b = &amp;a;
               <p>/lib/ld-x.y.z.so（x, y, z 是版本号）就是这样一个神奇的东西。</p>
               <ul>
                 <li>
-                  <p>动态链接器的入口函数 <em>dl</em> start()执行“自举”过程，即自己帮自己做重定位工作。这个过程中在动态链接器内部的相对寻址是没有问题的，然而绝对寻址是不行的，因此这部分需要格外小心谨慎。</p>
+                  <p>动态链接器的入口函数 <code class="language-plaintext highlighter-rouge">_dl_start()</code> 执行“自举”过程，即自己帮自己做重定位工作。这个过程中在动态链接器内部的相对寻址是没有问题的，然而绝对寻址是不行的，因此这部分需要格外小心谨慎。</p>
                 </li>
                 <li>
                   <p>载入程序的符号表。完成自举之后，就可以自由调用程序中的函数、访问全局变量了。</p>
                 </li>
-                <li>
-                  <p><em>dl</em> start <em>final()收集一些基本的运行数值 * _dl</em> sysdep <em>start()进行一些平台相关的处理 * _dl</em> main()判断指定的用户入口地址，如果是动态链接器本身，则它被当作一个可执行文件被运行。</p>
-                </li>
+                <li><code class="language-plaintext highlighter-rouge">_dl_start_final()</code> 收集一些基本的运行数值</li>
+                <li><code class="language-plaintext highlighter-rouge">_dl_sysdep_start()</code> 进行一些平台相关的处理</li>
+                <li><code class="language-plaintext highlighter-rouge">_dl_main()</code> 判断指定的用户入口地址，如果是动态链接器本身，则它被当作一个可执行文件被运行。</li>
               </ul>
-              <p>如果用户入口地址是动态链接器，则对程序依赖的共享对象进行装载、符号解析和重定位，也就是我们前面提到的动态链接过程。 显然，动态链接器本身必须是静态链接的，不能依赖其他动态链接库，不然没人帮它解决依赖。动态链接器自身是 PIC（地址无关代码），一是因为自举过程中需要进行重定位，而对数据段进行重定位比对代码段进行重定位简单；二是因为 PIC 的代码可以共享物理地址，这样各程序在内存中只要一份动态链接器的副本，节约内存。</p>
-              <p>从上面的描述容易看出，动态链接器也是可以直接运行的。内核只是寻找.interp 段，没有找到就直接跳到 e <em>entry，找到了就载入动态链接器并跳到动态链接器的 e</em> entry。</p>
+              <p>如果用户入口地址是动态链接器，则对程序依赖的共享对象进行装载、符号解析和重定位，也就是我们前面提到的动态链接过程。显然，动态链接器本身必须是静态链接的，不能依赖其他动态链接库，不然没人帮它解决依赖。动态链接器自身是 PIC（地址无关代码），一是因为自举过程中需要进行重定位，而对数据段进行重定位比对代码段进行重定位简单；二是因为 PIC 的代码可以共享物理地址，这样各程序在内存中只要一份动态链接器的副本，节约内存。</p>
+              <p>从上面的描述容易看出，动态链接器也是可以直接运行的。内核只是寻找 <code class="language-plaintext highlighter-rouge">.interp</code> 段，没有找到就直接跳到 <code class="language-plaintext highlighter-rouge">e_entry</code>，找到了就载入动态链接器并跳到动态链接器的 <code class="language-plaintext highlighter-rouge">e_entry</code>。</p>
               <h3 id="35-运行时装载">3.5 运行时装载</h3>
               <p>动态链接解决了不同进程的共享库指令重复占用空间的问题，但在初始化时完成所有动态链接有一个缺陷：程序的运行具有局部性，很多模块是在近期是不会被用到的，一次全部加载进来未免浪费。这个问题本质上是进程的“内政”，与动态链接无关。</p>
               <p>为了实现运行时按需装载模块，早期程序员将模块按照它们的调用关系组织成树形结构，采用“覆盖装入”节约内存空间。它利用了某些模块不可能共存的约束，使得某些模块可以共享同一块地址区域，从而节约了内存空间。这种方式需要程序员花费大量精力为模块安排覆盖装入结构，每个可执行文件的头部还要加入一块“覆盖管理器”。</p>
@@ -688,32 +713,34 @@ int *b = &amp;a;
               <p>在 Linux 中，内核同样不“越俎代庖”地管这些事，运行时装载机制是通过动态链接器（/lib/libdl.so.2）提供的 API，包括：</p>
               <ul>
                 <li>
-                  <p>打开动态库（dlopen）</p>
+                  <p>打开动态库（dlopen）<code class="language-plaintext highlighter-rouge">void * dlopen(const char *filename, int flag);</code></p>
+                  <ul>
+                    <li>
+                      <p>filename：动态库的绝对路径，或相对/lib、/usr/lib 的相对路径。</p>
+                    </li>
+                    <li>
+                      <p>flag：符号的解析方式。运行时加载有两种方法：一种是当模块被加载时完成所有的函数加载工作（<code class="language-plaintext highlighter-rouge">RTLD_NOW</code>），另一种是当函数被第一次用到时才进行绑定，类似我在 3.2 节中提出的方案（<code class="language-plaintext highlighter-rouge">RTLD_LAZY</code>）。使用 <code class="language-plaintext highlighter-rouge">RTLD_NOW</code> 有利于在调试程序时发现符号未定义方面的错误，让错误尽早暴露出来；而实际使用时 <code class="language-plaintext highlighter-rouge">RTLD_LAZY</code> 可以加快加载动态库的速度，实现真正的“按需加载”。返回值：被加载模块的 handle，指向模块的符号表。有趣的是，如果 filename 参数为 0，返回的就是全局符号表的 handle，即在运行时根据函数名查到其地址并执行，据此可以实现类似高级语言“反射”的机制。</p>
+                    </li>
+                  </ul>
                 </li>
                 <li>
-                  <p>查找符号（dlsym）</p>
+                  <p>查找符号（dlsym）<code class="language-plaintext highlighter-rouge">void * dlsym(void *handle, char *symbol);</code></p>
+                  <ul>
+                    <li>
+                      <p>handle：dlopen 返回的符号表 handle。</p>
+                    </li>
+                    <li>
+                      <p>symbol：要查找的符号名字。如果在当前模块的符号表中未找到，就会按照广度优先的顺序搜索它依赖的共享对象中的符号。返回值：如果是函数，返回函数地址；如果是变量，返回变量地址；如果是常量，返回常量的值；如果符号未找到，返回 NULL。</p>
+                    </li>
+                  </ul>
                 </li>
                 <li>
-                  <p>错误处理（dlerror）</p>
+                  <p>错误处理（dlerror）。dlerror 用于判断上次 dlopen、dlsym、dlclose 调用是否成功。dlsym 返回 NULL（0），不一定意味着符号未找到，有可能恰好是一个值为 0 的常量。</p>
                 </li>
                 <li>
-                  <p>关闭动态库（dlclose） <code> void * dlopen(const char *filename, int flag); </code></p>
-                </li>
-                <li>
-                  <p>filename：动态库的绝对路径，或相对/lib、/usr/lib 的相对路径。</p>
-                </li>
-                <li>
-                  <p>flag：符号的解析方式。运行时加载有两种方法：一种是当模块被加载时完成所有的函数加载工作（RTLD <em>NOW），另一种是当函数被第一次用到时才进行绑定，类似我在 3.2 节中提出的方案（RTLD</em> LAZY）。使用 RTLD <em>NOW 有利于在调试程序时发现符号未定义方面的错误，让错误尽早暴露出来；而实际使用时 RTLD</em> LAZY 可以加快加载动态库的速度，实现真正的“按需加载”。 返回值：被加载模块的 handle，指向模块的符号表。有趣的是，如果 filename 参数为 0，返回的就是全局符号表的 handle，即在运行时根据函数名查到其地址并执行，据此可以实现类似高级语言“反射”的机制。 <code> void * dlsym(void *handle, char \*symbol); </code></p>
-                </li>
-                <li>
-                  <p>handle：dlopen 返回的符号表 handle。</p>
-                </li>
-                <li>
-                  <p>symbol：要查找的符号名字。如果在当前模块的符号表中未找到，就会按照广度优先的顺序搜索它依赖的共享对象中的符号。 返回值：如果是函数，返回函数地址；如果是变量，返回变量地址；如果是常量，返回常量的值；如果符号未找到，返回 NULL。</p>
+                  <p>关闭动态库（dlclose）。dlclose 用于卸载模块，注意这里的卸载和 dlopen 中的装载都是可以重复进行的，每个模块有一个引用计数。</p>
                 </li>
               </ul>
-              <p>dlclose 用于卸载模块，注意这里的卸载和 dlopen 中的装载都是可以重复进行的，每个模块有一个引用计数。</p>
-              <p>dlerror 用于判断上次 dlopen、dlsym、dlclose 调用是否成功。dlsym 返回 NULL（0），不一定意味着符号未找到，有可能恰好是一个值为 0 的常量。</p>
               <p>运行时装载与初始化时装载，区别主要是后者是对程序员透明的，在第一行代码执行前就已经完成了共享库的装载；前者是在程序内部显式调用动态链接器提供的 API。例如 Web 服务器可以不重新启动就根据新配置加载新的模块；浏览器可以在遇到有 Flash 的网页时再加载所需的插件。</p>
               <h3 id="36-延迟绑定">3.6 延迟绑定</h3>
               <p>动态链接比静态链接灵活得多，但它是以牺牲一部分性能为代价的。动态链接的程序性能一般比静态链接的程序低 1%~5%。主要原因有两点：</p>
@@ -728,16 +755,12 @@ int *b = &amp;a;
               <p>事实上早在 3.2 节，就提出了“函数第一次被调用时被装载”的思想，这在 ELF 中被称为“延迟绑定”。</p>
               <p>当我们调用某个外部模块的函数时，动态链接的做法是通过全局偏移表（GOT）间接跳转。一种最简单的方法是开始时让 GOT 中相应的条目指向一个“桩函数”，这个桩函数完成加载工作，修改 GOT 中的跳转地址为已加载的外部函数地址，再调用这个函数。这类似 3.2 节的设想，不过直接修改代码段变成了修改数据段中的 GOT，这样一来代码段可以在不同进程间共享，二来减少了代码段可写可能带来的安全风险。</p>
               <p>ELF 的实现方式与之类似，不过又加了一层：每个外部函数都有一个对应的桩函数，函数调用就是对桩函数的调用，在桩函数内部通过 GOT 实现跳转、实现运行时装载。这样的“桩函数”称为 PLT（Procedure Linkage Table）项。</p>
-              <div class="language-plaintext highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>func@plt:
+              <pre><code class="language-assembly">func@plt:
 	jmp *(func@GOT)
 	push index
 	push moduleID
 	jmp _dl_runtime_resolve
 </code></pre>
-                </div>
-              </div>
               <ol>
                 <li>
                   <p>链接器将 GOT 中 func 所对应的项初始化为上面的“push index”指令的地址，使得首次执行此函数时相当于什么都没有做。从第二次调用此函数开始，就会通过 func@GOT 直接调用外部函数并直接返回，而不会执行“push index”及以下的几条指令。</p>
@@ -749,55 +772,55 @@ int *b = &amp;a;
                   <p>将当前模块的 ID 压入堆栈。（模块 ID 是动态链接器分配的）</p>
                 </li>
                 <li>
-                  <p>以 moduleID，index 为参数，调用动态链接器的 <em>dl</em> runtime_resolve()，完成符号解析和重定位，并将 func 的真正地址填入 func@GOT。</p>
+                  <p>以 moduleID，index 为参数，调用动态链接器的 <code class="language-plaintext highlighter-rouge">_dl_runtime_resolve()</code>，完成符号解析和重定位，并将 func 的真正地址填入 func@GOT。</p>
                 </li>
               </ol>
               <p>在实际实现中，ELF 将 GOT 拆分为“.got”和“.got.plt”两个表，其中“.got”保存全局变量引用的地址，“.got.plt”保存函数引用的地址。.got.plt 的前三项有特殊意义：</p>
               <ul>
                 <li>
-                  <p>第一项保存.dynamic 段的地址，描述了本模块动态链接的相关信息；</p>
+                  <p>第一项保存 .dynamic 段的地址，描述了本模块动态链接的相关信息；</p>
                 </li>
                 <li>
                   <p>第二项保存本模块 ID，由动态链接器在装载模块时初始化；</p>
                 </li>
                 <li>
-                  <p>第三项保存 <em>dl</em> runtime_resolve()的地址，由动态链接器在装载模块时初始化。</p>
+                  <p>第三项保存 <code class="language-plaintext highlighter-rouge">_dl_runtime_resolve()</code> 的地址，由动态链接器在装载模块时初始化。</p>
                 </li>
               </ul>
-              <p>为了减少代码重复，ELF 把上面例子中的最后两条指令放到 PLT 中的第一项（PLT0）中，并规定每项的长度为 16 字节，恰好存放 jmp *(func@GOT), push index, jmp PLT0 三条指令。</p>
+              <p>为了减少代码重复，ELF 把上面例子中的最后两条指令放到 PLT 中的第一项（PLT0）中，并规定每项的长度为 16 字节，恰好存放 <code class="language-plaintext highlighter-rouge">jmp *(func@GOT)</code>, <code class="language-plaintext highlighter-rouge">push index</code>, <code class="language-plaintext highlighter-rouge">jmp PLT0</code> 三条指令。</p>
               <h3 id="37-动态链接库版本">3.7 动态链接库版本</h3>
-              <p>动态链接库当然不是一成不变的，它也需要更新。《COM 本质论》中有一个生动的例子：假设有个程序员实现了一个 O(1)的字符串查找算法，其头文件为：</p>
-              <div class="language-plaintext highlighter-rouge">
+              <p>动态链接库当然不是一成不变的，它也需要更新。《COM 本质论》中有一个生动的例子：假设有个程序员实现了一个 O(1) 的字符串查找算法，其头文件为：</p>
+              <div class="language-cpp highlighter-rouge">
                 <div class="highlight">
-                  <pre class="highlight"><code>class __declspec(dllexport) StringFind {
-	char *p;			// 字符串
-	public:
-		StringFind(char *p);
-		~StringFind();
-		int Find(char *p);	// 查找字符串并返回找到的位置
-		int Length();		// 返回字符串长度
-};
+                  <pre class="highlight"><code><span class="k">class</span> <span class="nc">__declspec</span><span class="p">(</span><span class="n">dllexport</span><span class="p">)</span> <span class="n">StringFind</span> <span class="p">{</span>
+	<span class="kt">char</span> <span class="o">*</span><span class="n">p</span><span class="p">;</span>			<span class="c1">// 字符串</span>
+	<span class="nl">public:</span>
+		<span class="n">StringFind</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">p</span><span class="p">);</span>
+		<span class="o">~</span><span class="n">StringFind</span><span class="p">();</span>
+		<span class="kt">int</span> <span class="n">Find</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">p</span><span class="p">);</span>	<span class="c1">// 查找字符串并返回找到的位置</span>
+		<span class="kt">int</span> <span class="n">Length</span><span class="p">();</span>		<span class="c1">// 返回字符串长度</span>
+<span class="p">};</span>
 </code></pre>
                 </div>
               </div>
-              <p>受到各大厂商的好评后，程序员决定再接再厉：Length()成员函数内部直接调用了 strlen()函数返回字符串长度，效率很低，程序员决定加入一个 length 成员保存字符串长度；又增加了一个 SubString 成员函数用于取得字符串的子串：</p>
-              <div class="language-plaintext highlighter-rouge">
+              <p>受到各大厂商的好评后，程序员决定再接再厉：Length() 成员函数内部直接调用了 strlen() 函数返回字符串长度，效率很低，程序员决定加入一个 length 成员保存字符串长度；又增加了一个 SubString 成员函数用于取得字符串的子串：</p>
+              <div class="language-cpp highlighter-rouge">
                 <div class="highlight">
-                  <pre class="highlight"><code>class __declspec(dllexport) StringFind {
-	char *p;			// 字符串
-	int length;			// 字符串长度
-	public:
-		StringFind(char *p);
-		~StringFind();
-		int Find(char *p);	// 查找字符串并返回找到的位置
-		int Length();		// 返回字符串长度
-		char* Substring(int pos, int len);	// 返回字符串从pos处开始长度为len的子串
-};
+                  <pre class="highlight"><code><span class="k">class</span> <span class="nc">__declspec</span><span class="p">(</span><span class="n">dllexport</span><span class="p">)</span> <span class="n">StringFind</span> <span class="p">{</span>
+	<span class="kt">char</span> <span class="o">*</span><span class="n">p</span><span class="p">;</span>			<span class="c1">// 字符串</span>
+	<span class="kt">int</span> <span class="n">length</span><span class="p">;</span>			<span class="c1">// 字符串长度</span>
+	<span class="nl">public:</span>
+		<span class="n">StringFind</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">p</span><span class="p">);</span>
+		<span class="o">~</span><span class="n">StringFind</span><span class="p">();</span>
+		<span class="kt">int</span> <span class="n">Find</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">p</span><span class="p">);</span>	<span class="c1">// 查找字符串并返回找到的位置</span>
+		<span class="kt">int</span> <span class="n">Length</span><span class="p">();</span>		<span class="c1">// 返回字符串长度</span>
+		<span class="kt">char</span><span class="o">*</span> <span class="n">Substring</span><span class="p">(</span><span class="kt">int</span> <span class="n">pos</span><span class="p">,</span> <span class="kt">int</span> <span class="n">len</span><span class="p">);</span>	<span class="c1">// 返回字符串从 pos 处开始长度为 len 的子串</span>
+<span class="p">};</span>
 </code></pre>
                 </div>
               </div>
               <p>厂商将新版的 DLL 打成一个补丁升级包，以覆盖旧版的 DLL；很快他们收到了铺天盖地的抱怨。原因主要来自：新版的 StringFind 对象占用空间是 8 个字节，而原先的程序主模块只给它分配了 4 个字节，访问的 length 成员事实上不属于 StringFind 对象，出现错误的数据访问，导致程序崩溃。</p>
-              <p>在 Windows 平台下，Component Object Model（COM）就是微软为了解决这些程序兼容性问题（不仅是版本问题）而开发的一套复杂的机制。在. NET 中，一个程序集包括一个 Manifest 文件，描述了这个程序集（由若干可执行文件或动态链接库组成）的名称、版本号、各种资源及其依赖的各种资源（包括 DLL 等）。Windows 系统目录下有个 WinSxS（Windows Side by Side）目录，每个版本的 DLL 在 WinSxS 目录下都有一个以平台类型、编译器、动态链接库名称、公钥、版本号命名的独立的目录，保证多个版本的动态链接库不会冲突。当然，这就要求动态链接库与主程序的编译环境完全相同，Windows 中没有类似“源”的公共运行库下载仓库，因此程序发布时往往要带上对应的运行库。</p>
+              <p>在 Windows 平台下，Component Object Model（COM）就是微软为了解决这些程序兼容性问题（不仅是版本问题）而开发的一套复杂的机制。在。NET 中，一个程序集包括一个 Manifest 文件，描述了这个程序集（由若干可执行文件或动态链接库组成）的名称、版本号、各种资源及其依赖的各种资源（包括 DLL 等）。Windows 系统目录下有个 WinSxS（Windows Side by Side）目录，每个版本的 DLL 在 WinSxS 目录下都有一个以平台类型、编译器、动态链接库名称、公钥、版本号命名的独立的目录，保证多个版本的动态链接库不会冲突。当然，这就要求动态链接库与主程序的编译环境完全相同，Windows 中没有类似“源”的公共运行库下载仓库，因此程序发布时往往要带上对应的运行库。</p>
               <p>事实上，DLL 的设计目的并不是“共享对象”，而是促进程序的模块化，使得各模块之间能够松散地组合、重用、升级。运行时加载机制使得各种功能模块能以插件的形式存在，这是 ActiveX 等技术的基础。利用 DLL 的数据段可以在不同进程间共享的特性，DLL 还是 Windows 中进程通信的一种方式（尽管第三者也可以共享他们的 DLL，从而有安全漏洞）。在 UNIX 传统中，这样的模块化通常是每个模块一个进程，而进程的协同是通过管道、socket 等进程间通信手段实现的，这样的方式需要程序员投入更多精力，但能提供更好的封装性。由于 Windows 传统中的程序多是封闭开发的软件，内部接口容易统一，因而模块之间大多采用编程更直接的函数调用，服务器与客户端之间的通信也较多采用远程过程调用（RPC）而非透明的文本协议。</p>
               <p>在 Linux 中，共享库的版本问题通过文件名中包含版本号这一简单途径得以解决。共享库的命名规则是 libname.so.x.y.z：</p>
               <ul>
@@ -812,16 +835,16 @@ int *b = &amp;a;
                 </li>
               </ul>
               <p>那么动态链接器如何知道程序需要哪个版本的共享库呢？Linux 采用 SO-NAME 的命名机制记录库的依赖关系。SO-NAME 就是 libname.so.x，只保留主版本号。利用“SO-NAME 相同的两个共享库，次版本号大的兼容次版本号小的”这一特性，系统会为每个共享库创建一个以 SO-NAME 命名的软链接，主版本号相同的共享库只保留次版本号最高的那个。这样，所有使用共享库的模块在编译链接时只要指定主版本号（SO-NAME）而无需指定详细的版本号；及时删除过时的冗余共享库，节约了磁盘空间。</p>
-              <p>Linux 中软件包的依赖关系很大程度上就是共享库的依赖关系，由于共享库通常是开源或公开提供下载的，软件包管理器会自动从“源”中获取并安装所需的共享库，而无需让软件包背上一个共享库的大包袱。当系统中安装一个新的共享库（就是把共享库放到/lib、/usr/lib 或/usr/local/lib，具体由/etc/ld.so.conf 指定）时，需要使用 ldconfig 工具遍历共享库目录，创建或更新 SO-NAME 软链接，使它们指向最新的共享库；更新 SO-NAME 的缓存（/etc/ld.so.cache），加快共享库的查找过程。</p>
+              <p>Linux 中软件包的依赖关系很大程度上就是共享库的依赖关系，由于共享库通常是开源或公开提供下载的，软件包管理器会自动从“源”中获取并安装所需的共享库，而无需让软件包背上一个共享库的大包袱。当系统中安装一个新的共享库（就是把共享库放到 /lib、/usr/lib 或 /usr/local/lib，具体由 /etc/ld.so.conf 指定）时，需要使用 ldconfig 工具遍历共享库目录，创建或更新 SO-NAME 软链接，使它们指向最新的共享库；更新 SO-NAME 的缓存（/etc/ld.so.cache），加快共享库的查找过程。</p>
               <p>符号版本问题是否宣告解决了呢？如果动态链接器在进行链接时，只进行主版本号的判断，则若某个程序依赖次版本号更高的共享库，动态链接器就可能查不出版本冲突，从而带来本节开头的问题。此外“相同主版本号的共享库，次版本号需要向后兼容”，因而只要接口做了一点不向后兼容的改变，就必须升级主版本号。Linux 采用了更细粒度的版本机制——在可执行文件和共享库中，每个导入或导出的符号都对应一组主、次版本号，同名符号可以有多个版本。这样，一个 Version 1.2 的共享库内部可以同时存在 1.2 版和 1.1 版的库函数，动态链接器也会尽量为可执行文件中的函数引用找到合适版本的库函数来链接，即使 1.2 版与 1.1 版的这个库函数互不兼容，使用这两版共享库的程序仍然能正常链接。</p>
               <p>GCC 为指定符号版本提供了.symver 汇编宏指令。例如改变 strstr 的接口而不升级主版本号：</p>
-              <div class="language-plaintext highlighter-rouge">
+              <div class="language-c highlighter-rouge">
                 <div class="highlight">
-                  <pre class="highlight"><code>asm(".symver old_strstr, strstr@VERS_1.1");
-asm(".symver new_strstr, strstr@VERS_1.2");
+                  <pre class="highlight"><code><span class="n">asm</span><span class="p">(</span><span class="s">".symver old_strstr, strstr@VERS_1.1"</span><span class="p">);</span>
+<span class="n">asm</span><span class="p">(</span><span class="s">".symver new_strstr, strstr@VERS_1.2"</span><span class="p">);</span>
 
-int old_strstr(char *haystack, char *needle);			// 返回needle在haystack中第一次出现的offset，未找到返回-1
-int new_strstr(char *haystack, char *needle, bool direction);	// direction用于指定从前向后查找还是从后向前查找
+<span class="kt">int</span> <span class="nf">old_strstr</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">haystack</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">needle</span><span class="p">);</span>			<span class="c1">// 返回 needle 在 haystack 中第一次出现的 offset，未找到返回 -1</span>
+<span class="kt">int</span> <span class="nf">new_strstr</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">haystack</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">needle</span><span class="p">,</span> <span class="n">bool</span> <span class="n">direction</span><span class="p">);</span>	<span class="c1">// direction 用于指定从前向后查找还是从后向前查找</span>
 </code></pre>
                 </div>
               </div>
@@ -842,7 +865,7 @@ int new_strstr(char *haystack, char *needle, bool direction);	// direction用于
                 </li>
               </ul>
               <p>Windows 的 PE（Portable Executable）文件格式和 Linux 的 ELF（Executable Linkable Format）文件格式都是 COFF（COmmon File Format）文件格式的变种。</p>
-              <p>下面按字母顺序列出了 ELF 的一些常见段（我没有一一验证，尤其是与 C++有关的部分，如有错误请指正）：</p>
+              <p>下面按字母顺序列出了 ELF 的一些常见段（我没有一一验证，尤其是与 C++ 有关的部分，如有错误请指正）：</p>
               <table>
                 <thead>
                   <tr>
@@ -869,11 +892,11 @@ int new_strstr(char *haystack, char *needle, bool direction);	// direction用于
                   </tr>
                   <tr>
                     <td>.data.rel.ro</td>
-                    <td>只读数据，与.rodata 类似，不同的是它在重定位时会被改写，然后置为只读</td>
+                    <td>只读数据，与 .rodata 类似，不同的是它在重定位时会被改写，然后置为只读</td>
                   </tr>
                   <tr>
                     <td>.debug</td>
-                    <td>调试信息，使用 gcc 的-g 或-ggdb 参数</td>
+                    <td>调试信息，使用 gcc 的 -g 或 -ggdb 参数</td>
                   </tr>
                   <tr>
                     <td>.dtors</td>
@@ -889,15 +912,15 @@ int new_strstr(char *haystack, char *needle, bool direction);	// direction用于
                   </tr>
                   <tr>
                     <td>.dynsym</td>
-                    <td>与动态链接相关的符号表。需要注意，.symtab 中往往保存了所有符号，而.dynsym 中只保存动态链接时需要的符号，不保存仅在模块内部使用的符号。</td>
+                    <td>与动态链接相关的符号表。需要注意，.symtab 中往往保存了所有符号，而 .dynsym 中只保存动态链接时需要的符号，不保存仅在模块内部使用的符号。</td>
                   </tr>
                   <tr>
                     <td>.eh_frame</td>
-                    <td>与 C++异常处理相关</td>
+                    <td>与 C++ 异常处理相关</td>
                   </tr>
                   <tr>
                     <td>.eh_frame_hdr</td>
-                    <td>与 C++异常处理相关</td>
+                    <td>与 C++ 异常处理相关</td>
                   </tr>
                   <tr>
                     <td>.fini</td>
@@ -909,7 +932,7 @@ int new_strstr(char *haystack, char *needle, bool direction);	// direction用于
                   </tr>
                   <tr>
                     <td>.gnu.version</td>
-                    <td>动态链接符号版本，.dynsym 中的每个符号对应一项（该符号所需版本在.gnu.version_d 中的序号）</td>
+                    <td>动态链接符号版本，.dynsym 中的每个符号对应一项（该符号所需版本在 .gnu.version_d 中的序号）</td>
                   </tr>
                   <tr>
                     <td>.gnu.version_d</td>
@@ -945,7 +968,7 @@ int new_strstr(char *haystack, char *needle, bool direction);	// direction用于
                   </tr>
                   <tr>
                     <td>.line</td>
-                    <td>调试用的行号信息，使用 gcc 的-g 或-ggdb 参数</td>
+                    <td>调试用的行号信息，使用 gcc 的-g 或 -ggdb 参数</td>
                   </tr>
                   <tr>
                     <td>.note</td>
@@ -957,7 +980,7 @@ int new_strstr(char *haystack, char *needle, bool direction);	// direction用于
                   </tr>
                   <tr>
                     <td>.preinit_array</td>
-                    <td>早于初始化阶段前执行的函数指针，在.init_array 之前执行</td>
+                    <td>早于初始化阶段前执行的函数指针，在 .init_array 之前执行</td>
                   </tr>
                   <tr>
                     <td>.rel.data</td>
@@ -1001,13 +1024,13 @@ int new_strstr(char *haystack, char *needle, bool direction);	// direction用于
                   </tr>
                   <tr>
                     <td>.text</td>
-                    <td>代码段（为什么不叫.code？）</td>
+                    <td>代码段（为什么不叫 .code？）</td>
                   </tr>
                 </tbody>
               </table>
             </section>
             <footer class="page__meta">
-              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2021-01-15">2021 年 1 月 15 日</time></p>
+              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2024-06-25">2024 年 6 月 25 日</time></p>
             </footer>
             <nav class="pagination">
               <a href="/wiki/scripts/you_get/" class="pagination--pager" title="You-Get
