@@ -9,19 +9,19 @@
   <head>
     <meta charset="utf-8">
     <!-- begin _includes/seo.html -->
-    <title>《黑客与画家》读书笔记 - LUG @ USTC</title>
-    <meta name="description" content="《黑客与画家》读书笔记">
+    <title>Mirrors Very Quickstart - LUG @ USTC</title>
+    <meta name="description" content="Mirrors Very Quickstart">
     <meta name="author" content="USTCLUG">
     <meta property="article:author" content="USTCLUG">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="zh_CN">
     <meta property="og:site_name" content="LUG @ USTC">
-    <meta property="og:title" content="《黑客与画家》读书笔记">
-    <meta property="og:url" content="https://lug.ustc.edu.cn/wiki/user/sadhen/hackers_and_painters/">
-    <meta property="og:description" content="《黑客与画家》读书笔记">
-    <meta property="article:published_time" content="2020-08-09T15:07:59+08:00">
-    <meta property="article:modified_time" content="2020-11-21T01:43:21+08:00">
-    <link rel="canonical" href="https://lug.ustc.edu.cn/wiki/user/sadhen/hackers_and_painters/">
+    <meta property="og:title" content="Mirrors Very Quickstart">
+    <meta property="og:url" content="https://lug.ustc.edu.cn/wiki/user/taoky/mirrors-quickstart/">
+    <meta property="og:description" content="Mirrors Very Quickstart">
+    <meta property="article:published_time" content="2024-06-26T00:01:37+08:00">
+    <meta property="article:modified_time" content="2024-06-26T00:01:37+08:00">
+    <link rel="canonical" href="https://lug.ustc.edu.cn/wiki/user/taoky/mirrors-quickstart/">
     <!-- end _includes/seo.html -->
     <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="LUG @ USTC Feed">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -171,14 +171,14 @@
           </nav>
         </div>
         <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-          <meta itemprop="headline" content="《黑客与画家》读书笔记">
-          <meta itemprop="description" content="《黑客与画家》读书笔记">
-          <meta itemprop="datePublished" content="2020-08-09T15:07:59+08:00">
-          <meta itemprop="dateModified" content="2020-11-21T01:43:21+08:00">
+          <meta itemprop="headline" content="Mirrors Very Quickstart">
+          <meta itemprop="description" content="Mirrors Very Quickstart">
+          <meta itemprop="datePublished" content="2024-06-26T00:01:37+08:00">
+          <meta itemprop="dateModified" content="2024-06-26T00:01:37+08:00">
           <div class="page__inner-wrap">
             <header>
               <h1 id="page-title" class="page__title" itemprop="headline">
-                <a href="https://lug.ustc.edu.cn/wiki/user/sadhen/hackers_and_painters/" itemprop="url">《黑客与画家》读书笔记
+                <a href="https://lug.ustc.edu.cn/wiki/user/taoky/mirrors-quickstart/" itemprop="url">Mirrors Very Quickstart
                 </a>
               </h1>
             </header>
@@ -189,81 +189,102 @@
                     <h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4>
                   </header>
                   <ul class="toc__menu">
-                    <li><a href="#关于财富">关于财富</a></li>
-                    <li><a href="#禁忌">禁忌</a></li>
-                    <li><a href="#编程语言">编程语言</a>
-                      <ul>
-                        <li><a href="#哪种编程语言最好">哪种编程语言最好</a>
-                          <ul>
-                            <li><a href="#问争论到底怎样才好">问：争论，到底怎样才好？</a></li>
-                          </ul>
-                        </li>
-                        <li><a href="#问lisp-家族的后代会是好的语言吗">问：LISP 家族的后代会是“好”的语言吗？</a>
-                          <ul>
-                            <li><a href="#问编程语言的本质是什么">问：编程语言的本质是什么？</a></li>
-                            <li><a href="#问理想的编程语言是怎样的">问：理想的编程语言是怎样的？</a></li>
-                          </ul>
-                        </li>
-                        <li><a href="#guile-作为一种扩展语言">Guile: 作为一种扩展语言</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#有意思的链接和广告">有意思的链接和广告</a></li>
+                    <li><a href="#yuki">Yuki</a></li>
+                    <li><a href="#homepage">Homepage</a></li>
+                    <li><a href="#nginxhttp-服务">Nginx（HTTP 服务）</a></li>
+                    <li><a href="#rsyncdrsync-服务">Rsyncd（Rsync 服务）</a></li>
                   </ul>
                 </nav>
               </aside>
-              <p><a href="http://dbanotes.net/review/Hackers_and_Painters.html" title="http://dbanotes.net/review/Hackers_and_Painters.html">Fenng</a> 说这本书的三个主要的主题是黑客精神、创业和编程语言，我深以为然。当然，这本书还涉及到了其它很多有意思的话题。比如不能说的话、财富等等。</p>
-              <p>翻译经常是一件吃力不讨好的事。即使翻译的再好，如果原著本身很经典的话，大家都还是喜欢看原著。当然，像《歌德尔、爱舍尔、巴赫》之类的书得排除在外。本书的译者是<a href="http://www.ruanyifeng.com/home.html" title="http://www.ruanyifeng.com/home.html">阮一峰</a>，其译文和博客行文流畅自然，都值得一读。</p>
-              <h2 id="关于财富">关于财富</h2>
-              <p>人们往往因为财富的分配而忽略了财富的创造。人们常常抱怨财富分配的不均匀。这很正常，没有一种分配方式能让所有人觉得公平公正。然而人们在抱怨分配不均时，往往会犯一个认知上的错误，即财富的总量是个 const。然而，人类社会的财富实实在在是在不断甚至是以极快的速度在增长着。所以，获得财富的手段是争取财富分配上的增加或者直接创造财富。后者即创业。</p>
-              <p>黑客们喜欢创造。有些创造可能仅仅是黑客们自己把玩的玩具。有些则转化为我们人类社会的财富。</p>
-              <h2 id="禁忌">禁忌</h2>
-              <p>人类社会的禁忌并不常常是合理的。有些源于历史上的无知，然而不幸的传承了下来。黑客们不喜欢禁忌，黑客们向往自由。然而有时候，黑客们也只能是沉默的大多数。关于这个话题，详见《黑客与画家》第三章。</p>
-              <h2 id="编程语言">编程语言</h2>
-              <p>本书中提到了 LISP 这门古老而极具生命力的编程语言，也谈论了一些作者本人对编程语言的看法。本人对编程语言的了解十分有限。下面是我的看法。</p>
-              <h3 id="哪种编程语言最好">哪种编程语言最好</h3>
-              <p>经常在邮件列表里面看到一群人，为了自己喜爱的编程语言争论。那么哪种语言最好呢？其实往往这些问题的提出者不怀好意，或者不知道如何<a href="/wiki/doc/smart-questions" title="doc:smart-questions">提问</a>？这种人通常被称为<a href="http://en.wikipedia.org/wiki/Troll_(Internet)" title="http://en.wikipedia.org/wiki/Troll_%28Internet%29">Troll</a>。</p>
-              <div class="language-plaintext highlighter-rouge">
+              <p>开始前先阅读 <a href="https://github.com/tuna/tunasync/wiki/Mirroring-Howto">https://github.com/tuna/tunasync/wiki/Mirroring-Howto</a>。</p>
+              <p>假设 repo 总目录在 <code class="language-plaintext highlighter-rouge">/srv/repo</code>。</p>
+              <h2 id="yuki">Yuki</h2>
+              <p><a href="https://github.com/ustclug/yuki?tab=readme-ov-file#quickstart">https://github.com/ustclug/yuki?tab=readme-ov-file#quickstart</a></p>
+              <p>假设镜像配置在 <code class="language-plaintext highlighter-rouge">/home/mirror/repos</code>，同步日志在 <code class="language-plaintext highlighter-rouge">/home/mirror/logs</code>，对应修改 <code class="language-plaintext highlighter-rouge">daemon.toml</code> 中 <code class="language-plaintext highlighter-rouge">repo_logs_dir</code> 和 <code class="language-plaintext highlighter-rouge">repo_config_dir</code>。同时范例中的 docker-ce 同步配置就位于 <code class="language-plaintext highlighter-rouge">/home/mirror/repos/docker-ce.yaml</code>，内容如下：</p>
+              <div class="language-yaml highlighter-rouge">
                 <div class="highlight">
-                  <pre class="highlight"><code>那么哪种语言最好呢？
+                  <pre class="highlight"><code><span class="na">name</span><span class="pi">:</span> <span class="s">docker-ce</span>
+<span class="c1"># every 1 hour</span>
+<span class="na">cron</span><span class="pi">:</span> <span class="s2">"</span><span class="s">0</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*"</span>
+<span class="na">storageDir</span><span class="pi">:</span> <span class="s">/srv/repo/docker-ce</span>
+<span class="na">image</span><span class="pi">:</span> <span class="s">ustcmirror/rsync:latest</span>
+<span class="na">logRotCycle</span><span class="pi">:</span> <span class="m">2</span>
+<span class="na">envs</span><span class="pi">:</span>
+  <span class="na">RSYNC_HOST</span><span class="pi">:</span> <span class="s">rsync.mirrors.ustc.edu.cn</span>
+  <span class="na">RSYNC_PATH</span><span class="pi">:</span> <span class="s">docker-ce/</span>
+  <span class="na">RSYNC_EXCLUDE</span><span class="pi">:</span> <span class="s">--exclude=.~tmp~/</span>
+  <span class="na">RSYNC_EXTRA</span><span class="pi">:</span> <span class="s">--size-only</span>
+  <span class="na">RSYNC_MAXDELETE</span><span class="pi">:</span> <span class="s2">"</span><span class="s">50000"</span>
 </code></pre>
                 </div>
               </div>
-              <p>首先能回答这个问题的人必须是了解至少两门编程语言的人。否则谈何比较？！</p>
-              <p>其次，如果要讨论好不好的问题，首先需要度量好坏的标准，在这些标准下面，这个问题才真正具有意义。总不能说“我喜欢它，它就是好，这不需要理由！”。实际上，从编程语言的历史上看，一门语言的出现往往是因为某种需求，或者是解决现有的一些编程语言存在的问题。而且在设计编程语言的过程中，很难避免 trade offs——为了某些特性，就必须得牺牲另外一些特性。</p>
-              <h4 id="问争论到底怎样才好">问：争论，到底怎样才好？</h4>
-              <p>讨论过程中难免争论，局内人争个热火朝天，局外人看个不明所以。网上的争论尤为如此，经常是断章取义，且双方似乎互相理解不了对方的文字。</p>
-              <p>我的观点是在讨论过程中，尽量考虑阅读者的感受，另外要含有一定的信息量，而不是噪音。</p>
-              <h3 id="问lisp-家族的后代会是好的语言吗">问：LISP 家族的后代会是“好”的语言吗？</h3>
-              <h4 id="问编程语言的本质是什么">问：编程语言的本质是什么？</h4>
-              <p>计算的本质是什么？</p>
-              <h4 id="问理想的编程语言是怎样的">问：理想的编程语言是怎样的？</h4>
-              <h3 id="guile-作为一种扩展语言">Guile: 作为一种扩展语言</h3>
-              <p>以上的一些问题是我思考过，有些得到了自己答案，有些还没有想明白。寒假趁闲， <strong>接触</strong> 了一下 scheme。接触即平时也只是用<a href="http://en.wikipedia.org/wiki/GNU_Guile" title="http://en.wikipedia.org/wiki/GNU_Guile">Guile</a>，简单的试一下自己写的 scheme 代码能不能运行，结果是不是符合预期。</p>
-              <p>目前在读《The Little Schemer》，此书且不论内容，形式上便令人耳目一新：</p>
+              <p>如果需要快速获取仓库大小：</p>
+              <ul>
+                <li>ZFS: 需要创建 dataset 挂载到 /srv/repo/docker-ce</li>
+                <li>XFS: 需要为 /srv/repo/docker-ce 设置 quota，可阅读 <a href="https://201.ustclug.org/ops/storage/filesystem/#xfs">https://201.ustclug.org/ops/storage/filesystem/#xfs</a></li>
+                <li>其他：不支持</li>
+              </ul>
+              <p>并参考 <a href="https://github.com/ustclug/Yuki/blob/main/cmd/yukid/README.md#server-configuration">https://github.com/ustclug/Yuki/blob/main/cmd/yukid/README.md#server-configuration</a> 调整 daemon.toml。</p>
+              <h2 id="homepage">Homepage</h2>
+              <p><a href="https://git.lug.ustc.edu.cn/mirrors/mirrors-index">https://git.lug.ustc.edu.cn/mirrors/mirrors-index</a></p>
+              <ol>
+                <li>clone 后 <code class="language-plaintext highlighter-rouge">git submodule update --init --recursive</code></li>
+                <li>安装对应 Python 依赖（requests, jinja2）</li>
+                <li>调整配置和代码的 <code class="language-plaintext highlighter-rouge">/srv/rsync-attrs</code> 到 <code class="language-plaintext highlighter-rouge">/srv/repo</code></li>
+                <li>添加 crontab 定时运行，输出到 <code class="language-plaintext highlighter-rouge">/srv/repo/index.html</code></li>
+              </ol>
+              <p>如果需要状态页，参考 <a href="https://git.lug.ustc.edu.cn/mirrors/mirrors-index/-/blob/master/status/genstatus.py">https://git.lug.ustc.edu.cn/mirrors/mirrors-index/-/blob/master/status/genstatus.py</a></p>
+              <h2 id="nginxhttp-服务">Nginx（HTTP 服务）</h2>
+              <p>最简单的 nginx 配置直接将 root 设置为 <code class="language-plaintext highlighter-rouge">/srv/repo</code>，并添加 <code class="language-plaintext highlighter-rouge">autoindex on</code> 即可。</p>
+              <h2 id="rsyncdrsync-服务">Rsyncd（Rsync 服务）</h2>
+              <p>对于机械硬盘阵列，TUNA 的坏人有过优化 patch: <a href="https://github.com/tuna/rsync/blob/master/README-huai.md">https://github.com/tuna/rsync/blob/master/README-huai.md</a>，具体而言，需要在 SSD 上创建一个 ReiserFS 分区，然后每次同步完成之后将所有文件元数据同步到这个分区上，然后 patch 过的服务端会先读取 SSD 上的元数据。</p>
+              <p>我们在 <a href="https://github.com/ustclug/rsync">https://github.com/ustclug/rsync</a> 自行维护一个 fork，应用到较新的 rsync 版本上。</p>
+              <p>但是作为 quickstart，这里只介绍 Debian rsync 的配置。服务依赖于创建 <code class="language-plaintext highlighter-rouge">/etc/rsyncd.conf</code>：</p>
+              <div class="language-console highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">cat</span> /lib/systemd/system/rsync.service
+<span class="go">[Unit]
+Description=fast remote file copy program daemon
+ConditionPathExists=/etc/rsyncd.conf
+After=network.target
+Documentation=man:rsync(1) man:rsyncd.conf(5)
+（省略）
+</span></code></pre>
+                </div>
+              </div>
+              <p>因此需要创建对应的文件，一个参考配置如下：</p>
               <div class="language-plaintext highlighter-rouge">
                 <div class="highlight">
-                  <pre class="highlight"><code>阿基里斯：《The Little Schemer》讲的是什么？
-乌龟：讲的是计算的本质。
-阿基里斯： 计算机的本质是什么？
-乌龟： 是计算的本质，不是计算机的本质。
-……（这是我杜撰两个问答）
+                  <pre class="highlight"><code>pid file = /var/run/rsyncd.pid
+log file = /var/log/rsyncd.log
+
+max verbosity = yes
+transfer logging = yes
+ignore nonreadable = yes
+uid = nobody
+gid = nogroup
+use chroot = yes
+dont compress = *
+max connections = 60
+refuse options = checksum
+read only = true
+timeout = 240
+list = no
+reverse lookup = no
+
+[docker-ce]
+path = /srv/repo/docker-ce
 </code></pre>
                 </div>
               </div>
-              <p>Guile 是 GNU Ubiquitous Intelligent Language for Extensions 的缩写，可以说是 scheme 的解释器之一。然而一开始写 Guile 并不是为了写一个解释器，从名字可以看出，Guile 是为了方便扩展而诞生的。</p>
-              <p>我们从 Emacs 可以看出一种优秀软件的特点：高度可定制性。而高度可定制性依赖于表达力丰富的扩展语言。于 Emacs, elisp 正是这样的一门语言; 于 TeXmacs，scheme 正是这样的一门语言。</p>
-              <h2 id="有意思的链接和广告">有意思的链接和广告</h2>
-              <p><a href="http://lambda-the-ultimate.org/" title="http://lambda-the-ultimate.org">http://lambda-the-ultimate.org</a><br />
-                <a href="http://vivid.chengyichao.info/" title="http://vivid.chengyichao.info">http://vivid.chengyichao.info</a><br />
-                LUG 书库目前（Sat Mar 2 14:52:04 CST 2013）有《计算机程序的构造与解释》一书，图书馆没借到的话，今晚 LUD 后可以去书库借。</p>
             </section>
             <footer class="page__meta">
-              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-11-21">2020 年 11 月 21 日</time></p>
+              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2024-06-26">2024 年 6 月 26 日</time></p>
             </footer>
             <nav class="pagination">
-              <a href="/wiki/user/sadhen/emacs/" class="pagination--pager" title="Emacs 读书笔记
-">上一页</a>
               <a href="/wiki/user/sadhen/" class="pagination--pager" title="About Me
+">上一页</a>
+              <a href="/wiki/user/vastuniverse/lug-upgrade-failure/" class="pagination--pager" title="lug.ustc.edu.cn 系统升级失误
 ">下一页</a>
             </nav>
           </div>
