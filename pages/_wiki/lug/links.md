@@ -23,6 +23,7 @@
 
 - [瀚海星云 BBS Linux 讨论区](http://bbs.ustc.edu.cn/cgi/bbsdoc?board=Linux)
 - [Arch Linux 中文社区](http://bbs.archlinuxcn.org/)
+- [Fedora 中文社区](https://fzug.github.io/)
 - [开源工场](https://openingsource.org/)
 
 ## 各地 LUG
