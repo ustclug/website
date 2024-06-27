@@ -1,0 +1,60 @@
+---
+title: Status
+permalink: /status/
+author_profile: false
+comments: false
+share: false
+noindex: true
+---
+
+<dl>
+  <dt>Build time</dt>
+  <dd><time id="build-time" datetime="{{ site.time | date: "%Y-%m-%d %H:%M:%S" }}">{{ site.time | date: "%Y-%m-%d %H:%M:%S" }}</time></dd>
+
+  <dt>Current time</dt>
+  <dd id="current-time">Loading...</dd>
+
+  <dt>Source Git revision</dt>
+  <dd>
+    <a href="{{ site.source_url }}/commit/{{ site.git.last_commit.long_sha }}">
+      <code class="git-sha">{{ site.git.last_commit.short_sha }}</code>
+      <span class="git-author">{{ site.git.last_commit.author_name | xml_escape }}</span>:
+      <span class="git-message">{{ site.git.last_commit.subject | xml_escape }}</span>
+    </a>
+  </dd>
+
+  <dt>
+    Continuous Integration
+    <!--a href="https://travis-ci.org/{{ site.repository }}"><img src="https://travis-ci.org/{{ site.repository }}.svg?branch=master" alt="Travis CI" /></a-->
+    <!--a href="https://circleci.com/gh/{{ site.repository }}"><img src="https://circleci.com/gh/{{ site.repository }}.svg?style=shield" alt="CircleCI" /></a-->
+    <a href="https://github.com/{{ site.repository }}/actions"><img src="https://github.com/{{ site.repository }}/workflows/build/badge.svg" alt="GitHub Actions" /></a>
+  </dt>
+  {% if site.env.TRAVIS_BUILD_ID %}
+    <dd>This site is deployed from <a href="https://travis-ci.org/{{ site.repository }}/builds/{{ site.env.TRAVIS_BUILD_ID }}">Travis CI build {{ site.env.TRAVIS_BUILD_NUMBER }}{% if site.env.TRAVIS_EVENT_TYPE == "cron" %} &#9200;{% endif %}</a></dd>
+  {% elsif site.env.CIRCLE_BUILD_NUM %}
+    <dd>This site is deployed from <a href="https://circleci.com/gh/{{ site.repository }}/{{ site.env.CIRCLE_BUILD_NUM }}">CircleCI build {{ site.env.CIRCLE_BUILD_NUM }}{% if site.env.CRON %} &#9200;{% endif %}</a></dd>
+  {% elsif site.env.GITHUB_ACTION %}
+    <dd>This site is deployed from <a href="https://github.com/{{ site.repository }}/actions/runs/{{ site.env.GITHUB_RUN_ID }}">GitHub Actions build {{ site.env.GITHUB_RUN_NUMBER }}</a></dd>
+  {% elsif site.env.NETLIFY %}
+    <dd>This site is deployed from <a href="https://www.netlify.com">Netlify</a></dd>
+  {% else %}
+    <dd>This site is not deployed from Continuous Integration.</dd>
+  {% endif %}
+</dl>
+
+<script>
+  document.getElementById("build-time").innerText = new Date("{{ site.time | date_to_xmlschema }}");
+  function zeropad(n) {
+    return n > 9 ? String(n) : "0" + String(n);
+  }
+  var showTimeContainer = document.getElementById("current-time");
+  function showTime() {
+    let t = new Date(Date.now());
+    // showTimeContainer.innerText = "UTC " + String(t.getUTCFullYear()) + "-" + zeropad(t.getUTCMonth() + 1) + "-" + zeropad(t.getUTCDate()) + " " + zeropad(t.getUTCHours()) + ":" + zeropad(t.getUTCMinutes()) + ":" + zeropad(t.getUTCSeconds());
+    showTimeContainer.innerText = t.toString();
+    window.setTimeout(showTime, 1000 - t.getMilliseconds());
+  }
+  showTime();
+</script>
+
+<style>.git-author { font-weight: bold; }</style>
