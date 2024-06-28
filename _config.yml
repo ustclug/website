@@ -80,9 +80,9 @@ social:
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "custom"
+  provider               : true # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          :
+    tracking_id          : G-R7BPZT6779
     anonymize_ip         : # true, false (default)
 
 
