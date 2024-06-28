@@ -157,6 +157,7 @@ exclude:
   - package-lock.json
   - README
   - _scripts
+  - shell.nix
   - tmp
   - vendor
 keep_files:
