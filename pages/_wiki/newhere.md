@@ -1,7 +1,3 @@
----
-permalink: /wiki/newhere/
----
-
 # 新同学指南
 
 欢迎来到中国科学技术大学！
