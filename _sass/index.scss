@@ -178,3 +178,8 @@ body {
   }
 }
 
+blockquote {
+    // comment: @tiankaima
+    // Minimal Mistakes Jekyll defaults to italic, but for Chinese content italic is basically unreadable...
+    font-style: normal;
+}

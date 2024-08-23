@@ -43,8 +43,10 @@
 
 1. 安装 Node.js 开发环境（略）
 2. 运行 `npm install` 以安装 prettier
-3. 使用 `npm run fix` 自动格式化。可以将不希望 prettier 处理的文件加入 `.prettierignore`，未来可能会加上 YAML 和 SCSS 格式文件的处理
-4. 使用 `npm run check` 验证格式无问题
+3. 使用 `npm run check` 验证格式无问题
+4. 使用 `npm run fix` 自动格式化
+
+   可以将不希望 prettier 处理的文件加入 `.prettierignore`，未来可能会加上 YAML 和 SCSS 格式文件的处理
 
 ## 许可
 
