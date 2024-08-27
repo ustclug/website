@@ -14,7 +14,7 @@
 | CEO       | 执行会长              | 罗嘉宏 | luojh AT ustclug.org        |
 | -         | 执行副会长            | 马天开 | tiankaima AT ustclug.org    |
 | -         | 执行副会长            | 金文丁 | pro AT ustclug.org          |
-| CTO       | 技术部部长            | 杨广源 |                             |
+| CTO       | 技术部部长            | 杨广源 | erina AT ustclug.org        |
 | -         | 技术部副部长          | 王昊元 | mirageturtle AT ustclug.org |
 | COO & MSC | 运营部部长 & MSC 事务 | 马天开 | tiankaima AT ustclug.org    |
 | -         | 团支书                | 谢子郁 |                             |
