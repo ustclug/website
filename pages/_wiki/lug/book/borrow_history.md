@@ -20,7 +20,7 @@
 | 人工智能 一种现代的方法 3ed. | 徐奥   | xuao123 AT mail.ustc.edu.cn | 2023-03-06 | \-         | \-   |
 | 代数结构                     | 方越   | yuefang AT mail.ustc.edu.cn | 2023-03-13 | \-         | \-   |
 | 信息论基础（第二版）         | 袁保杰 | crabtux AT mail.ustc.edu.cn | 2023-04-07 | 2023-05-31 | \-   |
-| Intel 微处理器               | 袁保杰 | crabtux AT mail.ustc.edu.cn | 2023-09-01 | \-         | \-   |
+| Intel 微处理器               | 袁保杰 | crabtux AT mail.ustc.edu.cn | 2023-09-01 | 2024-06-10 | \-   |
 | C++ Primer Plus(第六版)      | 封霁芩 | smgj AT mail.ustc.edu.cn    | 2023-10-11 | \-         | \-   |
 
 ## 2022 年借阅记录
