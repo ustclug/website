@@ -37,7 +37,7 @@ eduroam 是一个全球性的无线网络服务，覆盖了全球 100 多个国�
 
 如果你还没有申请网络通，请前往 [这里](https://ustcnet.ustc.edu.cn/service/index.php?activeTab=tabWelcome) 开通服务。
 
-对于进阶用户，我们也准备了 [USTC 网络通脚本](/wiki/scripts/wlt.md) 供你使用。
+对于进阶用户，我们也准备了 [USTC 网络通脚本](/wiki/scripts/wlt/) 供你使用。
 
 ## 常见问题
 
