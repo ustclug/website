@@ -2,7 +2,7 @@
 redirect_from: /wiki/server/mirrors/
 ---
 
-# 开源软件镜像服务
+# 开源镜像站
 
 科大 LUG 自成立起便在 2003 年通过 BBS 网上筹款的方式搭建了当时教育网内极少数的几个 Debian GNU/Linux 的镜像源（debian.ustc.edu.cn），随后又在其上添加了 Ubuntu Linux 的镜像。2008 年，借助吴峰光师兄捐助的机器，搭建了科大的开源镜像服务器（oss.ustc.edu.cn），以吸纳更多的开源软件和 Linux 发行版。尽管如此，我们的服务器仍然有些不堪重负，服务供不应求。
 
@@ -25,7 +25,7 @@ redirect_from: /wiki/server/mirrors/
 - 电信 IP：202.141.160.110 (chinanet.mirrors.ustc.edu.cn)
 - 移动 IP：202.141.176.110 (cmcc.mirrors.ustc.edu.cn)
 - 联通 IP：218.104.71.170 (unicom.mirrors.ustc.edu.cn)
-- IPv6：2001:da8:d800:95::110
+- IPv6:2001:da8:d800:95::110
 
 ## 支持的访问方式
 
@@ -45,10 +45,10 @@ rsync - **部分** [为什么？](https://servers.ustclug.org/2014/08/mirrors-ne
 
 ## 状态监控
 
-在首页点击页面上方的[同步状态](https://mirrors.ustc.edu.cn/status)链接，可以查看当前各镜像的同步状态，包括 成功与否/上游源/镜像体积等。 大家如果知道更好（更新、更快）的上游源，请联系我们。
+在首页点击页面上方的[同步状态](https://mirrors.ustc.edu.cn/status)链接，可以查看当前各镜像的同步状态，包括 成功与否/上游源/镜像体积等。大家如果知道更好（更新、更快）的上游源，请联系我们。
 
 如果在实际使用过程中发现镜像有问题，请联系我们。
 
 ## 联系方式
 
-我们的邮箱： lug AT ustc.edu.cn
+我们的邮箱：lug AT ustc.edu.cn

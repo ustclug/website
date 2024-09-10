@@ -7,64 +7,51 @@
 
 ![]({{ site.static_url }}/email.png)
 
-您可以向我们直接发送电子邮件。如需联系*LUG 负责人*，请转至[负责人](person-in-charge.md)页面。但是，仍然推荐使用上面的公用邮件地址。
+您可以向我们直接发送电子邮件。如需联系 LUG 负责人，请转至 [负责人](person-in-charge.md) 页面。
 
-## 参与邮件列表讨论（推荐）
-
-[点击此处了解详情](mailinglist.md)
-
-## Telegram 上的 LUG
-
-加群链接见 `jointele.ustclug.org` 的 DNS TXT 记录
-
-## BBS 上的 LUG
-
-前往[瀚海星云 BBS Linux 版](https://bbs.ustc.edu.cn/cgi/bbsdoc?board=Linux)与我们讨论。
-
-## QQ 群上的 LUG
-
-适合于即时性较强的讨论，较正式的讨论还请使用官方邮件列表。
-
-QQ 群群号请查看 `qq.ustclug.org` 的 DNS TXT 记录。校内学生请联系管理员了解详情。
-
-## IRC 上的 LUG
-
-- 网络：OFTC
-- 频道：#ustclug
+> 无特殊情况时，请不要单独联系负责人。
 
 ## 面对面交流
 
-USTC LUG 在校内的活动室：
+USTCLUG 在校内的活动室：
 
+- 高新校区：高新图书馆 604B 研讨室
 - 西区：西区图书馆 403 室，[指路](/news/2024/05/403/)
 - 西区：~~西区图书馆 206 室~~（已搬迁）
 - 东区：~~东区图书馆 605 室~~（已搬迁）
-- 高新校区：高新图书馆 604B 研讨室
 
 你也可以在 LUG 举办的各类活动中找到 LUG 的成员并当面进行交流。
 
 ## QQ 公众号
 
-QQ：2786229166
+- QQ：2786229166
 
 ![ustclug_qq.png]({{ site.static_url }}/wiki/lug/ustclug_qq.png)
 
 ## 微信公众号
 
-ID：ustclug  
-Name：中科大 LUG
+- ID：`ustclug`
+- Name：**中科大 LUG**
 
 ![ustclug_mama.jpg]({{ site.static_url }}/wiki/lug/ustclug_mama.jpg)
 
-## 社交网络上的 LUG
+## 交流平台
 
-快来关注 SNS 上的 LUG 账户吧！LUG 活动通告，Linux 使用技巧、业界新闻应有尽有！
+### QQ 群上的 LUG
 
-**<i class="fas fa-exclamation-triangle"></i> 注意：**以下账号目前缺乏维护。
-{: .notice--warning }
+QQ 群群号请查看 `qq.ustclug.org` 的 DNS TXT 记录。
 
-- Twitter: [@USTCLUG](https://www.twitter.com/ustclug/)
-- ~~人人：[USTCLUG](https://www.renren.com/profile.do?id=345760436)~~ （原因：_已停用_）
-- ~~豆瓣：[科大 LUG](https://www.douban.com/people/ustclug/)~~ （原因：_状态异常_）
+校内学生请在 [这里](contribute.md) 了解详情。
 
-更多信息，请参阅 [LUG 宣传账号一览](sns.md)。
+### Telegram 上的 LUG
+
+加群链接见 `jointele.ustclug.org` 的 DNS TXT 记录
+
+### 参与邮件列表讨论
+
+[点击此处了解详情](mailinglist.md)
+
+### IRC 上的 LUG
+
+- 网络：OFTC
+- 频道：#ustclug

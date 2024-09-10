@@ -4,10 +4,9 @@ permalink: /wiki/
 
 # 中国科学技术大学 Linux 用户协会
 
-中国科学技术大学 Linux 用户协会（科大 LUG）是由在校的 GNU/Linux 爱好者发起并组成的全校性群众团体，是一个以推广自由软件文化、宣传自由软件价值为目的的协会组织。  
-[了解更多](intro.md)
+中国科学技术大学 Linux 用户协会（科大 LUG）是由在校的 GNU/Linux 爱好者发起并组成的全校性群众团体，是一个以推广自由软件文化、宣传自由软件价值为目的的协会组织。
 
-[English Version](intro_english.md)
+[了解更多](intro.md)
 
 ## 特色活动
 
@@ -43,13 +42,13 @@ permalink: /wiki/
 
 ## 联系我们
 
-- QQ 群: 适合于即时性较强的讨论，较正式的讨论还请使用邮件列表。具体群号请查看 qq.ustclug.org 的 TXT 记录。
-- 邮件列表: ustc_lug (at) googlegroups.com [点击此处了解详情](/wiki/lug/mailinglist)
+- 官方邮箱：![]({{ site.static_url }}/email.png)
+- QQ 群：适合于即时性较强的讨论，较正式的讨论还请使用邮件列表。具体群号请查看 `qq.ustclug.org` 的 TXT 记录。
+- 邮件列表：`ustc_lug (at) googlegroups.com` [点击此处了解详情](/wiki/lug/mailinglist)
 - IRC/Telegram 在线及时聊天，[点击此处](/wiki/lug/contact)了解加入方式，平台互联由 TUNA 提供支持
-- 瀚海星云 BBS: [瀚海星云 BBS Linux 版](https://bbs.ustc.edu.cn/cgi/bbsdoc?board=Linux)
-- 官方邮箱: ![]({{ site.static_url }}/email.png)
-- 活动室: 西区图书馆 403 室
-- 更多联系方式请 [戳这里](/wiki/lug/contact)
+- 活动室：西区图书馆 403 室
+
+> 更多联系方式请 [戳这里](lug/contact)
 
 ## 协会 LOGO
 
