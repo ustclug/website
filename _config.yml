@@ -263,6 +263,12 @@ jekyll-archives:
     tag: /tags/:name/
 
 
+# jekyll-relative-links
+relative_links:
+  enabled:     true
+  collections: true
+
+
 # Defaults
 defaults:
   # _posts
