@@ -23,10 +23,12 @@ wiki:
         url: /wiki/lug/services/
       - title: '<i class="fad fa-lg fa-fw fa-database"></i> 开源镜像站'
         url: /wiki/lug/services/mirrors/
+      - title: '<i class="fad fa-lg fa-fw fa-database"></i> 网络启动平台'
+        url: /wiki/lug/services/pxe/
       - title: '<i class="fad fa-lg fa-fw fa-database"></i> 代码托管平台'
         url: /wiki/lug/services/gitlab/
-      - title: '<i class="fad fa-lg fa-fw fa-database"></i> LUG FTP'
-        url: /wiki/lug/services/ftp /
+      - title: '<i class="fad fa-lg fa-fw fa-database"></i> 文件存档'
+        url: /wiki/lug/services/ftp/
   - title: 活动
     children:
       - title: '<i class="fad fa-lg fa-fw fa-sparkles"></i> LUG 活动'
@@ -35,11 +37,11 @@ wiki:
         url: /wiki/lug/events/weeklyparty/
       - title: '<i class="fad fa-lg fa-fw fa-graduation-cap"></i> Linux 101'
         url: /wiki/lug/events/101/
-      - title: '<i class="fad fa-lg fa-fw fa-graduation-cap"></i> Hackergame'
-        url: /wiki/lug/events/hackergame/
       - title: '<i class="fad fa-lg fa-fw fa-graduation-cap"></i> Linux Install Party'
         url: /wiki/lug/events/lip/
-      - title: '<i class="fad fa-lg fa-fw fa-graduation-cap"></i> Software Freedom Day'
+      - title: '<i class="fad fa-lg fa-fw fa-graduation-cap"></i> 信息安全大赛'
+        url: /wiki/lug/events/hackergame/
+      - title: '<i class="fad fa-lg fa-fw fa-graduation-cap"></i> 软件自由日'
         url: /wiki/lug/events/sfd/
   - title: 联系
     children:

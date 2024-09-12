@@ -7,7 +7,7 @@
 
 ![]({{ site.static_url }}/email.png)
 
-您可以向我们直接发送电子邮件。如需联系 LUG 负责人，请转至 [负责人](person-in-charge.md) 页面。
+您可以向我们直接发送电子邮件。如需联系 LUG 负责人，请转至 [负责人](person-in-charge/) 页面。
 
 > 无特殊情况时，请不要单独联系负责人。
 
@@ -41,7 +41,12 @@ USTCLUG 在校内的活动室：
 
 QQ 群群号请查看 `qq.ustclug.org` 的 DNS TXT 记录。
 
-校内学生请在 [这里](contribute.md) 了解详情。
+校内学生请在 [这里](contribute/) 了解详情。
+
+### IRC 上的 LUG
+
+- 网络：OFTC
+- 频道：#ustclug
 
 ### Telegram 上的 LUG
 
@@ -49,9 +54,4 @@ QQ 群群号请查看 `qq.ustclug.org` 的 DNS TXT 记录。
 
 ### 参与邮件列表讨论
 
-[点击此处了解详情](mailinglist.md)
-
-### IRC 上的 LUG
-
-- 网络：OFTC
-- 频道：#ustclug
+[点击此处了解详情](mailinglist/)

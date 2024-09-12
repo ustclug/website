@@ -49,7 +49,7 @@ USTC LUG 邮件列表所有帖子都永久存档、公开可见：
 
 ## 如何发新主题
 
-直接向 ustc_lug AT googlegroups.com （请把 AT 替换成@）发邮件就行了，Google Groups 会帮您转发给所有加入邮件列表的人。新人发布主题时需要审核，请耐心等待。
+直接向 ustc_lug AT googlegroups.com（请把 AT 替换成@）发邮件就行了，Google Groups 会帮您转发给所有加入邮件列表的人。新人发布主题时需要审核，请耐心等待。
 
 1. “如何回复”中列出的 Tips 仍然适用。
 
@@ -63,6 +63,6 @@ USTC LUG 邮件列表所有帖子都永久存档、公开可见：
 
 原文：<http://www.catb.org/esr/faqs/smart-questions.html>
 
-中文版：[提问的智慧](../doc/smart-questions.md)
+中文版：[提问的智慧](../doc/smart-questions/)
 
 [^html]: HyperText Markup Language

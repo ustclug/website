@@ -8,9 +8,9 @@ LUG 活动概述请移步 [LUG 首页](/)。
 
 LUG 的所有活动均依照 [社团章程](https://ftp.lug.ustc.edu.cn/%E7%A4%BE%E5%9B%A2%E7%AE%A1%E7%90%86/%E7%AB%A0%E7%A8%8B/current/constitution.pdf) 开展。
 
-欢迎订阅 [LUG 日历](calendar.md)。
+欢迎订阅 [LUG 日历](calendar/)。
 
-2016 年及之后的小聚就不在这里重复记录了，请移步[每周小聚](weeklyparty.md)页面查看。
+2016 年及之后的小聚就不在这里重复记录了，请移步[每周小聚](weeklyparty/)页面查看。
 
 ## Latest Events
 

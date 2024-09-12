@@ -1,7 +1,11 @@
 ---
 ---
 
-# GitLab
+# 代码托管平台 GitLab
+
+**git.lug.ustc.edu.cn**
+
+> **注意：** 请区分 LUG 提供的 <https://git.lug.ustc.edu.cn> 与超算平台提供的 <https://git.ustc.edu.cn> .
 
 - 如果你在做课程实验……项目代码往哪里放？
 

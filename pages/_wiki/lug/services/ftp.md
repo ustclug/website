@@ -1,7 +1,9 @@
 ---
 ---
 
-# LUG@USTC FTP 文件存档
+# 文件存档 FTP
+
+**ftp.lug.ustc.edu.cn**
 
 ## 简介
 
