@@ -1,19 +1,15 @@
 ---
 ---
 
-# Software Freedom Day
+# 软件自由日 Software Freedom Day
 
 [软件自由日](https://en.wikipedia.org/wiki/Software_Freedom_Day)（Software Freedom Day，SFD）是在 Digital Freedom Foundation 的主办下，由自由/开源软件爱好者自发筹集组织非盈利性活动，旨在为自由/开源软件爱好者提供一个信息交流平台、联合各社区举办各种自由/开源软件活动。
 
 科大 LUG 已经成功的连续几届举办了合肥站的自由软件日活动。活动得到了龙芯梦兰、龙芯俱乐部、中标软件、中科红旗、中国开源软件推进联盟、深度科技等公司、开源社区，以及合肥工业大学，安徽大学等兄弟院校的大力支持。活动邀请过多个在国内开源软件领域非常有影响力的嘉宾，如科大网络中心的张焕杰老师，北京 GUG 主席李震宁先生，上海 LUG 主席姚欣宇，从事 MIPS 开发的刘世伟先生等，带来了各种内容的主题演讲。
 
----
+> 2024 年的软件自由日活动预计于 2024 年 9 月 21 日（九月第三个星期六）于中国科学技术大学（合肥）举行，现面向校内外所有社区成员公开征集软件自由日讲座或其他与主题有关的活动，有意愿的社区成员可尽快 [联系我们](/wiki/lug/contact/)。
 
-## 活动介绍
-
-SFD，可译为“软件自由日”，顾名思义是对自由、开源软件的庆祝活动。USTC LUG 自 2010 年起每年举办合肥中科大站的自由软件日活动，获得了不错的效果，当然其中也离不开各个公司、兄弟院校、社团、社区的大力支持。
-
-## 历史 SFD 活动记录
+## 活动记录
 
 ### 2023 年 SFD
 
@@ -209,21 +205,24 @@ Software Freedom Day (SFD) is a worldwide celebration of Free and Open Source So
 
 SFD 是一个全球范围的对自由及开源软件（FOSS）的庆祝活动。在这次庆祝活动中，我们的目标是让全球的公众认识到在各个地方使用高质量自由开源软件的好处，例如在教育行业、在政府机关、在家中、在公司办公时……简而言之，了解在所有地方使用这些软件的好处！Digital Freedom Foundation 在全球层面上对 SFD 活动进行组织协调，并提供信息支持、赠品支持及一定的工作协助。但实际上，这个活动需要依靠全球各地的志愿者队伍来组织本地的 SFD 活动，以此影响他们自己所处的社区。
 
-### SFI 的介绍
+### Software Freedom International 的介绍
+
+> 在 2011 年，SFI 更名为 DFF, 同时网站介绍有不少变化，我们把原来的介绍保留在这里：
 
 以下内容来源为[SFD 官方网站](https://www.softwarefreedomday.org/about)。简体中文翻译由 @hosiet 完成，且并非正式翻译。
+{: .notice--info}
 
 SFD is a worldwide celebration of Free and Open Source Software (FOSS).
 
 SFD 是一个全球范围的对自由及开源软件（FOSS）的庆祝活动。
 
-### Vision & Objectives | 立场及意愿
+#### Vision & Objectives | 立场及意愿
 
 Our vision is to empower all people to freely connect, create and share in a digital world that is participatory, transparent, and sustainable.
 
 我们的目的是促使所有人能够自由地与一个积极参与的、透明的、可支持的数字世界相连，并创造、分享精神财富。
 
-### Objectives | 活动目的
+#### Objectives | 活动目的
 
 1. To celebrate software freedom and the people behind it
 2. To foster a general understanding of software freedom, and encourage adoption of free software and open standards
@@ -241,7 +240,7 @@ Our vision is to empower all people to freely connect, create and share in a dig
 5. 包容吸纳同样持有我们的立场的组织与个人；
 6. 作为一个组织，务实、透明、负责任地开展工作。
 
-### Further Explanations | 活动说明
+#### Further Explanations | 活动说明
 
 Our goal in this celebration is to educate the worldwide public about the benefits of using high quality FOSS in education, in government, at home, and in business – in short, everywhere! The non-profit organization Software Freedom International coordinates SFD at a global level, providing support, giveaways and a point of collaboration, but volunteer teams around the world organize the local SFD events to impact their own communities.
 

@@ -27,9 +27,9 @@ permalink: /wiki/
 
   帮助新手学习 Linux 的系列活动。
 
-- **[Linux Install Party](lug/events/lip):**
+  - [Linux Install Party](lug/events/lip):
 
-  推广和安装 Linux，宣传和鼓励开源和自由软件精神的活动。
+    推广和安装 Linux，宣传和鼓励开源和自由软件精神的活动。
 
 - **[信息安全大赛 Hackergame](lug/events/hackergame):**
 
@@ -37,7 +37,7 @@ permalink: /wiki/
 
 - **[软件自由日 Software Freedom Day](lug/events/sfd):**
 
-  在国际自由软件基金会（SFI）的领导下，由自由/开源软件爱好者自发筹集的非盈利性活动。
+  由自由/开源软件爱好者自发筹集的演讲、报告会。
 
 [了解更多](lug/events)
 

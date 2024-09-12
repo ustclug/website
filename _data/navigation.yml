@@ -23,11 +23,11 @@ wiki:
         url: /wiki/lug/services/
       - title: '<i class="fad fa-lg fa-fw fa-database"></i> 开源镜像站'
         url: /wiki/lug/services/mirrors/
-      - title: '<i class="fad fa-lg fa-fw fa-database"></i> 网络启动平台'
+      - title: '<i class="fad fa-lg fa-fw fa-network-wired"></i> 网络启动平台'
         url: /wiki/lug/services/pxe/
-      - title: '<i class="fad fa-lg fa-fw fa-database"></i> 代码托管平台'
+      - title: '<i class="fad fa-lg fa-fw fa-code"></i> 代码托管平台'
         url: /wiki/lug/services/gitlab/
-      - title: '<i class="fad fa-lg fa-fw fa-database"></i> 文件存档'
+      - title: '<i class="fad fa-lg fa-fw fa-folder"></i> 文件存档'
         url: /wiki/lug/services/ftp/
   - title: 活动
     children:
@@ -37,11 +37,9 @@ wiki:
         url: /wiki/lug/events/weeklyparty/
       - title: '<i class="fad fa-lg fa-fw fa-graduation-cap"></i> Linux 101'
         url: /wiki/lug/events/101/
-      - title: '<i class="fad fa-lg fa-fw fa-graduation-cap"></i> Linux Install Party'
-        url: /wiki/lug/events/lip/
-      - title: '<i class="fad fa-lg fa-fw fa-graduation-cap"></i> 信息安全大赛'
+      - title: '<i class="fad fa-lg fa-fw fa-flag"></i> 信息安全大赛'
         url: /wiki/lug/events/hackergame/
-      - title: '<i class="fad fa-lg fa-fw fa-graduation-cap"></i> 软件自由日'
+      - title: '<i class="fad fa-lg fa-fw fa-comment"></i> 软件自由日'
         url: /wiki/lug/events/sfd/
   - title: 联系
     children:
@@ -51,16 +49,14 @@ wiki:
         url: /wiki/lug/contribute/
       - title: '<i class="fad fa-lg fa-fw fa-user-tie"></i> LUG 负责人'
         url: /wiki/lug/person-in-charge/
-      - title: '<i class="fad fa-lg fa-fw fa-envelope-open-text"></i> 邮件列表'
-        url: /wiki/lug/mailinglist/
-      - title: '<i class="fad fa-lg fa-fw fa-donate"></i> 捐赠我们'
-        url: /wiki/lug/finance/donate/
   - title: 文档
     children:
       - title: '<i class="fas fa-lg fa-fw fa-question-square"></i> 校园网常见问题'
         url: /wiki/doc/ustcnet-faq/
       - title: '<i class="fas fa-lg fa-fw fa-universal-access"></i> 提问指南'
         url: /wiki/doc/howtoask/
+      - title: '<i class="fas fa-lg fa-fw fa-pen"></i> 修订指南'
+        url: /wiki/doc/editing/
 
   #  # I'm thinking about deleting all the following items
   # - title: 其他

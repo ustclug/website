@@ -44,4 +44,4 @@ redirect_from: /wiki/server/mirrors/
 
 2010 年底，在网络中心张焕杰老师的帮助下，我们获得了新的服务器，遂将之前两个镜像站的资源以及张老师自己搭建的 CentOS Linux 镜像整合到一起，形成了“科大镜像站” [mirrors.ustc.edu.cn](https://mirrors.ustc.edu.cn)。新网站正式对外发布时，好评如潮。随后我们又成功申请到了 Debian GNU/Linux 的中国官方镜像资格认证等多个官方镜像资格认证。
 
-我们将一如既往的做好镜像服务器的维护工作，争取为大家提供更新更好的服务，使参与维护的同学得到更好的锻炼。
+[了解更多](https://docs.ustclug.org/services/mirrors/)
