@@ -1,29 +1,84 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://lug.ustc.edu.cn/feed/news.xml" rel="self" type="application/atom+xml" /><link href="https://lug.ustc.edu.cn/" rel="alternate" type="text/html" /><updated>2024-09-11T17:14:23+08:00</updated><id>https://lug.ustc.edu.cn/feed/news.xml</id><title type="html">LUG @ USTC | News</title><subtitle>中国科学技术大学 Linux 用户协会</subtitle><author><name>USTCLUG</name></author><entry><title type="html">2024 软件自由日 (SFD) 讲座征集</title><link href="https://lug.ustc.edu.cn/news/2024/08/SFD-Prep/" rel="alternate" type="text/html" title="2024 软件自由日 (SFD) 讲座征集" /><published>2024-08-15T15:00:00+08:00</published><updated>2024-08-15T23:43:04+08:00</updated><id>https://lug.ustc.edu.cn/news/2024/08/SFD-Prep</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2024/08/SFD-Prep/"><![CDATA[<p><a href="https://en.wikipedia.org/wiki/Software_Freedom_Day">软件自由日</a>（Software Freedom Day，SFD）是在 Digital Freedom Foundation 的主办下，由自由/开源软件爱好者自发筹集组织非盈利性活动，旨在为自由/开源软件爱好者提供一个信息交流平台、联合各社区举办各种自由/开源软件活动。</p>
-      <p>作为合肥地区最大的 Linux 用户组织，中国科大 Linux 用户协会致力于通过 SFD 普及软件自由思想，凝聚自由软件社区，将优秀的自由软件介绍给更多开源社区的成员，最大限度帮助自由软件作者实现服务于开源社群的价值。</p>
-      <p>今年的软件自由日活动预计于 2024 年 9 月 21 日（九月第三个星期六）于中国科学技术大学（合肥）举行，<strong>现面向校内外所有社区成员公开征集软件自由日讲座或其他与主题有关的活动</strong>，有意愿的社区成员可尽快联系我们。</p>
-      <p>联系方式见：<a href="https://lug.ustc.edu.cn/wiki/lug/contact">https://lug.ustc.edu.cn/wiki/lug/contact</a></p>
-      <p>往届活动和详细介绍见：<a href="https://lug.ustc.edu.cn/wiki/lug/events/sfd">https://lug.ustc.edu.cn/wiki/lug/events/sfd</a></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://lug.ustc.edu.cn/feed/news.xml" rel="self" type="application/atom+xml" /><link href="https://lug.ustc.edu.cn/" rel="alternate" type="text/html" /><updated>2024-09-12T13:31:45+08:00</updated><id>https://lug.ustc.edu.cn/feed/news.xml</id><title type="html">LUG @ USTC | News</title><subtitle>中国科学技术大学 Linux 用户协会</subtitle><author><name>USTCLUG</name></author><entry><title type="html">2024 秋季学期 新生活力课堂 &amp;amp; 游园会</title><link href="https://lug.ustc.edu.cn/news/2024/09/2024-freshmen-course/" rel="alternate" type="text/html" title="2024 秋季学期 新生活力课堂 &amp;amp; 游园会" /><published>2024-09-07T18:00:00+08:00</published><updated>2024-09-12T13:31:03+08:00</updated><id>https://lug.ustc.edu.cn/news/2024/09/2024-freshmen-course</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2024/09/2024-freshmen-course/"><![CDATA[<p>中国科学技术大学 Linux 用户协会在秋季学期举办了系列迎新活动，包括新生活力课堂和游园会，时间安排如下：</p>
+      <table>
+        <thead>
+          <tr>
+            <th>活动名称</th>
+            <th>时间</th>
+            <th>地点</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>新生活力课堂</td>
+            <td>2024 年 9 月 3 日 19:00 - 20:00</td>
+            <td>东区 2105 教室</td>
+          </tr>
+          <tr>
+            <td>新生活力课堂 (西区)</td>
+            <td>2024 年 9 月 7 日 15:00 - 17:00</td>
+            <td>西区 3C101 教室</td>
+          </tr>
+          <tr>
+            <td>新生活力课堂 (东区)</td>
+            <td>2024 年 9 月 8 日 19:00 - 21:00</td>
+            <td>东区 5102 教室</td>
+          </tr>
+          <tr>
+            <td>游园会 (中区)</td>
+            <td>2024 年 9 月 7 日 11:00 - 14:00</td>
+            <td>中区 #61</td>
+          </tr>
+          <tr>
+            <td>游园会 (高新区)</td>
+            <td>2024 年 9 月 8 日 10:00 - 13:00</td>
+            <td>高新区 #35</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>9 月 7 日新生活力课堂的上半场是由杨广源·同学带来的《日常生活中的信息安全》, 他从信息安全的基本概念出发，为新同学们讲解了信息安全的重要性，并介绍了一些常见的信息安全问题，如密码安全，钓鱼邮件等，以及相应的防范措施。他进一步拓展到了密码学、ARP Spoofing、XSS、SQL Injection 等内容，使同学们对信息安全有了更深入的了解。</p>
+      <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2024.09.08_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E5%A0%82/AB9A2077.jpeg" alt="" /></p>
+      <p>在活动的下半场，罗嘉宏同学为大家讲解了 GNUPlot、LaTeX 等工具的使用，他通过实例演示了如何使用这些工具来绘制图表、排版文档等，使同学们对这些工具有了初步的了解。</p>
+      <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2024.09.08_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E5%A0%82/AB9A2095.jpeg" alt="" /></p>
+      <p>在筹备和举办新生活力课堂的同时，LUG 也参加了中区、高新区两场社团游园会，并在现场为新生介绍 LUG 的性质、维护的服务及开设的活动，吸引了不少新生的关注。</p>
+      <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2024.09.08_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E5%A0%82/AB9A1916.jpeg" alt="" /></p>
+      <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2024.09.08_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E5%A0%82/AB9A1977.jpeg" alt="" /></p>
+      <p>现场准备的游戏：</p>
+      <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2024.09.08_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E5%A0%82/AB9A1970.jpeg" alt="" /></p>
+      <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2024.09.08_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E5%A0%82/AB9A1974.jpeg" alt="" /></p>
+      <p>分发的贴纸、游戏奖品：</p>
+      <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2024.09.08_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E5%A0%82/AB9A2035.jpeg" alt="" /></p>
+      <p>活动照片、讲稿等资料可在 <a href="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2024.09.08_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E5%A0%82/">LUG FTP</a> 上查看</p>
       <ul>
-        <li><a href="https://lug.ustc.edu.cn/news/2023/09/SFD/">2023 SFD</a></li>
-        <li><a href="https://lug.ustc.edu.cn/news/2022/09/SFD/">2022 SFD</a></li>
-        <li><a href="https://lug.ustc.edu.cn/news/2021/09/SFD/">2021 SFD</a></li>
+        <li><a href="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2024.09.08_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E5%A0%82/Information_Security.pdf">《日常生活中的信息安全》PPT</a></li>
+        <li><a href="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2024.09.08_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E5%A0%82/sgy-gnuplot.pdf">GNUPlot 介绍</a></li>
+        <li><a href="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2024.09.08_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E5%A0%82/20240908185437-USTCLUG%20%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E5%A0%82%EF%BC%88%E4%B8%9C%E5%8C%BA%E5%9C%BA%E6%AC%A1%EF%BC%89-%E8%A7%86%E9%A2%91-1.mp4">09.08 活动录屏</a></li>
       </ul>
-      ]]></content><author><name>tiankaima</name></author><category term="LUG 活动" /><summary type="html"><![CDATA[软件自由日（Software Freedom Day，SFD）是在 Digital Freedom Foundation 的主办下，由自由/开源软件爱好者自发筹集组织非盈利性活动，旨在为自由/开源软件爱好者提供一个信息交流平台、联合各社区举办各种自由/开源软件活动。]]></summary></entry><entry><title type="html">USTCLUG 西区活动室搬迁</title><link href="https://lug.ustc.edu.cn/news/2024/05/403/" rel="alternate" type="text/html" title="USTCLUG 西区活动室搬迁" /><published>2024-05-28T15:00:00+08:00</published><updated>2024-05-28T15:33:36+08:00</updated><id>https://lug.ustc.edu.cn/news/2024/05/403</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2024/05/403/"><![CDATA[<p>2024 年 4 月中旬，USTCLUG 西区活动室正式搬迁至西区图书馆 403 研讨室。</p>
-    <p>403 研讨室指路：</p>
-    <ol>
-      <li>
-        <p>图书馆进门后，通过两侧的楼梯上四楼，如图：
-          <img src="https://ftp.lug.ustc.edu.cn/misc/403/2024-05-28_14-53-30.png" alt="" />
-          <img src="https://ftp.lug.ustc.edu.cn/misc/403/photo_2024-05-26_21-56-13.jpg" alt="" />
-          <img src="https://ftp.lug.ustc.edu.cn/misc/403/photo_2024-05-26_21-56-17.jpg" alt="" /></p>
-        <p>注意：电梯无法直达 403 研讨室，需要先乘坐到三楼，再通过楼梯步行至四楼。</p>
-      </li>
-      <li>
-        <p>403 室位于走廊中间，如图：
-          <img src="https://ftp.lug.ustc.edu.cn/misc/403/photo_2024-05-28_15-05-25.jpg" alt="" /></p>
-      </li>
-    </ol>
-    ]]></content><author><name>aka-dag</name></author><summary type="html"><![CDATA[2024 年 4 月中旬，USTCLUG 西区活动室正式搬迁至西区图书馆 403 研讨室。]]></summary></entry><entry><title type="html">Linux 图形堆栈初探</title><link href="https://lug.ustc.edu.cn/news/2024/04/gathering-linux-graphics-journey/" rel="alternate" type="text/html" title="Linux 图形堆栈初探" /><published>2024-04-21T15:00:00+08:00</published><updated>2024-06-16T12:59:53+08:00</updated><id>https://lug.ustc.edu.cn/news/2024/04/gathering-linux-graphics-journey</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2024/04/gathering-linux-graphics-journey/"><![CDATA[<p>2024 年 4 月 21 日，校学生 Linux 用户协会举办了一场小聚活动。本次小聚为刘紫檀同学为我们带来的关于 Linux 图形堆栈的介绍。</p>
+      ]]></content><author><name>tiankaima</name></author><category term="LUG 活动" /><summary type="html"><![CDATA[中国科学技术大学 Linux 用户协会在秋季学期举办了系列迎新活动，包括新生活力课堂和游园会，时间安排如下：]]></summary></entry><entry><title type="html">2024 软件自由日 (SFD) 讲座征集</title><link href="https://lug.ustc.edu.cn/news/2024/08/SFD-Prep/" rel="alternate" type="text/html" title="2024 软件自由日 (SFD) 讲座征集" /><published>2024-08-15T15:00:00+08:00</published><updated>2024-08-15T23:43:04+08:00</updated><id>https://lug.ustc.edu.cn/news/2024/08/SFD-Prep</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2024/08/SFD-Prep/"><![CDATA[<p><a href="https://en.wikipedia.org/wiki/Software_Freedom_Day">软件自由日</a>（Software Freedom Day，SFD）是在 Digital Freedom Foundation 的主办下，由自由/开源软件爱好者自发筹集组织非盈利性活动，旨在为自由/开源软件爱好者提供一个信息交流平台、联合各社区举办各种自由/开源软件活动。</p>
+    <p>作为合肥地区最大的 Linux 用户组织，中国科大 Linux 用户协会致力于通过 SFD 普及软件自由思想，凝聚自由软件社区，将优秀的自由软件介绍给更多开源社区的成员，最大限度帮助自由软件作者实现服务于开源社群的价值。</p>
+    <p>今年的软件自由日活动预计于 2024 年 9 月 21 日（九月第三个星期六）于中国科学技术大学（合肥）举行，<strong>现面向校内外所有社区成员公开征集软件自由日讲座或其他与主题有关的活动</strong>，有意愿的社区成员可尽快联系我们。</p>
+    <p>联系方式见：<a href="https://lug.ustc.edu.cn/wiki/lug/contact">https://lug.ustc.edu.cn/wiki/lug/contact</a></p>
+    <p>往届活动和详细介绍见：<a href="https://lug.ustc.edu.cn/wiki/lug/events/sfd">https://lug.ustc.edu.cn/wiki/lug/events/sfd</a></p>
+    <ul>
+      <li><a href="https://lug.ustc.edu.cn/news/2023/09/SFD/">2023 SFD</a></li>
+      <li><a href="https://lug.ustc.edu.cn/news/2022/09/SFD/">2022 SFD</a></li>
+      <li><a href="https://lug.ustc.edu.cn/news/2021/09/SFD/">2021 SFD</a></li>
+    </ul>
+    ]]></content><author><name>tiankaima</name></author><category term="LUG 活动" /><summary type="html"><![CDATA[软件自由日（Software Freedom Day，SFD）是在 Digital Freedom Foundation 的主办下，由自由/开源软件爱好者自发筹集组织非盈利性活动，旨在为自由/开源软件爱好者提供一个信息交流平台、联合各社区举办各种自由/开源软件活动。]]></summary></entry><entry><title type="html">USTCLUG 西区活动室搬迁</title><link href="https://lug.ustc.edu.cn/news/2024/05/403/" rel="alternate" type="text/html" title="USTCLUG 西区活动室搬迁" /><published>2024-05-28T15:00:00+08:00</published><updated>2024-05-28T15:33:36+08:00</updated><id>https://lug.ustc.edu.cn/news/2024/05/403</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2024/05/403/"><![CDATA[<p>2024 年 4 月中旬，USTCLUG 西区活动室正式搬迁至西区图书馆 403 研讨室。</p>
+  <p>403 研讨室指路：</p>
+  <ol>
+    <li>
+      <p>图书馆进门后，通过两侧的楼梯上四楼，如图：
+        <img src="https://ftp.lug.ustc.edu.cn/misc/403/2024-05-28_14-53-30.png" alt="" />
+        <img src="https://ftp.lug.ustc.edu.cn/misc/403/photo_2024-05-26_21-56-13.jpg" alt="" />
+        <img src="https://ftp.lug.ustc.edu.cn/misc/403/photo_2024-05-26_21-56-17.jpg" alt="" /></p>
+      <p>注意：电梯无法直达 403 研讨室，需要先乘坐到三楼，再通过楼梯步行至四楼。</p>
+    </li>
+    <li>
+      <p>403 室位于走廊中间，如图：
+        <img src="https://ftp.lug.ustc.edu.cn/misc/403/photo_2024-05-28_15-05-25.jpg" alt="" /></p>
+    </li>
+  </ol>
+  ]]></content><author><name>aka-dag</name></author><summary type="html"><![CDATA[2024 年 4 月中旬，USTCLUG 西区活动室正式搬迁至西区图书馆 403 研讨室。]]></summary></entry><entry><title type="html">Linux 图形堆栈初探</title><link href="https://lug.ustc.edu.cn/news/2024/04/gathering-linux-graphics-journey/" rel="alternate" type="text/html" title="Linux 图形堆栈初探" /><published>2024-04-21T15:00:00+08:00</published><updated>2024-06-16T12:59:53+08:00</updated><id>https://lug.ustc.edu.cn/news/2024/04/gathering-linux-graphics-journey</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2024/04/gathering-linux-graphics-journey/"><![CDATA[<p>2024 年 4 月 21 日，校学生 Linux 用户协会举办了一场小聚活动。本次小聚为刘紫檀同学为我们带来的关于 Linux 图形堆栈的介绍。</p>
   <p><img src="https://ftp.lug.ustc.edu.cn/weekly_party/2024.04.21_Linux_Graphics_Journey/photo/C674688314E3F9149BAEAD6DE8A024EA.jpg" alt="" /></p>
   <p>在活动的开始，刘紫檀同学介绍了他本人阅读图形栈程序的心得体会，同时分享了自己编写的一个能够便捷阅读 Archlinux 源码的脚本。刘同学认为在阅读程序时需要了解功能间的界面，并以 Wayland 协议来举例说明。</p>
   <p><img src="https://ftp.lug.ustc.edu.cn/weekly_party/2024.04.21_Linux_Graphics_Journey/photo/6C0D0AD15BB58A9211D3F4AD0F0F42C8.png" alt="" /></p>
@@ -103,16 +158,4 @@
   <p><img src="http://ftp.lug.ustc.edu.cn/weekly_party/2023.12.09_Debug/photo/ppt-04.png" alt="" /></p>
   <p>活动现场，同学们积极提问，与廖同学进行深入交流，使整个演示更加生动有趣。廖同学不仅耐心回答了问题，还分享了一些自己在实际项目中遇到的挑战和解决方案，为大家提供了宝贵的经验。</p>
   <p>最后，到场的同学们纷纷表示受益匪浅，对于 debug 有了更深层次的理解。活动的成功举办不仅展现了同学们的学习热情，也为大家提供了一个共同成长的平台。期待未来社团活动中能有更多类似的精彩分享，共同探讨技术前沿。</p>
-  ]]></content><author><name>aka-dag</name></author><category term="LUG 活动" /><category term="LUG 小聚" /><summary type="html"><![CDATA[2023 年 12 月 9 日，校学生 Linux 用户协会举办了一场小聚活动。本次小聚是由 Linux 用户协会的廖巍同学为我们带来的关于 debug 的原理与演示。]]></summary></entry><entry><title type="html">Hackergame 2023 动员会</title><link href="https://lug.ustc.edu.cn/news/2023/10/Hackergame2023-pep-rally/" rel="alternate" type="text/html" title="Hackergame 2023 动员会" /><published>2023-10-27T21:00:00+08:00</published><updated>2023-11-02T13:07:05+08:00</updated><id>https://lug.ustc.edu.cn/news/2023/10/Hackergame2023-pep-rally</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2023/10/Hackergame2023-pep-rally/"><![CDATA[<p>校学生 Linux 用户协会于 2023 年 10 月 27 日晚 19:00 举办了中国科学技术大学第十届信息安全大赛（Hackergame 2023）动员会，旨在为参赛者提供比赛规则、流程和常用工具的介绍，帮助大家更好地准备比赛。</p>
-  <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2023.10.27_Hackergame%E5%8A%A8%E5%91%98%E4%BC%9A/photo/hg-%E6%A8%AA%E5%B9%85.png" alt="" /></p>
-  <p>Hackergame 作为一项旨在推广信息安全知识和提高参赛者信息安全技能的比赛，涵盖了多个方向的赛题，包括但不限于综合技能、程序逆向与漏洞利用、密码学与数学和网站安全类等。Hackergame 的题目设计不仅考察了参赛者的理论知识，更注重实际操作，使参赛者能够在比赛中不断提高自己的技术水平和实战能力。除了比赛本身的挑战，Hackergame 还提供了一个宝贵的交流和分享的平台。参赛者有机会与其他技术爱好者交流，分享自己的技术心得，并学习他人的经验。这种技术社交不仅促进了信息安全领域的知识传播，也为年轻的技术爱好者提供了与同行互动的机会。通过这种互动，参赛者能够建立联系、拓宽视野，更好地了解信息安全领域的前沿发展，这对于个人的职业发展和技术成长都具有重要意义。</p>
-  <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2023.10.27_Hackergame%E5%8A%A8%E5%91%98%E4%BC%9A/photo/2.png" alt="" /></p>
-  <p>活动首先由 Linux 用户协会的杨柳同学担任主讲人，他详细介绍了比赛的基本信息，包括比赛时间、网址和参赛须知等。杨柳同学还分享了一些自己的解题思路与往年的参赛经验，让参赛者能够更好地准备自己，迎接比赛的挑战。</p>
-  <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2023.10.27_Hackergame%E5%8A%A8%E5%91%98%E4%BC%9A/photo/1.png" alt="" /></p>
-  <p>紧接着，NEBULA 战队的崔泽仁同学上台进行了战队的招新宣传。他介绍了 NEBULA 战队的背景和成就。崔泽仁同学还详细介绍了 CTF（Capture The Flag）比赛的一些情况，包括比赛形式和赛程等，为想要参与比赛的同学提供了宝贵的信息。他还回答了同学们提出的问题，解除了他们的疑虑，吸引了一部分同学加入这个充满活力的团队。</p>
-  <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2023.10.27_Hackergame%E5%8A%A8%E5%91%98%E4%BC%9A/photo/3.png" alt="" /></p>
-  <p>最后，NEBULA 战队的袁保杰同学举例了 Hackergame 2022 的部分题目，为大家详细介绍了一些题目的解题方法。他通过实际案例，生动形象地展示了解题的过程，让参赛者们能够更好地理解和掌握解题的技巧。袁保杰同学的示范受到了在场学生的欢迎，大家纷纷表示受益匪浅。</p>
-  <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2023.10.27_Hackergame%E5%8A%A8%E5%91%98%E4%BC%9A/photo/4.jpg" alt="" /></p>
-  <p>整个动员会充满了技术氛围，参与者们积极互动，踊跃提问，展示了大家对技术挑战的浓厚兴趣。通过本次动员会，参赛者不仅获得了宝贵的比赛信息和解题思路，还有机会加入 NEBULA 战队，与志同道合的伙伴一起挑战技术巅峰。</p>
-  <p>Hackergame 2023 动员会为比赛的顺利进行提供了有力支持。希望更多的同学能够积极参与比赛，锻炼自己的技术能力，同时也感谢 NEBULA 战队为大家提供了如此精彩的分享和招新机会。期待能在比赛中见证同学们的精彩表现！</p>
-  ]]></content><author><name>aka-dag</name></author><category term="LUG 活动" /><summary type="html"><![CDATA[校学生 Linux 用户协会于 2023 年 10 月 27 日晚 19:00 举办了中国科学技术大学第十届信息安全大赛（Hackergame 2023）动员会，旨在为参赛者提供比赛规则、流程和常用工具的介绍，帮助大家更好地准备比赛。]]></summary></entry></feed>
+  ]]></content><author><name>aka-dag</name></author><category term="LUG 活动" /><category term="LUG 小聚" /><summary type="html"><![CDATA[2023 年 12 月 9 日，校学生 Linux 用户协会举办了一场小聚活动。本次小聚是由 Linux 用户协会的廖巍同学为我们带来的关于 debug 的原理与演示。]]></summary></entry></feed>
