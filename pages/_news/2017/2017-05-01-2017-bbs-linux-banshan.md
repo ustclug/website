@@ -26,7 +26,7 @@ comments: []
 ### 投稿方式
 
 - **方式 1**：回复瀚海星云 BBS 的[征集贴](https://bbs.ustc.edu.cn/cgi/bbstcon?board=Linux&file=M.1493611062.A)，以附件形式附上设计图
-- **方式 2**：发邮件至 [lug@ustc.edu.cn](mailto:lug@ustc.edu.cn)，标题「2017 版衫设计方案投稿」
+- **方式 2**：发邮件至 ![]({{ site.static_url }}/email.png)，标题「2017 版衫设计方案投稿」
 
 ### 方案选择
 
