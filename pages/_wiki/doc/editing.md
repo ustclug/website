@@ -22,9 +22,9 @@
 
 2. **自我审查方面的考虑**
 
-   - 隐藏了 [捐赠](/wiki/lug/donate) 的入口
+   - 隐藏了 [捐赠](/wiki/lug/donate/) 的入口
    - 隐藏了 [友情链接](https://lug.ustc.edu.cn/wiki/lug/links/) 的入口，这个页面也时常需要移除过期的域名等，有较大的内容安全风险
-   - 调整了 [联系方式](/wiki/lug/contact) 的排布，将 Telegram 放在了靠后面的位置
+   - 调整了 [联系方式](/wiki/lug/contact/) 的排布，将 Telegram 放在了靠后面的位置
 
 3. **信息一致性**
 
