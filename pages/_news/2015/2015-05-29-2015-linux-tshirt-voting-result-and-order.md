@@ -54,7 +54,7 @@ comments:
 
 # 投票结果
 
-这次版衫制作，[征集到的设计方案](https://lug.ustc.edu.cn/blog/2015/05/2015-linux-user-group-banshan/) 最后的投票结果是：
+这次版衫制作，[征集到的设计方案](https://lug.ustc.edu.cn/news/2015/05/2015-linux-user-group-banshan/) 最后的投票结果是：
 
 ```
 (A) 方案一                  5 票 约占  3%

@@ -247,4 +247,4 @@ Rclone 是个非常强大的工具，支持的云存储服务也非常多，你�
 
 限于篇幅和时间关系，本文只介绍了 Rclone 的基本使用方法，更多的功能和用法请参考 [Rclone 官方文档](https://rclone.org/docs/)。
 
-如果您对这篇内容有任何问题或建议，欢迎 [联系我们](https://lug.ustc.edu.cn/wiki/lug/contact/)。
+如果您对这篇内容有任何问题或建议，欢迎 [联系我们](/wiki/lug/contact/)。

@@ -105,7 +105,7 @@ comments: []
 
 BBS: [方案征集](http://bbs.ustc.edu.cn/cgi/bbscon?bn=Linux&fn=M5545E657&num=24002) & [版衫投票](http://bbs.ustc.edu.cn/cgi/bbscon?bn=Linux&fn=M555DBEA7&num=23632) & [版衫预定](http://bbs.ustc.edu.cn/cgi/bbscon?bn=Linux&fn=M5568036D&num=23659) & [版衫领取](http://bbs.ustc.edu.cn/cgi/bbscon?bn=Linux&fn=M557D8D62&num=23748) & [问题反馈](http://bbs.ustc.edu.cn/cgi/bbscon?bn=Linux&fn=M557E636C&num=23759)
 
-LUG 博客：[方案整理](https://lug.ustc.edu.cn/blog/2015/05/2015-linux-user-group-banshan/) & [预定说明](https://lug.ustc.edu.cn/blog/2015/05/2015-linux-tshirt-voting-result-and-order/)
+LUG 博客：[方案整理](https://lug.ustc.edu.cn/news/2015/05/2015-linux-user-group-banshan/) & [预定说明](https://lug.ustc.edu.cn/news/2015/05/2015-linux-tshirt-voting-result-and-order/)
 
 [投票链接](http://www.sojump.com/jq/5057174.aspx)
 
