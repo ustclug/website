@@ -50,6 +50,7 @@ jobs:
     - name: Install dependencies
       run: |
         bundle config set --local path vendor/bundle
+        bundle config set without 'development'
         bundle install --jobs=4 --retry=3
         bundle clean
         npm install --include=dev
