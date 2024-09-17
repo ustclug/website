@@ -9,19 +9,19 @@
   <head>
     <meta charset="utf-8">
     <!-- begin _includes/seo.html -->
-    <title>Linux User Group @ USTC - LUG @ USTC</title>
-    <meta name="description" content="Linux User Group @ USTC">
+    <title>修订指南 - LUG @ USTC</title>
+    <meta name="description" content="修订指南">
     <meta name="author" content="USTCLUG">
     <meta property="article:author" content="USTCLUG">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="zh_CN">
     <meta property="og:site_name" content="LUG @ USTC">
-    <meta property="og:title" content="Linux User Group @ USTC">
-    <meta property="og:url" content="https://lug.ustc.edu.cn/wiki/intro_english/">
-    <meta property="og:description" content="Linux User Group @ USTC">
-    <meta property="article:published_time" content="2020-08-08T19:10:06+08:00">
-    <meta property="article:modified_time" content="2024-06-07T12:31:27+08:00">
-    <link rel="canonical" href="https://lug.ustc.edu.cn/wiki/intro_english/">
+    <meta property="og:title" content="修订指南">
+    <meta property="og:url" content="https://lug.ustc.edu.cn/wiki/doc/editing/">
+    <meta property="og:description" content="修订指南">
+    <meta property="article:published_time" content="2024-09-12T17:41:53+08:00">
+    <meta property="article:modified_time" content="2024-09-15T01:34:15+08:00">
+    <link rel="canonical" href="https://lug.ustc.edu.cn/wiki/doc/editing/">
     <!-- end _includes/seo.html -->
     <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="LUG @ USTC Feed">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,7 +47,7 @@
       window.enable_copy_code_button = true;
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=96e82e1f47">
+    <link rel="stylesheet" href="/assets/css/main.css?v=14542c8e3e">
     <link rel="stylesheet" href="/_extra/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <link rel="stylesheet" href="/_extra/open-sans.css" media="invalid" onload="this.media='all'">
     <!-- start custom head snippets -->
@@ -128,13 +128,20 @@
             <label for="ac-toc">切换菜单</label>
             <ul class="nav__items">
               <li>
-                <span class="nav__sub-title">LUG @ USTC</span>
+                <span class="nav__sub-title">关于</span>
                 <ul>
-                  <li><a href="/"><i class="fad fa-lg fa-fw fa-home"></i> LUG 首页</a></li>
-                  <li><a href="/news/"><i class="fad fa-lg fa-fw fa-newspaper"></i> LUG 新闻</a></li>
+                  <li><a href="/wiki/"><i class="fad fa-lg fa-fw fa-home"></i> LUG @ USTC</a></li>
+                  <li><a href="/wiki/intro/"><i class="fad fa-lg fa-address-card"></i> 关于我们</a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="nav__sub-title">服务</span>
+                <ul>
                   <li><a href="/wiki/lug/services/"><i class="fad fa-lg fa-fw fa-certificate"></i> LUG 服务</a></li>
-                  <li><a href="/wiki/lug/links/"><i class="fad fa-lg fa-fw fa-link"></i> 友情链接</a></li>
-                  <li><a href="/wiki/lug/services/mirrors/"><i class="fad fa-lg fa-fw fa-database"></i> 开源软件镜像</a></li>
+                  <li><a href="/wiki/lug/services/mirrors/"><i class="fad fa-lg fa-fw fa-database"></i> 开源镜像站</a></li>
+                  <li><a href="/wiki/lug/services/pxe/"><i class="fad fa-lg fa-fw fa-network-wired"></i> 网络启动平台</a></li>
+                  <li><a href="/wiki/lug/services/gitlab/"><i class="fad fa-lg fa-fw fa-code"></i> 代码托管平台</a></li>
+                  <li><a href="/wiki/lug/services/ftp/"><i class="fad fa-lg fa-fw fa-folder"></i> 文件存档</a></li>
                 </ul>
               </li>
               <li>
@@ -142,43 +149,39 @@
                 <ul>
                   <li><a href="/wiki/lug/events/"><i class="fad fa-lg fa-fw fa-sparkles"></i> LUG 活动</a></li>
                   <li><a href="/wiki/lug/events/weeklyparty/"><i class="fad fa-lg fa-fw fa-users-class"></i> 每周小聚</a></li>
-                  <li><a href="https://101.lug.ustc.edu.cn/"><i class="fad fa-lg fa-fw fa-graduation-cap"></i> Linux 101</a></li>
-                  <li><a href="/wiki/lug/mailinglist/"><i class="fad fa-lg fa-fw fa-envelope-open-text"></i> 邮件列表</a></li>
-                  <li><a href="/wiki/lug/book/"><i class="fad fa-lg fa-fw fa-books"></i> LUG 书库</a></li>
-                  <li><a href="/wiki/lug/finance/"><i class="fad fa-lg fa-fw fa-piggy-bank"></i> LUG 财务</a></li>
+                  <li><a href="/wiki/lug/events/101/"><i class="fad fa-lg fa-fw fa-graduation-cap"></i> Linux 101</a></li>
+                  <li><a href="/wiki/lug/events/hackergame/"><i class="fad fa-lg fa-fw fa-flag"></i> 信息安全大赛</a></li>
+                  <li><a href="/wiki/lug/events/sfd/"><i class="fad fa-lg fa-fw fa-comment"></i> 软件自由日</a></li>
                 </ul>
               </li>
               <li>
                 <span class="nav__sub-title">联系</span>
                 <ul>
-                  <li><a href="/wiki/lug/person-in-charge/"><i class="fad fa-lg fa-fw fa-user-tie"></i> LUG 负责人</a></li>
                   <li><a href="/wiki/lug/contact/"><i class="fas fa-lg fa-fw fa-phone-alt"></i> 联系我们</a></li>
                   <li><a href="/wiki/lug/contribute/"><i class="fad fa-lg fa-fw fa-users-medical"></i> 加入我们</a></li>
-                  <li><a href="/wiki/lug/finance/donate/"><i class="fad fa-lg fa-fw fa-donate"></i> 捐赠我们</a></li>
+                  <li><a href="/wiki/lug/person-in-charge/"><i class="fad fa-lg fa-fw fa-user-tie"></i> LUG 负责人</a></li>
                 </ul>
               </li>
               <li>
-                <span class="nav__sub-title">资源</span>
+                <span class="nav__sub-title">文档</span>
                 <ul>
-                  <li><a href="/wiki/linux_digest/"><i class="fad fa-lg fa-fw fa-book"></i> Linux 文摘</a></li>
-                  <li><a href="/wiki/lug/resources/"><i class="fad fa-lg fa-fw fa-bookmark"></i> 资源导航</a></li>
-                  <li><a href="https://servers.ustclug.org/"><i class="fad fa-lg fa-fw fa-server"></i> 服务器新闻</a></li>
                   <li><a href="/wiki/doc/ustcnet-faq/"><i class="fas fa-lg fa-fw fa-question-square"></i> 校园网常见问题</a></li>
                   <li><a href="/wiki/doc/howtoask/"><i class="fas fa-lg fa-fw fa-universal-access"></i> 提问指南</a></li>
+                  <li><a href="/wiki/doc/editing/" class="active"><i class="fas fa-lg fa-fw fa-pen"></i> 修订指南</a></li>
                 </ul>
               </li>
             </ul>
           </nav>
         </div>
         <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-          <meta itemprop="headline" content="Linux User Group @ USTC">
-          <meta itemprop="description" content="Linux User Group @ USTC">
-          <meta itemprop="datePublished" content="2020-08-08T19:10:06+08:00">
-          <meta itemprop="dateModified" content="2024-06-07T12:31:27+08:00">
+          <meta itemprop="headline" content="修订指南">
+          <meta itemprop="description" content="修订指南">
+          <meta itemprop="datePublished" content="2024-09-12T17:41:53+08:00">
+          <meta itemprop="dateModified" content="2024-09-15T01:34:15+08:00">
           <div class="page__inner-wrap">
             <header>
               <h1 id="page-title" class="page__title" itemprop="headline">
-                <a href="https://lug.ustc.edu.cn/wiki/intro_english/" itemprop="url">Linux User Group @ USTC
+                <a href="https://lug.ustc.edu.cn/wiki/doc/editing/" itemprop="url">修订指南
                 </a>
               </h1>
             </header>
@@ -188,49 +191,87 @@
                   <header>
                     <h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4>
                   </header>
-                  <ul class="toc__menu">
-                    <li><a href="#special-events">Special Events</a>
-                      <ul>
-                        <li><a href="#linux-install-party">Linux Install Party</a></li>
-                        <li><a href="#sfd-software-freedom-day">SFD (Software Freedom Day)</a></li>
-                        <li><a href="#lug-weekly-party">LUG Weekly Party</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#network-services">Network Services</a></li>
-                    <li><a href="#contact-us--more-information">Contact us &amp; more information</a></li>
-                  </ul>
                 </nav>
               </aside>
-              <p>USTC LUG is the abbreviation for Linux User Group (LUG) of University of Science and Technology of China (USTC). USTC LUG is a technology-leading association that consists of the GNU/Linux enthusiasts in USTC. The aim of USTC LUG is to unite the GNU/Linux users in USTC, to build a platform for communicating with each other, sharing the value of free software and promoting free software in the USTC Campus and Hefei City.</p>
-              <p>Founded in 2003, USTC LUG has gone through over 20 years. At present, it is a top university association in Anhui province to promote the free software culture and value as well as one of the well-developing Linux/Free Software student associations in China mainland. Due to the combined efforts of its members and volunteers, USTC LUG has organized a number of meaningful activities, such as the USTC Information Security Contest, GNU/Linux Install Party, Software Freedom Day, Weekly Party and Linux 101 lectures.</p>
-              <p>USTC LUG started the maintenance of the well-known Debian archive mirror <a href="https://debian.ustc.edu.cn">https://debian.ustc.edu.cn</a> in 2003. Now, with better hardware and bandwidth sponsored by USTC, it finally becomes <a href="http://ftp.cn.debian.org/">the official Debian mirror of China</a>. Now it has combined with <a href="https://oss.ustc.edu.cn">https://oss.ustc.edu.cn</a> and became <a href="https://mirrors.ustc.edu.cn">https://mirrors.ustc.edu.cn</a>, an important open-source software mirror in China. With the assistance of the USTC Network Information Center, USTC LUG has set up a PXE network booting system, enabling the whole campus to perform convenient installs and quick experience of Linux. The Library LIIMS System, developed on the base of Campus PXE system, is also developed and under the maintenance of USTC LUG.</p>
-              <p>In recognition of its excellent performance, USTC LUG was awarded the Outstanding Association of USTC in May 2011. USTC LUG was also ranked as a “Four Star” Student Association of USTC in 2012, 2013 and 2014. From 2015 to 2021 (now), USTC LUG was ranked as a “Five Star” Student Association of USTC.</p>
-              <p>If you have any problem, please email us at lug &lt; at&gt; ustc.edu.cn.</p>
-              <h2 id="special-events">Special Events</h2>
-              <h3 id="linux-install-party">Linux Install Party</h3>
-              <p>The main purpose of the Linux Install Party is to promote and install Linux on students’ computers, as well as promote and encourage the spirit of open source and free software. Students will have a good experience installing the Linux system painlessly, have professional guidance during their Linux installing process and exchange relevant knowledge of Linux. Each party includes lectures for novices, installation guide step by step, free discussion, and other events.</p>
-              <h3 id="sfd-software-freedom-day">SFD (Software Freedom Day)</h3>
-              <p><a href="/wiki/lug/events/sfd">Software Freedom Day</a> is a non-profit event under the leadership of the Free Software Foundation International (SFI). It is sponsored by supporters of free and open-source software. It aims to provide an information exchange platform for supporters and the hold activities of free and open-source software with other communities.</p>
-              <p>USTC LUG has successfully organized recent Software Freedom Day events in Hefei. This event was once supported by Lemote Technology, Loongson Club, Standard Software, Red Flag Linux, China OSS Promotion Union, Hefei Industrial University, Anhui University and other companies, open-source community and universities. During each event, the guests influential in the field of open-source software in domestic were invited, such as James Zhang (teacher of USTC network center), Mr. Li Zhenning (President of Beijing GUG), Mr. Yao Xinyu (Chairman of Shanghai LUG), Mr. Liu Shiwei (a developer of MIPS), etc. Their speeches address a variety of content.</p>
-              <h3 id="lug-weekly-party">LUG Weekly Party</h3>
-              <p>Since October 2011, we hold a meeting named <a href="/wiki/lug/events/weeklyparty">Weekly Party</a> (or ‘Tech Hangout’) every weekend. A student will be invited to make a presentation about IT technology etc. This meeting is open to all teachers and students. Now, before every Weekly Party, the time, place and introduction of the weekly party will be posted on our mailing list, LUG activities calendar, Notice/Linux forum of USTC BBS, etc.</p>
-              <h2 id="network-services">Network Services</h2>
-              <ul>
-                <li><a href="/wiki/lug/services/mirrors">Open-Source Software Mirrors</a></li>
-                <li><a href="/wiki/lug/services/pxe">Network Boot Service (PXE)</a></li>
-                <li><a href="/wiki/lug/services/gitlab">GitLab (Self-hosted Git repository hosting service)</a></li>
-              </ul>
-              <h2 id="contact-us--more-information">Contact us &amp; more information</h2>
-              <p>You can find us <a href="/wiki/lug/contact">here</a>.</p>
-              <p>Reach <a href="/wiki/">wiki main page</a> for more info about USTC LUG.</p>
+              <p class="notice--info">注 (<a href="https://github.com/tiankaima">@tiankaima</a>)：在 2024.09, 我对 <a href="https://lug.ustc.edu.cn/wiki">https://lug.ustc.edu.cn/wiki</a> 页面下的大量内容做了修订，以下是修订时所参考的一些原则，以及希望后续编辑能够思考的一些问题。</p>
+              <ol>
+                <li>
+                  <p><strong>提供信息的考虑：简洁、有效的导航</strong></p>
+                  <p>应当说，大部分来到 lug.ustc.edu.cn 的同学都是带着目的的，无论是想了解</p>
+                  <ul>
+                    <li>LUG 作为一个社团的开展情况 (举办的活动、怎么加入)</li>
+                    <li>LUG 提供的服务 (都有哪些，怎么使用)</li>
+                    <li>联系方式 (咨询、报告问题) 等</li>
+                  </ul>
+                  <p>这个 wiki 应该为他们提供最方便、最简洁的信息。基于这个原因，我调整了：</p>
+                  <ul>
+                    <li>将 LUG 的 <a href="/wiki/lug/events/">服务</a>、<a href="/wiki/lug/services/">活动</a> 作为导航栏的单独板块列出，并详细列举了具体的服务、活动</li>
+                    <li>删去 <a href="/wiki/linux_digest/">Linux 文摘</a>、<a href="/wiki/lug/resources/">资源导航</a>. 这些内容有的已经过时，尚不过时的内容也不宜在这个位置展现</li>
+                    <li>移除「LUG 首页」、「LUG 新闻」等站内链接，在页面顶部已经存在这些链接，放在导航栏造成的误解超过了它的实际作用</li>
+                  </ul>
+                </li>
+                <li>
+                  <p><strong>自我审查方面的考虑</strong></p>
+                  <ul>
+                    <li>隐藏了 <a href="/wiki/lug/donate/">捐赠</a> 的入口</li>
+                    <li>隐藏了 <a href="https://lug.ustc.edu.cn/wiki/lug/links/">友情链接</a> 的入口，这个页面也时常需要移除过期的域名等，有较大的内容安全风险</li>
+                    <li>调整了 <a href="/wiki/lug/contact/">联系方式</a> 的排布，将 Telegram 放在了靠后面的位置</li>
+                  </ul>
+                </li>
+                <li>
+                  <p><strong>信息一致性</strong></p>
+                  <p>在修订时，有很多内容仍然存在「BBS」、「邮件列表」等不再密集使用的平台信息，调整后，上述联系方式都以链接的形式统一指向 <a href="/wiki/lug/contact/">联系我们</a> 这唯一的页面。</p>
+                  <p class="notice--info">出于备份的考虑，<a href="/news">News</a> 下的页面均未更新这些内容，但是将邮件地址调整为图片 (仅官方邮件地址)。</p>
+                  <p class="notice--info">此外 <a href="/wiki/">wiki 首页</a> 有一个简短的介绍，如需更新也请注意</p>
+                  <p>此外，删掉了 <a href="/wiki/intro_english/">英文介绍页面</a>, 这倒并不是出于政治或者审查原因，而只是一致性 &amp; 翻译软件的成熟度的考虑。</p>
+                </li>
+                <li>
+                  <p><strong>Beginner Friendly</strong></p>
+                  <p>修订时，尽量避免了「名词门槛」的问题，例如 <a href="/wiki/lug/services/gitlab/">GitLab</a> 页面中使用「代码托管平台 GitLab」的表述，而不省略成 GitLab, 即使 LUG 的成员对这个名字已经足够熟悉。</p>
+                  <p class="notice--info">其他类似的修订包括:「网络启动平台 PXE」、「文件存档 FTP」、「信息安全大赛 Hackergame」、「软件自由日 Software Freedom Day」等。</p>
+                  <p class="notice--info">如果可能的话也保持这样的 中 + 英的表述 (和顺序), 在需要省略的地方也省略 (例如导航栏) 英文而不是中文。</p>
+                </li>
+                <li>
+                  <p><strong>排版美观</strong></p>
+                  <p>例如在这个页面中，每个子项标题加粗，同时提示内容使用 <code class="language-plaintext highlighter-rouge">{: .notice--info}</code> 标签，使得页面更易读。同时在链接前后保留空格。</p>
+                </li>
+              </ol>
+              <blockquote>
+                <p><strong>关于 Markdown 站内链接的使用</strong></p>
+                <p>目前 Jekyll 的配置支持使用「直接指向 <code class="language-plaintext highlighter-rouge">.md</code> 文件链接 (相对目录)」的写法，但是并未全站采用这样的做法，理由如下：</p>
+                <ol>
+                  <li>
+                    <p>目录与文件名重名的问题，例如之前 <code class="language-plaintext highlighter-rouge">_wiki/</code> 目录下同时存在 <code class="language-plaintext highlighter-rouge">./scripts.md</code> 和 <code class="language-plaintext highlighter-rouge">./scripts/</code>。现将 <code class="language-plaintext highlighter-rouge">./scripts.md</code> 调整到 <code class="language-plaintext highlighter-rouge">./scripts/index.md</code>，并在其中配置 <code class="language-plaintext highlighter-rouge">permalink: /wiki/scripts/</code> 以保持原有链接的有效性。</p>
+                    <ul>
+                      <li>
+                        <p>在这个例子中，书写 <code class="language-plaintext highlighter-rouge">../../_wiki/scripts/index.md</code> 显然不如书写 <code class="language-plaintext highlighter-rouge">/wiki/scripts/</code> 来的简洁，因此没有调整。</p>
+                      </li>
+                      <li>
+                        <p>建议所有站内链接以 <code class="language-plaintext highlighter-rouge">/</code> 结尾，以保持一致性。</p>
+                      </li>
+                      <li>
+                        <p>本次调整中未更新已经完全失效的链接</p>
+                      </li>
+                      <li>
+                        <p>将所有 <code class="language-plaintext highlighter-rouge">lug.ustc.edu.cn</code> 的站内链接全部调整为 <code class="language-plaintext highlighter-rouge">/</code></p>
+                      </li>
+                      <li>
+                        <p>挽救了部分 FTP 目录迁移的链接</p>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <p>在 News 页面下使用了 <code class="language-plaintext highlighter-rouge">.md</code> 的写法，例如 <a href="/news/2021/06/lug-banshan-order/">这篇文章</a> 直接引用同目录文件 <code class="language-plaintext highlighter-rouge">2021-04-27-lug-banshan.md</code>;我们也推荐 News 下所有目录采用这样的写法。</p>
+                  </li>
+                </ol>
+              </blockquote>
             </section>
             <footer class="page__meta">
-              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2024-06-07">2024 年 6 月 7 日</time></p>
+              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2024-09-15">2024 年 9 月 15 日</time></p>
             </footer>
             <nav class="pagination">
-              <a href="/wiki/intro/" class="pagination--pager" title="中国科学技术大学 Linux 用户协会
-">上一页</a>
-              <a href="/wiki/linux_digest/badblocks/" class="pagination--pager" title="使用 badblocks 命令处理硬盘坏道
+              <a href="#" class="pagination--pager disabled">上一页</a>
+              <a href="/wiki/doc/howtoask/" class="pagination--pager" title="提问指南
 ">下一页</a>
             </nav>
           </div>
@@ -262,7 +303,7 @@
                   <a href="/wiki/lug/contact/"><i class="fas fa-fw fa-phone-alt"></i> 联系我们</a>
                 </li>
                 <li>
-                  <a href="/wiki/lug/contribute/"><i class="fad fa-fw fa-users"></i> 加入我们</a>
+                  <a href="/wiki/lug/contribute/"><i class="fad fa-fw fa-users-medical"></i> 加入我们</a>
                 </li>
                 <li>
                   <a href="/feed/"><i class="fad fa-fw fa-rss" style="--fa-secondary-opacity: 0.6;"></i> RSS 订阅</a>

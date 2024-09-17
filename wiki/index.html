@@ -20,7 +20,7 @@
     <meta property="og:url" content="https://lug.ustc.edu.cn/wiki/">
     <meta property="og:description" content="中国科学技术大学 Linux 用户协会">
     <meta property="article:published_time" content="2020-07-29T00:12:49+08:00">
-    <meta property="article:modified_time" content="2024-06-04T16:24:28+08:00">
+    <meta property="article:modified_time" content="2024-09-15T01:04:12+08:00">
     <link rel="canonical" href="https://lug.ustc.edu.cn/wiki/">
     <!-- end _includes/seo.html -->
     <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="LUG @ USTC Feed">
@@ -47,7 +47,7 @@
       window.enable_copy_code_button = true;
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=96e82e1f47">
+    <link rel="stylesheet" href="/assets/css/main.css?v=14542c8e3e">
     <link rel="stylesheet" href="/_extra/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <link rel="stylesheet" href="/_extra/open-sans.css" media="invalid" onload="this.media='all'">
     <!-- start custom head snippets -->
@@ -128,13 +128,20 @@
             <label for="ac-toc">切换菜单</label>
             <ul class="nav__items">
               <li>
-                <span class="nav__sub-title">LUG @ USTC</span>
+                <span class="nav__sub-title">关于</span>
                 <ul>
-                  <li><a href="/"><i class="fad fa-lg fa-fw fa-home"></i> LUG 首页</a></li>
-                  <li><a href="/news/"><i class="fad fa-lg fa-fw fa-newspaper"></i> LUG 新闻</a></li>
+                  <li><a href="/wiki/" class="active"><i class="fad fa-lg fa-fw fa-home"></i> LUG @ USTC</a></li>
+                  <li><a href="/wiki/intro/"><i class="fad fa-lg fa-address-card"></i> 关于我们</a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="nav__sub-title">服务</span>
+                <ul>
                   <li><a href="/wiki/lug/services/"><i class="fad fa-lg fa-fw fa-certificate"></i> LUG 服务</a></li>
-                  <li><a href="/wiki/lug/links/"><i class="fad fa-lg fa-fw fa-link"></i> 友情链接</a></li>
-                  <li><a href="/wiki/lug/services/mirrors/"><i class="fad fa-lg fa-fw fa-database"></i> 开源软件镜像</a></li>
+                  <li><a href="/wiki/lug/services/mirrors/"><i class="fad fa-lg fa-fw fa-database"></i> 开源镜像站</a></li>
+                  <li><a href="/wiki/lug/services/pxe/"><i class="fad fa-lg fa-fw fa-network-wired"></i> 网络启动平台</a></li>
+                  <li><a href="/wiki/lug/services/gitlab/"><i class="fad fa-lg fa-fw fa-code"></i> 代码托管平台</a></li>
+                  <li><a href="/wiki/lug/services/ftp/"><i class="fad fa-lg fa-fw fa-folder"></i> 文件存档</a></li>
                 </ul>
               </li>
               <li>
@@ -142,29 +149,25 @@
                 <ul>
                   <li><a href="/wiki/lug/events/"><i class="fad fa-lg fa-fw fa-sparkles"></i> LUG 活动</a></li>
                   <li><a href="/wiki/lug/events/weeklyparty/"><i class="fad fa-lg fa-fw fa-users-class"></i> 每周小聚</a></li>
-                  <li><a href="https://101.lug.ustc.edu.cn/"><i class="fad fa-lg fa-fw fa-graduation-cap"></i> Linux 101</a></li>
-                  <li><a href="/wiki/lug/mailinglist/"><i class="fad fa-lg fa-fw fa-envelope-open-text"></i> 邮件列表</a></li>
-                  <li><a href="/wiki/lug/book/"><i class="fad fa-lg fa-fw fa-books"></i> LUG 书库</a></li>
-                  <li><a href="/wiki/lug/finance/"><i class="fad fa-lg fa-fw fa-piggy-bank"></i> LUG 财务</a></li>
+                  <li><a href="/wiki/lug/events/101/"><i class="fad fa-lg fa-fw fa-graduation-cap"></i> Linux 101</a></li>
+                  <li><a href="/wiki/lug/events/hackergame/"><i class="fad fa-lg fa-fw fa-flag"></i> 信息安全大赛</a></li>
+                  <li><a href="/wiki/lug/events/sfd/"><i class="fad fa-lg fa-fw fa-comment"></i> 软件自由日</a></li>
                 </ul>
               </li>
               <li>
                 <span class="nav__sub-title">联系</span>
                 <ul>
-                  <li><a href="/wiki/lug/person-in-charge/"><i class="fad fa-lg fa-fw fa-user-tie"></i> LUG 负责人</a></li>
                   <li><a href="/wiki/lug/contact/"><i class="fas fa-lg fa-fw fa-phone-alt"></i> 联系我们</a></li>
                   <li><a href="/wiki/lug/contribute/"><i class="fad fa-lg fa-fw fa-users-medical"></i> 加入我们</a></li>
-                  <li><a href="/wiki/lug/finance/donate/"><i class="fad fa-lg fa-fw fa-donate"></i> 捐赠我们</a></li>
+                  <li><a href="/wiki/lug/person-in-charge/"><i class="fad fa-lg fa-fw fa-user-tie"></i> LUG 负责人</a></li>
                 </ul>
               </li>
               <li>
-                <span class="nav__sub-title">资源</span>
+                <span class="nav__sub-title">文档</span>
                 <ul>
-                  <li><a href="/wiki/linux_digest/"><i class="fad fa-lg fa-fw fa-book"></i> Linux 文摘</a></li>
-                  <li><a href="/wiki/lug/resources/"><i class="fad fa-lg fa-fw fa-bookmark"></i> 资源导航</a></li>
-                  <li><a href="https://servers.ustclug.org/"><i class="fad fa-lg fa-fw fa-server"></i> 服务器新闻</a></li>
                   <li><a href="/wiki/doc/ustcnet-faq/"><i class="fas fa-lg fa-fw fa-question-square"></i> 校园网常见问题</a></li>
                   <li><a href="/wiki/doc/howtoask/"><i class="fas fa-lg fa-fw fa-universal-access"></i> 提问指南</a></li>
+                  <li><a href="/wiki/doc/editing/"><i class="fas fa-lg fa-fw fa-pen"></i> 修订指南</a></li>
                 </ul>
               </li>
             </ul>
@@ -174,7 +177,7 @@
           <meta itemprop="headline" content="中国科学技术大学 Linux 用户协会">
           <meta itemprop="description" content="中国科学技术大学 Linux 用户协会">
           <meta itemprop="datePublished" content="2020-07-29T00:12:49+08:00">
-          <meta itemprop="dateModified" content="2024-06-04T16:24:28+08:00">
+          <meta itemprop="dateModified" content="2024-09-15T01:04:12+08:00">
           <div class="page__inner-wrap">
             <header>
               <h1 id="page-title" class="page__title" itemprop="headline">
@@ -189,67 +192,58 @@
                     <h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4>
                   </header>
                   <ul class="toc__menu">
-                    <li><a href="#特色活动">特色活动</a></li>
                     <li><a href="#网络服务">网络服务</a></li>
+                    <li><a href="#特色活动">特色活动</a></li>
                     <li><a href="#联系我们">联系我们</a></li>
-                    <li><a href="#协会-logo">协会 LOGO</a></li>
-                    <li><a href="#协会章程">协会章程</a></li>
                   </ul>
                 </nav>
               </aside>
-              <p>中国科学技术大学 Linux 用户协会（科大 LUG）是由在校的 GNU/Linux 爱好者发起并组成的全校性群众团体，是一个以推广自由软件文化、宣传自由软件价值为目的的协会组织。<br />
-                <a href="/wiki/intro/">了解更多</a></p>
-              <p><a href="/wiki/intro_english/">English Version</a></p>
+              <p>中国科学技术大学 Linux 用户协会 (USTC Linux User Group, USTCLUG) 是由在校的 GNU/Linux 爱好者发起并组成的全校性群众团体，是一个以推广自由软件文化、宣传自由软件价值为目的的协会组织。</p>
+              <p><a href="intro/">了解更多</a></p>
+              <h2 id="网络服务">网络服务</h2>
+              <ul>
+                <li><strong><a href="lug/services/mirrors/">开源镜像站 mirrors.ustc.edu.cn</a></strong></li>
+                <li><strong><a href="lug/services/pxe/">网络启动服务 PXE</a></strong></li>
+                <li><strong><a href="lug/services/gitlab/">代码托管平台 GitLab</a></strong></li>
+                <li><strong><a href="lug/services/ftp/">文件存档 FTP</a></strong></li>
+              </ul>
+              <p><a href="lug/services/">了解更多</a></p>
               <h2 id="特色活动">特色活动</h2>
               <ul>
                 <li>
-                  <p><strong><a href="/wiki/lug/events/weeklyparty">LUG 每周小聚</a>:</strong></p>
+                  <p><strong><a href="lug/events/weeklyparty/">LUG 每周小聚</a>:</strong></p>
                   <p>每周末由同学带来的技术分享演讲。</p>
                 </li>
                 <li>
-                  <p><strong><a href="/wiki/lug/events/lip">Linux Install Party</a>:</strong></p>
-                  <p>推广和安装 Linux，宣传和鼓励开源和自由软件精神的活动。</p>
-                </li>
-                <li>
-                  <p><strong><a href="/wiki/lug/events/101">Linux 101</a>:</strong></p>
+                  <p><strong><a href="lug/events/101/">Linux 101</a>:</strong></p>
                   <p>帮助新手学习 Linux 的系列活动。</p>
+                  <ul>
+                    <li>
+                      <p><a href="lug/events/lip/">Linux Install Party</a>:</p>
+                      <p>推广和安装 Linux，宣传和鼓励开源和自由软件精神的活动。</p>
+                    </li>
+                  </ul>
                 </li>
                 <li>
-                  <p><strong><a href="/wiki/lug/events/sfd">自由软件日</a>:</strong></p>
-                  <p>在国际自由软件基金会（SFI）的领导下，由自由/开源软件爱好者自发筹集的非盈利性活动。</p>
-                </li>
-                <li>
-                  <p><strong><a href="/wiki/lug/events/hackergame">信息安全大赛</a>:</strong></p>
+                  <p><strong><a href="lug/events/hackergame/">信息安全大赛 Hackergame</a>:</strong></p>
                   <p>每年秋季学期举办的信息安全竞赛。</p>
                 </li>
+                <li>
+                  <p><strong><a href="lug/events/sfd/">软件自由日 Software Freedom Day</a>:</strong></p>
+                  <p>由自由/开源软件爱好者自发筹集的演讲、报告会。</p>
+                </li>
               </ul>
-              <h2 id="网络服务">网络服务</h2>
-              <ul>
-                <li><strong><a href="/wiki/lug/services/mirrors">开源软件镜像</a></strong></li>
-                <li><strong><a href="/wiki/lug/services/ftp">LUG FTP(各种资源汇总)</a></strong></li>
-                <li><strong><a href="/wiki/lug/services/pxe">网络启动服务</a></strong></li>
-                <li><strong><a href="/wiki/lug/services/gitlab">GitLab 代码托管</a></strong></li>
-                <li><strong><a href="/wiki/lug/services">其他</a></strong></li>
-              </ul>
-              <p>请参阅 <a href="/wiki/lug/services/rules">LUG 网络服务总则</a></p>
+              <p><a href="lug/events/">了解更多</a></p>
               <h2 id="联系我们">联系我们</h2>
               <ul>
-                <li>QQ 群: 适合于即时性较强的讨论，较正式的讨论还请使用邮件列表。具体群号请查看 qq.ustclug.org 的 TXT 记录。</li>
-                <li>邮件列表: ustc_lug (at) googlegroups.com <a href="/wiki/lug/mailinglist">点击此处了解详情</a></li>
-                <li>IRC/Telegram 在线及时聊天，<a href="/wiki/lug/contact">点击此处</a>了解加入方式，平台互联由 TUNA 提供支持</li>
-                <li>瀚海星云 BBS: <a href="https://bbs.ustc.edu.cn/cgi/bbsdoc?board=Linux">瀚海星云 BBS Linux 版</a></li>
-                <li>官方邮箱: <img src="/static/email.png" alt="" /></li>
-                <li>活动室: 西区图书馆 403 室</li>
-                <li>更多联系方式请 <a href="/wiki/lug/contact">戳这里</a></li>
+                <li>官方邮箱：<img src="/static/email.png" alt="" /></li>
+                <li>活动室：西区图书馆 403 室 &amp; 高新图书馆 604B 研讨室</li>
+                <li>QQ 群：适合于即时性较强的讨论。具体群号请查看 <code class="language-plaintext highlighter-rouge">qq.ustclug.org</code> 的 TXT 记录。</li>
               </ul>
-              <h2 id="协会-logo">协会 LOGO</h2>
-              <p><img src="/static/logo.png" alt="img" /></p>
-              <p>Designed by Shengyu Zhang on 2018-08-30</p>
-              <h2 id="协会章程">协会章程</h2>
-              <p>LUG 的所有活动均依照<a href="https://ftp.lug.ustc.edu.cn/%E7%A4%BE%E5%9B%A2%E7%AE%A1%E7%90%86/%E7%AB%A0%E7%A8%8B/current/constitution.pdf">协会章程</a>开展。</p>
+              <p><a href="lug/contact/">了解更多</a></p>
             </section>
             <footer class="page__meta">
-              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2024-06-04">2024 年 6 月 4 日</time></p>
+              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2024-09-15">2024 年 9 月 15 日</time></p>
             </footer>
             <nav class="pagination">
               <a href="/wiki/greenwarm/xen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8/" class="pagination--pager" title="1.2 Xen 简介
@@ -286,7 +280,7 @@
                   <a href="/wiki/lug/contact/"><i class="fas fa-fw fa-phone-alt"></i> 联系我们</a>
                 </li>
                 <li>
-                  <a href="/wiki/lug/contribute/"><i class="fad fa-fw fa-users"></i> 加入我们</a>
+                  <a href="/wiki/lug/contribute/"><i class="fad fa-fw fa-users-medical"></i> 加入我们</a>
                 </li>
                 <li>
                   <a href="/feed/"><i class="fad fa-fw fa-rss" style="--fa-secondary-opacity: 0.6;"></i> RSS 订阅</a>

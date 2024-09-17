@@ -20,7 +20,7 @@
     <meta property="og:url" content="https://lug.ustc.edu.cn/wiki/lug/book/">
     <meta property="og:description" content="LUG 书库">
     <meta property="article:published_time" content="2020-08-09T18:46:14+08:00">
-    <meta property="article:modified_time" content="2022-06-01T19:32:11+08:00">
+    <meta property="article:modified_time" content="2024-09-15T00:57:58+08:00">
     <link rel="canonical" href="https://lug.ustc.edu.cn/wiki/lug/book/">
     <!-- end _includes/seo.html -->
     <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="LUG @ USTC Feed">
@@ -47,7 +47,7 @@
       window.enable_copy_code_button = true;
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=96e82e1f47">
+    <link rel="stylesheet" href="/assets/css/main.css?v=14542c8e3e">
     <link rel="stylesheet" href="/_extra/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <link rel="stylesheet" href="/_extra/open-sans.css" media="invalid" onload="this.media='all'">
     <!-- start custom head snippets -->
@@ -128,13 +128,20 @@
             <label for="ac-toc">切换菜单</label>
             <ul class="nav__items">
               <li>
-                <span class="nav__sub-title">LUG @ USTC</span>
+                <span class="nav__sub-title">关于</span>
                 <ul>
-                  <li><a href="/"><i class="fad fa-lg fa-fw fa-home"></i> LUG 首页</a></li>
-                  <li><a href="/news/"><i class="fad fa-lg fa-fw fa-newspaper"></i> LUG 新闻</a></li>
+                  <li><a href="/wiki/"><i class="fad fa-lg fa-fw fa-home"></i> LUG @ USTC</a></li>
+                  <li><a href="/wiki/intro/"><i class="fad fa-lg fa-address-card"></i> 关于我们</a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="nav__sub-title">服务</span>
+                <ul>
                   <li><a href="/wiki/lug/services/"><i class="fad fa-lg fa-fw fa-certificate"></i> LUG 服务</a></li>
-                  <li><a href="/wiki/lug/links/"><i class="fad fa-lg fa-fw fa-link"></i> 友情链接</a></li>
-                  <li><a href="/wiki/lug/services/mirrors/"><i class="fad fa-lg fa-fw fa-database"></i> 开源软件镜像</a></li>
+                  <li><a href="/wiki/lug/services/mirrors/"><i class="fad fa-lg fa-fw fa-database"></i> 开源镜像站</a></li>
+                  <li><a href="/wiki/lug/services/pxe/"><i class="fad fa-lg fa-fw fa-network-wired"></i> 网络启动平台</a></li>
+                  <li><a href="/wiki/lug/services/gitlab/"><i class="fad fa-lg fa-fw fa-code"></i> 代码托管平台</a></li>
+                  <li><a href="/wiki/lug/services/ftp/"><i class="fad fa-lg fa-fw fa-folder"></i> 文件存档</a></li>
                 </ul>
               </li>
               <li>
@@ -142,29 +149,25 @@
                 <ul>
                   <li><a href="/wiki/lug/events/"><i class="fad fa-lg fa-fw fa-sparkles"></i> LUG 活动</a></li>
                   <li><a href="/wiki/lug/events/weeklyparty/"><i class="fad fa-lg fa-fw fa-users-class"></i> 每周小聚</a></li>
-                  <li><a href="https://101.lug.ustc.edu.cn/"><i class="fad fa-lg fa-fw fa-graduation-cap"></i> Linux 101</a></li>
-                  <li><a href="/wiki/lug/mailinglist/"><i class="fad fa-lg fa-fw fa-envelope-open-text"></i> 邮件列表</a></li>
-                  <li><a href="/wiki/lug/book/" class="active"><i class="fad fa-lg fa-fw fa-books"></i> LUG 书库</a></li>
-                  <li><a href="/wiki/lug/finance/"><i class="fad fa-lg fa-fw fa-piggy-bank"></i> LUG 财务</a></li>
+                  <li><a href="/wiki/lug/events/101/"><i class="fad fa-lg fa-fw fa-graduation-cap"></i> Linux 101</a></li>
+                  <li><a href="/wiki/lug/events/hackergame/"><i class="fad fa-lg fa-fw fa-flag"></i> 信息安全大赛</a></li>
+                  <li><a href="/wiki/lug/events/sfd/"><i class="fad fa-lg fa-fw fa-comment"></i> 软件自由日</a></li>
                 </ul>
               </li>
               <li>
                 <span class="nav__sub-title">联系</span>
                 <ul>
-                  <li><a href="/wiki/lug/person-in-charge/"><i class="fad fa-lg fa-fw fa-user-tie"></i> LUG 负责人</a></li>
                   <li><a href="/wiki/lug/contact/"><i class="fas fa-lg fa-fw fa-phone-alt"></i> 联系我们</a></li>
                   <li><a href="/wiki/lug/contribute/"><i class="fad fa-lg fa-fw fa-users-medical"></i> 加入我们</a></li>
-                  <li><a href="/wiki/lug/finance/donate/"><i class="fad fa-lg fa-fw fa-donate"></i> 捐赠我们</a></li>
+                  <li><a href="/wiki/lug/person-in-charge/"><i class="fad fa-lg fa-fw fa-user-tie"></i> LUG 负责人</a></li>
                 </ul>
               </li>
               <li>
-                <span class="nav__sub-title">资源</span>
+                <span class="nav__sub-title">文档</span>
                 <ul>
-                  <li><a href="/wiki/linux_digest/"><i class="fad fa-lg fa-fw fa-book"></i> Linux 文摘</a></li>
-                  <li><a href="/wiki/lug/resources/"><i class="fad fa-lg fa-fw fa-bookmark"></i> 资源导航</a></li>
-                  <li><a href="https://servers.ustclug.org/"><i class="fad fa-lg fa-fw fa-server"></i> 服务器新闻</a></li>
                   <li><a href="/wiki/doc/ustcnet-faq/"><i class="fas fa-lg fa-fw fa-question-square"></i> 校园网常见问题</a></li>
                   <li><a href="/wiki/doc/howtoask/"><i class="fas fa-lg fa-fw fa-universal-access"></i> 提问指南</a></li>
+                  <li><a href="/wiki/doc/editing/"><i class="fas fa-lg fa-fw fa-pen"></i> 修订指南</a></li>
                 </ul>
               </li>
             </ul>
@@ -174,7 +177,7 @@
           <meta itemprop="headline" content="LUG 书库">
           <meta itemprop="description" content="LUG 书库">
           <meta itemprop="datePublished" content="2020-08-09T18:46:14+08:00">
-          <meta itemprop="dateModified" content="2022-06-01T19:32:11+08:00">
+          <meta itemprop="dateModified" content="2024-09-15T00:57:58+08:00">
           <div class="page__inner-wrap">
             <header>
               <h1 id="page-title" class="page__title" itemprop="headline">
@@ -210,11 +213,11 @@
                 </nav>
               </aside>
               <p>目前 LUG 活动室有一些 Linux 系统相关比较经典的书籍，有一部分是 LUG 购买的，有一部分是网友捐赠的。</p>
-              <p>我们同时非常欢迎童鞋们将自己手头不再需要的好书捐献出来。捐赠图书可以<a href="mailto:lug@ustc.edu.cn" title="lug@ustc.edu.cn">联系我们</a>。</p>
-              <p>关于如何借阅，如何捐赠等问题可以参阅：<a href="borrow_book" title="lug:book:borrow_book">图书借阅管理制度</a></p>
-              <p>借阅记录与黑名单：<a href="borrow_history" title="lug:book:borrow_history">借阅记录</a></p>
-              <p>读书笔记汇总：<a href="booknotes" title="lug:book:booknotes">读书笔记</a></p>
-              <p>给 LUG 书库推荐好书：<a href="mailto:lug@ustc.edu.cn" title="lug@ustc.edu.cn">联系图书管理员</a></p>
+              <p>我们同时非常欢迎童鞋们将自己手头不再需要的好书捐献出来。捐赠图书可以<a href="/wiki/lug/contact/">联系我们</a>。</p>
+              <p>关于如何借阅，如何捐赠等问题可以参阅：<a href="borrow_book/">图书借阅管理制度</a></p>
+              <p>借阅记录与黑名单：<a href="borrow_history/">借阅记录</a></p>
+              <p>读书笔记汇总：<a href="booknotes/">读书笔记</a></p>
+              <p>给 LUG 书库推荐好书：<img src="/static/email.png" alt="" /></p>
               <h1 id="书单">书单</h1>
               <p>书单的分类比较粗糙，有改进意见请联系图书管理员</p>
               <p>以下信息可能已经过时，请访问新版 LUG 书库：<a href="https://library.ustclug.org/">https://library.ustclug.org/</a></p>
@@ -231,7 +234,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a href="http://book.douban.com/subject/2208530/" title="http://book.douban.com/subject/2208530/">鸟哥的 Linux 私房菜 基础学习篇(第二版)</a></td>
+                    <td><a href="http://book.douban.com/subject/2208530/" title="http://book.douban.com/subject/2208530/">鸟哥的 Linux 私房菜 基础学习篇 (第二版)</a></td>
                     <td>鸟哥</td>
                     <td>65</td>
                     <td>3 本 <br />
@@ -240,7 +243,7 @@
                     <td>借出 1 本</td>
                   </tr>
                   <tr>
-                    <td><a href="http://book.douban.com/subject/4889838/" title="http://book.douban.com/subject/4889838/">鸟哥的 Linux 私房菜 基础学习篇(第三版)</a></td>
+                    <td><a href="http://book.douban.com/subject/4889838/" title="http://book.douban.com/subject/4889838/">鸟哥的 Linux 私房菜 基础学习篇 (第三版)</a></td>
                     <td>鸟哥</td>
                     <td>88.00</td>
                     <td>2 本 <br />
@@ -269,21 +272,21 @@
                   <tr>
                     <th>书名</th>
                     <th>作者</th>
-                    <th>定价(￥)</th>
+                    <th>定价 (￥)</th>
                     <th>备注</th>
                     <th>借阅</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a href="http://book.douban.com/subject/2338464/" title="http://book.douban.com/subject/2338464/">鸟哥的 Linux 私房菜 服务器架设篇(第二版)</a></td>
+                    <td><a href="http://book.douban.com/subject/2338464/" title="http://book.douban.com/subject/2338464/">鸟哥的 Linux 私房菜 服务器架设篇 (第二版)</a></td>
                     <td>鸟哥</td>
                     <td>88.00</td>
                     <td>QuITh 捐赠</td>
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><a href="http://book.douban.com/subject/10794788/" title="http://book.douban.com/subject/10794788/">鸟哥的 Linux 私房菜: 服务器架设篇(第三版)</a></td>
+                    <td><a href="http://book.douban.com/subject/10794788/" title="http://book.douban.com/subject/10794788/">鸟哥的 Linux 私房菜：服务器架设篇 (第三版)</a></td>
                     <td>鸟哥</td>
                     <td>108.00</td>
                     <td>2 本 LUG 购置</td>
@@ -297,7 +300,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><a href="http://book.douban.com/subject/1240136/" title="http://book.douban.com/subject/1240136/">LINUX 网络管理员指南(第二版)</a></td>
+                    <td><a href="http://book.douban.com/subject/1240136/" title="http://book.douban.com/subject/1240136/">LINUX 网络管理员指南 (第二版)</a></td>
                     <td>OLAF KIRCH TERRY DAWSON</td>
                     <td>59.00</td>
                     <td>网友捐赠</td>
@@ -332,14 +335,14 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><a href="http://book.douban.com/subject/3924175/" title="http://book.douban.com/subject/3924175/">构建高性能 Web 站点: 改善性能和扩展规模的具体做法</a></td>
+                    <td><a href="http://book.douban.com/subject/3924175/" title="http://book.douban.com/subject/3924175/">构建高性能 Web 站点：改善性能和扩展规模的具体做法</a></td>
                     <td>郭欣</td>
                     <td>59.00</td>
                     <td>会员捐赠</td>
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><a href="http://book.douban.com/subject/7564094/" title="http://book.douban.com/subject/7564094/">高性能 Linux 服务器构建实战: 运维监控、性能调优与集群应用</a></td>
+                    <td><a href="http://book.douban.com/subject/7564094/" title="http://book.douban.com/subject/7564094/">高性能 Linux 服务器构建实战：运维监控、性能调优与集群应用</a></td>
                     <td>高俊峰</td>
                     <td>79.00</td>
                     <td>LUG 购置</td>
@@ -360,7 +363,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><a href="http://book.douban.com/subject/11589828/" title="http://book.douban.com/subject/11589828/">Linux 命令行与 shell 脚本编程大全(第 2 版)</a></td>
+                    <td><a href="http://book.douban.com/subject/11589828/" title="http://book.douban.com/subject/11589828/">Linux 命令行与 shell 脚本编程大全 (第 2 版)</a></td>
                     <td>Richard Blum &amp; Christine Bresnahan</td>
                     <td>99.00</td>
                     <td>ewind 捐赠</td>
@@ -480,14 +483,14 @@
                     <td>已借出</td>
                   </tr>
                   <tr>
-                    <td>学习 vi 和 Vim 编辑器(中文版)(第 7 版)</td>
+                    <td>学习 vi 和 Vim 编辑器 (中文版)(第 7 版)</td>
                     <td>罗宾斯</td>
                     <td>59.90</td>
                     <td>LUG 购置</td>
                     <td>1 本在东区</td>
                   </tr>
                   <tr>
-                    <td>学习 vi 编辑器(第六版)</td>
+                    <td>学习 vi 编辑器 (第六版)</td>
                     <td>Linda Lamb &amp; Arnold Robbins</td>
                     <td>43.00</td>
                     <td>不详</td>
@@ -557,7 +560,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td>C/C++嵌入式系统编程</td>
+                    <td>C/C++ 嵌入式系统编程</td>
                     <td>-</td>
                     <td>29</td>
                     <td>网友捐赠</td>
@@ -599,35 +602,35 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td>C 程序设计语言(第 2 版新版)</td>
+                    <td>C 程序设计语言 (第 2 版新版)</td>
                     <td>克尼汉</td>
                     <td>20.70</td>
                     <td>LUG 购置</td>
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><a href="http://book.douban.com/subject/1444869/" title="http://book.douban.com/subject/1444869/">C++编程规范（英文版）</a></td>
+                    <td><a href="http://book.douban.com/subject/1444869/" title="http://book.douban.com/subject/1444869/">C++ 编程规范（英文版）</a></td>
                     <td>-</td>
                     <td>42</td>
                     <td>网友捐赠</td>
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td>面向对象程序设计，C++语言描述</td>
+                    <td>面向对象程序设计，C++ 语言描述</td>
                     <td>-</td>
                     <td>48</td>
                     <td>网友捐赠</td>
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td>Effective C++: 改善程序与设计的 55 个具体做法(第 3 版)(云风评注)</td>
+                    <td>Effective C++: 改善程序与设计的 55 个具体做法 (第 3 版)(云风评注)</td>
                     <td>Scott Meyers</td>
                     <td>48.80</td>
                     <td>LUG 购置</td>
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td>Effective C++: 改善程序与设计的 55 个具体做法(第 3 版)(英文版)</td>
+                    <td>Effective C++: 改善程序与设计的 55 个具体做法 (第 3 版)(英文版)</td>
                     <td>Scott Meyers</td>
                     <td>45.00</td>
                     <td>LUG 购置</td>
@@ -677,7 +680,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td>面向对象程序设计——C++语言描述</td>
+                    <td>面向对象程序设计——C++ 语言描述</td>
                     <td>Martin Kalin, Richard Johnsonbaugh</td>
                     <td>48</td>
                     <td>不详</td>
@@ -734,7 +737,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><a href="http://book.douban.com/subject/2130190/" title="http://book.douban.com/subject/2130190/">Java 编程思想 （第 4 版）</a></td>
+                    <td><a href="http://book.douban.com/subject/2130190/" title="http://book.douban.com/subject/2130190/">Java 编程思想（第 4 版）</a></td>
                     <td>Bruce Eckel</td>
                     <td>108.00</td>
                     <td>boj 捐赠</td>
@@ -776,28 +779,28 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td>UNIX 网络编程. 卷 2: 进程间通信(第 2 版)</td>
+                    <td>UNIX 网络编程。卷 2: 进程间通信 (第 2 版)</td>
                     <td>W. Richard Stevens</td>
                     <td>66.80</td>
                     <td>LUG 购置</td>
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td><a href="http://book.douban.com/subject/4886882/" title="http://book.douban.com/subject/4886882/">UNIX 网络编程. 卷 2: 进程间通信(第 2 版)</a></td>
+                    <td><a href="http://book.douban.com/subject/4886882/" title="http://book.douban.com/subject/4886882/">UNIX 网络编程。卷 2: 进程间通信 (第 2 版)</a></td>
                     <td>W. Richard Stevens</td>
                     <td>89</td>
                     <td>boj 捐赠</td>
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td>UNIX 网络编程(卷 1): 套接字联网 API(第 3 版)</td>
+                    <td>UNIX 网络编程 (卷 1): 套接字联网 API(第 3 版)</td>
                     <td>W. Richard Stevens</td>
                     <td>96.70</td>
                     <td>LUG 购置</td>
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td>TCP/IP 详解(卷 1: 协议) <br />
+                    <td>TCP/IP 详解 (卷 1: 协议) <br />
                        TCP/IP Illustrated Volume 1: The Protocols</td>
                     <td>W. Richard Stevens</td>
                     <td>45.00</td>
@@ -819,7 +822,7 @@
                     <td> </td>
                   </tr>
                   <tr>
-                    <td>TCP/IP 详解 卷 2 实现(英文版)</td>
+                    <td>TCP/IP 详解 卷 2 实现 (英文版)</td>
                     <td>Gary R. Wright</td>
                     <td>69</td>
                     <td>网友捐赠</td>
@@ -896,14 +899,14 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td>失控: 全人类的最终命运和结局</td>
+                    <td>失控：全人类的最终命运和结局</td>
                     <td>凯文·凯利</td>
                     <td>48.50</td>
                     <td>LUG 购置</td>
                     <td>unavailable</td>
                   </tr>
                   <tr>
-                    <td>黑客与画家: 硅谷创业之父 Paul Graham 文集</td>
+                    <td>黑客与画家：硅谷创业之父 Paul Graham 文集</td>
                     <td>阮一峰</td>
                     <td>33.80</td>
                     <td>LUG 购置</td>
@@ -941,7 +944,7 @@
                     <td>借出</td>
                   </tr>
                   <tr>
-                    <td>设计原本: 计算机科学巨匠 Frederick P. Brooks 的思考</td>
+                    <td>设计原本：计算机科学巨匠 Frederick P. Brooks 的思考</td>
                     <td>布鲁克斯</td>
                     <td>37.70</td>
                     <td>LUG 购置</td>
@@ -990,14 +993,14 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td>JavaScript 高级程序设计(第 3 版)</td>
+                    <td>JavaScript 高级程序设计 (第 3 版)</td>
                     <td>Nicholas C. Zakas</td>
                     <td>71.80</td>
                     <td>LUG 购置</td>
                     <td>已借出</td>
                   </tr>
                   <tr>
-                    <td>CSS 实战手册(第 2 版)</td>
+                    <td>CSS 实战手册 (第 2 版)</td>
                     <td>David Sawyer McFarland</td>
                     <td>52.40</td>
                     <td>LUG 购置</td>
@@ -1282,7 +1285,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td>人工智能——一种现代方法(第二版) <br />
+                    <td>人工智能——一种现代方法 (第二版) <br />
                        Artificial Intelligence - A Modern Approach</td>
                     <td>拉塞尔等</td>
                     <td>89.00</td>
@@ -1306,14 +1309,14 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td>深入理解计算机系统(英文版, 第 2 版)</td>
-                    <td>布莱恩特, 奥哈拉伦</td>
+                    <td>深入理解计算机系统 (英文版，第 2 版)</td>
+                    <td>布莱恩特，奥哈拉伦</td>
                     <td>85.00</td>
                     <td>LUG 购置</td>
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td>深入理解计算机系统(原书第 2 版)</td>
+                    <td>深入理解计算机系统 (原书第 2 版)</td>
                     <td>布莱恩特</td>
                     <td>65.60</td>
                     <td>LUG 购置</td>
@@ -1468,7 +1471,7 @@
                     <td> </td>
                   </tr>
                   <tr>
-                    <td><a href="http://book.douban.com/subject/1954037" title="http://book.douban.com/subject/1954037">计算机体系结构: 量化研究方法(英文版第 4 版)</a></td>
+                    <td><a href="http://book.douban.com/subject/1954037" title="http://book.douban.com/subject/1954037">计算机体系结构：量化研究方法 (英文版第 4 版)</a></td>
                     <td>John L. Hennessy</td>
                     <td> </td>
                     <td> </td>
@@ -1482,7 +1485,7 @@
                     <td> </td>
                   </tr>
                   <tr>
-                    <td><a href="http://book.douban.com/subject/1935714/" title="http://book.douban.com/subject/1935714/">软件工程: 理论与实践（第三版 影印版）</a> <br />
+                    <td><a href="http://book.douban.com/subject/1935714/" title="http://book.douban.com/subject/1935714/">软件工程：理论与实践（第三版 影印版）</a> <br />
                        Software Engineering: Theory and Practice, Third Edition</td>
                     <td>Shari Lawrence Pfleeger</td>
                     <td> </td>
@@ -1811,7 +1814,7 @@
                 | —- | —- |</p>
             </section>
             <footer class="page__meta">
-              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2022-06-01">2022 年 6 月 1 日</time></p>
+              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2024-09-15">2024 年 9 月 15 日</time></p>
             </footer>
             <nav class="pagination">
               <a href="/wiki/lug/book/borrow_history/" class="pagination--pager" title="借阅记录
@@ -1848,7 +1851,7 @@
                   <a href="/wiki/lug/contact/"><i class="fas fa-fw fa-phone-alt"></i> 联系我们</a>
                 </li>
                 <li>
-                  <a href="/wiki/lug/contribute/"><i class="fad fa-fw fa-users"></i> 加入我们</a>
+                  <a href="/wiki/lug/contribute/"><i class="fad fa-fw fa-users-medical"></i> 加入我们</a>
                 </li>
                 <li>
                   <a href="/feed/"><i class="fad fa-fw fa-rss" style="--fa-secondary-opacity: 0.6;"></i> RSS 订阅</a>

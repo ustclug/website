@@ -20,7 +20,7 @@
     <meta property="og:url" content="https://lug.ustc.edu.cn/wiki/lug/book/borrow_history/">
     <meta property="og:description" content="借阅记录">
     <meta property="article:published_time" content="2020-08-09T15:07:59+08:00">
-    <meta property="article:modified_time" content="2024-09-07T16:43:59+08:00">
+    <meta property="article:modified_time" content="2024-09-15T01:04:12+08:00">
     <link rel="canonical" href="https://lug.ustc.edu.cn/wiki/lug/book/borrow_history/">
     <!-- end _includes/seo.html -->
     <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="LUG @ USTC Feed">
@@ -47,7 +47,7 @@
       window.enable_copy_code_button = true;
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=96e82e1f47">
+    <link rel="stylesheet" href="/assets/css/main.css?v=14542c8e3e">
     <link rel="stylesheet" href="/_extra/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <link rel="stylesheet" href="/_extra/open-sans.css" media="invalid" onload="this.media='all'">
     <!-- start custom head snippets -->
@@ -128,13 +128,20 @@
             <label for="ac-toc">切换菜单</label>
             <ul class="nav__items">
               <li>
-                <span class="nav__sub-title">LUG @ USTC</span>
+                <span class="nav__sub-title">关于</span>
                 <ul>
-                  <li><a href="/"><i class="fad fa-lg fa-fw fa-home"></i> LUG 首页</a></li>
-                  <li><a href="/news/"><i class="fad fa-lg fa-fw fa-newspaper"></i> LUG 新闻</a></li>
+                  <li><a href="/wiki/"><i class="fad fa-lg fa-fw fa-home"></i> LUG @ USTC</a></li>
+                  <li><a href="/wiki/intro/"><i class="fad fa-lg fa-address-card"></i> 关于我们</a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="nav__sub-title">服务</span>
+                <ul>
                   <li><a href="/wiki/lug/services/"><i class="fad fa-lg fa-fw fa-certificate"></i> LUG 服务</a></li>
-                  <li><a href="/wiki/lug/links/"><i class="fad fa-lg fa-fw fa-link"></i> 友情链接</a></li>
-                  <li><a href="/wiki/lug/services/mirrors/"><i class="fad fa-lg fa-fw fa-database"></i> 开源软件镜像</a></li>
+                  <li><a href="/wiki/lug/services/mirrors/"><i class="fad fa-lg fa-fw fa-database"></i> 开源镜像站</a></li>
+                  <li><a href="/wiki/lug/services/pxe/"><i class="fad fa-lg fa-fw fa-network-wired"></i> 网络启动平台</a></li>
+                  <li><a href="/wiki/lug/services/gitlab/"><i class="fad fa-lg fa-fw fa-code"></i> 代码托管平台</a></li>
+                  <li><a href="/wiki/lug/services/ftp/"><i class="fad fa-lg fa-fw fa-folder"></i> 文件存档</a></li>
                 </ul>
               </li>
               <li>
@@ -142,29 +149,25 @@
                 <ul>
                   <li><a href="/wiki/lug/events/"><i class="fad fa-lg fa-fw fa-sparkles"></i> LUG 活动</a></li>
                   <li><a href="/wiki/lug/events/weeklyparty/"><i class="fad fa-lg fa-fw fa-users-class"></i> 每周小聚</a></li>
-                  <li><a href="https://101.lug.ustc.edu.cn/"><i class="fad fa-lg fa-fw fa-graduation-cap"></i> Linux 101</a></li>
-                  <li><a href="/wiki/lug/mailinglist/"><i class="fad fa-lg fa-fw fa-envelope-open-text"></i> 邮件列表</a></li>
-                  <li><a href="/wiki/lug/book/"><i class="fad fa-lg fa-fw fa-books"></i> LUG 书库</a></li>
-                  <li><a href="/wiki/lug/finance/"><i class="fad fa-lg fa-fw fa-piggy-bank"></i> LUG 财务</a></li>
+                  <li><a href="/wiki/lug/events/101/"><i class="fad fa-lg fa-fw fa-graduation-cap"></i> Linux 101</a></li>
+                  <li><a href="/wiki/lug/events/hackergame/"><i class="fad fa-lg fa-fw fa-flag"></i> 信息安全大赛</a></li>
+                  <li><a href="/wiki/lug/events/sfd/"><i class="fad fa-lg fa-fw fa-comment"></i> 软件自由日</a></li>
                 </ul>
               </li>
               <li>
                 <span class="nav__sub-title">联系</span>
                 <ul>
-                  <li><a href="/wiki/lug/person-in-charge/"><i class="fad fa-lg fa-fw fa-user-tie"></i> LUG 负责人</a></li>
                   <li><a href="/wiki/lug/contact/"><i class="fas fa-lg fa-fw fa-phone-alt"></i> 联系我们</a></li>
                   <li><a href="/wiki/lug/contribute/"><i class="fad fa-lg fa-fw fa-users-medical"></i> 加入我们</a></li>
-                  <li><a href="/wiki/lug/finance/donate/"><i class="fad fa-lg fa-fw fa-donate"></i> 捐赠我们</a></li>
+                  <li><a href="/wiki/lug/person-in-charge/"><i class="fad fa-lg fa-fw fa-user-tie"></i> LUG 负责人</a></li>
                 </ul>
               </li>
               <li>
-                <span class="nav__sub-title">资源</span>
+                <span class="nav__sub-title">文档</span>
                 <ul>
-                  <li><a href="/wiki/linux_digest/"><i class="fad fa-lg fa-fw fa-book"></i> Linux 文摘</a></li>
-                  <li><a href="/wiki/lug/resources/"><i class="fad fa-lg fa-fw fa-bookmark"></i> 资源导航</a></li>
-                  <li><a href="https://servers.ustclug.org/"><i class="fad fa-lg fa-fw fa-server"></i> 服务器新闻</a></li>
                   <li><a href="/wiki/doc/ustcnet-faq/"><i class="fas fa-lg fa-fw fa-question-square"></i> 校园网常见问题</a></li>
                   <li><a href="/wiki/doc/howtoask/"><i class="fas fa-lg fa-fw fa-universal-access"></i> 提问指南</a></li>
+                  <li><a href="/wiki/doc/editing/"><i class="fas fa-lg fa-fw fa-pen"></i> 修订指南</a></li>
                 </ul>
               </li>
             </ul>
@@ -174,7 +177,7 @@
           <meta itemprop="headline" content="借阅记录">
           <meta itemprop="description" content="借阅记录">
           <meta itemprop="datePublished" content="2020-08-09T15:07:59+08:00">
-          <meta itemprop="dateModified" content="2024-09-07T16:43:59+08:00">
+          <meta itemprop="dateModified" content="2024-09-15T01:04:12+08:00">
           <div class="page__inner-wrap">
             <header>
               <h1 id="page-title" class="page__title" itemprop="headline">
@@ -337,7 +340,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td>计算机组成与设计-硬件软件接口</td>
+                    <td>计算机组成与设计 - 硬件软件接口</td>
                     <td>蔡智臻</td>
                     <td>carbyne AT mail.ustc.edu.cn</td>
                     <td>2021-03-07</td>
@@ -448,7 +451,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td>人工智能-一种现代的方法</td>
+                    <td>人工智能 - 一种现代的方法</td>
                     <td>付佳伟</td>
                     <td>ibug AT ustclug.org</td>
                     <td>2020-08-25</td>
@@ -456,7 +459,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td>并行计算-结构、算法编程</td>
+                    <td>并行计算 - 结构、算法编程</td>
                     <td>付佳伟</td>
                     <td>ibug AT ustclug.org</td>
                     <td>2020-08-25</td>
@@ -464,7 +467,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td>并行计算-结构、算法编程</td>
+                    <td>并行计算 - 结构、算法编程</td>
                     <td>彭定澜</td>
                     <td>pdl AT ustclug.org</td>
                     <td>2020-08-25</td>
@@ -496,7 +499,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td>随机过程 （第三版）</td>
+                    <td>随机过程（第三版）</td>
                     <td>罗丽薇</td>
                     <td>loliw AT ustclug.org</td>
                     <td>2020-09-13</td>
@@ -520,7 +523,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td>计算机网络-自顶向下方法（第七版）</td>
+                    <td>计算机网络 - 自顶向下方法（第七版）</td>
                     <td>罗丽薇</td>
                     <td>loliw AT ustclug.org</td>
                     <td>2020-09-13</td>
@@ -562,7 +565,7 @@
                     <th>联系方式</th>
                     <th>借阅日期</th>
                     <th>归还日期</th>
-                    <th>读书报告(链接)</th>
+                    <th>读书报告 (链接)</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -575,11 +578,11 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td>计算机组成与设计-硬件软件接口</td>
+                    <td>计算机组成与设计 - 硬件软件接口</td>
                     <td>樊真幸</td>
                     <td>fanzhenxing AT mail.ustc.edu.cn</td>
                     <td>2019 年 3 月 1 日</td>
-                    <td>2019 年 6 月 ？ 日</td>
+                    <td>2019 年 6 月？日</td>
                     <td>-</td>
                   </tr>
                   <tr>
@@ -714,7 +717,7 @@
                     <th>借阅日期</th>
                     <th>应还日期</th>
                     <th>归还日期</th>
-                    <th>读书报告(链接)</th>
+                    <th>读书报告 (链接)</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -766,12 +769,12 @@
                     <th>借阅日期</th>
                     <th>应还日期</th>
                     <th>归还日期</th>
-                    <th>读书报告(链接)</th>
+                    <th>读书报告 (链接)</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>鸟哥的 Linux 私房菜-服务器架设篇</td>
+                    <td>鸟哥的 Linux 私房菜 - 服务器架设篇</td>
                     <td>李晨宇</td>
                     <td>dev8708446 AT mail.ustc.edu.cn</td>
                     <td>2017 年 10 月 29 日</td>
@@ -879,7 +882,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td>并行计算-结构算法编程</td>
+                    <td>并行计算 - 结构算法编程</td>
                     <td>郑子涵</td>
                     <td>zzh1996 AT mail.ustc.edu.cn</td>
                     <td>2017 年 2 月 12 日</td>
@@ -899,7 +902,7 @@
                     <th>借阅日期</th>
                     <th>应还日期</th>
                     <th>归还日期</th>
-                    <th>读书报告(链接)</th>
+                    <th>读书报告 (链接)</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -922,7 +925,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td>计算机系统概论(英文版)</td>
+                    <td>计算机系统概论 (英文版)</td>
                     <td>王子博</td>
                     <td>wzb15 AT mail.ustc.edu.cn</td>
                     <td>2016 年 8 月 29 日</td>
@@ -978,7 +981,7 @@
                     <th>借阅日期</th>
                     <th>应还日期</th>
                     <th>归还日期</th>
-                    <th>读书报告(链接)</th>
+                    <th>读书报告 (链接)</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -1037,7 +1040,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td>人工智能——一种现代方法(第二版) Artificial Intelligence - A Modern Approach</td>
+                    <td>人工智能——一种现代方法 (第二版) Artificial Intelligence - A Modern Approach</td>
                     <td>朱晟菁</td>
                     <td>zsj950618 AT gmail.com</td>
                     <td>2015 年 3 月 1 日</td>
@@ -1073,7 +1076,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td>程序设计语言原理(第 8 版)</td>
+                    <td>程序设计语言原理 (第 8 版)</td>
                     <td>张恒若</td>
                     <td>15665518450</td>
                     <td>2015 年 3 月 8 日</td>
@@ -1091,7 +1094,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td>TCP/IP 详解(卷 1: 协议) TCP/IP Illustrated Volume 1: The Protocols</td>
+                    <td>TCP/IP 详解 (卷 1: 协议) TCP/IP Illustrated Volume 1: The Protocols</td>
                     <td>郑子涵</td>
                     <td>zzh1996 AT mail.ustc.edu.cn</td>
                     <td>2015 年 3 月 20 日</td>
@@ -1111,13 +1114,13 @@
                     <th>借阅日期</th>
                     <th>应还日期</th>
                     <th>归还日期</th>
-                    <th>读书报告(链接)</th>
+                    <th>读书报告 (链接)</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>社交网站的数据挖掘与分析</td>
-                    <td>邱康, PB12210020</td>
+                    <td>邱康，PB12210020</td>
                     <td>-</td>
                     <td>2014 年 9 月 23 日</td>
                     <td>2014 年 12 月 23 日</td>
@@ -1162,7 +1165,7 @@
                   </tr>
                   <tr>
                     <td>Python 开发技术详解</td>
-                    <td>李建伟, SC14011001</td>
+                    <td>李建伟，SC14011001</td>
                     <td>-</td>
                     <td>2014 年 9 月 23 日</td>
                     <td>2014 年 11 月 23 日</td>
@@ -1307,7 +1310,7 @@
                     <th>借阅日期</th>
                     <th>应还日期</th>
                     <th>归还日期</th>
-                    <th>读书报告(链接)</th>
+                    <th>读书报告 (链接)</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -1420,7 +1423,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td>鸟哥(基础学习篇)</td>
+                    <td>鸟哥 (基础学习篇)</td>
                     <td>朱晟菁</td>
                     <td>zsj950618 AT gmail.com</td>
                     <td>2012-12-08</td>
@@ -1456,7 +1459,7 @@
                     <td>-</td>
                   </tr>
                   <tr>
-                    <td>失控: 全人类的最终命运和结局</td>
+                    <td>失控：全人类的最终命运和结局</td>
                     <td>jxl</td>
                     <td>jxl888 AT mail.ustc.edu.cn</td>
                     <td>2013-02-25</td>
@@ -1476,7 +1479,7 @@
                     <th>借阅日期</th>
                     <th>应还日期</th>
                     <th>归还日期</th>
-                    <th>读书报告(链接)</th>
+                    <th>读书报告 (链接)</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -1592,7 +1595,7 @@
               </table>
             </section>
             <footer class="page__meta">
-              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2024-09-07">2024 年 9 月 7 日</time></p>
+              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2024-09-15">2024 年 9 月 15 日</time></p>
             </footer>
             <nav class="pagination">
               <a href="/wiki/lug/book/borrow_book/" class="pagination--pager" title="LUG 图书管理
@@ -1629,7 +1632,7 @@
                   <a href="/wiki/lug/contact/"><i class="fas fa-fw fa-phone-alt"></i> 联系我们</a>
                 </li>
                 <li>
-                  <a href="/wiki/lug/contribute/"><i class="fad fa-fw fa-users"></i> 加入我们</a>
+                  <a href="/wiki/lug/contribute/"><i class="fad fa-fw fa-users-medical"></i> 加入我们</a>
                 </li>
                 <li>
                   <a href="/feed/"><i class="fad fa-fw fa-rss" style="--fa-secondary-opacity: 0.6;"></i> RSS 订阅</a>

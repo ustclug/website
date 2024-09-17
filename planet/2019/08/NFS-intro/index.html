@@ -21,7 +21,7 @@
     <meta property="og:description" content="NFS（网络文件系统，Network File System）是一个分布式的文件系统，可以用于在局域网中共享文件。它通常运用在 Unix 与类 Unix 操作系统中。对于 Linux 服务器之间的文件共享来说，NFS 相比于其他的方案（如 Samba）更加方便，性能也更好。对于应用程序来说，NFS 也是透明的。">
     <meta property="og:image" content="https://lug.ustc.edu.cn/static/splash/galaxy-1.jpg">
     <meta property="article:published_time" content="2019-08-28T00:00:00+08:00">
-    <meta property="article:modified_time" content="2020-11-09T14:22:35+08:00">
+    <meta property="article:modified_time" content="2024-09-15T00:58:27+08:00">
     <link rel="canonical" href="https://lug.ustc.edu.cn/planet/2019/08/NFS-intro/">
     <!-- end _includes/seo.html -->
     <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="LUG @ USTC Feed">
@@ -48,7 +48,7 @@
       window.enable_copy_code_button = true;
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=96e82e1f47">
+    <link rel="stylesheet" href="/assets/css/main.css?v=14542c8e3e">
     <link rel="stylesheet" href="/_extra/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <link rel="stylesheet" href="/_extra/open-sans.css" media="invalid" onload="this.media='all'">
     <!-- start custom head snippets -->
@@ -173,7 +173,7 @@
           <meta itemprop="headline" content="一个 NFS 的简介">
           <meta itemprop="description" content="NFS（网络文件系统，Network File System）是一个分布式的文件系统，可以用于在局域网中共享文件。它通常运用在 Unix 与类 Unix 操作系统中。对于 Linux 服务器之间的文件共享来说，NFS 相比于其他的方案（如 Samba）更加方便，性能也更好。对于应用程序来说，NFS 也是透明的。">
           <meta itemprop="datePublished" content="2019-08-28T00:00:00+08:00">
-          <meta itemprop="dateModified" content="2020-11-09T14:22:35+08:00">
+          <meta itemprop="dateModified" content="2024-09-15T00:58:27+08:00">
           <div class="page__inner-wrap">
             <section class="page__content" itemprop="text">
               <aside class="sidebar__right sticky">
@@ -305,10 +305,10 @@ mount: exec /Library/Filesystems/nfs4.fs/Contents/Resources/mount_nfs4 for /User
               <h2 id="在-mirrors-中的实践">在 mirrors 中的实践</h2>
               <p>在新的存储等设备买来配置好之前，我们的 mirrors 服务由服务器 mirrors2 提供。随着各种镜像逐年增大，我们的 ZFS pool 的空间越来越小，尤其是在同步的时候。这个月已经出现了多次空间吃光的情况，出现时会导致导致同步任务堆积无法完成，系统负载达到 100 以上，I/O 性能急剧下降。</p>
               <p>我们对日志分析后发现，bioc 仓库（R 语言的分子生物学软件仓库）访问量很小，但是空间占用巨大（约 1.4 TB）。由于我们前段时间多出一台闲置的服务器（命名为 mirrors3），目前我们将 bioc 放置在了 mirrors3 上，同步任务也由 mirrors3 完成，NFS 到 mirrors2 上继续正常提供服务。这一项工作主要由付佳伟同学完成。多出来的磁盘空间应该可以维持比较长一段时间的稳定工作。</p>
-              <p>在一部分细节方面，服务器还没有配置完成，在 <a href="https://mirrors.ustc.edu.cn/status/">status 页面</a>的显示也比较奇怪，这是因为此页面读取的是 mirrors2 的数据。我们未来会进行改进，如果你在使用 bioc 仓库时遇到问题，也欢迎通过发送邮件到 <a href="mailto:lug@ustc.edu.cn">lug@ustc.edu.cn</a> 或者在 <a href="https://github.com/ustclug/discussions">https://github.com/ustclug/discussions</a> 中提交 issue 进行反馈。</p>
+              <p>在一部分细节方面，服务器还没有配置完成，在 <a href="https://mirrors.ustc.edu.cn/status/">status 页面</a>的显示也比较奇怪，这是因为此页面读取的是 mirrors2 的数据。我们未来会进行改进，如果你在使用 bioc 仓库时遇到问题，也欢迎通过发送邮件到 <img src="/static/email.png" alt="" /> 或者在 <a href="https://github.com/ustclug/discussions">https://github.com/ustclug/discussions</a> 中提交 issue 进行反馈。</p>
               <hr />
               <p>另外，planet 已经有将近一年的时间处于死寂的状态。我写的其实不太好，此次更新主要是希望能够引起大家的注意，收到更多的稿件。另外有一些（未完成的）稿件在我们的草稿箱里，我会去给对应的作者催稿的（</p>
-              <p>由于 WordPress 的用户权限配置问题，你在注册账号后可能找不到投稿的地方。直接发送邮件到 <a href="mailto:planet@ustclug.org">planet@ustclug.org</a> 跟我们说吧（当然 <a href="mailto:lug@ustc.edu.cn">lug@ustc.edu.cn</a> 也行，我也会处理的）！也欢迎提供你的博客的 RSS 地址，我们可以选择文章转载到这里。</p>
+              <p>由于 WordPress 的用户权限配置问题，你在注册账号后可能找不到投稿的地方。直接发送邮件到 <a href="mailto:planet@ustclug.org">planet@ustclug.org</a> 跟我们说吧（当然 <img src="/static/email.png" alt="" /> 也行，我也会处理的）！也欢迎提供你的博客的 RSS 地址，我们可以选择文章转载到这里。</p>
               <div class="footnotes" role="doc-endnotes">
                 <ol>
                   <li id="fn:1" role="doc-endnote">
@@ -333,7 +333,7 @@ mount: exec /Library/Filesystems/nfs4.fs/Contents/Resources/mount_nfs4 for /User
                   <a href="/categories/technology" class="page__taxonomy-item p-category" rel="tag">Technology</a>
                 </span>
               </p>
-              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-11-09">2020 年 11 月 9 日</time></p>
+              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2024-09-15">2024 年 9 月 15 日</time></p>
             </footer>
             <nav class="pagination">
               <a href="/planet/2018/10/PXE-intro/" class="pagination--pager" title="一根网线安装 Linux——PXE 介绍
@@ -458,7 +458,7 @@ mount: exec /Library/Filesystems/nfs4.fs/Contents/Resources/mount_nfs4 for /User
                   <a href="/wiki/lug/contact/"><i class="fas fa-fw fa-phone-alt"></i> 联系我们</a>
                 </li>
                 <li>
-                  <a href="/wiki/lug/contribute/"><i class="fad fa-fw fa-users"></i> 加入我们</a>
+                  <a href="/wiki/lug/contribute/"><i class="fad fa-fw fa-users-medical"></i> 加入我们</a>
                 </li>
                 <li>
                   <a href="/feed/"><i class="fad fa-fw fa-rss" style="--fa-secondary-opacity: 0.6;"></i> RSS 订阅</a>
