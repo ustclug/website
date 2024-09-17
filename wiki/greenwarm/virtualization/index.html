@@ -20,7 +20,7 @@
     <meta property="og:url" content="https://lug.ustc.edu.cn/wiki/greenwarm/virtualization/">
     <meta property="og:description" content="虚拟化简介">
     <meta property="article:published_time" content="2020-08-09T15:07:59+08:00">
-    <meta property="article:modified_time" content="2020-11-09T14:22:35+08:00">
+    <meta property="article:modified_time" content="2024-09-17T14:00:46+08:00">
     <link rel="canonical" href="https://lug.ustc.edu.cn/wiki/greenwarm/virtualization/">
     <!-- end _includes/seo.html -->
     <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="LUG @ USTC Feed">
@@ -47,7 +47,7 @@
       window.enable_copy_code_button = true;
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=6428b6d72c">
+    <link rel="stylesheet" href="/assets/css/main.css?v=3369fc2fea">
     <link rel="stylesheet" href="/_extra/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <link rel="stylesheet" href="/_extra/open-sans.css" media="invalid" onload="this.media='all'">
     <!-- start custom head snippets -->
@@ -177,7 +177,7 @@
           <meta itemprop="headline" content="虚拟化简介">
           <meta itemprop="description" content="虚拟化简介">
           <meta itemprop="datePublished" content="2020-08-09T15:07:59+08:00">
-          <meta itemprop="dateModified" content="2020-11-09T14:22:35+08:00">
+          <meta itemprop="dateModified" content="2024-09-17T14:00:46+08:00">
           <div class="page__inner-wrap">
             <header>
               <h1 id="page-title" class="page__title" itemprop="headline">
@@ -203,7 +203,7 @@
                   </ul>
                 </nav>
               </aside>
-              <p>虚拟化的含义丰富，应用广泛。目前虚拟化技术主要关注于服务器虚拟化，即在一个宿主计算机上提供多个独立操作系统。 进行虚拟化 就是要将某种形式的东西以另外一种形式呈现出来。对计算机进行虚拟化就是要将计算机以多台计算机或一台完全不同的计算机的形式呈现出来。 虚拟化也可以将多台计算机组合成一台计算机的形式呈现出来。这通常称为服务器聚合或网格计算。</p>
+              <p>虚拟化的含义丰富，应用广泛。目前虚拟化技术主要关注于服务器虚拟化，即在一个宿主计算机上提供多个独立操作系统。进行虚拟化 就是要将某种形式的东西以另外一种形式呈现出来。对计算机进行虚拟化就是要将计算机以多台计算机或一台完全不同的计算机的形式呈现出来。虚拟化也可以将多台计算机组合成一台计算机的形式呈现出来。这通常称为服务器聚合或网格计算。</p>
               <h2 id="什么是虚拟化">什么是虚拟化</h2>
               <h2 id="虚拟化的类型">虚拟化的类型</h2>
               <p>实现虚拟化的方法不止一种。实际上，有几种方法都可以通过不同层次的抽象来实现相同的结果。本节将介绍 Linux 中常用的 4 种虚拟化方法，以及它们相应的优缺点。</p>
@@ -213,28 +213,28 @@
 </code></pre>
                 </div>
               </div>
-              <p>毫无疑问，最复杂的虚拟化实现技术就是硬件仿真。在这种方法中，可以在宿主系统上创建一个硬件虚拟机（Virtual Machine）来仿真所想要的硬件。 使用硬件仿真的主要问题是速度会非常慢。由于每条指令都必须在底层硬件上进行仿真，因此速度减慢 100 倍的情况也并不稀奇。若要实现高度保真的仿真，包括周期精度、所仿真的 CPU 管道以及缓存行为，实际速度差距甚至可能会达到 1000 倍之多。 硬件仿真也有自己的优点。例如，您可以运行多个虚拟机，每个虚拟器仿真一个不同的处理器。</p>
+              <p>毫无疑问，最复杂的虚拟化实现技术就是硬件仿真。在这种方法中，可以在宿主系统上创建一个硬件虚拟机（Virtual Machine）来仿真所想要的硬件。使用硬件仿真的主要问题是速度会非常慢。由于每条指令都必须在底层硬件上进行仿真，因此速度减慢 100 倍的情况也并不稀奇。若要实现高度保真的仿真，包括周期精度、所仿真的 CPU 管道以及缓存行为，实际速度差距甚至可能会达到 1000 倍之多。硬件仿真也有自己的优点。例如，您可以运行多个虚拟机，每个虚拟器仿真一个不同的处理器。</p>
               <div class="language-plaintext highlighter-rouge">
                 <div class="highlight">
                   <pre class="highlight"><code>1.1.1.2	完全虚拟化
 </code></pre>
                 </div>
               </div>
-              <p>完全虚拟化（full virtualization），也称为原始虚拟化，是另外一种虚拟化方法。这种模型使用一个虚拟机，它在客户操作系统和原始硬件之间进行协调。“协调”在这里是一个关键，因为 VMM（Virtual Machine Monitor） 在客户操作系统和裸硬件之间提供协调。特定受保护的指令必须被捕获下来并在 hypervisor 中进行处理，因为这些底层硬件并不由操作系统所拥有，而是由操作系统通过 hypervisor 共享。 虽然完全虚拟化的速度比硬件仿真的速度要快，但是其性能要低于裸硬件，因为中间经过了 hypervisor 的协调过程。完全虚拟化的最大优点是操作系统无需任何修改就可以直接运行。惟一的限制是操作系统必须要支持底层硬件。</p>
+              <p>完全虚拟化（full virtualization），也称为原始虚拟化，是另外一种虚拟化方法。这种模型使用一个虚拟机，它在客户操作系统和原始硬件之间进行协调。“协调”在这里是一个关键，因为 VMM（Virtual Machine Monitor）在客户操作系统和裸硬件之间提供协调。特定受保护的指令必须被捕获下来并在 hypervisor 中进行处理，因为这些底层硬件并不由操作系统所拥有，而是由操作系统通过 hypervisor 共享。虽然完全虚拟化的速度比硬件仿真的速度要快，但是其性能要低于裸硬件，因为中间经过了 hypervisor 的协调过程。完全虚拟化的最大优点是操作系统无需任何修改就可以直接运行。惟一的限制是操作系统必须要支持底层硬件。</p>
               <div class="language-plaintext highlighter-rouge">
                 <div class="highlight">
                   <pre class="highlight"><code>1.1.1.3	超虚拟化
 </code></pre>
                 </div>
               </div>
-              <p>超虚拟化（paravirtualization）是另外一种流行的虚拟化技术，它与完全虚拟化有一些类似。这种方法使用了一个 hypervisor 来实现对底层硬件的共享访问，还将与虚拟化有关的代码集成到了操作系统本身中。这种方法不再需要重新编译或捕获特权指令，因为操作系统本身在虚拟化进程中会相互紧密协作。 超虚拟化技术需要为 hypervisor 修改客户操作系统，这是它的一个缺点。但是超虚拟化提供了与未经虚拟化的系统相接近的性能。与完全虚拟化类似，超虚拟化技术可以同时支持多个不同的操作系统。</p>
+              <p>超虚拟化（paravirtualization）是另外一种流行的虚拟化技术，它与完全虚拟化有一些类似。这种方法使用了一个 hypervisor 来实现对底层硬件的共享访问，还将与虚拟化有关的代码集成到了操作系统本身中。这种方法不再需要重新编译或捕获特权指令，因为操作系统本身在虚拟化进程中会相互紧密协作。超虚拟化技术需要为 hypervisor 修改客户操作系统，这是它的一个缺点。但是超虚拟化提供了与未经虚拟化的系统相接近的性能。与完全虚拟化类似，超虚拟化技术可以同时支持多个不同的操作系统。</p>
               <div class="language-plaintext highlighter-rouge">
                 <div class="highlight">
                   <pre class="highlight"><code>1.1.1.4	操作系统级别的虚拟化
 </code></pre>
                 </div>
               </div>
-              <p>最后一种技术是操作系统级的虚拟化，它使用的技术与前面所介绍的有所不同。这种技术在操作系统本身之上实现服务器的虚拟化。这种方法支持单个操作系统，并可以将独立的服务器相互简单地隔离开来。 操作系统级的虚拟化要求对操作系统的内核进行一些修改，但是其优点是可以获得原始性能。</p>
+              <p>最后一种技术是操作系统级的虚拟化，它使用的技术与前面所介绍的有所不同。这种技术在操作系统本身之上实现服务器的虚拟化。这种方法支持单个操作系统，并可以将独立的服务器相互简单地隔离开来。操作系统级的虚拟化要求对操作系统的内核进行一些修改，但是其优点是可以获得原始性能。</p>
               <h2 id="112-与-linux-有关的虚拟化项目">1.1.2 与 Linux 有关的虚拟化项目</h2>
               <div class="language-plaintext highlighter-rouge">
                 <div class="highlight">
@@ -242,35 +242,35 @@
 </code></pre>
                 </div>
               </div>
-              <p>Bochs 是一个 x86 计算机仿真器，它在很多平台上（包括 x86、PowerPC、Alpha、SPARC 和 MIPS）都可以移植和运行。使 Bochs 更为有趣的是它不仅可以对处理器进行仿真，还可以对整个计算机进行仿真，包括计算机的外围设备，比如键盘、鼠标、视频图像硬件、网卡（NIC）等。 Bochs 可以配置作为一个老式的 Intel® 386 或其后继处理器使用，例如 486、Pentium、Pentium Pro 或 64 位处理器。它甚至还可以对一些可选的图形指令进行仿真，例如 MMX 和 3DNow。 使用 Bochs 仿真器，您可以运行任何 Linux 上的 Linux 发行版、Linux 上的 Microsoft® Windows® 95/98/NT/2000（以及各种应用程序），甚至 Linux 上的 BSD（Berkeley Software Distribution）操作系统（FreeBSD、OpenBSD 等）。</p>
+              <p>Bochs 是一个 x86 计算机仿真器，它在很多平台上（包括 x86、PowerPC、Alpha、SPARC 和 MIPS）都可以移植和运行。使 Bochs 更为有趣的是它不仅可以对处理器进行仿真，还可以对整个计算机进行仿真，包括计算机的外围设备，比如键盘、鼠标、视频图像硬件、网卡（NIC）等。Bochs 可以配置作为一个老式的 Intel® 386 或其后继处理器使用，例如 486、Pentium、Pentium Pro 或 64 位处理器。它甚至还可以对一些可选的图形指令进行仿真，例如 MMX 和 3DNow。使用 Bochs 仿真器，您可以运行任何 Linux 上的 Linux 发行版、Linux 上的 Microsoft® Windows® 95/98/NT/2000（以及各种应用程序），甚至 Linux 上的 BSD（Berkeley Software Distribution）操作系统（FreeBSD、OpenBSD 等）。</p>
               <div class="language-plaintext highlighter-rouge">
                 <div class="highlight">
                   <pre class="highlight"><code>1.1.2.2	QEMU（硬件仿真）
 </code></pre>
                 </div>
               </div>
-              <p>QEMU 是另外一个仿真器，它与 Bochs 非常类似，不过也有一些值得一提的区别。QEMU 支持两种操作模式。第一种是 Full System Emulation（完全系统仿真）模式。这种模式与 Bochs 非常类似，它可以对一个具有处理器和外围设备的完整个人计算机（PC）进行仿真。这种模式可以仿真很多处理器架构，例如 x86、x86_64、ARM、SPARC、PowerPC 和 MIPS，其动态转换的速度也比较理想。使用这种模式，您可以在 Linux、Solaris 和 FreeBSD 上仿真 Windows 操作系统（包括 XP）和 Linux。很多其他操作系统的组合也都可以得到支持。 QEMU 还可以支持第二种模式，称为 User Mode Emulation（用户模式仿真）。这种模式只能宿主于 Linux，在这种模式下，可以启动不同体系结构的二进制文件。例如，在 x86 平台上运行的 Linux 系统上可以执行为 MIPS 体系架构编译的二进制文件。</p>
+              <p>QEMU 是另外一个仿真器，它与 Bochs 非常类似，不过也有一些值得一提的区别。QEMU 支持两种操作模式。第一种是 Full System Emulation（完全系统仿真）模式。这种模式与 Bochs 非常类似，它可以对一个具有处理器和外围设备的完整个人计算机（PC）进行仿真。这种模式可以仿真很多处理器架构，例如 x86、x86_64、ARM、SPARC、PowerPC 和 MIPS，其动态转换的速度也比较理想。使用这种模式，您可以在 Linux、Solaris 和 FreeBSD 上仿真 Windows 操作系统（包括 XP）和 Linux。很多其他操作系统的组合也都可以得到支持。QEMU 还可以支持第二种模式，称为 User Mode Emulation（用户模式仿真）。这种模式只能宿主于 Linux，在这种模式下，可以启动不同体系结构的二进制文件。例如，在 x86 平台上运行的 Linux 系统上可以执行为 MIPS 体系架构编译的二进制文件。</p>
               <div class="language-plaintext highlighter-rouge">
                 <div class="highlight">
                   <pre class="highlight"><code>1.1.2.3	VMware（完全虚拟化）
 </code></pre>
                 </div>
               </div>
-              <p>VMware 是完全虚拟化的一个商业解决方案。在客户操作系统和裸硬件之间有一个 hypervisor 作为抽象层使用。这个抽象层允许任何操作系统在硬件上运行，而不需要了解任何其他客户操作系统。 VMware 也会对可用的 I/O 硬件进行虚拟化，并将一些高性能的设备驱动程序加入到 hypervisor 中。 整个虚拟化后的环境都作为一个文件保存，这意味着整个系统（包括客户操作系统、VM 和虚拟硬件）可以很容易地快速迁移到新宿主机器上进行负载均衡。</p>
+              <p>VMware 是完全虚拟化的一个商业解决方案。在客户操作系统和裸硬件之间有一个 hypervisor 作为抽象层使用。这个抽象层允许任何操作系统在硬件上运行，而不需要了解任何其他客户操作系统。VMware 也会对可用的 I/O 硬件进行虚拟化，并将一些高性能的设备驱动程序加入到 hypervisor 中。整个虚拟化后的环境都作为一个文件保存，这意味着整个系统（包括客户操作系统、VM 和虚拟硬件）可以很容易地快速迁移到新宿主机器上进行负载均衡。</p>
               <div class="language-plaintext highlighter-rouge">
                 <div class="highlight">
                   <pre class="highlight"><code>1.1.2.4	Xen（超虚拟化）
 </code></pre>
                 </div>
               </div>
-              <p>Xen 是一个来自于 XenSource 的操作系统级超虚拟化的免费开源解决方案。在超虚拟化中，hypervisor 和操作系统会共同协作，虽然操作系统需要进行一些更改，但却可以带来接近于原始系统的性能。 就像 Xen 需要进行协作（对客户操作系统进行修改）一样，只有那些修补过的操作系统才可以通过 Xen 进行虚拟化。Linux 本身就是开源的，所以从 Linux 角度来看，这是一个很合理的折衷，因为最终可以获得比完全虚拟化更好的性能。但是从广泛支持的角度来看（例如对其他非开源操作系统的支持），这显然是一个 缺点。 Windows 可以在 Xen 上作为一个客户操作系统运行，支持 Xen 的其他操作系统包括 Minix、Plan 9、NetBSD、FreeBSD 和 OpenSolaris。</p>
+              <p>Xen 是一个来自于 XenSource 的操作系统级超虚拟化的免费开源解决方案。在超虚拟化中，hypervisor 和操作系统会共同协作，虽然操作系统需要进行一些更改，但却可以带来接近于原始系统的性能。就像 Xen 需要进行协作（对客户操作系统进行修改）一样，只有那些修补过的操作系统才可以通过 Xen 进行虚拟化。Linux 本身就是开源的，所以从 Linux 角度来看，这是一个很合理的折衷，因为最终可以获得比完全虚拟化更好的性能。但是从广泛支持的角度来看（例如对其他非开源操作系统的支持），这显然是一个 缺点。Windows 可以在 Xen 上作为一个客户操作系统运行，支持 Xen 的其他操作系统包括 Minix、Plan 9、NetBSD、FreeBSD 和 OpenSolaris。</p>
               <div class="language-plaintext highlighter-rouge">
                 <div class="highlight">
                   <pre class="highlight"><code>1.1.2.5	Linux-VServer（操作系统级虚拟化）
 </code></pre>
                 </div>
               </div>
-              <p>Linux-VServer 是一个操作系统级虚拟化解决方案。Linux-VServer 对 Linux 内核进行虚拟化，这样多个用户空间环境 —— 又称为 Virtual Private Server（VPS） —— 就可以单独运行，而不需要互相了解。Linux-VServer 通过修改 Linux 内核实现用户空间的隔离。 要将各个用户空间与其他用户空间隔离开来，就需要从上下文的概念入手。上下文 是给定 VPS 进程使用的一个容器，这样通过诸如 ps 之类的工具就可以了解 VPS 的进程。内核为最初的引导定义了一个缺省的上下文。另外管理端还能查看所有的上下文（所有的执行进程）。正如您可能猜到的那样，内核和内部数据结构也需要进行修改来支持这种虚拟化方法。 Linux-VServer 还使用了一种 chroot 格式来为每个 VPS 隔离 root 目录。虽然 chroot 允许指定新 root 目录，但还是需要其他一些功能（称为 Chroot-Barrier）来限制 VPS 脱离其隔离的 root 目录回到上级目录。给定一个隔离的 root 目录之后，每个 VPS 就可以拥有自己的用户列表和 root 密码。 2.4 和 2.6 版本的 Linux 内核支持 Linux-VServer，它可以运行于很多平台之上，包括 x86、x86-64、SPARC、MIPS、ARM 和 PowerPC。</p>
+              <p>Linux-VServer 是一个操作系统级虚拟化解决方案。Linux-VServer 对 Linux 内核进行虚拟化，这样多个用户空间环境 —— 又称为 Virtual Private Server（VPS） —— 就可以单独运行，而不需要互相了解。Linux-VServer 通过修改 Linux 内核实现用户空间的隔离。要将各个用户空间与其他用户空间隔离开来，就需要从上下文的概念入手。上下文 是给定 VPS 进程使用的一个容器，这样通过诸如 ps 之类的工具就可以了解 VPS 的进程。内核为最初的引导定义了一个缺省的上下文。另外管理端还能查看所有的上下文（所有的执行进程）。正如您可能猜到的那样，内核和内部数据结构也需要进行修改来支持这种虚拟化方法。Linux-VServer 还使用了一种 chroot 格式来为每个 VPS 隔离 root 目录。虽然 chroot 允许指定新 root 目录，但还是需要其他一些功能（称为 Chroot-Barrier）来限制 VPS 脱离其隔离的 root 目录回到上级目录。给定一个隔离的 root 目录之后，每个 VPS 就可以拥有自己的用户列表和 root 密码。2.4 和 2.6 版本的 Linux 内核支持 Linux-VServer，它可以运行于很多平台之上，包括 x86、x86-64、SPARC、MIPS、ARM 和 PowerPC。</p>
               <div class="language-plaintext highlighter-rouge">
                 <div class="highlight">
                   <pre class="highlight"><code>1.1.2.6      Virtual Box
@@ -279,9 +279,9 @@
               </div>
               <p>virtual box 是一个非常好用的虚拟化软件，其使用方法与著名的 vmware 非常相似，virtual box 已经作为拓林思公司的新产品 GTES11 中的一部分提供给用户。</p>
               <h2 id="113-对完全虚拟化和超虚拟化的硬件支持">1.1.3 对完全虚拟化和超虚拟化的硬件支持</h2>
-              <p>Intel 正在开发新虚拟化技术，能在 x86（VT-x）和 Itanium®（VT-i）体系架构上支持 hypervisor。VT-x 支持两种格式的操作，一种用于 VMM（root），另外一种用于客户操作系统（非 root）。root 格式完全是特权级的，而非 root 格式是非特权级的（即使对环 0 来说也是如此）。这种体系架构支持定义指令来使 VM（客户操作系统）退出到 VMM 和保存处理器状态。此外还添加了许多其他的功能。 AMD 也开发了硬件辅助虚拟化技术，称为 Pacifica。除了其他一些特性之外，Pacifica 还为在特殊指令执行时保存的客户操作系统维护了一个控制块。VMRUN 指令允许虚拟机（及其相关的客户操作系统）一直运行，直到 VMM 重新获得控制权为止（这也是可配置的）。这种可配置能力允许 CMM 为每个客户操作系统定制特权指令。Pacifica 还可以使用宿主和客户内存管理单元（MMU）表来进行地址转换。 这些新技术也可以应用到此处讨论的很多其他虚拟化技术中，包括 Xen、VMware、User-mode Linux 等。</p>
+              <p>Intel 正在开发新虚拟化技术，能在 x86（VT-x）和 Itanium®（VT-i）体系架构上支持 hypervisor。VT-x 支持两种格式的操作，一种用于 VMM（root），另外一种用于客户操作系统（非 root）。root 格式完全是特权级的，而非 root 格式是非特权级的（即使对环 0 来说也是如此）。这种体系架构支持定义指令来使 VM（客户操作系统）退出到 VMM 和保存处理器状态。此外还添加了许多其他的功能。AMD 也开发了硬件辅助虚拟化技术，称为 Pacifica。除了其他一些特性之外，Pacifica 还为在特殊指令执行时保存的客户操作系统维护了一个控制块。VMRUN 指令允许虚拟机（及其相关的客户操作系统）一直运行，直到 VMM 重新获得控制权为止（这也是可配置的）。这种可配置能力允许 CMM 为每个客户操作系统定制特权指令。Pacifica 还可以使用宿主和客户内存管理单元（MMU）表来进行地址转换。这些新技术也可以应用到此处讨论的很多其他虚拟化技术中，包括 Xen、VMware、User-mode Linux 等。</p>
               <h2 id="114-linux-kvm内核虚拟机">1.1.4 Linux KVM（内核虚拟机）</h2>
-              <p>Linux 传出的最新消息是将 KVM 合并到 Linux 内核中。KVM 是一种完全虚拟化解决方案，它有一个方面非常独特：它将 Linux 内核转换为一个使用内核模块的 hypervisor。这个模块允许使用其他客户操作系统，然后在宿主 Linux 内核的用户空间中运行。内核中的 KVM 通过 /dev/kvm 字符设备来公开虚拟化后的硬件。客户操作系统使用为 PC 硬件仿真修改过的 QEMU 进程与 KVM 模块接口。 KVM 模块向内核中引入了一个新的执行模块。普通内核支持内核 模式和用户 模式，而 KVM 则引入了一种客户 模式。客户模式用来执行所有非 I/O 客户代码，而普通用户模式支持客户 I/O。 KVM 的引入是 Linux 的一个有趣革新，因为它代表了作为主流 Linux 内核一部分的第一个虚拟化技术。它已经存在于 2.6.20 树中，不过也可以作为 2.6.19 内核的一个内核模块使用。当在支持虚拟化的硬件上运行时，KVM 支持 Linux（32 位和 64 位）和 Windows（32 位，64 位？）客户机。</p>
+              <p>Linux 传出的最新消息是将 KVM 合并到 Linux 内核中。KVM 是一种完全虚拟化解决方案，它有一个方面非常独特：它将 Linux 内核转换为一个使用内核模块的 hypervisor。这个模块允许使用其他客户操作系统，然后在宿主 Linux 内核的用户空间中运行。内核中的 KVM 通过 /dev/kvm 字符设备来公开虚拟化后的硬件。客户操作系统使用为 PC 硬件仿真修改过的 QEMU 进程与 KVM 模块接口。KVM 模块向内核中引入了一个新的执行模块。普通内核支持内核 模式和用户 模式，而 KVM 则引入了一种客户 模式。客户模式用来执行所有非 I/O 客户代码，而普通用户模式支持客户 I/O。KVM 的引入是 Linux 的一个有趣革新，因为它代表了作为主流 Linux 内核一部分的第一个虚拟化技术。它已经存在于 2.6.20 树中，不过也可以作为 2.6.19 内核的一个内核模块使用。当在支持虚拟化的硬件上运行时，KVM 支持 Linux（32 位和 64 位）和 Windows（32 位，64 位？）客户机。</p>
               <h1 id="拓林思产品中对虚拟化的支持">拓林思产品中对虚拟化的支持</h1>
               <p>（文章来源的广告</p>
               <p>![^_^](../lib/images/smileys/icon_fun.gif)</p>
@@ -294,7 +294,7 @@
               <p><a href="kvm%e4%bd%bf%e7%94%a8%e6%96%b9%e6%b3%95" title="greenwarm:kvm使用方法">KVM 使用方法</a></p>
             </section>
             <footer class="page__meta">
-              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2020-11-09">2020 年 11 月 9 日</time></p>
+              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2024-09-17">2024 年 9 月 17 日</time></p>
             </footer>
             <nav class="pagination">
               <a href="/wiki/greenwarm/remotedesktop/" class="pagination--pager" title="认识 Linux 远程桌面控制
@@ -346,7 +346,7 @@
                 <img src="https://lug.ustc.edu.cn/static/logo-white.svg" />
               </div>
               <div class="footer__logo-text">
-                <!-- a href="http://www.beian.miit.gov.cn" target="_blank">皖ICP备05002528号</a -->
+                <!-- a href="http://www.beian.miit.gov.cn" target="_blank">皖 ICP 备 05002528 号</a -->
               </div>
             </div>
           </div>
