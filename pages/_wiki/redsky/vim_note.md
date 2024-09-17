@@ -94,7 +94,7 @@ TODO
 
 ##### C/C++
 
-ctags 和 cscope 是 Linux 下比较常用的 C/C++代码分析器，配合 Vim 使用有不错的效果。
+ctags 和 cscope 是 Linux 下比较常用的 C/C++ 代码分析器，配合 Vim 使用有不错的效果。
 
 - ctags
 
@@ -106,7 +106,7 @@ Open C++ file with extra stl_tags: [Click On Me](http://www.vimer.cn/2010/01/让
 
 那些 ctags 和 cscope 能做和不能做的事情
 
-ctags 和 cscope 只能找到匹配的字符串，但是对于 C++里面复杂的语义，如函数重载之类的却无能为力。跳转的时候可能会跳转错误或者给出一堆重名的函数以供选择，代码补全的时候也一样。要做到跳转/补全的正确，现有的 C++的 IDE（集成开发环境）中，Eclipse、QtCreator、KDevelop 等都是用自带的分析器解析后再做跳转的。现在有人开始尝试在 Emacs 上用 gcc 前端分析代码，求得精确的补全，不过我还没找到 Vim 上比 ctags 和 cscope 更好用的东西。这么说吧，ctags 和 cscope 这些轻量的分析器配合 Vim 这种快速的编辑器还是比较搭配的。或者你可以试着用一下下面提到的 Eclim，后端就是个 Eclipse……
+ctags 和 cscope 只能找到匹配的字符串，但是对于 C++ 里面复杂的语义，如函数重载之类的却无能为力。跳转的时候可能会跳转错误或者给出一堆重名的函数以供选择，代码补全的时候也一样。要做到跳转/补全的正确，现有的 C++ 的 IDE（集成开发环境）中，Eclipse、QtCreator、KDevelop 等都是用自带的分析器解析后再做跳转的。现在有人开始尝试在 Emacs 上用 gcc 前端分析代码，求得精确的补全，不过我还没找到 Vim 上比 ctags 和 cscope 更好用的东西。这么说吧，ctags 和 cscope 这些轻量的分析器配合 Vim 这种快速的编辑器还是比较搭配的。或者你可以试着用一下下面提到的 Eclim，后端就是个 Eclipse……
 
 然后呢，请务必记住——
 
@@ -116,7 +116,7 @@ ctags 和 cscope 只能找到匹配的字符串，但是对于 C++里面复杂�
 
 Vim 自身带有不少补全功能，可以在 Vim 中搜索关于“compl”的帮助
 
-在此，我推荐 C++开发者安装 omnicppcomplete 插件，所有用户安装 neocomplcache 插件。
+在此，我推荐 C++ 开发者安装 omnicppcomplete 插件，所有用户安装 neocomplcache 插件。
 
 - Eclim：以 Vim 作为前端，操作 Eclipse 后端，打开和编辑 Eclipse 工程。[Eclim 官方网站](http://eclim.org/ "http://eclim.org/")
 
@@ -124,7 +124,7 @@ Vim 自身带有不少补全功能，可以在 Vim 中搜索关于“compl”的
 
 Vim 的强大也体现在其搜索/替换的时候，能够使用强大的正则表达式这一点上。参见[正则表达式 30 分钟入门教程](http://www.deerchao.net/tutorials/regex/regex.htm "http://www.deerchao.net/tutorials/regex/regex.htm")
 
-## Vim 与 Linux 下的 C/C++开发
+## Vim 与 Linux 下的 C/C++ 开发
 
 - Vim 只是一个编辑器
 
@@ -215,4 +215,4 @@ Vim 的强大也体现在其搜索/替换的时候，能够使用强大的正则
 
 [把 vim 打造成一个真正的 IDE(3)](http://www.vimer.cn/2009/10/把vim打造成一个真正的ide3.html "http://www.vimer.cn/2009/10/把vim打造成一个真正的ide3.html")
 
-[Vimer(朱念洋)使用的 vim/gvim 相关插件整理](http://www.vimer.cn/2010/06/本博使用的vimgvim相关插件整理.html "http://www.vimer.cn/2010/06/本博使用的vimgvim相关插件整理.html")
+[Vimer(朱念洋) 使用的 vim/gvim 相关插件整理](http://www.vimer.cn/2010/06/本博使用的vimgvim相关插件整理.html "http://www.vimer.cn/2010/06/本博使用的vimgvim相关插件整理.html")

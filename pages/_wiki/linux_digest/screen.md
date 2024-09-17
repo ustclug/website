@@ -15,11 +15,11 @@ screen -r [pid]：连接之前断开的虚拟终端
 
 - 为了方便记忆，也可以对虚拟终端进行命名：
 
-screen -S foobar ：开启一个以 foobar 为名称的虚拟终端；  
-screen -r ：在当前仅有一个虚拟终端的情况下连接（attach）已有的虚拟终端，在有多个虚拟终端时效果同 screen -l；  
-screen -r foobar ：连接以前名为 foobar 的虚拟终端。
+screen -S foobar：开启一个以 foobar 为名称的虚拟终端；  
+screen -r：在当前仅有一个虚拟终端的情况下连接（attach）已有的虚拟终端，在有多个虚拟终端时效果同 screen -l；  
+screen -r foobar：连接以前名为 foobar 的虚拟终端。
 
-在虚拟终端中，按 ctrl+A 进入 screen 命令模式，此时再按 d 可以断开(detach)（但不终止）当前的终端。
+在虚拟终端中，按 ctrl+A 进入 screen 命令模式，此时再按 d 可以断开 (detach)（但不终止）当前的终端。
 
 其他命令请在 man screen 中查看。
 
@@ -81,4 +81,4 @@ screen -r foobar ：连接以前名为 foobar 的虚拟终端。
 
 ### 来源声明
 
-blog/screen.txt · 最后更改: 2013/04/29 08:04 (外部编辑)
+blog/screen.txt · 最后更改：2013/04/29 08:04 (外部编辑)

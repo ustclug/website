@@ -22,7 +22,7 @@ grub，全称为 GRand Unified Bootloader，就是一个功能十分强大的 lo
 
 ## 为什么是 grub4dos
 
-grub4dos 可以看作是 grub 的衍生版本，又从 syslinux 里吸取了一些东西。 grub4dos 的优势大致如下：
+grub4dos 可以看作是 grub 的衍生版本，又从 syslinux 里吸取了一些东西。grub4dos 的优势大致如下：
 
 1. 精简，非常适合 U 盘使用，其程序文件只有一个，外加一个用于配置的 menu.lst；
 

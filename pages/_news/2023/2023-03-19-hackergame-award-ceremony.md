@@ -32,7 +32,7 @@ tags: []
 
 ![](http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2023.3.19_hackergame2022%E9%A2%81%E5%A5%96/photo/hackergame%E9%A2%81%E5%A5%96-13.jpg)
 
-刘良宇、刘成龙、陈思、黄科鑫分别在综合技能（general）、 程序逆向与漏洞利用（binary）、密码学与数学（math）、网站安全（web）获得分类奖。
+刘良宇、刘成龙、陈思、黄科鑫分别在综合技能（general）、程序逆向与漏洞利用（binary）、密码学与数学（math）、网站安全（web）获得分类奖。
 
 ![](http://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2023.3.19_hackergame2022%E9%A2%81%E5%A5%96/photo/hackergame%E9%A2%81%E5%A5%96-14.jpg)
 

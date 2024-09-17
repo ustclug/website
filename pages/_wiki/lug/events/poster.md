@@ -5,7 +5,7 @@
 
 ## 每周小聚展板模板
 
-![每周小聚展板-1-sm.jpg]({{ site.static_url }}/wiki/lug/每周小聚展板-1-sm.jpg)
+![每周小聚展板 -1-sm.jpg]({{ site.static_url }}/wiki/lug/每周小聚展板-1-sm.jpg)
 
 ## 2015 白帽子信息安全竞赛
 
