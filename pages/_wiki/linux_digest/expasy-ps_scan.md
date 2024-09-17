@@ -10,7 +10,7 @@
     wget -c
     ftp://ftp.expasy.org/databases/prosite/release_with_updates/prosite.dat
 
-给一个文件夹$PROSITE的环境变量，然后把prosite.dat放在$PROSITE/里头。例如我把 prosite.dat 放在/home/sun/ps \_scan/下 <code>export PROSITE=“/home/sun/ps_scan”</code>
+给一个文件夹$PROSITE 的环境变量，然后把 prosite.dat 放在$PROSITE/里头。例如我把 prosite.dat 放在/home/sun/ps \_scan/下 <code>export PROSITE=“/home/sun/ps_scan”</code>
 
 ##### 配置软件
 

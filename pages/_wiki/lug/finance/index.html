@@ -137,7 +137,7 @@ redirect_from:
     app_donates = newVueApp("#t-donates", 'https://pages.ustclug.org/ledger/donates.txt', function (record) {
         if (record.payee.endsWith('捐款'))
             record.payee = record.payee.slice(0, -2).trim();
-        if (record.account.startsWith('收入:捐赠:'))
+        if (record.account.startsWith('收入：捐赠：'))
             record.account = record.account.slice(6);
         return record;
     });

@@ -143,7 +143,7 @@ include "2020/07.beancount"
 
 ### 账户初始余额设置
 
-在开始记账前，要设置每个账户的余额信息，采用以下方法来给每个账户设置余额/借记账单:
+在开始记账前，要设置每个账户的余额信息，采用以下方法来给每个账户设置余额/借记账单：
 
 ```conf
 2019-01-01 pad Assets:Bank:CN:BoC:C1111 Equity:Opening-Balances ; 从 Opening-Balances 中划取 XX 帐到银行卡中
@@ -179,14 +179,14 @@ CNY，差额从 Equity:Opening-Balances 来。注意两行之间差一天的时�
 - 多货币转换使用 `@@` 作为货币转换即可，货币 Beancount 会进行汇率计算，比如：
 
   ```text
-  2019-01-01 * "日本航空" "纽约-东京"
+  2019-01-01 * "日本航空" "纽约 - 东京"
     Expenses:Transport:Airline 1000 USD @@ 110000 JPY
     Liabilities:CreditCard:JP:Rakuten -110000 JPY
   ```
 
 - 账户结息：账户的利息肯定难以每日都记录，本人采用 `pad`+`balance` 断言，每隔一段时间结算一下。
 
-- 分期付款：这是个常见的购买方式，需要单独设置开一个 Liabilities Account，手续费记利息支出，每个月账单出现的时候转移一下。 Beancount 提供了一个[插件](https://beancount.github.io/fava/api/beancount.plugins.html) `plugin "beancount.plugins.forecast` 专门用来处理分期、订阅情况，可以用于每月费用的自动生成。
+- 分期付款：这是个常见的购买方式，需要单独设置开一个 Liabilities Account，手续费记利息支出，每个月账单出现的时候转移一下。Beancount 提供了一个[插件](https://beancount.github.io/fava/api/beancount.plugins.html) `plugin "beancount.plugins.forecast` 专门用来处理分期、订阅情况，可以用于每月费用的自动生成。
 
 ### 核账
 
@@ -197,7 +197,7 @@ CNY，差额从 Equity:Opening-Balances 来。注意两行之间差一天的时�
 
 ### 综述
 
-`Importer` 个人理解的作用是将整理好的账单文本转化为 Beancount 记录的形式，即格式化 (表格, JSON 等) 账单 -> Importer ->
+`Importer` 个人理解的作用是将整理好的账单文本转化为 Beancount 记录的形式，即格式化 (表格，JSON 等) 账单 -> Importer ->
 Beancount 记录，Importer 在其中起到一个消费记录格式转化作用。
 
 Beancount 作者对 Importer 有详细的文档叙述，即 [Importing External Data in
@@ -238,13 +238,13 @@ if __name__ == '__main__':
     try:
         r = s.post(casurl, caspost)
     except Exception as e:
-        msg = '{0} - INFO: USTC ecard CAS登陆失败 {1}'.format(datetime.now().strftime('%Y-%m-%d %H:%M:%S'), e)
+        msg = '{0} - INFO: USTC ecard CAS 登陆失败 {1}'.format(datetime.now().strftime('%Y-%m-%d %H:%M:%S'), e)
     remaining = 0
     if not name in r.text:
-        msg = '{0} - INFO: USTC ecard CAS登陆失败 NOOOOOOOO!!!!!!!!'.format(datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+        msg = '{0} - INFO: USTC ecard CAS 登陆失败 NOOOOOOOO!!!!!!!!'.format(datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
         print(msg)
     else:
-        msg = '{0} - INFO: USTC ecard CAS登陆成功'.format(datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+        msg = '{0} - INFO: USTC ecard CAS 登陆成功'.format(datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
         print(msg)
         paylist = s.get('https://ecard.ustc.edu.cn/paylist')
         b = BeautifulSoup(paylist.text, features="lxml")
@@ -393,7 +393,7 @@ CONFIG = [
 ]
 ```
 
-语法说明参见 [Beancount 系列二： Importer
+语法说明参见 [Beancount 系列二：Importer
 设置](https://charlesliu7.github.io/blackboard/2019/12/03/beancount-importer/)。
 
 执行命令生成 beancount 账单。
@@ -450,7 +450,7 @@ Done!
   2017-01-01 custom "fava-option" "import-dirs" "./importers/path/to/csv_tmp/"
   ```
 
-  在 Fava 界面侧栏看到 Importer，并手动导入数据。注 ：Importer 在 Fava 中使用的时候 metadata 会被去除。
+  在 Fava 界面侧栏看到 Importer，并手动导入数据。注：Importer 在 Fava 中使用的时候 metadata 会被去除。
 
 - Fava 还支持自定义 side bar link，即：
 

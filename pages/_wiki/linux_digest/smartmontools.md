@@ -25,7 +25,7 @@ SMART Self-test log：给出硬盘历史上以及正在进行的自检的时间�
     smartctl -t [long|short] /dev/sdX
 
 将进行硬盘内置的离线自检，在自检过程中系统不受影响仍可正常操作。  
-一般使用 long（或 extended）进行自检，虽然时间较长但可以发现硬盘几乎 100%的错误，包括未使用的区块坏道以及表面错误等等。  
+一般使用 long（或 extended）进行自检，虽然时间较长但可以发现硬盘几乎 100% 的错误，包括未使用的区块坏道以及表面错误等等。  
 自检的结果可以在 smartctl -a 或者 smartctl -l selftest 中查看
 
 smartctl 的 GUI：GSmartControl，可以通过 apt-get 安装，图形操作十分直观。
@@ -34,4 +34,4 @@ smartctl 的 GUI：GSmartControl，可以通过 apt-get 安装，图形操作十
 
 ### 来源声明
 
-blog/smartmontools.txt · 最后更改: 2013/04/29 08:04 (外部编辑)
+blog/smartmontools.txt · 最后更改：2013/04/29 08:04 (外部编辑)

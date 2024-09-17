@@ -12,7 +12,7 @@ tags: []
 
 ![](https://ftp.lug.ustc.edu.cn/weekly_party/2023.12.09_Debug/photo/photo_2023-12-09_15-36-35.jpg)
 
-廖同学首先从 debug 的基本概念入手，向大家解释了它在软件开发中的关键作用。通过生动的例子和清晰的讲解，她让大家更加理解了程序中 bug 的危害、 debug 的重要性以及在编程过程中如何有效运用它来解决问题。
+廖同学首先从 debug 的基本概念入手，向大家解释了它在软件开发中的关键作用。通过生动的例子和清晰的讲解，她让大家更加理解了程序中 bug 的危害、debug 的重要性以及在编程过程中如何有效运用它来解决问题。
 
 ![](https://ftp.lug.ustc.edu.cn/weekly_party/2023.12.09_Debug/photo/ppt-01.png)
 

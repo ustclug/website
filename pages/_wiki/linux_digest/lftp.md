@@ -9,7 +9,7 @@
 
 ## 配置文件
 
-lftp 启动后会一次读取/etc/lftp.conf、~/.lftprc 和~/.lftp/rc。 通常我们将常用的设置写入~/.lftprc 或者~/.lftp/rc 中。 下面是一份 lftprc 的样例：
+lftp 启动后会一次读取/etc/lftp.conf、~/.lftprc 和~/.lftp/rc。通常我们将常用的设置写入~/.lftprc 或者~/.lftp/rc 中。下面是一份 lftprc 的样例：
 
 .lftprc:
 
@@ -28,7 +28,7 @@ lftp 启动后会一次读取/etc/lftp.conf、~/.lftprc 和~/.lftp/rc。 通常�
     set ftp:passive-mode/202.38.64.22 no
     set ftp:charset/202.38.64.22 gbk
 
-在被动模式下，lftp 主动连接服务器进行数据传输。在主动模式下，服务器会主动连接 lftp 进行数据传输。 被动模式当您在防火墙后面时很有用。
+在被动模式下，lftp 主动连接服务器进行数据传输。在主动模式下，服务器会主动连接 lftp 进行数据传输。被动模式当您在防火墙后面时很有用。
 
 ## 书签支持
 
@@ -52,9 +52,9 @@ lftp 启动后会一次读取/etc/lftp.conf、~/.lftprc 和~/.lftp/rc。 通常�
 
 ![:-)](../lib/images/smileys/icon_smile.gif)
 
-## 奇巧淫技-使用 lftp 同步个人主页
+## 奇巧淫技 - 使用 lftp 同步个人主页
 
-科大的童鞋们都有一个 300M 的静态主页空间，很多人都会用这个空间来制作漂亮的个人主页，那你是怎么同步的呢？是不是每次都需要打开 nautilus 或者 filezilla 等工具一个个文件的复制呢？ 来看看用 lftp 的脚本同步吧。
+科大的童鞋们都有一个 300M 的静态主页空间，很多人都会用这个空间来制作漂亮的个人主页，那你是怎么同步的呢？是不是每次都需要打开 nautilus 或者 filezilla 等工具一个个文件的复制呢？来看看用 lftp 的脚本同步吧。
 
 .bash_aliases:
 
