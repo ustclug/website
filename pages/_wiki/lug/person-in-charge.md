@@ -5,7 +5,9 @@
 
 ## 公共联系方式
 
-[联系我们](contact.md)
+[联系我们](contact/)
+
+> 无特殊情况时，请不要单独联系负责人。
 
 ## 主要负责人
 
@@ -197,11 +199,11 @@
 
 | 职务         | 姓名   | 邮箱                        | 负责项目                      |
 | :----------- | :----- | :-------------------------- | :---------------------------- |
-| 会长         | 李博杰 | bojieli AT gmail.com        | 外联, 每周小聚, USTC Blog     |
+| 会长         | 李博杰 | bojieli AT gmail.com        | 外联，每周小聚，USTC Blog     |
 | 副会长 (CTO) | 郭家华 | gjhdgm AT gmail.com         | mirrors, PXE, FTP, 主页服务器 |
-| 副会长 (COO) | 李喵喵 | ljsabc AT gmail.com         | 海报, 大型活动, USTC Blog     |
+| 副会长 (COO) | 李喵喵 | ljsabc AT gmail.com         | 海报，大型活动，USTC Blog     |
 | 财务 (CFO)   | 童献   | universecopper AT gmail.com | 财务                          |
-| 资产 (CPO)   | 沈达   | sadhen1992 AT gmail.com     | LUG 书库, LUG wiki            |
+| 资产 (CPO)   | 沈达   | sadhen1992 AT gmail.com     | LUG 书库，LUG wiki            |
 
 ### 2011-2012 届
 

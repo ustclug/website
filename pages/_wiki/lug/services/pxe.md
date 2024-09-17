@@ -2,21 +2,20 @@
 redirect_from: /wiki/server/pxe/
 ---
 
-# 网络启动服务
+# 网络启动服务 PXE
+
+**pxe.ustc.edu.cn**
 
 中国科学技术大学自 2005 年起，由 USTC LUG 发起，中国科大图书馆、网络中心和 LUG 共同维护，开始对校园网内提供网络启动服务（以下简称 PXE 服务）。校园网内的师生可以设置电脑通过网络引导启动，进行安装 Linux、体验 Linux、维护本机系统等操作，此外，东、西区图书馆的查询机系统亦是通过 PXE 启动引导。PXE 服务为校内师生带来了极大的便利。
 
 随着我校网络设施的不断升级和发展，网络应用在科研工作和日常生活中发挥着日益重要的作用。同时，PXE 相关的技术在这些年中也有了很大的发展，可以为大家提供更多更实用的服务。现在支持引导 Debian、Ubuntu、Arch Linux、CentOS 等常见 Linux/UNIX 发行版安装镜像或 LiveCD，同时还提供 Clonezilla、GParted Live 等实用系统维护工具。
 
-[技术文档](https://docs.ustclug.org/services/pxe/)
-
-[Planet: 一根网线安装 Linux——PXE 介绍](/planet/2018/10/PXE-intro/)
-
-如果遇到使用问题，请邮件联系 lug AT ustc.edu.cn。
+- [Planet: 一根网线安装 Linux——PXE 介绍](/planet/2018/10/PXE-intro/)
+- [技术文档](https://docs.ustclug.org/services/pxe/)
 
 ## 新版网络启动服务
 
-基于 GRUB 的新版网络启动服务支持**传统 PXE 模式**和 **UEFI 模式**的网络启动。代码位于 <https://github.com/ustclug/simple-pxe>
+基于 GRUB 的新版网络启动服务支持**传统 PXE 模式**和 **UEFI 模式**的网络启动。代码位于 [ustclug/simple-pxe](https://github.com/ustclug/simple-pxe)
 
 校内 DHCP 服务会自动推送网络启动配置，只要在 BIOS 设置中开启网络启动就可以了。
 

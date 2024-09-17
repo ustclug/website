@@ -3,8 +3,6 @@
 
 # LUG 邮件列表
 
-USTC LUG 中的技术交流和活动通知通常都在邮件列表中。如果没有加入邮件列表，怎么好意思说自己是 USTC LUG 的一员呢？
-
 ## 邮件列表存档
 
 USTC LUG 邮件列表所有帖子都永久存档、公开可见：
@@ -41,7 +39,7 @@ USTC LUG 邮件列表所有帖子都永久存档、公开可见：
 
 1. 尽量少用附件，以免占用收件人过多的邮箱空间。不要使用闭源格式的附件。如果需要附件，建议上传到 home.ustc.edu.cn 的个人主页空间或者 rec.ustc.edu.cn 的网盘空间，然后贴出链接。
 
-2. 尽量用纯文本，少用 HTML[^html] 格式（如果客户端支持的话）
+2. 尽量用纯文本，少用 HTML 格式（如果客户端支持的话）
 
 3. 回复较长的邮件时，引文应该选择性地引用，以便让其他人知道在评论的是哪一段。
 
@@ -49,7 +47,7 @@ USTC LUG 邮件列表所有帖子都永久存档、公开可见：
 
 ## 如何发新主题
 
-直接向 ustc_lug AT googlegroups.com （请把 AT 替换成@）发邮件就行了，Google Groups 会帮您转发给所有加入邮件列表的人。新人发布主题时需要审核，请耐心等待。
+直接向 ustc_lug AT googlegroups.com（请把 AT 替换成@）发邮件就行了，Google Groups 会帮您转发给所有加入邮件列表的人。新人发布主题时需要审核，请耐心等待。
 
 1. “如何回复”中列出的 Tips 仍然适用。
 
@@ -63,6 +61,4 @@ USTC LUG 邮件列表所有帖子都永久存档、公开可见：
 
 原文：<http://www.catb.org/esr/faqs/smart-questions.html>
 
-中文版：[提问的智慧](../doc/smart-questions.md)
-
-[^html]: HyperText Markup Language
+中文版：[提问的智慧](/wiki/doc/smart-questions/)
