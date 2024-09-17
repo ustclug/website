@@ -60,7 +60,7 @@ jobs:
         continue-on-error: true
         run: |
           curl -fsSL https://raw.githubusercontent.com/huacnlee/autocorrect/main/install | sh
-          autocorrect --fix
+          autocorrect --fix ./*
 
       - name: Prettier fix
         continue-on-error: true
