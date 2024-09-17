@@ -4,23 +4,23 @@ permalink: /wiki/lug/services/
 
 # LUG 网络服务
 
-[LUG 网络服务总则](/wiki/lug/services/rules)
+[LUG 网络服务总则](rules.md)
 
 ## S 级服务
 
-- [开源镜像站](mirrors/)（HTTP 访问）：<https://mirrors.ustc.edu.cn>
+- [开源镜像站](mirrors.md)（HTTP 访问）：<https://mirrors.ustc.edu.cn>
 - 权威 DNS：`ns-a.ustclug.org`, `ns-b.ustclug.org`, `ns-c.ustclug.org`
 
 ## A 级服务
 
-- [代码托管平台](gitlab/)：[https://git.lug.ustc.edu.cn](https://git.lug.ustc.edu.cn/)
+- [代码托管平台](gitlab.md)：[https://git.lug.ustc.edu.cn](https://git.lug.ustc.edu.cn/)
 - 回校访问服务
 
 ## B 级服务
 
 - 主页、新闻站、LUG Planet（社团博客）：<https://lug.ustc.edu.cn>
-- [网络启动](pxe/)：pxe.ustc.edu.cn
-- [图书馆透明计算系统](lib/)
+- [网络启动](pxe.md)：pxe.ustc.edu.cn
+- [图书馆透明计算系统](lib.md)
 - VPN 在线申请系统（校内）
 - 轻量级网络加速服务（校内）
 - 开源镜像站（定时同步；rsync 访问；帮助页面）：<https://mirrors.ustc.edu.cn>
@@ -30,7 +30,7 @@ permalink: /wiki/lug/services/
 
 ## C 级服务
 
-- [LUG FTP](ftp/)：<https://ftp.lug.ustc.edu.cn>
+- [LUG FTP](ftp.md)：<https://ftp.lug.ustc.edu.cn>
 - 旧的 LUG 新闻站：<https://news.ustclug.org>
 - LUG 服务器新闻：<https://servers.ustclug.org>
 - 备用的 LUG 服务器新闻：<https://status.ustclug.org>

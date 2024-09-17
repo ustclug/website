@@ -5,7 +5,7 @@ permalink: /wiki/lug/events/
 # LUG 活动
 
 - [活动概述](/wiki/)
-- [LUG 日历](calendar/)
+- [LUG 日历](calendar.md)
 - [联系我们](/wiki/lug/contact/)
 
 ## Latest Events
