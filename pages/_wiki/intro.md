@@ -33,6 +33,6 @@ Designed by Shengyu Zhang on 2018-08-30
 ## 更多信息
 
 - [协会章程](https://ftp.lug.ustc.edu.cn/%E7%A4%BE%E5%9B%A2%E7%AE%A1%E7%90%86/%E7%AB%A0%E7%A8%8B/current/constitution.pdf)
-- [网络服务](lug/services/)
-- [特色活动](lug/events/)
-- [联系方式](lug/contact/)
+- [网络服务](lug/services/index.md)
+- [特色活动](lug/events/index.md)
+- [联系方式](lug/contact.md)

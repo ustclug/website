@@ -184,5 +184,5 @@ permalink: /wiki/lug/events/
 注意：LUD (Linux User Dinner) 均为自愿参加活动，活动费用由参加者分摊，不从社团任何经费报销。关于 LUG 的财务管理制度详情见：[LUG 财务](/wiki/lug/finance)
 {: .notice--info}
 
-2016 年及之后的小聚就不在这里重复记录了，请移步 [每周小聚](weeklyparty/) 页面查看。
+2016 年及之后的小聚就不在这里重复记录了，请移步 [每周小聚](weeklyparty.md) 页面查看。
 {: .notice--info}

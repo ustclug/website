@@ -8,11 +8,11 @@ permalink: /wiki/lug/book/
 
 我们同时非常欢迎童鞋们将自己手头不再需要的好书捐献出来。捐赠图书可以[联系我们](/wiki/lug/contact/)。
 
-关于如何借阅，如何捐赠等问题可以参阅：[图书借阅管理制度](borrow_book/)
+关于如何借阅，如何捐赠等问题可以参阅：[图书借阅管理制度](borrow_book.md)
 
-借阅记录与黑名单：[借阅记录](borrow_history/)
+借阅记录与黑名单：[借阅记录](borrow_history.md)
 
-读书笔记汇总：[读书笔记](booknotes/)
+读书笔记汇总：[读书笔记](booknotes.md)
 
 给 LUG 书库推荐好书：![]({{ site.static_url }}/email.png)
 
