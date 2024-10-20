@@ -58,7 +58,7 @@
 4. 然后输入 `params.set('password', '你的密码')`，按下回车（记得替换 `你的密码`）。
 5. 最后输入 `params.toString()`，按下回车。
 6. 可以在输出看到类似于 `password=%E4%BD%A0%E7%9A%84%E5%AF%86%E7%A0%81` 的内容，在 `password=` 之后的就是你实际需要替换的密码（不包含最后的双引号）。
-{% endcapture %}
+   {% endcapture %}
 
 <div class="notice--warning">{{ notice-special-chars | markdownify }}</div>
 
