@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://lug.ustc.edu.cn/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lug.ustc.edu.cn/" rel="alternate" type="text/html" /><updated>2024-10-26T00:50:57+08:00</updated><id>https://lug.ustc.edu.cn/feed.xml</id><title type="html">LUG @ USTC</title><subtitle>中国科学技术大学 Linux 用户协会</subtitle><author><name>USTCLUG</name></author><entry><title type="html">Hackergame 2024 活动安排</title><link href="https://lug.ustc.edu.cn/news/2024/10/Hackergame2024-ad/" rel="alternate" type="text/html" title="Hackergame 2024 活动安排" /><published>2024-10-26T00:00:00+08:00</published><updated>2024-10-26T00:50:03+08:00</updated><id>https://lug.ustc.edu.cn/news/2024/10/Hackergame2024-ad</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2024/10/Hackergame2024-ad/"><![CDATA[<p>2024 年度中国科学技术大学第十一届信息安全大赛（Hackergame 2024）即将于 <strong>2024.11.02</strong> 线上举办，持续一周，下面是详细的活动安排。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://lug.ustc.edu.cn/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lug.ustc.edu.cn/" rel="alternate" type="text/html" /><updated>2024-10-26T09:29:32+08:00</updated><id>https://lug.ustc.edu.cn/feed.xml</id><title type="html">LUG @ USTC</title><subtitle>中国科学技术大学 Linux 用户协会</subtitle><author><name>USTCLUG</name></author><entry><title type="html">Hackergame 2024 活动安排</title><link href="https://lug.ustc.edu.cn/news/2024/10/Hackergame2024-ad/" rel="alternate" type="text/html" title="Hackergame 2024 活动安排" /><published>2024-10-26T00:00:00+08:00</published><updated>2024-10-26T09:27:15+08:00</updated><id>https://lug.ustc.edu.cn/news/2024/10/Hackergame2024-ad</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2024/10/Hackergame2024-ad/"><![CDATA[<p>2024 年度中国科学技术大学第十一届信息安全大赛（Hackergame 2024）即将于 <strong>2024.11.02</strong> 线上举办，持续一周，下面是详细的活动安排。</p>
       <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2024.11.02_Hackergame_2024/%E6%B4%BB%E5%8A%A8%E5%AE%89%E6%8E%92%E7%94%BB%E6%9D%BF%201-100.jpg" alt="" /></p>
       <h2 id="比赛内容">比赛内容</h2>
-      <p>本次比赛题目共分为五类：<u>综合技能</u>、<u>程序逆向与漏洞利用</u>、<u>密码学与数学</u>、<u>网站安全</u>以及<u>人工智能</u>。</p>
+      <p>本次比赛题目共分为五类：<u>综合技能</u>、<u>程序逆向与漏洞利用</u>、<u>密码学与数学</u>、<u>网站安全</u> 以及 <u>人工智能</u>。</p>
       <p>和往届比赛一样，我们注重对新手循序渐进的引导，通过对题目的难度梯度设计，让大家都能感受到信息安全的乐趣，学到信息安全的知识。欢迎大家积极参与，预祝取得满意的成绩！</p>
       <p>更多介绍详见：<a href="https://lug.ustc.edu.cn/wiki/lug/events/hackergame/">https://lug.ustc.edu.cn/wiki/lug/events/hackergame/</a></p>
       <h2 id="时间安排">时间安排</h2>
@@ -9,6 +9,7 @@
       <p>活动日历：<a href="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2024.11.02_Hackergame_2024/hackergame2024.ics">hackergame2024.ics</a></p>
       <h2 id="比赛形式">比赛形式</h2>
       <p>线上举行，比赛地址：<a href="https://hack.lug.ustc.edu.cn">https://hack.lug.ustc.edu.cn</a></p>
+      <p><u>比赛结束之前均可参赛</u></p>
       <h2 id="比赛交流">比赛交流</h2>
       <ul>
         <li>Hackergame 2024: <u>392057840</u></li>
@@ -28,7 +29,7 @@
         <li>三等奖（二十五名）</li>
         <li>新生特别奖（两名，仅限大一新生）</li>
         <li>一血奖（每道题目一名，只颁发证书，不送出奖品）</li>
-        <li>分类奖项（4 个分类，每个分类一名，只颁发证书，不送出奖品）</li>
+        <li>分类奖项（5 个分类，每个分类一名，只颁发证书，不送出奖品）</li>
       </ul>
       <p>注意：</p>
       <ul>
