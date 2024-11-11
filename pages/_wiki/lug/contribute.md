@@ -23,7 +23,7 @@
 
 ## 参与 LUG 项目
 
-想为 LUG [项目](services.md)做出贡献？你可以：
+想为 LUG [项目](services/index.md)做出贡献？你可以：
 
 - 联系管理员以加入服务器维护小组
 
