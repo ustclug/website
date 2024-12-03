@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://lug.ustc.edu.cn/feed/planet.xml" rel="self" type="application/atom+xml" /><link href="https://lug.ustc.edu.cn/" rel="alternate" type="text/html" /><updated>2024-11-11T22:27:37+08:00</updated><id>https://lug.ustc.edu.cn/feed/planet.xml</id><title type="html">LUG @ USTC | Planet</title><subtitle>中国科学技术大学 Linux 用户协会</subtitle><author><name>USTCLUG</name></author><entry><title type="html">使用 Rclone 备份 OneDrive 内容</title><link href="https://lug.ustc.edu.cn/planet/2024/05/onedrive-backup-with-rclone/" rel="alternate" type="text/html" title="使用 Rclone 备份 OneDrive 内容" /><published>2024-05-10T00:00:00+08:00</published><updated>2024-09-15T01:34:15+08:00</updated><id>https://lug.ustc.edu.cn/planet/2024/05/onedrive-backup-with-rclone</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2024/05/onedrive-backup-with-rclone/"><![CDATA[<p>本文用于介绍如何使用 Rclone 备份 OneDrive 内容。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://lug.ustc.edu.cn/feed/planet.xml" rel="self" type="application/atom+xml" /><link href="https://lug.ustc.edu.cn/" rel="alternate" type="text/html" /><updated>2024-12-03T11:13:18+08:00</updated><id>https://lug.ustc.edu.cn/feed/planet.xml</id><title type="html">LUG @ USTC | Planet</title><subtitle>中国科学技术大学 Linux 用户协会</subtitle><author><name>USTCLUG</name></author><entry><title type="html">使用 Rclone 备份 OneDrive 内容</title><link href="https://lug.ustc.edu.cn/planet/2024/05/onedrive-backup-with-rclone/" rel="alternate" type="text/html" title="使用 Rclone 备份 OneDrive 内容" /><published>2024-05-10T00:00:00+08:00</published><updated>2024-09-15T01:34:15+08:00</updated><id>https://lug.ustc.edu.cn/planet/2024/05/onedrive-backup-with-rclone</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2024/05/onedrive-backup-with-rclone/"><![CDATA[<p>本文用于介绍如何使用 Rclone 备份 OneDrive 内容。</p>
       <h2 id="rclone-简介">Rclone 简介</h2>
       <p>Rclone 是一个命令行工具，用于同步文件和目录到和从云存储服务。它支持 Google Drive、Amazon S3、Dropbox、Microsoft OneDrive、Yandex Disk、Box 和其他一些云存储服务。Rclone 是一个 Go 程序，可以在 Windows、macOS、Linux 和其他操作系统上运行。</p>
       <h2 id="安装-rclone">安装 Rclone</h2>
@@ -2278,7 +2278,7 @@ usage: nc [-46AacCDdEFhklMnOortUuvz] [-K tc] [-b boundif] [-i interval] [-p sour
   <p>由于 <a href="http://blog.chaitanya.im/4096-limit">tty 默认每行的长度最长为 4096</a>，<strong>在粘贴过长的输入时内容可能会被截断</strong>。遇到这种情况时，可以使用文件重定向解决：将需要输入的内容放置在文件中，然后 <code class="language-plaintext highlighter-rouge">cat 你的文件 - | nc 服务器 端口</code>（Windows cmd.exe 中 <code class="language-plaintext highlighter-rouge">type 你的文件 CON | ncat 服务器 端口</code>）即可。</p>
   ]]></content><author><name>taoky</name></author><category term="Tech Tutorial" /><category term="hackergame" /><category term="netcat" /><summary type="html"><![CDATA[本文用于介绍信息安全大赛中不少题目需要使用的 nc/ncat 工具。]]></summary></entry><entry><title type="html">一个 NFS 的简介</title><link href="https://lug.ustc.edu.cn/planet/2019/08/NFS-intro/" rel="alternate" type="text/html" title="一个 NFS 的简介" /><published>2019-08-28T00:00:00+08:00</published><updated>2024-09-17T14:00:46+08:00</updated><id>https://lug.ustc.edu.cn/planet/2019/08/NFS-intro</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2019/08/NFS-intro/"><![CDATA[<p>NFS（网络文件系统，Network File System）是一个分布式的文件系统，可以用于在局域网中共享文件。它通常运用在 Unix 与类 Unix 操作系统中。对于 Linux 服务器之间的文件共享来说，NFS 相比于其他的方案（如 Samba）更加方便，性能也更好。对于应用程序来说，NFS 也是透明的。</p>
   <h2 id="简单配置-nfs">简单配置 NFS</h2>
-  <p>我们以两台 Debian 10 的机器为例<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>简单配置 NFS 服务端。其余的发行版可以查询各自的手册以获取详细信息。</p>
+  <p>我们以两台 Debian 10 的机器为例<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>简单配置 NFS 服务端。其余的发行版可以查询各自的手册以获取详细信息。</p>
   <p>在绝大多数情况下，NFS 支持已经安装在 Linux 内核中。我们可以使用以下命令安装内核态的 NFS 服务器实现：</p>
   <div class="language-shell highlighter-rouge">
     <div class="highlight">
@@ -2287,7 +2287,7 @@ usage: nc [-46AacCDdEFhklMnOortUuvz] [-K tc] [-b boundif] [-i interval] [-p sour
     </div>
   </div>
   <p>（如果有兼容 NFSv2 和 NFSv3 的需求，需要安装 <code class="language-plaintext highlighter-rouge">portmap</code>）</p>
-  <p>出于安全性的考虑<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>，我们假设 NFS 共享的根目录是 <code class="language-plaintext highlighter-rouge">/srv/nfs4</code>。如果需要共享的目录在其他位置，可以使用 bind mount 的方式挂载上去。（当然，对于简单的配置来说，不这样做问题也不大）</p>
+  <p>出于安全性的考虑<sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>，我们假设 NFS 共享的根目录是 <code class="language-plaintext highlighter-rouge">/srv/nfs4</code>。如果需要共享的目录在其他位置，可以使用 bind mount 的方式挂载上去。（当然，对于简单的配置来说，不这样做问题也不大）</p>
   <div class="language-shell highlighter-rouge">
     <div class="highlight">
       <pre class="highlight"><code>mount <span class="nt">--bind</span> 实际放置文件的目录 /srv/nfs/your_folder_name
@@ -2394,10 +2394,10 @@ mount: exec /Library/Filesystems/nfs4.fs/Contents/Resources/mount_nfs4 for /User
   <p>由于 WordPress 的用户权限配置问题，你在注册账号后可能找不到投稿的地方。直接发送邮件到 <a href="mailto:planet@ustclug.org">planet@ustclug.org</a> 跟我们说吧（当然 <img src="/static/email.png" alt="" /> 也行，我也会处理的）！也欢迎提供你的博客的 RSS 地址，我们可以选择文章转载到这里。</p>
   <div class="footnotes" role="doc-endnotes">
     <ol>
-      <li id="fn:1" role="doc-endnote">
+      <li id="fn:1">
         <p>https://wiki.debian.org/NFSServerSetup <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
       </li>
-      <li id="fn:2" role="doc-endnote">
+      <li id="fn:2">
         <p>https://wiki.archlinux.org/index.php/NFS#Server <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
       </li>
     </ol>
