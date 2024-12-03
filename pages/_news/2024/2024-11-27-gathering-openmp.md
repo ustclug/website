@@ -1,14 +1,14 @@
 ---
 title: "C/C++ 下 OpenMP 程序设计介绍"
 author: "tiankaima"
+header:
+  image: https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2024.11.27_%E5%B0%8F%E8%81%9A/3.jpg
 date: "2024-11-29 10:00:00 +0800"
 categories:
   - LUG 活动
   - LUG 小聚
 tags: []
 ---
-
-![](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2024.11.27_%E5%B0%8F%E8%81%9A/3.jpg)
 
 2024 年 11 月 27 日，校学生 Linux 用户协会在西区第三教学楼 3A306 教室开展了小聚活动。本次小聚主要是由罗嘉宏同学带来的 C/C++ 下 OpenMP 程序设计介绍。[OpenMP](https://www.openmp.org/) 是广为运用的并行计算处理框架，为 C/C++ 和 Fortran 编程语言提供支持，提供了简单有效的 CPU 并行处理能力。此外，新版本的 OpenMP 还支持 GPU 计算等功能。
 
