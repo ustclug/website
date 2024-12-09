@@ -10,7 +10,7 @@ A.K.A. 如何让 2000 元的机械硬盘跑得比 3000 元的固态硬盘还快�
 
 本文另有[英文版](https://ibug.io/p/74)及在南京大学分享时使用的[幻灯片](https://ibug.io/p/72)。
 
-{% assign image_base = "https://image.ibugone.com" %}
+{% assign image_base = site.static_url | append: "/planet/ustc-mirrors-zfs-rebuild" %}
 
 ## 背景 {#background}
 
@@ -48,8 +48,9 @@ A.K.A. 如何让 2000 元的机械硬盘跑得比 3000 元的固态硬盘还快�
 这两台服务器的磁盘负载非常高，日常维持在 90% 以上，以至于即使从科大校园网内下载镜像，速度也很难达到 50 MB/s。
 显然对于镜像站这种专用于存储的用途来说，这样的性能表现是差强人意的。
 
+{% assign image_path = image_base | append: "/mirrors-io-utilization-may-2024.png" %}
 {% include figure
-  image_path="https://image.ibugone.com/grafana/mirrors-io-utilization-may-2024.png"
+  image_path=image_path
   popup=true
   alt="2024 年 5 月期间镜像站两台服务器的 I/O 负载"
   caption="2024 年 5 月期间镜像站两台服务器的 I/O 负载" %}
@@ -71,8 +72,9 @@ ZFS 内的所有数据都有校验，可以在硬盘出现比特翻转等极端�
 - 我自己攒出的一篇博客：[Understanding ZFS block sizes](https://ibug.io/p/62)
   - 以及这篇博客底部列出的参考文献
 
+{% assign image_path = image_base | append: "/2024-06-05.png" %}
 {% include figure
-  image_path="https://image.ibugone.com/grafana/qb/2024-06-05.png"
+  image_path=image_path
   popup=true
   alt="一个为 qBittorrent 定制的 Grafana 面板"
   caption="学习 ZFS 过程中的副产物：一个为 qBittorrent 定制的 Grafana 面板（xs" %}
@@ -88,8 +90,9 @@ ZFS 内的所有数据都有校验，可以在硬盘出现比特翻转等极端�
 - 读多写少，且大部分读取都是全文件顺序读取
 - 能够容忍少量的数据丢失，毕竟镜像内容可以轻易地从上游重新同步回来
 
+{% assign image_path = image_base | append: "/mirrors-file-size-distribution-2024-08.png" %}
 {% include figure
-  image_path="https://image.ibugone.com/server/mirrors-file-size-distribution-2024-08.png"
+  image_path=image_path
   popup=true
   alt="2024 年 8 月镜像站上的文件大小分布"
   caption="2024 年 8 月镜像站上的文件大小分布" %}
@@ -167,8 +170,9 @@ Rsync 服务器的流量较少，但磁盘使用率较为极端，加上我们�
 
 - 最关键的是更合理的 I/O 负载：
 
+  {% assign image_path = image_base | append: "/mirrors2-io-utilization-and-free-space-june-july-2024.png" %}
   {% include figure
-  image_path="https://image.ibugone.com/grafana/mirrors2-io-utilization-and-free-space-june-july-2024.png"
+  image_path=image_path
   popup=true
   alt="mirrors2 机器在重建前后的 I/O 负载"
   caption="mirrors2 机器在重建前后的 I/O 负载" %}
@@ -191,8 +195,9 @@ Rsync 服务器的流量较少，但磁盘使用率较为极端，加上我们�
 
 在 SSD 换新之后，即使我们认为我们对 LVMcache 做出了稍微合理一点的调参，坚持忽略警告采用 128 KiB 的 chunk size 和 800 万个 chunk 之后，它的性能（命中率）也并不可观：
 
+{% assign image_path = image_base | append: "/mirrors4-dmcache-may-june-2024.png" %}
 {% include figure
-  image_path="https://image.ibugone.com/grafana/mirrors4-dmcache-may-june-2024.png"
+  image_path=image_path
   popup=true
   alt="2024 年 5 月至 6 月期间 LVMcache 的命中率"
   caption="2024 年 5 月至 6 月期间 LVMcache 的命中率" %}
@@ -208,8 +213,9 @@ Rsync 服务器的流量较少，但磁盘使用率较为极端，加上我们�
 
 我们把两台服务器的 I/O 负载放在一张图里对比：
 
+{% assign image_path = image_base | append: "/mirrors2-4-io-utilization-june-july-2024.png" %}
 {% include figure
-  image_path="https://image.ibugone.com/grafana/mirrors2-4-io-utilization-june-july-2024.png"
+  image_path=image_path
   popup=true
   alt="镜像站两台服务器在重建前后的 I/O 负载"
   caption="镜像站两台服务器在重建前后的 I/O 负载" %}
@@ -218,16 +224,18 @@ Rsync 服务器的流量较少，但磁盘使用率较为极端，加上我们�
 
 ZFS ARC 的命中率也十分可观：
 
+{% assign image_path = image_base | append: "/mirrors2-4-zfs-arc-hit-rate.png" %}
 {% include figure
-  image_path="https://image.ibugone.com/grafana/mirrors2-4-zfs-arc-hit-rate.png"
+  image_path=image_path
   popup=true
   alt="两台服务器的 ZFS ARC 命中率"
   caption="两台服务器的 ZFS ARC 命中率" %}
 
 稳定下来之后，两台服务器的 I/O 负载还更低了：
 
+{% assign image_path = image_base | append: "/mirrors2-4-disk-io-after-rebuild.png" %}
 {% include figure
-  image_path="https://image.ibugone.com/grafana/mirrors2-4-disk-io-after-rebuild.png"
+  image_path=image_path
   popup=true
   alt="两台服务器重建后磁盘 I/O 的稳定情况"
   caption="两台服务器重建后磁盘 I/O 的稳定情况" %}
@@ -290,8 +298,9 @@ GROUP BY time($interval), "pool"::tag fill(linear)
 
 如果要显示读写速率的话，直接把内层查询的 `reads` 和 `writes` 换成 `nread` 和 `nwritten` 就行了。
 
+{% assign image_path = image_base | append: "/mirrors2-4-zfs-io-count.png" %}
 {% include figure
-  image_path="https://image.ibugone.com/grafana/mirrors2-4-zfs-io-count.png"
+  image_path=image_path
   popup=true
   alt="ZFS IOPS 和带宽"
   caption="ZFS IOPS 和带宽" %}
@@ -317,8 +326,9 @@ wget -O /usr/share/apparmor-features/features https://github.com/proxmox/lxc/raw
 
 我们发现个别仓库有大量的重复的、内容相同的目录，我们怀疑可能是同步方法（HTTP）的限制导致目录的符号链接变成了完整内容的拷贝。
 
+{% assign image_path = image_base | append: "/ls-zerotier-redhat-el.png" %}
 {% include figure
-  image_path="https://image.ibugone.com/server/ls-zerotier-redhat-el.png"
+  image_path=image_path
   popup=true
   alt="ZeroTier 仓库中的一些目录"
   caption="ZeroTier 仓库中的一些目录" %}
