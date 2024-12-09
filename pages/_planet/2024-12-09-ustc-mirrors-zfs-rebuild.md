@@ -6,6 +6,10 @@ categories:
 tags: linux 服务器 zfs
 ---
 
+A.K.A. 如何让 2000 元的机械硬盘跑得比 3000 元的固态硬盘还快（
+
+本文另有[英文版](https://ibug.io/p/74)及在南京大学分享时使用的[幻灯片](https://ibug.io/p/72)。
+
 {% assign image_base = "https://image.ibugone.com" %}
 
 ## 背景 {#background}
