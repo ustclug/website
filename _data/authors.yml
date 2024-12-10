@@ -55,3 +55,14 @@ tiankaima:
     - label: GitHub
       icon: fab fa-fw fa-github
       url: https://github.com/tiankaima
+
+ibug:
+  name: iBug
+  avatar: "https://avatars.githubusercontent.com/u/7273074?v=4"
+  links:
+    - label: GitHub
+      icon: fab fa-fw fa-github
+      url: https://github.com/iBug
+    - label: Stack Overflow
+      icon: fab fa-fw fa-stack-overflow
+      url: https://stackoverflow.com/users/5958455/ibug
