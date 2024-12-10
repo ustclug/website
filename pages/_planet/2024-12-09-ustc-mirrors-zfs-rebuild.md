@@ -1,6 +1,6 @@
 ---
 title: 镜像站 ZFS 实践
-author: iBug
+author: ibug
 categories:
   - mirrors
 tags: linux 服务器 zfs
