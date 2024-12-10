@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://lug.ustc.edu.cn/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lug.ustc.edu.cn/" rel="alternate" type="text/html" /><updated>2024-12-10T19:57:01+08:00</updated><id>https://lug.ustc.edu.cn/feed.xml</id><title type="html">LUG @ USTC</title><subtitle>中国科学技术大学 Linux 用户协会</subtitle><author><name>USTCLUG</name></author><entry><title type="html">镜像站 ZFS 实践</title><link href="https://lug.ustc.edu.cn/planet/2024/12/ustc-mirrors-zfs-rebuild/" rel="alternate" type="text/html" title="镜像站 ZFS 实践" /><published>2024-12-09T00:00:00+08:00</published><updated>2024-12-10T19:56:11+08:00</updated><id>https://lug.ustc.edu.cn/planet/2024/12/ustc-mirrors-zfs-rebuild</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2024/12/ustc-mirrors-zfs-rebuild/"><![CDATA[<p>A.K.A. 如何让 2000 元的机械硬盘跑得比 3000 元的固态硬盘还快（</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://lug.ustc.edu.cn/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lug.ustc.edu.cn/" rel="alternate" type="text/html" /><updated>2024-12-10T20:05:24+08:00</updated><id>https://lug.ustc.edu.cn/feed.xml</id><title type="html">LUG @ USTC</title><subtitle>中国科学技术大学 Linux 用户协会</subtitle><author><name>USTCLUG</name></author><entry><title type="html">镜像站 ZFS 实践</title><link href="https://lug.ustc.edu.cn/planet/2024/12/ustc-mirrors-zfs-rebuild/" rel="alternate" type="text/html" title="镜像站 ZFS 实践" /><published>2024-12-09T00:00:00+08:00</published><updated>2024-12-10T20:04:30+08:00</updated><id>https://lug.ustc.edu.cn/planet/2024/12/ustc-mirrors-zfs-rebuild</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2024/12/ustc-mirrors-zfs-rebuild/"><![CDATA[<p>A.K.A. 如何让 2000 元的机械硬盘跑得比 3000 元的固态硬盘还快（</p>
       <p>本文另有<a href="https://ibug.io/p/74">英文版</a>及在南京大学分享时使用的<a href="https://ibug.io/p/72">幻灯片</a>。</p>
       <h2 id="background">背景</h2>
       <p>由中科大 Linux 用户协会维护的<a href="https://mirrors.ustc.edu.cn/">中科大开源软件镜像站</a>是中国大陆高校访问量最大、收录最全的开源软件镜像之一。
@@ -89,10 +89,12 @@
         我们制定了如下的重建计划：</p>
       <ul>
         <li>首先，考虑到镜像站上一半的文件都不到 10 KiB（注意我们的磁盘的物理扇区大小是 4 KiB），RAID-Z3 的开销过高，因此我们决定将其重建为 RAID-Z2 并且拆成两组 vdev。这样做还有一个额外的好处，即期望情况下我们还可以在这个 ZFS pool 中获得两倍的 IOPS，毕竟文件的每个“块”只存储在一个 vdev 上。</li>
-        <li>然后我们仔细研究了如何为镜像站场景调优 ZFS dataset 参数：
+        <li>
+          <p>然后我们仔细研究了如何为镜像站场景调优 ZFS dataset 参数：</p>
           <ul>
             <li><code class="language-plaintext highlighter-rouge">recordsize=1M</code>：尽可能优化顺序读写性能，同时减少碎片化</li>
-            <li><code class="language-plaintext highlighter-rouge">compression=zstd</code>：开点压缩来试试能节约多少磁盘空间
+            <li>
+              <p><code class="language-plaintext highlighter-rouge">compression=zstd</code>：开点压缩来试试能节约多少磁盘空间</p>
               <ul>
                 <li>
                   <p>OpenZFS 2.2 开始将 early-abort 机制引入了 Zstd 压缩算法（Zstd-3 以上的等级）。该机制会首先尝试使用 LZ4 和 Zstd-1 来压缩数据以便评估数据的可压缩性，如果数据不可压缩（熵太大），则不再尝试用设定的 Zstd 等级压缩，而是直接原样写入磁盘上，避免在不可压缩的数据上浪费 CPU。</p>
@@ -106,7 +108,8 @@
             <li><code class="language-plaintext highlighter-rouge">secondarycache=metadata</code> 让 L2ARC 仅缓存 ZFS 内部的元数据。这是因为 Rsync 服务器上的文件访问模式更加均匀，而不像面向终端用户的 HTTP 服务器上冷热分明，因此仅缓存元数据可以节约 SSD 寿命。</li>
           </ul>
         </li>
-        <li>以及一些可能有潜在（但我们认为我们可以容忍的）风险的选项：
+        <li>
+          <p>以及一些可能有潜在（但我们认为我们可以容忍的）风险的选项：</p>
           <ul>
             <li><code class="language-plaintext highlighter-rouge">sync=disabled</code>：禁用同步写入语义（<code class="language-plaintext highlighter-rouge">open(O_SYNC)</code>、<code class="language-plaintext highlighter-rouge">sync()</code> 和 <code class="language-plaintext highlighter-rouge">fsync()</code> 等）以让 ZFS 能够充分发挥写缓冲区的意义，如降低碎片率等</li>
             <li><code class="language-plaintext highlighter-rouge">redundant_metadata=some</code>：（OpenZFS 2.2）减少元数据的冗余度来获得更好的写入性能。</li>
@@ -203,7 +206,7 @@ options zfs <span class="nv">l2arc_noprefetch</span><span class="o">=</span>0
           </ul>
         </li>
         <li>我们在 Rsync 服务器上已经有了一个完整的、经过 ZFS 优化过的仓库，因此我们可以直接用 <code class="language-plaintext highlighter-rouge">zfs send -Lcp</code> 把数据倒过来。我们最终只花了 36 小时就把超过 50 TiB 的数据都倒回来了。</li>
-        <li>由于两台服务器上存储的镜像仓库有所不同，HTTP 服务器上的压缩比略低一些，为 1 + 3.93%（压掉了2.42 TiB / 2.20 TiB）。</li>
+        <li>由于两台服务器上存储的镜像仓库有所不同，HTTP 服务器上的压缩比略低一些，为 1 + 3.93%（压掉了 2.42 TiB / 2.20 TiB）。</li>
       </ul>
       <p>我们把两台服务器的 I/O 负载放在一张图里对比：</p>
       <figure class=""><a href="/static/planet/ustc-mirrors-zfs-rebuild/mirrors2-4-io-utilization-june-july-2024.png" class="image-popup" title="镜像站两台服务器在重建前后的 I/O 负载
