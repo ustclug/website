@@ -31,6 +31,7 @@ A.K.A. 如何让 2000 元的机械硬盘跑得比 3000 元的固态硬盘还快�
 <dt>HTTP 服务器</dt>
 <dd markdown="1">
 - 2020 年秋季搭建
+- 第二代至强可扩展处理器（Cascade Lake）和 256 GB DDR4 内存
 - 12 块 10 TB HDD + 一块 2 TB SSD
 - 在硬件 RAID 上使用 LVM 和 XFS
 - 由于 XFS（截至本次重建时）不支持压缩，因此为了应对其他分区的潜在的扩容需求，我们在 LVM VG 层面保留了 free PE
@@ -39,6 +40,7 @@ A.K.A. 如何让 2000 元的机械硬盘跑得比 3000 元的固态硬盘还快�
 <dt>Rsync 服务器</dt>
 <dd markdown="1">
 - 2016 年底搭建
+- 至强 E5 v4 处理器（Broadwell）和 256 GB DDR4 内存
 - 12 块 6 TB HDD 和一些小容量 SSDs 用来装系统和当缓存
 - 组建了 ZFS RAID-Z3 阵列，大致分为 8 块数据盘 + 3 块校验盘，最后一块留作热备
 - 全默认参数（仅修改了 `zfs_arc_max`）
@@ -171,7 +173,7 @@ Rsync 服务器的流量较少，但磁盘使用率较为极端，加上我们�
   zfs list -po name,logicalused,used
   ```
 
-  我们更精确的压缩率是 1 + 6.57%，即压掉了 2.67 TB（2.43 TiB），约等于 [9 份微信数据]({{ image_base }}/teaser/lenovo-legion-wechat-data.jpg)（不是
+  我们更精确的压缩率是 1 + 6.57%，即压掉了 2.67 TB（2.43 TiB），约等于 [9 份微信数据]({{ image_base }}/lenovo-legion-wechat-data.jpg)（不是
 
 - 最关键的是更合理的 I/O 负载：
 
