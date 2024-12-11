@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://lug.ustc.edu.cn/feed/planet.xml" rel="self" type="application/atom+xml" /><link href="https://lug.ustc.edu.cn/" rel="alternate" type="text/html" /><updated>2024-12-10T20:05:24+08:00</updated><id>https://lug.ustc.edu.cn/feed/planet.xml</id><title type="html">LUG @ USTC | Planet</title><subtitle>中国科学技术大学 Linux 用户协会</subtitle><author><name>USTCLUG</name></author><entry><title type="html">镜像站 ZFS 实践</title><link href="https://lug.ustc.edu.cn/planet/2024/12/ustc-mirrors-zfs-rebuild/" rel="alternate" type="text/html" title="镜像站 ZFS 实践" /><published>2024-12-09T00:00:00+08:00</published><updated>2024-12-10T20:04:30+08:00</updated><id>https://lug.ustc.edu.cn/planet/2024/12/ustc-mirrors-zfs-rebuild</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2024/12/ustc-mirrors-zfs-rebuild/"><![CDATA[<p>A.K.A. 如何让 2000 元的机械硬盘跑得比 3000 元的固态硬盘还快（</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://lug.ustc.edu.cn/feed/planet.xml" rel="self" type="application/atom+xml" /><link href="https://lug.ustc.edu.cn/" rel="alternate" type="text/html" /><updated>2024-12-11T18:49:46+08:00</updated><id>https://lug.ustc.edu.cn/feed/planet.xml</id><title type="html">LUG @ USTC | Planet</title><subtitle>中国科学技术大学 Linux 用户协会</subtitle><author><name>USTCLUG</name></author><entry><title type="html">镜像站 ZFS 实践</title><link href="https://lug.ustc.edu.cn/planet/2024/12/ustc-mirrors-zfs-rebuild/" rel="alternate" type="text/html" title="镜像站 ZFS 实践" /><published>2024-12-09T00:00:00+08:00</published><updated>2024-12-11T18:49:00+08:00</updated><id>https://lug.ustc.edu.cn/planet/2024/12/ustc-mirrors-zfs-rebuild</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2024/12/ustc-mirrors-zfs-rebuild/"><![CDATA[<p>A.K.A. 如何让 2000 元的机械硬盘跑得比 3000 元的固态硬盘还快（</p>
       <p>本文另有<a href="https://ibug.io/p/74">英文版</a>及在南京大学分享时使用的<a href="https://ibug.io/p/72">幻灯片</a>。</p>
       <h2 id="background">背景</h2>
       <p>由中科大 Linux 用户协会维护的<a href="https://mirrors.ustc.edu.cn/">中科大开源软件镜像站</a>是中国大陆高校访问量最大、收录最全的开源软件镜像之一。
@@ -18,6 +18,7 @@
         <dd>
           <ul>
             <li>2020 年秋季搭建</li>
+            <li>第二代至强可扩展处理器（Cascade Lake）和 256 GB DDR4 内存</li>
             <li>12 块 10 TB HDD + 一块 2 TB SSD</li>
             <li>在硬件 RAID 上使用 LVM 和 XFS</li>
             <li>由于 XFS（截至本次重建时）不支持压缩，因此为了应对其他分区的潜在的扩容需求，我们在 LVM VG 层面保留了 free PE</li>
@@ -27,6 +28,7 @@
         <dd>
           <ul>
             <li>2016 年底搭建</li>
+            <li>至强 E5 v4 处理器（Broadwell）和 256 GB DDR4 内存</li>
             <li>12 块 6 TB HDD 和一些小容量 SSDs 用来装系统和当缓存</li>
             <li>组建了 ZFS RAID-Z3 阵列，大致分为 8 块数据盘 + 3 块校验盘，最后一块留作热备</li>
             <li>全默认参数（仅修改了 <code class="language-plaintext highlighter-rouge">zfs_arc_max</code>）</li>
@@ -164,7 +166,7 @@ options zfs <span class="nv">l2arc_noprefetch</span><span class="o">=</span>0
 </code></pre>
             </div>
     </div>
-          <p>我们更精确的压缩率是 1 + 6.57%，即压掉了 2.67 TB（2.43 TiB），约等于 <a href="/static/planet/ustc-mirrors-zfs-rebuild/teaser/lenovo-legion-wechat-data.jpg">9 份微信数据</a>（不是</p>
+          <p>我们更精确的压缩率是 1 + 6.57%，即压掉了 2.67 TB（2.43 TiB），约等于 <a href="/static/planet/ustc-mirrors-zfs-rebuild/lenovo-legion-wechat-data.jpg">9 份微信数据</a>（不是</p>
         </li>
         <li>
           <p>最关键的是更合理的 I/O 负载：</p>
