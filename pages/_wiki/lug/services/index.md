@@ -4,6 +4,8 @@ permalink: /wiki/lug/services/
 
 # LUG 网络服务
 
+[LUG 网络服务总则](rules.md)
+
 ## S 级服务
 
 - [开源镜像站](mirrors.md)（HTTP 访问）：<https://mirrors.ustc.edu.cn>
@@ -38,7 +40,7 @@ permalink: /wiki/lug/services/
 ## 已停止服务
 
 - 防污染 DNS（校内）
-- 旧的 LUG Planet（社团博客）：<https://planet.ustclug.org>
+- 旧的 LUG Planet（社团博客）：planet.ustclug.org
 
 ## 服务等级与服务标准
 

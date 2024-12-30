@@ -48,6 +48,21 @@
 
   注 2：“动态”是一个现已不存在的选项，但仍能在 BBS 上找到一些线索，其含义未知。
 
+{% capture notice-special-chars %}
+<i class="fas fa-fw fa-exclamation-circle"></i>
+需要注意的是，如果密码包含诸如 `&` 等特殊符号，直接进行替换可能无法正常登录。可以使用以下方法测试：
+
+1. 在浏览器中打开网络通网站，然后按下键盘的 F12（Windows/Linux）或者 Command+Option+I（macOS）。
+2. 在打开的**开发者工具**中选择 **Console（中文名为「控制台」）标签**。
+3. 在控制台中输入（复制粘贴）`params = new URLSearchParams()`，按下回车。
+4. 然后输入 `params.set('password', '你的密码')`，按下回车（记得替换 `你的密码`）。
+5. 最后输入 `params.toString()`，按下回车。
+6. 可以在输出看到类似于 `password=%E4%BD%A0%E7%9A%84%E5%AF%86%E7%A0%81` 的内容，在 `password=` 之后的就是你实际需要替换的密码（不包含最后的双引号）。
+
+{% endcapture %}
+
+<div class="notice--warning">{{ notice-special-chars | markdownify }}</div>
+
 ## Windows VBScript 版
 
 VBScript 是 Windows 系统自带的脚本语言，可以直接运行。

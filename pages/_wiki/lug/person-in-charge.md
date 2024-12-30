@@ -7,6 +7,8 @@
 
 [联系我们](contact.md)
 
+> 无特殊情况时，请不要单独联系负责人。
+
 ## 主要负责人
 
 | 代号      | 职务                  | 姓名   | 邮箱                        |
@@ -14,9 +16,8 @@
 | CEO       | 执行会长              | 罗嘉宏 | luojh AT ustclug.org        |
 | -         | 执行副会长            | 马天开 | tiankaima AT ustclug.org    |
 | -         | 执行副会长            | 金文丁 | pro AT ustclug.org          |
-| CTO       | 技术部部长            | 杨广源 |                             |
+| CTO       | 技术部部长            | 杨广源 | erina AT ustclug.org        |
 | -         | 技术部副部长          | 王昊元 | mirageturtle AT ustclug.org |
-| CFO       | 财务部部长            | 谢子郁 |                             |
 | COO & MSC | 运营部部长 & MSC 事务 | 马天开 | tiankaima AT ustclug.org    |
 | -         | 团支书                | 谢子郁 |                             |
 | -         | 社长                  | 罗嘉宏 | luojh AT ustclug.org        |
@@ -24,7 +25,7 @@
 | -         | 副社长                | 杨广源 |                             |
 | -         | 副社长                | 马天开 | tiankaima AT ustclug.org    |
 
-_更多联系信息正在更新过程中_
+注：_更多联系信息正在更新过程中_。
 
 ## 历任负责人
 
@@ -198,11 +199,11 @@ _更多联系信息正在更新过程中_
 
 | 职务         | 姓名   | 邮箱                        | 负责项目                      |
 | :----------- | :----- | :-------------------------- | :---------------------------- |
-| 会长         | 李博杰 | bojieli AT gmail.com        | 外联, 每周小聚, USTC Blog     |
+| 会长         | 李博杰 | bojieli AT gmail.com        | 外联，每周小聚，USTC Blog     |
 | 副会长 (CTO) | 郭家华 | gjhdgm AT gmail.com         | mirrors, PXE, FTP, 主页服务器 |
-| 副会长 (COO) | 李喵喵 | ljsabc AT gmail.com         | 海报, 大型活动, USTC Blog     |
+| 副会长 (COO) | 李喵喵 | ljsabc AT gmail.com         | 海报，大型活动，USTC Blog     |
 | 财务 (CFO)   | 童献   | universecopper AT gmail.com | 财务                          |
-| 资产 (CPO)   | 沈达   | sadhen1992 AT gmail.com     | LUG 书库, LUG wiki            |
+| 资产 (CPO)   | 沈达   | sadhen1992 AT gmail.com     | LUG 书库，LUG wiki            |
 
 ### 2011-2012 届
 

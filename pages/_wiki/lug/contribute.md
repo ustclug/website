@@ -1,34 +1,32 @@
 ---
 ---
 
-# Join us
+# 加入 LUG
 
-## 加入 LUG
+## 注册流程
 
-如果你是中国科学技术大学校内学生，欢迎通过学校统一组织的社团招新流程注册成为 LUG 会员。
+想参与 LUG [活动](/wiki/lug/events/) ？想成为 LUG 的一员？你可以通过以下方式注册成为 LUG 会员：
 
-在非招新活动期间，你也可以将自己的 **真实姓名，学号，性别（可选），联系电话，邮箱** 通过校内邮箱发送至我们（详见[联系我们](contact.md)）登记注册。
+- 统一招新
 
-**提示：如果有加入科大「第二课堂」平台中的 LUG 社团的需要，请在邮件中特别注明。请注意，为了避免「幽灵社员」对社团管理带来的困扰，如果你在半年内未参加任何活动，或在一年内未曾参加全员大会/社员代表大会，你将会被移除出本社团在「第二课堂」平台中的名单。是否为「第二课堂」社团成员不影响参加 LUG 活动与讨论。**
+  如果你是中国科学技术大学校内学生，欢迎通过学校统一组织的社团招新流程注册成为 LUG 会员。
 
-在登记信息后，欢迎通过以下方式与我们取得联系。在邮件回复中我们也会提供推荐的联系方式。
+  统一招新 (社团游园会) 一般在每年秋季学期开学后两周举行。具体时间请关注学校官方通知。
+  {: .notice--info}
 
-## 与 LUG 取得联系
+- [邮件联系](contact.md)
 
-详见[联系我们](contact.md)
+  在非招新活动期间，你也可以将自己的 **真实姓名，学号** 通过邮箱发送至我们登记注册。
 
-## 参与 LUG 活动
-
-详见 [LUG 活动](events/index.md)
+  **是否为「第二课堂」社团成员不影响参加 LUG 活动与讨论，也不影响学时获取。**
+  {: .notice--info}
 
 ## 参与 LUG 项目
 
-你可以：
-
-- 在我们的[邮件列表](mailinglist.md)进行交流
-
-- 在 [LUG GitLab](https://git.lug.ustc.edu.cn/) 与 [GitHub](https://github.com/ustclug) 中为 LUG 项目贡献代码
+想为 LUG [项目](services/index.md)做出贡献？你可以：
 
 - 联系管理员以加入服务器维护小组
 
-我们的 issue tracker: <https://github.com/ustclug/discussions>
+- 在 [LUG GitLab](https://git.lug.ustc.edu.cn/) 与 [GitHub](https://github.com/ustclug) 中为 LUG 项目贡献代码
+
+我们的 Issue tracker: [ustclug/discussions](https://github.com/ustclug/discussions/issues)

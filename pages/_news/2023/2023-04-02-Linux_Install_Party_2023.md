@@ -11,11 +11,11 @@ Linux Install Party 是中国科学技术大学 Linux 用户协会每年必办�
 
 ![poster](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2023.4.2_linux_101_%E7%AC%AC%E4%B8%80%E8%AF%BE_Linux_Install_Party/poster/poster.svg)
 
-2023 年 4 月 2 日下午， Linux Install Party 作为本期 Linux 101 课程的第一课在 3C101 举行。由廖巍同学和王永福同学介绍了 Linux 的来源、优点和各大发行版的区别之后，令人心动的 Linux 安装就正式开始了。
+2023 年 4 月 2 日下午，Linux Install Party 作为本期 Linux 101 课程的第一课在 3C101 举行。由廖巍同学和王永福同学介绍了 Linux 的来源、优点和各大发行版的区别之后，令人心动的 Linux 安装就正式开始了。
 
 ![photo1](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2023.4.2_linux_101_%E7%AC%AC%E4%B8%80%E8%AF%BE_Linux_Install_Party/photo/photo_2023-04-03_15-32-28.jpg)
 
-本次活动我们尝试了多种 Linux 的安装体验方式，如注册使用 Vlab ，尝试 Windows Subsystem for Linux ，安装打包好的 Linux 虚拟机镜像，在虚拟机中体验安装过程和直接真机安装。
+本次活动我们尝试了多种 Linux 的安装体验方式，如注册使用 Vlab，尝试 Windows Subsystem for Linux，安装打包好的 Linux 虚拟机镜像，在虚拟机中体验安装过程和直接真机安装。
 
 ![photo1](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2023.4.2_linux_101_%E7%AC%AC%E4%B8%80%E8%AF%BE_Linux_Install_Party/photo/IMG_20230402_155005.jpg)
 

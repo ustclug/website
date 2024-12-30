@@ -11,18 +11,24 @@ main:
     url: "https://mirrors.ustc.edu.cn/"
 
 wiki:
-  - title: LUG @ USTC
+  - title: 关于
     children:
-      - title: '<i class="fad fa-lg fa-fw fa-home"></i> LUG 首页'
-        url: /
-      - title: '<i class="fad fa-lg fa-fw fa-newspaper"></i> LUG 新闻'
-        url: /news/
+      - title: '<i class="fad fa-lg fa-fw fa-home"></i> LUG @ USTC'
+        url: /wiki/
+      - title: '<i class="fad fa-lg fa-address-card"></i> 关于我们'
+        url: /wiki/intro/
+  - title: 服务
+    children:
       - title: '<i class="fad fa-lg fa-fw fa-certificate"></i> LUG 服务'
         url: /wiki/lug/services/
-      - title: '<i class="fad fa-lg fa-fw fa-link"></i> 友情链接'
-        url: /wiki/lug/links/
-      - title: '<i class="fad fa-lg fa-fw fa-database"></i> 开源软件镜像'
+      - title: '<i class="fad fa-lg fa-fw fa-database"></i> 开源镜像站'
         url: /wiki/lug/services/mirrors/
+      - title: '<i class="fad fa-lg fa-fw fa-network-wired"></i> 网络启动平台'
+        url: /wiki/lug/services/pxe/
+      - title: '<i class="fad fa-lg fa-fw fa-code"></i> 代码托管平台'
+        url: /wiki/lug/services/gitlab/
+      - title: '<i class="fad fa-lg fa-fw fa-folder"></i> 文件存档'
+        url: /wiki/lug/services/ftp/
   - title: 活动
     children:
       - title: '<i class="fad fa-lg fa-fw fa-sparkles"></i> LUG 活动'
@@ -30,32 +36,40 @@ wiki:
       - title: '<i class="fad fa-lg fa-fw fa-users-class"></i> 每周小聚'
         url: /wiki/lug/events/weeklyparty/
       - title: '<i class="fad fa-lg fa-fw fa-graduation-cap"></i> Linux 101'
-        url: https://101.lug.ustc.edu.cn/
-      - title: '<i class="fad fa-lg fa-fw fa-envelope-open-text"></i> 邮件列表'
-        url: /wiki/lug/mailinglist/
-      - title: '<i class="fad fa-lg fa-fw fa-books"></i> LUG 书库'
-        url: /wiki/lug/book/
-      - title: '<i class="fad fa-lg fa-fw fa-piggy-bank"></i> LUG 财务'
-        url: /wiki/lug/finance/
+        url: /wiki/lug/events/101/
+      - title: '<i class="fad fa-lg fa-fw fa-flag"></i> 信息安全大赛'
+        url: /wiki/lug/events/hackergame/
+      - title: '<i class="fad fa-lg fa-fw fa-comment"></i> 软件自由日'
+        url: /wiki/lug/events/sfd/
   - title: 联系
     children:
-      - title: '<i class="fad fa-lg fa-fw fa-user-tie"></i> LUG 负责人'
-        url: /wiki/lug/person-in-charge/
       - title: '<i class="fas fa-lg fa-fw fa-phone-alt"></i> 联系我们'
         url: /wiki/lug/contact/
       - title: '<i class="fad fa-lg fa-fw fa-users-medical"></i> 加入我们'
         url: /wiki/lug/contribute/
-      - title: '<i class="fad fa-lg fa-fw fa-donate"></i> 捐赠我们'
-        url: /wiki/lug/finance/donate/
-  - title: 资源
+      - title: '<i class="fad fa-lg fa-fw fa-user-tie"></i> LUG 负责人'
+        url: /wiki/lug/person-in-charge/
+  - title: 文档
     children:
-      - title: '<i class="fad fa-lg fa-fw fa-book"></i> Linux 文摘'
-        url: /wiki/linux_digest/
-      - title: '<i class="fad fa-lg fa-fw fa-bookmark"></i> 资源导航'
-        url: /wiki/lug/resources/
-      - title: '<i class="fad fa-lg fa-fw fa-server"></i> 服务器新闻'
-        url: 'https://servers.ustclug.org/'
       - title: '<i class="fas fa-lg fa-fw fa-question-square"></i> 校园网常见问题'
         url: /wiki/doc/ustcnet-faq/
       - title: '<i class="fas fa-lg fa-fw fa-universal-access"></i> 提问指南'
         url: /wiki/doc/howtoask/
+      - title: '<i class="fas fa-lg fa-fw fa-pen"></i> 修订指南'
+        url: /wiki/doc/editing/
+
+  #  # I'm thinking about deleting all the following items
+  # - title: 其他
+  #   children:
+  #     - title: '<i class="fad fa-lg fa-fw fa-bookmark"></i> 资源导航'
+  #       url: /wiki/lug/resources/
+  #     - title: '<i class="fad fa-lg fa-fw fa-books"></i> LUG 书库'
+  #       url: /wiki/lug/book/
+  #     - title: '<i class="fad fa-lg fa-fw fa-piggy-bank"></i> LUG 财务'
+  #       url: /wiki/lug/finance/
+  #     - title: '<i class="fad fa-lg fa-fw fa-server"></i> 服务器新闻'
+  #       url: 'https://servers.ustclug.org/'
+  #     - title: '<i class="fad fa-lg fa-fw fa-link"></i> 友情链接'
+  #       url: /wiki/lug/links/
+  #     - title: '<i class="fad fa-lg fa-fw fa-book"></i> Linux 文摘'
+  #       url: /wiki/linux_digest/

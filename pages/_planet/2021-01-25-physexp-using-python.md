@@ -72,9 +72,9 @@ print('r-value:', r_value)
 print('p-value:', p_value)
 print('std-err:', std_err)
 print('r-squared:', r_value ** 2)
-print('斜率标准差:', s_slope)
-print('截距标准差:', s_intercept)
-print('算得重力加速度:', 2 * slope)
+print('斜率标准差：', s_slope)
+print('截距标准差：', s_intercept)
+print('算得重力加速度：', 2 * slope)
 #plot
 plt.scatter(x, y1, marker='*', color='black', label='原始数据')
 # plt.plot(x, y1, '--', color='green', label='光滑曲线')
@@ -119,7 +119,7 @@ simple_plot(Momentum, Erela, dot='o', save='1.png', issetrange=0, xlab='$pc/MeV$
 画图并线性拟合也是非常常见的操作，于是也加入了库：
 
 ```python
-slope, intercept = simple_linear_plot(Al_Real, CntLn, xlab='质量厚度$g/cm^{-2}$', ylab='选区计数率对数(射线强度)', title='半对数曲线曲线', save='3.png')
+slope, intercept = simple_linear_plot(Al_Real, CntLn, xlab='质量厚度$g/cm^{-2}$', ylab='选区计数率对数 (射线强度)', title='半对数曲线曲线', save='3.png')
 print(-slope)
 print(math.log(1e4) / (-slope))
 print((math.log(Cnt[0]) - 4 * math.log(10) - intercept) / slope)
@@ -184,13 +184,13 @@ simple_plot(Momentum, Erela, dot='o', save='1.png', issetrange=0,
 
 Len = 150
 Cnt = Cnt / Len
-simple_plot(Al_num, Cnt, xlab='铝片数', ylab='选区计数率(射线强度)',
+simple_plot(Al_num, Cnt, xlab='铝片数', ylab='选区计数率 (射线强度)',
             title='$\\beta$射线强度随铝片数衰减曲线', save='2.png')
 CntLn = np.log(Cnt)
 # d = 50 mg / cm^2
 d = 50
 Al_Real = Al_num * d
-slope, intercept = simple_linear_plot(Al_Real, CntLn, xlab='质量厚度$g/cm^{-2}$', ylab='选区计数率对数(射线强度)',
+slope, intercept = simple_linear_plot(Al_Real, CntLn, xlab='质量厚度$g/cm^{-2}$', ylab='选区计数率对数 (射线强度)',
                                       title='半对数曲线曲线', save='3.png')
 print(-slope)
 print(math.log(1e4) / (-slope))
@@ -211,12 +211,12 @@ gendocx('gen.docx', '1.png', '2.png', '3.png', 'slope, intercept: %f %f' % (slop
 
 ![3]({{ site.static_url }}/planet/2021-01-25-physexp-using-python-3.png)
 
-既然都到了 Jupyter ，如果**多人合作**的话，[JupyterHub](https://github.com/jupyterhub/jupyterhub) 是非常不错的选择，可以多个人在一台服务器上使用 Jupyter Notebook 。我之前配置的是每个用户一个隔离的 Docker 容器，里面的 Python 已经装好了包，可以直接使用，同时挂载了一个共享空间可以分享写好的 Notebook 。其实 JupyterHub 有用 Github 帐号登录之类的权限管理功能，但当时我们是几个认识的人合作，就没有管这些。
+既然都到了 Jupyter，如果**多人合作**的话，[JupyterHub](https://github.com/jupyterhub/jupyterhub) 是非常不错的选择，可以多个人在一台服务器上使用 Jupyter Notebook。我之前配置的是每个用户一个隔离的 Docker 容器，里面的 Python 已经装好了包，可以直接使用，同时挂载了一个共享空间可以分享写好的 Notebook。其实 JupyterHub 有用 Github 帐号登录之类的权限管理功能，但当时我们是几个认识的人合作，就没有管这些。
 
 具体的代码在我的 [GitHub](https://github.com/ustcpetergu/physicsexp) 上，如果有人在写大物实验报告的过程中无聊了想找个地方摸鱼浪费点时间，不妨来看看。
 
 ## 总结
 
-如果您想尝试用 Python 处理大物实验数据，我可以比较负责地说对于 95% 以上的实验是完全没有问题的。使用 NumPy 和 SciPy 计算， Matplotlib 做图，配以 docx 生成、Jupyter Notebook 或 JupyterHub 团队合作，可以比较轻松（但不意味着节省时间）地完成所有需要的操作，并可以通过包装库提高效率。
+如果您想尝试用 Python 处理大物实验数据，我可以比较负责地说对于 95% 以上的实验是完全没有问题的。使用 NumPy 和 SciPy 计算，Matplotlib 做图，配以 docx 生成、Jupyter Notebook 或 JupyterHub 团队合作，可以比较轻松（但不意味着节省时间）地完成所有需要的操作，并可以通过包装库提高效率。
 
 之前也有学长学姐尝试过类似的大物实验自动化项目，但因为暂时无法全部找到并对比，这里就不说了。大一的时候确实是想搞一套自动化程度很高的东西，但水平实在有限，并且不同的实验处理过程不太一样，一己之力完成每一个实验专属的程序也不太现实，所以结果就是自己挖了个坑并跳进去出不来：有时想想，或许还是左手卡西欧 991 右手座标纸来得快一些呢！

@@ -10,7 +10,7 @@ License: CC-BY-NC-SA 4.0
 
 关于如何提问，有一些相关的文档，诸如：
 
-- 提问的智慧（[原文](http://www.catb.org/~esr/faqs/smart-questions.html)，[中文](https://lug.ustc.edu.cn/wiki/doc/smart-questions/)）
+- 提问的智慧（[原文](http://www.catb.org/~esr/faqs/smart-questions.html)，[中文](/wiki/doc/smart-questions/)）
 - [别像弱智一样提问](https://github.com/tangx/Stop-Ask-Questions-The-Stupid-Ways/blob/master/README.md)
 
 本文不是这些文档的替代，而是旨在用简洁、清晰、友好的语言表述与提问相关的注意事项，并且给出相关的正例与反例（真实的例子会做匿名化处理），以便快速了解相关的注意点。
@@ -317,7 +317,7 @@ A2: 要用 curl.exe 调用才行
 
 ### 避免拍屏 {#use-screenshots}
 
-除非实在无法截图（例如，系统初起阶段，但这一阶段也可以通过虚拟机等等方式截图），否则不要拍屏，因为：
+除非实在无法截图（例如，系统启动阶段），否则不要拍屏，因为：
 
 - 不美观
 - 字/图像可能会拍不清楚，因为有种现象叫做“莫尔纹”
@@ -331,7 +331,7 @@ A2: 要用 curl.exe 调用才行
 可以考虑从以下一些方式解决问题：
 
 - 线下咨询。
-  - Tip: [LUG 在西区与高新区的活动室](https://lug.ustc.edu.cn/wiki/lug/contact/#%E9%9D%A2%E5%AF%B9%E9%9D%A2%E4%BA%A4%E6%B5%81)，只要房间里有人就可以进来（可以来之前在群里问一下）
+  - Tip: [LUG 在西区与高新区的活动室](/wiki/lug/contact/#%E9%9D%A2%E5%AF%B9%E9%9D%A2%E4%BA%A4%E6%B5%81)，只要房间里有人就可以进来（可以来之前在群里问一下）
 - 向对应服务/软件的维护人员提交工单
   - Tip: 科大网络信息中心报修系统 <https://baoxiu.ustc.edu.cn/>
 
