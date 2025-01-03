@@ -14,6 +14,20 @@ USTCLUG 的一个重要服务是它的 [开源软件镜像](https://mirrors.ustc
 
 _注：为何不写针对 Linux 用户的教程呢？这是因为，由于有 Apache 和 NGINX 这类成熟好用的服务器软件，再加上 Linux 操作系统优秀的包管理器，结合网上的教程，用几分钟的时间在 Linux 平台上快速建立并运行一个 HTTP 服务器应该不是难事。而在 Windows 上，配置 IIS 这类大而笨重的服务器非常麻烦，使用 Apache/NGINX 之类的服务器软件又由于操作习惯的不同，也不方便。_
 
+## 使用 Python `http.server`
+
+**对比下面的（老旧的）`EasyWebSvr`，使用 Python 很容易完成一个简单的 HTTP 服务器搭建。**如果你已经安装了 Python，则可以直接使用
+
+```
+python3 -m http.server <port>
+```
+
+来以当前目录为根目录，`<port>`为端口运行一个 HTTP 服务器。如果需要指定别的目录`<path>`作为根目录，可以使用
+
+```
+python3 -m http.server <port> --directory <path>
+```
+
 ## 获取一个 HTTP 服务器
 
 首先当然是要获取一个 HTTP 服务器了，这里我们选择的是 `EasyWebSvr`。这个服务器是一个体积超小（只有数十 KB）、单文件、几乎不需要配置的小型 HTTP 服务器，甚至支持 CGI 和 PHP。`EasyWebSvr`是一个历史久远的[开源项目](https://github.com/baojianjob/EasyWebSvr)，使用 MSVC 作为开发环境，而且很容易下载到它的编译好的版本（搜索`EasyWebSvr`就可以了）。下载后你将得到一个 `EasyWebSvr.exe` 和一些其他的文件。不用理会其他的文件（事实上它们是不必要的），直接将 `EasyWebSvr.exe` 复制到一个空文件夹里面就可以了。
