@@ -1,5 +1,5 @@
 ---
-title: "LUG 网站 Planet 文章模板"
+title: "快速建立本地 HTTP 文件镜像"
 author: luojh
 categories:
   - mirrors
