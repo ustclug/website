@@ -2,7 +2,7 @@
 title: "快速建立本地 HTTP 文件服务"
 author: luojh
 categories:
-  - mirrors
+  - "Tech Tutorial"
 tags: Windows HTTP
 ---
 
@@ -10,7 +10,7 @@ USTCLUG 的一个重要服务是它的 [开源软件镜像](https://mirrors.ustc
 
 ## 目的
 
-某些课程作业附带的代码示例会通过 HTTP 的方式获取运行需要的输入数据，但是如果这个数据不巧放在某台访问速率很低的服务器上（例如不少用`.edu`域名的国外大学的课程网站上），则会使得作业的运行时间大大加长——通过只有几 KB/s 的网络下载数十 MB 的数据总不是个好主意。更有可能的是，样例代码还需要做一些修改才能满足要求，这时候每次调试运行代码时都要去下载一次输入数据，简直难以忍受。本文将针对 Windows 用户，讲解如何快速搭建一个 HTTP 服务器来在本地提供一份这种数据，以实现快速访问。
+某些课程作业附带的代码示例会通过 HTTP 的方式获取运行需要的输入数据，但是如果这个数据不巧放在某台访问速率很低的服务器上（例如不少用 `.edu` 域名的国外大学的课程网站上），则会使得作业的运行时间大大加长——通过只有几 KB/s 的网络下载数十 MB 的数据总不是个好主意。更有可能的是，样例代码还需要做一些修改才能满足要求，这时候每次调试运行代码时都要去下载一次输入数据，简直难以忍受。本文将针对 Windows 用户，讲解如何快速搭建一个 HTTP 服务器来在本地提供一份这种数据，以实现快速访问。
 
 _注：为何不写针对 Linux 用户的教程呢？这是因为，由于有 Apache 和 NGINX 这类成熟好用的服务器软件，再加上 Linux 操作系统优秀的包管理器，结合网上的教程，用几分钟的时间在 Linux 平台上快速建立并运行一个 HTTP 服务器应该不是难事。而在 Windows 上，配置 IIS 这类大而笨重的服务器非常麻烦，使用 Apache/NGINX 之类的服务器软件又由于操作习惯的不同，也不方便。_
 
@@ -28,9 +28,17 @@ python3 -m http.server <port>
 python3 -m http.server <port> --directory <path>
 ```
 
+如果需要 bind 到特定的地址（对于本地服务而言，应该使用 `127.0.0.1`）
+
+```
+python3 -m http.server <port> --bind 127.0.0.1
+```
+
 ## 获取一个 HTTP 服务器
 
 首先当然是要获取一个 HTTP 服务器了，这里我们选择的是 `EasyWebSvr`。这个服务器是一个体积超小（只有数十 KB）、单文件、几乎不需要配置的小型 HTTP 服务器，甚至支持 CGI 和 PHP。`EasyWebSvr` 是一个历史久远的[开源项目](https://github.com/baojianjob/EasyWebSvr)，使用 MSVC 作为开发环境，而且很容易下载到它的编译好的版本（搜索 `EasyWebSvr` 就可以了）。下载后你将得到一个 `EasyWebSvr.exe` 和一些其他的文件。不用理会其他的文件（事实上它们是不必要的），直接将 `EasyWebSvr.exe` 复制到一个空文件夹里面就可以了。
+
+_提示：根据[代码](https://github.com/baojianjob/EasyWebSvr/blob/796448f6b312ad0676add90024940316dfa34299/EasyWebSvr/Socket.cpp#L439)，EasyWebSvr 会 bind 到 `0.0.0.0`，这可能会导致**安全问题**。如果需要 bind 到 `127.0.0.1`，可能需要修改代码并重新构建。_
 
 ## 准备数据
 
