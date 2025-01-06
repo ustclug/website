@@ -1,129 +1,214 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://lug.ustc.edu.cn/feed/planet.xml" rel="self" type="application/atom+xml" /><link href="https://lug.ustc.edu.cn/" rel="alternate" type="text/html" /><updated>2025-01-03T10:26:12+08:00</updated><id>https://lug.ustc.edu.cn/feed/planet.xml</id><title type="html">LUG @ USTC | Planet</title><subtitle>中国科学技术大学 Linux 用户协会</subtitle><author><name>USTCLUG</name></author><entry><title type="html">镜像站 ZFS 实践</title><link href="https://lug.ustc.edu.cn/planet/2024/12/ustc-mirrors-zfs-rebuild/" rel="alternate" type="text/html" title="镜像站 ZFS 实践" /><published>2024-12-09T00:00:00+08:00</published><updated>2024-12-14T13:31:50+08:00</updated><id>https://lug.ustc.edu.cn/planet/2024/12/ustc-mirrors-zfs-rebuild</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2024/12/ustc-mirrors-zfs-rebuild/"><![CDATA[<p>A.K.A. 如何让 2000 元的机械硬盘跑得比 3000 元的固态硬盘还快（</p>
-      <p>本文另有<a href="https://ibug.io/p/74">英文版</a>及在南京大学分享时使用的<a href="https://ibug.io/p/72">幻灯片</a>。</p>
-      <h2 id="background">背景</h2>
-      <p>由中科大 Linux 用户协会维护的<a href="https://mirrors.ustc.edu.cn/">中科大开源软件镜像站</a>是中国大陆高校访问量最大、收录最全的开源软件镜像之一。
-        在 2024 年 5 月至 6 月期间，我们的镜像站服务的流量大约是每天 36 TiB，主要分为以下两大类：</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://lug.ustc.edu.cn/feed/planet.xml" rel="self" type="application/atom+xml" /><link href="https://lug.ustc.edu.cn/" rel="alternate" type="text/html" /><updated>2025-01-06T16:33:28+08:00</updated><id>https://lug.ustc.edu.cn/feed/planet.xml</id><title type="html">LUG @ USTC | Planet</title><subtitle>中国科学技术大学 Linux 用户协会</subtitle><author><name>USTCLUG</name></author><entry><title type="html">快速建立本地 HTTP 文件服务</title><link href="https://lug.ustc.edu.cn/planet/2025/01/local-file-serving/" rel="alternate" type="text/html" title="快速建立本地 HTTP 文件服务" /><published>2025-01-03T00:00:00+08:00</published><updated>2025-01-06T16:32:35+08:00</updated><id>https://lug.ustc.edu.cn/planet/2025/01/local-file-serving</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2025/01/local-file-serving/"><![CDATA[<p>USTCLUG 的一个重要服务是它的 <a href="https://mirrors.ustc.edu.cn">开源软件镜像</a>。但是我们这里要讨论的，是另一种自己在本地搭建的文件服务，目的是加速对远程静态文件的访问。这篇文章来源于帮同学解决的一个小问题。</p>
+      <h2 id="目的">目的</h2>
+      <p>某些课程作业附带的代码示例会通过 HTTP 的方式获取运行需要的输入数据，但是如果这个数据不巧放在某台访问速率很低的服务器上（例如不少用 <code class="language-plaintext highlighter-rouge">.edu</code> 域名的国外大学的课程网站上），则会使得作业的运行时间大大加长——通过只有几 KB/s 的网络下载数十 MB 的数据总不是个好主意。更有可能的是，根据作业内容，样例代码还需要做一些修改，这时候每次调试运行代码时都要去下载一次输入数据，简直难以忍受。本文将针对 Windows 用户，讲解如何在手工下载一次相关的文件后，在本地快速搭建一个 HTTP 服务器提供数据文件，以避免反复访问慢速的源地址。对于不能修改访问地址的情况，也提供了相应的对策。</p>
+      <blockquote>
+        <p>为何不写针对 Linux 用户的教程呢？这是因为，由于有 Apache 和 Nginx 这类成熟好用的服务器软件，再加上 Linux 操作系统优秀的包管理器，结合网上的教程，用几分钟的时间在 Linux 平台上快速建立并运行一个 HTTP 服务器应该不是难事。而在 Windows 上，配置 IIS 这类大而笨重的服务器非常麻烦，使用 Apache/Nginx 之类的服务器软件又由于操作习惯的不同，也不方便。</p>
+      </blockquote>
+      <h2 id="使用-python-httpserver">使用 Python <code class="language-plaintext highlighter-rouge">http.server</code></h2>
+      <p><strong>对比下面的（老旧的）<code class="language-plaintext highlighter-rouge">EasyWebSvr</code>，使用 Python 很容易完成一个简单的 HTTP 服务器搭建。</strong></p>
+      <p>如果你已经安装了 Python，则可以直接使用</p>
+      <div class="language-shell highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code>python3 <span class="nt">-m</span> http.server &lt;port&gt;
+</code></pre>
+        </div>
+      </div>
+      <p>来以当前目录为根目录，<code class="language-plaintext highlighter-rouge">&lt;port&gt;</code> 为端口运行一个 HTTP 服务器。</p>
+      <p>如果需要指定别的目录 <code class="language-plaintext highlighter-rouge">&lt;path&gt;</code> 作为 HTTP 服务的根目录，可以使用</p>
+      <div class="language-shell highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code>python3 <span class="nt">-m</span> http.server &lt;port&gt; <span class="nt">--directory</span> &lt;path&gt;
+</code></pre>
+        </div>
+      </div>
+      <p>如果需要 bind 到特定的地址（对于本地服务而言，应该使用 <code class="language-plaintext highlighter-rouge">127.0.0.1</code>），可以使用下面的命令。<code class="language-plaintext highlighter-rouge">bind</code> 是指将一个网络地址（IP 和端口）与服务器软件中的套接字关联的过程，使得该服务器能接收指定地址上的网络数据。<strong>Python 的 http.server 默认值为 <code class="language-plaintext highlighter-rouge">0.0.0.0</code>，代表所有人都可以访问</strong>。如果只需要本地访问，则可以使用本地回环地址 <code class="language-plaintext highlighter-rouge">127.0.0.1</code>。</p>
+      <div class="language-shell highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code>python3 <span class="nt">-m</span> http.server &lt;port&gt; <span class="nt">--bind</span> 127.0.0.1
+</code></pre>
+        </div>
+      </div>
+      <h2 id="使用-easywebserver">使用 EasyWebServer</h2>
+      <h3 id="获取一个-http-服务器">获取一个 HTTP 服务器</h3>
+      <p>首先当然是要获取一个 HTTP 服务器了，这里我们选择的是 <code class="language-plaintext highlighter-rouge">EasyWebSvr</code>。这个服务器是一个体积超小（只有数十 KB）、单文件、几乎不需要配置的小型 HTTP 服务器，甚至支持 CGI 和 PHP。<code class="language-plaintext highlighter-rouge">EasyWebSvr</code> 是一个历史久远的<a href="https://github.com/baojianjob/EasyWebSvr">开源项目</a>，使用 MSVC 作为开发环境，而且很容易下载到它的编译好的版本（搜索 <code class="language-plaintext highlighter-rouge">EasyWebSvr</code> 就可以了）。下载后你将得到一个 <code class="language-plaintext highlighter-rouge">EasyWebSvr.exe</code> 和一些其他的文件。不用理会其他的文件（事实上它们是不必要的），直接将 <code class="language-plaintext highlighter-rouge">EasyWebSvr.exe</code> 复制到一个空文件夹里面就可以了。</p>
+      <blockquote>
+        <p>提示：根据<a href="https://github.com/baojianjob/EasyWebSvr/blob/796448f6b312ad0676add90024940316dfa34299/EasyWebSvr/Socket.cpp#L439">代码</a>，EasyWebSvr 会 bind 到 <code class="language-plaintext highlighter-rouge">0.0.0.0</code>，这可能会导致<strong>安全问题</strong>。如果需要 bind 到 <code class="language-plaintext highlighter-rouge">127.0.0.1</code>，可能需要修改代码并重新构建。</p>
+      </blockquote>
+      <h3 id="准备数据">准备数据</h3>
       <ul>
-        <li>HTTP/HTTPS 流量 19 TiB，请求量 1700 万</li>
-        <li>Rsync 流量 10.3 TiB，请求量 2.18 万（如果算上一个异常的客户端，那么总数是 14.78 万）</li>
+        <li>从原始的地址上手工下载一份要被访问的数据，放到上面所说的那个空文件夹里面。</li>
+        <li>运行 <code class="language-plaintext highlighter-rouge">EasyWebSvr.exe</code>，可以看到一个小窗口。</li>
+        <li>点击右下角的锤子按钮（菜单），选择最下面的 <code class="language-plaintext highlighter-rouge">设置</code> 一项。</li>
+        <li>在弹出的设置对话框里面，选择 <code class="language-plaintext highlighter-rouge">主目录</code> 为当前 <code class="language-plaintext highlighter-rouge">EasyWebSvr.exe</code> 所在的目录。</li>
+        <li>在 <code class="language-plaintext highlighter-rouge">文档</code> 选项卡里面勾选 <code class="language-plaintext highlighter-rouge">允许目录浏览</code> 和 <code class="language-plaintext highlighter-rouge">总是显示目录内容</code>。</li>
+        <li>点击 <code class="language-plaintext highlighter-rouge">确定</code> 结束并保存配置。</li>
+        <li>然后在主窗口里面点击右下方的红色按钮（在菜单按钮的边上），正常应该看到它变成蓝绿色（这时候如果有 Windows 防火墙提示，请选择允许）。</li>
+        <li>此时服务器就配置好了，打开浏览器输入 <code class="language-plaintext highlighter-rouge">http://localhost</code> 即可看到文件列表。</li>
       </ul>
-      <p>多年以来，随着现有镜像仓库容量的增加和新镜像仓库的加入，我们的服务器硬盘容量已经十分紧张了。目前提供镜像服务的两台服务器的磁盘容量都已经接近极限了：</p>
+      <h3 id="修改原先的代码">修改原先的代码</h3>
       <ul>
-        <li>主（HTTP）服务器采用 XFS 文件系统，在 2023 年 12 月 18 日达到了 63.3 TiB（总容量 66.0 TiB，使用率 96%）；</li>
-        <li>副（Rsync）服务器采用 ZFS 文件系统，在 2023 年 11 月 21 日达到了 42.4 TiB（总容量 43.2 TiB，使用率 98%）。</li>
+        <li>例如原先提供的代码中数据文件的 URL 是 <code class="language-plaintext highlighter-rouge">http://some.site.edu/path/to/file/data.csv</code>，而这份数据就和 <code class="language-plaintext highlighter-rouge">EasyWebSvr.exe</code> 在同一文件夹下，则将代码中的地址修改为 <code class="language-plaintext highlighter-rouge">http://localhost/data.csv</code> 就可以使用本地的文件服务了！</li>
+        <li>服务器最小化后会显示一个小托盘图标，右键点击它可以显示各种选项，包括重新显示主窗口。</li>
+        <li>使用完后，点击蓝绿色图标，它会变成红色，此时服务器就关闭了。</li>
       </ul>
-      <p>两台服务器的配置分别如下：</p>
-      <dl>
-        <dt>HTTP 服务器</dt>
-        <dd>
-          <ul>
-            <li>2020 年秋季搭建</li>
-            <li>第二代至强可扩展处理器（Cascade Lake）和 256 GB DDR4 内存</li>
-            <li>12 块 10 TB HDD + 一块 2 TB SSD</li>
-            <li>在硬件 RAID 上使用 LVM 和 XFS</li>
-            <li>由于 XFS（截至本次重建时）不支持压缩，因此为了应对其他分区的潜在的扩容需求，我们在 LVM VG 层面保留了 free PE</li>
-          </ul>
-        </dd>
-        <dt>Rsync 服务器</dt>
-        <dd>
-          <ul>
-            <li>2016 年底搭建</li>
-            <li>至强 E5 v4 处理器（Broadwell）和 256 GB DDR4 内存</li>
-            <li>12 块 6 TB HDD 和一些小容量 SSDs 用来装系统和当缓存</li>
-            <li>组建了 ZFS RAID-Z3 阵列，大致分为 8 块数据盘 + 3 块校验盘，最后一块留作热备</li>
-            <li>全默认参数（仅修改了 <code class="language-plaintext highlighter-rouge">zfs_arc_max</code>）</li>
-          </ul>
-        </dd>
-      </dl>
-      <p>这两台服务器的磁盘负载非常高，日常维持在 90% 以上，以至于即使从科大校园网内下载镜像，速度也很难达到 50 MB/s。
-        显然对于镜像站这种专用于存储的用途来说，这样的性能表现是差强人意的。</p>
-      <figure class=""><a href="/static/planet/ustc-mirrors-zfs-rebuild/mirrors-io-utilization-may-2024.png" class="image-popup" title="2024 年 5 月期间镜像站两台服务器的 I/O 负载
+      <h3 id="特殊情况">特殊情况</h3>
+      <h4 id="代码不支持修改地址">代码不支持修改地址</h4>
+      <p>如果代码不支持修改地址（这很少见），那么也可以按照原来的 URL 在本地建立文件夹，类似下面这样：</p>
+      <div class="language-text highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code>EasyWebSvr.exe
+path/                -&gt; 建立这个目录
+    to/              -&gt; 建立这个目录
+        file/        -&gt; 建立这个目录
+            data.csv -&gt; 数据文件在这里
+</code></pre>
+        </div>
+      </div>
+      <p>然后修改 <code class="language-plaintext highlighter-rouge">hosts</code> 文件（一般在 <code class="language-plaintext highlighter-rouge">C:\Windows\System32\drivers\etc</code> 里面，需要管理员权限，具体请看相关教程），加上一句</p>
+      <div class="language-text highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code>127.0.0.1 some.site.edu
+</code></pre>
+        </div>
+      </div>
+      <p>然后以管理员权限运行</p>
+      <div class="language-shell highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code>ipconfig /flushdns
+</code></pre>
+        </div>
+      </div>
+      <p>即可。可以通过浏览器访问 <code class="language-plaintext highlighter-rouge">http://some.site.edu/path/to/file/data.csv</code> 来确认。这一操作会修改所有对 <code class="language-plaintext highlighter-rouge">some.site.edu</code> 的请求，因此用完后请删去在 <code class="language-plaintext highlighter-rouge">hosts</code> 中加入的那一行，然后再运行一次 <code class="language-plaintext highlighter-rouge">ipconfig /flushdns</code>。</p>
+      <h4 id="原地址有非-80-的端口号">原地址有非 80 的端口号</h4>
+      <p>如果你拿到的地址使用了别的端口（例如 <code class="language-plaintext highlighter-rouge">some.site.edu:8080</code>）且不能修改，那么请在 EasyWebServer 的设置页面 <code class="language-plaintext highlighter-rouge">端口号</code> 处输入对应的端口号 <code class="language-plaintext highlighter-rouge">8080</code>，对应的访问地址就是 <code class="language-plaintext highlighter-rouge">localhost:8080</code>。</p>
+      <h4 id="提示端口已被占用">提示端口已被占用</h4>
+      <p>这可能是因为有其他应用在使用 80 端口。通过 <code class="language-plaintext highlighter-rouge">netstat -ano</code> 命令可以查看机器上正被使用的端口号和对应的进程 ID。如果不希望关闭占用 80 端口的程序，那么和上面非 80 端口一样，将我们的 HTTP 文件服务器换到一个别的端口就好了，例如 <code class="language-plaintext highlighter-rouge">8080</code> 或者 <code class="language-plaintext highlighter-rouge">8000</code>，然后再次点红色圆球图标开启服务器。这时候记得访问地址也要加上对应的端口号。</p>
+      ]]></content><author><name>luojh</name></author><category term="Tech Tutorial" /><category term="Windows" /><category term="HTTP" /><summary type="html"><![CDATA[USTCLUG 的一个重要服务是它的 开源软件镜像。但是我们这里要讨论的，是另一种自己在本地搭建的文件服务，目的是加速对远程静态文件的访问。这篇文章来源于帮同学解决的一个小问题。]]></summary></entry><entry><title type="html">镜像站 ZFS 实践</title><link href="https://lug.ustc.edu.cn/planet/2024/12/ustc-mirrors-zfs-rebuild/" rel="alternate" type="text/html" title="镜像站 ZFS 实践" /><published>2024-12-09T00:00:00+08:00</published><updated>2024-12-14T13:31:50+08:00</updated><id>https://lug.ustc.edu.cn/planet/2024/12/ustc-mirrors-zfs-rebuild</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2024/12/ustc-mirrors-zfs-rebuild/"><![CDATA[<p>A.K.A. 如何让 2000 元的机械硬盘跑得比 3000 元的固态硬盘还快（</p>
+    <p>本文另有<a href="https://ibug.io/p/74">英文版</a>及在南京大学分享时使用的<a href="https://ibug.io/p/72">幻灯片</a>。</p>
+    <h2 id="background">背景</h2>
+    <p>由中科大 Linux 用户协会维护的<a href="https://mirrors.ustc.edu.cn/">中科大开源软件镜像站</a>是中国大陆高校访问量最大、收录最全的开源软件镜像之一。
+      在 2024 年 5 月至 6 月期间，我们的镜像站服务的流量大约是每天 36 TiB，主要分为以下两大类：</p>
+    <ul>
+      <li>HTTP/HTTPS 流量 19 TiB，请求量 1700 万</li>
+      <li>Rsync 流量 10.3 TiB，请求量 2.18 万（如果算上一个异常的客户端，那么总数是 14.78 万）</li>
+    </ul>
+    <p>多年以来，随着现有镜像仓库容量的增加和新镜像仓库的加入，我们的服务器硬盘容量已经十分紧张了。目前提供镜像服务的两台服务器的磁盘容量都已经接近极限了：</p>
+    <ul>
+      <li>主（HTTP）服务器采用 XFS 文件系统，在 2023 年 12 月 18 日达到了 63.3 TiB（总容量 66.0 TiB，使用率 96%）；</li>
+      <li>副（Rsync）服务器采用 ZFS 文件系统，在 2023 年 11 月 21 日达到了 42.4 TiB（总容量 43.2 TiB，使用率 98%）。</li>
+    </ul>
+    <p>两台服务器的配置分别如下：</p>
+    <dl>
+      <dt>HTTP 服务器</dt>
+      <dd>
+        <ul>
+          <li>2020 年秋季搭建</li>
+          <li>第二代至强可扩展处理器（Cascade Lake）和 256 GB DDR4 内存</li>
+          <li>12 块 10 TB HDD + 一块 2 TB SSD</li>
+          <li>在硬件 RAID 上使用 LVM 和 XFS</li>
+          <li>由于 XFS（截至本次重建时）不支持压缩，因此为了应对其他分区的潜在的扩容需求，我们在 LVM VG 层面保留了 free PE</li>
+        </ul>
+      </dd>
+      <dt>Rsync 服务器</dt>
+      <dd>
+        <ul>
+          <li>2016 年底搭建</li>
+          <li>至强 E5 v4 处理器（Broadwell）和 256 GB DDR4 内存</li>
+          <li>12 块 6 TB HDD 和一些小容量 SSDs 用来装系统和当缓存</li>
+          <li>组建了 ZFS RAID-Z3 阵列，大致分为 8 块数据盘 + 3 块校验盘，最后一块留作热备</li>
+          <li>全默认参数（仅修改了 <code class="language-plaintext highlighter-rouge">zfs_arc_max</code>）</li>
+        </ul>
+      </dd>
+    </dl>
+    <p>这两台服务器的磁盘负载非常高，日常维持在 90% 以上，以至于即使从科大校园网内下载镜像，速度也很难达到 50 MB/s。
+      显然对于镜像站这种专用于存储的用途来说，这样的性能表现是差强人意的。</p>
+    <figure class=""><a href="/static/planet/ustc-mirrors-zfs-rebuild/mirrors-io-utilization-may-2024.png" class="image-popup" title="2024 年 5 月期间镜像站两台服务器的 I/O 负载
 "><img src="/static/planet/ustc-mirrors-zfs-rebuild/mirrors-io-utilization-may-2024.png" alt="2024 年 5 月期间镜像站两台服务器的 I/O 负载" /></a>
-        <figcaption>
-          2024 年 5 月期间镜像站两台服务器的 I/O 负载
-        </figcaption>
-      </figure>
-      <h2 id="zfs">ZFS</h2>
-      <p>ZFS 以“单机存储的终极解决方案”著称。
-        它集 RAID、逻辑卷管理和文件系统于一体，具有包括快照、克隆、发送/接收等高级功能。
-        ZFS 内的所有数据都有校验，可以在硬盘出现比特翻转等极端情况下尽可能确保文件系统的完整性。
-        对于专用于存储的服务器来说，ZFS 看起来是个可以“一劳永逸”的解决方案，但当你看到它有如此多的可调节参数之后，你马上就不会这么想了。</p>
-      <p>作为前期学习和实验，我在自己的工作站上增加了一批额外的硬盘并把它们组成了两个 ZFS pool，然后注册了一些 PT 站<s>开始刷流</s>来制造一些磁盘负载以便学习研究。
-        在 PT 站的<s>刷流</s>成果十分可观：这个单机的 seed box 在两年半间产生了 1.20 PiB 的上传量。</p>
-      <p>这两年刷 PT 站刷下来，我总结出来几个重要的 ZFS 学习资料来源：</p>
-      <ul>
-        <li>UToronto 的 Chris Siebenmann 的博客：<a href="https://utcc.utoronto.ca/~cks/space/blog/">https://utcc.utoronto.ca/~cks/space/blog/</a></li>
-        <li>OpenZFS 的官方文档：<a href="https://openzfs.github.io/openzfs-docs/">https://openzfs.github.io/openzfs-docs/</a></li>
-        <li>我自己攒出的一篇博客：<a href="https://ibug.io/p/62">Understanding ZFS block sizes</a>
-          <ul>
-            <li>以及这篇博客底部列出的参考文献</li>
-          </ul>
-        </li>
-      </ul>
-      <figure class=""><a href="/static/planet/ustc-mirrors-zfs-rebuild/2024-06-05.png" class="image-popup" title="学习 ZFS 过程中的副产物：一个为 qBittorrent 定制的 Grafana 面板（xs
+      <figcaption>
+        2024 年 5 月期间镜像站两台服务器的 I/O 负载
+      </figcaption>
+    </figure>
+    <h2 id="zfs">ZFS</h2>
+    <p>ZFS 以“单机存储的终极解决方案”著称。
+      它集 RAID、逻辑卷管理和文件系统于一体，具有包括快照、克隆、发送/接收等高级功能。
+      ZFS 内的所有数据都有校验，可以在硬盘出现比特翻转等极端情况下尽可能确保文件系统的完整性。
+      对于专用于存储的服务器来说，ZFS 看起来是个可以“一劳永逸”的解决方案，但当你看到它有如此多的可调节参数之后，你马上就不会这么想了。</p>
+    <p>作为前期学习和实验，我在自己的工作站上增加了一批额外的硬盘并把它们组成了两个 ZFS pool，然后注册了一些 PT 站<s>开始刷流</s>来制造一些磁盘负载以便学习研究。
+      在 PT 站的<s>刷流</s>成果十分可观：这个单机的 seed box 在两年半间产生了 1.20 PiB 的上传量。</p>
+    <p>这两年刷 PT 站刷下来，我总结出来几个重要的 ZFS 学习资料来源：</p>
+    <ul>
+      <li>UToronto 的 Chris Siebenmann 的博客：<a href="https://utcc.utoronto.ca/~cks/space/blog/">https://utcc.utoronto.ca/~cks/space/blog/</a></li>
+      <li>OpenZFS 的官方文档：<a href="https://openzfs.github.io/openzfs-docs/">https://openzfs.github.io/openzfs-docs/</a></li>
+      <li>我自己攒出的一篇博客：<a href="https://ibug.io/p/62">Understanding ZFS block sizes</a>
+        <ul>
+          <li>以及这篇博客底部列出的参考文献</li>
+        </ul>
+      </li>
+    </ul>
+    <figure class=""><a href="/static/planet/ustc-mirrors-zfs-rebuild/2024-06-05.png" class="image-popup" title="学习 ZFS 过程中的副产物：一个为 qBittorrent 定制的 Grafana 面板（xs
 "><img src="/static/planet/ustc-mirrors-zfs-rebuild/2024-06-05.png" alt="一个为 qBittorrent 定制的 Grafana 面板" /></a>
-        <figcaption>
-          学习 ZFS 过程中的副产物：一个为 qBittorrent 定制的 Grafana 面板（xs
-        </figcaption>
-      </figure>
-      <p>经过多年的 ZFS 学习，我意识到镜像站服务器上的配置其实有很大的优化空间，方法就是 all-in ZFS 并正确地调节一些参数。</p>
-      <h2 id="镜像站">镜像站</h2>
-      <p>在开工重建 ZFS pool 之前，我们需要正确地理解和分析镜像站的负载类型。简而言之，镜像站的特点是：</p>
-      <ul>
-        <li>提供文件下载服务</li>
-        <li>
-          <s>也（被迫）提供“家庭宽带上下行流量平衡服务”</s>
-          <p>（人人喊打的 PCDN 需要为此负责）</p>
-        </li>
-        <li>读多写少，且大部分读取都是全文件顺序读取</li>
-        <li>能够容忍少量的数据丢失，毕竟镜像内容可以轻易地从上游重新同步回来</li>
-      </ul>
-      <figure class=""><a href="/static/planet/ustc-mirrors-zfs-rebuild/mirrors-file-size-distribution-2024-08.png" class="image-popup" title="2024 年 8 月镜像站上的文件大小分布
+      <figcaption>
+        学习 ZFS 过程中的副产物：一个为 qBittorrent 定制的 Grafana 面板（xs
+      </figcaption>
+    </figure>
+    <p>经过多年的 ZFS 学习，我意识到镜像站服务器上的配置其实有很大的优化空间，方法就是 all-in ZFS 并正确地调节一些参数。</p>
+    <h2 id="镜像站">镜像站</h2>
+    <p>在开工重建 ZFS pool 之前，我们需要正确地理解和分析镜像站的负载类型。简而言之，镜像站的特点是：</p>
+    <ul>
+      <li>提供文件下载服务</li>
+      <li>
+        <s>也（被迫）提供“家庭宽带上下行流量平衡服务”</s>
+        <p>（人人喊打的 PCDN 需要为此负责）</p>
+      </li>
+      <li>读多写少，且大部分读取都是全文件顺序读取</li>
+      <li>能够容忍少量的数据丢失，毕竟镜像内容可以轻易地从上游重新同步回来</li>
+    </ul>
+    <figure class=""><a href="/static/planet/ustc-mirrors-zfs-rebuild/mirrors-file-size-distribution-2024-08.png" class="image-popup" title="2024 年 8 月镜像站上的文件大小分布
 "><img src="/static/planet/ustc-mirrors-zfs-rebuild/mirrors-file-size-distribution-2024-08.png" alt="2024 年 8 月镜像站上的文件大小分布" /></a>
-        <figcaption>
-          2024 年 8 月镜像站上的文件大小分布
-        </figcaption>
-      </figure>
-      <p>基于以上思考，我们分析了镜像站上存储的内容。从上图中可以看出，镜像站上总文件数超过 4000 万，其中一半的文件大小不到 10 KiB，并且 90% 的文件大小不到 1 MiB。
-        尽管如此，所有文件的平均大小仍然达到了 1.6 MiB。</p>
-      <h2 id="mirrors2">重建 Rsync 服务器</h2>
-      <p>Rsync 服务器的流量较少，但磁盘使用率较为极端，加上我们认定 Rsync 服务的重要性较低，因此在今年 6 月，我们先动手重建了这台服务器。
-        我们制定了如下的重建计划：</p>
-      <ul>
-        <li>首先，考虑到镜像站上一半的文件都不到 10 KiB（注意我们的磁盘的物理扇区大小是 4 KiB），RAID-Z3 的开销过高，因此我们决定将其重建为 RAID-Z2 并且拆成两组 vdev。这样做还有一个额外的好处，即期望情况下我们还可以在这个 ZFS pool 中获得两倍的 IOPS，毕竟文件的每个“块”只存储在一个 vdev 上。</li>
-        <li>
-          <p>然后我们仔细研究了如何为镜像站场景调优 ZFS dataset 参数：</p>
-          <ul>
-            <li><code class="language-plaintext highlighter-rouge">recordsize=1M</code>：尽可能优化顺序读写性能，同时减少碎片化</li>
-            <li>
-              <p><code class="language-plaintext highlighter-rouge">compression=zstd</code>：开点压缩来试试能节约多少磁盘空间</p>
-              <ul>
-                <li>
-                  <p>OpenZFS 2.2 开始将 early-abort 机制引入了 Zstd 压缩算法（Zstd-3 以上的等级）。该机制会首先尝试使用 LZ4 和 Zstd-1 来压缩数据以便评估数据的可压缩性，如果数据不可压缩（熵太大），则不再尝试用设定的 Zstd 等级压缩，而是直接原样写入磁盘上，避免在不可压缩的数据上浪费 CPU。</p>
-                  <p>我们已知镜像站上的大部分内容都是已经压缩过的，因此 early-abort 算是给我们兜了个底，让我们可以放心地开 Zstd。</p>
-                </li>
-              </ul>
-            </li>
-            <li><code class="language-plaintext highlighter-rouge">xattr=off</code>：镜像站上的文件不需要扩展属性</li>
-            <li><code class="language-plaintext highlighter-rouge">atime=off</code>：镜像站上的文件不需要记录，也不需要更新 atime，可以省掉不少写入</li>
-            <li><code class="language-plaintext highlighter-rouge">setuid=off</code>、<code class="language-plaintext highlighter-rouge">exec=off</code>、<code class="language-plaintext highlighter-rouge">devices=off</code> 也是我们不需要的挂载选项（也是一个更安全的做法）</li>
-            <li><code class="language-plaintext highlighter-rouge">secondarycache=metadata</code> 让 L2ARC 仅缓存 ZFS 内部的元数据。这是因为 Rsync 服务器上的文件访问模式更加均匀，而不像面向终端用户的 HTTP 服务器上冷热分明，因此仅缓存元数据可以节约 SSD 寿命。</li>
-          </ul>
-        </li>
-        <li>
-          <p>以及一些可能有潜在（但我们认为我们可以容忍的）风险的选项：</p>
-          <ul>
-            <li><code class="language-plaintext highlighter-rouge">sync=disabled</code>：禁用同步写入语义（<code class="language-plaintext highlighter-rouge">open(O_SYNC)</code>、<code class="language-plaintext highlighter-rouge">sync()</code> 和 <code class="language-plaintext highlighter-rouge">fsync()</code> 等）以让 ZFS 能够充分发挥写缓冲区的意义，如降低碎片率等</li>
-            <li><code class="language-plaintext highlighter-rouge">redundant_metadata=some</code>：（OpenZFS 2.2）减少元数据的冗余度来获得更好的写入性能。</li>
-          </ul>
-          <p>我们认为这两个选项符合我们对镜像站仓库内容的数据安全和完整性需求的理解，它们在其他场景下不一定“安全”。</p>
-        </li>
-        <li>
-          <p>对于 ZFS 模块层面的参数，光是 290+ 的数量就已经很劝退了。
-            此处感谢 Debian ZFS 维护者兼北京外国语大学镜像站管理员 @happyaron 的帮助，我们快速找出了十几个常用的参数进行针对性条件。</p>
-          <div class="language-shell highlighter-rouge">
-            <div class="highlight">
-              <pre class="highlight"><code><span class="c"># 设置 ARC 大小范围为 160-200 GiB，并为操作系统保留 16 GiB 空闲</span>
+      <figcaption>
+        2024 年 8 月镜像站上的文件大小分布
+      </figcaption>
+    </figure>
+    <p>基于以上思考，我们分析了镜像站上存储的内容。从上图中可以看出，镜像站上总文件数超过 4000 万，其中一半的文件大小不到 10 KiB，并且 90% 的文件大小不到 1 MiB。
+      尽管如此，所有文件的平均大小仍然达到了 1.6 MiB。</p>
+    <h2 id="mirrors2">重建 Rsync 服务器</h2>
+    <p>Rsync 服务器的流量较少，但磁盘使用率较为极端，加上我们认定 Rsync 服务的重要性较低，因此在今年 6 月，我们先动手重建了这台服务器。
+      我们制定了如下的重建计划：</p>
+    <ul>
+      <li>首先，考虑到镜像站上一半的文件都不到 10 KiB（注意我们的磁盘的物理扇区大小是 4 KiB），RAID-Z3 的开销过高，因此我们决定将其重建为 RAID-Z2 并且拆成两组 vdev。这样做还有一个额外的好处，即期望情况下我们还可以在这个 ZFS pool 中获得两倍的 IOPS，毕竟文件的每个“块”只存储在一个 vdev 上。</li>
+      <li>
+        <p>然后我们仔细研究了如何为镜像站场景调优 ZFS dataset 参数：</p>
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">recordsize=1M</code>：尽可能优化顺序读写性能，同时减少碎片化</li>
+          <li>
+            <p><code class="language-plaintext highlighter-rouge">compression=zstd</code>：开点压缩来试试能节约多少磁盘空间</p>
+            <ul>
+              <li>
+                <p>OpenZFS 2.2 开始将 early-abort 机制引入了 Zstd 压缩算法（Zstd-3 以上的等级）。该机制会首先尝试使用 LZ4 和 Zstd-1 来压缩数据以便评估数据的可压缩性，如果数据不可压缩（熵太大），则不再尝试用设定的 Zstd 等级压缩，而是直接原样写入磁盘上，避免在不可压缩的数据上浪费 CPU。</p>
+                <p>我们已知镜像站上的大部分内容都是已经压缩过的，因此 early-abort 算是给我们兜了个底，让我们可以放心地开 Zstd。</p>
+              </li>
+            </ul>
+          </li>
+          <li><code class="language-plaintext highlighter-rouge">xattr=off</code>：镜像站上的文件不需要扩展属性</li>
+          <li><code class="language-plaintext highlighter-rouge">atime=off</code>：镜像站上的文件不需要记录，也不需要更新 atime，可以省掉不少写入</li>
+          <li><code class="language-plaintext highlighter-rouge">setuid=off</code>、<code class="language-plaintext highlighter-rouge">exec=off</code>、<code class="language-plaintext highlighter-rouge">devices=off</code> 也是我们不需要的挂载选项（也是一个更安全的做法）</li>
+          <li><code class="language-plaintext highlighter-rouge">secondarycache=metadata</code> 让 L2ARC 仅缓存 ZFS 内部的元数据。这是因为 Rsync 服务器上的文件访问模式更加均匀，而不像面向终端用户的 HTTP 服务器上冷热分明，因此仅缓存元数据可以节约 SSD 寿命。</li>
+        </ul>
+      </li>
+      <li>
+        <p>以及一些可能有潜在（但我们认为我们可以容忍的）风险的选项：</p>
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">sync=disabled</code>：禁用同步写入语义（<code class="language-plaintext highlighter-rouge">open(O_SYNC)</code>、<code class="language-plaintext highlighter-rouge">sync()</code> 和 <code class="language-plaintext highlighter-rouge">fsync()</code> 等）以让 ZFS 能够充分发挥写缓冲区的意义，如降低碎片率等</li>
+          <li><code class="language-plaintext highlighter-rouge">redundant_metadata=some</code>：（OpenZFS 2.2）减少元数据的冗余度来获得更好的写入性能。</li>
+        </ul>
+        <p>我们认为这两个选项符合我们对镜像站仓库内容的数据安全和完整性需求的理解，它们在其他场景下不一定“安全”。</p>
+      </li>
+      <li>
+        <p>对于 ZFS 模块层面的参数，光是 290+ 的数量就已经很劝退了。
+          此处感谢 Debian ZFS 维护者兼北京外国语大学镜像站管理员 @happyaron 的帮助，我们快速找出了十几个常用的参数进行针对性条件。</p>
+        <div class="language-shell highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="c"># 设置 ARC 大小范围为 160-200 GiB，并为操作系统保留 16 GiB 空闲</span>
 options zfs <span class="nv">zfs_arc_max</span><span class="o">=</span>214748364800
 options zfs <span class="nv">zfs_arc_min</span><span class="o">=</span>171798691840
 options zfs <span class="nv">zfs_arc_sys_free</span><span class="o">=</span>17179869184
@@ -148,211 +233,211 @@ options zfs <span class="nv">l2arc_headroom</span><span class="o">=</span>8
 options zfs <span class="nv">l2arc_write_max</span><span class="o">=</span>67108864
 options zfs <span class="nv">l2arc_noprefetch</span><span class="o">=</span>0
 </code></pre>
-            </div>
+          </div>
     </div>
-          <p>另外还有 <code class="language-plaintext highlighter-rouge">zfs_dmu_offset_next_sync</code>，但由于它从 OpenZFS 2.1.5 开始已经默认启用了，因此我们将其从本列表中略去。</p>
-        </li>
-      </ul>
-      <p>将 Rsync 服务暂时转移到由 HTTP 服务器兼任之后，我们 destroy 了原有的 ZFS pool 并重新组建了一个新的 pool，然后再从（上游或 TUNA、BFSU 等友校镜像站）外面把原有的仓库同步回来。
-        令我们感到惊讶的是，把总共近 40 TiB 的仓库同步回来只花了 3 天，比我们预想的要快得多。
-        其他的一些数据看起来也令人振奋：</p>
-      <ul>
-        <li>
-          <p>ZFS 压缩率：39.5T / 37.1T (1.07x)</p>
-          <p>需要特别指出的是，ZFS 只显示压缩率小数点后两位，所以更高的精度，需要通过原始数据自己计算：</p>
-          <div class="language-shell highlighter-rouge">
-            <div class="highlight">
-              <pre class="highlight"><code>zfs list <span class="nt">-po</span> name,logicalused,used
+        <p>另外还有 <code class="language-plaintext highlighter-rouge">zfs_dmu_offset_next_sync</code>，但由于它从 OpenZFS 2.1.5 开始已经默认启用了，因此我们将其从本列表中略去。</p>
+      </li>
+    </ul>
+    <p>将 Rsync 服务暂时转移到由 HTTP 服务器兼任之后，我们 destroy 了原有的 ZFS pool 并重新组建了一个新的 pool，然后再从（上游或 TUNA、BFSU 等友校镜像站）外面把原有的仓库同步回来。
+      令我们感到惊讶的是，把总共近 40 TiB 的仓库同步回来只花了 3 天，比我们预想的要快得多。
+      其他的一些数据看起来也令人振奋：</p>
+    <ul>
+      <li>
+        <p>ZFS 压缩率：39.5T / 37.1T (1.07x)</p>
+        <p>需要特别指出的是，ZFS 只显示压缩率小数点后两位，所以更高的精度，需要通过原始数据自己计算：</p>
+        <div class="language-shell highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>zfs list <span class="nt">-po</span> name,logicalused,used
 </code></pre>
-            </div>
+          </div>
     </div>
-          <p>我们更精确的压缩率是 1 + 6.57%，即压掉了 2.67 TB（2.43 TiB），约等于 <a href="/static/planet/ustc-mirrors-zfs-rebuild/lenovo-legion-wechat-data.jpg">9 份微信数据</a>（不是</p>
-        </li>
-        <li>
-          <p>最关键的是更合理的 I/O 负载：</p>
-          <figure class=""><a href="/static/planet/ustc-mirrors-zfs-rebuild/mirrors2-io-utilization-and-free-space-june-july-2024.png" class="image-popup" title="mirrors2 机器在重建前后的 I/O 负载
+        <p>我们更精确的压缩率是 1 + 6.57%，即压掉了 2.67 TB（2.43 TiB），约等于 <a href="/static/planet/ustc-mirrors-zfs-rebuild/lenovo-legion-wechat-data.jpg">9 份微信数据</a>（不是</p>
+      </li>
+      <li>
+        <p>最关键的是更合理的 I/O 负载：</p>
+        <figure class=""><a href="/static/planet/ustc-mirrors-zfs-rebuild/mirrors2-io-utilization-and-free-space-june-july-2024.png" class="image-popup" title="mirrors2 机器在重建前后的 I/O 负载
 "><img src="/static/planet/ustc-mirrors-zfs-rebuild/mirrors2-io-utilization-and-free-space-june-july-2024.png" alt="mirrors2 机器在重建前后的 I/O 负载" /></a>
-            <figcaption>
-              mirrors2 机器在重建前后的 I/O 负载
-            </figcaption>
-          </figure>
-        </li>
-      </ul>
-      <p>可以看出，经过几天的预热之后，I/O 负载维持在了 20% 左右，而在重建之前一直维持在 90% 以上。</p>
-      <h2 id="mirrors4">重建 HTTP 服务器</h2>
-      <p>我们的 HTTP 服务器是在 2020 年秋季搭建的，并且当时也有一些不同的背景。
-        申请这台服务器正是因为 Rsync 服务器容量过满且性能不佳，加上当时也没有了解 ZFS 的同学，我们对 ZFS 的印象很差，所以我们决定完全避开 ZFS，使用硬件 RAID、LVM 和 XFS，其中使用 LVM 的原因是 RAID 卡不支持跨两个控制器组 RAID。
-        对于“内存做缓存”这部分，我们决定直接使用内核的 page cache；而对于 SSD 缓存，我们则率先吃了 LVMcache 的螃蟹。</p>
-      <p>然而这些过于“新鲜”的技术并没有带来比（现在的 ZFS）更好的体验：</p>
-      <ul>
-        <li>XFS 无法缩小，因此我们不得不在 LVM VG 层面保留了 free PE。同时我们也不能把 XFS 文件系统用满，因此这里就有了两层无法利用的空闲空间。</li>
-        <li>我们最初分配了 1.5 TB 的 SSD 缓存，但 LVMcache 又建议我们不要超过 100 万个 chunk，我们当时也没有足够的精力和知识水平去研究这个建议背后的技术细节，因此我们最终只分配了 1 TiB（1 MiB chunk size * 1 Mi chunks）的 SSD 缓存。</li>
-        <li>SSD 缓存策略不可调，多年以后我们翻了 kernel 源码才发现它是一个 64 级的 LRU。</li>
-        <li>配好 cache 之后 GRUB 首先挂了（囧），我们调查发现原因是 GRUB 有一套自己的解析 LVM metadata 的代码，它并没有正确处理（或者说根本没处理）VG 中有 cache volume 的情况，我们不得不自己 <a href="https://github.com/taoky/grub/commit/85b260baec91aa4f7db85d7592f6be92d549a0ae">patch</a> 了 GRUB 才能正常开机。</li>
-        <li>由于我们对 LVMcache 的 chunk 不够了解，我们的 SSD 在不到 2 年的时间里就严重超过了写入寿命，我们被迫申请换新。</li>
-      </ul>
-      <p>在 SSD 换新之后，即使我们认为我们对 LVMcache 做出了稍微合理一点的调参，坚持忽略警告采用 128 KiB 的 chunk size 和 800 万个 chunk 之后，它的性能（命中率）也并不可观：</p>
-      <figure class=""><a href="/static/planet/ustc-mirrors-zfs-rebuild/mirrors4-dmcache-may-june-2024.png" class="image-popup" title="2024 年 5 月至 6 月期间 LVMcache 的命中率
+          <figcaption>
+            mirrors2 机器在重建前后的 I/O 负载
+          </figcaption>
+        </figure>
+      </li>
+    </ul>
+    <p>可以看出，经过几天的预热之后，I/O 负载维持在了 20% 左右，而在重建之前一直维持在 90% 以上。</p>
+    <h2 id="mirrors4">重建 HTTP 服务器</h2>
+    <p>我们的 HTTP 服务器是在 2020 年秋季搭建的，并且当时也有一些不同的背景。
+      申请这台服务器正是因为 Rsync 服务器容量过满且性能不佳，加上当时也没有了解 ZFS 的同学，我们对 ZFS 的印象很差，所以我们决定完全避开 ZFS，使用硬件 RAID、LVM 和 XFS，其中使用 LVM 的原因是 RAID 卡不支持跨两个控制器组 RAID。
+      对于“内存做缓存”这部分，我们决定直接使用内核的 page cache；而对于 SSD 缓存，我们则率先吃了 LVMcache 的螃蟹。</p>
+    <p>然而这些过于“新鲜”的技术并没有带来比（现在的 ZFS）更好的体验：</p>
+    <ul>
+      <li>XFS 无法缩小，因此我们不得不在 LVM VG 层面保留了 free PE。同时我们也不能把 XFS 文件系统用满，因此这里就有了两层无法利用的空闲空间。</li>
+      <li>我们最初分配了 1.5 TB 的 SSD 缓存，但 LVMcache 又建议我们不要超过 100 万个 chunk，我们当时也没有足够的精力和知识水平去研究这个建议背后的技术细节，因此我们最终只分配了 1 TiB（1 MiB chunk size * 1 Mi chunks）的 SSD 缓存。</li>
+      <li>SSD 缓存策略不可调，多年以后我们翻了 kernel 源码才发现它是一个 64 级的 LRU。</li>
+      <li>配好 cache 之后 GRUB 首先挂了（囧），我们调查发现原因是 GRUB 有一套自己的解析 LVM metadata 的代码，它并没有正确处理（或者说根本没处理）VG 中有 cache volume 的情况，我们不得不自己 <a href="https://github.com/taoky/grub/commit/85b260baec91aa4f7db85d7592f6be92d549a0ae">patch</a> 了 GRUB 才能正常开机。</li>
+      <li>由于我们对 LVMcache 的 chunk 不够了解，我们的 SSD 在不到 2 年的时间里就严重超过了写入寿命，我们被迫申请换新。</li>
+    </ul>
+    <p>在 SSD 换新之后，即使我们认为我们对 LVMcache 做出了稍微合理一点的调参，坚持忽略警告采用 128 KiB 的 chunk size 和 800 万个 chunk 之后，它的性能（命中率）也并不可观：</p>
+    <figure class=""><a href="/static/planet/ustc-mirrors-zfs-rebuild/mirrors4-dmcache-may-june-2024.png" class="image-popup" title="2024 年 5 月至 6 月期间 LVMcache 的命中率
 "><img src="/static/planet/ustc-mirrors-zfs-rebuild/mirrors4-dmcache-may-june-2024.png" alt="2024 年 5 月至 6 月期间 LVMcache 的命中率" /></a>
-        <figcaption>
-          2024 年 5 月至 6 月期间 LVMcache 的命中率
-        </figcaption>
-      </figure>
-      <p>这些年来我们已经受够了 LVMcache 的坑了，加上 Rsync 服务器重建的巨大成功，我们重新开始相信 ZFS 是天下第一的存储方案了。所以一个月之后，我们又制定了一个相似的重建计划准备重建 HTTP 服务器，但是有一些微小的差别：</p>
-      <ul>
-        <li>我们的 Rsync 服务器采用原生的 Debian kernel + <code class="language-plaintext highlighter-rouge">zfs-dkms</code>，但根据我们使用 PVE 的经验，我们准备在 HTTP 服务器上直接用 <code class="language-plaintext highlighter-rouge">6.8.8-3-pve</code> kernel，它打包了 <code class="language-plaintext highlighter-rouge">zfs.ko</code>，这样我们就不用在 DKMS 上浪费时间了。</li>
-        <li>由于磁盘数目相同（12 块），我们也采用了两个 6 盘 RAID-Z2 vdev 的组合。
-          <ul>
-            <li>考虑到这台服务器直接向用户提供 HTTP 服务，磁盘的访问模式会比 Rsync 服务器更加热冷分明，因此我们保持了 <code class="language-plaintext highlighter-rouge">secondarycache=all</code> 的设置（采用默认值，不动）。</li>
-            <li>这台新服务器的 CPU 更新更好，因此我们把压缩等级提高到了 <code class="language-plaintext highlighter-rouge">zstd-8</code> 来试试有没有更好的压缩比。</li>
-          </ul>
-        </li>
-        <li>我们在 Rsync 服务器上已经有了一个完整的、经过 ZFS 优化过的仓库，因此我们可以直接用 <code class="language-plaintext highlighter-rouge">zfs send -Lcp</code> 把数据倒过来。我们最终只花了 36 小时就把超过 50 TiB 的数据都倒回来了。</li>
-        <li>由于两台服务器上存储的镜像仓库有所不同，HTTP 服务器上的压缩比略低一些，为 1 + 3.93%（压掉了 2.42 TiB / 2.20 TiB）。</li>
-      </ul>
-      <p>我们把两台服务器的 I/O 负载放在一张图里对比：</p>
-      <figure class=""><a href="/static/planet/ustc-mirrors-zfs-rebuild/mirrors2-4-io-utilization-june-july-2024.png" class="image-popup" title="镜像站两台服务器在重建前后的 I/O 负载
+      <figcaption>
+        2024 年 5 月至 6 月期间 LVMcache 的命中率
+      </figcaption>
+    </figure>
+    <p>这些年来我们已经受够了 LVMcache 的坑了，加上 Rsync 服务器重建的巨大成功，我们重新开始相信 ZFS 是天下第一的存储方案了。所以一个月之后，我们又制定了一个相似的重建计划准备重建 HTTP 服务器，但是有一些微小的差别：</p>
+    <ul>
+      <li>我们的 Rsync 服务器采用原生的 Debian kernel + <code class="language-plaintext highlighter-rouge">zfs-dkms</code>，但根据我们使用 PVE 的经验，我们准备在 HTTP 服务器上直接用 <code class="language-plaintext highlighter-rouge">6.8.8-3-pve</code> kernel，它打包了 <code class="language-plaintext highlighter-rouge">zfs.ko</code>，这样我们就不用在 DKMS 上浪费时间了。</li>
+      <li>由于磁盘数目相同（12 块），我们也采用了两个 6 盘 RAID-Z2 vdev 的组合。
+        <ul>
+          <li>考虑到这台服务器直接向用户提供 HTTP 服务，磁盘的访问模式会比 Rsync 服务器更加热冷分明，因此我们保持了 <code class="language-plaintext highlighter-rouge">secondarycache=all</code> 的设置（采用默认值，不动）。</li>
+          <li>这台新服务器的 CPU 更新更好，因此我们把压缩等级提高到了 <code class="language-plaintext highlighter-rouge">zstd-8</code> 来试试有没有更好的压缩比。</li>
+        </ul>
+      </li>
+      <li>我们在 Rsync 服务器上已经有了一个完整的、经过 ZFS 优化过的仓库，因此我们可以直接用 <code class="language-plaintext highlighter-rouge">zfs send -Lcp</code> 把数据倒过来。我们最终只花了 36 小时就把超过 50 TiB 的数据都倒回来了。</li>
+      <li>由于两台服务器上存储的镜像仓库有所不同，HTTP 服务器上的压缩比略低一些，为 1 + 3.93%（压掉了 2.42 TiB / 2.20 TiB）。</li>
+    </ul>
+    <p>我们把两台服务器的 I/O 负载放在一张图里对比：</p>
+    <figure class=""><a href="/static/planet/ustc-mirrors-zfs-rebuild/mirrors2-4-io-utilization-june-july-2024.png" class="image-popup" title="镜像站两台服务器在重建前后的 I/O 负载
 "><img src="/static/planet/ustc-mirrors-zfs-rebuild/mirrors2-4-io-utilization-june-july-2024.png" alt="镜像站两台服务器在重建前后的 I/O 负载" /></a>
-        <figcaption>
-          镜像站两台服务器在重建前后的 I/O 负载
-        </figcaption>
-      </figure>
-      <p>上图左半部分为重建前的情况，中间部分为仅重建了 Rsync 服务器的情况，右半部分为两台服务器都重建完毕后的情况。</p>
-      <p>ZFS ARC 的命中率也十分可观：</p>
-      <figure class=""><a href="/static/planet/ustc-mirrors-zfs-rebuild/mirrors2-4-zfs-arc-hit-rate.png" class="image-popup" title="两台服务器的 ZFS ARC 命中率
+      <figcaption>
+        镜像站两台服务器在重建前后的 I/O 负载
+      </figcaption>
+    </figure>
+    <p>上图左半部分为重建前的情况，中间部分为仅重建了 Rsync 服务器的情况，右半部分为两台服务器都重建完毕后的情况。</p>
+    <p>ZFS ARC 的命中率也十分可观：</p>
+    <figure class=""><a href="/static/planet/ustc-mirrors-zfs-rebuild/mirrors2-4-zfs-arc-hit-rate.png" class="image-popup" title="两台服务器的 ZFS ARC 命中率
 "><img src="/static/planet/ustc-mirrors-zfs-rebuild/mirrors2-4-zfs-arc-hit-rate.png" alt="两台服务器的 ZFS ARC 命中率" /></a>
-        <figcaption>
-          两台服务器的 ZFS ARC 命中率
-        </figcaption>
-      </figure>
-      <p>稳定下来之后，两台服务器的 I/O 负载还更低了：</p>
-      <figure class=""><a href="/static/planet/ustc-mirrors-zfs-rebuild/mirrors2-4-disk-io-after-rebuild.png" class="image-popup" title="两台服务器重建后磁盘 I/O 的稳定情况
+      <figcaption>
+        两台服务器的 ZFS ARC 命中率
+      </figcaption>
+    </figure>
+    <p>稳定下来之后，两台服务器的 I/O 负载还更低了：</p>
+    <figure class=""><a href="/static/planet/ustc-mirrors-zfs-rebuild/mirrors2-4-disk-io-after-rebuild.png" class="image-popup" title="两台服务器重建后磁盘 I/O 的稳定情况
 "><img src="/static/planet/ustc-mirrors-zfs-rebuild/mirrors2-4-disk-io-after-rebuild.png" alt="两台服务器重建后磁盘 I/O 的稳定情况" /></a>
-        <figcaption>
-          两台服务器重建后磁盘 I/O 的稳定情况
-        </figcaption>
-      </figure>
-      <h2 id="杂项">杂项</h2>
-      <h3 id="zfs-透明压缩">ZFS 透明压缩</h3>
-      <p>我们并没有想到这么多仓库的压缩率都还不错：</p>
-      <table>
-        <thead>
-          <tr>
-            <th style="text-align: left">NAME</th>
-            <th style="text-align: right">LUSED</th>
-            <th style="text-align: right">USED</th>
-            <th style="text-align: right">RATIO</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td style="text-align: left">pool0/repo/crates.io-index</td>
-            <td style="text-align: right">2.19G</td>
-            <td style="text-align: right">1.65G</td>
-            <td style="text-align: right">3.01x</td>
-          </tr>
-          <tr>
-            <td style="text-align: left">pool0/repo/elpa</td>
-            <td style="text-align: right">3.35G</td>
-            <td style="text-align: right">2.32G</td>
-            <td style="text-align: right">1.67x</td>
-          </tr>
-          <tr>
-            <td style="text-align: left">pool0/repo/rfc</td>
-            <td style="text-align: right">4.37G</td>
-            <td style="text-align: right">3.01G</td>
-            <td style="text-align: right">1.56x</td>
-          </tr>
-          <tr>
-            <td style="text-align: left">pool0/repo/debian-cdimage</td>
-            <td style="text-align: right">1.58T</td>
-            <td style="text-align: right">1.04T</td>
-            <td style="text-align: right">1.54x</td>
-          </tr>
-          <tr>
-            <td style="text-align: left">pool0/repo/tldp</td>
-            <td style="text-align: right">4.89G</td>
-            <td style="text-align: right">3.78G</td>
-            <td style="text-align: right">1.48x</td>
-          </tr>
-          <tr>
-            <td style="text-align: left">pool0/repo/loongnix</td>
-            <td style="text-align: right">438G</td>
-            <td style="text-align: right">332G</td>
-            <td style="text-align: right">1.34x</td>
-          </tr>
-          <tr>
-            <td style="text-align: left">pool0/repo/rosdistro</td>
-            <td style="text-align: right">32.2M</td>
-            <td style="text-align: right">26.6M</td>
-            <td style="text-align: right">1.31x</td>
-          </tr>
-        </tbody>
-      </table>
-      <p>有些数字看着不太对劲（比如第一个），我们认为是这个问题造成的：<a href="https://github.com/openzfs/zfs/issues/7639"><i class="fab fa-github"></i> openzfs/zfs#7639</a></p>
-      <p>如果我们按照压缩量排序，结果如下：</p>
-      <table>
-        <thead>
-          <tr>
-            <th style="text-align: left">NAME</th>
-            <th style="text-align: right">LUSED</th>
-            <th style="text-align: right">USED</th>
-            <th style="text-align: right">DIFF</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td style="text-align: left">pool0/repo</td>
-            <td style="text-align: right">58.3T</td>
-            <td style="text-align: right">56.1T</td>
-            <td style="text-align: right">2.2T</td>
-          </tr>
-          <tr>
-            <td style="text-align: left">pool0/repo/debian-cdimage</td>
-            <td style="text-align: right">1.6T</td>
-            <td style="text-align: right">1.0T</td>
-            <td style="text-align: right">549.6G</td>
-          </tr>
-          <tr>
-            <td style="text-align: left">pool0/repo/opensuse</td>
-            <td style="text-align: right">2.5T</td>
-            <td style="text-align: right">2.3T</td>
-            <td style="text-align: right">279.7G</td>
-          </tr>
-          <tr>
-            <td style="text-align: left">pool0/repo/turnkeylinux</td>
-            <td style="text-align: right">1.2T</td>
-            <td style="text-align: right">1.0T</td>
-            <td style="text-align: right">155.2G</td>
-          </tr>
-          <tr>
-            <td style="text-align: left">pool0/repo/loongnix</td>
-            <td style="text-align: right">438.2G</td>
-            <td style="text-align: right">331.9G</td>
-            <td style="text-align: right">106.3G</td>
-          </tr>
-          <tr>
-            <td style="text-align: left">pool0/repo/alpine</td>
-            <td style="text-align: right">3.0T</td>
-            <td style="text-align: right">2.9T</td>
-            <td style="text-align: right">103.9G</td>
-          </tr>
-          <tr>
-            <td style="text-align: left">pool0/repo/openwrt</td>
-            <td style="text-align: right">1.8T</td>
-            <td style="text-align: right">1.7T</td>
-            <td style="text-align: right">70.0G</td>
-          </tr>
-        </tbody>
-      </table>
-      <p><code class="language-plaintext highlighter-rouge">debian-cdimage</code> 一个仓库就占了总压缩量的 1/4。</p>
-      <h3 id="grafana-for-zfs-io">Grafana for ZFS I/O</h3>
-      <p>重建后，我们也修了一个显示 ZFS I/O 的 Grafana 面板。
-        因为 ZFS 的 I/O 统计数据是通过 <code class="language-plaintext highlighter-rouge">/proc/spl/kstat/zfs/$POOL/objset-$OBJSETID_HEX</code> 获取的，并且是分“object set”（即 dataset）累计统计的，所以我们需要先对每个 dataset 的数据做差分，再按 pool 加起来。
-        也就是说，一个 InfluxQL subquery 是跑不掉的的。</p>
-      <div class="language-sql highlighter-rouge">
-        <div class="highlight">
-          <pre class="highlight"><code><span class="k">SELECT</span>
+      <figcaption>
+        两台服务器重建后磁盘 I/O 的稳定情况
+      </figcaption>
+    </figure>
+    <h2 id="杂项">杂项</h2>
+    <h3 id="zfs-透明压缩">ZFS 透明压缩</h3>
+    <p>我们并没有想到这么多仓库的压缩率都还不错：</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left">NAME</th>
+          <th style="text-align: right">LUSED</th>
+          <th style="text-align: right">USED</th>
+          <th style="text-align: right">RATIO</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">pool0/repo/crates.io-index</td>
+          <td style="text-align: right">2.19G</td>
+          <td style="text-align: right">1.65G</td>
+          <td style="text-align: right">3.01x</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pool0/repo/elpa</td>
+          <td style="text-align: right">3.35G</td>
+          <td style="text-align: right">2.32G</td>
+          <td style="text-align: right">1.67x</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pool0/repo/rfc</td>
+          <td style="text-align: right">4.37G</td>
+          <td style="text-align: right">3.01G</td>
+          <td style="text-align: right">1.56x</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pool0/repo/debian-cdimage</td>
+          <td style="text-align: right">1.58T</td>
+          <td style="text-align: right">1.04T</td>
+          <td style="text-align: right">1.54x</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pool0/repo/tldp</td>
+          <td style="text-align: right">4.89G</td>
+          <td style="text-align: right">3.78G</td>
+          <td style="text-align: right">1.48x</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pool0/repo/loongnix</td>
+          <td style="text-align: right">438G</td>
+          <td style="text-align: right">332G</td>
+          <td style="text-align: right">1.34x</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pool0/repo/rosdistro</td>
+          <td style="text-align: right">32.2M</td>
+          <td style="text-align: right">26.6M</td>
+          <td style="text-align: right">1.31x</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>有些数字看着不太对劲（比如第一个），我们认为是这个问题造成的：<a href="https://github.com/openzfs/zfs/issues/7639"><i class="fab fa-github"></i> openzfs/zfs#7639</a></p>
+    <p>如果我们按照压缩量排序，结果如下：</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left">NAME</th>
+          <th style="text-align: right">LUSED</th>
+          <th style="text-align: right">USED</th>
+          <th style="text-align: right">DIFF</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">pool0/repo</td>
+          <td style="text-align: right">58.3T</td>
+          <td style="text-align: right">56.1T</td>
+          <td style="text-align: right">2.2T</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pool0/repo/debian-cdimage</td>
+          <td style="text-align: right">1.6T</td>
+          <td style="text-align: right">1.0T</td>
+          <td style="text-align: right">549.6G</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pool0/repo/opensuse</td>
+          <td style="text-align: right">2.5T</td>
+          <td style="text-align: right">2.3T</td>
+          <td style="text-align: right">279.7G</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pool0/repo/turnkeylinux</td>
+          <td style="text-align: right">1.2T</td>
+          <td style="text-align: right">1.0T</td>
+          <td style="text-align: right">155.2G</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pool0/repo/loongnix</td>
+          <td style="text-align: right">438.2G</td>
+          <td style="text-align: right">331.9G</td>
+          <td style="text-align: right">106.3G</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pool0/repo/alpine</td>
+          <td style="text-align: right">3.0T</td>
+          <td style="text-align: right">2.9T</td>
+          <td style="text-align: right">103.9G</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pool0/repo/openwrt</td>
+          <td style="text-align: right">1.8T</td>
+          <td style="text-align: right">1.7T</td>
+          <td style="text-align: right">70.0G</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><code class="language-plaintext highlighter-rouge">debian-cdimage</code> 一个仓库就占了总压缩量的 1/4。</p>
+    <h3 id="grafana-for-zfs-io">Grafana for ZFS I/O</h3>
+    <p>重建后，我们也修了一个显示 ZFS I/O 的 Grafana 面板。
+      因为 ZFS 的 I/O 统计数据是通过 <code class="language-plaintext highlighter-rouge">/proc/spl/kstat/zfs/$POOL/objset-$OBJSETID_HEX</code> 获取的，并且是分“object set”（即 dataset）累计统计的，所以我们需要先对每个 dataset 的数据做差分，再按 pool 加起来。
+      也就是说，一个 InfluxQL subquery 是跑不掉的的。</p>
+    <div class="language-sql highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code><span class="k">SELECT</span>
   <span class="n">non_negative_derivative</span><span class="p">(</span><span class="k">sum</span><span class="p">(</span><span class="nv">"reads"</span><span class="p">),</span> <span class="mi">1</span><span class="n">s</span><span class="p">)</span> <span class="k">AS</span> <span class="nv">"read"</span><span class="p">,</span>
   <span class="n">non_negative_derivative</span><span class="p">(</span><span class="k">sum</span><span class="p">(</span><span class="nv">"writes"</span><span class="p">),</span> <span class="mi">1</span><span class="n">s</span><span class="p">)</span> <span class="k">AS</span> <span class="nv">"write"</span>
 <span class="k">FROM</span> <span class="p">(</span>
@@ -366,212 +451,212 @@ options zfs <span class="nv">l2arc_noprefetch</span><span class="o">=</span>0
 <span class="k">WHERE</span> <span class="err">$</span><span class="n">timeFilter</span>
 <span class="k">GROUP</span> <span class="k">BY</span> <span class="nb">time</span><span class="p">(</span><span class="err">$</span><span class="n">interval</span><span class="p">),</span> <span class="nv">"pool"</span><span class="p">::</span><span class="n">tag</span> <span class="n">fill</span><span class="p">(</span><span class="n">linear</span><span class="p">)</span>
 </code></pre>
-        </div>
       </div>
-      <p>由于 subquery 的存在，这个 query 确实有点慢，但我们也没啥能优化的。</p>
-      <p>如果要显示读写速率的话，直接把内层查询的 <code class="language-plaintext highlighter-rouge">reads</code> 和 <code class="language-plaintext highlighter-rouge">writes</code> 换成 <code class="language-plaintext highlighter-rouge">nread</code> 和 <code class="language-plaintext highlighter-rouge">nwritten</code> 就行了。</p>
-      <figure class=""><a href="/static/planet/ustc-mirrors-zfs-rebuild/mirrors2-4-zfs-io-count.png" class="image-popup" title="ZFS IOPS 和带宽
+    </div>
+    <p>由于 subquery 的存在，这个 query 确实有点慢，但我们也没啥能优化的。</p>
+    <p>如果要显示读写速率的话，直接把内层查询的 <code class="language-plaintext highlighter-rouge">reads</code> 和 <code class="language-plaintext highlighter-rouge">writes</code> 换成 <code class="language-plaintext highlighter-rouge">nread</code> 和 <code class="language-plaintext highlighter-rouge">nwritten</code> 就行了。</p>
+    <figure class=""><a href="/static/planet/ustc-mirrors-zfs-rebuild/mirrors2-4-zfs-io-count.png" class="image-popup" title="ZFS IOPS 和带宽
 "><img src="/static/planet/ustc-mirrors-zfs-rebuild/mirrors2-4-zfs-io-count.png" alt="ZFS IOPS 和带宽" /></a>
-        <figcaption>
-          ZFS IOPS 和带宽
-        </figcaption>
-      </figure>
-      <p>令 UC 震惊部出动的是，一个机械盘阵列竟然能跑出平均 15k、最高 50k 的 IOPS。
-        我们发现这个统计数字算上了 ARC hit，也就是只有一小部分 I/O 请求是真正落盘的，那就好解释了。</p>
-      <h3 id="apparmor">AppArmor</h3>
-      <p>换上先进的 PVE kernel 之后，我们很快就发现同步任务全挂了（）
-        排查发现 <code class="language-plaintext highlighter-rouge">rsync</code> 在调用 <code class="language-plaintext highlighter-rouge">socketpair(2)</code> 的时候冒出了 <code class="language-plaintext highlighter-rouge">EPERM</code>，这是我们从来没遇到过的情况。
-        实际上这些系统调用都被 AppArmor 拦下来了，最终查到是 Ubuntu 在 kernel 里加的私货 <code class="language-plaintext highlighter-rouge">security/apparmor/af_unix.c</code> 导致的。
-        由于 Proxmox VE 的 kernel 是从 Ubuntu fork 过来的，这个私货也就跑到我们服务器上了。</p>
-      <p>我们发现 PVE 也打包了自己的 AppArmor <code class="language-plaintext highlighter-rouge">features</code> 配置，我们就把它直接拉过来用：</p>
-      <div class="language-shell highlighter-rouge">
-        <div class="highlight">
-          <pre class="highlight"><code>dpkg-divert <span class="nt">--package</span> lxc-pve <span class="nt">--rename</span> <span class="nt">--divert</span> /usr/share/apparmor-features/features.stock <span class="nt">--add</span> /usr/share/apparmor-features/features
+      <figcaption>
+        ZFS IOPS 和带宽
+      </figcaption>
+    </figure>
+    <p>令 UC 震惊部出动的是，一个机械盘阵列竟然能跑出平均 15k、最高 50k 的 IOPS。
+      我们发现这个统计数字算上了 ARC hit，也就是只有一小部分 I/O 请求是真正落盘的，那就好解释了。</p>
+    <h3 id="apparmor">AppArmor</h3>
+    <p>换上先进的 PVE kernel 之后，我们很快就发现同步任务全挂了（）
+      排查发现 <code class="language-plaintext highlighter-rouge">rsync</code> 在调用 <code class="language-plaintext highlighter-rouge">socketpair(2)</code> 的时候冒出了 <code class="language-plaintext highlighter-rouge">EPERM</code>，这是我们从来没遇到过的情况。
+      实际上这些系统调用都被 AppArmor 拦下来了，最终查到是 Ubuntu 在 kernel 里加的私货 <code class="language-plaintext highlighter-rouge">security/apparmor/af_unix.c</code> 导致的。
+      由于 Proxmox VE 的 kernel 是从 Ubuntu fork 过来的，这个私货也就跑到我们服务器上了。</p>
+    <p>我们发现 PVE 也打包了自己的 AppArmor <code class="language-plaintext highlighter-rouge">features</code> 配置，我们就把它直接拉过来用：</p>
+    <div class="language-shell highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code>dpkg-divert <span class="nt">--package</span> lxc-pve <span class="nt">--rename</span> <span class="nt">--divert</span> /usr/share/apparmor-features/features.stock <span class="nt">--add</span> /usr/share/apparmor-features/features
 wget <span class="nt">-O</span> /usr/share/apparmor-features/features https://github.com/proxmox/lxc/raw/master/debian/features
 </code></pre>
-        </div>
       </div>
-      <h3 id="file-deduplication">文件级去重</h3>
-      <p>我们发现个别仓库有大量的重复的、内容相同的目录，我们怀疑可能是同步方法（HTTP）的限制导致目录的符号链接变成了完整内容的拷贝。</p>
-      <figure class=""><a href="/static/planet/ustc-mirrors-zfs-rebuild/ls-zerotier-redhat-el.png" class="image-popup" title="ZeroTier 仓库中的一些目录
+    </div>
+    <h3 id="file-deduplication">文件级去重</h3>
+    <p>我们发现个别仓库有大量的重复的、内容相同的目录，我们怀疑可能是同步方法（HTTP）的限制导致目录的符号链接变成了完整内容的拷贝。</p>
+    <figure class=""><a href="/static/planet/ustc-mirrors-zfs-rebuild/ls-zerotier-redhat-el.png" class="image-popup" title="ZeroTier 仓库中的一些目录
 "><img src="/static/planet/ustc-mirrors-zfs-rebuild/ls-zerotier-redhat-el.png" alt="ZeroTier 仓库中的一些目录" /></a>
-        <figcaption>
-          ZeroTier 仓库中的一些目录
-        </figcaption>
-      </figure>
-      <p>我们想到了 ZFS 的 deduplication，于是我们在 ZeroTier 仓库上做了一个初步的测试：</p>
-      <div class="language-shell highlighter-rouge">
-        <div class="highlight">
-          <pre class="highlight"><code>zfs create <span class="nt">-o</span> <span class="nv">dedup</span><span class="o">=</span>on pool0/repo/zerotier
+      <figcaption>
+        ZeroTier 仓库中的一些目录
+      </figcaption>
+    </figure>
+    <p>我们想到了 ZFS 的 deduplication，于是我们在 ZeroTier 仓库上做了一个初步的测试：</p>
+    <div class="language-shell highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code>zfs create <span class="nt">-o</span> <span class="nv">dedup</span><span class="o">=</span>on pool0/repo/zerotier
 <span class="c"># 导入数据</span>
 </code></pre>
-        </div>
       </div>
-      <div class="language-console highlighter-rouge">
-        <div class="highlight">
-          <pre class="highlight"><code><span class="gp">#</span><span class="w"> </span>zdb <span class="nt">-DDD</span> pool0
+    </div>
+    <div class="language-console highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code><span class="gp">#</span><span class="w"> </span>zdb <span class="nt">-DDD</span> pool0
 <span class="go">dedup = 4.93, compress = 1.23, copies = 1.00, dedup * compress / copies = 6.04
 </span></code></pre>
-        </div>
       </div>
-      <p>结果十分可观，但考虑到 ZFS dedup 一向来糟糕的名声，我们还是不太想在镜像站上启用。
-        所以我们重新找了个更灵车的方案：</p>
-      <div class="language-shell highlighter-rouge">
-        <div class="highlight">
-          <pre class="highlight"><code><span class="c"># post-sync.sh</span>
+    </div>
+    <p>结果十分可观，但考虑到 ZFS dedup 一向来糟糕的名声，我们还是不太想在镜像站上启用。
+      所以我们重新找了个更灵车的方案：</p>
+    <div class="language-shell highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code><span class="c"># post-sync.sh</span>
 <span class="c"># Do file-level deduplication for select repos</span>
 <span class="k">case</span> <span class="s2">"</span><span class="nv">$NAME</span><span class="s2">"</span> <span class="k">in
   </span>docker-ce|influxdata|nginx|openresty|proxmox|salt|tailscale|zerotier<span class="p">)</span>
     jdupes <span class="nt">-L</span> <span class="nt">-Q</span> <span class="nt">-r</span> <span class="nt">-q</span> <span class="s2">"</span><span class="nv">$DIR</span><span class="s2">"</span> <span class="p">;;</span>
 <span class="k">esac</span>
 </code></pre>
-        </div>
       </div>
-      <p>这个用户态的文件去重工具十分好用，效果堪比 ZFS，而且没有性能损失。
-        我们对几个明显有重复内容的仓库跑了一下 jdupes，结果如下：</p>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Orig</th>
-            <th>Dedup</th>
-            <th>Diff</th>
-            <th>Ratio</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>proxmox</td>
-            <td>395.4G</td>
-            <td>162.6G</td>
-            <td>232.9G</td>
-            <td>2.43x</td>
-          </tr>
-          <tr>
-            <td>docker-ce</td>
-            <td>539.6G</td>
-            <td>318.2G</td>
-            <td>221.4G</td>
-            <td>1.70x</td>
-          </tr>
-          <tr>
-            <td>influxdata</td>
-            <td>248.4G</td>
-            <td>54.8G</td>
-            <td>193.6G</td>
-            <td>4.54x</td>
-          </tr>
-          <tr>
-            <td>salt</td>
-            <td>139.0G</td>
-            <td>87.2G</td>
-            <td>51.9G</td>
-            <td>1.59x</td>
-          </tr>
-          <tr>
-            <td>nginx</td>
-            <td>94.9G</td>
-            <td>59.7G</td>
-            <td>35.2G</td>
-            <td>1.59x</td>
-          </tr>
-          <tr>
-            <td>zerotier</td>
-            <td>29.8G</td>
-            <td>6.1G</td>
-            <td>23.7G</td>
-            <td>4.88x</td>
-          </tr>
-          <tr>
-            <td>mysql-repo</td>
-            <td>647.8G</td>
-            <td>632.5G</td>
-            <td>15.2G</td>
-            <td>1.02x</td>
-          </tr>
-          <tr>
-            <td>openresty</td>
-            <td>65.1G</td>
-            <td>53.4G</td>
-            <td>11.7G</td>
-            <td>1.22x</td>
-          </tr>
-          <tr>
-            <td>tailscale</td>
-            <td>17.9G</td>
-            <td>9.0G</td>
-            <td>9.0G</td>
-            <td>2.00x</td>
-          </tr>
-        </tbody>
-      </table>
-      <p>参考上述表格，我们排除了 <code class="language-plaintext highlighter-rouge">mysql-repo</code>，因为它的去重比例太低，不值得花费跑一遍去重产生的 I/O 负载。</p>
-      <h2 id="conclusion">总结</h2>
-      <p>ZFS 解决了我们镜像站上的一大堆问题，并且有了此次调参经验，我们现在宣布 <strong>ZFS 天下第一</strong>（不是）</p>
-      <p>有了 ZFS 之后：</p>
-      <ul>
-        <li>我们不再担心分区问题，ZFS 可以灵活分配。</li>
-        <li>我们的机械盘比别人的固态盘跑得还快，这非常 excited！
-          <ul>
-            <li>我们成为了第一个不再<strong>羡慕</strong> TUNA 的全闪服务器的镜像站！</li>
-          </ul>
-        </li>
-        <li>免费获得额外容量，由 ZFS 透明压缩和去重联合赞助！</li>
-      </ul>
-      <h3 id="considerations">思考</h3>
-      <p>虽然我们的 ZFS 配置看起来非常高效，但我们也知道 ZFS 在长期运行中可能会因为碎片化而导致性能下降的问题。
-        我们会持续关注我们的服务器，监控长期的性能变化。</p>
-      ]]></content><author><name>iBug</name></author><category term="mirrors" /><category term="linux" /><category term="服务器" /><category term="zfs" /><summary type="html"><![CDATA[A.K.A. 如何让 2000 元的机械硬盘跑得比 3000 元的固态硬盘还快（]]></summary></entry><entry><title type="html">使用 Rclone 备份 OneDrive 内容</title><link href="https://lug.ustc.edu.cn/planet/2024/05/onedrive-backup-with-rclone/" rel="alternate" type="text/html" title="使用 Rclone 备份 OneDrive 内容" /><published>2024-05-10T00:00:00+08:00</published><updated>2024-09-15T01:34:15+08:00</updated><id>https://lug.ustc.edu.cn/planet/2024/05/onedrive-backup-with-rclone</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2024/05/onedrive-backup-with-rclone/"><![CDATA[<p>本文用于介绍如何使用 Rclone 备份 OneDrive 内容。</p>
-    <h2 id="rclone-简介">Rclone 简介</h2>
-    <p>Rclone 是一个命令行工具，用于同步文件和目录到和从云存储服务。它支持 Google Drive、Amazon S3、Dropbox、Microsoft OneDrive、Yandex Disk、Box 和其他一些云存储服务。Rclone 是一个 Go 程序，可以在 Windows、macOS、Linux 和其他操作系统上运行。</p>
-    <h2 id="安装-rclone">安装 Rclone</h2>
-    <p>Rclone 官方的下载链接在 <a href="https://rclone.org/downloads/">这里</a>。你可以根据自己的操作系统下载对应的版本。</p>
-    <p>部分常见的包管理工具也提供了 Rclone 的安装方式，例如：</p>
+    </div>
+    <p>这个用户态的文件去重工具十分好用，效果堪比 ZFS，而且没有性能损失。
+      我们对几个明显有重复内容的仓库跑了一下 jdupes，结果如下：</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Orig</th>
+          <th>Dedup</th>
+          <th>Diff</th>
+          <th>Ratio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>proxmox</td>
+          <td>395.4G</td>
+          <td>162.6G</td>
+          <td>232.9G</td>
+          <td>2.43x</td>
+        </tr>
+        <tr>
+          <td>docker-ce</td>
+          <td>539.6G</td>
+          <td>318.2G</td>
+          <td>221.4G</td>
+          <td>1.70x</td>
+        </tr>
+        <tr>
+          <td>influxdata</td>
+          <td>248.4G</td>
+          <td>54.8G</td>
+          <td>193.6G</td>
+          <td>4.54x</td>
+        </tr>
+        <tr>
+          <td>salt</td>
+          <td>139.0G</td>
+          <td>87.2G</td>
+          <td>51.9G</td>
+          <td>1.59x</td>
+        </tr>
+        <tr>
+          <td>nginx</td>
+          <td>94.9G</td>
+          <td>59.7G</td>
+          <td>35.2G</td>
+          <td>1.59x</td>
+        </tr>
+        <tr>
+          <td>zerotier</td>
+          <td>29.8G</td>
+          <td>6.1G</td>
+          <td>23.7G</td>
+          <td>4.88x</td>
+        </tr>
+        <tr>
+          <td>mysql-repo</td>
+          <td>647.8G</td>
+          <td>632.5G</td>
+          <td>15.2G</td>
+          <td>1.02x</td>
+        </tr>
+        <tr>
+          <td>openresty</td>
+          <td>65.1G</td>
+          <td>53.4G</td>
+          <td>11.7G</td>
+          <td>1.22x</td>
+        </tr>
+        <tr>
+          <td>tailscale</td>
+          <td>17.9G</td>
+          <td>9.0G</td>
+          <td>9.0G</td>
+          <td>2.00x</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>参考上述表格，我们排除了 <code class="language-plaintext highlighter-rouge">mysql-repo</code>，因为它的去重比例太低，不值得花费跑一遍去重产生的 I/O 负载。</p>
+    <h2 id="conclusion">总结</h2>
+    <p>ZFS 解决了我们镜像站上的一大堆问题，并且有了此次调参经验，我们现在宣布 <strong>ZFS 天下第一</strong>（不是）</p>
+    <p>有了 ZFS 之后：</p>
     <ul>
-      <li>
-        <p>在 Windows 上，你可以使用 Chocolatey 安装 Rclone：</p>
-        <div class="language-bash highlighter-rouge">
-          <div class="highlight">
-            <pre class="highlight"><code>choco <span class="nb">install </span>rclone
-</code></pre>
-          </div>
-    </div>
+      <li>我们不再担心分区问题，ZFS 可以灵活分配。</li>
+      <li>我们的机械盘比别人的固态盘跑得还快，这非常 excited！
+        <ul>
+          <li>我们成为了第一个不再<strong>羡慕</strong> TUNA 的全闪服务器的镜像站！</li>
+        </ul>
       </li>
-      <li>
-        <p>在 Windows 上，你也可以使用 Winget 安装 Rclone：</p>
-        <div class="language-bash highlighter-rouge">
-          <div class="highlight">
-            <pre class="highlight"><code>winget <span class="nb">install </span>Rclone.Rclone
-</code></pre>
-          </div>
-    </div>
-      </li>
-      <li>
-        <p>在 macOS 上，你可以使用 Homebrew 安装 Rclone：</p>
-        <div class="language-bash highlighter-rouge">
-          <div class="highlight">
-            <pre class="highlight"><code>brew <span class="nb">install </span>rclone
-</code></pre>
-          </div>
-    </div>
-      </li>
-      <li>
-        <p>在 Ubuntu 上，你可以使用 apt 安装 Rclone：</p>
-        <div class="language-bash highlighter-rouge">
-          <div class="highlight">
-            <pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>rclone
-</code></pre>
-          </div>
-    </div>
-      </li>
-      <li>
-        <p>更多包管理器的安装方法可以参考 <a href="https://rclone.org/install/#package-manager">Rclone 官方文档</a>。</p>
-      </li>
+      <li>免费获得额外容量，由 ZFS 透明压缩和去重联合赞助！</li>
     </ul>
-    <p>运行 <code class="language-plaintext highlighter-rouge">rclone --version</code> 来检查 Rclone 是否安装成功，如果正常，你应该类似看到如下输出：</p>
-    <div class="language-console highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>rclone <span class="nt">--version</span>
+    <h3 id="considerations">思考</h3>
+    <p>虽然我们的 ZFS 配置看起来非常高效，但我们也知道 ZFS 在长期运行中可能会因为碎片化而导致性能下降的问题。
+      我们会持续关注我们的服务器，监控长期的性能变化。</p>
+    ]]></content><author><name>iBug</name></author><category term="mirrors" /><category term="linux" /><category term="服务器" /><category term="zfs" /><summary type="html"><![CDATA[A.K.A. 如何让 2000 元的机械硬盘跑得比 3000 元的固态硬盘还快（]]></summary></entry><entry><title type="html">使用 Rclone 备份 OneDrive 内容</title><link href="https://lug.ustc.edu.cn/planet/2024/05/onedrive-backup-with-rclone/" rel="alternate" type="text/html" title="使用 Rclone 备份 OneDrive 内容" /><published>2024-05-10T00:00:00+08:00</published><updated>2024-09-15T01:34:15+08:00</updated><id>https://lug.ustc.edu.cn/planet/2024/05/onedrive-backup-with-rclone</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2024/05/onedrive-backup-with-rclone/"><![CDATA[<p>本文用于介绍如何使用 Rclone 备份 OneDrive 内容。</p>
+  <h2 id="rclone-简介">Rclone 简介</h2>
+  <p>Rclone 是一个命令行工具，用于同步文件和目录到和从云存储服务。它支持 Google Drive、Amazon S3、Dropbox、Microsoft OneDrive、Yandex Disk、Box 和其他一些云存储服务。Rclone 是一个 Go 程序，可以在 Windows、macOS、Linux 和其他操作系统上运行。</p>
+  <h2 id="安装-rclone">安装 Rclone</h2>
+  <p>Rclone 官方的下载链接在 <a href="https://rclone.org/downloads/">这里</a>。你可以根据自己的操作系统下载对应的版本。</p>
+  <p>部分常见的包管理工具也提供了 Rclone 的安装方式，例如：</p>
+  <ul>
+    <li>
+      <p>在 Windows 上，你可以使用 Chocolatey 安装 Rclone：</p>
+      <div class="language-bash highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code>choco <span class="nb">install </span>rclone
+</code></pre>
+        </div>
+    </div>
+    </li>
+    <li>
+      <p>在 Windows 上，你也可以使用 Winget 安装 Rclone：</p>
+      <div class="language-bash highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code>winget <span class="nb">install </span>Rclone.Rclone
+</code></pre>
+        </div>
+    </div>
+    </li>
+    <li>
+      <p>在 macOS 上，你可以使用 Homebrew 安装 Rclone：</p>
+      <div class="language-bash highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code>brew <span class="nb">install </span>rclone
+</code></pre>
+        </div>
+    </div>
+    </li>
+    <li>
+      <p>在 Ubuntu 上，你可以使用 apt 安装 Rclone：</p>
+      <div class="language-bash highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>rclone
+</code></pre>
+        </div>
+    </div>
+    </li>
+    <li>
+      <p>更多包管理器的安装方法可以参考 <a href="https://rclone.org/install/#package-manager">Rclone 官方文档</a>。</p>
+    </li>
+  </ul>
+  <p>运行 <code class="language-plaintext highlighter-rouge">rclone --version</code> 来检查 Rclone 是否安装成功，如果正常，你应该类似看到如下输出：</p>
+  <div class="language-console highlighter-rouge">
+    <div class="highlight">
+      <pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>rclone <span class="nt">--version</span>
 <span class="go">rclone v1.66.0
 - os/version: darwin 14.5 (64 bit)
 - os/kernel: 23.5.0 (arm64)
@@ -581,38 +666,38 @@ wget <span class="nt">-O</span> /usr/share/apparmor-features/features https://gi
 - go/linking: dynamic
 - go/tags: none
 </span></code></pre>
-      </div>
     </div>
-    <h2 id="配置-rclone">配置 Rclone</h2>
-    <p>我们在这里以 <code class="language-plaintext highlighter-rouge">mail.ustc.edu.cn</code> 为例，做一个 step-by-step 的教程：</p>
-    <div class="language-bash highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code>rclone config
+  </div>
+  <h2 id="配置-rclone">配置 Rclone</h2>
+  <p>我们在这里以 <code class="language-plaintext highlighter-rouge">mail.ustc.edu.cn</code> 为例，做一个 step-by-step 的教程：</p>
+  <div class="language-bash highlighter-rouge">
+    <div class="highlight">
+      <pre class="highlight"><code>rclone config
 </code></pre>
-      </div>
     </div>
-    <div class="language-console highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code><span class="go">No remotes found, make a new one?
+  </div>
+  <div class="language-console highlighter-rouge">
+    <div class="highlight">
+      <pre class="highlight"><code><span class="go">No remotes found, make a new one?
 n) New remote
 s) Set configuration password
 q) Quit config
 </span><span class="gp">n/s/q&gt;</span><span class="w">
 </span></code></pre>
-      </div>
     </div>
-    <p>输入 <code class="language-plaintext highlighter-rouge">n</code>，然后回车。</p>
-    <div class="language-console highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code><span class="go">Enter name for new remote.
+  </div>
+  <p>输入 <code class="language-plaintext highlighter-rouge">n</code>，然后回车。</p>
+  <div class="language-console highlighter-rouge">
+    <div class="highlight">
+      <pre class="highlight"><code><span class="go">Enter name for new remote.
 </span><span class="gp">name&gt;</span><span class="w">
 </span></code></pre>
-      </div>
     </div>
-    <p>输入一个名字，这里我们输入 <code class="language-plaintext highlighter-rouge">onedrive</code>，然后回车。</p>
-    <div class="language-console highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code><span class="go">Option Storage.
+  </div>
+  <p>输入一个名字，这里我们输入 <code class="language-plaintext highlighter-rouge">onedrive</code>，然后回车。</p>
+  <div class="language-console highlighter-rouge">
+    <div class="highlight">
+      <pre class="highlight"><code><span class="go">Option Storage.
 Type of storage to configure.
 Choose a number from below, or type in your own value.
  1 / 1Fichier
@@ -633,12 +718,12 @@ Choose a number from below, or type in your own value.
 </span><span class="go">
 </span><span class="gp">Storage&gt;</span><span class="w">
 </span></code></pre>
-      </div>
     </div>
-    <p>输入 <code class="language-plaintext highlighter-rouge">onedrive</code>，然后回车。</p>
-    <div class="language-console highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code><span class="go">Option client_id.
+  </div>
+  <p>输入 <code class="language-plaintext highlighter-rouge">onedrive</code>，然后回车。</p>
+  <div class="language-console highlighter-rouge">
+    <div class="highlight">
+      <pre class="highlight"><code><span class="go">Option client_id.
 OAuth Client Id.
 Leave blank normally.
 Enter a value. Press Enter to leave empty.
@@ -678,13 +763,13 @@ y) Yes (default)
 n) No
 </span><span class="gp">y/n&gt;</span><span class="w">
 </span></code></pre>
-      </div>
     </div>
-    <p>这里我们都直接回车，不输入任何内容。(五次回车)</p>
-    <p>在这其中会弹出一个网页，让你登录你的 OneDrive 账号，然后授权 Rclone 访问你的 OneDrive 账号。</p>
-    <div class="language-console highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code><span class="go">Option config_type.
+  </div>
+  <p>这里我们都直接回车，不输入任何内容。(五次回车)</p>
+  <p>在这其中会弹出一个网页，让你登录你的 OneDrive 账号，然后授权 Rclone 访问你的 OneDrive 账号。</p>
+  <div class="language-console highlighter-rouge">
+    <div class="highlight">
+      <pre class="highlight"><code><span class="go">Option config_type.
 Type of connection
 Choose a number from below, or type in an existing string value.
 Press Enter for the default (onedrive).
@@ -706,12 +791,12 @@ Press Enter for the default (onedrive).
    \ (path)
 </span><span class="gp">config_type&gt;</span><span class="w">
 </span></code></pre>
-      </div>
     </div>
-    <p>这里我们直接回车，不输入任何内容。</p>
-    <div class="language-console highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code><span class="go">Option config_driveid.
+  </div>
+  <p>这里我们直接回车，不输入任何内容。</p>
+  <div class="language-console highlighter-rouge">
+    <div class="highlight">
+      <pre class="highlight"><code><span class="go">Option config_driveid.
 Select drive you want to use
 Choose a number from below, or type in your own string value.
 Press Enter for the default (b!****************************************************************).
@@ -741,12 +826,12 @@ e) Edit this remote
 d) Delete this remote
 </span><span class="gp">y/e/d&gt;</span><span class="w">
 </span></code></pre>
-      </div>
     </div>
-    <p>依旧是直接回车，不输入任何内容。</p>
-    <div class="language-console highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code><span class="go">Current remotes:
+  </div>
+  <p>依旧是直接回车，不输入任何内容。</p>
+  <div class="language-console highlighter-rouge">
+    <div class="highlight">
+      <pre class="highlight"><code><span class="go">Current remotes:
 
 Name                 Type
 ====                 ====
@@ -761,21 +846,21 @@ s) Set configuration password
 q) Quit config
 </span><span class="gp">e/n/d/r/c/s/q&gt;</span><span class="w">
 </span></code></pre>
-      </div>
     </div>
-    <p>输入 <code class="language-plaintext highlighter-rouge">q</code>，然后回车。现在我们已经配置好了 Rclone。</p>
-    <h2 id="将文件从-onedrive-备份到本地">将文件从 OneDrive 备份到本地</h2>
-    <div class="language-console highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code><span class="go">rclone copy onedrive: /path/to/local/folder -P
+  </div>
+  <p>输入 <code class="language-plaintext highlighter-rouge">q</code>，然后回车。现在我们已经配置好了 Rclone。</p>
+  <h2 id="将文件从-onedrive-备份到本地">将文件从 OneDrive 备份到本地</h2>
+  <div class="language-console highlighter-rouge">
+    <div class="highlight">
+      <pre class="highlight"><code><span class="go">rclone copy onedrive: /path/to/local/folder -P
 </span></code></pre>
-      </div>
     </div>
-    <h2 id="总结">总结</h2>
-    <p>Rclone 是个非常强大的工具，支持的云存储服务也非常多，你可以通过 <code class="language-plaintext highlighter-rouge">rclone config</code> 来配置其他的云存储服务。</p>
-    <p>限于篇幅和时间关系，本文只介绍了 Rclone 的基本使用方法，更多的功能和用法请参考 <a href="https://rclone.org/docs/">Rclone 官方文档</a>。</p>
-    <p>如果您对这篇内容有任何问题或建议，欢迎 <a href="/wiki/lug/contact/">联系我们</a>。</p>
-    ]]></content><author><name>tiankaima</name></author><category term="Tech Tutorial" /><category term="rclone" /><category term="OneDrive" /><summary type="html"><![CDATA[本文用于介绍如何使用 Rclone 备份 OneDrive 内容。]]></summary></entry><entry><title type="html">菜鸡写给菜鸡的 NetHack 入门教程</title><link href="https://lug.ustc.edu.cn/planet/2021/09/nethack-gitgud/" rel="alternate" type="text/html" title="菜鸡写给菜鸡的 NetHack 入门教程" /><published>2021-09-27T00:00:00+08:00</published><updated>2021-10-18T09:09:24+08:00</updated><id>https://lug.ustc.edu.cn/planet/2021/09/nethack-gitgud</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2021/09/nethack-gitgud/"><![CDATA[<!-- Workaround for jekyll-titles-from-headings -->
+  </div>
+  <h2 id="总结">总结</h2>
+  <p>Rclone 是个非常强大的工具，支持的云存储服务也非常多，你可以通过 <code class="language-plaintext highlighter-rouge">rclone config</code> 来配置其他的云存储服务。</p>
+  <p>限于篇幅和时间关系，本文只介绍了 Rclone 的基本使用方法，更多的功能和用法请参考 <a href="https://rclone.org/docs/">Rclone 官方文档</a>。</p>
+  <p>如果您对这篇内容有任何问题或建议，欢迎 <a href="/wiki/lug/contact/">联系我们</a>。</p>
+  ]]></content><author><name>tiankaima</name></author><category term="Tech Tutorial" /><category term="rclone" /><category term="OneDrive" /><summary type="html"><![CDATA[本文用于介绍如何使用 Rclone 备份 OneDrive 内容。]]></summary></entry><entry><title type="html">菜鸡写给菜鸡的 NetHack 入门教程</title><link href="https://lug.ustc.edu.cn/planet/2021/09/nethack-gitgud/" rel="alternate" type="text/html" title="菜鸡写给菜鸡的 NetHack 入门教程" /><published>2021-09-27T00:00:00+08:00</published><updated>2021-10-18T09:09:24+08:00</updated><id>https://lug.ustc.edu.cn/planet/2021/09/nethack-gitgud</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2021/09/nethack-gitgud/"><![CDATA[<!-- Workaround for jekyll-titles-from-headings -->
     <h2 id="教程说明">教程说明</h2>
     <p>本教程只介绍最基本的操作和游戏刚刚开始阶段的策略，帮助新手活过第一层。引用内容为补充或 Fun facts，可以忽略。图中游戏“截图”均为字符界面的直接复制——虽然没有了颜色或加粗效果，但还是觉得这样更合适一些。</p>
     <h2 id="关于">关于</h2>
@@ -2925,101 +3010,4 @@ mount: exec /Library/Filesystems/nfs4.fs/Contents/Resources/mount_nfs4 for /User
       </li>
     </ol>
   </div>
-  ]]></content><author><name>taoky</name></author><category term="Technology" /><category term="NFS" /><summary type="html"><![CDATA[NFS（网络文件系统，Network File System）是一个分布式的文件系统，可以用于在局域网中共享文件。它通常运用在 Unix 与类 Unix 操作系统中。对于 Linux 服务器之间的文件共享来说，NFS 相比于其他的方案（如 Samba）更加方便，性能也更好。对于应用程序来说，NFS 也是透明的。]]></summary></entry><entry><title type="html">一根网线安装 Linux——PXE 介绍</title><link href="https://lug.ustc.edu.cn/planet/2018/10/PXE-intro/" rel="alternate" type="text/html" title="一根网线安装 Linux——PXE 介绍" /><published>2018-10-07T00:00:00+08:00</published><updated>2024-09-17T14:00:46+08:00</updated><id>https://lug.ustc.edu.cn/planet/2018/10/PXE-intro</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2018/10/PXE-intro/"><![CDATA[<p><em>预启动执行环境（Preboot eXecution Environment，PXE，也被称为预执行环境) 提供了一种使用网络接口（Network Interface）启动计算机的机制。这种机制让计算机的启动可以不依赖本地数据存储设备（如硬盘）或本地已安装的操作系统。——摘自 <a href="https://wiki.archlinux.org/index.php/PXE">Archwiki</a></em></p>
-  <h3 id="pxe-原理介绍">PXE 原理介绍</h3>
-  <p>PXE 协议是由 Intel 设计的，它可以使计算机通过网络启动。协议分为 client 和 server 两端，PXE client 在网卡的 ROM 中，当计算机引导时，BIOS 把 PXE client 调入内存执行，并显示出命令菜单，经用户选择后，PXE client 将放置在远端的操作系统通过网络下载到本地运行。</p>
-  <p>PXE 可以通过网络直接启动一些 Live Linux，或者调用 Linux Installer，GParted 等工具，较使用 U 盘启动更加方便快捷，有多种工具，Live 系统等可供用户挑选，在紧急维护情况下也有很大的作用。</p>
-  <h3 id="例子图书馆查询机">例子：图书馆查询机</h3>
-  <p>图书馆内的图书查询机就是用 PXE 启动的，启动镜像叫 liims，里面包含了一个以图书馆透明计算系统为主页的浏览器（主页包括了图书查询，邮箱登录，学习空间预约等功能），还有瀚海星云的 telnet 客户端和彩虹猫，用户也可以自己启动一个虚拟机，用 PXE 启动进入查询系统。</p>
-  <h2 id="pxe-怎么用">PXE 怎么用</h2>
-  <h3 id="使用条件">使用条件</h3>
-  <p>电脑最好内置有 PXE Boot Agent，并且已经<a href="https://lug.ustc.edu.cn/wiki/server/pxe/faq#如何激活我电脑中的-pxe-boot-agent">激活</a>；没有现成支持的话，有<a href="https://lug.ustc.edu.cn/wiki/server/pxe/faq#我的电脑没有内置-pxe-boot-agent我该怎么做">几种解决办法</a>。
-    所在的网段最好有能提供正确的 PXE 信息的 DHCP 服务器，以及可以通过 TFTP 数据包的网关；没有的话可以请管理员加以<a href="https://lug.ustc.edu.cn/wiki/server/pxe/faq#我们实验室有自己的网关和-dhcp-服务器该如何设置以便子网内的计算机能够访问-pxe-服务">设置</a>，或自己动手<a href="https://lug.ustc.edu.cn/wiki/server/pxe/faq#如何把某个-pxeustc-上的网络启动系统直接加入-grublilo-的启动菜单">把网络启动系统加入 GRUB/LILO 菜单</a>。
-    如果所在实验室用地址转换/伪装技术建立了自己的子网，则需要<a href="https://lug.ustc.edu.cn/wiki/server/pxe/faq#我们实验室有自己的网关和-dhcp-服务器该如何设置以便子网内的计算机能够访问-pxe-服务">配置</a>。</p>
-  <h4 id="科大校园网">科大校园网</h4>
-  <p>连接校园网（一般需要插网线）调节 BIOS 设置进入 PXE 环境即可直接进入 USTC PXE</p>
-  <h4 id="非科大校园网">非科大校园网</h4>
-  <p>首先需要进入 PXE 环境，这里以在 virtualbox 虚拟机使用 iPXE 为例，virtualbox 自带的 PXE 功能比较简单，所以使用 iPXE 替代之。从 iPXE 官网下载 iPXE 的 <a href="http://boot.ipxe.org/ipxe.iso">ISO</a>，然后让虚拟机从这个 ISO 启动。按 Ctrl + B 进入 iPXE 的命令行模式。然后输入以下命令：</p>
-  <div class="language-plaintext highlighter-rouge">
-    <div class="highlight">
-      <pre class="highlight"><code>dhcp //如果已经获取到了地址则请忽略
-set 210:string http://202.38.93.94/boot/tftp/
-chain ${210:string}pxelinux.0
-</code></pre>
-    </div>
-  </div>
-  <p>注：目前 PXE 处于更新状态，新版 PXE 还有一些问题，使用上述命令出现问题的同学请使用旧版 PXE，使用 Windows PE 的同学也请先使用旧版 PXE，命令如下</p>
-  <div class="language-plaintext highlighter-rouge">
-    <div class="highlight">
-      <pre class="highlight"><code>dhcp //如果已经获取到了地址则请忽略
-set 210:string http://202.38.93.94/boot/tftp/
-chain ${210:string}lpxelinux.0
-</code></pre>
-    </div>
-  </div>
-  <p>接下来你就能见到 USTC PXE 的界面了 🙂</p>
-  <p>注意到我们使用的 iPXE 的命令里使用的是 http 协议，这也为一些在 NAT 后面而无法使用 tftp 的用户提供使用 USTC PXE 的方法。</p>
-  <p>另外 iPXE 也可以刻录到 usb 上，这样主机如果想用 PXE 就可以用 usb 启动 iPXE（如果主机自带的 PXE 比较弱），然后使用上面的命令进入 USTC PXE 了。iPXE 的 usb 镜像可以从 http://boot.ipxe.org/ipxe.usb 下载，然后用 <code class="language-plaintext highlighter-rouge">dd if=ipxe.usb of=/dev/sdX </code>来刻录。</p>
-  <p>下载 iso 作为虚拟光驱挂载在虚拟机上，从 CD 启动，</p>
-  <h2 id="pxe-有什么">PXE 有什么</h2>
-  <figure class=""><img src="/static/planet/2018-08-11-1720-ScreenShot.png" alt="" />
-    <figcaption>
-      PXE 的启动菜单
-    </figcaption>
-  </figure>
-  <h3 id="linux-安装工具">Linux 安装工具</h3>
-  <ul>
-    <li>Ubuntu</li>
-    <li>Debian</li>
-    <li>Kali</li>
-    <li>OpenSUSE</li>
-    <li>Centos</li>
-    <li>Arch Linux</li>
-    <li>Fedora</li>
-  </ul>
-  <h3 id="live-system">Live System</h3>
-  <ul>
-    <li>Ubuntu</li>
-    <li>Debian</li>
-    <li>Deepin</li>
-    <li>Archlinux</li>
-    <li>Manjaro</li>
-  </ul>
-  <h3 id="windows-pe">Windows PE</h3>
-  <p><img src="/static/planet/2018-08-11-1733-ScreenShot-2.png" alt="img" /></p>
-  <h3 id="实用工具">实用工具</h3>
-  <ul>
-    <li>
-      <p>Hardware Detection Tools (hdt)</p>
-      <figure class=""><img src="/static/planet/2018-08-11-1726-ScreenShot.png" alt="" />
-        <figcaption>
-          hdt 中的查看硬盘信息部分
-        </figcaption>
-      </figure>
-    </li>
-    <li>PXE Knife</li>
-    <li>GParted Live</li>
-    <li>Clonezilla live</li>
-  </ul>
-  <h3 id="图书馆查询系统">图书馆查询系统</h3>
-  <p><img src="/static/planet/2018-08-11-1943-ScreenShot.png" alt="img" /></p>
-  <h2 id="应用场景分析">应用场景分析</h2>
-  <h3 id="体验新系统">体验新系统</h3>
-  <p>PXE 的 Live System 菜单中包含了 Debian，Deepin，Arch Linux，Manjaro 等 Live 系统，选择一个 Live 系统启动，就可以不用安装就能体验 Linux 的使用。</p>
-  <h3 id="安装新系统">安装新系统</h3>
-  <p>PXE 中 Linux Installer 菜单下有 Debian，Kali 等多种 Linux 发行版的安装器，当然也可以通过 Live System 进行安装，PXE 使用的 Live System 与写了 Live iso 的 U 盘功能是一样的。</p>
-  <h3 id="linux-密码恢复磁盘检查等">Linux 密码恢复，磁盘检查等</h3>
-  <p>Linux 用户通常需要准备一个 Live USB，在忘记密码，磁盘检查等需要对根分区进行操作等情况下能够进入 Live，再 Live 上面对本机系统进行各种操作。PXE 其实就在不需要 U 盘的前提下实现了这个功能，而且由于 PXE 上面有多种镜像，用户就有了多种选择。</p>
-  <p>进入 Live 之后，如果进入图形界面，启动一个终端模拟器（即 terminal）即可，或者进入 tty。进行密码恢复等操作一般需要 root 权限。</p>
-  <p>密码恢复：首先挂载本机系统的根分区（mount <em>设备名 (如 /dev/sda1)**挂载点</em>），然后 chroot 进入挂载点，再用 passwd <em>用户名</em>（root 可以不加参数）命令修改密码。</p>
-  <p>磁盘检查，分区修改等：fsck 和 fdisk 命令均需要进行操作的分区未被挂载。如果磁盘检查，fsck <em>设备名</em> 即可。分区修改，如扩容等操作先 fdisk <em>设备名</em>，进入 fdisk 程序内部，再执行 fdisk 命令即可。fdisk 命令可以使用 m 查看。fdisk 命令较为简单，如 p 为打印分区表，d 为删除分区，n 为新建一个分区，w 为写入分区表等，执行命令后 fdisk 会对接下来进行的操作给出提示。分区修改也可以使用 gparted live，图形界面可能更友好一些，下文会进行介绍。</p>
-  <h3 id="硬盘分区扩容">硬盘分区扩容</h3>
-  <p>GParted 的界面较为直观，选择设备后界面就会出现这个设备的分区情况，点击一块分区可以进行删除，移动，改变大小或复制，如果有空闲空间也可以点击 New 新建分区。移动分区或向前扩容时要注意，<strong>改变分区起始位置可能会使文件系统损坏</strong>。每次进行一次操作后最下方会增加一个条目，确认修改时要点击 Apply，此时 GParted 会根据 operation list 进行操作并给出日志，在完成之后会更新分区表。</p>
-  <p><img src="/static/planet/2018-08-11-1717-ScreenShot-1.png" alt="img" />
-    使用 GParted 改变分区大小和位置</p>
-  <h3 id="windows-下的启动修复等">Windows 下的启动修复等</h3>
-  <p>PXE 上还有 Windows PE 的镜像，因此也可以通过 PE 来对本机的 Windows 进行启动修复，文件移动复制，修改注册表等操作。</p>
-  <h2 id="总结">总结</h2>
-  <p>相比使用 U 盘安装时还需要下载镜像，制作启动盘等繁琐的操作，使用 PXE 只需要插上网线，并且调节 BIOS 设置即可进入 live linux，而且还有 GParted 等一系列工具可用，在服务器等出现问题时应急处理也很有帮助，还是很方便的。同学们也可以事先安装 ipxe，以便在校外或直接连接时连接不上等特殊情况时也可以使用 PXE。</p>
-  <p>PXE 目前由李文睿同学维护，如果需要反馈 BUG，可以发邮件到 lug AT ustc.edu.cn 或 sirius AT ustclug.org。</p>
-  ]]></content><author><name>sirius</name></author><category term="Technology" /><category term="PXE" /><summary type="html"><![CDATA[预启动执行环境（Preboot eXecution Environment，PXE，也被称为预执行环境) 提供了一种使用网络接口（Network Interface）启动计算机的机制。这种机制让计算机的启动可以不依赖本地数据存储设备（如硬盘）或本地已安装的操作系统。——摘自 Archwiki]]></summary></entry></feed>
+  ]]></content><author><name>taoky</name></author><category term="Technology" /><category term="NFS" /><summary type="html"><![CDATA[NFS（网络文件系统，Network File System）是一个分布式的文件系统，可以用于在局域网中共享文件。它通常运用在 Unix 与类 Unix 操作系统中。对于 Linux 服务器之间的文件共享来说，NFS 相比于其他的方案（如 Samba）更加方便，性能也更好。对于应用程序来说，NFS 也是透明的。]]></summary></entry></feed>
