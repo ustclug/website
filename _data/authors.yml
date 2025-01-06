@@ -56,6 +56,14 @@ tiankaima:
       icon: fab fa-fw fa-github
       url: https://github.com/tiankaima
 
+luojh:
+  name: luojh
+  avatar: "https://avatars.githubusercontent.com/u/147305241?v=4"
+  links:
+    - label: GitHub
+      icon: fab fa-fw fa-github
+      url: https://github.com/ustcljh
+
 ibug:
   name: iBug
   avatar: "https://avatars.githubusercontent.com/u/7273074?v=4"
