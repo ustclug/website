@@ -20,7 +20,7 @@ USTCLUG 的一个重要服务是它的 [开源软件镜像](https://mirrors.ustc
 
 如果你已经安装了 Python，则可以直接使用
 
-```cmd
+```shell
 python3 -m http.server <port>
 ```
 
@@ -28,13 +28,13 @@ python3 -m http.server <port>
 
 如果需要指定别的目录 `<path>` 作为 HTTP 服务的根目录，可以使用
 
-```cmd
+```shell
 python3 -m http.server <port> --directory <path>
 ```
 
 如果需要 bind 到特定的地址（对于本地服务而言，应该使用 `127.0.0.1`），可以使用下面的命令。`bind` 是指将一个网络地址（IP 和端口）与服务器软件中的套接字关联的过程，使得该服务器能接收指定地址上的网络数据。**Python 的 http.server 默认值为 `0.0.0.0`，代表所有人都可以访问**。如果只需要本地访问，则可以使用本地回环地址 `127.0.0.1`。
 
-```cmd
+```shell
 python3 -m http.server <port> --bind 127.0.0.1
 ```
 
@@ -85,7 +85,7 @@ path/                -> 建立这个目录
 
 然后以管理员权限运行
 
-```cmd
+```shell
 ipconfig /flushdns
 ```
 
