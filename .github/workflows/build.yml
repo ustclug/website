@@ -48,11 +48,18 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-npm-${{ env.CACHE_ID }}-
 
+      - name: Install system packages
+        run: |
+          sudo debconf-communicate <<< "set man-db/auto-update false"
+          sudo dpkg-reconfigure man-db
+          sudo apt update
+          sudo NEEDRESTART_SUSPEND=1 \
+            apt install -y libgsl-dev
+
       - name: Install dependencies
         env:
           MAKE: 'make -j4'
         run: |
-          sudo apt update && sudo apt install -y libgsl-dev
           bundle config set --local path vendor/bundle
           bundle config set without 'development'
           bundle install --jobs=4 --retry=3
