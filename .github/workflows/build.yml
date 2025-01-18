@@ -22,7 +22,7 @@ jobs:
           fetch-depth: 0
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.0"
+          ruby-version: "3.2"
       - uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -49,7 +49,10 @@ jobs:
             ${{ runner.os }}-npm-${{ env.CACHE_ID }}-
 
       - name: Install dependencies
+        env:
+          MAKE: 'make -j4'
         run: |
+          sudo apt update && sudo apt install -y libgsl-dev
           bundle config set --local path vendor/bundle
           bundle config set without 'development'
           bundle install --jobs=4 --retry=3
