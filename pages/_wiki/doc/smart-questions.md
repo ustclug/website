@@ -1,6 +1,8 @@
 ---
 ---
 
+如果你是初次看到这篇文章，你可以从轻松一点的[提问指南](/wiki/doc/howtoask)开始，再回来看这篇文章。
+
 # 提问的智慧
 
 **How To Ask Questions The Smart Way**
