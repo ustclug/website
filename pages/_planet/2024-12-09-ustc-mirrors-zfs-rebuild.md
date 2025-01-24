@@ -20,7 +20,7 @@ A.K.A. 如何让 2000 元的机械硬盘跑得比 3000 元的固态硬盘还快�
 - HTTP/HTTPS 流量 19 TiB，请求量 1700 万
 - Rsync 流量 10.3 TiB，请求量 2.18 万（如果算上一个异常的客户端，那么总数是 14.78 万）
 
-多年以来，随着现有镜像仓库容量的增加和新镜像仓库的加入，我们的服务器硬盘容量已经十分紧张了。目前提供镜像服务的两台服务器的磁盘容量都已经接近极限了：
+多年以来，随着现有镜像仓库容量的增加和新镜像仓库的加入，我们的服务器硬盘容量已经十分紧张了。目前[^as-of]提供镜像服务的两台服务器的磁盘容量都已经接近极限了：
 
 - 主（HTTP）服务器采用 XFS 文件系统，在 2023 年 12 月 18 日达到了 63.3 TiB（总容量 66.0 TiB，使用率 96%）；
 - 副（Rsync）服务器采用 ZFS 文件系统，在 2023 年 11 月 21 日达到了 42.4 TiB（总容量 43.2 TiB，使用率 98%）。
@@ -41,14 +41,14 @@ A.K.A. 如何让 2000 元的机械硬盘跑得比 3000 元的固态硬盘还快�
 <dd markdown="1">
 - 2016 年底搭建
 - 至强 E5 v4 处理器（Broadwell）和 256 GB DDR4 内存
-- 12 块 6 TB HDD 和一些小容量 SSDs 用来装系统和当缓存
-- 组建了 ZFS RAID-Z3 阵列，大致分为 8 块数据盘 + 3 块校验盘，最后一块留作热备
+- 12 块 6 TB HDD 和一些小容量 SSD 用来装系统和当缓存
+- 组建了 ZFS RAID-Z3 阵列，分为 8 块数据盘 + 3 块校验盘，最后一块留作热备
 - 全默认参数（仅修改了 `zfs_arc_max`）
 </dd>
 </dl>
 
 这两台服务器的磁盘负载非常高，日常维持在 90% 以上，以至于即使从科大校园网内下载镜像，速度也很难达到 50 MB/s。
-显然对于镜像站这种专用于存储的用途来说，这样的性能表现是差强人意的。
+显然对于镜像站这种专用于存储用途的机器来说，这样的性能表现是不尽人意的。
 
 {% assign image_path = image_base | append: "/mirrors-io-utilization-may-2024.png" %}
 {% include figure
@@ -62,7 +62,7 @@ A.K.A. 如何让 2000 元的机械硬盘跑得比 3000 元的固态硬盘还快�
 ZFS 以“单机存储的终极解决方案”著称。
 它集 RAID、逻辑卷管理和文件系统于一体，具有包括快照、克隆、发送/接收等高级功能。
 ZFS 内的所有数据都有校验，可以在硬盘出现比特翻转等极端情况下尽可能确保文件系统的完整性。
-对于专用于存储的服务器来说，ZFS 看起来是个可以“一劳永逸”的解决方案，但当你看到它有如此多的可调节参数之后，你马上就不会这么想了。
+对于专用于存储的服务器来说，ZFS 看起来是个可以“开箱即用”的解决方案，但当你看到它有如此多的可调节参数之后，你马上就不会这么想了。
 
 作为前期学习和实验，我在自己的工作站上增加了一批额外的硬盘并把它们组成了两个 ZFS pool，然后注册了一些 PT 站<s>开始刷流</s>来制造一些磁盘负载以便学习研究。
 在 PT 站的<s>刷流</s>成果十分可观：这个单机的 seed box 在两年半间产生了 1.20 PiB 的上传量。
@@ -88,7 +88,7 @@ ZFS 内的所有数据都有校验，可以在硬盘出现比特翻转等极端�
 在开工重建 ZFS pool 之前，我们需要正确地理解和分析镜像站的负载类型。简而言之，镜像站的特点是：
 
 - 提供文件下载服务
-- <s>也（被迫）提供“家庭宽带上下行流量平衡服务”</s>（人人喊打的 PCDN 需要为此负责）
+- <s>也（被迫）提供“家庭宽带上下行流量平衡服务”</s>（责任全在 PCDN 方）
 - 读多写少，且大部分读取都是全文件顺序读取
 - 能够容忍少量的数据丢失，毕竟镜像内容可以轻易地从上游重新同步回来
 
@@ -130,7 +130,7 @@ Rsync 服务器的流量较少，但磁盘使用率较为极端，加上我们�
   我们认为这两个选项符合我们对镜像站仓库内容的数据安全和完整性需求的理解，它们在其他场景下不一定“安全”。
 
 - 对于 ZFS 模块层面的参数，光是 290+ 的数量就已经很劝退了。
-  此处感谢 Debian ZFS 维护者兼北京外国语大学镜像站管理员 @happyaron 的帮助，我们快速找出了十几个常用的参数进行针对性条件。
+  此处感谢 Debian ZFS 维护者兼北京外国语大学镜像站管理员 @happyaron 的帮助，我们快速找出了十几个常用的参数进行针对性调节。
 
   ```shell
   # 设置 ARC 大小范围为 160-200 GiB，并为操作系统保留 16 GiB 空闲
@@ -161,7 +161,7 @@ Rsync 服务器的流量较少，但磁盘使用率较为极端，加上我们�
 
   另外还有 `zfs_dmu_offset_next_sync`，但由于它从 OpenZFS 2.1.5 开始已经默认启用了，因此我们将其从本列表中略去。
 
-将 Rsync 服务暂时转移到由 HTTP 服务器兼任之后，我们 destroy 了原有的 ZFS pool 并重新组建了一个新的 pool，然后再从（上游或 TUNA、BFSU 等友校镜像站）外面把原有的仓库同步回来。
+将 Rsync 服务暂时转移到由 HTTP 服务器兼任之后，我们 destroy 了原有的 ZFS pool 并重新组建了一个新的 pool，然后再从外面（上游或 TUNA、BFSU 等友校镜像站）把原有的仓库同步回来。
 令我们感到惊讶的是，把总共近 40 TiB 的仓库同步回来只花了 3 天，比我们预想的要快得多。
 其他的一些数据看起来也令人振奋：
 
@@ -189,7 +189,7 @@ Rsync 服务器的流量较少，但磁盘使用率较为极端，加上我们�
 ## 重建 HTTP 服务器 {#mirrors4}
 
 我们的 HTTP 服务器是在 2020 年秋季搭建的，并且当时也有一些不同的背景。
-申请这台服务器正是因为 Rsync 服务器容量过满且性能不佳，加上当时也没有了解 ZFS 的同学，我们对 ZFS 的印象很差，所以我们决定完全避开 ZFS，使用硬件 RAID、LVM 和 XFS，其中使用 LVM 的原因是 RAID 卡不支持跨两个控制器组 RAID。
+申请这台服务器正是因为 Rsync 服务器容量过满且性能不佳，加上当时社团内也没有熟悉 ZFS 的同学，我们对 ZFS 的印象很差，所以我们决定完全避开 ZFS，使用硬件 RAID、LVM 和 XFS，其中使用 LVM 的原因是 RAID 卡不支持跨两个控制器组 RAID。
 对于“内存做缓存”这部分，我们决定直接使用内核的 page cache；而对于 SSD 缓存，我们则率先吃了 LVMcache 的螃蟹。
 
 然而这些过于“新鲜”的技术并没有带来比（现在的 ZFS）更好的体验：
@@ -197,7 +197,7 @@ Rsync 服务器的流量较少，但磁盘使用率较为极端，加上我们�
 - XFS 无法缩小，因此我们不得不在 LVM VG 层面保留了 free PE。同时我们也不能把 XFS 文件系统用满，因此这里就有了两层无法利用的空闲空间。
 - 我们最初分配了 1.5 TB 的 SSD 缓存，但 LVMcache 又建议我们不要超过 100 万个 chunk，我们当时也没有足够的精力和知识水平去研究这个建议背后的技术细节，因此我们最终只分配了 1 TiB（1 MiB chunk size \* 1 Mi chunks）的 SSD 缓存。
 - SSD 缓存策略不可调，多年以后我们翻了 kernel 源码才发现它是一个 64 级的 LRU。
-- 配好 cache 之后 GRUB 首先挂了（囧），我们调查发现原因是 GRUB 有一套自己的解析 LVM metadata 的代码，它并没有正确处理（或者说根本没处理）VG 中有 cache volume 的情况，我们不得不自己 [patch](https://github.com/taoky/grub/commit/85b260baec91aa4f7db85d7592f6be92d549a0ae) 了 GRUB 才能正常开机。
+- 配好 cache 之后 GRUB 立刻挂了（难绷），我们调查发现原因是 GRUB 有一套自己的解析 LVM metadata 的代码，它并没有正确处理（或者说根本没处理）VG 中有 cache volume 的情况，我们不得不自己 [patch](https://github.com/taoky/grub/commit/85b260baec91aa4f7db85d7592f6be92d549a0ae) 了 GRUB 才能正常开机。
 - 由于我们对 LVMcache 的 chunk 不够了解，我们的 SSD 在不到 2 年的时间里就严重超过了写入寿命，我们被迫申请换新。
 
 在 SSD 换新之后，即使我们认为我们对 LVMcache 做出了稍微合理一点的调参，坚持忽略警告采用 128 KiB 的 chunk size 和 800 万个 chunk 之后，它的性能（命中率）也并不可观：
@@ -209,12 +209,13 @@ Rsync 服务器的流量较少，但磁盘使用率较为极端，加上我们�
   alt="2024 年 5 月至 6 月期间 LVMcache 的命中率"
   caption="2024 年 5 月至 6 月期间 LVMcache 的命中率" %}
 
-这些年来我们已经受够了 LVMcache 的坑了，加上 Rsync 服务器重建的巨大成功，我们重新开始相信 ZFS 是天下第一的存储方案了。所以一个月之后，我们又制定了一个相似的重建计划准备重建 HTTP 服务器，但是有一些微小的差别：
+这些年来我们已经踩够了 LVMcache 的坑了，加上 Rsync 服务器重建的巨大成功，我们重新开始相信 ZFS 是天下第一的存储方案了。
+所以一个月之后，我们又制定了一个相似的重建计划准备重建 HTTP 服务器，但是有一些微小的差别：
 
 - 我们的 Rsync 服务器采用原生的 Debian kernel + `zfs-dkms`，但根据我们使用 PVE 的经验，我们准备在 HTTP 服务器上直接用 `6.8.8-3-pve` kernel，它打包了 `zfs.ko`，这样我们就不用在 DKMS 上浪费时间了。
 - 由于磁盘数目相同（12 块），我们也采用了两个 6 盘 RAID-Z2 vdev 的组合。
-  - 考虑到这台服务器直接向用户提供 HTTP 服务，磁盘的访问模式会比 Rsync 服务器更加热冷分明，因此我们保持了 `secondarycache=all` 的设置（采用默认值，不动）。
-  - 这台新服务器的 CPU 更新更好，因此我们把压缩等级提高到了 `zstd-8` 来试试有没有更好的压缩比。
+  - 考虑到这台服务器直接向用户提供 HTTP 服务，磁盘的访问模式会比 Rsync 服务器更加冷热分明，因此我们保持了 `secondarycache=all` 的设置（采用默认值，不动）。
+  - 这台新服务器的 CPU 更新更好，因此我们把压缩等级提高到了 `zstd-8` 来试试能否获得更好的压缩比。
 - 我们在 Rsync 服务器上已经有了一个完整的、经过 ZFS 优化过的仓库，因此我们可以直接用 `zfs send -Lcp` 把数据倒过来。我们最终只花了 36 小时就把超过 50 TiB 的数据都倒回来了。
 - 由于两台服务器上存储的镜像仓库有所不同，HTTP 服务器上的压缩比略低一些，为 1 + 3.93%（压掉了 2.42 TiB / 2.20 TiB）。
 
@@ -283,7 +284,7 @@ ZFS ARC 的命中率也十分可观：
 
 重建后，我们也修了一个显示 ZFS I/O 的 Grafana 面板。
 因为 ZFS 的 I/O 统计数据是通过 `/proc/spl/kstat/zfs/$POOL/objset-$OBJSETID_HEX` 获取的，并且是分“object set”（即 dataset）累计统计的，所以我们需要先对每个 dataset 的数据做差分，再按 pool 加起来。
-也就是说，一个 InfluxQL subquery 是跑不掉的的。
+也就是说，一个 InfluxQL subquery 是跑不掉的。
 
 ```sql
 SELECT
@@ -320,9 +321,9 @@ GROUP BY time($interval), "pool"::tag fill(linear)
 换上先进的 PVE kernel 之后，我们很快就发现同步任务全挂了（）
 排查发现 `rsync` 在调用 `socketpair(2)` 的时候冒出了 `EPERM`，这是我们从来没遇到过的情况。
 实际上这些系统调用都被 AppArmor 拦下来了，最终查到是 Ubuntu 在 kernel 里加的私货 `security/apparmor/af_unix.c` 导致的。
-由于 Proxmox VE 的 kernel 是从 Ubuntu fork 过来的，这个私货也就跑到我们服务器上了。
+由于 Proxmox VE 的 kernel 是从 Ubuntu fork 过来的，这个私货也就被夹带到我们服务器上了。
 
-我们发现 PVE 也打包了自己的 AppArmor `features` 配置，我们就把它直接拉过来用：
+我们发现 PVE 也打包了自己的 AppArmor `features` 配置，就把它直接拉过来用：
 
 ```shell
 dpkg-divert --package lxc-pve --rename --divert /usr/share/apparmor-features/features.stock --add /usr/share/apparmor-features/features
@@ -331,7 +332,7 @@ wget -O /usr/share/apparmor-features/features https://github.com/proxmox/lxc/raw
 
 ### 文件级去重 {#file-deduplication}
 
-我们发现个别仓库有大量的重复的、内容相同的目录，我们怀疑可能是同步方法（HTTP）的限制导致目录的符号链接变成了完整内容的拷贝。
+我们注意到个别仓库有大量的重复的、内容相同的目录，怀疑可能是同步方法（HTTP）的限制导致目录的符号链接变成了完整内容的拷贝。
 
 {% assign image_path = image_base | append: "/ls-zerotier-redhat-el.png" %}
 {% include figure
@@ -340,7 +341,7 @@ wget -O /usr/share/apparmor-features/features https://github.com/proxmox/lxc/raw
   alt="ZeroTier 仓库中的一些目录"
   caption="ZeroTier 仓库中的一些目录" %}
 
-我们想到了 ZFS 的 deduplication，于是我们在 ZeroTier 仓库上做了一个初步的测试：
+我们想到了 ZFS 的 deduplication，于是在 ZeroTier 仓库上做了一个初步的测试：
 
 ```shell
 zfs create -o dedup=on pool0/repo/zerotier
@@ -390,9 +391,11 @@ ZFS 解决了我们镜像站上的一大堆问题，并且有了此次调参经�
 - 我们不再担心分区问题，ZFS 可以灵活分配。
 - 我们的机械盘比别人的固态盘跑得还快，这非常 excited！
   - 我们成为了第一个不再**羡慕** TUNA 的全闪服务器的镜像站！
-- 免费获得额外容量，由 ZFS 透明压缩和去重联合赞助！
+- 零成本获得额外容量，由 ZFS 透明压缩和去重联合赞助！
 
 ### 思考 {#considerations}
 
 虽然我们的 ZFS 配置看起来非常高效，但我们也知道 ZFS 在长期运行中可能会因为碎片化而导致性能下降的问题。
 我们会持续关注我们的服务器，监控长期的性能变化。
+
+  [^as-of]: 指本文所述的重建工程之前
