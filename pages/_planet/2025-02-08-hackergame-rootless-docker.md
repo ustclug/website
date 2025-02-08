@@ -99,7 +99,7 @@ RUN apt-get install -y ca-certificates curl && \
     systemctl disable docker.service docker.socket containerd.service
 ```
 
-并创建一个用户，假设名为 `rootless`，然后使用 `machinectl shell rootless@` 切换到该用户，并运行 `dockerd-rootless-setuptool.sh install` 即可安装 Rootless Docker Daemon，安装程序会自动创建 `~/.config/systemd/user/docker.service` 并将其安装到 `default.target`。设置环境变量 `DOCKER_HOST=unix:///run/user/$UID/docker.sock` 即可通过 Docker CLI 工具访问该 Rootless Docker Daemon。`
+并创建一个用户，假设名为 `rootless`，然后使用 `machinectl shell rootless@` 切换到该用户，并运行 `dockerd-rootless-setuptool.sh install` 即可安装 Rootless Docker Daemon，安装程序会自动创建 `~/.config/systemd/user/docker.service` 并将其安装到 `default.target`。设置环境变量 `DOCKER_HOST=unix:///run/user/$UID/docker.sock` 即可通过 Docker CLI 工具访问该 Rootless Docker Daemon。
 
 ### Wrapping Up
 
