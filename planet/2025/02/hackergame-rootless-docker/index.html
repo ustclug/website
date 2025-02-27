@@ -1,0 +1,562 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="zh-CN" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <!-- begin _includes/seo.html -->
+    <title>Rootless Docker in Docker 在 Hackergame 中的实践 - LUG @ USTC</title>
+    <meta name="description" content="本文介绍了 2024 年 USTC Hackergame 中 Rootless Docker in Docker 在 Web 类题目容器隔离中的实践。">
+    <meta name="author" content="RTXUX">
+    <meta property="article:author" content="RTXUX">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="LUG @ USTC">
+    <meta property="og:title" content="Rootless Docker in Docker 在 Hackergame 中的实践">
+    <meta property="og:url" content="https://lug.ustc.edu.cn/planet/2025/02/hackergame-rootless-docker/">
+    <meta property="og:description" content="本文介绍了 2024 年 USTC Hackergame 中 Rootless Docker in Docker 在 Web 类题目容器隔离中的实践。">
+    <meta property="og:image" content="https://lug.ustc.edu.cn/static/splash/galaxy-1.jpg">
+    <meta property="article:published_time" content="2025-02-08T00:00:00+08:00">
+    <meta property="article:modified_time" content="2025-02-27T16:35:18+08:00">
+    <link rel="canonical" href="https://lug.ustc.edu.cn/planet/2025/02/hackergame-rootless-docker/">
+    <!-- end _includes/seo.html -->
+    <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="LUG @ USTC Feed">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="57x57" href="/static/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/static/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/static/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/static/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/static/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/static/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/static/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/static/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/static/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/static/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/static/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#f3f6f6">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#f3f6f6">
+    <script type="text/javascript">
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+      window.enable_copy_code_button = true;
+    </script>
+    <!-- For all browsers -->
+    <link rel="stylesheet" href="/assets/css/main.css?v=9fefc3728a">
+    <link rel="stylesheet" href="/_extra/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
+    <link rel="stylesheet" href="/_extra/open-sans.css" media="invalid" onload="this.media='all'">
+    <!-- start custom head snippets -->
+    <!-- insert favicons. use https://realfavicongenerator.net/ -->
+    <!-- end custom head snippets -->
+  </head>
+  <body class="layout--single">
+    <nav class="skip-links">
+      <ul>
+        <li><a href="#site-nav" class="screen-reader-shortcut">转到主导航栏</a></li>
+        <li><a href="#main" class="screen-reader-shortcut">转到内容</a></li>
+        <li><a href="#footer" class="screen-reader-shortcut">转到底部</a></li>
+      </ul>
+    </nav>
+    <div class="masthead">
+      <div class="masthead__inner-wrap">
+        <div class="masthead__menu">
+          <nav id="site-nav" class="greedy-nav">
+            <a class="site-logo" href="/"><img src="/static/lug-penguin.png" alt="LUG @ USTC"></a>
+            <a class="site-title" href="/">
+              LUG @ USTC
+            </a>
+            <ul class="visible-links">
+              <li class="masthead__menu-item">
+                <a
+                href="/wiki/"
+                
+                
+              ><i class="fad fa-lg fa-fw fa-star-shooting"></i> Wiki</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a
+                href="/news/"
+                
+                
+              ><i class="fad fa-lg fa-fw fa-newspaper"></i> News</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a
+                href="/planet/"
+                
+                
+              ><i class="fad fa-lg fa-fw fa-planet-ringed fa-swap-opacity"></i> Planet</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a
+                href="https://github.com/ustclug"
+                
+                
+              ><i class="fab fa-lg fa-fw fa-github"></i> GitHub</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a
+                href="https://mirrors.ustc.edu.cn/"
+                
+                
+              ><i class="fad fa-lg fa-fw fa-server"></i> Mirrors</a>
+              </li>
+            </ul>
+            <button class="search__toggle" type="button">
+              <span class="visually-hidden">切换搜索</span>
+              <i class="fas fa-search"></i>
+            </button>
+            <button class="greedy-nav__toggle hidden" type="button">
+              <span class="visually-hidden">切换菜单</span>
+              <div class="navicon"></div>
+            </button>
+            <ul class="hidden-links hidden"></ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="initial-content">
+      <div class="page__hero--overlay"
+  style=" background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/static/splash/galaxy-1.jpg');"
+>
+        <div class="wrapper">
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            Rootless Docker in Docker 在 Hackergame 中的实践
+          </h1>
+          <p class="page__meta">
+            <span class="page__meta-date">
+              <i class="far fa-calendar-alt" aria-hidden="true"></i>
+              <time datetime="2025-02-08T00:00:00+08:00">2025 年 2 月 8 日</time>
+            </span>
+            <span class="page__meta-sep"></span>
+            <span class="page__meta-readtime">
+              <i class="far fa-clock" aria-hidden="true"></i>
+              5 分钟阅读
+            </span>
+          </p>
+        </div>
+      </div>
+      <div id="main" role="main">
+        <div class="sidebar sticky">
+          <div itemscope itemtype="https://schema.org/Person" class="h-card">
+            <div class="author__avatar">
+              <a href="https://lug.ustc.edu.cn/">
+                <img src="https://avatars.githubusercontent.com/u/6316962?v=4" alt="RTXUX" itemprop="image" class="u-photo">
+              </a>
+            </div>
+            <div class="author__content">
+              <h3 class="author__name p-name" itemprop="name">
+                <a class="u-url" rel="me" href="https://lug.ustc.edu.cn/" itemprop="url">RTXUX</a>
+              </h3>
+            </div>
+            <div class="author__urls-wrapper">
+              <button class="btn btn--inverse">关注</button>
+              <ul class="author__urls social-icons">
+                <li><a href="https://github.com/RTXUX" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+                <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+              </ul>
+            </div>
+          </div>
+        </div>
+        <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+          <meta itemprop="headline" content="Rootless Docker in Docker 在 Hackergame 中的实践">
+          <meta itemprop="description" content="本文介绍了 2024 年 USTC Hackergame 中 Rootless Docker in Docker 在 Web 类题目容器隔离中的实践。">
+          <meta itemprop="datePublished" content="2025-02-08T00:00:00+08:00">
+          <meta itemprop="dateModified" content="2025-02-27T16:35:18+08:00">
+          <div class="page__inner-wrap">
+            <section class="page__content" itemprop="text">
+              <aside class="sidebar__right sticky">
+                <nav class="toc">
+                  <header>
+                    <h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4>
+                  </header>
+                  <ul class="toc__menu">
+                    <li><a href="#背景">背景</a></li>
+                    <li><a href="#rootless-docker-in-docker">Rootless Docker-in-Docker</a></li>
+                    <li><a href="#基于-systemd-user-instance-的-rootless-docker-in-docker">基于 Systemd User Instance 的 Rootless Docker-in-Docker</a>
+                      <ul>
+                        <li><a href="#systemd-in-docker">Systemd in Docker</a></li>
+                        <li><a href="#rootless-docker-daemon-in-systemd-user-instance">Rootless Docker Daemon in Systemd User Instance</a></li>
+                        <li><a href="#wrapping-up">Wrapping Up</a></li>
+                        <li><a href="#安全性分析">安全性分析</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#总结">总结</a></li>
+                  </ul>
+                </nav>
+              </aside>
+              <p>本文介绍了 2024 年 USTC Hackergame 中 Rootless Docker in Docker 在 Web 类题目容器隔离中的实践。</p>
+              <h2 id="背景">背景</h2>
+              <p>USTC Hackergame 长期以来使用 Docker 及 Docker Compose 来部署和管理各种题目。对于 <code class="language-plaintext highlighter-rouge">nc</code> 类题目，我们使用一个<a href="https://github.com/USTC-Hackergame/hackergame-challenge-docker">简单的 Python 管理程序</a>来为每个已验证的传入连接创建一个单独的题目运行环境容器，以保证选手之间的隔离。为了动态创建容器，我们将 <code class="language-plaintext highlighter-rouge">/var/run/docker.sock</code> 暴露给这个 Python 程序，以便它可以调用 Docker API 来创建容器。由于这个 Python 程序足够简单，我们认为这样做是安全的。而对于 Web 类题目，我们要求出题人在题目内部做好隔离，然而这样带来了额外的心智负担，而且容易出错，可能导致非预期解或出现能够干扰其他选手的情况。</p>
+              <p>在 2024 年 Hackergame 中，我们决定实现 Web 类题目的容器隔离方案，北京大学 GeekGame 基于我们的 nc 容器管理方案实现了一个<a href="https://github.com/PKU-GeekGame/web-docker-manager">简单的 Web 类题目容器管理方案</a>，该方案同样通过透传 Docker Socket 实现对 Web 题目的容器管理。然而，Web 题目的反向代理比 nc 复杂得多，这使得我们对该方案的安全性存在较大的担忧，一旦该管理程序被攻破，攻击者可以直接控制整个服务器。因此，我们需要一个更安全的方案，使得即使 Web 题目的容器管理程序被攻破，攻击者也无法轻易控制整个服务器，这就需要在隔离的、低权限的环境中运行 Docker Daemon。</p>
+              <h2 id="rootless-docker-in-docker">Rootless Docker-in-Docker</h2>
+              <p>Rootless Docker 是在低权限环境中运行 Docker 的一种方案。Docker 官方提供了一种 <a href="https://docs.docker.com/engine/security/rootless/#rootless-docker-in-docker">Rootless Docker in Docker</a> 的方案，只需要一行命令即可启动：</p>
+              <div class="language-bash highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>docker run <span class="nt">-d</span> <span class="nt">--name</span> dind-rootless <span class="nt">--privileged</span> docker:25.0-dind-rootless
+</code></pre>
+                </div>
+              </div>
+              <p>该方案在容器中以非 <code class="language-plaintext highlighter-rouge">root</code> 用户（UID 1000）创建用户命名空间，并分离其他命名空间和运行 Docker Daemon。然而，该方案存在一些问题：</p>
+              <ol>
+                <li>该方案需要 <code class="language-plaintext highlighter-rouge">--privileged</code> 选项，以禁用 seccomp、AppArmor 和 mount masks，但这意味着容器将获得更高的权限，可能导致安全问题。</li>
+                <li>该方案无法使用 cgroup 来限制容器资源使用，因为 Rootless Docker 需要 systemd 将 cgroup 路径委托给 Docker Daemon 才能执行资源限制。虽然可以用 <code class="language-plaintext highlighter-rouge">rlimit</code> 等方案来限制资源，但其工作在进程粒度而非容器粒度，而且可以被轻松禁用。由于 Hackergame 需要强制执行容器资源限制，该问题是致命的。</li>
+              </ol>
+              <h2 id="基于-systemd-user-instance-的-rootless-docker-in-docker">基于 Systemd User Instance 的 Rootless Docker-in-Docker</h2>
+              <p>为了解决上述问题，我们采用了一个基于 Systemd User Instance 的 Rootless Docker-in-Docker 方案。该方案在 Systemd User Instance 中运行 Rootless Docker Daemon，以实现资源限制和更好的安全性。</p>
+              <h3 id="systemd-in-docker">Systemd in Docker</h3>
+              <p>为了实现该方案，首先需要在容器中运行 <code class="language-plaintext highlighter-rouge">systemd</code>。systemd 的网站上列出了<a href="https://systemd.io/CONTAINER_INTERFACE/">在容器中运行 systemd 的要求</a>，对于 Docker 来说，主要有以下几点：</p>
+              <ol>
+                <li>保留 <code class="language-plaintext highlighter-rouge">CAP_SYS_ADMIN</code> 特权。</li>
+                <li>启用私有 <code class="language-plaintext highlighter-rouge">cgroup</code> 命名空间，并将 <code class="language-plaintext highlighter-rouge">/sys/fs/cgroup</code> 挂载为可写。</li>
+                <li>将 <code class="language-plaintext highlighter-rouge">/tmp</code>, <code class="language-plaintext highlighter-rouge">/run</code>, <code class="language-plaintext highlighter-rouge">/run/lock</code>, <code class="language-plaintext highlighter-rouge">/var/lib/journal</code> 挂载为 <code class="language-plaintext highlighter-rouge">tmpfs</code>。</li>
+                <li>将 <code class="language-plaintext highlighter-rouge">stop_signal</code> 设置为 <code class="language-plaintext highlighter-rouge">SIGRTMIN+3</code>，以便 systemd 可以正确关闭。</li>
+                <li>禁用 AppArmor 或 SELinux。</li>
+              </ol>
+              <p>我们在 <code class="language-plaintext highlighter-rouge">docker-compose.yml</code> 中添加了以下内容来实现这些要求：</p>
+              <div class="language-yaml highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="na">cap_add</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">SYS_ADMIN</span>
+  <span class="pi">-</span> <span class="s">NET_ADMIN</span>
+<span class="na">cgroup</span><span class="pi">:</span> <span class="s">private</span>
+<span class="na">devices</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">/dev/net/tun:/dev/net/tun</span>
+<span class="na">tmpfs</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">/tmp</span>
+  <span class="pi">-</span> <span class="s">/run</span>
+  <span class="pi">-</span> <span class="s">/run/lock</span>
+  <span class="pi">-</span> <span class="s">/var/lib/journal</span>
+<span class="na">stop_signal</span><span class="pi">:</span> <span class="s">SIGRTMIN+3</span>
+<span class="na">tty</span><span class="pi">:</span> <span class="kc">true</span>
+<span class="na">security_opt</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">seccomp=seccomp.json</span>
+  <span class="pi">-</span> <span class="s">apparmor=unconfined</span>
+  <span class="pi">-</span> <span class="s">systempaths=unconfined</span>
+</code></pre>
+                </div>
+              </div>
+              <p>其中 <code class="language-plaintext highlighter-rouge">seccomp.json</code> 可以从<a href="https://github.com/USTC-Hackergame/web-docker-manager/raw/refs/heads/main/rootless/seccomp.json">这里</a>获取，该文件在 Docker <a href="https://github.com/moby/moby/raw/refs/heads/master/profiles/seccomp/default.json">默认 seccomp 配置</a>的基础上允许了 <code class="language-plaintext highlighter-rouge">keyctl</code> 和 <code class="language-plaintext highlighter-rouge">pivot_root</code> 系统调用，这些系统调用是 Docker 所需要的。此外，该配置还一并禁用了 mount masks (<code class="language-plaintext highlighter-rouge">systempaths=unconfined</code>)，因为 Docker 启动容器时需要重新挂载 <code class="language-plaintext highlighter-rouge">/sys</code>。此外，我们还保留了 <code class="language-plaintext highlighter-rouge">NET_ADMIN</code> 特权，因为一些 systemd 的组件需要该特权。</p>
+              <p>需要注意的是，<code class="language-plaintext highlighter-rouge">cgroup: private</code> 并不会将 <code class="language-plaintext highlighter-rouge">/sys/fs/cgroup</code> 挂载为可写，因此我们需要在容器启动时手动处理，可以通过一个自定义的 <code class="language-plaintext highlighter-rouge">entrypoint.sh</code> 来实现：</p>
+              <div class="language-bash highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="c">#!/bin/bash</span>
+
+<span class="nb">set</span> <span class="nt">-euo</span> pipefail
+
+mount <span class="nt">--make-rshared</span> /
+
+<span class="c"># Remount cgroup</span>
+umount /sys/fs/cgroup
+mount <span class="nt">-t</span> cgroup2 <span class="nt">-o</span> rw,relatime,nsdelegate cgroup2 /sys/fs/cgroup
+
+<span class="nb">exec</span> /lib/systemd/systemd
+</code></pre>
+                </div>
+              </div>
+              <h3 id="rootless-docker-daemon-in-systemd-user-instance">Rootless Docker Daemon in Systemd User Instance</h3>
+              <p>在容器中以非 <code class="language-plaintext highlighter-rouge">root</code> 身份运行 Docker Daemon 非常简单，只需要在容器中安装带 Rooeless 支持的 Docker：</p>
+              <div class="language-dockerfile highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="k">RUN </span>apt-get <span class="nb">install</span> <span class="nt">-y</span> ca-certificates curl <span class="o">&amp;&amp;</span> <span class="se">\
+</span>    <span class="nb">install</span> <span class="nt">-m</span> 0755 <span class="nt">-d</span> /etc/apt/keyrings <span class="o">&amp;&amp;</span> <span class="se">\
+</span>    curl <span class="nt">-fsSL</span> https://download.docker.com/linux/debian/gpg <span class="nt">-o</span> /etc/apt/keyrings/docker.asc <span class="o">&amp;&amp;</span> <span class="se">\
+</span>    <span class="nb">chmod </span>a+r /etc/apt/keyrings/docker.asc <span class="o">&amp;&amp;</span> <span class="se">\
+</span>    <span class="nb">echo</span> <span class="s2">"deb [arch=</span><span class="si">$(</span>dpkg <span class="nt">--print-architecture</span><span class="si">)</span><span class="s2"> signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian bookworm stable"</span> <span class="o">&gt;</span> /etc/apt/sources.list.d/docker.list <span class="o">&amp;&amp;</span> <span class="se">\
+</span>    apt-get update <span class="o">&amp;&amp;</span> <span class="se">\
+</span>    apt-get <span class="nb">install</span> <span class="nt">-y</span> docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin uidmap <span class="o">&amp;&amp;</span> <span class="se">\
+</span>    systemctl disable docker.service docker.socket containerd.service
+</code></pre>
+                </div>
+              </div>
+              <p>并创建一个用户，假设名为 <code class="language-plaintext highlighter-rouge">rootless</code>，然后使用 <code class="language-plaintext highlighter-rouge">machinectl shell rootless@</code> 切换到该用户，并运行 <code class="language-plaintext highlighter-rouge">dockerd-rootless-setuptool.sh install</code> 即可安装 Rootless Docker Daemon，安装程序会自动创建 <code class="language-plaintext highlighter-rouge">~/.config/systemd/user/docker.service</code> 并将其安装到 <code class="language-plaintext highlighter-rouge">default.target</code>。设置环境变量 <code class="language-plaintext highlighter-rouge">DOCKER_HOST=unix:///run/user/$UID/docker.sock</code> 即可通过 Docker CLI 工具访问该 Rootless Docker Daemon。</p>
+              <h3 id="wrapping-up">Wrapping Up</h3>
+              <p>将 Rootless Docker Daemon 安装脚本生成的 <code class="language-plaintext highlighter-rouge">~/.config/systemd/user/docker.service</code> 文件复制出来，并创建 <code class="language-plaintext highlighter-rouge">~/.config/systemd/user/default.target.wants</code> 中的相对路径符号链接，并在 Dockerfile 中添加创建用户和将这些文件到用户目录中的内容，最后通过在 <code class="language-plaintext highlighter-rouge">/var/lib/systemd/linger</code> 目录下创建名为用户名的空文件来使对应的 Systemd User Instance 自动启动，即可实现自动启动 Rootless Docker Daemon。</p>
+              <p>该方案最终版本代码位于 <a href="https://github.com/USTC-Hackergame/web-docker-manager">USTC-Hackergame/web-docker-manager</a> 仓库的 <code class="language-plaintext highlighter-rouge">rootless</code> 目录，其中添加了一些用于持久化数据和暴露一些目录到主机的内容。</p>
+              <h3 id="安全性分析">安全性分析</h3>
+              <p>Rootless Docker 通过 <a href="https://github.com/rootless-containers/rootlesskit">RootlessKit</a> 分离用户命名空间，来实现非特权用户的特权操作以创建容器，因此该方案的容器（命名空间）层次结构如下：</p>
+              <div class="language-plaintext highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>Host (Full Privilege)
+└── systemd in Docker (UID 0, CAP_SYS_ADMIN, CAP_NET_ADMIN)
+        └── RootlessKit (UID 0 in inner user namespace, with ALL capabilities; UID 1000 in outer user namespace, with no capabilities)
+            └── Manager Container
+            └── Web Challenge Container 1
+            └── Web Challenge Container 2
+</code></pre>
+                </div>
+              </div>
+              <p>若管理程序被攻破，则攻击者可以取得 RootlessKit 所创建的用户命名空间中的特权，但由于 RootlessKit 在外层用户命名空间是非特权用户，且运行在容器中，因此攻击者无法直接控制整个服务器，也无法直接访问 Host 的文件系统其他部分。</p>
+              <h2 id="总结">总结</h2>
+              <p>通过基于 Systemd User Instance 的 Rootless Docker in Docker 方案，我们成功地实现了在隔离的、低权限的环境中运行 Docker Daemon，以实现 Web 类题目的容器隔离。该方案强制执行了容器的资源限制，并通过隔离 Docker Daemon 提高了安全性，使得即使 Web 题目的容器管理程序被攻破，攻击者也无法轻易控制整个服务器。该方案已经在 2024 年 USTC Hackergame 中应用于数道 Web 类题目并稳定运行。</p>
+              <p>尽管如此，该方案仍有改进空间，如当前外层容器仍需 <code class="language-plaintext highlighter-rouge">SYS_ADMIN</code> 特权，这实际上是相当大的权限，而 <a href="https://github.com/nestybox/sysbox">Sysbox</a> 容器运行时可以在创建容器时直接分离用户命名空间，提供了一种不需要这些特权的替代方案，是一个可以探索的方向。此外，我们的方案为了方便直接禁用了 AppArmor Profile，但实际上只需要创建自定义的 AppArmor Profile 放松一些限制（如允许 <code class="language-plaintext highlighter-rouge">mount</code> 和放松一些路径下的限制），而不需要将其完全置于 <code class="language-plaintext highlighter-rouge">unconfined</code> 状态，这样可以进一步提升安全性，但仍需要进一步探索。</p>
+            </section>
+            <footer class="page__meta">
+              <p class="page__taxonomy">
+                <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 标签: </strong>
+                <span itemprop="keywords">
+                  <a href="/tags/container" class="page__taxonomy-item p-category" rel="tag">Container</a><span class="sep">, </span>
+                  <a href="/tags/docker" class="page__taxonomy-item p-category" rel="tag">Docker</a><span class="sep">, </span>
+                  <a href="/tags/hackergame" class="page__taxonomy-item p-category" rel="tag">Hackergame</a>
+                </span>
+              </p>
+              <p class="page__taxonomy">
+                <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 分类: </strong>
+                <span itemprop="keywords">
+                  <a href="/categories/hackergame" class="page__taxonomy-item p-category" rel="tag">Hackergame</a>
+                </span>
+              </p>
+              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2025-02-27">2025 年 2 月 27 日</time></p>
+            </footer>
+            <nav class="pagination">
+              <a href="/planet/2025/01/local-file-serving/" class="pagination--pager" title="快速建立本地 HTTP 文件服务
+">上一页</a>
+              <a href="#" class="pagination--pager disabled">下一页</a>
+            </nav>
+          </div>
+        </article>
+        <div class="page__related">
+          <h2 class="page__related-title">猜您还喜欢</h2>
+          <div class="grid__wrapper">
+            <div class="grid__item">
+              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                <h2 class="archive__item-title no_toc" itemprop="headline">
+                  <a href="/planet/2025/01/local-file-serving/" rel="permalink">快速建立本地 HTTP 文件服务
+                  </a>
+                </h2>
+                <p class="page__meta">
+                  <span class="page__meta-date">
+                    <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                    <time datetime="2025-01-03T00:00:00+08:00">2025 年 1 月 3 日</time>
+                  </span>
+                  <span class="page__meta-sep"></span>
+                  <span class="page__meta-readtime">
+                    <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+                    4 分钟阅读
+                  </span>
+                </p>
+                <p class="archive__item-excerpt" itemprop="description">USTCLUG 的一个重要服务是它的 开源软件镜像。但是我们这里要讨论的，是另一种自己在本地搭建的文件服务，目的是加速对远程静态文件的访问。这篇文章来源于帮同学解决的一个小问题。
+                </p>
+              </article>
+            </div>
+            <div class="grid__item">
+              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                <h2 class="archive__item-title no_toc" itemprop="headline">
+                  <a href="/planet/2024/12/ustc-mirrors-zfs-rebuild/" rel="permalink">镜像站 ZFS 实践
+                  </a>
+                </h2>
+                <p class="page__meta">
+                  <span class="page__meta-date">
+                    <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                    <time datetime="2024-12-09T00:00:00+08:00">2024 年 12 月 9 日</time>
+                  </span>
+                  <span class="page__meta-sep"></span>
+                  <span class="page__meta-readtime">
+                    <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+                    13 分钟阅读
+                  </span>
+                </p>
+                <p class="archive__item-excerpt" itemprop="description">A.K.A. 如何让 2000 元的机械硬盘跑得比 3000 元的固态硬盘还快（
+                </p>
+              </article>
+            </div>
+            <div class="grid__item">
+              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                <h2 class="archive__item-title no_toc" itemprop="headline">
+                  <a href="/planet/2024/05/onedrive-backup-with-rclone/" rel="permalink">使用 Rclone 备份 OneDrive 内容
+                  </a>
+                </h2>
+                <p class="page__meta">
+                  <span class="page__meta-date">
+                    <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                    <time datetime="2024-05-10T00:00:00+08:00">2024 年 5 月 10 日</time>
+                  </span>
+                  <span class="page__meta-sep"></span>
+                  <span class="page__meta-readtime">
+                    <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+                    3 分钟阅读
+                  </span>
+                </p>
+                <p class="archive__item-excerpt" itemprop="description">本文用于介绍如何使用 Rclone 备份 OneDrive 内容。
+                </p>
+              </article>
+            </div>
+            <div class="grid__item">
+              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                <h2 class="archive__item-title no_toc" itemprop="headline">
+                  <a href="/planet/2021/09/nethack-gitgud/" rel="permalink">菜鸡写给菜鸡的 NetHack 入门教程
+                  </a>
+                </h2>
+                <p class="page__meta">
+                  <span class="page__meta-date">
+                    <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                    <time datetime="2021-09-27T00:00:00+08:00">2021 年 9 月 27 日</time>
+                  </span>
+                  <span class="page__meta-sep"></span>
+                  <span class="page__meta-readtime">
+                    <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+                    13 分钟阅读
+                  </span>
+                </p>
+                <p class="archive__item-excerpt" itemprop="description">
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="search-content">
+      <div class="search-content__inner-wrap">
+        <div class="search-searchbar"></div>
+        <div class="search-hits"></div>
+      </div>
+    </div>
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+        <!-- end custom footer snippets -->
+        <div class="footer-row">
+          <div class="footer-block footer__about">
+            <p>中国科学技术大学 Linux 用户协会是由中国科学技术大学在校的 GNU/Linux 爱好者发起并组成的团体，旨在联合科大的 GNU/Linux
+              使用者，搭建信息交流共享的平台，宣传自由软件的价值，提高自由软件社区文化氛围，推广自由软件的应用。</p>
+          </div>
+          <div class="footer-block footer__extras">
+            <div class="footer__contact">
+              <ul>
+                <li>
+                  <a href="/wiki/intro/"><i class="fad fa-fw fa-address-card"></i> 关于我们</a>
+                </li>
+                <li>
+                  <a href="/wiki/lug/contact/"><i class="fas fa-fw fa-phone-alt"></i> 联系我们</a>
+                </li>
+                <li>
+                  <a href="/wiki/lug/contribute/"><i class="fad fa-fw fa-users-medical"></i> 加入我们</a>
+                </li>
+                <li>
+                  <a href="/feed/"><i class="fad fa-fw fa-rss" style="--fa-secondary-opacity: 0.6;"></i> RSS 订阅</a>
+                </li>
+                <li>
+                  <a href="https://github.com/ustclug/website"><i class="fab fa-fw fa-github"></i> 本站仓库</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__logo">
+              <div class="footer__logo-image">
+                <img src="https://lug.ustc.edu.cn/static/logo-white.svg" />
+              </div>
+              <div class="footer__logo-text">
+                <!-- a href="http://www.beian.miit.gov.cn" target="_blank">皖 ICP 备 05002528 号</a -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="/assets/js/main.min.js"></script>
+    <script>
+      // Including InstantSearch.js library and styling
+      const loadSearch = function() {
+        const loadCSS = function(src) {
+          var link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.type = 'text/css';
+          link.href = src;
+          link.media = 'all';
+          document.head.appendChild(link);
+        };
+
+        var script = document.createElement('script');
+        script.setAttribute("type", "text/javascript");
+        script.setAttribute("src", "https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js");
+        script.addEventListener("load", function() {
+          // Instantiating InstantSearch.js with Algolia credentials
+          const search = instantsearch({
+            appId: 'CM5ZKX0CV3',
+            apiKey: 'aa942e5bdda7368300e322cba95f47f6',
+            indexName: 'default',
+            searchParameters: {
+              restrictSearchableAttributes: ['title', 'content']
+            }
+          });
+
+          const hitTemplate = function(hit) {
+            const url = hit.url;
+            const hightlight = hit._highlightResult;
+            const title = hightlight.title && hightlight.title.value  || "";
+            const content = hightlight.html && hightlight.html.value  || "";
+
+            return `
+              <div class="list__item">
+                <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                  <h2 class="archive__item-title" itemprop="headline"><a href="${url}">${title}</a></h2>
+                  <div class="archive__item-excerpt" itemprop="description">${content}</div>
+                </article>
+              </div>
+            `;
+          }
+
+          // Adding searchbar and results widgets
+          search.addWidget(
+            instantsearch.widgets.searchBox({
+              container: '.search-searchbar',
+              poweredBy: true,
+              placeholder: '输入您要搜索的关键词...'
+            })
+          );
+          search.addWidget(
+            instantsearch.widgets.hits({
+              container: '.search-hits',
+              templates: {
+                item: hitTemplate,
+                empty: '无结果',
+              }
+            })
+          );
+
+          if (!search.started) {
+            search.start();
+          }
+        });
+        document.body.appendChild(script);
+
+        loadCSS("https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css");
+        loadCSS("https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css");
+      };
+
+      // Starting the search only when toggle is clicked
+      $(document).ready(function() {
+        var scriptLoaded = false;
+
+        $(".search__toggle").on("click", function() {
+          if (!scriptLoaded) {
+            loadSearch();
+            scriptLoaded = true;
+          }
+        });
+      });
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R7BPZT6779"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-R7BPZT6779', { 'anonymize_ip': false});
+    </script>
+    <img src="/static/USTC_logo.svg" style="position: fixed; bottom: -320px; left: -200px; opacity: 0.1; z-index: -100;" />
+  </body>
+</html>

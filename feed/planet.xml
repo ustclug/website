@@ -1,214 +1,319 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://lug.ustc.edu.cn/feed/planet.xml" rel="self" type="application/atom+xml" /><link href="https://lug.ustc.edu.cn/" rel="alternate" type="text/html" /><updated>2025-01-25T16:46:40+08:00</updated><id>https://lug.ustc.edu.cn/feed/planet.xml</id><title type="html">LUG @ USTC | Planet</title><subtitle>中国科学技术大学 Linux 用户协会</subtitle><author><name>USTCLUG</name></author><entry><title type="html">快速建立本地 HTTP 文件服务</title><link href="https://lug.ustc.edu.cn/planet/2025/01/local-file-serving/" rel="alternate" type="text/html" title="快速建立本地 HTTP 文件服务" /><published>2025-01-03T00:00:00+08:00</published><updated>2025-01-06T16:32:35+08:00</updated><id>https://lug.ustc.edu.cn/planet/2025/01/local-file-serving</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2025/01/local-file-serving/"><![CDATA[<p>USTCLUG 的一个重要服务是它的 <a href="https://mirrors.ustc.edu.cn">开源软件镜像</a>。但是我们这里要讨论的，是另一种自己在本地搭建的文件服务，目的是加速对远程静态文件的访问。这篇文章来源于帮同学解决的一个小问题。</p>
-      <h2 id="目的">目的</h2>
-      <p>某些课程作业附带的代码示例会通过 HTTP 的方式获取运行需要的输入数据，但是如果这个数据不巧放在某台访问速率很低的服务器上（例如不少用 <code class="language-plaintext highlighter-rouge">.edu</code> 域名的国外大学的课程网站上），则会使得作业的运行时间大大加长——通过只有几 KB/s 的网络下载数十 MB 的数据总不是个好主意。更有可能的是，根据作业内容，样例代码还需要做一些修改，这时候每次调试运行代码时都要去下载一次输入数据，简直难以忍受。本文将针对 Windows 用户，讲解如何在手工下载一次相关的文件后，在本地快速搭建一个 HTTP 服务器提供数据文件，以避免反复访问慢速的源地址。对于不能修改访问地址的情况，也提供了相应的对策。</p>
-      <blockquote>
-        <p>为何不写针对 Linux 用户的教程呢？这是因为，由于有 Apache 和 Nginx 这类成熟好用的服务器软件，再加上 Linux 操作系统优秀的包管理器，结合网上的教程，用几分钟的时间在 Linux 平台上快速建立并运行一个 HTTP 服务器应该不是难事。而在 Windows 上，配置 IIS 这类大而笨重的服务器非常麻烦，使用 Apache/Nginx 之类的服务器软件又由于操作习惯的不同，也不方便。</p>
-      </blockquote>
-      <h2 id="使用-python-httpserver">使用 Python <code class="language-plaintext highlighter-rouge">http.server</code></h2>
-      <p><strong>对比下面的（老旧的）<code class="language-plaintext highlighter-rouge">EasyWebSvr</code>，使用 Python 很容易完成一个简单的 HTTP 服务器搭建。</strong></p>
-      <p>如果你已经安装了 Python，则可以直接使用</p>
-      <div class="language-shell highlighter-rouge">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://lug.ustc.edu.cn/feed/planet.xml" rel="self" type="application/atom+xml" /><link href="https://lug.ustc.edu.cn/" rel="alternate" type="text/html" /><updated>2025-02-27T16:36:50+08:00</updated><id>https://lug.ustc.edu.cn/feed/planet.xml</id><title type="html">LUG @ USTC | Planet</title><subtitle>中国科学技术大学 Linux 用户协会</subtitle><author><name>USTCLUG</name></author><entry><title type="html">Rootless Docker in Docker 在 Hackergame 中的实践</title><link href="https://lug.ustc.edu.cn/planet/2025/02/hackergame-rootless-docker/" rel="alternate" type="text/html" title="Rootless Docker in Docker 在 Hackergame 中的实践" /><published>2025-02-08T00:00:00+08:00</published><updated>2025-02-27T16:35:18+08:00</updated><id>https://lug.ustc.edu.cn/planet/2025/02/hackergame-rootless-docker</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2025/02/hackergame-rootless-docker/"><![CDATA[<p>本文介绍了 2024 年 USTC Hackergame 中 Rootless Docker in Docker 在 Web 类题目容器隔离中的实践。</p>
+      <h2 id="背景">背景</h2>
+      <p>USTC Hackergame 长期以来使用 Docker 及 Docker Compose 来部署和管理各种题目。对于 <code class="language-plaintext highlighter-rouge">nc</code> 类题目，我们使用一个<a href="https://github.com/USTC-Hackergame/hackergame-challenge-docker">简单的 Python 管理程序</a>来为每个已验证的传入连接创建一个单独的题目运行环境容器，以保证选手之间的隔离。为了动态创建容器，我们将 <code class="language-plaintext highlighter-rouge">/var/run/docker.sock</code> 暴露给这个 Python 程序，以便它可以调用 Docker API 来创建容器。由于这个 Python 程序足够简单，我们认为这样做是安全的。而对于 Web 类题目，我们要求出题人在题目内部做好隔离，然而这样带来了额外的心智负担，而且容易出错，可能导致非预期解或出现能够干扰其他选手的情况。</p>
+      <p>在 2024 年 Hackergame 中，我们决定实现 Web 类题目的容器隔离方案，北京大学 GeekGame 基于我们的 nc 容器管理方案实现了一个<a href="https://github.com/PKU-GeekGame/web-docker-manager">简单的 Web 类题目容器管理方案</a>，该方案同样通过透传 Docker Socket 实现对 Web 题目的容器管理。然而，Web 题目的反向代理比 nc 复杂得多，这使得我们对该方案的安全性存在较大的担忧，一旦该管理程序被攻破，攻击者可以直接控制整个服务器。因此，我们需要一个更安全的方案，使得即使 Web 题目的容器管理程序被攻破，攻击者也无法轻易控制整个服务器，这就需要在隔离的、低权限的环境中运行 Docker Daemon。</p>
+      <h2 id="rootless-docker-in-docker">Rootless Docker-in-Docker</h2>
+      <p>Rootless Docker 是在低权限环境中运行 Docker 的一种方案。Docker 官方提供了一种 <a href="https://docs.docker.com/engine/security/rootless/#rootless-docker-in-docker">Rootless Docker in Docker</a> 的方案，只需要一行命令即可启动：</p>
+      <div class="language-bash highlighter-rouge">
         <div class="highlight">
-          <pre class="highlight"><code>python3 <span class="nt">-m</span> http.server &lt;port&gt;
+          <pre class="highlight"><code>docker run <span class="nt">-d</span> <span class="nt">--name</span> dind-rootless <span class="nt">--privileged</span> docker:25.0-dind-rootless
 </code></pre>
         </div>
       </div>
-      <p>来以当前目录为根目录，<code class="language-plaintext highlighter-rouge">&lt;port&gt;</code> 为端口运行一个 HTTP 服务器。</p>
-      <p>如果需要指定别的目录 <code class="language-plaintext highlighter-rouge">&lt;path&gt;</code> 作为 HTTP 服务的根目录，可以使用</p>
-      <div class="language-shell highlighter-rouge">
+      <p>该方案在容器中以非 <code class="language-plaintext highlighter-rouge">root</code> 用户（UID 1000）创建用户命名空间，并分离其他命名空间和运行 Docker Daemon。然而，该方案存在一些问题：</p>
+      <ol>
+        <li>该方案需要 <code class="language-plaintext highlighter-rouge">--privileged</code> 选项，以禁用 seccomp、AppArmor 和 mount masks，但这意味着容器将获得更高的权限，可能导致安全问题。</li>
+        <li>该方案无法使用 cgroup 来限制容器资源使用，因为 Rootless Docker 需要 systemd 将 cgroup 路径委托给 Docker Daemon 才能执行资源限制。虽然可以用 <code class="language-plaintext highlighter-rouge">rlimit</code> 等方案来限制资源，但其工作在进程粒度而非容器粒度，而且可以被轻松禁用。由于 Hackergame 需要强制执行容器资源限制，该问题是致命的。</li>
+      </ol>
+      <h2 id="基于-systemd-user-instance-的-rootless-docker-in-docker">基于 Systemd User Instance 的 Rootless Docker-in-Docker</h2>
+      <p>为了解决上述问题，我们采用了一个基于 Systemd User Instance 的 Rootless Docker-in-Docker 方案。该方案在 Systemd User Instance 中运行 Rootless Docker Daemon，以实现资源限制和更好的安全性。</p>
+      <h3 id="systemd-in-docker">Systemd in Docker</h3>
+      <p>为了实现该方案，首先需要在容器中运行 <code class="language-plaintext highlighter-rouge">systemd</code>。systemd 的网站上列出了<a href="https://systemd.io/CONTAINER_INTERFACE/">在容器中运行 systemd 的要求</a>，对于 Docker 来说，主要有以下几点：</p>
+      <ol>
+        <li>保留 <code class="language-plaintext highlighter-rouge">CAP_SYS_ADMIN</code> 特权。</li>
+        <li>启用私有 <code class="language-plaintext highlighter-rouge">cgroup</code> 命名空间，并将 <code class="language-plaintext highlighter-rouge">/sys/fs/cgroup</code> 挂载为可写。</li>
+        <li>将 <code class="language-plaintext highlighter-rouge">/tmp</code>, <code class="language-plaintext highlighter-rouge">/run</code>, <code class="language-plaintext highlighter-rouge">/run/lock</code>, <code class="language-plaintext highlighter-rouge">/var/lib/journal</code> 挂载为 <code class="language-plaintext highlighter-rouge">tmpfs</code>。</li>
+        <li>将 <code class="language-plaintext highlighter-rouge">stop_signal</code> 设置为 <code class="language-plaintext highlighter-rouge">SIGRTMIN+3</code>，以便 systemd 可以正确关闭。</li>
+        <li>禁用 AppArmor 或 SELinux。</li>
+      </ol>
+      <p>我们在 <code class="language-plaintext highlighter-rouge">docker-compose.yml</code> 中添加了以下内容来实现这些要求：</p>
+      <div class="language-yaml highlighter-rouge">
         <div class="highlight">
-          <pre class="highlight"><code>python3 <span class="nt">-m</span> http.server &lt;port&gt; <span class="nt">--directory</span> &lt;path&gt;
+          <pre class="highlight"><code><span class="na">cap_add</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">SYS_ADMIN</span>
+  <span class="pi">-</span> <span class="s">NET_ADMIN</span>
+<span class="na">cgroup</span><span class="pi">:</span> <span class="s">private</span>
+<span class="na">devices</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">/dev/net/tun:/dev/net/tun</span>
+<span class="na">tmpfs</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">/tmp</span>
+  <span class="pi">-</span> <span class="s">/run</span>
+  <span class="pi">-</span> <span class="s">/run/lock</span>
+  <span class="pi">-</span> <span class="s">/var/lib/journal</span>
+<span class="na">stop_signal</span><span class="pi">:</span> <span class="s">SIGRTMIN+3</span>
+<span class="na">tty</span><span class="pi">:</span> <span class="kc">true</span>
+<span class="na">security_opt</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">seccomp=seccomp.json</span>
+  <span class="pi">-</span> <span class="s">apparmor=unconfined</span>
+  <span class="pi">-</span> <span class="s">systempaths=unconfined</span>
 </code></pre>
         </div>
       </div>
-      <p>如果需要 bind 到特定的地址（对于本地服务而言，应该使用 <code class="language-plaintext highlighter-rouge">127.0.0.1</code>），可以使用下面的命令。<code class="language-plaintext highlighter-rouge">bind</code> 是指将一个网络地址（IP 和端口）与服务器软件中的套接字关联的过程，使得该服务器能接收指定地址上的网络数据。<strong>Python 的 http.server 默认值为 <code class="language-plaintext highlighter-rouge">0.0.0.0</code>，代表所有人都可以访问</strong>。如果只需要本地访问，则可以使用本地回环地址 <code class="language-plaintext highlighter-rouge">127.0.0.1</code>。</p>
-      <div class="language-shell highlighter-rouge">
+      <p>其中 <code class="language-plaintext highlighter-rouge">seccomp.json</code> 可以从<a href="https://github.com/USTC-Hackergame/web-docker-manager/raw/refs/heads/main/rootless/seccomp.json">这里</a>获取，该文件在 Docker <a href="https://github.com/moby/moby/raw/refs/heads/master/profiles/seccomp/default.json">默认 seccomp 配置</a>的基础上允许了 <code class="language-plaintext highlighter-rouge">keyctl</code> 和 <code class="language-plaintext highlighter-rouge">pivot_root</code> 系统调用，这些系统调用是 Docker 所需要的。此外，该配置还一并禁用了 mount masks (<code class="language-plaintext highlighter-rouge">systempaths=unconfined</code>)，因为 Docker 启动容器时需要重新挂载 <code class="language-plaintext highlighter-rouge">/sys</code>。此外，我们还保留了 <code class="language-plaintext highlighter-rouge">NET_ADMIN</code> 特权，因为一些 systemd 的组件需要该特权。</p>
+      <p>需要注意的是，<code class="language-plaintext highlighter-rouge">cgroup: private</code> 并不会将 <code class="language-plaintext highlighter-rouge">/sys/fs/cgroup</code> 挂载为可写，因此我们需要在容器启动时手动处理，可以通过一个自定义的 <code class="language-plaintext highlighter-rouge">entrypoint.sh</code> 来实现：</p>
+      <div class="language-bash highlighter-rouge">
         <div class="highlight">
-          <pre class="highlight"><code>python3 <span class="nt">-m</span> http.server &lt;port&gt; <span class="nt">--bind</span> 127.0.0.1
+          <pre class="highlight"><code><span class="c">#!/bin/bash</span>
+
+<span class="nb">set</span> <span class="nt">-euo</span> pipefail
+
+mount <span class="nt">--make-rshared</span> /
+
+<span class="c"># Remount cgroup</span>
+umount /sys/fs/cgroup
+mount <span class="nt">-t</span> cgroup2 <span class="nt">-o</span> rw,relatime,nsdelegate cgroup2 /sys/fs/cgroup
+
+<span class="nb">exec</span> /lib/systemd/systemd
 </code></pre>
         </div>
       </div>
-      <h2 id="使用-easywebserver">使用 EasyWebServer</h2>
-      <h3 id="获取一个-http-服务器">获取一个 HTTP 服务器</h3>
-      <p>首先当然是要获取一个 HTTP 服务器了，这里我们选择的是 <code class="language-plaintext highlighter-rouge">EasyWebSvr</code>。这个服务器是一个体积超小（只有数十 KB）、单文件、几乎不需要配置的小型 HTTP 服务器，甚至支持 CGI 和 PHP。<code class="language-plaintext highlighter-rouge">EasyWebSvr</code> 是一个历史久远的<a href="https://github.com/baojianjob/EasyWebSvr">开源项目</a>，使用 MSVC 作为开发环境，而且很容易下载到它的编译好的版本（搜索 <code class="language-plaintext highlighter-rouge">EasyWebSvr</code> 就可以了）。下载后你将得到一个 <code class="language-plaintext highlighter-rouge">EasyWebSvr.exe</code> 和一些其他的文件。不用理会其他的文件（事实上它们是不必要的），直接将 <code class="language-plaintext highlighter-rouge">EasyWebSvr.exe</code> 复制到一个空文件夹里面就可以了。</p>
-      <blockquote>
-        <p>提示：根据<a href="https://github.com/baojianjob/EasyWebSvr/blob/796448f6b312ad0676add90024940316dfa34299/EasyWebSvr/Socket.cpp#L439">代码</a>，EasyWebSvr 会 bind 到 <code class="language-plaintext highlighter-rouge">0.0.0.0</code>，这可能会导致<strong>安全问题</strong>。如果需要 bind 到 <code class="language-plaintext highlighter-rouge">127.0.0.1</code>，可能需要修改代码并重新构建。</p>
-      </blockquote>
-      <h3 id="准备数据">准备数据</h3>
-      <ul>
-        <li>从原始的地址上手工下载一份要被访问的数据，放到上面所说的那个空文件夹里面。</li>
-        <li>运行 <code class="language-plaintext highlighter-rouge">EasyWebSvr.exe</code>，可以看到一个小窗口。</li>
-        <li>点击右下角的锤子按钮（菜单），选择最下面的 <code class="language-plaintext highlighter-rouge">设置</code> 一项。</li>
-        <li>在弹出的设置对话框里面，选择 <code class="language-plaintext highlighter-rouge">主目录</code> 为当前 <code class="language-plaintext highlighter-rouge">EasyWebSvr.exe</code> 所在的目录。</li>
-        <li>在 <code class="language-plaintext highlighter-rouge">文档</code> 选项卡里面勾选 <code class="language-plaintext highlighter-rouge">允许目录浏览</code> 和 <code class="language-plaintext highlighter-rouge">总是显示目录内容</code>。</li>
-        <li>点击 <code class="language-plaintext highlighter-rouge">确定</code> 结束并保存配置。</li>
-        <li>然后在主窗口里面点击右下方的红色按钮（在菜单按钮的边上），正常应该看到它变成蓝绿色（这时候如果有 Windows 防火墙提示，请选择允许）。</li>
-        <li>此时服务器就配置好了，打开浏览器输入 <code class="language-plaintext highlighter-rouge">http://localhost</code> 即可看到文件列表。</li>
-      </ul>
-      <h3 id="修改原先的代码">修改原先的代码</h3>
-      <ul>
-        <li>例如原先提供的代码中数据文件的 URL 是 <code class="language-plaintext highlighter-rouge">http://some.site.edu/path/to/file/data.csv</code>，而这份数据就和 <code class="language-plaintext highlighter-rouge">EasyWebSvr.exe</code> 在同一文件夹下，则将代码中的地址修改为 <code class="language-plaintext highlighter-rouge">http://localhost/data.csv</code> 就可以使用本地的文件服务了！</li>
-        <li>服务器最小化后会显示一个小托盘图标，右键点击它可以显示各种选项，包括重新显示主窗口。</li>
-        <li>使用完后，点击蓝绿色图标，它会变成红色，此时服务器就关闭了。</li>
-      </ul>
-      <h3 id="特殊情况">特殊情况</h3>
-      <h4 id="代码不支持修改地址">代码不支持修改地址</h4>
-      <p>如果代码不支持修改地址（这很少见），那么也可以按照原来的 URL 在本地建立文件夹，类似下面这样：</p>
-      <div class="language-text highlighter-rouge">
+      <h3 id="rootless-docker-daemon-in-systemd-user-instance">Rootless Docker Daemon in Systemd User Instance</h3>
+      <p>在容器中以非 <code class="language-plaintext highlighter-rouge">root</code> 身份运行 Docker Daemon 非常简单，只需要在容器中安装带 Rooeless 支持的 Docker：</p>
+      <div class="language-dockerfile highlighter-rouge">
         <div class="highlight">
-          <pre class="highlight"><code>EasyWebSvr.exe
+          <pre class="highlight"><code><span class="k">RUN </span>apt-get <span class="nb">install</span> <span class="nt">-y</span> ca-certificates curl <span class="o">&amp;&amp;</span> <span class="se">\
+</span>    <span class="nb">install</span> <span class="nt">-m</span> 0755 <span class="nt">-d</span> /etc/apt/keyrings <span class="o">&amp;&amp;</span> <span class="se">\
+</span>    curl <span class="nt">-fsSL</span> https://download.docker.com/linux/debian/gpg <span class="nt">-o</span> /etc/apt/keyrings/docker.asc <span class="o">&amp;&amp;</span> <span class="se">\
+</span>    <span class="nb">chmod </span>a+r /etc/apt/keyrings/docker.asc <span class="o">&amp;&amp;</span> <span class="se">\
+</span>    <span class="nb">echo</span> <span class="s2">"deb [arch=</span><span class="si">$(</span>dpkg <span class="nt">--print-architecture</span><span class="si">)</span><span class="s2"> signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian bookworm stable"</span> <span class="o">&gt;</span> /etc/apt/sources.list.d/docker.list <span class="o">&amp;&amp;</span> <span class="se">\
+</span>    apt-get update <span class="o">&amp;&amp;</span> <span class="se">\
+</span>    apt-get <span class="nb">install</span> <span class="nt">-y</span> docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin uidmap <span class="o">&amp;&amp;</span> <span class="se">\
+</span>    systemctl disable docker.service docker.socket containerd.service
+</code></pre>
+        </div>
+      </div>
+      <p>并创建一个用户，假设名为 <code class="language-plaintext highlighter-rouge">rootless</code>，然后使用 <code class="language-plaintext highlighter-rouge">machinectl shell rootless@</code> 切换到该用户，并运行 <code class="language-plaintext highlighter-rouge">dockerd-rootless-setuptool.sh install</code> 即可安装 Rootless Docker Daemon，安装程序会自动创建 <code class="language-plaintext highlighter-rouge">~/.config/systemd/user/docker.service</code> 并将其安装到 <code class="language-plaintext highlighter-rouge">default.target</code>。设置环境变量 <code class="language-plaintext highlighter-rouge">DOCKER_HOST=unix:///run/user/$UID/docker.sock</code> 即可通过 Docker CLI 工具访问该 Rootless Docker Daemon。</p>
+      <h3 id="wrapping-up">Wrapping Up</h3>
+      <p>将 Rootless Docker Daemon 安装脚本生成的 <code class="language-plaintext highlighter-rouge">~/.config/systemd/user/docker.service</code> 文件复制出来，并创建 <code class="language-plaintext highlighter-rouge">~/.config/systemd/user/default.target.wants</code> 中的相对路径符号链接，并在 Dockerfile 中添加创建用户和将这些文件到用户目录中的内容，最后通过在 <code class="language-plaintext highlighter-rouge">/var/lib/systemd/linger</code> 目录下创建名为用户名的空文件来使对应的 Systemd User Instance 自动启动，即可实现自动启动 Rootless Docker Daemon。</p>
+      <p>该方案最终版本代码位于 <a href="https://github.com/USTC-Hackergame/web-docker-manager">USTC-Hackergame/web-docker-manager</a> 仓库的 <code class="language-plaintext highlighter-rouge">rootless</code> 目录，其中添加了一些用于持久化数据和暴露一些目录到主机的内容。</p>
+      <h3 id="安全性分析">安全性分析</h3>
+      <p>Rootless Docker 通过 <a href="https://github.com/rootless-containers/rootlesskit">RootlessKit</a> 分离用户命名空间，来实现非特权用户的特权操作以创建容器，因此该方案的容器（命名空间）层次结构如下：</p>
+      <div class="language-plaintext highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code>Host (Full Privilege)
+└── systemd in Docker (UID 0, CAP_SYS_ADMIN, CAP_NET_ADMIN)
+        └── RootlessKit (UID 0 in inner user namespace, with ALL capabilities; UID 1000 in outer user namespace, with no capabilities)
+            └── Manager Container
+            └── Web Challenge Container 1
+            └── Web Challenge Container 2
+</code></pre>
+        </div>
+      </div>
+      <p>若管理程序被攻破，则攻击者可以取得 RootlessKit 所创建的用户命名空间中的特权，但由于 RootlessKit 在外层用户命名空间是非特权用户，且运行在容器中，因此攻击者无法直接控制整个服务器，也无法直接访问 Host 的文件系统其他部分。</p>
+      <h2 id="总结">总结</h2>
+      <p>通过基于 Systemd User Instance 的 Rootless Docker in Docker 方案，我们成功地实现了在隔离的、低权限的环境中运行 Docker Daemon，以实现 Web 类题目的容器隔离。该方案强制执行了容器的资源限制，并通过隔离 Docker Daemon 提高了安全性，使得即使 Web 题目的容器管理程序被攻破，攻击者也无法轻易控制整个服务器。该方案已经在 2024 年 USTC Hackergame 中应用于数道 Web 类题目并稳定运行。</p>
+      <p>尽管如此，该方案仍有改进空间，如当前外层容器仍需 <code class="language-plaintext highlighter-rouge">SYS_ADMIN</code> 特权，这实际上是相当大的权限，而 <a href="https://github.com/nestybox/sysbox">Sysbox</a> 容器运行时可以在创建容器时直接分离用户命名空间，提供了一种不需要这些特权的替代方案，是一个可以探索的方向。此外，我们的方案为了方便直接禁用了 AppArmor Profile，但实际上只需要创建自定义的 AppArmor Profile 放松一些限制（如允许 <code class="language-plaintext highlighter-rouge">mount</code> 和放松一些路径下的限制），而不需要将其完全置于 <code class="language-plaintext highlighter-rouge">unconfined</code> 状态，这样可以进一步提升安全性，但仍需要进一步探索。</p>
+      ]]></content><author><name>RTXUX</name></author><category term="Hackergame" /><category term="Hackergame" /><category term="Docker" /><category term="Container" /><summary type="html"><![CDATA[本文介绍了 2024 年 USTC Hackergame 中 Rootless Docker in Docker 在 Web 类题目容器隔离中的实践。]]></summary></entry><entry><title type="html">快速建立本地 HTTP 文件服务</title><link href="https://lug.ustc.edu.cn/planet/2025/01/local-file-serving/" rel="alternate" type="text/html" title="快速建立本地 HTTP 文件服务" /><published>2025-01-03T00:00:00+08:00</published><updated>2025-01-06T16:32:35+08:00</updated><id>https://lug.ustc.edu.cn/planet/2025/01/local-file-serving</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2025/01/local-file-serving/"><![CDATA[<p>USTCLUG 的一个重要服务是它的 <a href="https://mirrors.ustc.edu.cn">开源软件镜像</a>。但是我们这里要讨论的，是另一种自己在本地搭建的文件服务，目的是加速对远程静态文件的访问。这篇文章来源于帮同学解决的一个小问题。</p>
+    <h2 id="目的">目的</h2>
+    <p>某些课程作业附带的代码示例会通过 HTTP 的方式获取运行需要的输入数据，但是如果这个数据不巧放在某台访问速率很低的服务器上（例如不少用 <code class="language-plaintext highlighter-rouge">.edu</code> 域名的国外大学的课程网站上），则会使得作业的运行时间大大加长——通过只有几 KB/s 的网络下载数十 MB 的数据总不是个好主意。更有可能的是，根据作业内容，样例代码还需要做一些修改，这时候每次调试运行代码时都要去下载一次输入数据，简直难以忍受。本文将针对 Windows 用户，讲解如何在手工下载一次相关的文件后，在本地快速搭建一个 HTTP 服务器提供数据文件，以避免反复访问慢速的源地址。对于不能修改访问地址的情况，也提供了相应的对策。</p>
+    <blockquote>
+      <p>为何不写针对 Linux 用户的教程呢？这是因为，由于有 Apache 和 Nginx 这类成熟好用的服务器软件，再加上 Linux 操作系统优秀的包管理器，结合网上的教程，用几分钟的时间在 Linux 平台上快速建立并运行一个 HTTP 服务器应该不是难事。而在 Windows 上，配置 IIS 这类大而笨重的服务器非常麻烦，使用 Apache/Nginx 之类的服务器软件又由于操作习惯的不同，也不方便。</p>
+    </blockquote>
+    <h2 id="使用-python-httpserver">使用 Python <code class="language-plaintext highlighter-rouge">http.server</code></h2>
+    <p><strong>对比下面的（老旧的）<code class="language-plaintext highlighter-rouge">EasyWebSvr</code>，使用 Python 很容易完成一个简单的 HTTP 服务器搭建。</strong></p>
+    <p>如果你已经安装了 Python，则可以直接使用</p>
+    <div class="language-shell highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code>python3 <span class="nt">-m</span> http.server &lt;port&gt;
+</code></pre>
+      </div>
+    </div>
+    <p>来以当前目录为根目录，<code class="language-plaintext highlighter-rouge">&lt;port&gt;</code> 为端口运行一个 HTTP 服务器。</p>
+    <p>如果需要指定别的目录 <code class="language-plaintext highlighter-rouge">&lt;path&gt;</code> 作为 HTTP 服务的根目录，可以使用</p>
+    <div class="language-shell highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code>python3 <span class="nt">-m</span> http.server &lt;port&gt; <span class="nt">--directory</span> &lt;path&gt;
+</code></pre>
+      </div>
+    </div>
+    <p>如果需要 bind 到特定的地址（对于本地服务而言，应该使用 <code class="language-plaintext highlighter-rouge">127.0.0.1</code>），可以使用下面的命令。<code class="language-plaintext highlighter-rouge">bind</code> 是指将一个网络地址（IP 和端口）与服务器软件中的套接字关联的过程，使得该服务器能接收指定地址上的网络数据。<strong>Python 的 http.server 默认值为 <code class="language-plaintext highlighter-rouge">0.0.0.0</code>，代表所有人都可以访问</strong>。如果只需要本地访问，则可以使用本地回环地址 <code class="language-plaintext highlighter-rouge">127.0.0.1</code>。</p>
+    <div class="language-shell highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code>python3 <span class="nt">-m</span> http.server &lt;port&gt; <span class="nt">--bind</span> 127.0.0.1
+</code></pre>
+      </div>
+    </div>
+    <h2 id="使用-easywebserver">使用 EasyWebServer</h2>
+    <h3 id="获取一个-http-服务器">获取一个 HTTP 服务器</h3>
+    <p>首先当然是要获取一个 HTTP 服务器了，这里我们选择的是 <code class="language-plaintext highlighter-rouge">EasyWebSvr</code>。这个服务器是一个体积超小（只有数十 KB）、单文件、几乎不需要配置的小型 HTTP 服务器，甚至支持 CGI 和 PHP。<code class="language-plaintext highlighter-rouge">EasyWebSvr</code> 是一个历史久远的<a href="https://github.com/baojianjob/EasyWebSvr">开源项目</a>，使用 MSVC 作为开发环境，而且很容易下载到它的编译好的版本（搜索 <code class="language-plaintext highlighter-rouge">EasyWebSvr</code> 就可以了）。下载后你将得到一个 <code class="language-plaintext highlighter-rouge">EasyWebSvr.exe</code> 和一些其他的文件。不用理会其他的文件（事实上它们是不必要的），直接将 <code class="language-plaintext highlighter-rouge">EasyWebSvr.exe</code> 复制到一个空文件夹里面就可以了。</p>
+    <blockquote>
+      <p>提示：根据<a href="https://github.com/baojianjob/EasyWebSvr/blob/796448f6b312ad0676add90024940316dfa34299/EasyWebSvr/Socket.cpp#L439">代码</a>，EasyWebSvr 会 bind 到 <code class="language-plaintext highlighter-rouge">0.0.0.0</code>，这可能会导致<strong>安全问题</strong>。如果需要 bind 到 <code class="language-plaintext highlighter-rouge">127.0.0.1</code>，可能需要修改代码并重新构建。</p>
+    </blockquote>
+    <h3 id="准备数据">准备数据</h3>
+    <ul>
+      <li>从原始的地址上手工下载一份要被访问的数据，放到上面所说的那个空文件夹里面。</li>
+      <li>运行 <code class="language-plaintext highlighter-rouge">EasyWebSvr.exe</code>，可以看到一个小窗口。</li>
+      <li>点击右下角的锤子按钮（菜单），选择最下面的 <code class="language-plaintext highlighter-rouge">设置</code> 一项。</li>
+      <li>在弹出的设置对话框里面，选择 <code class="language-plaintext highlighter-rouge">主目录</code> 为当前 <code class="language-plaintext highlighter-rouge">EasyWebSvr.exe</code> 所在的目录。</li>
+      <li>在 <code class="language-plaintext highlighter-rouge">文档</code> 选项卡里面勾选 <code class="language-plaintext highlighter-rouge">允许目录浏览</code> 和 <code class="language-plaintext highlighter-rouge">总是显示目录内容</code>。</li>
+      <li>点击 <code class="language-plaintext highlighter-rouge">确定</code> 结束并保存配置。</li>
+      <li>然后在主窗口里面点击右下方的红色按钮（在菜单按钮的边上），正常应该看到它变成蓝绿色（这时候如果有 Windows 防火墙提示，请选择允许）。</li>
+      <li>此时服务器就配置好了，打开浏览器输入 <code class="language-plaintext highlighter-rouge">http://localhost</code> 即可看到文件列表。</li>
+    </ul>
+    <h3 id="修改原先的代码">修改原先的代码</h3>
+    <ul>
+      <li>例如原先提供的代码中数据文件的 URL 是 <code class="language-plaintext highlighter-rouge">http://some.site.edu/path/to/file/data.csv</code>，而这份数据就和 <code class="language-plaintext highlighter-rouge">EasyWebSvr.exe</code> 在同一文件夹下，则将代码中的地址修改为 <code class="language-plaintext highlighter-rouge">http://localhost/data.csv</code> 就可以使用本地的文件服务了！</li>
+      <li>服务器最小化后会显示一个小托盘图标，右键点击它可以显示各种选项，包括重新显示主窗口。</li>
+      <li>使用完后，点击蓝绿色图标，它会变成红色，此时服务器就关闭了。</li>
+    </ul>
+    <h3 id="特殊情况">特殊情况</h3>
+    <h4 id="代码不支持修改地址">代码不支持修改地址</h4>
+    <p>如果代码不支持修改地址（这很少见），那么也可以按照原来的 URL 在本地建立文件夹，类似下面这样：</p>
+    <div class="language-text highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code>EasyWebSvr.exe
 path/                -&gt; 建立这个目录
     to/              -&gt; 建立这个目录
         file/        -&gt; 建立这个目录
             data.csv -&gt; 数据文件在这里
 </code></pre>
-        </div>
       </div>
-      <p>然后修改 <code class="language-plaintext highlighter-rouge">hosts</code> 文件（一般在 <code class="language-plaintext highlighter-rouge">C:\Windows\System32\drivers\etc</code> 里面，需要管理员权限，具体请看相关教程），加上一句</p>
-      <div class="language-text highlighter-rouge">
-        <div class="highlight">
-          <pre class="highlight"><code>127.0.0.1 some.site.edu
+    </div>
+    <p>然后修改 <code class="language-plaintext highlighter-rouge">hosts</code> 文件（一般在 <code class="language-plaintext highlighter-rouge">C:\Windows\System32\drivers\etc</code> 里面，需要管理员权限，具体请看相关教程），加上一句</p>
+    <div class="language-text highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code>127.0.0.1 some.site.edu
 </code></pre>
-        </div>
       </div>
-      <p>然后以管理员权限运行</p>
+    </div>
+    <p>然后以管理员权限运行</p>
+    <div class="language-shell highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code>ipconfig /flushdns
+</code></pre>
+      </div>
+    </div>
+    <p>即可。可以通过浏览器访问 <code class="language-plaintext highlighter-rouge">http://some.site.edu/path/to/file/data.csv</code> 来确认。这一操作会修改所有对 <code class="language-plaintext highlighter-rouge">some.site.edu</code> 的请求，因此用完后请删去在 <code class="language-plaintext highlighter-rouge">hosts</code> 中加入的那一行，然后再运行一次 <code class="language-plaintext highlighter-rouge">ipconfig /flushdns</code>。</p>
+    <h4 id="原地址有非-80-的端口号">原地址有非 80 的端口号</h4>
+    <p>如果你拿到的地址使用了别的端口（例如 <code class="language-plaintext highlighter-rouge">some.site.edu:8080</code>）且不能修改，那么请在 EasyWebServer 的设置页面 <code class="language-plaintext highlighter-rouge">端口号</code> 处输入对应的端口号 <code class="language-plaintext highlighter-rouge">8080</code>，对应的访问地址就是 <code class="language-plaintext highlighter-rouge">localhost:8080</code>。</p>
+    <h4 id="提示端口已被占用">提示端口已被占用</h4>
+    <p>这可能是因为有其他应用在使用 80 端口。通过 <code class="language-plaintext highlighter-rouge">netstat -ano</code> 命令可以查看机器上正被使用的端口号和对应的进程 ID。如果不希望关闭占用 80 端口的程序，那么和上面非 80 端口一样，将我们的 HTTP 文件服务器换到一个别的端口就好了，例如 <code class="language-plaintext highlighter-rouge">8080</code> 或者 <code class="language-plaintext highlighter-rouge">8000</code>，然后再次点红色圆球图标开启服务器。这时候记得访问地址也要加上对应的端口号。</p>
+    ]]></content><author><name>luojh</name></author><category term="Tech Tutorial" /><category term="Windows" /><category term="HTTP" /><summary type="html"><![CDATA[USTCLUG 的一个重要服务是它的 开源软件镜像。但是我们这里要讨论的，是另一种自己在本地搭建的文件服务，目的是加速对远程静态文件的访问。这篇文章来源于帮同学解决的一个小问题。]]></summary></entry><entry><title type="html">镜像站 ZFS 实践</title><link href="https://lug.ustc.edu.cn/planet/2024/12/ustc-mirrors-zfs-rebuild/" rel="alternate" type="text/html" title="镜像站 ZFS 实践" /><published>2024-12-09T00:00:00+08:00</published><updated>2025-01-25T16:45:35+08:00</updated><id>https://lug.ustc.edu.cn/planet/2024/12/ustc-mirrors-zfs-rebuild</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2024/12/ustc-mirrors-zfs-rebuild/"><![CDATA[<p>A.K.A. 如何让 2000 元的机械硬盘跑得比 3000 元的固态硬盘还快（</p>
+  <p>本文另有<a href="https://ibug.io/p/74">英文版</a>及在南京大学分享时使用的<a href="https://ibug.io/p/72">幻灯片</a>。</p>
+  <h2 id="background">背景</h2>
+  <p>由中科大 Linux 用户协会维护的<a href="https://mirrors.ustc.edu.cn/">中科大开源软件镜像站</a>是中国大陆高校访问量最大、收录最全的开源软件镜像之一。
+    在 2024 年 5 月至 6 月期间，我们的镜像站服务的流量大约是每天 36 TiB，主要分为以下两大类：</p>
+  <ul>
+    <li>HTTP/HTTPS 流量 19 TiB，请求量 1700 万</li>
+    <li>Rsync 流量 10.3 TiB，请求量 2.18 万（如果算上一个异常的客户端，那么总数是 14.78 万）</li>
+  </ul>
+  <p>多年以来，随着现有镜像仓库容量的增加和新镜像仓库的加入，我们的服务器硬盘容量已经十分紧张了。目前<sup id="fnref:as-of"><a href="#fn:as-of" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>提供镜像服务的两台服务器的磁盘容量都已经接近极限了：</p>
+  <ul>
+    <li>主（HTTP）服务器采用 XFS 文件系统，在 2023 年 12 月 18 日达到了 63.3 TiB（总容量 66.0 TiB，使用率 96%）；</li>
+    <li>副（Rsync）服务器采用 ZFS 文件系统，在 2023 年 11 月 21 日达到了 42.4 TiB（总容量 43.2 TiB，使用率 98%）。</li>
+  </ul>
+  <p>两台服务器的配置分别如下：</p>
+  <dl>
+    <dt>HTTP 服务器</dt>
+    <dd>
+      <ul>
+        <li>2020 年秋季搭建</li>
+        <li>第二代至强可扩展处理器（Cascade Lake）和 256 GB DDR4 内存</li>
+        <li>12 块 10 TB HDD + 一块 2 TB SSD</li>
+        <li>在硬件 RAID 上使用 LVM 和 XFS</li>
+        <li>由于 XFS（截至本次重建时）不支持压缩，因此为了应对其他分区的潜在的扩容需求，我们在 LVM VG 层面保留了 free PE</li>
+      </ul>
+    </dd>
+    <dt>Rsync 服务器</dt>
+    <dd>
+      <ul>
+        <li>2016 年底搭建</li>
+        <li>至强 E5 v4 处理器（Broadwell）和 256 GB DDR4 内存</li>
+        <li>12 块 6 TB HDD 和一些小容量 SSD 用来装系统和当缓存</li>
+        <li>组建了 ZFS RAID-Z3 阵列，分为 8 块数据盘 + 3 块校验盘，最后一块留作热备</li>
+        <li>全默认参数（仅修改了 <code class="language-plaintext highlighter-rouge">zfs_arc_max</code>）</li>
+      </ul>
+    </dd>
+  </dl>
+  <p>这两台服务器的磁盘负载非常高，日常维持在 90% 以上，以至于即使从科大校园网内下载镜像，速度也很难达到 50 MB/s。
+    显然对于镜像站这种专用于存储用途的机器来说，这样的性能表现是不尽人意的。</p>
+  <figure class=""><a href="/static/planet/ustc-mirrors-zfs-rebuild/mirrors-io-utilization-may-2024.png" class="image-popup" title="2024 年 5 月期间镜像站两台服务器的 I/O 负载
+"><img src="/static/planet/ustc-mirrors-zfs-rebuild/mirrors-io-utilization-may-2024.png" alt="2024 年 5 月期间镜像站两台服务器的 I/O 负载" /></a>
+    <figcaption>
+      2024 年 5 月期间镜像站两台服务器的 I/O 负载
+    </figcaption>
+  </figure>
+  <h2 id="zfs">ZFS</h2>
+  <p>ZFS 以“单机存储的终极解决方案”著称。
+    它集 RAID、逻辑卷管理和文件系统于一体，具有包括快照、克隆、发送/接收等高级功能。
+    ZFS 内的所有数据都有校验，可以在硬盘出现比特翻转等极端情况下尽可能确保文件系统的完整性。
+    对于专用于存储的服务器来说，ZFS 看起来是个可以“开箱即用”的解决方案，但当你看到它有如此多的可调节参数之后，你马上就不会这么想了。</p>
+  <p>作为前期学习和实验，我在自己的工作站上增加了一批额外的硬盘并把它们组成了两个 ZFS pool，然后注册了一些 PT 站<s>开始刷流</s>来制造一些磁盘负载以便学习研究。
+    在 PT 站的<s>刷流</s>成果十分可观：这个单机的 seed box 在两年半间产生了 1.20 PiB 的上传量。</p>
+  <p>这两年刷 PT 站刷下来，我总结出来几个重要的 ZFS 学习资料来源：</p>
+  <ul>
+    <li>UToronto 的 Chris Siebenmann 的博客：<a href="https://utcc.utoronto.ca/~cks/space/blog/">https://utcc.utoronto.ca/~cks/space/blog/</a></li>
+    <li>OpenZFS 的官方文档：<a href="https://openzfs.github.io/openzfs-docs/">https://openzfs.github.io/openzfs-docs/</a></li>
+    <li>我自己攒出的一篇博客：<a href="https://ibug.io/p/62">Understanding ZFS block sizes</a>
+      <ul>
+        <li>以及这篇博客底部列出的参考文献</li>
+      </ul>
+    </li>
+  </ul>
+  <figure class=""><a href="/static/planet/ustc-mirrors-zfs-rebuild/2024-06-05.png" class="image-popup" title="学习 ZFS 过程中的副产物：一个为 qBittorrent 定制的 Grafana 面板（xs
+"><img src="/static/planet/ustc-mirrors-zfs-rebuild/2024-06-05.png" alt="一个为 qBittorrent 定制的 Grafana 面板" /></a>
+    <figcaption>
+      学习 ZFS 过程中的副产物：一个为 qBittorrent 定制的 Grafana 面板（xs
+    </figcaption>
+  </figure>
+  <p>经过多年的 ZFS 学习，我意识到镜像站服务器上的配置其实有很大的优化空间，方法就是 all-in ZFS 并正确地调节一些参数。</p>
+  <h2 id="镜像站">镜像站</h2>
+  <p>在开工重建 ZFS pool 之前，我们需要正确地理解和分析镜像站的负载类型。简而言之，镜像站的特点是：</p>
+  <ul>
+    <li>提供文件下载服务</li>
+    <li>
+      <s>也（被迫）提供“家庭宽带上下行流量平衡服务”</s>
+      <p>（责任全在 PCDN 方）</p>
+    </li>
+    <li>读多写少，且大部分读取都是全文件顺序读取</li>
+    <li>能够容忍少量的数据丢失，毕竟镜像内容可以轻易地从上游重新同步回来</li>
+  </ul>
+  <figure class=""><a href="/static/planet/ustc-mirrors-zfs-rebuild/mirrors-file-size-distribution-2024-08.png" class="image-popup" title="2024 年 8 月镜像站上的文件大小分布
+"><img src="/static/planet/ustc-mirrors-zfs-rebuild/mirrors-file-size-distribution-2024-08.png" alt="2024 年 8 月镜像站上的文件大小分布" /></a>
+    <figcaption>
+      2024 年 8 月镜像站上的文件大小分布
+    </figcaption>
+  </figure>
+  <p>基于以上思考，我们分析了镜像站上存储的内容。从上图中可以看出，镜像站上总文件数超过 4000 万，其中一半的文件大小不到 10 KiB，并且 90% 的文件大小不到 1 MiB。
+    尽管如此，所有文件的平均大小仍然达到了 1.6 MiB。</p>
+  <h2 id="mirrors2">重建 Rsync 服务器</h2>
+  <p>Rsync 服务器的流量较少，但磁盘使用率较为极端，加上我们认定 Rsync 服务的重要性较低，因此在今年 6 月，我们先动手重建了这台服务器。
+    我们制定了如下的重建计划：</p>
+  <ul>
+    <li>首先，考虑到镜像站上一半的文件都不到 10 KiB（注意我们的磁盘的物理扇区大小是 4 KiB），RAID-Z3 的开销过高，因此我们决定将其重建为 RAID-Z2 并且拆成两组 vdev。这样做还有一个额外的好处，即期望情况下我们还可以在这个 ZFS pool 中获得两倍的 IOPS，毕竟文件的每个“块”只存储在一个 vdev 上。</li>
+    <li>
+      <p>然后我们仔细研究了如何为镜像站场景调优 ZFS dataset 参数：</p>
+      <ul>
+        <li><code class="language-plaintext highlighter-rouge">recordsize=1M</code>：尽可能优化顺序读写性能，同时减少碎片化</li>
+        <li>
+          <p><code class="language-plaintext highlighter-rouge">compression=zstd</code>：开点压缩来试试能节约多少磁盘空间</p>
+          <ul>
+            <li>
+              <p>OpenZFS 2.2 开始将 early-abort 机制引入了 Zstd 压缩算法（Zstd-3 以上的等级）。该机制会首先尝试使用 LZ4 和 Zstd-1 来压缩数据以便评估数据的可压缩性，如果数据不可压缩（熵太大），则不再尝试用设定的 Zstd 等级压缩，而是直接原样写入磁盘上，避免在不可压缩的数据上浪费 CPU。</p>
+              <p>我们已知镜像站上的大部分内容都是已经压缩过的，因此 early-abort 算是给我们兜了个底，让我们可以放心地开 Zstd。</p>
+            </li>
+          </ul>
+        </li>
+        <li><code class="language-plaintext highlighter-rouge">xattr=off</code>：镜像站上的文件不需要扩展属性</li>
+        <li><code class="language-plaintext highlighter-rouge">atime=off</code>：镜像站上的文件不需要记录，也不需要更新 atime，可以省掉不少写入</li>
+        <li><code class="language-plaintext highlighter-rouge">setuid=off</code>、<code class="language-plaintext highlighter-rouge">exec=off</code>、<code class="language-plaintext highlighter-rouge">devices=off</code> 也是我们不需要的挂载选项（也是一个更安全的做法）</li>
+        <li><code class="language-plaintext highlighter-rouge">secondarycache=metadata</code> 让 L2ARC 仅缓存 ZFS 内部的元数据。这是因为 Rsync 服务器上的文件访问模式更加均匀，而不像面向终端用户的 HTTP 服务器上冷热分明，因此仅缓存元数据可以节约 SSD 寿命。</li>
+      </ul>
+    </li>
+    <li>
+      <p>以及一些可能有潜在（但我们认为我们可以容忍的）风险的选项：</p>
+      <ul>
+        <li><code class="language-plaintext highlighter-rouge">sync=disabled</code>：禁用同步写入语义（<code class="language-plaintext highlighter-rouge">open(O_SYNC)</code>、<code class="language-plaintext highlighter-rouge">sync()</code> 和 <code class="language-plaintext highlighter-rouge">fsync()</code> 等）以让 ZFS 能够充分发挥写缓冲区的意义，如降低碎片率等</li>
+        <li><code class="language-plaintext highlighter-rouge">redundant_metadata=some</code>：（OpenZFS 2.2）减少元数据的冗余度来获得更好的写入性能。</li>
+      </ul>
+      <p>我们认为这两个选项符合我们对镜像站仓库内容的数据安全和完整性需求的理解，它们在其他场景下不一定“安全”。</p>
+    </li>
+    <li>
+      <p>对于 ZFS 模块层面的参数，光是 290+ 的数量就已经很劝退了。
+        此处感谢 Debian ZFS 维护者兼北京外国语大学镜像站管理员 @happyaron 的帮助，我们快速找出了十几个常用的参数进行针对性调节。</p>
       <div class="language-shell highlighter-rouge">
         <div class="highlight">
-          <pre class="highlight"><code>ipconfig /flushdns
-</code></pre>
-        </div>
-      </div>
-      <p>即可。可以通过浏览器访问 <code class="language-plaintext highlighter-rouge">http://some.site.edu/path/to/file/data.csv</code> 来确认。这一操作会修改所有对 <code class="language-plaintext highlighter-rouge">some.site.edu</code> 的请求，因此用完后请删去在 <code class="language-plaintext highlighter-rouge">hosts</code> 中加入的那一行，然后再运行一次 <code class="language-plaintext highlighter-rouge">ipconfig /flushdns</code>。</p>
-      <h4 id="原地址有非-80-的端口号">原地址有非 80 的端口号</h4>
-      <p>如果你拿到的地址使用了别的端口（例如 <code class="language-plaintext highlighter-rouge">some.site.edu:8080</code>）且不能修改，那么请在 EasyWebServer 的设置页面 <code class="language-plaintext highlighter-rouge">端口号</code> 处输入对应的端口号 <code class="language-plaintext highlighter-rouge">8080</code>，对应的访问地址就是 <code class="language-plaintext highlighter-rouge">localhost:8080</code>。</p>
-      <h4 id="提示端口已被占用">提示端口已被占用</h4>
-      <p>这可能是因为有其他应用在使用 80 端口。通过 <code class="language-plaintext highlighter-rouge">netstat -ano</code> 命令可以查看机器上正被使用的端口号和对应的进程 ID。如果不希望关闭占用 80 端口的程序，那么和上面非 80 端口一样，将我们的 HTTP 文件服务器换到一个别的端口就好了，例如 <code class="language-plaintext highlighter-rouge">8080</code> 或者 <code class="language-plaintext highlighter-rouge">8000</code>，然后再次点红色圆球图标开启服务器。这时候记得访问地址也要加上对应的端口号。</p>
-      ]]></content><author><name>luojh</name></author><category term="Tech Tutorial" /><category term="Windows" /><category term="HTTP" /><summary type="html"><![CDATA[USTCLUG 的一个重要服务是它的 开源软件镜像。但是我们这里要讨论的，是另一种自己在本地搭建的文件服务，目的是加速对远程静态文件的访问。这篇文章来源于帮同学解决的一个小问题。]]></summary></entry><entry><title type="html">镜像站 ZFS 实践</title><link href="https://lug.ustc.edu.cn/planet/2024/12/ustc-mirrors-zfs-rebuild/" rel="alternate" type="text/html" title="镜像站 ZFS 实践" /><published>2024-12-09T00:00:00+08:00</published><updated>2025-01-25T16:45:35+08:00</updated><id>https://lug.ustc.edu.cn/planet/2024/12/ustc-mirrors-zfs-rebuild</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2024/12/ustc-mirrors-zfs-rebuild/"><![CDATA[<p>A.K.A. 如何让 2000 元的机械硬盘跑得比 3000 元的固态硬盘还快（</p>
-    <p>本文另有<a href="https://ibug.io/p/74">英文版</a>及在南京大学分享时使用的<a href="https://ibug.io/p/72">幻灯片</a>。</p>
-    <h2 id="background">背景</h2>
-    <p>由中科大 Linux 用户协会维护的<a href="https://mirrors.ustc.edu.cn/">中科大开源软件镜像站</a>是中国大陆高校访问量最大、收录最全的开源软件镜像之一。
-      在 2024 年 5 月至 6 月期间，我们的镜像站服务的流量大约是每天 36 TiB，主要分为以下两大类：</p>
-    <ul>
-      <li>HTTP/HTTPS 流量 19 TiB，请求量 1700 万</li>
-      <li>Rsync 流量 10.3 TiB，请求量 2.18 万（如果算上一个异常的客户端，那么总数是 14.78 万）</li>
-    </ul>
-    <p>多年以来，随着现有镜像仓库容量的增加和新镜像仓库的加入，我们的服务器硬盘容量已经十分紧张了。目前<sup id="fnref:as-of"><a href="#fn:as-of" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>提供镜像服务的两台服务器的磁盘容量都已经接近极限了：</p>
-    <ul>
-      <li>主（HTTP）服务器采用 XFS 文件系统，在 2023 年 12 月 18 日达到了 63.3 TiB（总容量 66.0 TiB，使用率 96%）；</li>
-      <li>副（Rsync）服务器采用 ZFS 文件系统，在 2023 年 11 月 21 日达到了 42.4 TiB（总容量 43.2 TiB，使用率 98%）。</li>
-    </ul>
-    <p>两台服务器的配置分别如下：</p>
-    <dl>
-      <dt>HTTP 服务器</dt>
-      <dd>
-        <ul>
-          <li>2020 年秋季搭建</li>
-          <li>第二代至强可扩展处理器（Cascade Lake）和 256 GB DDR4 内存</li>
-          <li>12 块 10 TB HDD + 一块 2 TB SSD</li>
-          <li>在硬件 RAID 上使用 LVM 和 XFS</li>
-          <li>由于 XFS（截至本次重建时）不支持压缩，因此为了应对其他分区的潜在的扩容需求，我们在 LVM VG 层面保留了 free PE</li>
-        </ul>
-      </dd>
-      <dt>Rsync 服务器</dt>
-      <dd>
-        <ul>
-          <li>2016 年底搭建</li>
-          <li>至强 E5 v4 处理器（Broadwell）和 256 GB DDR4 内存</li>
-          <li>12 块 6 TB HDD 和一些小容量 SSD 用来装系统和当缓存</li>
-          <li>组建了 ZFS RAID-Z3 阵列，分为 8 块数据盘 + 3 块校验盘，最后一块留作热备</li>
-          <li>全默认参数（仅修改了 <code class="language-plaintext highlighter-rouge">zfs_arc_max</code>）</li>
-        </ul>
-      </dd>
-    </dl>
-    <p>这两台服务器的磁盘负载非常高，日常维持在 90% 以上，以至于即使从科大校园网内下载镜像，速度也很难达到 50 MB/s。
-      显然对于镜像站这种专用于存储用途的机器来说，这样的性能表现是不尽人意的。</p>
-    <figure class=""><a href="/static/planet/ustc-mirrors-zfs-rebuild/mirrors-io-utilization-may-2024.png" class="image-popup" title="2024 年 5 月期间镜像站两台服务器的 I/O 负载
-"><img src="/static/planet/ustc-mirrors-zfs-rebuild/mirrors-io-utilization-may-2024.png" alt="2024 年 5 月期间镜像站两台服务器的 I/O 负载" /></a>
-      <figcaption>
-        2024 年 5 月期间镜像站两台服务器的 I/O 负载
-      </figcaption>
-    </figure>
-    <h2 id="zfs">ZFS</h2>
-    <p>ZFS 以“单机存储的终极解决方案”著称。
-      它集 RAID、逻辑卷管理和文件系统于一体，具有包括快照、克隆、发送/接收等高级功能。
-      ZFS 内的所有数据都有校验，可以在硬盘出现比特翻转等极端情况下尽可能确保文件系统的完整性。
-      对于专用于存储的服务器来说，ZFS 看起来是个可以“开箱即用”的解决方案，但当你看到它有如此多的可调节参数之后，你马上就不会这么想了。</p>
-    <p>作为前期学习和实验，我在自己的工作站上增加了一批额外的硬盘并把它们组成了两个 ZFS pool，然后注册了一些 PT 站<s>开始刷流</s>来制造一些磁盘负载以便学习研究。
-      在 PT 站的<s>刷流</s>成果十分可观：这个单机的 seed box 在两年半间产生了 1.20 PiB 的上传量。</p>
-    <p>这两年刷 PT 站刷下来，我总结出来几个重要的 ZFS 学习资料来源：</p>
-    <ul>
-      <li>UToronto 的 Chris Siebenmann 的博客：<a href="https://utcc.utoronto.ca/~cks/space/blog/">https://utcc.utoronto.ca/~cks/space/blog/</a></li>
-      <li>OpenZFS 的官方文档：<a href="https://openzfs.github.io/openzfs-docs/">https://openzfs.github.io/openzfs-docs/</a></li>
-      <li>我自己攒出的一篇博客：<a href="https://ibug.io/p/62">Understanding ZFS block sizes</a>
-        <ul>
-          <li>以及这篇博客底部列出的参考文献</li>
-        </ul>
-      </li>
-    </ul>
-    <figure class=""><a href="/static/planet/ustc-mirrors-zfs-rebuild/2024-06-05.png" class="image-popup" title="学习 ZFS 过程中的副产物：一个为 qBittorrent 定制的 Grafana 面板（xs
-"><img src="/static/planet/ustc-mirrors-zfs-rebuild/2024-06-05.png" alt="一个为 qBittorrent 定制的 Grafana 面板" /></a>
-      <figcaption>
-        学习 ZFS 过程中的副产物：一个为 qBittorrent 定制的 Grafana 面板（xs
-      </figcaption>
-    </figure>
-    <p>经过多年的 ZFS 学习，我意识到镜像站服务器上的配置其实有很大的优化空间，方法就是 all-in ZFS 并正确地调节一些参数。</p>
-    <h2 id="镜像站">镜像站</h2>
-    <p>在开工重建 ZFS pool 之前，我们需要正确地理解和分析镜像站的负载类型。简而言之，镜像站的特点是：</p>
-    <ul>
-      <li>提供文件下载服务</li>
-      <li>
-        <s>也（被迫）提供“家庭宽带上下行流量平衡服务”</s>
-        <p>（责任全在 PCDN 方）</p>
-      </li>
-      <li>读多写少，且大部分读取都是全文件顺序读取</li>
-      <li>能够容忍少量的数据丢失，毕竟镜像内容可以轻易地从上游重新同步回来</li>
-    </ul>
-    <figure class=""><a href="/static/planet/ustc-mirrors-zfs-rebuild/mirrors-file-size-distribution-2024-08.png" class="image-popup" title="2024 年 8 月镜像站上的文件大小分布
-"><img src="/static/planet/ustc-mirrors-zfs-rebuild/mirrors-file-size-distribution-2024-08.png" alt="2024 年 8 月镜像站上的文件大小分布" /></a>
-      <figcaption>
-        2024 年 8 月镜像站上的文件大小分布
-      </figcaption>
-    </figure>
-    <p>基于以上思考，我们分析了镜像站上存储的内容。从上图中可以看出，镜像站上总文件数超过 4000 万，其中一半的文件大小不到 10 KiB，并且 90% 的文件大小不到 1 MiB。
-      尽管如此，所有文件的平均大小仍然达到了 1.6 MiB。</p>
-    <h2 id="mirrors2">重建 Rsync 服务器</h2>
-    <p>Rsync 服务器的流量较少，但磁盘使用率较为极端，加上我们认定 Rsync 服务的重要性较低，因此在今年 6 月，我们先动手重建了这台服务器。
-      我们制定了如下的重建计划：</p>
-    <ul>
-      <li>首先，考虑到镜像站上一半的文件都不到 10 KiB（注意我们的磁盘的物理扇区大小是 4 KiB），RAID-Z3 的开销过高，因此我们决定将其重建为 RAID-Z2 并且拆成两组 vdev。这样做还有一个额外的好处，即期望情况下我们还可以在这个 ZFS pool 中获得两倍的 IOPS，毕竟文件的每个“块”只存储在一个 vdev 上。</li>
-      <li>
-        <p>然后我们仔细研究了如何为镜像站场景调优 ZFS dataset 参数：</p>
-        <ul>
-          <li><code class="language-plaintext highlighter-rouge">recordsize=1M</code>：尽可能优化顺序读写性能，同时减少碎片化</li>
-          <li>
-            <p><code class="language-plaintext highlighter-rouge">compression=zstd</code>：开点压缩来试试能节约多少磁盘空间</p>
-            <ul>
-              <li>
-                <p>OpenZFS 2.2 开始将 early-abort 机制引入了 Zstd 压缩算法（Zstd-3 以上的等级）。该机制会首先尝试使用 LZ4 和 Zstd-1 来压缩数据以便评估数据的可压缩性，如果数据不可压缩（熵太大），则不再尝试用设定的 Zstd 等级压缩，而是直接原样写入磁盘上，避免在不可压缩的数据上浪费 CPU。</p>
-                <p>我们已知镜像站上的大部分内容都是已经压缩过的，因此 early-abort 算是给我们兜了个底，让我们可以放心地开 Zstd。</p>
-              </li>
-            </ul>
-          </li>
-          <li><code class="language-plaintext highlighter-rouge">xattr=off</code>：镜像站上的文件不需要扩展属性</li>
-          <li><code class="language-plaintext highlighter-rouge">atime=off</code>：镜像站上的文件不需要记录，也不需要更新 atime，可以省掉不少写入</li>
-          <li><code class="language-plaintext highlighter-rouge">setuid=off</code>、<code class="language-plaintext highlighter-rouge">exec=off</code>、<code class="language-plaintext highlighter-rouge">devices=off</code> 也是我们不需要的挂载选项（也是一个更安全的做法）</li>
-          <li><code class="language-plaintext highlighter-rouge">secondarycache=metadata</code> 让 L2ARC 仅缓存 ZFS 内部的元数据。这是因为 Rsync 服务器上的文件访问模式更加均匀，而不像面向终端用户的 HTTP 服务器上冷热分明，因此仅缓存元数据可以节约 SSD 寿命。</li>
-        </ul>
-      </li>
-      <li>
-        <p>以及一些可能有潜在（但我们认为我们可以容忍的）风险的选项：</p>
-        <ul>
-          <li><code class="language-plaintext highlighter-rouge">sync=disabled</code>：禁用同步写入语义（<code class="language-plaintext highlighter-rouge">open(O_SYNC)</code>、<code class="language-plaintext highlighter-rouge">sync()</code> 和 <code class="language-plaintext highlighter-rouge">fsync()</code> 等）以让 ZFS 能够充分发挥写缓冲区的意义，如降低碎片率等</li>
-          <li><code class="language-plaintext highlighter-rouge">redundant_metadata=some</code>：（OpenZFS 2.2）减少元数据的冗余度来获得更好的写入性能。</li>
-        </ul>
-        <p>我们认为这两个选项符合我们对镜像站仓库内容的数据安全和完整性需求的理解，它们在其他场景下不一定“安全”。</p>
-      </li>
-      <li>
-        <p>对于 ZFS 模块层面的参数，光是 290+ 的数量就已经很劝退了。
-          此处感谢 Debian ZFS 维护者兼北京外国语大学镜像站管理员 @happyaron 的帮助，我们快速找出了十几个常用的参数进行针对性调节。</p>
-        <div class="language-shell highlighter-rouge">
-          <div class="highlight">
-            <pre class="highlight"><code><span class="c"># 设置 ARC 大小范围为 160-200 GiB，并为操作系统保留 16 GiB 空闲</span>
+          <pre class="highlight"><code><span class="c"># 设置 ARC 大小范围为 160-200 GiB，并为操作系统保留 16 GiB 空闲</span>
 options zfs <span class="nv">zfs_arc_max</span><span class="o">=</span>214748364800
 options zfs <span class="nv">zfs_arc_min</span><span class="o">=</span>171798691840
 options zfs <span class="nv">zfs_arc_sys_free</span><span class="o">=</span>17179869184
@@ -233,212 +338,212 @@ options zfs <span class="nv">l2arc_headroom</span><span class="o">=</span>8
 options zfs <span class="nv">l2arc_write_max</span><span class="o">=</span>67108864
 options zfs <span class="nv">l2arc_noprefetch</span><span class="o">=</span>0
 </code></pre>
-          </div>
+        </div>
     </div>
-        <p>另外还有 <code class="language-plaintext highlighter-rouge">zfs_dmu_offset_next_sync</code>，但由于它从 OpenZFS 2.1.5 开始已经默认启用了，因此我们将其从本列表中略去。</p>
-      </li>
-    </ul>
-    <p>将 Rsync 服务暂时转移到由 HTTP 服务器兼任之后，我们 destroy 了原有的 ZFS pool 并重新组建了一个新的 pool，然后再从外面（上游或 TUNA、BFSU 等友校镜像站）把原有的仓库同步回来。
-      令我们感到惊讶的是，把总共近 40 TiB 的仓库同步回来只花了 3 天，比我们预想的要快得多。
-      其他的一些数据看起来也令人振奋：</p>
-    <ul>
-      <li>
-        <p>ZFS 压缩率：39.5T / 37.1T (1.07x)</p>
-        <p>需要特别指出的是，ZFS 只显示压缩率小数点后两位，所以更高的精度，需要通过原始数据自己计算：</p>
-        <div class="language-shell highlighter-rouge">
-          <div class="highlight">
-            <pre class="highlight"><code>zfs list <span class="nt">-po</span> name,logicalused,used
+      <p>另外还有 <code class="language-plaintext highlighter-rouge">zfs_dmu_offset_next_sync</code>，但由于它从 OpenZFS 2.1.5 开始已经默认启用了，因此我们将其从本列表中略去。</p>
+    </li>
+  </ul>
+  <p>将 Rsync 服务暂时转移到由 HTTP 服务器兼任之后，我们 destroy 了原有的 ZFS pool 并重新组建了一个新的 pool，然后再从外面（上游或 TUNA、BFSU 等友校镜像站）把原有的仓库同步回来。
+    令我们感到惊讶的是，把总共近 40 TiB 的仓库同步回来只花了 3 天，比我们预想的要快得多。
+    其他的一些数据看起来也令人振奋：</p>
+  <ul>
+    <li>
+      <p>ZFS 压缩率：39.5T / 37.1T (1.07x)</p>
+      <p>需要特别指出的是，ZFS 只显示压缩率小数点后两位，所以更高的精度，需要通过原始数据自己计算：</p>
+      <div class="language-shell highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code>zfs list <span class="nt">-po</span> name,logicalused,used
 </code></pre>
-          </div>
+        </div>
     </div>
-        <p>我们更精确的压缩率是 1 + 6.57%，即压掉了 2.67 TB（2.43 TiB），约等于 <a href="/static/planet/ustc-mirrors-zfs-rebuild/lenovo-legion-wechat-data.jpg">9 份微信数据</a>（不是</p>
-      </li>
-      <li>
-        <p>最关键的是更合理的 I/O 负载：</p>
-        <figure class=""><a href="/static/planet/ustc-mirrors-zfs-rebuild/mirrors2-io-utilization-and-free-space-june-july-2024.png" class="image-popup" title="mirrors2 机器在重建前后的 I/O 负载
+      <p>我们更精确的压缩率是 1 + 6.57%，即压掉了 2.67 TB（2.43 TiB），约等于 <a href="/static/planet/ustc-mirrors-zfs-rebuild/lenovo-legion-wechat-data.jpg">9 份微信数据</a>（不是</p>
+    </li>
+    <li>
+      <p>最关键的是更合理的 I/O 负载：</p>
+      <figure class=""><a href="/static/planet/ustc-mirrors-zfs-rebuild/mirrors2-io-utilization-and-free-space-june-july-2024.png" class="image-popup" title="mirrors2 机器在重建前后的 I/O 负载
 "><img src="/static/planet/ustc-mirrors-zfs-rebuild/mirrors2-io-utilization-and-free-space-june-july-2024.png" alt="mirrors2 机器在重建前后的 I/O 负载" /></a>
-          <figcaption>
-            mirrors2 机器在重建前后的 I/O 负载
-          </figcaption>
-        </figure>
-      </li>
-    </ul>
-    <p>可以看出，经过几天的预热之后，I/O 负载维持在了 20% 左右，而在重建之前一直维持在 90% 以上。</p>
-    <h2 id="mirrors4">重建 HTTP 服务器</h2>
-    <p>我们的 HTTP 服务器是在 2020 年秋季搭建的，并且当时也有一些不同的背景。
-      申请这台服务器正是因为 Rsync 服务器容量过满且性能不佳，加上当时社团内也没有熟悉 ZFS 的同学，我们对 ZFS 的印象很差，所以我们决定完全避开 ZFS，使用硬件 RAID、LVM 和 XFS，其中使用 LVM 的原因是 RAID 卡不支持跨两个控制器组 RAID。
-      对于“内存做缓存”这部分，我们决定直接使用内核的 page cache；而对于 SSD 缓存，我们则率先吃了 LVMcache 的螃蟹。</p>
-    <p>然而这些过于“新鲜”的技术并没有带来比（现在的 ZFS）更好的体验：</p>
-    <ul>
-      <li>XFS 无法缩小，因此我们不得不在 LVM VG 层面保留了 free PE。同时我们也不能把 XFS 文件系统用满，因此这里就有了两层无法利用的空闲空间。</li>
-      <li>我们最初分配了 1.5 TB 的 SSD 缓存，但 LVMcache 又建议我们不要超过 100 万个 chunk，我们当时也没有足够的精力和知识水平去研究这个建议背后的技术细节，因此我们最终只分配了 1 TiB（1 MiB chunk size * 1 Mi chunks）的 SSD 缓存。</li>
-      <li>SSD 缓存策略不可调，多年以后我们翻了 kernel 源码才发现它是一个 64 级的 LRU。</li>
-      <li>配好 cache 之后 GRUB 立刻挂了（难绷），我们调查发现原因是 GRUB 有一套自己的解析 LVM metadata 的代码，它并没有正确处理（或者说根本没处理）VG 中有 cache volume 的情况，我们不得不自己 <a href="https://github.com/taoky/grub/commit/85b260baec91aa4f7db85d7592f6be92d549a0ae">patch</a> 了 GRUB 才能正常开机。</li>
-      <li>由于我们对 LVMcache 的 chunk 不够了解，我们的 SSD 在不到 2 年的时间里就严重超过了写入寿命，我们被迫申请换新。</li>
-    </ul>
-    <p>在 SSD 换新之后，即使我们认为我们对 LVMcache 做出了稍微合理一点的调参，坚持忽略警告采用 128 KiB 的 chunk size 和 800 万个 chunk 之后，它的性能（命中率）也并不可观：</p>
-    <figure class=""><a href="/static/planet/ustc-mirrors-zfs-rebuild/mirrors4-dmcache-may-june-2024.png" class="image-popup" title="2024 年 5 月至 6 月期间 LVMcache 的命中率
+        <figcaption>
+          mirrors2 机器在重建前后的 I/O 负载
+        </figcaption>
+      </figure>
+    </li>
+  </ul>
+  <p>可以看出，经过几天的预热之后，I/O 负载维持在了 20% 左右，而在重建之前一直维持在 90% 以上。</p>
+  <h2 id="mirrors4">重建 HTTP 服务器</h2>
+  <p>我们的 HTTP 服务器是在 2020 年秋季搭建的，并且当时也有一些不同的背景。
+    申请这台服务器正是因为 Rsync 服务器容量过满且性能不佳，加上当时社团内也没有熟悉 ZFS 的同学，我们对 ZFS 的印象很差，所以我们决定完全避开 ZFS，使用硬件 RAID、LVM 和 XFS，其中使用 LVM 的原因是 RAID 卡不支持跨两个控制器组 RAID。
+    对于“内存做缓存”这部分，我们决定直接使用内核的 page cache；而对于 SSD 缓存，我们则率先吃了 LVMcache 的螃蟹。</p>
+  <p>然而这些过于“新鲜”的技术并没有带来比（现在的 ZFS）更好的体验：</p>
+  <ul>
+    <li>XFS 无法缩小，因此我们不得不在 LVM VG 层面保留了 free PE。同时我们也不能把 XFS 文件系统用满，因此这里就有了两层无法利用的空闲空间。</li>
+    <li>我们最初分配了 1.5 TB 的 SSD 缓存，但 LVMcache 又建议我们不要超过 100 万个 chunk，我们当时也没有足够的精力和知识水平去研究这个建议背后的技术细节，因此我们最终只分配了 1 TiB（1 MiB chunk size * 1 Mi chunks）的 SSD 缓存。</li>
+    <li>SSD 缓存策略不可调，多年以后我们翻了 kernel 源码才发现它是一个 64 级的 LRU。</li>
+    <li>配好 cache 之后 GRUB 立刻挂了（难绷），我们调查发现原因是 GRUB 有一套自己的解析 LVM metadata 的代码，它并没有正确处理（或者说根本没处理）VG 中有 cache volume 的情况，我们不得不自己 <a href="https://github.com/taoky/grub/commit/85b260baec91aa4f7db85d7592f6be92d549a0ae">patch</a> 了 GRUB 才能正常开机。</li>
+    <li>由于我们对 LVMcache 的 chunk 不够了解，我们的 SSD 在不到 2 年的时间里就严重超过了写入寿命，我们被迫申请换新。</li>
+  </ul>
+  <p>在 SSD 换新之后，即使我们认为我们对 LVMcache 做出了稍微合理一点的调参，坚持忽略警告采用 128 KiB 的 chunk size 和 800 万个 chunk 之后，它的性能（命中率）也并不可观：</p>
+  <figure class=""><a href="/static/planet/ustc-mirrors-zfs-rebuild/mirrors4-dmcache-may-june-2024.png" class="image-popup" title="2024 年 5 月至 6 月期间 LVMcache 的命中率
 "><img src="/static/planet/ustc-mirrors-zfs-rebuild/mirrors4-dmcache-may-june-2024.png" alt="2024 年 5 月至 6 月期间 LVMcache 的命中率" /></a>
-      <figcaption>
-        2024 年 5 月至 6 月期间 LVMcache 的命中率
-      </figcaption>
-    </figure>
-    <p>这些年来我们已经踩够了 LVMcache 的坑了，加上 Rsync 服务器重建的巨大成功，我们重新开始相信 ZFS 是天下第一的存储方案了。
-      所以一个月之后，我们又制定了一个相似的重建计划准备重建 HTTP 服务器，但是有一些微小的差别：</p>
-    <ul>
-      <li>我们的 Rsync 服务器采用原生的 Debian kernel + <code class="language-plaintext highlighter-rouge">zfs-dkms</code>，但根据我们使用 PVE 的经验，我们准备在 HTTP 服务器上直接用 <code class="language-plaintext highlighter-rouge">6.8.8-3-pve</code> kernel，它打包了 <code class="language-plaintext highlighter-rouge">zfs.ko</code>，这样我们就不用在 DKMS 上浪费时间了。</li>
-      <li>由于磁盘数目相同（12 块），我们也采用了两个 6 盘 RAID-Z2 vdev 的组合。
-        <ul>
-          <li>考虑到这台服务器直接向用户提供 HTTP 服务，磁盘的访问模式会比 Rsync 服务器更加冷热分明，因此我们保持了 <code class="language-plaintext highlighter-rouge">secondarycache=all</code> 的设置（采用默认值，不动）。</li>
-          <li>这台新服务器的 CPU 更新更好，因此我们把压缩等级提高到了 <code class="language-plaintext highlighter-rouge">zstd-8</code> 来试试能否获得更好的压缩比。</li>
-        </ul>
-      </li>
-      <li>我们在 Rsync 服务器上已经有了一个完整的、经过 ZFS 优化过的仓库，因此我们可以直接用 <code class="language-plaintext highlighter-rouge">zfs send -Lcp</code> 把数据倒过来。我们最终只花了 36 小时就把超过 50 TiB 的数据都倒回来了。</li>
-      <li>由于两台服务器上存储的镜像仓库有所不同，HTTP 服务器上的压缩比略低一些，为 1 + 3.93%（压掉了 2.42 TiB / 2.20 TiB）。</li>
-    </ul>
-    <p>我们把两台服务器的 I/O 负载放在一张图里对比：</p>
-    <figure class=""><a href="/static/planet/ustc-mirrors-zfs-rebuild/mirrors2-4-io-utilization-june-july-2024.png" class="image-popup" title="镜像站两台服务器在重建前后的 I/O 负载
+    <figcaption>
+      2024 年 5 月至 6 月期间 LVMcache 的命中率
+    </figcaption>
+  </figure>
+  <p>这些年来我们已经踩够了 LVMcache 的坑了，加上 Rsync 服务器重建的巨大成功，我们重新开始相信 ZFS 是天下第一的存储方案了。
+    所以一个月之后，我们又制定了一个相似的重建计划准备重建 HTTP 服务器，但是有一些微小的差别：</p>
+  <ul>
+    <li>我们的 Rsync 服务器采用原生的 Debian kernel + <code class="language-plaintext highlighter-rouge">zfs-dkms</code>，但根据我们使用 PVE 的经验，我们准备在 HTTP 服务器上直接用 <code class="language-plaintext highlighter-rouge">6.8.8-3-pve</code> kernel，它打包了 <code class="language-plaintext highlighter-rouge">zfs.ko</code>，这样我们就不用在 DKMS 上浪费时间了。</li>
+    <li>由于磁盘数目相同（12 块），我们也采用了两个 6 盘 RAID-Z2 vdev 的组合。
+      <ul>
+        <li>考虑到这台服务器直接向用户提供 HTTP 服务，磁盘的访问模式会比 Rsync 服务器更加冷热分明，因此我们保持了 <code class="language-plaintext highlighter-rouge">secondarycache=all</code> 的设置（采用默认值，不动）。</li>
+        <li>这台新服务器的 CPU 更新更好，因此我们把压缩等级提高到了 <code class="language-plaintext highlighter-rouge">zstd-8</code> 来试试能否获得更好的压缩比。</li>
+      </ul>
+    </li>
+    <li>我们在 Rsync 服务器上已经有了一个完整的、经过 ZFS 优化过的仓库，因此我们可以直接用 <code class="language-plaintext highlighter-rouge">zfs send -Lcp</code> 把数据倒过来。我们最终只花了 36 小时就把超过 50 TiB 的数据都倒回来了。</li>
+    <li>由于两台服务器上存储的镜像仓库有所不同，HTTP 服务器上的压缩比略低一些，为 1 + 3.93%（压掉了 2.42 TiB / 2.20 TiB）。</li>
+  </ul>
+  <p>我们把两台服务器的 I/O 负载放在一张图里对比：</p>
+  <figure class=""><a href="/static/planet/ustc-mirrors-zfs-rebuild/mirrors2-4-io-utilization-june-july-2024.png" class="image-popup" title="镜像站两台服务器在重建前后的 I/O 负载
 "><img src="/static/planet/ustc-mirrors-zfs-rebuild/mirrors2-4-io-utilization-june-july-2024.png" alt="镜像站两台服务器在重建前后的 I/O 负载" /></a>
-      <figcaption>
-        镜像站两台服务器在重建前后的 I/O 负载
-      </figcaption>
-    </figure>
-    <p>上图左半部分为重建前的情况，中间部分为仅重建了 Rsync 服务器的情况，右半部分为两台服务器都重建完毕后的情况。</p>
-    <p>ZFS ARC 的命中率也十分可观：</p>
-    <figure class=""><a href="/static/planet/ustc-mirrors-zfs-rebuild/mirrors2-4-zfs-arc-hit-rate.png" class="image-popup" title="两台服务器的 ZFS ARC 命中率
+    <figcaption>
+      镜像站两台服务器在重建前后的 I/O 负载
+    </figcaption>
+  </figure>
+  <p>上图左半部分为重建前的情况，中间部分为仅重建了 Rsync 服务器的情况，右半部分为两台服务器都重建完毕后的情况。</p>
+  <p>ZFS ARC 的命中率也十分可观：</p>
+  <figure class=""><a href="/static/planet/ustc-mirrors-zfs-rebuild/mirrors2-4-zfs-arc-hit-rate.png" class="image-popup" title="两台服务器的 ZFS ARC 命中率
 "><img src="/static/planet/ustc-mirrors-zfs-rebuild/mirrors2-4-zfs-arc-hit-rate.png" alt="两台服务器的 ZFS ARC 命中率" /></a>
-      <figcaption>
-        两台服务器的 ZFS ARC 命中率
-      </figcaption>
-    </figure>
-    <p>稳定下来之后，两台服务器的 I/O 负载还更低了：</p>
-    <figure class=""><a href="/static/planet/ustc-mirrors-zfs-rebuild/mirrors2-4-disk-io-after-rebuild.png" class="image-popup" title="两台服务器重建后磁盘 I/O 的稳定情况
+    <figcaption>
+      两台服务器的 ZFS ARC 命中率
+    </figcaption>
+  </figure>
+  <p>稳定下来之后，两台服务器的 I/O 负载还更低了：</p>
+  <figure class=""><a href="/static/planet/ustc-mirrors-zfs-rebuild/mirrors2-4-disk-io-after-rebuild.png" class="image-popup" title="两台服务器重建后磁盘 I/O 的稳定情况
 "><img src="/static/planet/ustc-mirrors-zfs-rebuild/mirrors2-4-disk-io-after-rebuild.png" alt="两台服务器重建后磁盘 I/O 的稳定情况" /></a>
-      <figcaption>
-        两台服务器重建后磁盘 I/O 的稳定情况
-      </figcaption>
-    </figure>
-    <h2 id="杂项">杂项</h2>
-    <h3 id="zfs-透明压缩">ZFS 透明压缩</h3>
-    <p>我们并没有想到这么多仓库的压缩率都还不错：</p>
-    <table>
-      <thead>
-        <tr>
-          <th style="text-align: left">NAME</th>
-          <th style="text-align: right">LUSED</th>
-          <th style="text-align: right">USED</th>
-          <th style="text-align: right">RATIO</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td style="text-align: left">pool0/repo/crates.io-index</td>
-          <td style="text-align: right">2.19G</td>
-          <td style="text-align: right">1.65G</td>
-          <td style="text-align: right">3.01x</td>
-        </tr>
-        <tr>
-          <td style="text-align: left">pool0/repo/elpa</td>
-          <td style="text-align: right">3.35G</td>
-          <td style="text-align: right">2.32G</td>
-          <td style="text-align: right">1.67x</td>
-        </tr>
-        <tr>
-          <td style="text-align: left">pool0/repo/rfc</td>
-          <td style="text-align: right">4.37G</td>
-          <td style="text-align: right">3.01G</td>
-          <td style="text-align: right">1.56x</td>
-        </tr>
-        <tr>
-          <td style="text-align: left">pool0/repo/debian-cdimage</td>
-          <td style="text-align: right">1.58T</td>
-          <td style="text-align: right">1.04T</td>
-          <td style="text-align: right">1.54x</td>
-        </tr>
-        <tr>
-          <td style="text-align: left">pool0/repo/tldp</td>
-          <td style="text-align: right">4.89G</td>
-          <td style="text-align: right">3.78G</td>
-          <td style="text-align: right">1.48x</td>
-        </tr>
-        <tr>
-          <td style="text-align: left">pool0/repo/loongnix</td>
-          <td style="text-align: right">438G</td>
-          <td style="text-align: right">332G</td>
-          <td style="text-align: right">1.34x</td>
-        </tr>
-        <tr>
-          <td style="text-align: left">pool0/repo/rosdistro</td>
-          <td style="text-align: right">32.2M</td>
-          <td style="text-align: right">26.6M</td>
-          <td style="text-align: right">1.31x</td>
-        </tr>
-      </tbody>
-    </table>
-    <p>有些数字看着不太对劲（比如第一个），我们认为是这个问题造成的：<a href="https://github.com/openzfs/zfs/issues/7639"><i class="fab fa-github"></i> openzfs/zfs#7639</a></p>
-    <p>如果我们按照压缩量排序，结果如下：</p>
-    <table>
-      <thead>
-        <tr>
-          <th style="text-align: left">NAME</th>
-          <th style="text-align: right">LUSED</th>
-          <th style="text-align: right">USED</th>
-          <th style="text-align: right">DIFF</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td style="text-align: left">pool0/repo</td>
-          <td style="text-align: right">58.3T</td>
-          <td style="text-align: right">56.1T</td>
-          <td style="text-align: right">2.2T</td>
-        </tr>
-        <tr>
-          <td style="text-align: left">pool0/repo/debian-cdimage</td>
-          <td style="text-align: right">1.6T</td>
-          <td style="text-align: right">1.0T</td>
-          <td style="text-align: right">549.6G</td>
-        </tr>
-        <tr>
-          <td style="text-align: left">pool0/repo/opensuse</td>
-          <td style="text-align: right">2.5T</td>
-          <td style="text-align: right">2.3T</td>
-          <td style="text-align: right">279.7G</td>
-        </tr>
-        <tr>
-          <td style="text-align: left">pool0/repo/turnkeylinux</td>
-          <td style="text-align: right">1.2T</td>
-          <td style="text-align: right">1.0T</td>
-          <td style="text-align: right">155.2G</td>
-        </tr>
-        <tr>
-          <td style="text-align: left">pool0/repo/loongnix</td>
-          <td style="text-align: right">438.2G</td>
-          <td style="text-align: right">331.9G</td>
-          <td style="text-align: right">106.3G</td>
-        </tr>
-        <tr>
-          <td style="text-align: left">pool0/repo/alpine</td>
-          <td style="text-align: right">3.0T</td>
-          <td style="text-align: right">2.9T</td>
-          <td style="text-align: right">103.9G</td>
-        </tr>
-        <tr>
-          <td style="text-align: left">pool0/repo/openwrt</td>
-          <td style="text-align: right">1.8T</td>
-          <td style="text-align: right">1.7T</td>
-          <td style="text-align: right">70.0G</td>
-        </tr>
-      </tbody>
-    </table>
-    <p><code class="language-plaintext highlighter-rouge">debian-cdimage</code> 一个仓库就占了总压缩量的 1/4。</p>
-    <h3 id="grafana-for-zfs-io">Grafana for ZFS I/O</h3>
-    <p>重建后，我们也修了一个显示 ZFS I/O 的 Grafana 面板。
-      因为 ZFS 的 I/O 统计数据是通过 <code class="language-plaintext highlighter-rouge">/proc/spl/kstat/zfs/$POOL/objset-$OBJSETID_HEX</code> 获取的，并且是分“object set”（即 dataset）累计统计的，所以我们需要先对每个 dataset 的数据做差分，再按 pool 加起来。
-      也就是说，一个 InfluxQL subquery 是跑不掉的。</p>
-    <div class="language-sql highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code><span class="k">SELECT</span>
+    <figcaption>
+      两台服务器重建后磁盘 I/O 的稳定情况
+    </figcaption>
+  </figure>
+  <h2 id="杂项">杂项</h2>
+  <h3 id="zfs-透明压缩">ZFS 透明压缩</h3>
+  <p>我们并没有想到这么多仓库的压缩率都还不错：</p>
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">NAME</th>
+        <th style="text-align: right">LUSED</th>
+        <th style="text-align: right">USED</th>
+        <th style="text-align: right">RATIO</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">pool0/repo/crates.io-index</td>
+        <td style="text-align: right">2.19G</td>
+        <td style="text-align: right">1.65G</td>
+        <td style="text-align: right">3.01x</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">pool0/repo/elpa</td>
+        <td style="text-align: right">3.35G</td>
+        <td style="text-align: right">2.32G</td>
+        <td style="text-align: right">1.67x</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">pool0/repo/rfc</td>
+        <td style="text-align: right">4.37G</td>
+        <td style="text-align: right">3.01G</td>
+        <td style="text-align: right">1.56x</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">pool0/repo/debian-cdimage</td>
+        <td style="text-align: right">1.58T</td>
+        <td style="text-align: right">1.04T</td>
+        <td style="text-align: right">1.54x</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">pool0/repo/tldp</td>
+        <td style="text-align: right">4.89G</td>
+        <td style="text-align: right">3.78G</td>
+        <td style="text-align: right">1.48x</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">pool0/repo/loongnix</td>
+        <td style="text-align: right">438G</td>
+        <td style="text-align: right">332G</td>
+        <td style="text-align: right">1.34x</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">pool0/repo/rosdistro</td>
+        <td style="text-align: right">32.2M</td>
+        <td style="text-align: right">26.6M</td>
+        <td style="text-align: right">1.31x</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>有些数字看着不太对劲（比如第一个），我们认为是这个问题造成的：<a href="https://github.com/openzfs/zfs/issues/7639"><i class="fab fa-github"></i> openzfs/zfs#7639</a></p>
+  <p>如果我们按照压缩量排序，结果如下：</p>
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">NAME</th>
+        <th style="text-align: right">LUSED</th>
+        <th style="text-align: right">USED</th>
+        <th style="text-align: right">DIFF</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">pool0/repo</td>
+        <td style="text-align: right">58.3T</td>
+        <td style="text-align: right">56.1T</td>
+        <td style="text-align: right">2.2T</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">pool0/repo/debian-cdimage</td>
+        <td style="text-align: right">1.6T</td>
+        <td style="text-align: right">1.0T</td>
+        <td style="text-align: right">549.6G</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">pool0/repo/opensuse</td>
+        <td style="text-align: right">2.5T</td>
+        <td style="text-align: right">2.3T</td>
+        <td style="text-align: right">279.7G</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">pool0/repo/turnkeylinux</td>
+        <td style="text-align: right">1.2T</td>
+        <td style="text-align: right">1.0T</td>
+        <td style="text-align: right">155.2G</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">pool0/repo/loongnix</td>
+        <td style="text-align: right">438.2G</td>
+        <td style="text-align: right">331.9G</td>
+        <td style="text-align: right">106.3G</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">pool0/repo/alpine</td>
+        <td style="text-align: right">3.0T</td>
+        <td style="text-align: right">2.9T</td>
+        <td style="text-align: right">103.9G</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">pool0/repo/openwrt</td>
+        <td style="text-align: right">1.8T</td>
+        <td style="text-align: right">1.7T</td>
+        <td style="text-align: right">70.0G</td>
+      </tr>
+    </tbody>
+  </table>
+  <p><code class="language-plaintext highlighter-rouge">debian-cdimage</code> 一个仓库就占了总压缩量的 1/4。</p>
+  <h3 id="grafana-for-zfs-io">Grafana for ZFS I/O</h3>
+  <p>重建后，我们也修了一个显示 ZFS I/O 的 Grafana 面板。
+    因为 ZFS 的 I/O 统计数据是通过 <code class="language-plaintext highlighter-rouge">/proc/spl/kstat/zfs/$POOL/objset-$OBJSETID_HEX</code> 获取的，并且是分“object set”（即 dataset）累计统计的，所以我们需要先对每个 dataset 的数据做差分，再按 pool 加起来。
+    也就是说，一个 InfluxQL subquery 是跑不掉的。</p>
+  <div class="language-sql highlighter-rouge">
+    <div class="highlight">
+      <pre class="highlight"><code><span class="k">SELECT</span>
   <span class="n">non_negative_derivative</span><span class="p">(</span><span class="k">sum</span><span class="p">(</span><span class="nv">"reads"</span><span class="p">),</span> <span class="mi">1</span><span class="n">s</span><span class="p">)</span> <span class="k">AS</span> <span class="nv">"read"</span><span class="p">,</span>
   <span class="n">non_negative_derivative</span><span class="p">(</span><span class="k">sum</span><span class="p">(</span><span class="nv">"writes"</span><span class="p">),</span> <span class="mi">1</span><span class="n">s</span><span class="p">)</span> <span class="k">AS</span> <span class="nv">"write"</span>
 <span class="k">FROM</span> <span class="p">(</span>
@@ -452,169 +557,169 @@ options zfs <span class="nv">l2arc_noprefetch</span><span class="o">=</span>0
 <span class="k">WHERE</span> <span class="err">$</span><span class="n">timeFilter</span>
 <span class="k">GROUP</span> <span class="k">BY</span> <span class="nb">time</span><span class="p">(</span><span class="err">$</span><span class="n">interval</span><span class="p">),</span> <span class="nv">"pool"</span><span class="p">::</span><span class="n">tag</span> <span class="n">fill</span><span class="p">(</span><span class="n">linear</span><span class="p">)</span>
 </code></pre>
-      </div>
     </div>
-    <p>由于 subquery 的存在，这个 query 确实有点慢，但我们也没啥能优化的。</p>
-    <p>如果要显示读写速率的话，直接把内层查询的 <code class="language-plaintext highlighter-rouge">reads</code> 和 <code class="language-plaintext highlighter-rouge">writes</code> 换成 <code class="language-plaintext highlighter-rouge">nread</code> 和 <code class="language-plaintext highlighter-rouge">nwritten</code> 就行了。</p>
-    <figure class=""><a href="/static/planet/ustc-mirrors-zfs-rebuild/mirrors2-4-zfs-io-count.png" class="image-popup" title="ZFS IOPS 和带宽
+  </div>
+  <p>由于 subquery 的存在，这个 query 确实有点慢，但我们也没啥能优化的。</p>
+  <p>如果要显示读写速率的话，直接把内层查询的 <code class="language-plaintext highlighter-rouge">reads</code> 和 <code class="language-plaintext highlighter-rouge">writes</code> 换成 <code class="language-plaintext highlighter-rouge">nread</code> 和 <code class="language-plaintext highlighter-rouge">nwritten</code> 就行了。</p>
+  <figure class=""><a href="/static/planet/ustc-mirrors-zfs-rebuild/mirrors2-4-zfs-io-count.png" class="image-popup" title="ZFS IOPS 和带宽
 "><img src="/static/planet/ustc-mirrors-zfs-rebuild/mirrors2-4-zfs-io-count.png" alt="ZFS IOPS 和带宽" /></a>
-      <figcaption>
-        ZFS IOPS 和带宽
-      </figcaption>
-    </figure>
-    <p>令 UC 震惊部出动的是，一个机械盘阵列竟然能跑出平均 15k、最高 50k 的 IOPS。
-      我们发现这个统计数字算上了 ARC hit，也就是只有一小部分 I/O 请求是真正落盘的，那就好解释了。</p>
-    <h3 id="apparmor">AppArmor</h3>
-    <p>换上先进的 PVE kernel 之后，我们很快就发现同步任务全挂了（）
-      排查发现 <code class="language-plaintext highlighter-rouge">rsync</code> 在调用 <code class="language-plaintext highlighter-rouge">socketpair(2)</code> 的时候冒出了 <code class="language-plaintext highlighter-rouge">EPERM</code>，这是我们从来没遇到过的情况。
-      实际上这些系统调用都被 AppArmor 拦下来了，最终查到是 Ubuntu 在 kernel 里加的私货 <code class="language-plaintext highlighter-rouge">security/apparmor/af_unix.c</code> 导致的。
-      由于 Proxmox VE 的 kernel 是从 Ubuntu fork 过来的，这个私货也就被夹带到我们服务器上了。</p>
-    <p>我们发现 PVE 也打包了自己的 AppArmor <code class="language-plaintext highlighter-rouge">features</code> 配置，就把它直接拉过来用：</p>
-    <div class="language-shell highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code>dpkg-divert <span class="nt">--package</span> lxc-pve <span class="nt">--rename</span> <span class="nt">--divert</span> /usr/share/apparmor-features/features.stock <span class="nt">--add</span> /usr/share/apparmor-features/features
+    <figcaption>
+      ZFS IOPS 和带宽
+    </figcaption>
+  </figure>
+  <p>令 UC 震惊部出动的是，一个机械盘阵列竟然能跑出平均 15k、最高 50k 的 IOPS。
+    我们发现这个统计数字算上了 ARC hit，也就是只有一小部分 I/O 请求是真正落盘的，那就好解释了。</p>
+  <h3 id="apparmor">AppArmor</h3>
+  <p>换上先进的 PVE kernel 之后，我们很快就发现同步任务全挂了（）
+    排查发现 <code class="language-plaintext highlighter-rouge">rsync</code> 在调用 <code class="language-plaintext highlighter-rouge">socketpair(2)</code> 的时候冒出了 <code class="language-plaintext highlighter-rouge">EPERM</code>，这是我们从来没遇到过的情况。
+    实际上这些系统调用都被 AppArmor 拦下来了，最终查到是 Ubuntu 在 kernel 里加的私货 <code class="language-plaintext highlighter-rouge">security/apparmor/af_unix.c</code> 导致的。
+    由于 Proxmox VE 的 kernel 是从 Ubuntu fork 过来的，这个私货也就被夹带到我们服务器上了。</p>
+  <p>我们发现 PVE 也打包了自己的 AppArmor <code class="language-plaintext highlighter-rouge">features</code> 配置，就把它直接拉过来用：</p>
+  <div class="language-shell highlighter-rouge">
+    <div class="highlight">
+      <pre class="highlight"><code>dpkg-divert <span class="nt">--package</span> lxc-pve <span class="nt">--rename</span> <span class="nt">--divert</span> /usr/share/apparmor-features/features.stock <span class="nt">--add</span> /usr/share/apparmor-features/features
 wget <span class="nt">-O</span> /usr/share/apparmor-features/features https://github.com/proxmox/lxc/raw/master/debian/features
 </code></pre>
-      </div>
     </div>
-    <h3 id="file-deduplication">文件级去重</h3>
-    <p>我们注意到个别仓库有大量的重复的、内容相同的目录，怀疑可能是同步方法（HTTP）的限制导致目录的符号链接变成了完整内容的拷贝。</p>
-    <figure class=""><a href="/static/planet/ustc-mirrors-zfs-rebuild/ls-zerotier-redhat-el.png" class="image-popup" title="ZeroTier 仓库中的一些目录
+  </div>
+  <h3 id="file-deduplication">文件级去重</h3>
+  <p>我们注意到个别仓库有大量的重复的、内容相同的目录，怀疑可能是同步方法（HTTP）的限制导致目录的符号链接变成了完整内容的拷贝。</p>
+  <figure class=""><a href="/static/planet/ustc-mirrors-zfs-rebuild/ls-zerotier-redhat-el.png" class="image-popup" title="ZeroTier 仓库中的一些目录
 "><img src="/static/planet/ustc-mirrors-zfs-rebuild/ls-zerotier-redhat-el.png" alt="ZeroTier 仓库中的一些目录" /></a>
-      <figcaption>
-        ZeroTier 仓库中的一些目录
-      </figcaption>
-    </figure>
-    <p>我们想到了 ZFS 的 deduplication，于是在 ZeroTier 仓库上做了一个初步的测试：</p>
-    <div class="language-shell highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code>zfs create <span class="nt">-o</span> <span class="nv">dedup</span><span class="o">=</span>on pool0/repo/zerotier
+    <figcaption>
+      ZeroTier 仓库中的一些目录
+    </figcaption>
+  </figure>
+  <p>我们想到了 ZFS 的 deduplication，于是在 ZeroTier 仓库上做了一个初步的测试：</p>
+  <div class="language-shell highlighter-rouge">
+    <div class="highlight">
+      <pre class="highlight"><code>zfs create <span class="nt">-o</span> <span class="nv">dedup</span><span class="o">=</span>on pool0/repo/zerotier
 <span class="c"># 导入数据</span>
 </code></pre>
-      </div>
     </div>
-    <div class="language-console highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code><span class="gp">#</span><span class="w"> </span>zdb <span class="nt">-DDD</span> pool0
+  </div>
+  <div class="language-console highlighter-rouge">
+    <div class="highlight">
+      <pre class="highlight"><code><span class="gp">#</span><span class="w"> </span>zdb <span class="nt">-DDD</span> pool0
 <span class="go">dedup = 4.93, compress = 1.23, copies = 1.00, dedup * compress / copies = 6.04
 </span></code></pre>
-      </div>
     </div>
-    <p>结果十分可观，但考虑到 ZFS dedup 一向来糟糕的名声，我们还是不太想在镜像站上启用。
-      所以我们重新找了个更灵车的方案：</p>
-    <div class="language-shell highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code><span class="c"># post-sync.sh</span>
+  </div>
+  <p>结果十分可观，但考虑到 ZFS dedup 一向来糟糕的名声，我们还是不太想在镜像站上启用。
+    所以我们重新找了个更灵车的方案：</p>
+  <div class="language-shell highlighter-rouge">
+    <div class="highlight">
+      <pre class="highlight"><code><span class="c"># post-sync.sh</span>
 <span class="c"># Do file-level deduplication for select repos</span>
 <span class="k">case</span> <span class="s2">"</span><span class="nv">$NAME</span><span class="s2">"</span> <span class="k">in
   </span>docker-ce|influxdata|nginx|openresty|proxmox|salt|tailscale|zerotier<span class="p">)</span>
     jdupes <span class="nt">-L</span> <span class="nt">-Q</span> <span class="nt">-r</span> <span class="nt">-q</span> <span class="s2">"</span><span class="nv">$DIR</span><span class="s2">"</span> <span class="p">;;</span>
 <span class="k">esac</span>
 </code></pre>
-      </div>
     </div>
-    <p>这个用户态的文件去重工具十分好用，效果堪比 ZFS，而且没有性能损失。
-      我们对几个明显有重复内容的仓库跑了一下 jdupes，结果如下：</p>
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Orig</th>
-          <th>Dedup</th>
-          <th>Diff</th>
-          <th>Ratio</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>proxmox</td>
-          <td>395.4G</td>
-          <td>162.6G</td>
-          <td>232.9G</td>
-          <td>2.43x</td>
-        </tr>
-        <tr>
-          <td>docker-ce</td>
-          <td>539.6G</td>
-          <td>318.2G</td>
-          <td>221.4G</td>
-          <td>1.70x</td>
-        </tr>
-        <tr>
-          <td>influxdata</td>
-          <td>248.4G</td>
-          <td>54.8G</td>
-          <td>193.6G</td>
-          <td>4.54x</td>
-        </tr>
-        <tr>
-          <td>salt</td>
-          <td>139.0G</td>
-          <td>87.2G</td>
-          <td>51.9G</td>
-          <td>1.59x</td>
-        </tr>
-        <tr>
-          <td>nginx</td>
-          <td>94.9G</td>
-          <td>59.7G</td>
-          <td>35.2G</td>
-          <td>1.59x</td>
-        </tr>
-        <tr>
-          <td>zerotier</td>
-          <td>29.8G</td>
-          <td>6.1G</td>
-          <td>23.7G</td>
-          <td>4.88x</td>
-        </tr>
-        <tr>
-          <td>mysql-repo</td>
-          <td>647.8G</td>
-          <td>632.5G</td>
-          <td>15.2G</td>
-          <td>1.02x</td>
-        </tr>
-        <tr>
-          <td>openresty</td>
-          <td>65.1G</td>
-          <td>53.4G</td>
-          <td>11.7G</td>
-          <td>1.22x</td>
-        </tr>
-        <tr>
-          <td>tailscale</td>
-          <td>17.9G</td>
-          <td>9.0G</td>
-          <td>9.0G</td>
-          <td>2.00x</td>
-        </tr>
-      </tbody>
-    </table>
-    <p>参考上述表格，我们排除了 <code class="language-plaintext highlighter-rouge">mysql-repo</code>，因为它的去重比例太低，不值得花费跑一遍去重产生的 I/O 负载。</p>
-    <h2 id="conclusion">总结</h2>
-    <p>ZFS 解决了我们镜像站上的一大堆问题，并且有了此次调参经验，我们现在宣布 <strong>ZFS 天下第一</strong>（不是）</p>
-    <p>有了 ZFS 之后：</p>
-    <ul>
-      <li>我们不再担心分区问题，ZFS 可以灵活分配。</li>
-      <li>我们的机械盘比别人的固态盘跑得还快，这非常 excited！
-        <ul>
-          <li>我们成为了第一个不再<strong>羡慕</strong> TUNA 的全闪服务器的镜像站！</li>
-        </ul>
+  </div>
+  <p>这个用户态的文件去重工具十分好用，效果堪比 ZFS，而且没有性能损失。
+    我们对几个明显有重复内容的仓库跑了一下 jdupes，结果如下：</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Orig</th>
+        <th>Dedup</th>
+        <th>Diff</th>
+        <th>Ratio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>proxmox</td>
+        <td>395.4G</td>
+        <td>162.6G</td>
+        <td>232.9G</td>
+        <td>2.43x</td>
+      </tr>
+      <tr>
+        <td>docker-ce</td>
+        <td>539.6G</td>
+        <td>318.2G</td>
+        <td>221.4G</td>
+        <td>1.70x</td>
+      </tr>
+      <tr>
+        <td>influxdata</td>
+        <td>248.4G</td>
+        <td>54.8G</td>
+        <td>193.6G</td>
+        <td>4.54x</td>
+      </tr>
+      <tr>
+        <td>salt</td>
+        <td>139.0G</td>
+        <td>87.2G</td>
+        <td>51.9G</td>
+        <td>1.59x</td>
+      </tr>
+      <tr>
+        <td>nginx</td>
+        <td>94.9G</td>
+        <td>59.7G</td>
+        <td>35.2G</td>
+        <td>1.59x</td>
+      </tr>
+      <tr>
+        <td>zerotier</td>
+        <td>29.8G</td>
+        <td>6.1G</td>
+        <td>23.7G</td>
+        <td>4.88x</td>
+      </tr>
+      <tr>
+        <td>mysql-repo</td>
+        <td>647.8G</td>
+        <td>632.5G</td>
+        <td>15.2G</td>
+        <td>1.02x</td>
+      </tr>
+      <tr>
+        <td>openresty</td>
+        <td>65.1G</td>
+        <td>53.4G</td>
+        <td>11.7G</td>
+        <td>1.22x</td>
+      </tr>
+      <tr>
+        <td>tailscale</td>
+        <td>17.9G</td>
+        <td>9.0G</td>
+        <td>9.0G</td>
+        <td>2.00x</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>参考上述表格，我们排除了 <code class="language-plaintext highlighter-rouge">mysql-repo</code>，因为它的去重比例太低，不值得花费跑一遍去重产生的 I/O 负载。</p>
+  <h2 id="conclusion">总结</h2>
+  <p>ZFS 解决了我们镜像站上的一大堆问题，并且有了此次调参经验，我们现在宣布 <strong>ZFS 天下第一</strong>（不是）</p>
+  <p>有了 ZFS 之后：</p>
+  <ul>
+    <li>我们不再担心分区问题，ZFS 可以灵活分配。</li>
+    <li>我们的机械盘比别人的固态盘跑得还快，这非常 excited！
+      <ul>
+        <li>我们成为了第一个不再<strong>羡慕</strong> TUNA 的全闪服务器的镜像站！</li>
+      </ul>
+    </li>
+    <li>零成本获得额外容量，由 ZFS 透明压缩和去重联合赞助！</li>
+  </ul>
+  <h3 id="considerations">思考</h3>
+  <p>虽然我们的 ZFS 配置看起来非常高效，但我们也知道 ZFS 在长期运行中可能会因为碎片化而导致性能下降的问题。
+    我们会持续关注我们的服务器，监控长期的性能变化。</p>
+  <div class="footnotes" role="doc-endnotes">
+    <ol>
+      <li id="fn:as-of">
+        <p>指本文所述的重建工程之前 <a href="#fnref:as-of" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
       </li>
-      <li>零成本获得额外容量，由 ZFS 透明压缩和去重联合赞助！</li>
-    </ul>
-    <h3 id="considerations">思考</h3>
-    <p>虽然我们的 ZFS 配置看起来非常高效，但我们也知道 ZFS 在长期运行中可能会因为碎片化而导致性能下降的问题。
-      我们会持续关注我们的服务器，监控长期的性能变化。</p>
-    <div class="footnotes" role="doc-endnotes">
-      <ol>
-        <li id="fn:as-of">
-          <p>指本文所述的重建工程之前 <a href="#fnref:as-of" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-        </li>
-      </ol>
-    </div>
-    ]]></content><author><name>iBug</name></author><category term="mirrors" /><category term="linux" /><category term="服务器" /><category term="zfs" /><summary type="html"><![CDATA[A.K.A. 如何让 2000 元的机械硬盘跑得比 3000 元的固态硬盘还快（]]></summary></entry><entry><title type="html">使用 Rclone 备份 OneDrive 内容</title><link href="https://lug.ustc.edu.cn/planet/2024/05/onedrive-backup-with-rclone/" rel="alternate" type="text/html" title="使用 Rclone 备份 OneDrive 内容" /><published>2024-05-10T00:00:00+08:00</published><updated>2024-09-15T01:34:15+08:00</updated><id>https://lug.ustc.edu.cn/planet/2024/05/onedrive-backup-with-rclone</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2024/05/onedrive-backup-with-rclone/"><![CDATA[<p>本文用于介绍如何使用 Rclone 备份 OneDrive 内容。</p>
+    </ol>
+  </div>
+  ]]></content><author><name>iBug</name></author><category term="mirrors" /><category term="linux" /><category term="服务器" /><category term="zfs" /><summary type="html"><![CDATA[A.K.A. 如何让 2000 元的机械硬盘跑得比 3000 元的固态硬盘还快（]]></summary></entry><entry><title type="html">使用 Rclone 备份 OneDrive 内容</title><link href="https://lug.ustc.edu.cn/planet/2024/05/onedrive-backup-with-rclone/" rel="alternate" type="text/html" title="使用 Rclone 备份 OneDrive 内容" /><published>2024-05-10T00:00:00+08:00</published><updated>2024-09-15T01:34:15+08:00</updated><id>https://lug.ustc.edu.cn/planet/2024/05/onedrive-backup-with-rclone</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2024/05/onedrive-backup-with-rclone/"><![CDATA[<p>本文用于介绍如何使用 Rclone 备份 OneDrive 内容。</p>
   <h2 id="rclone-简介">Rclone 简介</h2>
   <p>Rclone 是一个命令行工具，用于同步文件和目录到和从云存储服务。它支持 Google Drive、Amazon S3、Dropbox、Microsoft OneDrive、Yandex Disk、Box 和其他一些云存储服务。Rclone 是一个 Go 程序，可以在 Windows、macOS、Linux 和其他操作系统上运行。</p>
   <h2 id="安装-rclone">安装 Rclone</h2>
@@ -2892,130 +2997,4 @@ usage: nc [-46AacCDdEFhklMnOortUuvz] [-K tc] [-b boundif] [-i interval] [-p sour
     <p>以下内容目前对于比赛中需要 token 的题目不适用，需使用编程方法与题目交互。</p>
   </blockquote>
   <p>由于 <a href="http://blog.chaitanya.im/4096-limit">tty 默认每行的长度最长为 4096</a>，<strong>在粘贴过长的输入时内容可能会被截断</strong>。遇到这种情况时，可以使用文件重定向解决：将需要输入的内容放置在文件中，然后 <code class="language-plaintext highlighter-rouge">cat 你的文件 - | nc 服务器 端口</code>（Windows cmd.exe 中 <code class="language-plaintext highlighter-rouge">type 你的文件 CON | ncat 服务器 端口</code>）即可。</p>
-  ]]></content><author><name>taoky</name></author><category term="Tech Tutorial" /><category term="hackergame" /><category term="netcat" /><summary type="html"><![CDATA[本文用于介绍信息安全大赛中不少题目需要使用的 nc/ncat 工具。]]></summary></entry><entry><title type="html">一个 NFS 的简介</title><link href="https://lug.ustc.edu.cn/planet/2019/08/NFS-intro/" rel="alternate" type="text/html" title="一个 NFS 的简介" /><published>2019-08-28T00:00:00+08:00</published><updated>2024-09-17T14:00:46+08:00</updated><id>https://lug.ustc.edu.cn/planet/2019/08/NFS-intro</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2019/08/NFS-intro/"><![CDATA[<p>NFS（网络文件系统，Network File System）是一个分布式的文件系统，可以用于在局域网中共享文件。它通常运用在 Unix 与类 Unix 操作系统中。对于 Linux 服务器之间的文件共享来说，NFS 相比于其他的方案（如 Samba）更加方便，性能也更好。对于应用程序来说，NFS 也是透明的。</p>
-  <h2 id="简单配置-nfs">简单配置 NFS</h2>
-  <p>我们以两台 Debian 10 的机器为例<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>简单配置 NFS 服务端。其余的发行版可以查询各自的手册以获取详细信息。</p>
-  <p>在绝大多数情况下，NFS 支持已经安装在 Linux 内核中。我们可以使用以下命令安装内核态的 NFS 服务器实现：</p>
-  <div class="language-shell highlighter-rouge">
-    <div class="highlight">
-      <pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>nfs-kernel-server
-</code></pre>
-    </div>
-  </div>
-  <p>（如果有兼容 NFSv2 和 NFSv3 的需求，需要安装 <code class="language-plaintext highlighter-rouge">portmap</code>）</p>
-  <p>出于安全性的考虑<sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>，我们假设 NFS 共享的根目录是 <code class="language-plaintext highlighter-rouge">/srv/nfs4</code>。如果需要共享的目录在其他位置，可以使用 bind mount 的方式挂载上去。（当然，对于简单的配置来说，不这样做问题也不大）</p>
-  <div class="language-shell highlighter-rouge">
-    <div class="highlight">
-      <pre class="highlight"><code>mount <span class="nt">--bind</span> 实际放置文件的目录 /srv/nfs/your_folder_name
-</code></pre>
-    </div>
-  </div>
-  <p>编辑 <code class="language-plaintext highlighter-rouge">/etc/exports</code>，设置共享文件夹的位置、允许访问的 IP、权限等，以下是一个示例。</p>
-  <div class="language-shell highlighter-rouge">
-    <div class="highlight">
-      <pre class="highlight"><code>/srv/nfs4/Downloads 192.168.124.0/24<span class="o">(</span>rw,sync<span class="o">)</span>
-</code></pre>
-    </div>
-  </div>
-  <p>这里设置了 <code class="language-plaintext highlighter-rouge">/srv/nfs4/Downloads</code> 可以被 192.168.124.0/24 的子网访问，如果希望所有人都可以访问，可以用星号 <code class="language-plaintext highlighter-rouge">*</code> 代替这里的网段。参数为可读写 (rw)，同步 (sync，即更改操作完成之后才会返回用户的请求)。更多的参数细节可以至 <code class="language-plaintext highlighter-rouge">man exports</code> 查看。</p>
-  <p>接下来，重启 NFS 服务，服务器端就配置好了。</p>
-  <div class="language-shell highlighter-rouge">
-    <div class="highlight">
-      <pre class="highlight"><code><span class="nb">sudo </span>systemctl restart nfs-kernel-server
-</code></pre>
-    </div>
-  </div>
-  <p>接下来配置一下客户端。安装 <code class="language-plaintext highlighter-rouge">nfs-common</code>，之后就可以愉快地挂载了。</p>
-  <div class="language-shell highlighter-rouge">
-    <div class="highlight">
-      <pre class="highlight"><code><span class="nb">sudo </span>mount <span class="nt">-t</span> nfs4 192.168.124.18:/srv/nfs4/Downloads /mnt/nfs_mount/
-</code></pre>
-    </div>
-  </div>
-  <p>此处将服务器 192.168.124.18 上的 NFS 共享挂载到了 <code class="language-plaintext highlighter-rouge">/mnt/nfs_mount/</code> 文件夹下。可以看到服务器的文件显示在了客户端中，可以正常打开。</p>
-  <p>可以使用 <code class="language-plaintext highlighter-rouge">showmount -e 服务器名称或 IP</code> 来查看某台服务器上可挂载的 NFS 共享。</p>
-  <p>如果发现写入没有权限的话，这是由于客户端用户访问时的权限在服务器端会变为匿名用户 (nobody. uid, gid = 65534) 以保障安全性。可以调整文件夹的权限、调整「匿名用户」为指定的 UID 和 GID，或者设置导出参数 <code class="language-plaintext highlighter-rouge">no_root_squash</code>，使客户端用户权限可以在服务端保持（很危险，因为在挂载点中，客户端的 root 和服务端的 root 是一样的）。</p>
-  <h2 id="windows-和-macos-也支持当客户端吗">Windows 和 macOS 也支持（当客户端）吗？</h2>
-  <p>当然啦。（虽然可能有点麻烦）</p>
-  <h3 id="windows">Windows</h3>
-  <p>下面以一台在同一局域网的 Windows 10 机器为例。在「启用或关闭 Windows 功能」中添加 NFS 客户端支持。</p>
-  <figure class=""><img src="/static/planet/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7-2019-08-28-13.57.03-1.png" alt="" />
-    <figcaption>
-      Windows 功能 =&gt; NFS 服务 =&gt; NFS 客户端
-    </figcaption>
-  </figure>
-  <p>此客户端会在系统中安装 <code class="language-plaintext highlighter-rouge">mount</code> 等工具。</p>
-  <figure class=""><img src="/static/planet/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7-2019-08-28-13.59.48-1-1024x824.png" alt="" />
-    <figcaption>
-      Windows 版本 <code class="language-plaintext highlighter-rouge">mount</code> 的使用帮助
-    </figcaption>
-  </figure>
-  <p>如果我们需要挂载上面那个服务器的共享，可以输入以下命令：</p>
-  <pre><code class="language-cmd">mount \\服务器名称\共享路径 设备名（盘符）
-</code></pre>
-  <figure class=""><img src="/static/planet/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7-2019-08-28-14.10.47.png" alt="" />
-    <figcaption>
-      大概是成功挂载了
-    </figcaption>
-  </figure>
-  <p>只不过……好像哪里不太对劲？</p>
-  <figure class=""><img src="/static/planet/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7-2019-08-28-14.14.09-1024x555.png" alt="" />
-    <figcaption>
-      中文的文件名变成了乱码
-    </figcaption>
-  </figure>
-  <p>Windows 中官方的 NFS 支持提供的 <code class="language-plaintext highlighter-rouge">mount</code> 不支持 UTF-8 编码，导致了乱码的产生。如果需要 Windows 支持，考虑以下一些方法：</p>
-  <ul>
-    <li>使用 <code class="language-plaintext highlighter-rouge">fuse-convmvfs</code> 修改服务端文件的编码，详见<a href="https://superuser.com/questions/302407/what-to-do-with-nfs-server-utf-8-and-windows-7">此 Super User 上的回答</a>。</li>
-    <li>找一个别的 Windows 的 NFS 客户端。</li>
-    <li>如果正在使用新版的 Windows 10，在区域设置中启用 Beta 版本的 UTF-8 支持。注意这可能会导致一部分软件出现乱码。</li>
-  </ul>
-  <p>如果要取消挂载，使用 <code class="language-plaintext highlighter-rouge">umount</code> 即可。</p>
-  <h3 id="macos">macOS</h3>
-  <p>相比于 Windows 的挂载体验来说，macOS 由于是 Unix 系的操作系统，挂载 NFS 就方便一些。直接把 Linux 的命令复制过来就……</p>
-  <div class="language-console highlighter-rouge">
-    <div class="highlight">
-      <pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>mount <span class="nt">-t</span> nfs4 192.168.124.18:/srv/nfs4/Downloads nfs_mount
-<span class="go">Password:
-mount: exec /Library/Filesystems/nfs4.fs/Contents/Resources/mount_nfs4 for /Users/tao/nfs_mount: No such file or directory
-</span></code></pre>
-    </div>
-  </div>
-  <p>诶？稍微调整一下……</p>
-  <div class="language-console highlighter-rouge">
-    <div class="highlight">
-      <pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>mount <span class="nt">-t</span> nfs 192.168.124.18:/srv/nfs4/Downloads nfs_mount
-<span class="go">mount_nfs: can't mount /srv/nfs4/Downloads from 192.168.124.18 onto /Users/tao/nfs_mount: Operation not permitted
-</span></code></pre>
-    </div>
-  </div>
-  <p>这是因为 NFS 服务器默认配置要求来源端口小于 1024 以「保障安全」（因为这样的端口只有 root 用户可以开）。当然 macOS 中 mount_nfs 的文档里面也这样吐槽：</p>
-  <blockquote>
-    <p>resvport: Use a reserved socket port number.</p>
-    <p>This is useful for mounting servers that require clients to use a reserved port number on the mistaken belief that this makes NFS more secure. (For the rare case where the client has a trusted root account but untrustworthy users and the network cables are in secure areas this does help, but for normal desktop clients this does not apply.)</p>
-    <p>BSD System Manager’s Manual, mount_nfs</p>
-  </blockquote>
-  <p>有两个解决方案：</p>
-  <ul>
-    <li>服务器端参数加入 <code class="language-plaintext highlighter-rouge">insecure</code>。这样的话 Finder 也可以轻松挂载。</li>
-    <li>命令行加入 <code class="language-plaintext highlighter-rouge">-o resvport</code> 参数。</li>
-  </ul>
-  <p>挂载之后，在 Finder 侧边栏也会显示。编码显示非常正常。<del>MS 出来挨打</del></p>
-  <h2 id="在-mirrors-中的实践">在 mirrors 中的实践</h2>
-  <p>在新的存储等设备买来配置好之前，我们的 mirrors 服务由服务器 mirrors2 提供。随着各种镜像逐年增大，我们的 ZFS pool 的空间越来越小，尤其是在同步的时候。这个月已经出现了多次空间吃光的情况，出现时会导致导致同步任务堆积无法完成，系统负载达到 100 以上，I/O 性能急剧下降。</p>
-  <p>我们对日志分析后发现，bioc 仓库（R 语言的分子生物学软件仓库）访问量很小，但是空间占用巨大（约 1.4 TB）。由于我们前段时间多出一台闲置的服务器（命名为 mirrors3），目前我们将 bioc 放置在了 mirrors3 上，同步任务也由 mirrors3 完成，NFS 到 mirrors2 上继续正常提供服务。这一项工作主要由付佳伟同学完成。多出来的磁盘空间应该可以维持比较长一段时间的稳定工作。</p>
-  <p>在一部分细节方面，服务器还没有配置完成，在 <a href="https://mirrors.ustc.edu.cn/status/">status 页面</a>的显示也比较奇怪，这是因为此页面读取的是 mirrors2 的数据。我们未来会进行改进，如果你在使用 bioc 仓库时遇到问题，也欢迎通过发送邮件到 <img src="/static/email.png" alt="" /> 或者在 <a href="https://github.com/ustclug/discussions">https://github.com/ustclug/discussions</a> 中提交 issue 进行反馈。</p>
-  <hr />
-  <p>另外，planet 已经有将近一年的时间处于死寂的状态。我写的其实不太好，此次更新主要是希望能够引起大家的注意，收到更多的稿件。另外有一些（未完成的）稿件在我们的草稿箱里，我会去给对应的作者催稿的（</p>
-  <p>由于 WordPress 的用户权限配置问题，你在注册账号后可能找不到投稿的地方。直接发送邮件到 <a href="mailto:planet@ustclug.org">planet@ustclug.org</a> 跟我们说吧（当然 <img src="/static/email.png" alt="" /> 也行，我也会处理的）！也欢迎提供你的博客的 RSS 地址，我们可以选择文章转载到这里。</p>
-  <div class="footnotes" role="doc-endnotes">
-    <ol>
-      <li id="fn:1">
-        <p>https://wiki.debian.org/NFSServerSetup <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-      </li>
-      <li id="fn:2">
-        <p>https://wiki.archlinux.org/index.php/NFS#Server <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-      </li>
-    </ol>
-  </div>
-  ]]></content><author><name>taoky</name></author><category term="Technology" /><category term="NFS" /><summary type="html"><![CDATA[NFS（网络文件系统，Network File System）是一个分布式的文件系统，可以用于在局域网中共享文件。它通常运用在 Unix 与类 Unix 操作系统中。对于 Linux 服务器之间的文件共享来说，NFS 相比于其他的方案（如 Samba）更加方便，性能也更好。对于应用程序来说，NFS 也是透明的。]]></summary></entry></feed>
+  ]]></content><author><name>taoky</name></author><category term="Tech Tutorial" /><category term="hackergame" /><category term="netcat" /><summary type="html"><![CDATA[本文用于介绍信息安全大赛中不少题目需要使用的 nc/ncat 工具。]]></summary></entry></feed>
