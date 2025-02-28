@@ -95,7 +95,7 @@ License: CC-BY-NC-SA 4.0
 
 作为业界不成文的「共识」，对常用搜索引擎的排序是：谷歌 > 必应国际版 > 必应国内版 > 百度。可以都试试，根据自己的实际情况选择。
 
-如果这些搜索引擎的开箱即用功能不满足你的要求，你可能需要更高阶的搜索引擎和搜索技巧。包括如`site:`指定站点和域名，[Google PSE](https://programmablesearchengine.google.com/about/)和[站内搜索](/wiki/doc/smart-questions#stack-overflow)。当然也可以使用大模型的 DeepSearch 功能。不过最重要的是一些启发式搜索技巧。
+如果这些搜索引擎的开箱即用功能不满足你的要求，你可能需要更高阶的搜索引擎和搜索技巧。包括如 `site:` 指定站点和域名，[Google PSE](https://programmablesearchengine.google.com/about/)和[站内搜索](/wiki/doc/smart-questions#stack-overflow)。当然也可以使用大模型的 DeepSearch 功能。不过最重要的是一些启发式搜索技巧。
 
 #### 搜索相关项目的手册/FAQ 等信息 {#search-docs}
 
