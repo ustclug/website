@@ -74,3 +74,11 @@ ibug:
     - label: Stack Overflow
       icon: fab fa-fw fa-stack-overflow
       url: https://stackoverflow.com/users/5958455/ibug
+
+rtxux:
+  name: RTXUX
+  avatar: "https://avatars.githubusercontent.com/u/6316962?v=4"
+  links:
+    - label: GitHub
+      icon: fab fa-fw fa-github
+      url: https://github.com/RTXUX
