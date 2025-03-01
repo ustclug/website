@@ -95,6 +95,22 @@ License: CC-BY-NC-SA 4.0
 
 作为业界不成文的「共识」，对常用搜索引擎的排序是：谷歌 > 必应国际版 > 必应国内版 > 百度。可以都试试，根据自己的实际情况选择。
 
+如果这些搜索引擎的开箱即用功能不满足你的要求，你可能需要更高阶的搜索引擎和搜索技巧。包括如 `site:` 指定站点和域名，[Google PSE](https://programmablesearchengine.google.com/about/) 和[站内搜索](/wiki/doc/smart-questions#stack-overflow)。当然也可以使用大模型的 DeepSearch 功能。不过最重要的是一些启发式搜索技巧。
+
+以下是一些工具推荐（不要在各种层面上受限于这些工具，包括自己的思考与新工具的创造）。
+
+|                          | 效率/反馈速度          | 质量                                                                                                                           | 访问困难程度 | 搜索工具                                                                                                                                                                       |
+| ------------------------ | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------ | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 专家群友                 | 不一定                 | 高（在这个搜索空间上专业的人）                                                                                                 | 难           |                                                                                                                                                                                |
+| 群友                     | 慢回复/没有回复        | 低                                                                                                                             | 易           |                                                                                                                                                                                |
+| 自己                     |                        | 有最充足的上下文。能否提取最恰当的上下文取决于自己的能力。现有知识水平+有效人际关系网络可达的知识水平+利用工具可达的知识水平。 | 最容易       |                                                                                                                                                                                |
+| 大模型+搜索              | 快                     | 搜索内容部分受限于搜索引擎和自动化，如果没有自主能力。有一定的泛化性优势                                                       | 易           | ……（有联网功能的工具，支持 `site:` 的不多）                                                                                                                                    |
+| 通用搜索引擎             | 非常快                 | 一般                                                                                                                           | 易           | Google<br>Bing 国际版<br>Bing 国内版<br>DuckDuckGo<br>百度                                                                                                                     |
+| 站内搜索引擎             | 快不一定好，慢不一定差 | 搜索引擎差 → 质量比 Google 差<br>搜索引擎好 → 质量比 Google 好                                                                 | 易           | Google `site:`<br>[Google Programmable Search Engine (PSE)](https://programmablesearchengine.google.com/about/)<br>各网站的站内搜索工具                                        |
+| 局部网页搜索引擎         | 未知                   | 基于特定高质量网站结点，结合查询需求的图遍历（大模型时代加速信息爆炸后的必要工具）                                             | 难           | [Scrapy](https://github.com/scrapy/scrapy) 等爬虫<br>[open-webui](https://github.com/open-webui/open-webui) + [Google PSE](https://programmablesearchengine.google.com/about/) |
+| 局部论文搜索（citation） | 慢，可以极慢           | 高                                                                                                                             | 易           | [Connected Papers](https://www.connectedpapers.com/)<br>[ResearchRabbit](https://www.researchrabbit.ai/)<br>[inciteful.xyz](https://inciteful.xyz/)                            |
+| 本地搜索                 | 不一定                 | 不一定                                                                                                                         | 不一定       | [Omnisearch](https://publish.obsidian.md/omnisearch/Inject+Omnisearch+results+into+your+search+engine)（Obsidian）<br>[RAGFlow](https://github.com/infiniflow/ragflow)         |
+
 #### 搜索相关项目的手册/FAQ 等信息 {#search-docs}
 
 在某些场景下，直接搜索对应项目的帮助文档、手册、FAQ 等是比搜索报错信息更好的选择。例如，如果我在使用 Python 的 `argparse` 模块时遇到了问题，可能最好的方式是先搜索其手册信息，在手册中寻找需要的内容：
