@@ -20,7 +20,7 @@
     <meta property="og:url" content="https://lug.ustc.edu.cn/wiki/doc/howtoask/">
     <meta property="og:description" content="提问指南">
     <meta property="article:published_time" content="2024-06-11T13:28:09+08:00">
-    <meta property="article:modified_time" content="2024-09-15T01:34:15+08:00">
+    <meta property="article:modified_time" content="2025-03-15T19:02:29+08:00">
     <link rel="canonical" href="https://lug.ustc.edu.cn/wiki/doc/howtoask/">
     <!-- end _includes/seo.html -->
     <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="LUG @ USTC Feed">
@@ -47,7 +47,7 @@
       window.enable_copy_code_button = true;
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=9fefc3728a">
+    <link rel="stylesheet" href="/assets/css/main.css?v=04077271c3">
     <link rel="stylesheet" href="/_extra/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <link rel="stylesheet" href="/_extra/open-sans.css" media="invalid" onload="this.media='all'">
     <!-- start custom head snippets -->
@@ -177,7 +177,7 @@
           <meta itemprop="headline" content="提问指南">
           <meta itemprop="description" content="提问指南">
           <meta itemprop="datePublished" content="2024-06-11T13:28:09+08:00">
-          <meta itemprop="dateModified" content="2024-09-15T01:34:15+08:00">
+          <meta itemprop="dateModified" content="2025-03-15T19:02:29+08:00">
           <div class="page__inner-wrap">
             <header>
               <h1 id="page-title" class="page__title" itemprop="headline">
@@ -313,6 +313,95 @@ compilation terminated.
               <p>尽管近两年大语言模型发展迅速，但是搜索引擎在解决问题上仍然有着不可或缺的作用。</p>
               <h4 id="choose-search-engine">选择搜索引擎</h4>
               <p>作为业界不成文的「共识」，对常用搜索引擎的排序是：谷歌 &gt; 必应国际版 &gt; 必应国内版 &gt; 百度。可以都试试，根据自己的实际情况选择。</p>
+              <p>如果这些搜索引擎的开箱即用功能不满足你的要求，你可能需要更高阶的搜索引擎和搜索技巧。包括如 <code class="language-plaintext highlighter-rouge">site:</code> 指定站点和域名，<a href="https://programmablesearchengine.google.com/about/">Google PSE</a> 和<a href="/wiki/doc/smart-questions#stack-overflow">站内搜索</a>。当然也可以使用大模型的 DeepSearch 功能。不过最重要的是一些启发式搜索技巧。</p>
+              <p>以下是一些工具推荐（不要在各种层面上受限于这些工具，包括自己的思考与新工具的创造）。</p>
+              <table>
+                <thead>
+                  <tr>
+                    <th> </th>
+                    <th>效率/反馈速度</th>
+                    <th>质量</th>
+                    <th>访问困难程度</th>
+                    <th>搜索工具</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>专家群友</td>
+                    <td>不一定</td>
+                    <td>高（在这个搜索空间上专业的人）</td>
+                    <td>难</td>
+                    <td> </td>
+                  </tr>
+                  <tr>
+                    <td>群友</td>
+                    <td>慢回复/没有回复</td>
+                    <td>低</td>
+                    <td>易</td>
+                    <td> </td>
+                  </tr>
+                  <tr>
+                    <td>自己</td>
+                    <td> </td>
+                    <td>有最充足的上下文。能否提取最恰当的上下文取决于自己的能力。现有知识水平+有效人际关系网络可达的知识水平+利用工具可达的知识水平。</td>
+                    <td>最容易</td>
+                    <td> </td>
+                  </tr>
+                  <tr>
+                    <td>大模型+搜索</td>
+                    <td>快</td>
+                    <td>搜索内容部分受限于搜索引擎和自动化，如果没有自主能力。有一定的泛化性优势</td>
+                    <td>易</td>
+                    <td>……（有联网功能的工具，支持 <code class="language-plaintext highlighter-rouge">site:</code> 的不多）</td>
+                  </tr>
+                  <tr>
+                    <td>通用搜索引擎</td>
+                    <td>非常快</td>
+                    <td>一般</td>
+                    <td>易</td>
+                    <td>Google<br />
+                      Bing 国际版<br />
+                      Bing 国内版<br />
+                      DuckDuckGo<br />
+                      百度</td>
+                  </tr>
+                  <tr>
+                    <td>站内搜索引擎</td>
+                    <td>快不一定好，慢不一定差</td>
+                    <td>搜索引擎差 → 质量比 Google 差<br />
+                      搜索引擎好 → 质量比 Google 好</td>
+                    <td>易</td>
+                    <td>Google <code class="language-plaintext highlighter-rouge">site:</code><br />
+                      <a href="https://programmablesearchengine.google.com/about/">Google Programmable Search Engine (PSE)</a><br />
+                      各网站的站内搜索工具</td>
+                  </tr>
+                  <tr>
+                    <td>局部网页搜索引擎</td>
+                    <td>未知</td>
+                    <td>基于特定高质量网站结点，结合查询需求的图遍历（大模型时代加速信息爆炸后的必要工具）</td>
+                    <td>难</td>
+                    <td><a href="https://github.com/scrapy/scrapy">Scrapy</a> 等爬虫<br />
+                      <a href="https://github.com/open-webui/open-webui">open-webui</a> + <a href="https://programmablesearchengine.google.com/about/">Google PSE</a></td>
+                  </tr>
+                  <tr>
+                    <td>局部论文搜索（citation）</td>
+                    <td>慢，可以极慢</td>
+                    <td>高</td>
+                    <td>易</td>
+                    <td><a href="https://www.connectedpapers.com/">Connected Papers</a><br />
+                      <a href="https://www.researchrabbit.ai/">ResearchRabbit</a><br />
+                      <a href="https://inciteful.xyz/">inciteful.xyz</a></td>
+                  </tr>
+                  <tr>
+                    <td>本地搜索</td>
+                    <td>不一定</td>
+                    <td>不一定</td>
+                    <td>不一定</td>
+                    <td><a href="https://publish.obsidian.md/omnisearch/Inject+Omnisearch+results+into+your+search+engine">Omnisearch</a>（Obsidian）<br />
+                      <a href="https://github.com/infiniflow/ragflow">RAGFlow</a></td>
+                  </tr>
+                </tbody>
+              </table>
               <h4 id="search-docs">搜索相关项目的手册/FAQ 等信息</h4>
               <p>在某些场景下，直接搜索对应项目的帮助文档、手册、FAQ 等是比搜索报错信息更好的选择。例如，如果我在使用 Python 的 <code class="language-plaintext highlighter-rouge">argparse</code> 模块时遇到了问题，可能最好的方式是先搜索其手册信息，在手册中寻找需要的内容：</p>
               <div class="language-text highlighter-rouge">
@@ -637,7 +726,7 @@ GPT: 要在 Linux 下通过 IPMI 让 BMC 向操作系统发送 NMI（Non-Maskabl
               </ul>
             </section>
             <footer class="page__meta">
-              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2024-09-15">2024 年 9 月 15 日</time></p>
+              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2025-03-15">2025 年 3 月 15 日</time></p>
             </footer>
             <nav class="pagination">
               <a href="/wiki/doc/editing/" class="pagination--pager" title="修订指南
