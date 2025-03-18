@@ -1,0 +1,32 @@
+name: autofix.ci
+
+on:
+  push:
+    branches: ["*"]
+  pull_request:
+    branches: ["*"]
+  workflow_dispatch:
+permissions:
+  contents: read
+
+jobs:
+  autofix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: "Linting: autocorrect"
+        continue-on-error: true
+        run: |
+          curl -fsSL https://raw.githubusercontent.com/huacnlee/autocorrect/main/install | sh
+          autocorrect --fix ./*
+
+      - name: Prettier fix
+        continue-on-error: true
+        run: npm run fix
+
+      - uses: autofix-ci/action@551dded8c6cc8a1054039c8bc0b8b48c51dfc6ef
