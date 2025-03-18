@@ -29,7 +29,7 @@ jobs:
       - name: Prettier fix
         continue-on-error: true
         run: |
-          npm i
+          npm install --include=dev
           npm run fix
 
       - uses: autofix-ci/action@551dded8c6cc8a1054039c8bc0b8b48c51dfc6ef
