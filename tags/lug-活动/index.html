@@ -9,16 +9,16 @@
   <head>
     <meta charset="utf-8">
     <!-- begin _includes/seo.html -->
-    <title>Status - LUG @ USTC</title>
+    <title>LUG 活动 - LUG @ USTC</title>
     <meta name="description" content="中国科学技术大学 Linux 用户协会">
     <meta name="author" content="USTCLUG">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="zh_CN">
     <meta property="og:site_name" content="LUG @ USTC">
-    <meta property="og:title" content="Status">
-    <meta property="og:url" content="https://lug.ustc.edu.cn/status/">
+    <meta property="og:title" content="LUG 活动">
+    <meta property="og:url" content="https://lug.ustc.edu.cn/tags/lug-%E6%B4%BB%E5%8A%A8/">
     <meta property="og:description" content="中国科学技术大学 Linux 用户协会">
-    <link rel="canonical" href="https://lug.ustc.edu.cn/status/">
+    <link rel="canonical" href="https://lug.ustc.edu.cn/tags/lug-%E6%B4%BB%E5%8A%A8/">
     <!-- end _includes/seo.html -->
     <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="LUG @ USTC Feed">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,7 +51,7 @@
     <!-- insert favicons. use https://realfavicongenerator.net/ -->
     <!-- end custom head snippets -->
   </head>
-  <body class="layout--single">
+  <body class="layout--archive-taxonomy">
     <nav class="skip-links">
       <ul>
         <li><a href="#site-nav" class="screen-reader-shortcut">转到主导航栏</a></li>
@@ -119,68 +119,25 @@
     </div>
     <div class="initial-content">
       <div id="main" role="main">
-        <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-          <meta itemprop="headline" content="Status">
-          <meta itemprop="dateModified" content="2024-06-28T05:14:48+08:00">
-          <div class="page__inner-wrap">
-            <header>
-              <h1 id="page-title" class="page__title" itemprop="headline">
-                <a href="https://lug.ustc.edu.cn/status/" itemprop="url">Status
+        <div class="archive">
+          <h1 id="page-title" class="page__title">LUG 活动</h1>
+          <div class="list__item">
+            <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+              <h2 class="archive__item-title no_toc" itemprop="headline">
+                <a href="/news/2025/03/Linux101-LIP-2025/" rel="permalink">Linux Install Party 2025
                 </a>
-              </h1>
-            </header>
-            <section class="page__content" itemprop="text">
-              <aside class="sidebar__right sticky">
-                <nav class="toc">
-                  <header>
-                    <h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4>
-                  </header>
-                </nav>
-              </aside>
-              <dl>
-                <dt>Build time</dt>
-                <dd><time id="build-time" datetime="2025-03-19 16:00:33">2025-03-19 16:00:33</time></dd>
-                <dt>Current time</dt>
-                <dd id="current-time">Loading...</dd>
-                <dt>Source Git revision</dt>
-                <dd>
-                  <a href="/commit/056ed3c738e789485fe820d35640623b509f1393">
-                    <code class="git-sha">056ed3c738</code>
-                    <span class="git-author">Jiahong Luo</span>:
-                    <span class="git-message">Update 2025-03-16-Linux101-LIP-2025.md: Fix typos (#122)</span>
-                  </a>
-                </dd>
-                <dt>
-                  Continuous Integration
-                  <!--a href="https://travis-ci.org/ustclug/website"><img src="https://travis-ci.org/ustclug/website.svg?branch=master" alt="Travis CI" /></a-->
-                  <!--a href="https://circleci.com/gh/ustclug/website"><img src="https://circleci.com/gh/ustclug/website.svg?style=shield" alt="CircleCI" /></a-->
-                  <a href="https://github.com/ustclug/website/actions"><img src="https://github.com/ustclug/website/workflows/build/badge.svg" alt="GitHub Actions" /></a>
-                </dt>
-                <dd>This site is deployed from <a href="https://github.com/ustclug/website/actions/runs/13941559561">GitHub Actions build 900</a></dd>
-              </dl>
-              <script>
-                document.getElementById("build-time").innerText = new Date("2025-03-19T16:00:33+08:00");
-                function zeropad(n) {
-                  return n > 9 ? String(n) : "0" + String(n);
-                }
-                var showTimeContainer = document.getElementById("current-time");
-                function showTime() {
-                  let t = new Date(Date.now());
-                  // showTimeContainer.innerText = "UTC " + String(t.getUTCFullYear()) + "-" + zeropad(t.getUTCMonth() + 1) + "-" + zeropad(t.getUTCDate()) + " " + zeropad(t.getUTCHours()) + ":" + zeropad(t.getUTCMinutes()) + ":" + zeropad(t.getUTCSeconds());
-                  showTimeContainer.innerText = t.toString();
-                  window.setTimeout(showTime, 1000 - t.getMilliseconds());
-                }
-                showTime();
-              </script>
-              <style>
-                .git-author { font-weight: bold; }
-              </style>
-            </section>
-            <footer class="page__meta">
-              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2024-06-28">2024 年 6 月 28 日</time></p>
-            </footer>
+              </h2>
+              <p class="page__meta">
+                <span class="page__meta-date">
+                  <i class="far fa-calendar-alt" aria-hidden="true"></i>
+                  <time datetime="2025-03-16T15:00:00+08:00">2025 年 3 月 16 日</time>
+                </span>
+              </p>
+              <p class="archive__item-excerpt" itemprop="description">Linux Install Party 2025
+              </p>
+            </article>
           </div>
-        </article>
+        </div>
       </div>
     </div>
     <div class="search-content">
