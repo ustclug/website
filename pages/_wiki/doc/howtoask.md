@@ -363,76 +363,111 @@ LC_ALL=zh_CN.UTF-8 你的命令
 
 对人类有效的提问策略，大多对大语言模型也有效。
 
-### Be concise
+### 提供足够的上下文信息 {#provide-context}
 
-有的时候（特别是对规模很大的语言模型），大语言模型会事无巨细地列出从安装到写代码的每一步，但是很多时候这样是没有必要的：浪费 token（钱），而且在生成实际解决问题的内容之前还要等废话说完。
+和向人类提问类似，提供足够的上下文信息可以更好帮助大语言模型理解问题，满足用户需求，作出更好的回答。以上文提及的一个例子为例。
 
-这种情况可以使用特征工程的手段缓解：通过显式告诉模型简洁输出内容来加速输出、节约成本。可以对比下面两个例子：
+原始例子：
 
-- 原始例子
+````text
+Human: 怎么在命令行里面下载一个 url？
+LLM: 在命令行里下载一个 URL，常用的两个工具是 `curl` 和 `wget`。以下是它们的基本用法：
 
-  ````text
-  Human: 如何在 Linux 下让 IPMI 向操作系统发送 NMI 信号？
-  GPT: 在 Linux 下通过 IPMI (Intelligent Platform Management Interface) 向系统发送 NMI（非屏蔽中断）信号，可以用于触发内核转储或进行内核调试。下面是具体的步骤：
+---
 
-  1. **确认 IPMI 设备正常工作**：
-     在 Linux 系统上，你首先需要确保 IPMI 模块已经加载到内核中。使用以下命令检查：
-     ```bash
-     lsmod | grep ipmi
-     ```
-     如果没有列出相关模块（比如 `ipmi_msghandler`，`ipmi_devintf`），你需要加载它们：
-     ```bash
-     sudo modprobe ipmi_devintf
-     sudo modprobe ipmi_si
-     ```
+### 1. 使用 `curl`
 
-  2. **安装必要的工具**：
-     使用 `ipmitool` 命令可以管理并控制 IPMI 设备。确保此工具已安装：
-     ```bash
-     sudo apt-get install ipmitool   # Debian/Ubuntu
-     sudo yum install ipmitool       # CentOS
-     ```
+```bash
+curl -O https://example.com/filename.zip
+```
 
-  3. **发送 NMI 信号**：
-     使用 `ipmitool` 命令发出 NMI 到操作系统：
-     ```bash
-     sudo ipmitool chassis power diag
-     ```
-     这个命令会向系统发送一个 NMI 信号。
+- `-O`：表示使用远程文件的原始名字保存文件。
 
-  4. **观察系统响应**：
-     确保你的系统配置为在收到 NMI 时采取相应的动作。通常，Linux 内核会在接收到 NMI 时打印状态信息到系统日志中。你可以通过查看 `/var/log/syslog` 或使用 `dmesg` 命令来查看这些信息。
+若你想自定义保存的文件名：
 
-  Linux 系统默认可能不响应 NMI 信号，特别是在进行内核崩溃 (kernel crash) 调试时需要特别配置。这可能涉及到设置如何处理 NMI 的内核参数，例如启用 `kernel.nmi_watchdog=1` 来启用 NMI 监视狗，或者通过 `sysctl` 命令设置相应的内核参数。你也可能需要设置系统以便在接收到 NMI 时生成内核转储文件（vmcore 文件），通过配置 kdump/kexec 工具来完成。
+```bash
+curl -o myfile.zip https://example.com/filename.zip
+```
 
-  这些步駐會从 IPMI 软件层面向操作系统发送 NMI 信号，具体的系统响应和处理方式则需要根据你的系统配置和需求进行相应的设置。
-  ````
+如果是需要跳过 SSL 检查的网站，可以加上 `-k`：
 
-- 末尾添加 `Be concise`
+```bash
+curl -k -O https://example.com/filename.zip
+```
 
-  ````text
-  Human: 如何在 Linux 下让 IPMI 向操作系统发送 NMI 信号？Be concise
-  GPT: 要在 Linux 下通过 IPMI 让 BMC 向操作系统发送 NMI（Non-Maskable Interrupt，即不可屏蔽中断）信号，你可以使用 `ipmitool` 工具。该工具允许你与服务器的 BMC 进行交互，并执行各种管理命令。
+---
 
-  请按照以下步骤操作：
+### 2. 使用 `wget`
 
-  1. 确保你的机器上安装了 `ipmitool`。如果没有安装，你可以通过包管理器来安装它。例如，在基于 Debian 的系统上，使用：
-     ```bash
-     sudo apt-get install ipmitool
-     ```
+如果你的系统里安装了 `wget`，可以这样用：
 
-  2. 使用 `ipmitool` 发送 NMI 到操作系统。你需要确保有适当的权限来执行此操作。使用以下命令：
-     ```bash
-     sudo ipmitool chassis power diag
-     ```
+```bash
+wget https://example.com/filename.zip
+```
 
-  这条命令告诉 BMC 发送 NMI 到主机的 CPU。此操作通常用于诊断目的。
+和 `curl` 类似，也可以添加选项如：
 
-  **注意事项**：
-  - 确保在安全与必要的情况下执行此操作，因为 NMI 通常用于非常特殊的诊断过程，可能会导致系统崩溃或其他不稳定的行为。
-  - 你可能需要根据你服务器的 IPMI 版本和配置调整命令。有时，硬件或固件的不同版本可能会影响命令的效果。
-  - 保证你有服务器的管理员权限，因为发送 NMI 信号通常需要较高的权限。
-  ````
+- `--no-check-certificate`：跳过证书检查。
+- `-O myfile.zip`：指定保存文件名。
+
+例如：
+
+```bash
+wget -O myfile.zip https://example.com/filename.zip
+```
+
+---
+
+### 安装这些工具（如果没有）
+
+在 Linux/macOS 系统中，你可以通过包管理器安装：
+
+- macOS (使用 Homebrew):
+  ```bash
+brew install curl
+brew install wget
+  ```
+
+- Ubuntu/Debian:
+  ```bash
+sudo apt install curl
+sudo apt install wget
+  ```
+
+---
+
+### 简要对比
+
+| 特性   | `curl`                | `wget`                |
+|--------|------------------------|------------------------|
+| 支持协议 | HTTP, FTP, SFTP 等    | HTTP, FTP 等            |
+| 默认行为 | 输出到终端          | 保存为文件              |
+| 下载多个文件 | 支持，但需脚本处理 | 支持 `-i` 或输入文件列表  |
+
+---
+
+如果你告诉我你是用 Windows / Linux / macOS，我可以给你更具体的命令。
+````
+
+改进后的例子：
+
+````text
+Human: 在 Windows Powershell 下，怎么在命令行里面下载一个 url？直接给命令即可。
+LLM: 在 Windows PowerShell 中，你可以使用以下命令下载一个 URL：
+
+```powershell
+Invoke-WebRequest -Uri "https://example.com/file.zip" -OutFile "file.zip"
+```
+
+请将其中的 `https://example.com/file.zip` 替换为你要下载的实际 URL，`file.zip` 替换为你希望保存的文件名。
+````
+
+可以发现，相比原始版本，这里添加了以下信息：
+
+- 环境是 Windows PowerShell
+- 希望 LLM 直接输出命令
+
+得到的结果就更加简洁，也更加符合用户需求（用户的 Windows 环境里面可能根本没有 wget 或者 curl）。
 
 ### 提问语言 {#ask-language}
 
