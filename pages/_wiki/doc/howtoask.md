@@ -99,10 +99,10 @@ License: CC-BY-NC-SA 4.0
 
 - 使用包含网页搜索功能的大语言模型（例如 [Deepseek 联网搜索](https://chat.deepseek.com)）直接询问
 - 使用特定领域的搜索引擎，例如：
-    - [Google Scholar](https://scholar.google.com/)、[知网](https://www.cnki.net/)等搜索论文
-    - 使用 [OEIS](https://oeis.org/) 搜索整数序列
-    - 使用 [Debian Code Search](https://codesearch.debian.net/) 搜索 Debian 这个 Linux 发行版中所有软件包的源代码，使用 [GitHub](https://github.com) 搜索查询 GitHub 上的所有公开代码
-    - 部分站点或服务会选择拒绝通用搜索引擎索引，需要使用其手机 App 或合作方网站搜索（例如微信公众号、小红书等）
+  - [Google Scholar](https://scholar.google.com/)、[知网](https://www.cnki.net/)等搜索论文
+  - 使用 [OEIS](https://oeis.org/) 搜索整数序列
+  - 使用 [Debian Code Search](https://codesearch.debian.net/) 搜索 Debian 这个 Linux 发行版中所有软件包的源代码，使用 [GitHub](https://github.com) 搜索查询 GitHub 上的所有公开代码
+  - 部分站点或服务会选择拒绝通用搜索引擎索引，需要使用其手机 App 或合作方网站搜索（例如微信公众号、小红书等）
 
 #### 搜索相关项目的手册/FAQ 等信息 {#search-docs}
 
@@ -123,8 +123,8 @@ python argparse
 - 去掉只在你的计算机上有的信息（比如说用户名、主机名、变量名等等你自己选择的名称——比如如果你的用户名是 `john123`，并且搜索的时候带上了输出里面的 `john123`，那么搜索引擎可能会尽量匹配结果里面有 `john123` 的结果，这在几乎所有的时候都是不符合预期的）；
 - 可能需要去掉查询里面的横线 `-`：搜索引擎很可能将其解释为「以横线（减号）开头的查询词不允许包含在结果中」；
 - 善于使用搜索引擎的特殊功能，大部分搜索引擎都支持下述功能：
-    - Search operator：例如使用双引号 `"Something"` 可以要求结果中必须含有被双引号（注意是半角双引号 `"` ）括起的内容，使用加号 `+Something` 开头可以强制搜索结果必须包含指定的单词，而使用减号 `-Something` 开头就是排除对应的单词。
-    - `site:` 标识符：例如 `site:example.com Something` 可以限制搜索引擎只在 `example.com` 这个网站上搜索。
+  - Search operator：例如使用双引号 `"Something"` 可以要求结果中必须含有被双引号（注意是半角双引号 `"` ）括起的内容，使用加号 `+Something` 开头可以强制搜索结果必须包含指定的单词，而使用减号 `-Something` 开头就是排除对应的单词。
+  - `site:` 标识符：例如 `site:example.com Something` 可以限制搜索引擎只在 `example.com` 这个网站上搜索。
 - 如果你的工具给出了任何的错误代码：搜索 `工具名称 错误代码` 比搜索错误的文本提示有效得多。
 - 使用英语的输出信息：中文版工具的输出查找结果可能比英语版工具输出的查找结果少，故查找程序输出时使用英语版本的输出往往能找到更多更好的结果。
 
