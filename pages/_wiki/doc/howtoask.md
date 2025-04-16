@@ -118,7 +118,12 @@ License: CC-BY-NC-SA 4.0
 python argparse
 ```
 
-在搜索这类关键字时，合格的搜索引擎应该能将相关手册等关键信息优先显示。
+在搜索这类关键字时，合格的搜索引擎应该能将相关手册等关键信息优先显示。当然，日积月累，你也会对这些手册的位置有一个大致的了解。作为参考，以下列举了一些手册与文档信息：
+
+- Linux 命令：`man 需要查询的命令`
+- Arch Linux：[Arch Wiki](https://wiki.archlinux.org/)
+- Python：[Python 官方文档](https://docs.python.org/3/)
+- C 与 C++：[cppreference](https://en.cppreference.com/w/)
 
 #### 使用合适的查询 {#use-proper-query}
 
