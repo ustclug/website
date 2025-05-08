@@ -26,7 +26,7 @@ eduroam 是一个全球性的无线网络服务，覆盖了全球 100 多个国�
 
 - 访问校内资源（如教务系统、各类学校门户网站、[USTC 开源软件镜像站](https://mirrors.ustc.edu.cn) 等）
   - 大部分校内资源使用的域名都以 `.ustc.edu.cn` 结尾；类似地，使用 `.ustc.edu.cn` 域名的资源也大多数是校内资源。
-  - 对应校园网的 IP 地址范围可以参考 [这里](https://git.ustc.edu.cn/ustcnic/docs/-/blob/master/IP_AS.md)。
+  - 对应校园网的 IP 地址范围[见下](#ustcnet-ip-range)。
 - 通过 IPv6 访问校内和校外资源（IPv6 的出校权限是完全开放的）
 - 连接 eduroam
   - eduroam 需要一个开启了出校权限的网络通账号，但可以没有开通国际权限
