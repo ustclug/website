@@ -19,13 +19,10 @@
 | CTO       | 技术部部长            | 杨广源 | erina AT ustclug.org        |
 | -         | 技术部副部长          | 王昊元 | mirageturtle AT ustclug.org |
 | COO & MSC | 运营部部长 & MSC 事务 | 马天开 | tiankaima AT ustclug.org    |
-| -         | 团支书                | 谢子郁 |                             |
 | -         | 社长                  | 罗嘉宏 | luojh AT ustclug.org        |
 | -         | 副社长                | 王昊元 | mirageturtle AT ustclug.org |
 | -         | 副社长                | 杨广源 |                             |
 | -         | 副社长                | 马天开 | tiankaima AT ustclug.org    |
-
-注：_更多联系信息正在更新过程中_。
 
 ## 历任负责人
 
