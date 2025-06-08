@@ -1,6 +1,3 @@
----
----
-
 # 信息安全大赛 Hackergame
 
 科大信息安全大赛自 2014 年起开始举办，每年一届，规模盛大，影响甚广。每年的比赛在新生入学季举行，向新生倾斜，赛前有动员会，对基础较薄弱的同学进行一些指导，比赛题目控制难度梯度，强调引导和教育作用，除常规奖项外并设立新生特别奖等奖项鼓励同学们参加竞赛。
@@ -10,6 +7,7 @@
 - [比赛平台](https://hack.lug.ustc.edu.cn/)
 - [ustclug/hackergame](https://github.com/ustclug/hackergame)
 - [USTC-Hackergame](https://github.com/USTC-Hackergame)
+  - [2024 Writeups](https://github.com/USTC-Hackergame/hackergame2024-writeups)
   - [2023 Writeups](https://github.com/USTC-Hackergame/hackergame2023-writeups)
   - [2022 Writeups](https://github.com/USTC-Hackergame/hackergame2022-writeups)
   - [2021 Writeups](https://github.com/USTC-Hackergame/hackergame2021-writeups)
@@ -17,6 +15,7 @@
 
 ## 活动记录
 
+- [中国科学技术大学第十一届信息安全大赛（2024）](/news/2024/12/hackergame2024/)
 - [中国科学技术大学第十届信息安全大赛（2023）](/news/2023/12/hackergame-2023/)
 - [中国科学技术大学第九届信息安全大赛（2022）](/news/2023/03/hackergame-award-ceremony/)
 - [中国科学技术大学第八届信息安全大赛（2021）](/news/2021/11/hackergame-2021/)
@@ -29,6 +28,7 @@
 
 ## 相关链接
 
+- [知乎：参加中国科学技术大学第十一届信息安全大赛（Hackergame 2024）是怎样一种体验？](https://www.zhihu.com/question/3447674818/answer/45275717578)
 - [知乎：参加中国科学技术大学第十届信息安全大赛（Hackergame 2023）是怎样一种体验？](https://www.zhihu.com/question/628188912)
 - [知乎：参加中国科学技术大学第九届信息安全大赛（Hackergame 2022）是怎样一种体验？](https://www.zhihu.com/question/561919414)
 - [知乎：参加中国科学技术大学第八届信息安全大赛（Hackergame 2021）是怎样一种体验？](https://www.zhihu.com/question/492960717)
@@ -37,6 +37,10 @@
 - [知乎：参加中国科学技术大学第五届信息安全大赛（Hackergame 2018）是怎样一种体验？](https://www.zhihu.com/question/297850153)
 
 ## 历年海报
+
+### 2024
+
+![11](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2024.11.02_Hackergame_2024/Rev.20%E5%B1%95%E6%9E%B6.png)
 
 ### 2020
 
