@@ -18,9 +18,9 @@
 | -    | 执行副会长   | 王昊元 | mirageturtle AT ustclug.org |
 | -    | 执行副会长   | 方越   | yuefang AT ustclug.org      |
 | CTO  | 技术部部长   | 王昊元 | mirageturtle AT ustclug.org |
-| -    | 技术部副部长 | 李培锋 |                             |
+| -    | 技术部副部长 | 李培锋 | xiaoh1024 AT ustclug.org    |
 | COO  | 运营部部长   | 马天开 | tiankaima AT ustclug.org    |
-| -    | 运营部副部长 | 熊桐睿 |                             |
+| -    | 运营部副部长 | 熊桐睿 | kermanx AT ustclug.org      |
 | -    | 社长         | 王永福 | rtxux AT ustclug.org        |
 | -    | 团支书       | 方越   | yuefang AT ustclug.org      |
 
