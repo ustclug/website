@@ -47,7 +47,7 @@ tmux 是一个终端复用器（**T**erminal **MU**ltiple**X**er）。简单来�
 
 更重要的是，tmux 将终端和会话（session）进行了分离。我们把创建的窗口和窗格（和其中创建的所有 shell 进程及子进程）看成一个会话，用户可以随时退出（detaching）当前会话，会话会在服务器后台保持运行。在之后，用户可以重新连接上（attaching）这些会话，从而继续之前的工作。
 
-原理上，tmux 采用了客户端和服务器分离的架构（ C/S 架构）。用户看到和交互的是 tmux client，tmux client 中创建的窗口（和 shell 进程）连接在 tmux server 进程上。因此，当用户退出 tmux client 后，会话内容可以在后台运行。
+原理上，tmux 采用了客户端和服务器分离的架构（C/S 架构）。用户看到和交互的是 tmux client，tmux client 中创建的窗口（和 shell 进程）连接在 tmux server 进程上。因此，当用户退出 tmux client 后，会话内容可以在后台运行。
 通过 pstree 命令，可以看到上图中运行的两个 zsh 的父进程是 `tmux: server`。而和用户交互的其实是 `tmux: client`，其下面并无其他子进程。
 
 ```shell
@@ -86,7 +86,7 @@ tmux a  # attach
 ```
 
 接下来介绍 tmux 最关键的多窗口管理功能，有了它就可以大大提升多任务操作的效率。
-tmux 有 session（会话）, window（窗口）, pane（窗格） 三个粒度。session 是 tmux 最大的一个粒度，session 下可以创建多个 window，window 可以分割成多个 pane。这里重点介绍窗口和窗格相关的快捷键。
+tmux 有 session（会话）, window（窗口）, pane（窗格）三个粒度。session 是 tmux 最大的一个粒度，session 下可以创建多个 window，window 可以分割成多个 pane。这里重点介绍窗口和窗格相关的快捷键。
 
 ### 窗口操作
 
@@ -229,10 +229,10 @@ bind -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-selection
 按 F12 切换到内部 tmux，再按 F12 切换回来。
 
 ```yaml
-# 按F12切换到内嵌tmux，在macos里需要系统设置中取消F12占用
-#1. prefix为None，不再拦截快捷键
-#2. key-table为off，下面再绑定off下的F12，使之能退出内嵌模式
-#3. 改变statusbar颜色，以便知道已进入内嵌模式
+# 按 F12 切换到内嵌 tmux，在 macos 里需要系统设置中取消 F12 占用
+#1. prefix 为 None，不再拦截快捷键
+#2. key-table 为 off，下面再绑定 off 下的 F12，使之能退出内嵌模式
+#3. 改变 statusbar 颜色，以便知道已进入内嵌模式
 #4. 如果处于特殊模式，退出
 unbind -T root F12
 bind -T root F12 \
@@ -242,7 +242,7 @@ bind -T root F12 \
   if -F '#{pane_in_mode}' 'send-keys -X cancel' \;\
   refresh-client -S
 
-#在off表里绑定F12，恢复之前的设置，以退出该模式
+#在 off 表里绑定 F12，恢复之前的设置，以退出该模式
 bind -T off F12 \
   set -u prefix \;\
   set -u key-table \;\
