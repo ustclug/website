@@ -225,9 +225,7 @@ bind -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-selection
 
 ### tmux in tmux
 
-有时候想要在 tmux 内再连接另一台服务器，然后也使用 tmux。正常情况下 tmux 快捷键只会传递给外层的 tmux 因此无法工作，但是可以使用以下配置实现切换功能。
-
-按 F12 切换到内部 tmux，再按 F12 切换回来。
+有时候想要在 tmux 内再连接另一台服务器，然后也使用 tmux。正常情况下 tmux 快捷键只会传递给外层的 tmux 因此无法工作，但是可以使用以下配置实现按 F12 在内外 tmux 间切换。
 
 ```shell
 # 按 F12 切换到内嵌 tmux，在 macos 里需要系统设置中取消 F12 占用
@@ -250,6 +248,8 @@ bind -T off F12 \
   set -u status-style \;\
   refresh-client -S
 ```
+
+> 另一个小技巧是──连续按两次 `Ctrl-B` 时快捷键会传递给内部 tmux。
 
 ## 参考资料
 
