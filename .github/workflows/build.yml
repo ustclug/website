@@ -70,7 +70,7 @@ jobs:
 
       - name: Build site
         run: |
-          bundle exec jekyll build --trace --profile
+          bundle exec jekyll build --trace --profile --strict_front_matter
           : > _site/.nojekyll
         env:
           JEKYLL_ENV: production

@@ -3,7 +3,7 @@
 with pkgs; mkShell {
     buildInputs = [
         ruby_3_2
-        nodejs-18_x
+        nodejs_22
         curl
         bundler
     ];
