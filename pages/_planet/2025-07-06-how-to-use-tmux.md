@@ -38,7 +38,7 @@ F S UID          PID    PPID  C PRI  NI ADDR SZ WCHAN  STIME TTY          TIME C
 
 正常情况下，当终端退出时（如关闭终端窗口，或者 ssh 网络中断），shell 进程会给所有子进程发送一个 SIGHUP 信号，从而导致进程结束。而 nohup 可以让进程忽略掉 SIGHUP 信号，从而在后台保持运行。
 
-> tips: ps 输出还可以观察到 ping 进程父进程变为了 1，这是因为原本的父进程 shell 已经退出，linux 内核会将孤儿进程交由 init/systemd 进程托管。
+> tips: ps 输出还可以观察到 ping 进程父进程变为了 1，这是因为原本的父进程 shell 已经退出，Linux 内核会将孤儿进程交由 init/systemd 进程托管。
 
 nohup 在简单场景比较有用，但是不适用更复杂的场景。比如用户无法再对后台进程进行输入操作，并且同时维护多个进程也很不方便。不过我们其实还有更优雅，更强大的方案，那就是 tmux。
 
@@ -62,7 +62,7 @@ tmux: server-+-zsh-+-less
 
 ## tmux quick start
 
-大部分 linux 发行版都提供 `tmux` 包，可以通过包管理器安装。其他安装方式（如编译安装）也可以参考官方文档：[Installing · tmux/tmux Wiki](https://github.com/tmux/tmux/wiki/Installing)。
+大部分 Linux 发行版都提供 `tmux` 包，可以通过包管理器安装。其他安装方式（如编译安装）也可以参考官方文档：[Installing · tmux/tmux Wiki](https://github.com/tmux/tmux/wiki/Installing)。
 
 在安装 tmux 后的第一步，我们首先创建一个 tmux 会话。运行 `tmux` 命令后，会进入 tmux 并创建第一个窗口，在这里你可以像往常一样执行命令。
 
@@ -70,7 +70,7 @@ tmux: server-+-zsh-+-less
 tmux
 ```
 
-接着我们介绍最重要的退出话会话和重连会话的方法。按下 `ctrl+b` 后，再按 `d` 可以退出（detach）当前会话。这样会回到输入 tmux 前的 shell。
+接着我们介绍最重要的退出话会话和重连会话的方法。按下 `Ctrl+B` 后，再按 `d` 可以退出（detach）当前会话。这样会回到输入 tmux 前的 shell。
 
 通过 `tmux list-sessions` 或者 `tmux ls` 可以查看当前所有的会话信息。
 
@@ -92,32 +92,32 @@ tmux 有 session（会话）, window（窗口）, pane（窗格）三个粒度�
 
 ```shell
 # 创建
-ctrl-b c # 创建新的窗口
-ctrl-b & # 删除当前窗口
+Ctrl-B c # 创建新的窗口
+Ctrl-B & # 删除当前窗口
 
 # 切換
-ctrl-b tab        # 切换到刚刚的窗口
-ctrl-b p          # 切换上一个
-ctrl-b n          # 切换下一个
-ctrl-b 数字编号    # 切换到指定一个窗口
+Ctrl-B Tab        # 切换到刚刚的窗口
+Ctrl-B p          # 切换上一个
+Ctrl-B n          # 切换下一个
+Ctrl-B 数字编号    # 切换到指定一个窗口
 
 # 修改窗口名字
-ctrl-b ,          # 修改当前窗口名字
+Ctrl-B ,          # 修改当前窗口名字
 ```
 
 ### 窗格操作
 
 ```shell
 # 创建
-ctrl-b \"     # 上下切分
-ctrl-b %      # 左右切分
-ctrl-b x      # 删除
+Ctrl-B \"     # 上下切分
+Ctrl-B %      # 左右切分
+Ctrl-B x      # 删除
 
 # 切换
-ctrl-b 方向键      # 方向键上下左右
-ctrl-b [hjkl]     # 使用 vi 风格的 hjkl 键切换，分别对应左上下右
+Ctrl-B 方向键      # 方向键上下左右
+Ctrl-B [hjkl]     # 使用 vi 风格的 hjkl 键切换，分别对应左上下右
 
-ctrl-b z      #  切换全屏
+Ctrl-B z      #  切换全屏
 ```
 
 相信你操作了这些快捷键后，已经可以感觉到 tmux 的方便和强大了。tmux 也是一个像 vim 那样灵活性很高的软件，很多时候一个你不知道的快捷键就能极大体验。因此需要去更多尝试。`tmux list-keys` 可以查看 tmux 的所有快捷键绑定。
@@ -137,7 +137,7 @@ t a    # attach 到第一个 session
 
 ### 修改快捷键前缀
 
-`ctrl-b` 按起来距离比较远，很不方便。可以修改成 `ctrl-x`。
+`Ctrl-B` 按起来距离比较远，很不方便。可以修改成 `Ctrl-X`。
 
 ```shell
 # prefix
@@ -171,11 +171,11 @@ set-option -g mouse on # open mouse scroll
 
 tmux 打开新窗口时，shell 的默认路径是启动 tmux 客户端时的路径。可以通过以下配置实现：
 
-- `ctrl-x alt-c` ：更改默认路径为当前路径
+- `Ctrl-X Alt-C` ：更改默认路径为当前路径
 - 创建 panel 时，使用当前路径（`-c` 参数）
 
 ```shell
-bind M-c attach-session -c "#{pane_current_path}" # alt-c, to change current path
+bind M-c attach-session -c "#{pane_current_path}" # Alt-C, to change current path
 
 # @ pane
 # split current window horizontally
@@ -187,7 +187,7 @@ bind - split-window -h -c "#{pane_current_path}"
 
 ### 移动窗口顺序
 
-`ctrl-shift` 加方向键左右，可以调整 window 顺序。
+`Ctrl-Shift` 加方向键左右，可以调整 window 顺序。
 
 ```shell
 bind -n C-S-Left swap-window -t -1\; select-window -t -1
@@ -198,7 +198,7 @@ bind -n C-S-Right swap-window -t +1\; select-window -t +1
 
 虽然 window 和 pane 已经足够进行多任务管理了。但是 tmux 提供的多 session 操作也有其用处。适合管理若干完全不相关的任务。
 
-修改快捷键，使其和 window 快捷键类似：`ctrl-c` 创建新 session，`N/P` （大写）切换上一个和下一个 session。
+修改快捷键，使其和 window 快捷键类似：`Ctrl-C` 创建新 session，`N/P` （大写）切换上一个和下一个 session。
 
 ```shell
 # create session
@@ -225,7 +225,7 @@ bind -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-selection
 
 ### tmux in tmux
 
-有时候想要在 tmux 內再连接另一台服务器，然后也使用 tmux。正常情况下 tmux 快捷键只会传递给外层的 tmux 因此无法工作，但是可以使用以下配置实现切换功能。
+有时候想要在 tmux 内再连接另一台服务器，然后也使用 tmux。正常情况下 tmux 快捷键只会传递给外层的 tmux 因此无法工作，但是可以使用以下配置实现切换功能。
 
 按 F12 切换到内部 tmux，再按 F12 切换回来。
 
