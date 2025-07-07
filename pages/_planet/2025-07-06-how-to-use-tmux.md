@@ -249,7 +249,7 @@ bind -T off F12 \
   refresh-client -S
 ```
 
-> 另一个小技巧是──连续按两次 `Ctrl-B` 时快捷键会传递给内部 tmux。
+> 另一个小技巧是 ── 连续按两次 `Ctrl-B` 时快捷键会传递给内部 tmux。
 
 ## 参考资料
 
