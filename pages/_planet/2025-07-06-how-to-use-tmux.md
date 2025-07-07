@@ -70,7 +70,7 @@ tmux: server-+-zsh-+-less
 tmux
 ```
 
-接着我们介绍最重要的退出话会话和重连会话的方法。按下`Ctrl+b`后，再按 `d` 可以退出（detach）当前会话。这样会回到输入 tmux 前的 shell。
+接着我们介绍最重要的退出话会话和重连会话的方法。按下 `ctrl+b` 后，再按 `d` 可以退出（detach）当前会话。这样会回到输入 tmux 前的 shell。
 
 通过 `tmux list-sessions` 或者 `tmux ls` 可以查看当前所有的会话信息。
 
@@ -90,31 +90,32 @@ tmux 有 session（会话）, window（窗口）, pane（窗格）三个粒度�
 
 ### 窗口操作
 
-```yaml
+```shell
 # 创建
-ctrl-b c #创建新的窗口
-ctrl-b & #删除当前窗口
+ctrl-b c # 创建新的窗口
+ctrl-b & # 删除当前窗口
 
 # 切換
-ctrl-b tab # 切换到刚刚的窗口
-ctrl-b p #切换上一个
-ctrl-b n #切换下一个
-ctrl-b 数字编号   # 切换到指定一个窗口
+ctrl-b tab        # 切换到刚刚的窗口
+ctrl-b p          # 切换上一个
+ctrl-b n          # 切换下一个
+ctrl-b 数字编号    # 切换到指定一个窗口
 
 # 修改窗口名字
-ctrl-b ,  #修改当前窗口名字
+ctrl-b ,          # 修改当前窗口名字
 ```
 
 ### 窗格操作
 
-```yaml
+```shell
 # 创建
-ctrl-b "      # 上下切分
+ctrl-b \"     # 上下切分
 ctrl-b %      # 左右切分
 ctrl-b x      # 删除
 
 # 切换
-ctrl-b 方向键  # 方向键上下左右
+ctrl-b 方向键      # 方向键上下左右
+ctrl-b [hjkl]     # 使用 vi 风格的 hjkl 键切换，分别对应左上下右
 
 ctrl-b z      #  切换全屏
 ```
@@ -138,8 +139,8 @@ t a    # attach 到第一个 session
 
 `ctrl-b` 按起来距离比较远，很不方便。可以修改成 `ctrl-x`。
 
-```yaml
-#prefix
+```shell
+# prefix
 set -g prefix C-x
 unbind-key C-b        # disable default prefix
 bind C-x send-prefix
@@ -147,9 +148,9 @@ bind C-x send-prefix
 
 ### 划分窗格快捷键
 
-窗格左右划分和上下划分快捷键比较难记。修改为下划线`_` 是上下分屏，`-` 是左右分屏
+窗格左右划分和上下划分快捷键比较难记。修改为下划线 `_` 是上下分屏，`-` 是左右分屏。
 
-```yaml
+```shell
 # @ pane
 # split current window horizontally
 bind _ split-window -v -c "#{pane_current_path}"
@@ -162,7 +163,7 @@ bind - split-window -h -c "#{pane_current_path}"
 
 tmux 默认没有启用鼠标，导致无法使用鼠标滚动历史记录。启用鼠标后，还可以直接点击切换不同窗格，以及拖动选择文字复制。
 
-```yaml
+```shell
 set-option -g mouse on # open mouse scroll
 ```
 
@@ -173,7 +174,7 @@ tmux 打开新窗口时，shell 的默认路径是启动 tmux 客户端时的路
 - `ctrl-x alt-c` ：更改默认路径为当前路径
 - 创建 panel 时，使用当前路径（`-c` 参数）
 
-```yaml
+```shell
 bind M-c attach-session -c "#{pane_current_path}" # alt-c, to change current path
 
 # @ pane
@@ -188,7 +189,7 @@ bind - split-window -h -c "#{pane_current_path}"
 
 `ctrl-shift` 加方向键左右，可以调整 window 顺序。
 
-```yaml
+```shell
 bind -n C-S-Left swap-window -t -1\; select-window -t -1
 bind -n C-S-Right swap-window -t +1\; select-window -t +1
 ```
@@ -199,7 +200,7 @@ bind -n C-S-Right swap-window -t +1\; select-window -t +1
 
 修改快捷键，使其和 window 快捷键类似：`ctrl-c` 创建新 session，`N/P` （大写）切换上一个和下一个 session。
 
-```yaml
+```shell
 # create session
 bind C-c new-session
 
@@ -214,7 +215,7 @@ bind -r P switch-client -p
 
 tmux 鼠标选中文字会自动复制，但是会自动跳到结尾。有时在查看一些很长的输出历史时，并不想回到结尾，可以通过以下配置禁用跳转：
 
-```yaml
+```shell
 # copy select text, and don't jump to end
 # https://stackoverflow.com/questions/32374907/tmux-mouse-copy-mode-jumps-to-bottom
 bind -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-selection
@@ -228,12 +229,12 @@ bind -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-selection
 
 按 F12 切换到内部 tmux，再按 F12 切换回来。
 
-```yaml
+```shell
 # 按 F12 切换到内嵌 tmux，在 macos 里需要系统设置中取消 F12 占用
-#1. prefix 为 None，不再拦截快捷键
-#2. key-table 为 off，下面再绑定 off 下的 F12，使之能退出内嵌模式
-#3. 改变 statusbar 颜色，以便知道已进入内嵌模式
-#4. 如果处于特殊模式，退出
+# 1. prefix 为 None，不再拦截快捷键
+# 2. key-table 为 off，下面再绑定 off 下的 F12，使之能退出内嵌模式
+# 3. 改变 statusbar 颜色，以便知道已进入内嵌模式
+# 4. 如果处于特殊模式，退出
 unbind -T root F12
 bind -T root F12 \
   set prefix None \;\
@@ -242,7 +243,7 @@ bind -T root F12 \
   if -F '#{pane_in_mode}' 'send-keys -X cancel' \;\
   refresh-client -S
 
-#在 off 表里绑定 F12，恢复之前的设置，以退出该模式
+# 在 off 表里绑定 F12，恢复之前的设置，以退出该模式
 bind -T off F12 \
   set -u prefix \;\
   set -u key-table \;\
