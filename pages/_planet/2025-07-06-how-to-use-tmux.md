@@ -43,7 +43,8 @@ F S UID          PID    PPID  C PRI  NI ADDR SZ WCHAN  STIME TTY          TIME C
 nohup 在简单场景比较有用，但是不适用更复杂的场景。比如用户无法再对后台进程进行输入操作，并且同时维护多个进程也很不方便。不过我们其实还有更优雅，更强大的方案，那就是 tmux。
 
 tmux 是一个终端复用器（**T**erminal **MU**ltiple**X**er）。简单来说，tmux 的功能可以概括成一句话：在一个终端里创建多个窗口，并且将窗口分割成多个窗格，每个窗格都运行独立的 shell 进程。这样你就可以让多个应用程序同时运行，而无需打开多个终端模拟器窗口（terminal emulator，如 Xshell、putty、Windows Terminal 等）。下图展示了使用 tmux 创建了一个窗口，并将窗口上下分屏成两个窗格，每个窗格都运行一个 zsh。
-![image.png](https://raw.githubusercontent.com/TheRainstorm/.image-bed/main/20250705151056.png)
+
+![tmux example]({{ site.static_url }}/planet/20250705151056.png)
 
 更重要的是，tmux 将终端和会话（session）进行了分离。我们把创建的窗口和窗格（和其中创建的所有 shell 进程及子进程）看成一个会话，用户可以随时退出（detaching）当前会话，会话会在服务器后台保持运行。在之后，用户可以重新连接上（attaching）这些会话，从而继续之前的工作。
 
