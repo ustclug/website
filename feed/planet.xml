@@ -1,35 +1,281 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://lug.ustc.edu.cn/feed/planet.xml" rel="self" type="application/atom+xml" /><link href="https://lug.ustc.edu.cn/" rel="alternate" type="text/html" /><updated>2025-07-07T08:24:41+08:00</updated><id>https://lug.ustc.edu.cn/feed/planet.xml</id><title type="html">LUG @ USTC | Planet</title><subtitle>中国科学技术大学 Linux 用户协会</subtitle><author><name>USTCLUG</name></author><entry><title type="html">Rootless Docker in Docker 在 Hackergame 中的实践</title><link href="https://lug.ustc.edu.cn/planet/2025/02/hackergame-rootless-docker/" rel="alternate" type="text/html" title="Rootless Docker in Docker 在 Hackergame 中的实践" /><published>2025-02-08T00:00:00+08:00</published><updated>2025-02-27T16:35:18+08:00</updated><id>https://lug.ustc.edu.cn/planet/2025/02/hackergame-rootless-docker</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2025/02/hackergame-rootless-docker/"><![CDATA[<p>本文介绍了 2024 年 USTC Hackergame 中 Rootless Docker in Docker 在 Web 类题目容器隔离中的实践。</p>
-      <h2 id="背景">背景</h2>
-      <p>USTC Hackergame 长期以来使用 Docker 及 Docker Compose 来部署和管理各种题目。对于 <code class="language-plaintext highlighter-rouge">nc</code> 类题目，我们使用一个<a href="https://github.com/USTC-Hackergame/hackergame-challenge-docker">简单的 Python 管理程序</a>来为每个已验证的传入连接创建一个单独的题目运行环境容器，以保证选手之间的隔离。为了动态创建容器，我们将 <code class="language-plaintext highlighter-rouge">/var/run/docker.sock</code> 暴露给这个 Python 程序，以便它可以调用 Docker API 来创建容器。由于这个 Python 程序足够简单，我们认为这样做是安全的。而对于 Web 类题目，我们要求出题人在题目内部做好隔离，然而这样带来了额外的心智负担，而且容易出错，可能导致非预期解或出现能够干扰其他选手的情况。</p>
-      <p>在 2024 年 Hackergame 中，我们决定实现 Web 类题目的容器隔离方案，北京大学 GeekGame 基于我们的 nc 容器管理方案实现了一个<a href="https://github.com/PKU-GeekGame/web-docker-manager">简单的 Web 类题目容器管理方案</a>，该方案同样通过透传 Docker Socket 实现对 Web 题目的容器管理。然而，Web 题目的反向代理比 nc 复杂得多，这使得我们对该方案的安全性存在较大的担忧，一旦该管理程序被攻破，攻击者可以直接控制整个服务器。因此，我们需要一个更安全的方案，使得即使 Web 题目的容器管理程序被攻破，攻击者也无法轻易控制整个服务器，这就需要在隔离的、低权限的环境中运行 Docker Daemon。</p>
-      <h2 id="rootless-docker-in-docker">Rootless Docker-in-Docker</h2>
-      <p>Rootless Docker 是在低权限环境中运行 Docker 的一种方案。Docker 官方提供了一种 <a href="https://docs.docker.com/engine/security/rootless/#rootless-docker-in-docker">Rootless Docker in Docker</a> 的方案，只需要一行命令即可启动：</p>
-      <div class="language-bash highlighter-rouge">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://lug.ustc.edu.cn/feed/planet.xml" rel="self" type="application/atom+xml" /><link href="https://lug.ustc.edu.cn/" rel="alternate" type="text/html" /><updated>2025-07-16T09:55:12+08:00</updated><id>https://lug.ustc.edu.cn/feed/planet.xml</id><title type="html">LUG @ USTC | Planet</title><subtitle>中国科学技术大学 Linux 用户协会</subtitle><author><name>USTCLUG</name></author><entry><title type="html">提升命令行使用体验──tmux 终端复用</title><link href="https://lug.ustc.edu.cn/planet/2025/07/how-to-use-tmux/" rel="alternate" type="text/html" title="提升命令行使用体验──tmux 终端复用" /><published>2025-07-06T00:00:00+08:00</published><updated>2025-07-16T09:53:49+08:00</updated><id>https://lug.ustc.edu.cn/planet/2025/07/how-to-use-tmux</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2025/07/how-to-use-tmux/"><![CDATA[<p>本文会介绍 tmux 的基础使用方法，以及长期使用下来的一些常用配置。</p>
+      <h2 id="背景--原理">背景 &amp; 原理</h2>
+      <p>在使用命令行的过程中，我们经常遇到一个需求，那就是让程序在退出当前终端后保持运行。在以往，我们可能会使用 <code class="language-plaintext highlighter-rouge">nohup</code> 加让程序后台运行的方式，比如：</p>
+      <div class="language-shell highlighter-rouge">
         <div class="highlight">
-          <pre class="highlight"><code>docker run <span class="nt">-d</span> <span class="nt">--name</span> dind-rootless <span class="nt">--privileged</span> docker:25.0-dind-rootless
+          <pre class="highlight"><code>➜  ~ <span class="nb">nohup </span>ping 127.0.0.1 &amp;
+<span class="o">[</span>1] 89083
+<span class="nb">nohup</span>: ignoring input and appending output to <span class="s1">'nohup.out'</span>
+➜  ~ ps <span class="nt">-elf</span> |grep ping
+0 S yfy        89083   88672  0  85   5 -  3352 -      11:39 pts/0    00:00:00 ping 127.0.0.1
 </code></pre>
         </div>
       </div>
-      <p>该方案在容器中以非 <code class="language-plaintext highlighter-rouge">root</code> 用户（UID 1000）创建用户命名空间，并分离其他命名空间和运行 Docker Daemon。然而，该方案存在一些问题：</p>
-      <ol>
-        <li>该方案需要 <code class="language-plaintext highlighter-rouge">--privileged</code> 选项，以禁用 seccomp、AppArmor 和 mount masks，但这意味着容器将获得更高的权限，可能导致安全问题。</li>
-        <li>该方案无法使用 cgroup 来限制容器资源使用，因为 Rootless Docker 需要 systemd 将 cgroup 路径委托给 Docker Daemon 才能执行资源限制。虽然可以用 <code class="language-plaintext highlighter-rouge">rlimit</code> 等方案来限制资源，但其工作在进程粒度而非容器粒度，而且可以被轻松禁用。由于 Hackergame 需要强制执行容器资源限制，该问题是致命的。</li>
-      </ol>
-      <h2 id="基于-systemd-user-instance-的-rootless-docker-in-docker">基于 Systemd User Instance 的 Rootless Docker-in-Docker</h2>
-      <p>为了解决上述问题，我们采用了一个基于 Systemd User Instance 的 Rootless Docker-in-Docker 方案。该方案在 Systemd User Instance 中运行 Rootless Docker Daemon，以实现资源限制和更好的安全性。</p>
-      <h3 id="systemd-in-docker">Systemd in Docker</h3>
-      <p>为了实现该方案，首先需要在容器中运行 <code class="language-plaintext highlighter-rouge">systemd</code>。systemd 的网站上列出了<a href="https://systemd.io/CONTAINER_INTERFACE/">在容器中运行 systemd 的要求</a>，对于 Docker 来说，主要有以下几点：</p>
-      <ol>
-        <li>保留 <code class="language-plaintext highlighter-rouge">CAP_SYS_ADMIN</code> 特权。</li>
-        <li>启用私有 <code class="language-plaintext highlighter-rouge">cgroup</code> 命名空间，并将 <code class="language-plaintext highlighter-rouge">/sys/fs/cgroup</code> 挂载为可写。</li>
-        <li>将 <code class="language-plaintext highlighter-rouge">/tmp</code>, <code class="language-plaintext highlighter-rouge">/run</code>, <code class="language-plaintext highlighter-rouge">/run/lock</code>, <code class="language-plaintext highlighter-rouge">/var/lib/journal</code> 挂载为 <code class="language-plaintext highlighter-rouge">tmpfs</code>。</li>
-        <li>将 <code class="language-plaintext highlighter-rouge">stop_signal</code> 设置为 <code class="language-plaintext highlighter-rouge">SIGRTMIN+3</code>，以便 systemd 可以正确关闭。</li>
-        <li>禁用 AppArmor 或 SELinux。</li>
-      </ol>
-      <p>我们在 <code class="language-plaintext highlighter-rouge">docker-compose.yml</code> 中添加了以下内容来实现这些要求：</p>
-      <div class="language-yaml highlighter-rouge">
+      <p>这样在断开终端连接后，重新登陆到服务器，可以发现 ping 进程仍然在运行。nohup 默认将程序输出追加到 <code class="language-plaintext highlighter-rouge">nohup.out</code> 文件中，可以通过 tail 检验这一点。</p>
+      <div class="language-shell highlighter-rouge">
         <div class="highlight">
-          <pre class="highlight"><code><span class="na">cap_add</span><span class="pi">:</span>
+          <pre class="highlight"><code>➜  ~ <span class="nb">tail</span> <span class="nt">-f</span> nohup.out
+64 bytes from 127.0.0.1: <span class="nv">icmp_seq</span><span class="o">=</span>7 <span class="nv">ttl</span><span class="o">=</span>64 <span class="nb">time</span><span class="o">=</span>0.024 ms
+64 bytes from 127.0.0.1: <span class="nv">icmp_seq</span><span class="o">=</span>8 <span class="nv">ttl</span><span class="o">=</span>64 <span class="nb">time</span><span class="o">=</span>0.027 ms
+64 bytes from 127.0.0.1: <span class="nv">icmp_seq</span><span class="o">=</span>9 <span class="nv">ttl</span><span class="o">=</span>64 <span class="nb">time</span><span class="o">=</span>0.023 ms
+64 bytes from 127.0.0.1: <span class="nv">icmp_seq</span><span class="o">=</span>10 <span class="nv">ttl</span><span class="o">=</span>64 <span class="nb">time</span><span class="o">=</span>0.035 ms
+➜  ~ ps <span class="nt">-elf</span> |head <span class="nt">-n1</span>
+F S UID          PID    PPID  C PRI  NI ADDR SZ WCHAN  STIME TTY          TIME CMD
+➜  ~ ps <span class="nt">-elf</span> |grep ping
+0 S yfy        89083       1  0  85   5 -  3352 -      11:39 ?        00:00:00 ping 127.0.0.1
+</code></pre>
+        </div>
+      </div>
+      <p>正常情况下，当终端退出时（如关闭终端窗口，或者 ssh 网络中断），shell 进程会给所有子进程发送一个 SIGHUP 信号，从而导致进程结束。而 nohup 可以让进程忽略掉 SIGHUP 信号，从而在后台保持运行。</p>
+      <blockquote>
+        <p>Tip: ps 输出还可以观察到 ping 进程父进程变为了 1，这是因为原本的父进程 shell 已经退出，Linux 内核会将孤儿进程交由 init/systemd 进程托管。</p>
+      </blockquote>
+      <p>nohup 在简单场景比较有用，但是不适用更复杂的场景。比如用户无法再对后台进程进行输入操作，并且同时维护多个进程也很不方便。不过我们其实还有更优雅、更强大的方案，那就是 tmux。</p>
+      <p>tmux 是一个终端复用器（<strong>T</strong>erminal <strong>MU</strong>ltiple<strong>X</strong>er）。简单来说，tmux 的功能可以概括成一句话：在一个终端里创建多个窗口，并且将窗口分割成多个窗格，每个窗格都运行独立的 shell 进程。这样你就可以让多个应用程序同时运行，而无需打开多个终端模拟器窗口（terminal emulator，如 Xshell、PuTTY、Windows Terminal 等）。下图展示了使用 tmux 创建了一个窗口，并将窗口上下分屏成两个窗格，每个窗格都运行一个 zsh。</p>
+      <p><img src="/static/planet/20250705151056.png" alt="tmux example" /></p>
+      <p>更重要的是，tmux 将终端和会话（session）进行了分离。我们把创建的窗口和窗格（和其中创建的所有 shell 进程及子进程）看成一个会话，用户可以随时退出（detach）当前会话，会话会在服务器后台保持运行。在之后，用户可以重新连接上（attach）这些会话，从而继续之前的工作。</p>
+      <p>原理上，tmux 采用了客户端和服务器分离的架构（C/S 架构）。用户看到和交互的是 tmux client，tmux client 中创建的窗口（和 shell 进程）连接在 tmux server 进程上。因此，当用户退出 tmux client 后，会话内容可以在后台运行。
+        通过 pstree 命令，可以看到上图中运行的两个 zsh 的父进程是 <code class="language-plaintext highlighter-rouge">tmux: server</code>。而和用户交互的其实是 <code class="language-plaintext highlighter-rouge">tmux: client</code>，其下面并无其他子进程。</p>
+      <div class="language-shell highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code>➜  ~ pstree <span class="nt">-u</span> yfy|less
+sshd---zsh---tmux: client
+tmux: server-+-zsh-+-less
+             |     <span class="sb">`</span><span class="nt">-pstree</span>
+             <span class="sb">`</span><span class="nt">-zsh---ping</span>
+</code></pre>
+        </div>
+      </div>
+      <p>在简单了解了下 tmux 的原理后，马上开始 tmux 的上手体验吧。tmux 基础使用非常简单，花 10 分钟就可以完全了解。</p>
+      <h2 id="tmux-quick-start">tmux quick start</h2>
+      <p>大部分 Linux 发行版都提供 <code class="language-plaintext highlighter-rouge">tmux</code> 包，可以通过包管理器安装。其他安装方式（如编译安装）也可以参考官方文档：<a href="https://github.com/tmux/tmux/wiki/Installing">Installing · tmux/tmux Wiki</a>。</p>
+      <p>在安装 tmux 后的第一步，我们首先创建一个 tmux 会话。运行 <code class="language-plaintext highlighter-rouge">tmux</code> 命令后，会进入 tmux 并创建第一个窗口，在这里你可以像往常一样执行命令。</p>
+      <div class="language-shell highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code>tmux
+</code></pre>
+        </div>
+      </div>
+      <p>接着我们介绍最重要的退出话会话和重连会话的方法。按下 <code class="language-plaintext highlighter-rouge">Ctrl-B</code> 后，再按 <code class="language-plaintext highlighter-rouge">d</code> 可以退出（detach）当前会话。这样会回到输入 tmux 前的 shell。</p>
+      <p>通过 <code class="language-plaintext highlighter-rouge">tmux list-sessions</code> 或者 <code class="language-plaintext highlighter-rouge">tmux ls</code> 可以查看当前所有的会话信息。</p>
+      <div class="language-shell highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code>➜  ~ tmux <span class="nb">ls
+</span>0: 1 windows <span class="o">(</span>created Thu Jul  3 14:06:05 2025<span class="o">)</span>
+</code></pre>
+        </div>
+      </div>
+      <p>通过 <code class="language-plaintext highlighter-rouge">tmux attach</code> 可以连接回第一个会话。</p>
+      <div class="language-shell highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code>tmux a  <span class="c"># attach</span>
+</code></pre>
+        </div>
+      </div>
+      <p>接下来介绍 tmux 最关键的多窗口管理功能，有了它就可以大大提升多任务操作的效率。
+        tmux 有 session（会话）, window（窗口）, pane（窗格）三个粒度。session 是 tmux 最大的一个粒度，session 下可以创建多个 window，window 可以分割成多个 pane。这里重点介绍窗口和窗格相关的快捷键。</p>
+      <h3 id="窗口操作">窗口操作</h3>
+      <div class="language-shell highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="c"># 创建</span>
+Ctrl-B c <span class="c"># 创建新的窗口</span>
+Ctrl-B &amp; <span class="c"># 删除当前窗口</span>
+
+<span class="c"># 切換</span>
+Ctrl-B Tab        <span class="c"># 切换到刚刚的窗口</span>
+Ctrl-B p          <span class="c"># 切换上一个</span>
+Ctrl-B n          <span class="c"># 切换下一个</span>
+Ctrl-B 数字编号    <span class="c"># 切换到指定一个窗口</span>
+
+<span class="c"># 修改窗口名字</span>
+Ctrl-B ,          <span class="c"># 修改当前窗口名字</span>
+</code></pre>
+        </div>
+      </div>
+      <h3 id="窗格操作">窗格操作</h3>
+      <div class="language-shell highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="c"># 创建</span>
+Ctrl-B <span class="se">\"</span>     <span class="c"># 上下切分</span>
+Ctrl-B %      <span class="c"># 左右切分</span>
+Ctrl-B x      <span class="c"># 删除</span>
+
+<span class="c"># 切换</span>
+Ctrl-B 方向键      <span class="c"># 方向键上下左右</span>
+Ctrl-B <span class="o">[</span>hjkl]     <span class="c"># 使用 vi 风格的 hjkl 键切换，分别对应左上下右</span>
+
+Ctrl-B z      <span class="c">#  切换全屏</span>
+</code></pre>
+        </div>
+      </div>
+      <p>相信你操作了这些快捷键后，已经可以感觉到 tmux 的方便和强大了。tmux 也是一个像 vim 那样灵活性很高的软件，很多时候一个你不知道的快捷键就能极大体验。因此需要去更多尝试。<code class="language-plaintext highlighter-rouge">tmux list-keys</code> 可以查看 tmux 的所有快捷键绑定。</p>
+      <p>本文只介绍了 tmux 的快捷键使用方法，tmux 的软件设计非常简洁高效，以上所有快捷键都有对应它的一个子命令，比如垂直划分窗格对应 <code class="language-plaintext highlighter-rouge">tmux split-window -v</code> 命令。如果记不住快捷键，可以直接使用 tmux 命令。tmux man 手册的 <code class="language-plaintext highlighter-rouge">COMMAND</code> 章节提供了所有命令的详细解释。另外本文没有介绍 tmux 的 vi copy 模式，使用该模式可以方便查找、复制程序输出内容，该内容比较进阶，感兴趣的读者可以自行了解。</p>
+      <h2 id="常用配置分享">常用配置分享</h2>
+      <p>tmux 像 vim 一样支持高度定制化，可以通过修改 <code class="language-plaintext highlighter-rouge">~/.tmux.conf</code> 配置各种快捷键，网络上也有 <a href="https://github.com/gpakosz/.tmux">oh-my-tmux</a> 这样的项目来帮你做一些配置。接下来分享一些我长期使用下来，感觉很有必要的配置，完整配置见我的 <a href="https://github.com/TheRainstorm/my-vim-config/blob/master/tmux/.tmux.conf">github</a> 仓库。</p>
+      <blockquote>
+        <p>Bonus：在 <code class="language-plaintext highlighter-rouge">~/.bashrc</code> 或 <code class="language-plaintext highlighter-rouge">~/.zshrc</code> 中设置 <code class="language-plaintext highlighter-rouge">alias t="tmux"</code>，tmux attach 效率立刻提升 300%！</p>
+      </blockquote>
+      <div class="language-shell highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code>t      <span class="c"># 创建 sessin</span>
+t a    <span class="c"># attach 到第一个 session</span>
+</code></pre>
+        </div>
+      </div>
+      <h3 id="修改快捷键前缀">修改快捷键前缀</h3>
+      <p><code class="language-plaintext highlighter-rouge">Ctrl-B</code> 按起来距离比较远，很不方便。可以修改成 <code class="language-plaintext highlighter-rouge">Ctrl-X</code>。</p>
+      <div class="language-shell highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="c"># prefix</span>
+<span class="nb">set</span> <span class="nt">-g</span> prefix C-x
+unbind-key C-b        <span class="c"># disable default prefix</span>
+<span class="nb">bind </span>C-x send-prefix
+</code></pre>
+        </div>
+      </div>
+      <h3 id="划分窗格快捷键">划分窗格快捷键</h3>
+      <p>窗格左右划分和上下划分快捷键比较难记。修改为下划线 <code class="language-plaintext highlighter-rouge">_</code> 是上下分屏，<code class="language-plaintext highlighter-rouge">-</code> 是左右分屏。</p>
+      <div class="language-shell highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="c"># @ pane</span>
+<span class="c"># split current window horizontally</span>
+<span class="nb">bind </span>_ split-window <span class="nt">-v</span> <span class="nt">-c</span> <span class="s2">"#{pane_current_path}"</span>
+
+<span class="c"># split current window vertically</span>
+<span class="nb">bind</span> - split-window <span class="nt">-h</span> <span class="nt">-c</span> <span class="s2">"#{pane_current_path}"</span>
+</code></pre>
+        </div>
+      </div>
+      <h3 id="鼠标操作">鼠标操作</h3>
+      <p>tmux 默认没有启用鼠标，导致无法使用鼠标滚动历史记录。启用鼠标后，还可以直接点击切换不同窗格，以及拖动选择文字复制。</p>
+      <div class="language-shell highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code>set-option <span class="nt">-g</span> mouse on <span class="c"># open mouse scroll</span>
+</code></pre>
+        </div>
+      </div>
+      <h3 id="打开窗口时默认路径">打开窗口时默认路径</h3>
+      <p>tmux 打开新窗口时，shell 的默认路径是启动 tmux 客户端时的路径。可以通过以下配置实现：</p>
+      <ul>
+        <li><code class="language-plaintext highlighter-rouge">Ctrl-X Alt-C</code> ：更改默认路径为当前路径</li>
+        <li>创建 panel 时，使用当前路径（<code class="language-plaintext highlighter-rouge">-c</code> 参数）</li>
+      </ul>
+      <div class="language-shell highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="nb">bind </span>M-c attach-session <span class="nt">-c</span> <span class="s2">"#{pane_current_path}"</span> <span class="c"># Alt-C, to change current path</span>
+
+<span class="c"># @ pane</span>
+<span class="c"># split current window horizontally</span>
+<span class="nb">bind </span>_ split-window <span class="nt">-v</span> <span class="nt">-c</span> <span class="s2">"#{pane_current_path}"</span>
+
+<span class="c"># split current window vertically</span>
+<span class="nb">bind</span> - split-window <span class="nt">-h</span> <span class="nt">-c</span> <span class="s2">"#{pane_current_path}"</span>
+</code></pre>
+        </div>
+      </div>
+      <h3 id="移动窗口顺序">移动窗口顺序</h3>
+      <p><code class="language-plaintext highlighter-rouge">Ctrl-Shift</code> 加方向键左右，可以调整 window 的顺序。</p>
+      <div class="language-shell highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="nb">bind</span> <span class="nt">-n</span> C-S-Left swap-window <span class="nt">-t</span> <span class="nt">-1</span><span class="se">\;</span> <span class="k">select</span><span class="nt">-window</span> <span class="nt">-t</span> <span class="nt">-1</span>
+<span class="nb">bind</span> <span class="nt">-n</span> C-S-Right swap-window <span class="nt">-t</span> +1<span class="se">\;</span> <span class="k">select</span><span class="nt">-window</span> <span class="nt">-t</span> +1
+</code></pre>
+        </div>
+      </div>
+      <h3 id="session-操作">session 操作</h3>
+      <p>虽然 window 和 pane 已经足够进行多任务管理了。但是 tmux 提供的多 session 操作也有其用处。适合管理若干完全不相关的任务。</p>
+      <p>修改快捷键，使其和 window 快捷键类似：<code class="language-plaintext highlighter-rouge">Ctrl-C</code> 创建新 session，<code class="language-plaintext highlighter-rouge">N</code>/<code class="language-plaintext highlighter-rouge">P</code> （大写）切换上一个和下一个 session。</p>
+      <div class="language-shell highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="c"># create session</span>
+<span class="nb">bind </span>C-c new-session
+
+<span class="c"># session navigation</span>
+<span class="c"># (/)   #move to prev/next session</span>
+<span class="nb">bind</span> <span class="nt">-r</span> BTab switch-client <span class="nt">-l</span>  <span class="c"># move to last session</span>
+<span class="nb">bind</span> <span class="nt">-r</span> N switch-client <span class="nt">-n</span>
+<span class="nb">bind</span> <span class="nt">-r</span> P switch-client <span class="nt">-p</span>
+</code></pre>
+        </div>
+      </div>
+      <h3 id="复制文字后不自动跳到结尾">复制文字后不自动跳到结尾</h3>
+      <p>tmux 鼠标选中文字会自动复制，但是会自动跳到结尾。有时在查看一些很长的输出历史时，并不想回到结尾，可以通过以下配置禁用跳转：</p>
+      <div class="language-shell highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="c"># copy select text, and don't jump to end</span>
+<span class="c"># https://stackoverflow.com/questions/32374907/tmux-mouse-copy-mode-jumps-to-bottom</span>
+<span class="nb">bind</span> <span class="nt">-T</span> copy-mode-vi MouseDragEnd1Pane send-keys <span class="nt">-X</span> copy-selection
+</code></pre>
+        </div>
+      </div>
+      <blockquote>
+        <p>鼠标选中文字后会进入 tmux 的 copy 模式，无法输入命令，此时可以按 <code class="language-plaintext highlighter-rouge">q</code> 退出。</p>
+      </blockquote>
+      <h3 id="tmux-in-tmux">tmux in tmux</h3>
+      <p>有时候想要在 tmux 内再连接另一台服务器，然后也使用 tmux。正常情况下 tmux 快捷键只会传递给外层的 tmux 因此无法工作，但是可以使用以下配置实现按 F12 在内外 tmux 间切换。</p>
+      <div class="language-shell highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="c"># 按 F12 切换到内嵌 tmux，在 macos 里需要系统设置中取消 F12 占用</span>
+<span class="c"># 1. prefix 为 None，不再拦截快捷键</span>
+<span class="c"># 2. key-table 为 off，下面再绑定 off 下的 F12，使之能退出内嵌模式</span>
+<span class="c"># 3. 改变 statusbar 颜色，以便知道已进入内嵌模式</span>
+<span class="c"># 4. 如果处于特殊模式，退出</span>
+unbind <span class="nt">-T</span> root F12
+<span class="nb">bind</span> <span class="nt">-T</span> root F12 <span class="se">\</span>
+  <span class="nb">set </span>prefix None <span class="se">\;\</span>
+  <span class="nb">set </span>key-table off <span class="se">\;\</span>
+  <span class="nb">set </span>status-style <span class="nb">bg</span><span class="o">=</span>colour235 <span class="se">\;\</span>
+  <span class="k">if</span> <span class="nt">-F</span> <span class="s1">'#{pane_in_mode}'</span> <span class="s1">'send-keys -X cancel'</span> <span class="se">\;\</span>
+  refresh-client <span class="nt">-S</span>
+
+<span class="c"># 在 off 表里绑定 F12，恢复之前的设置，以退出该模式</span>
+<span class="nb">bind</span> <span class="nt">-T</span> off F12 <span class="se">\</span>
+  <span class="nb">set</span> <span class="nt">-u</span> prefix <span class="se">\;\</span>
+  <span class="nb">set</span> <span class="nt">-u</span> key-table <span class="se">\;\</span>
+  <span class="nb">set</span> <span class="nt">-u</span> status-style <span class="se">\;\</span>
+  refresh-client <span class="nt">-S</span>
+</code></pre>
+        </div>
+      </div>
+      <p>另一个小技巧是：连续按两次 <code class="language-plaintext highlighter-rouge">Ctrl-B</code> 时快捷键会传递给内部 tmux。</p>
+      <h2 id="参考资料">参考资料</h2>
+      <ul>
+        <li><a href="https://www.ruanyifeng.com/blog/2019/10/tmux.html">Tmux 使用教程 - 阮一峰的网络日志</a></li>
+        <li><a href="https://hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/">Ham Vocke — A Quick and Easy Guide to tmux - Ham Vocke</a></li>
+        <li><a href="https://fatfatson.github.io/2019/08/11/tmux%E5%86%85%E8%81%94%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/">tmux 内联使用方法</a></li>
+      </ul>
+      ]]></content><author><name>TheRainstorm</name></author><category term="Tech Tutorial" /><category term="tmux" /><category term="netcat" /><summary type="html"><![CDATA[本文会介绍 tmux 的基础使用方法，以及长期使用下来的一些常用配置。]]></summary></entry><entry><title type="html">Rootless Docker in Docker 在 Hackergame 中的实践</title><link href="https://lug.ustc.edu.cn/planet/2025/02/hackergame-rootless-docker/" rel="alternate" type="text/html" title="Rootless Docker in Docker 在 Hackergame 中的实践" /><published>2025-02-08T00:00:00+08:00</published><updated>2025-02-27T16:35:18+08:00</updated><id>https://lug.ustc.edu.cn/planet/2025/02/hackergame-rootless-docker</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2025/02/hackergame-rootless-docker/"><![CDATA[<p>本文介绍了 2024 年 USTC Hackergame 中 Rootless Docker in Docker 在 Web 类题目容器隔离中的实践。</p>
+    <h2 id="背景">背景</h2>
+    <p>USTC Hackergame 长期以来使用 Docker 及 Docker Compose 来部署和管理各种题目。对于 <code class="language-plaintext highlighter-rouge">nc</code> 类题目，我们使用一个<a href="https://github.com/USTC-Hackergame/hackergame-challenge-docker">简单的 Python 管理程序</a>来为每个已验证的传入连接创建一个单独的题目运行环境容器，以保证选手之间的隔离。为了动态创建容器，我们将 <code class="language-plaintext highlighter-rouge">/var/run/docker.sock</code> 暴露给这个 Python 程序，以便它可以调用 Docker API 来创建容器。由于这个 Python 程序足够简单，我们认为这样做是安全的。而对于 Web 类题目，我们要求出题人在题目内部做好隔离，然而这样带来了额外的心智负担，而且容易出错，可能导致非预期解或出现能够干扰其他选手的情况。</p>
+    <p>在 2024 年 Hackergame 中，我们决定实现 Web 类题目的容器隔离方案，北京大学 GeekGame 基于我们的 nc 容器管理方案实现了一个<a href="https://github.com/PKU-GeekGame/web-docker-manager">简单的 Web 类题目容器管理方案</a>，该方案同样通过透传 Docker Socket 实现对 Web 题目的容器管理。然而，Web 题目的反向代理比 nc 复杂得多，这使得我们对该方案的安全性存在较大的担忧，一旦该管理程序被攻破，攻击者可以直接控制整个服务器。因此，我们需要一个更安全的方案，使得即使 Web 题目的容器管理程序被攻破，攻击者也无法轻易控制整个服务器，这就需要在隔离的、低权限的环境中运行 Docker Daemon。</p>
+    <h2 id="rootless-docker-in-docker">Rootless Docker-in-Docker</h2>
+    <p>Rootless Docker 是在低权限环境中运行 Docker 的一种方案。Docker 官方提供了一种 <a href="https://docs.docker.com/engine/security/rootless/#rootless-docker-in-docker">Rootless Docker in Docker</a> 的方案，只需要一行命令即可启动：</p>
+    <div class="language-bash highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code>docker run <span class="nt">-d</span> <span class="nt">--name</span> dind-rootless <span class="nt">--privileged</span> docker:25.0-dind-rootless
+</code></pre>
+      </div>
+    </div>
+    <p>该方案在容器中以非 <code class="language-plaintext highlighter-rouge">root</code> 用户（UID 1000）创建用户命名空间，并分离其他命名空间和运行 Docker Daemon。然而，该方案存在一些问题：</p>
+    <ol>
+      <li>该方案需要 <code class="language-plaintext highlighter-rouge">--privileged</code> 选项，以禁用 seccomp、AppArmor 和 mount masks，但这意味着容器将获得更高的权限，可能导致安全问题。</li>
+      <li>该方案无法使用 cgroup 来限制容器资源使用，因为 Rootless Docker 需要 systemd 将 cgroup 路径委托给 Docker Daemon 才能执行资源限制。虽然可以用 <code class="language-plaintext highlighter-rouge">rlimit</code> 等方案来限制资源，但其工作在进程粒度而非容器粒度，而且可以被轻松禁用。由于 Hackergame 需要强制执行容器资源限制，该问题是致命的。</li>
+    </ol>
+    <h2 id="基于-systemd-user-instance-的-rootless-docker-in-docker">基于 Systemd User Instance 的 Rootless Docker-in-Docker</h2>
+    <p>为了解决上述问题，我们采用了一个基于 Systemd User Instance 的 Rootless Docker-in-Docker 方案。该方案在 Systemd User Instance 中运行 Rootless Docker Daemon，以实现资源限制和更好的安全性。</p>
+    <h3 id="systemd-in-docker">Systemd in Docker</h3>
+    <p>为了实现该方案，首先需要在容器中运行 <code class="language-plaintext highlighter-rouge">systemd</code>。systemd 的网站上列出了<a href="https://systemd.io/CONTAINER_INTERFACE/">在容器中运行 systemd 的要求</a>，对于 Docker 来说，主要有以下几点：</p>
+    <ol>
+      <li>保留 <code class="language-plaintext highlighter-rouge">CAP_SYS_ADMIN</code> 特权。</li>
+      <li>启用私有 <code class="language-plaintext highlighter-rouge">cgroup</code> 命名空间，并将 <code class="language-plaintext highlighter-rouge">/sys/fs/cgroup</code> 挂载为可写。</li>
+      <li>将 <code class="language-plaintext highlighter-rouge">/tmp</code>, <code class="language-plaintext highlighter-rouge">/run</code>, <code class="language-plaintext highlighter-rouge">/run/lock</code>, <code class="language-plaintext highlighter-rouge">/var/lib/journal</code> 挂载为 <code class="language-plaintext highlighter-rouge">tmpfs</code>。</li>
+      <li>将 <code class="language-plaintext highlighter-rouge">stop_signal</code> 设置为 <code class="language-plaintext highlighter-rouge">SIGRTMIN+3</code>，以便 systemd 可以正确关闭。</li>
+      <li>禁用 AppArmor 或 SELinux。</li>
+    </ol>
+    <p>我们在 <code class="language-plaintext highlighter-rouge">docker-compose.yml</code> 中添加了以下内容来实现这些要求：</p>
+    <div class="language-yaml highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code><span class="na">cap_add</span><span class="pi">:</span>
   <span class="pi">-</span> <span class="s">SYS_ADMIN</span>
   <span class="pi">-</span> <span class="s">NET_ADMIN</span>
 <span class="na">cgroup</span><span class="pi">:</span> <span class="s">private</span>
@@ -47,13 +293,13 @@
   <span class="pi">-</span> <span class="s">apparmor=unconfined</span>
   <span class="pi">-</span> <span class="s">systempaths=unconfined</span>
 </code></pre>
-        </div>
       </div>
-      <p>其中 <code class="language-plaintext highlighter-rouge">seccomp.json</code> 可以从<a href="https://github.com/USTC-Hackergame/web-docker-manager/raw/refs/heads/main/rootless/seccomp.json">这里</a>获取，该文件在 Docker <a href="https://github.com/moby/moby/raw/refs/heads/master/profiles/seccomp/default.json">默认 seccomp 配置</a>的基础上允许了 <code class="language-plaintext highlighter-rouge">keyctl</code> 和 <code class="language-plaintext highlighter-rouge">pivot_root</code> 系统调用，这些系统调用是 Docker 所需要的。此外，该配置还一并禁用了 mount masks (<code class="language-plaintext highlighter-rouge">systempaths=unconfined</code>)，因为 Docker 启动容器时需要重新挂载 <code class="language-plaintext highlighter-rouge">/sys</code>。此外，我们还保留了 <code class="language-plaintext highlighter-rouge">NET_ADMIN</code> 特权，因为一些 systemd 的组件需要该特权。</p>
-      <p>需要注意的是，<code class="language-plaintext highlighter-rouge">cgroup: private</code> 并不会将 <code class="language-plaintext highlighter-rouge">/sys/fs/cgroup</code> 挂载为可写，因此我们需要在容器启动时手动处理，可以通过一个自定义的 <code class="language-plaintext highlighter-rouge">entrypoint.sh</code> 来实现：</p>
-      <div class="language-bash highlighter-rouge">
-        <div class="highlight">
-          <pre class="highlight"><code><span class="c">#!/bin/bash</span>
+    </div>
+    <p>其中 <code class="language-plaintext highlighter-rouge">seccomp.json</code> 可以从<a href="https://github.com/USTC-Hackergame/web-docker-manager/raw/refs/heads/main/rootless/seccomp.json">这里</a>获取，该文件在 Docker <a href="https://github.com/moby/moby/raw/refs/heads/master/profiles/seccomp/default.json">默认 seccomp 配置</a>的基础上允许了 <code class="language-plaintext highlighter-rouge">keyctl</code> 和 <code class="language-plaintext highlighter-rouge">pivot_root</code> 系统调用，这些系统调用是 Docker 所需要的。此外，该配置还一并禁用了 mount masks (<code class="language-plaintext highlighter-rouge">systempaths=unconfined</code>)，因为 Docker 启动容器时需要重新挂载 <code class="language-plaintext highlighter-rouge">/sys</code>。此外，我们还保留了 <code class="language-plaintext highlighter-rouge">NET_ADMIN</code> 特权，因为一些 systemd 的组件需要该特权。</p>
+    <p>需要注意的是，<code class="language-plaintext highlighter-rouge">cgroup: private</code> 并不会将 <code class="language-plaintext highlighter-rouge">/sys/fs/cgroup</code> 挂载为可写，因此我们需要在容器启动时手动处理，可以通过一个自定义的 <code class="language-plaintext highlighter-rouge">entrypoint.sh</code> 来实现：</p>
+    <div class="language-bash highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code><span class="c">#!/bin/bash</span>
 
 <span class="nb">set</span> <span class="nt">-euo</span> pipefail
 
@@ -65,13 +311,13 @@ mount <span class="nt">-t</span> cgroup2 <span class="nt">-o</span> rw,relatime,
 
 <span class="nb">exec</span> /lib/systemd/systemd
 </code></pre>
-        </div>
       </div>
-      <h3 id="rootless-docker-daemon-in-systemd-user-instance">Rootless Docker Daemon in Systemd User Instance</h3>
-      <p>在容器中以非 <code class="language-plaintext highlighter-rouge">root</code> 身份运行 Docker Daemon 非常简单，只需要在容器中安装带 Rooeless 支持的 Docker：</p>
-      <div class="language-dockerfile highlighter-rouge">
-        <div class="highlight">
-          <pre class="highlight"><code><span class="k">RUN </span>apt-get <span class="nb">install</span> <span class="nt">-y</span> ca-certificates curl <span class="o">&amp;&amp;</span> <span class="se">\
+    </div>
+    <h3 id="rootless-docker-daemon-in-systemd-user-instance">Rootless Docker Daemon in Systemd User Instance</h3>
+    <p>在容器中以非 <code class="language-plaintext highlighter-rouge">root</code> 身份运行 Docker Daemon 非常简单，只需要在容器中安装带 Rooeless 支持的 Docker：</p>
+    <div class="language-dockerfile highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code><span class="k">RUN </span>apt-get <span class="nb">install</span> <span class="nt">-y</span> ca-certificates curl <span class="o">&amp;&amp;</span> <span class="se">\
 </span>    <span class="nb">install</span> <span class="nt">-m</span> 0755 <span class="nt">-d</span> /etc/apt/keyrings <span class="o">&amp;&amp;</span> <span class="se">\
 </span>    curl <span class="nt">-fsSL</span> https://download.docker.com/linux/debian/gpg <span class="nt">-o</span> /etc/apt/keyrings/docker.asc <span class="o">&amp;&amp;</span> <span class="se">\
 </span>    <span class="nb">chmod </span>a+r /etc/apt/keyrings/docker.asc <span class="o">&amp;&amp;</span> <span class="se">\
@@ -80,115 +326,115 @@ mount <span class="nt">-t</span> cgroup2 <span class="nt">-o</span> rw,relatime,
 </span>    apt-get <span class="nb">install</span> <span class="nt">-y</span> docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin uidmap <span class="o">&amp;&amp;</span> <span class="se">\
 </span>    systemctl disable docker.service docker.socket containerd.service
 </code></pre>
-        </div>
       </div>
-      <p>并创建一个用户，假设名为 <code class="language-plaintext highlighter-rouge">rootless</code>，然后使用 <code class="language-plaintext highlighter-rouge">machinectl shell rootless@</code> 切换到该用户，并运行 <code class="language-plaintext highlighter-rouge">dockerd-rootless-setuptool.sh install</code> 即可安装 Rootless Docker Daemon，安装程序会自动创建 <code class="language-plaintext highlighter-rouge">~/.config/systemd/user/docker.service</code> 并将其安装到 <code class="language-plaintext highlighter-rouge">default.target</code>。设置环境变量 <code class="language-plaintext highlighter-rouge">DOCKER_HOST=unix:///run/user/$UID/docker.sock</code> 即可通过 Docker CLI 工具访问该 Rootless Docker Daemon。</p>
-      <h3 id="wrapping-up">Wrapping Up</h3>
-      <p>将 Rootless Docker Daemon 安装脚本生成的 <code class="language-plaintext highlighter-rouge">~/.config/systemd/user/docker.service</code> 文件复制出来，并创建 <code class="language-plaintext highlighter-rouge">~/.config/systemd/user/default.target.wants</code> 中的相对路径符号链接，并在 Dockerfile 中添加创建用户和将这些文件到用户目录中的内容，最后通过在 <code class="language-plaintext highlighter-rouge">/var/lib/systemd/linger</code> 目录下创建名为用户名的空文件来使对应的 Systemd User Instance 自动启动，即可实现自动启动 Rootless Docker Daemon。</p>
-      <p>该方案最终版本代码位于 <a href="https://github.com/USTC-Hackergame/web-docker-manager">USTC-Hackergame/web-docker-manager</a> 仓库的 <code class="language-plaintext highlighter-rouge">rootless</code> 目录，其中添加了一些用于持久化数据和暴露一些目录到主机的内容。</p>
-      <h3 id="安全性分析">安全性分析</h3>
-      <p>Rootless Docker 通过 <a href="https://github.com/rootless-containers/rootlesskit">RootlessKit</a> 分离用户命名空间，来实现非特权用户的特权操作以创建容器，因此该方案的容器（命名空间）层次结构如下：</p>
-      <div class="language-plaintext highlighter-rouge">
-        <div class="highlight">
-          <pre class="highlight"><code>Host (Full Privilege)
+    </div>
+    <p>并创建一个用户，假设名为 <code class="language-plaintext highlighter-rouge">rootless</code>，然后使用 <code class="language-plaintext highlighter-rouge">machinectl shell rootless@</code> 切换到该用户，并运行 <code class="language-plaintext highlighter-rouge">dockerd-rootless-setuptool.sh install</code> 即可安装 Rootless Docker Daemon，安装程序会自动创建 <code class="language-plaintext highlighter-rouge">~/.config/systemd/user/docker.service</code> 并将其安装到 <code class="language-plaintext highlighter-rouge">default.target</code>。设置环境变量 <code class="language-plaintext highlighter-rouge">DOCKER_HOST=unix:///run/user/$UID/docker.sock</code> 即可通过 Docker CLI 工具访问该 Rootless Docker Daemon。</p>
+    <h3 id="wrapping-up">Wrapping Up</h3>
+    <p>将 Rootless Docker Daemon 安装脚本生成的 <code class="language-plaintext highlighter-rouge">~/.config/systemd/user/docker.service</code> 文件复制出来，并创建 <code class="language-plaintext highlighter-rouge">~/.config/systemd/user/default.target.wants</code> 中的相对路径符号链接，并在 Dockerfile 中添加创建用户和将这些文件到用户目录中的内容，最后通过在 <code class="language-plaintext highlighter-rouge">/var/lib/systemd/linger</code> 目录下创建名为用户名的空文件来使对应的 Systemd User Instance 自动启动，即可实现自动启动 Rootless Docker Daemon。</p>
+    <p>该方案最终版本代码位于 <a href="https://github.com/USTC-Hackergame/web-docker-manager">USTC-Hackergame/web-docker-manager</a> 仓库的 <code class="language-plaintext highlighter-rouge">rootless</code> 目录，其中添加了一些用于持久化数据和暴露一些目录到主机的内容。</p>
+    <h3 id="安全性分析">安全性分析</h3>
+    <p>Rootless Docker 通过 <a href="https://github.com/rootless-containers/rootlesskit">RootlessKit</a> 分离用户命名空间，来实现非特权用户的特权操作以创建容器，因此该方案的容器（命名空间）层次结构如下：</p>
+    <div class="language-plaintext highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code>Host (Full Privilege)
 └── systemd in Docker (UID 0, CAP_SYS_ADMIN, CAP_NET_ADMIN)
         └── RootlessKit (UID 0 in inner user namespace, with ALL capabilities; UID 1000 in outer user namespace, with no capabilities)
             └── Manager Container
             └── Web Challenge Container 1
             └── Web Challenge Container 2
 </code></pre>
-        </div>
-      </div>
-      <p>若管理程序被攻破，则攻击者可以取得 RootlessKit 所创建的用户命名空间中的特权，但由于 RootlessKit 在外层用户命名空间是非特权用户，且运行在容器中，因此攻击者无法直接控制整个服务器，也无法直接访问 Host 的文件系统其他部分。</p>
-      <h2 id="总结">总结</h2>
-      <p>通过基于 Systemd User Instance 的 Rootless Docker in Docker 方案，我们成功地实现了在隔离的、低权限的环境中运行 Docker Daemon，以实现 Web 类题目的容器隔离。该方案强制执行了容器的资源限制，并通过隔离 Docker Daemon 提高了安全性，使得即使 Web 题目的容器管理程序被攻破，攻击者也无法轻易控制整个服务器。该方案已经在 2024 年 USTC Hackergame 中应用于数道 Web 类题目并稳定运行。</p>
-      <p>尽管如此，该方案仍有改进空间，如当前外层容器仍需 <code class="language-plaintext highlighter-rouge">SYS_ADMIN</code> 特权，这实际上是相当大的权限，而 <a href="https://github.com/nestybox/sysbox">Sysbox</a> 容器运行时可以在创建容器时直接分离用户命名空间，提供了一种不需要这些特权的替代方案，是一个可以探索的方向。此外，我们的方案为了方便直接禁用了 AppArmor Profile，但实际上只需要创建自定义的 AppArmor Profile 放松一些限制（如允许 <code class="language-plaintext highlighter-rouge">mount</code> 和放松一些路径下的限制），而不需要将其完全置于 <code class="language-plaintext highlighter-rouge">unconfined</code> 状态，这样可以进一步提升安全性，但仍需要进一步探索。</p>
-      ]]></content><author><name>RTXUX</name></author><category term="Hackergame" /><category term="Hackergame" /><category term="Docker" /><category term="Container" /><summary type="html"><![CDATA[本文介绍了 2024 年 USTC Hackergame 中 Rootless Docker in Docker 在 Web 类题目容器隔离中的实践。]]></summary></entry><entry><title type="html">快速建立本地 HTTP 文件服务</title><link href="https://lug.ustc.edu.cn/planet/2025/01/local-file-serving/" rel="alternate" type="text/html" title="快速建立本地 HTTP 文件服务" /><published>2025-01-03T00:00:00+08:00</published><updated>2025-01-06T16:32:35+08:00</updated><id>https://lug.ustc.edu.cn/planet/2025/01/local-file-serving</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2025/01/local-file-serving/"><![CDATA[<p>USTCLUG 的一个重要服务是它的 <a href="https://mirrors.ustc.edu.cn">开源软件镜像</a>。但是我们这里要讨论的，是另一种自己在本地搭建的文件服务，目的是加速对远程静态文件的访问。这篇文章来源于帮同学解决的一个小问题。</p>
-    <h2 id="目的">目的</h2>
-    <p>某些课程作业附带的代码示例会通过 HTTP 的方式获取运行需要的输入数据，但是如果这个数据不巧放在某台访问速率很低的服务器上（例如不少用 <code class="language-plaintext highlighter-rouge">.edu</code> 域名的国外大学的课程网站上），则会使得作业的运行时间大大加长——通过只有几 KB/s 的网络下载数十 MB 的数据总不是个好主意。更有可能的是，根据作业内容，样例代码还需要做一些修改，这时候每次调试运行代码时都要去下载一次输入数据，简直难以忍受。本文将针对 Windows 用户，讲解如何在手工下载一次相关的文件后，在本地快速搭建一个 HTTP 服务器提供数据文件，以避免反复访问慢速的源地址。对于不能修改访问地址的情况，也提供了相应的对策。</p>
-    <blockquote>
-      <p>为何不写针对 Linux 用户的教程呢？这是因为，由于有 Apache 和 Nginx 这类成熟好用的服务器软件，再加上 Linux 操作系统优秀的包管理器，结合网上的教程，用几分钟的时间在 Linux 平台上快速建立并运行一个 HTTP 服务器应该不是难事。而在 Windows 上，配置 IIS 这类大而笨重的服务器非常麻烦，使用 Apache/Nginx 之类的服务器软件又由于操作习惯的不同，也不方便。</p>
-    </blockquote>
-    <h2 id="使用-python-httpserver">使用 Python <code class="language-plaintext highlighter-rouge">http.server</code></h2>
-    <p><strong>对比下面的（老旧的）<code class="language-plaintext highlighter-rouge">EasyWebSvr</code>，使用 Python 很容易完成一个简单的 HTTP 服务器搭建。</strong></p>
-    <p>如果你已经安装了 Python，则可以直接使用</p>
-    <div class="language-shell highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code>python3 <span class="nt">-m</span> http.server &lt;port&gt;
-</code></pre>
       </div>
     </div>
-    <p>来以当前目录为根目录，<code class="language-plaintext highlighter-rouge">&lt;port&gt;</code> 为端口运行一个 HTTP 服务器。</p>
-    <p>如果需要指定别的目录 <code class="language-plaintext highlighter-rouge">&lt;path&gt;</code> 作为 HTTP 服务的根目录，可以使用</p>
-    <div class="language-shell highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code>python3 <span class="nt">-m</span> http.server &lt;port&gt; <span class="nt">--directory</span> &lt;path&gt;
+    <p>若管理程序被攻破，则攻击者可以取得 RootlessKit 所创建的用户命名空间中的特权，但由于 RootlessKit 在外层用户命名空间是非特权用户，且运行在容器中，因此攻击者无法直接控制整个服务器，也无法直接访问 Host 的文件系统其他部分。</p>
+    <h2 id="总结">总结</h2>
+    <p>通过基于 Systemd User Instance 的 Rootless Docker in Docker 方案，我们成功地实现了在隔离的、低权限的环境中运行 Docker Daemon，以实现 Web 类题目的容器隔离。该方案强制执行了容器的资源限制，并通过隔离 Docker Daemon 提高了安全性，使得即使 Web 题目的容器管理程序被攻破，攻击者也无法轻易控制整个服务器。该方案已经在 2024 年 USTC Hackergame 中应用于数道 Web 类题目并稳定运行。</p>
+    <p>尽管如此，该方案仍有改进空间，如当前外层容器仍需 <code class="language-plaintext highlighter-rouge">SYS_ADMIN</code> 特权，这实际上是相当大的权限，而 <a href="https://github.com/nestybox/sysbox">Sysbox</a> 容器运行时可以在创建容器时直接分离用户命名空间，提供了一种不需要这些特权的替代方案，是一个可以探索的方向。此外，我们的方案为了方便直接禁用了 AppArmor Profile，但实际上只需要创建自定义的 AppArmor Profile 放松一些限制（如允许 <code class="language-plaintext highlighter-rouge">mount</code> 和放松一些路径下的限制），而不需要将其完全置于 <code class="language-plaintext highlighter-rouge">unconfined</code> 状态，这样可以进一步提升安全性，但仍需要进一步探索。</p>
+    ]]></content><author><name>RTXUX</name></author><category term="Hackergame" /><category term="Hackergame" /><category term="Docker" /><category term="Container" /><summary type="html"><![CDATA[本文介绍了 2024 年 USTC Hackergame 中 Rootless Docker in Docker 在 Web 类题目容器隔离中的实践。]]></summary></entry><entry><title type="html">快速建立本地 HTTP 文件服务</title><link href="https://lug.ustc.edu.cn/planet/2025/01/local-file-serving/" rel="alternate" type="text/html" title="快速建立本地 HTTP 文件服务" /><published>2025-01-03T00:00:00+08:00</published><updated>2025-01-06T16:32:35+08:00</updated><id>https://lug.ustc.edu.cn/planet/2025/01/local-file-serving</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2025/01/local-file-serving/"><![CDATA[<p>USTCLUG 的一个重要服务是它的 <a href="https://mirrors.ustc.edu.cn">开源软件镜像</a>。但是我们这里要讨论的，是另一种自己在本地搭建的文件服务，目的是加速对远程静态文件的访问。这篇文章来源于帮同学解决的一个小问题。</p>
+  <h2 id="目的">目的</h2>
+  <p>某些课程作业附带的代码示例会通过 HTTP 的方式获取运行需要的输入数据，但是如果这个数据不巧放在某台访问速率很低的服务器上（例如不少用 <code class="language-plaintext highlighter-rouge">.edu</code> 域名的国外大学的课程网站上），则会使得作业的运行时间大大加长——通过只有几 KB/s 的网络下载数十 MB 的数据总不是个好主意。更有可能的是，根据作业内容，样例代码还需要做一些修改，这时候每次调试运行代码时都要去下载一次输入数据，简直难以忍受。本文将针对 Windows 用户，讲解如何在手工下载一次相关的文件后，在本地快速搭建一个 HTTP 服务器提供数据文件，以避免反复访问慢速的源地址。对于不能修改访问地址的情况，也提供了相应的对策。</p>
+  <blockquote>
+    <p>为何不写针对 Linux 用户的教程呢？这是因为，由于有 Apache 和 Nginx 这类成熟好用的服务器软件，再加上 Linux 操作系统优秀的包管理器，结合网上的教程，用几分钟的时间在 Linux 平台上快速建立并运行一个 HTTP 服务器应该不是难事。而在 Windows 上，配置 IIS 这类大而笨重的服务器非常麻烦，使用 Apache/Nginx 之类的服务器软件又由于操作习惯的不同，也不方便。</p>
+  </blockquote>
+  <h2 id="使用-python-httpserver">使用 Python <code class="language-plaintext highlighter-rouge">http.server</code></h2>
+  <p><strong>对比下面的（老旧的）<code class="language-plaintext highlighter-rouge">EasyWebSvr</code>，使用 Python 很容易完成一个简单的 HTTP 服务器搭建。</strong></p>
+  <p>如果你已经安装了 Python，则可以直接使用</p>
+  <div class="language-shell highlighter-rouge">
+    <div class="highlight">
+      <pre class="highlight"><code>python3 <span class="nt">-m</span> http.server &lt;port&gt;
 </code></pre>
-      </div>
     </div>
-    <p>如果需要 bind 到特定的地址（对于本地服务而言，应该使用 <code class="language-plaintext highlighter-rouge">127.0.0.1</code>），可以使用下面的命令。<code class="language-plaintext highlighter-rouge">bind</code> 是指将一个网络地址（IP 和端口）与服务器软件中的套接字关联的过程，使得该服务器能接收指定地址上的网络数据。<strong>Python 的 http.server 默认值为 <code class="language-plaintext highlighter-rouge">0.0.0.0</code>，代表所有人都可以访问</strong>。如果只需要本地访问，则可以使用本地回环地址 <code class="language-plaintext highlighter-rouge">127.0.0.1</code>。</p>
-    <div class="language-shell highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code>python3 <span class="nt">-m</span> http.server &lt;port&gt; <span class="nt">--bind</span> 127.0.0.1
+  </div>
+  <p>来以当前目录为根目录，<code class="language-plaintext highlighter-rouge">&lt;port&gt;</code> 为端口运行一个 HTTP 服务器。</p>
+  <p>如果需要指定别的目录 <code class="language-plaintext highlighter-rouge">&lt;path&gt;</code> 作为 HTTP 服务的根目录，可以使用</p>
+  <div class="language-shell highlighter-rouge">
+    <div class="highlight">
+      <pre class="highlight"><code>python3 <span class="nt">-m</span> http.server &lt;port&gt; <span class="nt">--directory</span> &lt;path&gt;
 </code></pre>
-      </div>
     </div>
-    <h2 id="使用-easywebserver">使用 EasyWebServer</h2>
-    <h3 id="获取一个-http-服务器">获取一个 HTTP 服务器</h3>
-    <p>首先当然是要获取一个 HTTP 服务器了，这里我们选择的是 <code class="language-plaintext highlighter-rouge">EasyWebSvr</code>。这个服务器是一个体积超小（只有数十 KB）、单文件、几乎不需要配置的小型 HTTP 服务器，甚至支持 CGI 和 PHP。<code class="language-plaintext highlighter-rouge">EasyWebSvr</code> 是一个历史久远的<a href="https://github.com/baojianjob/EasyWebSvr">开源项目</a>，使用 MSVC 作为开发环境，而且很容易下载到它的编译好的版本（搜索 <code class="language-plaintext highlighter-rouge">EasyWebSvr</code> 就可以了）。下载后你将得到一个 <code class="language-plaintext highlighter-rouge">EasyWebSvr.exe</code> 和一些其他的文件。不用理会其他的文件（事实上它们是不必要的），直接将 <code class="language-plaintext highlighter-rouge">EasyWebSvr.exe</code> 复制到一个空文件夹里面就可以了。</p>
-    <blockquote>
-      <p>提示：根据<a href="https://github.com/baojianjob/EasyWebSvr/blob/796448f6b312ad0676add90024940316dfa34299/EasyWebSvr/Socket.cpp#L439">代码</a>，EasyWebSvr 会 bind 到 <code class="language-plaintext highlighter-rouge">0.0.0.0</code>，这可能会导致<strong>安全问题</strong>。如果需要 bind 到 <code class="language-plaintext highlighter-rouge">127.0.0.1</code>，可能需要修改代码并重新构建。</p>
-    </blockquote>
-    <h3 id="准备数据">准备数据</h3>
-    <ul>
-      <li>从原始的地址上手工下载一份要被访问的数据，放到上面所说的那个空文件夹里面。</li>
-      <li>运行 <code class="language-plaintext highlighter-rouge">EasyWebSvr.exe</code>，可以看到一个小窗口。</li>
-      <li>点击右下角的锤子按钮（菜单），选择最下面的 <code class="language-plaintext highlighter-rouge">设置</code> 一项。</li>
-      <li>在弹出的设置对话框里面，选择 <code class="language-plaintext highlighter-rouge">主目录</code> 为当前 <code class="language-plaintext highlighter-rouge">EasyWebSvr.exe</code> 所在的目录。</li>
-      <li>在 <code class="language-plaintext highlighter-rouge">文档</code> 选项卡里面勾选 <code class="language-plaintext highlighter-rouge">允许目录浏览</code> 和 <code class="language-plaintext highlighter-rouge">总是显示目录内容</code>。</li>
-      <li>点击 <code class="language-plaintext highlighter-rouge">确定</code> 结束并保存配置。</li>
-      <li>然后在主窗口里面点击右下方的红色按钮（在菜单按钮的边上），正常应该看到它变成蓝绿色（这时候如果有 Windows 防火墙提示，请选择允许）。</li>
-      <li>此时服务器就配置好了，打开浏览器输入 <code class="language-plaintext highlighter-rouge">http://localhost</code> 即可看到文件列表。</li>
-    </ul>
-    <h3 id="修改原先的代码">修改原先的代码</h3>
-    <ul>
-      <li>例如原先提供的代码中数据文件的 URL 是 <code class="language-plaintext highlighter-rouge">http://some.site.edu/path/to/file/data.csv</code>，而这份数据就和 <code class="language-plaintext highlighter-rouge">EasyWebSvr.exe</code> 在同一文件夹下，则将代码中的地址修改为 <code class="language-plaintext highlighter-rouge">http://localhost/data.csv</code> 就可以使用本地的文件服务了！</li>
-      <li>服务器最小化后会显示一个小托盘图标，右键点击它可以显示各种选项，包括重新显示主窗口。</li>
-      <li>使用完后，点击蓝绿色图标，它会变成红色，此时服务器就关闭了。</li>
-    </ul>
-    <h3 id="特殊情况">特殊情况</h3>
-    <h4 id="代码不支持修改地址">代码不支持修改地址</h4>
-    <p>如果代码不支持修改地址（这很少见），那么也可以按照原来的 URL 在本地建立文件夹，类似下面这样：</p>
-    <div class="language-text highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code>EasyWebSvr.exe
+  </div>
+  <p>如果需要 bind 到特定的地址（对于本地服务而言，应该使用 <code class="language-plaintext highlighter-rouge">127.0.0.1</code>），可以使用下面的命令。<code class="language-plaintext highlighter-rouge">bind</code> 是指将一个网络地址（IP 和端口）与服务器软件中的套接字关联的过程，使得该服务器能接收指定地址上的网络数据。<strong>Python 的 http.server 默认值为 <code class="language-plaintext highlighter-rouge">0.0.0.0</code>，代表所有人都可以访问</strong>。如果只需要本地访问，则可以使用本地回环地址 <code class="language-plaintext highlighter-rouge">127.0.0.1</code>。</p>
+  <div class="language-shell highlighter-rouge">
+    <div class="highlight">
+      <pre class="highlight"><code>python3 <span class="nt">-m</span> http.server &lt;port&gt; <span class="nt">--bind</span> 127.0.0.1
+</code></pre>
+    </div>
+  </div>
+  <h2 id="使用-easywebserver">使用 EasyWebServer</h2>
+  <h3 id="获取一个-http-服务器">获取一个 HTTP 服务器</h3>
+  <p>首先当然是要获取一个 HTTP 服务器了，这里我们选择的是 <code class="language-plaintext highlighter-rouge">EasyWebSvr</code>。这个服务器是一个体积超小（只有数十 KB）、单文件、几乎不需要配置的小型 HTTP 服务器，甚至支持 CGI 和 PHP。<code class="language-plaintext highlighter-rouge">EasyWebSvr</code> 是一个历史久远的<a href="https://github.com/baojianjob/EasyWebSvr">开源项目</a>，使用 MSVC 作为开发环境，而且很容易下载到它的编译好的版本（搜索 <code class="language-plaintext highlighter-rouge">EasyWebSvr</code> 就可以了）。下载后你将得到一个 <code class="language-plaintext highlighter-rouge">EasyWebSvr.exe</code> 和一些其他的文件。不用理会其他的文件（事实上它们是不必要的），直接将 <code class="language-plaintext highlighter-rouge">EasyWebSvr.exe</code> 复制到一个空文件夹里面就可以了。</p>
+  <blockquote>
+    <p>提示：根据<a href="https://github.com/baojianjob/EasyWebSvr/blob/796448f6b312ad0676add90024940316dfa34299/EasyWebSvr/Socket.cpp#L439">代码</a>，EasyWebSvr 会 bind 到 <code class="language-plaintext highlighter-rouge">0.0.0.0</code>，这可能会导致<strong>安全问题</strong>。如果需要 bind 到 <code class="language-plaintext highlighter-rouge">127.0.0.1</code>，可能需要修改代码并重新构建。</p>
+  </blockquote>
+  <h3 id="准备数据">准备数据</h3>
+  <ul>
+    <li>从原始的地址上手工下载一份要被访问的数据，放到上面所说的那个空文件夹里面。</li>
+    <li>运行 <code class="language-plaintext highlighter-rouge">EasyWebSvr.exe</code>，可以看到一个小窗口。</li>
+    <li>点击右下角的锤子按钮（菜单），选择最下面的 <code class="language-plaintext highlighter-rouge">设置</code> 一项。</li>
+    <li>在弹出的设置对话框里面，选择 <code class="language-plaintext highlighter-rouge">主目录</code> 为当前 <code class="language-plaintext highlighter-rouge">EasyWebSvr.exe</code> 所在的目录。</li>
+    <li>在 <code class="language-plaintext highlighter-rouge">文档</code> 选项卡里面勾选 <code class="language-plaintext highlighter-rouge">允许目录浏览</code> 和 <code class="language-plaintext highlighter-rouge">总是显示目录内容</code>。</li>
+    <li>点击 <code class="language-plaintext highlighter-rouge">确定</code> 结束并保存配置。</li>
+    <li>然后在主窗口里面点击右下方的红色按钮（在菜单按钮的边上），正常应该看到它变成蓝绿色（这时候如果有 Windows 防火墙提示，请选择允许）。</li>
+    <li>此时服务器就配置好了，打开浏览器输入 <code class="language-plaintext highlighter-rouge">http://localhost</code> 即可看到文件列表。</li>
+  </ul>
+  <h3 id="修改原先的代码">修改原先的代码</h3>
+  <ul>
+    <li>例如原先提供的代码中数据文件的 URL 是 <code class="language-plaintext highlighter-rouge">http://some.site.edu/path/to/file/data.csv</code>，而这份数据就和 <code class="language-plaintext highlighter-rouge">EasyWebSvr.exe</code> 在同一文件夹下，则将代码中的地址修改为 <code class="language-plaintext highlighter-rouge">http://localhost/data.csv</code> 就可以使用本地的文件服务了！</li>
+    <li>服务器最小化后会显示一个小托盘图标，右键点击它可以显示各种选项，包括重新显示主窗口。</li>
+    <li>使用完后，点击蓝绿色图标，它会变成红色，此时服务器就关闭了。</li>
+  </ul>
+  <h3 id="特殊情况">特殊情况</h3>
+  <h4 id="代码不支持修改地址">代码不支持修改地址</h4>
+  <p>如果代码不支持修改地址（这很少见），那么也可以按照原来的 URL 在本地建立文件夹，类似下面这样：</p>
+  <div class="language-text highlighter-rouge">
+    <div class="highlight">
+      <pre class="highlight"><code>EasyWebSvr.exe
 path/                -&gt; 建立这个目录
     to/              -&gt; 建立这个目录
         file/        -&gt; 建立这个目录
             data.csv -&gt; 数据文件在这里
 </code></pre>
-      </div>
     </div>
-    <p>然后修改 <code class="language-plaintext highlighter-rouge">hosts</code> 文件（一般在 <code class="language-plaintext highlighter-rouge">C:\Windows\System32\drivers\etc</code> 里面，需要管理员权限，具体请看相关教程），加上一句</p>
-    <div class="language-text highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code>127.0.0.1 some.site.edu
+  </div>
+  <p>然后修改 <code class="language-plaintext highlighter-rouge">hosts</code> 文件（一般在 <code class="language-plaintext highlighter-rouge">C:\Windows\System32\drivers\etc</code> 里面，需要管理员权限，具体请看相关教程），加上一句</p>
+  <div class="language-text highlighter-rouge">
+    <div class="highlight">
+      <pre class="highlight"><code>127.0.0.1 some.site.edu
 </code></pre>
-      </div>
     </div>
-    <p>然后以管理员权限运行</p>
-    <div class="language-shell highlighter-rouge">
-      <div class="highlight">
-        <pre class="highlight"><code>ipconfig /flushdns
+  </div>
+  <p>然后以管理员权限运行</p>
+  <div class="language-shell highlighter-rouge">
+    <div class="highlight">
+      <pre class="highlight"><code>ipconfig /flushdns
 </code></pre>
-      </div>
     </div>
-    <p>即可。可以通过浏览器访问 <code class="language-plaintext highlighter-rouge">http://some.site.edu/path/to/file/data.csv</code> 来确认。这一操作会修改所有对 <code class="language-plaintext highlighter-rouge">some.site.edu</code> 的请求，因此用完后请删去在 <code class="language-plaintext highlighter-rouge">hosts</code> 中加入的那一行，然后再运行一次 <code class="language-plaintext highlighter-rouge">ipconfig /flushdns</code>。</p>
-    <h4 id="原地址有非-80-的端口号">原地址有非 80 的端口号</h4>
-    <p>如果你拿到的地址使用了别的端口（例如 <code class="language-plaintext highlighter-rouge">some.site.edu:8080</code>）且不能修改，那么请在 EasyWebServer 的设置页面 <code class="language-plaintext highlighter-rouge">端口号</code> 处输入对应的端口号 <code class="language-plaintext highlighter-rouge">8080</code>，对应的访问地址就是 <code class="language-plaintext highlighter-rouge">localhost:8080</code>。</p>
-    <h4 id="提示端口已被占用">提示端口已被占用</h4>
-    <p>这可能是因为有其他应用在使用 80 端口。通过 <code class="language-plaintext highlighter-rouge">netstat -ano</code> 命令可以查看机器上正被使用的端口号和对应的进程 ID。如果不希望关闭占用 80 端口的程序，那么和上面非 80 端口一样，将我们的 HTTP 文件服务器换到一个别的端口就好了，例如 <code class="language-plaintext highlighter-rouge">8080</code> 或者 <code class="language-plaintext highlighter-rouge">8000</code>，然后再次点红色圆球图标开启服务器。这时候记得访问地址也要加上对应的端口号。</p>
-    ]]></content><author><name>luojh</name></author><category term="Tech Tutorial" /><category term="Windows" /><category term="HTTP" /><summary type="html"><![CDATA[USTCLUG 的一个重要服务是它的 开源软件镜像。但是我们这里要讨论的，是另一种自己在本地搭建的文件服务，目的是加速对远程静态文件的访问。这篇文章来源于帮同学解决的一个小问题。]]></summary></entry><entry><title type="html">镜像站 ZFS 实践</title><link href="https://lug.ustc.edu.cn/planet/2024/12/ustc-mirrors-zfs-rebuild/" rel="alternate" type="text/html" title="镜像站 ZFS 实践" /><published>2024-12-09T00:00:00+08:00</published><updated>2025-01-25T16:45:35+08:00</updated><id>https://lug.ustc.edu.cn/planet/2024/12/ustc-mirrors-zfs-rebuild</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2024/12/ustc-mirrors-zfs-rebuild/"><![CDATA[<p>A.K.A. 如何让 2000 元的机械硬盘跑得比 3000 元的固态硬盘还快（</p>
+  </div>
+  <p>即可。可以通过浏览器访问 <code class="language-plaintext highlighter-rouge">http://some.site.edu/path/to/file/data.csv</code> 来确认。这一操作会修改所有对 <code class="language-plaintext highlighter-rouge">some.site.edu</code> 的请求，因此用完后请删去在 <code class="language-plaintext highlighter-rouge">hosts</code> 中加入的那一行，然后再运行一次 <code class="language-plaintext highlighter-rouge">ipconfig /flushdns</code>。</p>
+  <h4 id="原地址有非-80-的端口号">原地址有非 80 的端口号</h4>
+  <p>如果你拿到的地址使用了别的端口（例如 <code class="language-plaintext highlighter-rouge">some.site.edu:8080</code>）且不能修改，那么请在 EasyWebServer 的设置页面 <code class="language-plaintext highlighter-rouge">端口号</code> 处输入对应的端口号 <code class="language-plaintext highlighter-rouge">8080</code>，对应的访问地址就是 <code class="language-plaintext highlighter-rouge">localhost:8080</code>。</p>
+  <h4 id="提示端口已被占用">提示端口已被占用</h4>
+  <p>这可能是因为有其他应用在使用 80 端口。通过 <code class="language-plaintext highlighter-rouge">netstat -ano</code> 命令可以查看机器上正被使用的端口号和对应的进程 ID。如果不希望关闭占用 80 端口的程序，那么和上面非 80 端口一样，将我们的 HTTP 文件服务器换到一个别的端口就好了，例如 <code class="language-plaintext highlighter-rouge">8080</code> 或者 <code class="language-plaintext highlighter-rouge">8000</code>，然后再次点红色圆球图标开启服务器。这时候记得访问地址也要加上对应的端口号。</p>
+  ]]></content><author><name>luojh</name></author><category term="Tech Tutorial" /><category term="Windows" /><category term="HTTP" /><summary type="html"><![CDATA[USTCLUG 的一个重要服务是它的 开源软件镜像。但是我们这里要讨论的，是另一种自己在本地搭建的文件服务，目的是加速对远程静态文件的访问。这篇文章来源于帮同学解决的一个小问题。]]></summary></entry><entry><title type="html">镜像站 ZFS 实践</title><link href="https://lug.ustc.edu.cn/planet/2024/12/ustc-mirrors-zfs-rebuild/" rel="alternate" type="text/html" title="镜像站 ZFS 实践" /><published>2024-12-09T00:00:00+08:00</published><updated>2025-01-25T16:45:35+08:00</updated><id>https://lug.ustc.edu.cn/planet/2024/12/ustc-mirrors-zfs-rebuild</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2024/12/ustc-mirrors-zfs-rebuild/"><![CDATA[<p>A.K.A. 如何让 2000 元的机械硬盘跑得比 3000 元的固态硬盘还快（</p>
   <p>本文另有<a href="https://ibug.io/p/74">英文版</a>及在南京大学分享时使用的<a href="https://ibug.io/p/72">幻灯片</a>。</p>
   <h2 id="background">背景</h2>
   <p>由中科大 Linux 用户协会维护的<a href="https://mirrors.ustc.edu.cn/">中科大开源软件镜像站</a>是中国大陆高校访问量最大、收录最全的开源软件镜像之一。
@@ -2929,72 +3175,4 @@ siege <span class="nt">-c</span> 25 <span class="nt">-r</span> 400 <span class="
   <p>结果很棒！升级后的 USB 3.0 接口，即使没有跑到最高速，也比前代树莓派高出很多。但在享受高速 USB 之前，再让我强调一次：请特别关注你的 USB 外设，特别是那些有点儿耗电的设备，像机械硬盘和 SSD。如果电力得以保证，利用那两个高速 USB 接口对于 NAS 或者其他存储扩展来说好处多多。</p>
   <h2 id="总结">总结</h2>
   <p>在体验过 3B 到 3B+ 的小小提升后，新的树莓派 4 对于大多数树莓派爱好者来说，都是一场盛宴。价格不变，即使你已经有个 3B+，树莓派 4 也可以说是必买的。尽管在供电和散热上有缺点，如果你不插太多外设，不在树莓派上放太多重型任务的话，也没什么关系。</p>
-  ]]></content><author><name>taoky</name></author><category term="Technology" /><category term="Translation" /><category term="树莓派" /><summary type="html"><![CDATA[原文地址：https://ibugone.com/blog/2019/09/raspberry-pi-4-review-benchmark/，作者为 @iBug 同学。以下为翻译部分。]]></summary></entry><entry><title type="html">萌新入门手册：如何使用 nc/ncat？</title><link href="https://lug.ustc.edu.cn/planet/2019/09/how-to-use-nc/" rel="alternate" type="text/html" title="萌新入门手册：如何使用 nc/ncat？" /><published>2019-09-16T00:00:00+08:00</published><updated>2022-10-28T11:15:51+08:00</updated><id>https://lug.ustc.edu.cn/planet/2019/09/how-to-use-nc</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2019/09/how-to-use-nc/"><![CDATA[<p>本文用于介绍信息安全大赛中不少题目需要使用的 nc/ncat 工具。</p>
-  <h2 id="nc-是什么"><code class="language-plaintext highlighter-rouge">nc</code> 是什么？</h2>
-  <p><code class="language-plaintext highlighter-rouge">nc/ncat</code> 是 netcat 的缩写，它可以读写 TCP 与 UDP 端口——或许你看不懂这句话，这没有关系。简单地说，它可以在字符界面下，让你和服务器沟通交流。</p>
-  <p>一般来说，有很多题目都会要求你使用 <code class="language-plaintext highlighter-rouge">nc</code> 连接到他们的服务器，并且进行交互，获得 flag。</p>
-  <h2 id="如何安装-nc">如何安装 <code class="language-plaintext highlighter-rouge">nc</code>？</h2>
-  <p><code class="language-plaintext highlighter-rouge">nc</code> 命令在 macOS 中是自带的，在 Linux 中一般自带，或是可以使用相应的软件包管理器安装（如在 Debian/Ubuntu 中这个包名叫 netcat）。</p>
-  <p>当然，如果你在看这篇手册，你的操作系统很有可能是 Windows。它不自带 <code class="language-plaintext highlighter-rouge">nc</code>，尽管可以用 WSL 或者虚拟机的方式解决，但是如果你觉得这样太麻烦了，也有另外一些方法。</p>
-  <h3 id="使用静态链接的-ncat-程序">使用静态链接的 <code class="language-plaintext highlighter-rouge">ncat</code> 程序</h3>
-  <p>前往 <a href="https://github.com/andrew-d/static-binaries/blob/master/binaries/windows/x86/ncat.exe">https://github.com/andrew-d/static-binaries/blob/master/binaries/windows/x86/ncat.exe</a> 下载此程序。我们也在这里提供了一份。下载下来即可。</p>
-  <p><a href="https://planet.ustclug.org/wp-content/uploads/2019/09/ncat.zip">ncat.zip 下载</a></p>
-  <p><em>注：<code class="language-plaintext highlighter-rouge">nc</code>/<code class="language-plaintext highlighter-rouge">ncat</code> 事实上是两个不同的程序，但在我们接下来的使用上，基本没有区别。<code class="language-plaintext highlighter-rouge">ncat</code> 是由 Nmap 项目开发的“重置版的 Netcat”。</em></p>
-  <h4 id="我的杀毒软件报毒">我的杀毒软件报毒！</h4>
-  <p>这是 virustotal 的检测结果：<a href="https://www.virustotal.com/gui/file/d0baada87420dd7c2e63d0dd3248749c06b53806d3021863c4fa659608053a8a/detection">https://www.virustotal.com/gui/file/d0baada87420dd7c2e63d0dd3248749c06b53806d3021863c4fa659608053a8a/detection</a></p>
-  <p>如果你不相信此来源，也可以下载 <code class="language-plaintext highlighter-rouge">nmap</code>（一个网络探测、扫描工具），它会附带一个 <code class="language-plaintext highlighter-rouge">ncat</code>。</p>
-  <h2 id="如何使用-nc">如何使用 <code class="language-plaintext highlighter-rouge">nc</code>?</h2>
-  <h3 id="windows">Windows</h3>
-  <p>直接双击，你会看到一个窗口一扫而过——这是正常现象。你需要使用「命令提示符」或者「PowerShell」来访问这个程序。</p>
-  <p>Windows 10 中，你可以使用资源管理器 -&gt; 文件来在你存放 <code class="language-plaintext highlighter-rouge">nc</code> 的目录中打开命令提示符或 PowerShell。</p>
-  <figure class=""><img src="/static/planet/explorer-1024x510.png" alt="" />
-    <figcaption>
-      在 Windows 资源管理器中打开命令提示符或 PowerShell
-    </figcaption>
-  </figure>
-  <p>或者，你也可以在开始菜单 -&gt; Windows 系统中打开命令提示符，或者在开始菜单 -&gt; Windows PowerShell 中打开 PowerShell，然后使用 <code class="language-plaintext highlighter-rouge">cd</code> 命令转移到对应的目录：输入 <code class="language-plaintext highlighter-rouge">cd 文件夹名</code> 可以让你转移到对应的文件夹，输入 <code class="language-plaintext highlighter-rouge">cd ..</code> 可以让你转移到上面一层目录。使用 <code class="language-plaintext highlighter-rouge">dir</code> 命令，可以显示当前目录下所有文件。同时，使用 Tab 键可以帮助你补全名称。</p>
-  <p>当跳转到你存放 <code class="language-plaintext highlighter-rouge">nc</code> 的文件夹后：</p>
-  <ul>
-    <li>如果你使用的是 PowerShell（蓝色背景），输入 <code class="language-plaintext highlighter-rouge">./ncat</code>（根据 <code class="language-plaintext highlighter-rouge">nc</code> 对应的名称不同而不同）。</li>
-    <li>如果你使用的是命令提示符（黑色背景），输入 <code class="language-plaintext highlighter-rouge">ncat</code>（根据 <code class="language-plaintext highlighter-rouge">nc</code> 对应的名称不同而不同）。</li>
-  </ul>
-  <p>当显示以下内容时，说明你成功运行了它。</p>
-  <figure class=""><img src="/static/planet/cmdncat-1024x596.png" alt="" />
-    <figcaption>
-      成功运行 <code class="language-plaintext highlighter-rouge">ncat</code>
-    </figcaption>
-  </figure>
-  <h3 id="linux--macos">Linux &amp; macOS</h3>
-  <p>打开「终端」，输入 <code class="language-plaintext highlighter-rouge">nc</code>。</p>
-  <div class="language-plaintext highlighter-rouge">
-    <div class="highlight">
-      <pre class="highlight"><code>$ nc
-usage: nc [-46AacCDdEFhklMnOortUuvz] [-K tc] [-b boundif] [-i interval] [-p source_port] [--apple-delegate-pid pid] [--apple-delegate-uuid uuid]
-	  [-s source_ip_address] [-w timeout] [-X proxy_version]
-	  [-x proxy_address[:port]] [hostname] [port[s]]
-</code></pre>
-    </div>
-  </div>
-  <p>出现了类似上面的输出，说明运行成功了。</p>
-  <h3 id="示例">示例</h3>
-  <p>在我们使用浏览器上网的时候，我们和服务器使用了 HTTP 协议进行连接。关于 HTTP 协议的更多细节，你需要自己上网搜索。一般来说，默认是 80 端口。</p>
-  <p>我们可以使用 <code class="language-plaintext highlighter-rouge">nc</code>，尝试一次与网页服务器的连接，以百度为例。</p>
-  <p>输入 <code class="language-plaintext highlighter-rouge">nc www.baidu.com 80</code>（或者 <code class="language-plaintext highlighter-rouge">ncat www.baidu.com 80</code>，或者 <code class="language-plaintext highlighter-rouge">./ncat www.baidu.com 80</code>，请根据以上的介绍自行修改），程序会等待你的输入。</p>
-  <p>输入 <code class="language-plaintext highlighter-rouge">GET / HTTP/1.0</code>。这表示，我们使用 <code class="language-plaintext highlighter-rouge">HTTP/1.0</code> 这个协议版本，用 <code class="language-plaintext highlighter-rouge">GET</code> 的方式请求根 <code class="language-plaintext highlighter-rouge">/</code>。输入两下回车，代表我们的 HTTP 请求完成。如果你的网络畅通，百度的网页服务器会立刻返回大量信息，可以自行搜索，了解它们的含义。现在，你成功（在不使用浏览器的情况下）完成了一次与百度网站的连接！</p>
-  <figure class=""><img src="/static/planet/nc-1024x596.png" alt="" />
-    <figcaption>
-      Success!
-    </figcaption>
-  </figure>
-  <p>如果你成功了，那么你可以开始愉快地完成我们的题目了！</p>
-  <p>除了使用 <code class="language-plaintext highlighter-rouge">nc</code> 直接与服务器交互之外，也可以编程与服务器交互。例如：</p>
-  <ul>
-    <li>在信息安全类的竞赛中一个常用的工具是 Python 的 <a href="https://docs.pwntools.com/en/stable/intro.html"><code class="language-plaintext highlighter-rouge">pwntools</code></a>，具体使用方法可以自行搜索了解。</li>
-    <li><code class="language-plaintext highlighter-rouge">nc</code> 也可以使用 <code class="language-plaintext highlighter-rouge">-e</code> 参数设定交互脚本，可参考<a href="https://github.com/ustclug/hackergame2018-writeups/blob/master/official/python_simulator/README.md">科大信息安全大赛 2018 年「猫咪克星」题目的题解</a>（部分 <code class="language-plaintext highlighter-rouge">nc</code> 版本不支持）。</li>
-  </ul>
-  <h3 id="注意事项">注意事项</h3>
-  <blockquote>
-    <p>以下内容目前对于比赛中需要 token 的题目不适用，需使用编程方法与题目交互。</p>
-  </blockquote>
-  <p>由于 <a href="http://blog.chaitanya.im/4096-limit">tty 默认每行的长度最长为 4096</a>，<strong>在粘贴过长的输入时内容可能会被截断</strong>。遇到这种情况时，可以使用文件重定向解决：将需要输入的内容放置在文件中，然后 <code class="language-plaintext highlighter-rouge">cat 你的文件 - | nc 服务器 端口</code>（Windows cmd.exe 中 <code class="language-plaintext highlighter-rouge">type 你的文件 CON | ncat 服务器 端口</code>）即可。</p>
-  ]]></content><author><name>taoky</name></author><category term="Tech Tutorial" /><category term="hackergame" /><category term="netcat" /><summary type="html"><![CDATA[本文用于介绍信息安全大赛中不少题目需要使用的 nc/ncat 工具。]]></summary></entry></feed>
+  ]]></content><author><name>taoky</name></author><category term="Technology" /><category term="Translation" /><category term="树莓派" /><summary type="html"><![CDATA[原文地址：https://ibugone.com/blog/2019/09/raspberry-pi-4-review-benchmark/，作者为 @iBug 同学。以下为翻译部分。]]></summary></entry></feed>

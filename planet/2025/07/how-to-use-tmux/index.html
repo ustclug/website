@@ -1,0 +1,710 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.27.1 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="zh-CN" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <!-- begin _includes/seo.html -->
+    <title>提升命令行使用体验──tmux 终端复用 - LUG @ USTC</title>
+    <meta name="description" content="本文会介绍 tmux 的基础使用方法，以及长期使用下来的一些常用配置。">
+    <meta name="author" content="TheRainstorm">
+    <meta property="article:author" content="TheRainstorm">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="LUG @ USTC">
+    <meta property="og:title" content="提升命令行使用体验──tmux 终端复用">
+    <meta property="og:url" content="https://lug.ustc.edu.cn/planet/2025/07/how-to-use-tmux/">
+    <meta property="og:description" content="本文会介绍 tmux 的基础使用方法，以及长期使用下来的一些常用配置。">
+    <meta property="og:image" content="https://lug.ustc.edu.cn/static/splash/galaxy-1.jpg">
+    <meta property="article:published_time" content="2025-07-06T00:00:00+08:00">
+    <meta property="article:modified_time" content="2025-07-16T09:53:49+08:00">
+    <link rel="canonical" href="https://lug.ustc.edu.cn/planet/2025/07/how-to-use-tmux/">
+    <!-- end _includes/seo.html -->
+    <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="LUG @ USTC Feed">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="57x57" href="/static/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/static/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/static/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/static/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/static/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/static/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/static/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/static/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/static/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/static/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/static/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#f3f6f6">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#f3f6f6">
+    <script type="text/javascript">
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+      window.enable_copy_code_button = true;
+    </script>
+    <!-- For all browsers -->
+    <link rel="stylesheet" href="/assets/css/main.css?v=bbb4da4054">
+    <link rel="stylesheet" href="/_extra/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
+    <link rel="stylesheet" href="/_extra/open-sans.css" media="invalid" onload="this.media='all'">
+    <!-- start custom head snippets -->
+    <!-- insert favicons. use https://realfavicongenerator.net/ -->
+    <!-- end custom head snippets -->
+  </head>
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+      <ul>
+        <li><a href="#site-nav" class="screen-reader-shortcut">转到主导航栏</a></li>
+        <li><a href="#main" class="screen-reader-shortcut">转到内容</a></li>
+        <li><a href="#footer" class="screen-reader-shortcut">转到底部</a></li>
+      </ul>
+    </nav>
+    <div class="masthead">
+      <div class="masthead__inner-wrap">
+        <div class="masthead__menu">
+          <nav id="site-nav" class="greedy-nav">
+            <a class="site-logo" href="/"><img src="/static/lug-penguin.png" alt="LUG @ USTC"></a>
+            <a class="site-title" href="/">
+              LUG @ USTC
+            </a>
+            <ul class="visible-links">
+              <li class="masthead__menu-item">
+                <a
+                href="/wiki/"
+                
+                
+              ><i class="fad fa-lg fa-fw fa-star-shooting"></i> Wiki</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a
+                href="/news/"
+                
+                
+              ><i class="fad fa-lg fa-fw fa-newspaper"></i> News</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a
+                href="/planet/"
+                
+                
+              ><i class="fad fa-lg fa-fw fa-planet-ringed fa-swap-opacity"></i> Planet</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a
+                href="https://github.com/ustclug"
+                
+                
+              ><i class="fab fa-lg fa-fw fa-github"></i> GitHub</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a
+                href="https://mirrors.ustc.edu.cn/"
+                
+                
+              ><i class="fad fa-lg fa-fw fa-server"></i> Mirrors</a>
+              </li>
+            </ul>
+            <button class="search__toggle" type="button">
+              <span class="visually-hidden">切换搜索</span>
+              <i class="fas fa-search"></i>
+            </button>
+            <button class="greedy-nav__toggle hidden" type="button">
+              <span class="visually-hidden">切换菜单</span>
+              <div class="navicon"></div>
+            </button>
+            <ul class="hidden-links hidden"></ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="initial-content">
+      <div class="page__hero--overlay"
+  style=" background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/static/splash/galaxy-1.jpg');"
+>
+        <div class="wrapper">
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            提升命令行使用体验──tmux 终端复用
+          </h1>
+          <p class="page__meta">
+            <span class="page__meta-date">
+              <i class="far fa-calendar-alt" aria-hidden="true"></i>
+              <time datetime="2025-07-06T00:00:00+08:00">2025 年 7 月 6 日</time>
+            </span>
+            <span class="page__meta-sep"></span>
+            <span class="page__meta-readtime">
+              <i class="far fa-clock" aria-hidden="true"></i>
+              7 分钟阅读
+            </span>
+          </p>
+        </div>
+      </div>
+      <div id="main" role="main">
+        <div class="sidebar sticky">
+          <div itemscope itemtype="https://schema.org/Person" class="h-card">
+            <div class="author__avatar">
+              <a href="https://lug.ustc.edu.cn/">
+                <img src="https://avatars.githubusercontent.com/u/33221728?v=4" alt="TheRainstorm" itemprop="image" class="u-photo">
+              </a>
+            </div>
+            <div class="author__content">
+              <h3 class="author__name p-name" itemprop="name">
+                <a class="u-url" rel="me" href="https://lug.ustc.edu.cn/" itemprop="url">TheRainstorm</a>
+              </h3>
+            </div>
+            <div class="author__urls-wrapper">
+              <button class="btn btn--inverse">关注</button>
+              <ul class="author__urls social-icons">
+                <li><a href="https://github.com/TheRainstorm" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+                <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+              </ul>
+            </div>
+          </div>
+        </div>
+        <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+          <meta itemprop="headline" content="提升命令行使用体验──tmux 终端复用">
+          <meta itemprop="description" content="本文会介绍 tmux 的基础使用方法，以及长期使用下来的一些常用配置。">
+          <meta itemprop="datePublished" content="2025-07-06T00:00:00+08:00">
+          <meta itemprop="dateModified" content="2025-07-16T09:53:49+08:00">
+          <div class="page__inner-wrap">
+            <section class="page__content" itemprop="text">
+              <aside class="sidebar__right sticky">
+                <nav class="toc">
+                  <header>
+                    <h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4>
+                  </header>
+                  <ul class="toc__menu">
+                    <li><a href="#背景--原理">背景 &amp; 原理</a></li>
+                    <li><a href="#tmux-quick-start">tmux quick start</a>
+                      <ul>
+                        <li><a href="#窗口操作">窗口操作</a></li>
+                        <li><a href="#窗格操作">窗格操作</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#常用配置分享">常用配置分享</a>
+                      <ul>
+                        <li><a href="#修改快捷键前缀">修改快捷键前缀</a></li>
+                        <li><a href="#划分窗格快捷键">划分窗格快捷键</a></li>
+                        <li><a href="#鼠标操作">鼠标操作</a></li>
+                        <li><a href="#打开窗口时默认路径">打开窗口时默认路径</a></li>
+                        <li><a href="#移动窗口顺序">移动窗口顺序</a></li>
+                        <li><a href="#session-操作">session 操作</a></li>
+                        <li><a href="#复制文字后不自动跳到结尾">复制文字后不自动跳到结尾</a></li>
+                        <li><a href="#tmux-in-tmux">tmux in tmux</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#参考资料">参考资料</a></li>
+                  </ul>
+                </nav>
+              </aside>
+              <p>本文会介绍 tmux 的基础使用方法，以及长期使用下来的一些常用配置。</p>
+              <h2 id="背景--原理">背景 &amp; 原理</h2>
+              <p>在使用命令行的过程中，我们经常遇到一个需求，那就是让程序在退出当前终端后保持运行。在以往，我们可能会使用 <code class="language-plaintext highlighter-rouge">nohup</code> 加让程序后台运行的方式，比如：</p>
+              <div class="language-shell highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>➜  ~ <span class="nb">nohup </span>ping 127.0.0.1 &amp;
+<span class="o">[</span>1] 89083
+<span class="nb">nohup</span>: ignoring input and appending output to <span class="s1">'nohup.out'</span>
+➜  ~ ps <span class="nt">-elf</span> |grep ping
+0 S yfy        89083   88672  0  85   5 -  3352 -      11:39 pts/0    00:00:00 ping 127.0.0.1
+</code></pre>
+                </div>
+              </div>
+              <p>这样在断开终端连接后，重新登陆到服务器，可以发现 ping 进程仍然在运行。nohup 默认将程序输出追加到 <code class="language-plaintext highlighter-rouge">nohup.out</code> 文件中，可以通过 tail 检验这一点。</p>
+              <div class="language-shell highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>➜  ~ <span class="nb">tail</span> <span class="nt">-f</span> nohup.out
+64 bytes from 127.0.0.1: <span class="nv">icmp_seq</span><span class="o">=</span>7 <span class="nv">ttl</span><span class="o">=</span>64 <span class="nb">time</span><span class="o">=</span>0.024 ms
+64 bytes from 127.0.0.1: <span class="nv">icmp_seq</span><span class="o">=</span>8 <span class="nv">ttl</span><span class="o">=</span>64 <span class="nb">time</span><span class="o">=</span>0.027 ms
+64 bytes from 127.0.0.1: <span class="nv">icmp_seq</span><span class="o">=</span>9 <span class="nv">ttl</span><span class="o">=</span>64 <span class="nb">time</span><span class="o">=</span>0.023 ms
+64 bytes from 127.0.0.1: <span class="nv">icmp_seq</span><span class="o">=</span>10 <span class="nv">ttl</span><span class="o">=</span>64 <span class="nb">time</span><span class="o">=</span>0.035 ms
+➜  ~ ps <span class="nt">-elf</span> |head <span class="nt">-n1</span>
+F S UID          PID    PPID  C PRI  NI ADDR SZ WCHAN  STIME TTY          TIME CMD
+➜  ~ ps <span class="nt">-elf</span> |grep ping
+0 S yfy        89083       1  0  85   5 -  3352 -      11:39 ?        00:00:00 ping 127.0.0.1
+</code></pre>
+                </div>
+              </div>
+              <p>正常情况下，当终端退出时（如关闭终端窗口，或者 ssh 网络中断），shell 进程会给所有子进程发送一个 SIGHUP 信号，从而导致进程结束。而 nohup 可以让进程忽略掉 SIGHUP 信号，从而在后台保持运行。</p>
+              <blockquote>
+                <p>Tip: ps 输出还可以观察到 ping 进程父进程变为了 1，这是因为原本的父进程 shell 已经退出，Linux 内核会将孤儿进程交由 init/systemd 进程托管。</p>
+              </blockquote>
+              <p>nohup 在简单场景比较有用，但是不适用更复杂的场景。比如用户无法再对后台进程进行输入操作，并且同时维护多个进程也很不方便。不过我们其实还有更优雅、更强大的方案，那就是 tmux。</p>
+              <p>tmux 是一个终端复用器（<strong>T</strong>erminal <strong>MU</strong>ltiple<strong>X</strong>er）。简单来说，tmux 的功能可以概括成一句话：在一个终端里创建多个窗口，并且将窗口分割成多个窗格，每个窗格都运行独立的 shell 进程。这样你就可以让多个应用程序同时运行，而无需打开多个终端模拟器窗口（terminal emulator，如 Xshell、PuTTY、Windows Terminal 等）。下图展示了使用 tmux 创建了一个窗口，并将窗口上下分屏成两个窗格，每个窗格都运行一个 zsh。</p>
+              <p><img src="/static/planet/20250705151056.png" alt="tmux example" /></p>
+              <p>更重要的是，tmux 将终端和会话（session）进行了分离。我们把创建的窗口和窗格（和其中创建的所有 shell 进程及子进程）看成一个会话，用户可以随时退出（detach）当前会话，会话会在服务器后台保持运行。在之后，用户可以重新连接上（attach）这些会话，从而继续之前的工作。</p>
+              <p>原理上，tmux 采用了客户端和服务器分离的架构（C/S 架构）。用户看到和交互的是 tmux client，tmux client 中创建的窗口（和 shell 进程）连接在 tmux server 进程上。因此，当用户退出 tmux client 后，会话内容可以在后台运行。
+                通过 pstree 命令，可以看到上图中运行的两个 zsh 的父进程是 <code class="language-plaintext highlighter-rouge">tmux: server</code>。而和用户交互的其实是 <code class="language-plaintext highlighter-rouge">tmux: client</code>，其下面并无其他子进程。</p>
+              <div class="language-shell highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>➜  ~ pstree <span class="nt">-u</span> yfy|less
+sshd---zsh---tmux: client
+tmux: server-+-zsh-+-less
+             |     <span class="sb">`</span><span class="nt">-pstree</span>
+             <span class="sb">`</span><span class="nt">-zsh---ping</span>
+</code></pre>
+                </div>
+              </div>
+              <p>在简单了解了下 tmux 的原理后，马上开始 tmux 的上手体验吧。tmux 基础使用非常简单，花 10 分钟就可以完全了解。</p>
+              <h2 id="tmux-quick-start">tmux quick start</h2>
+              <p>大部分 Linux 发行版都提供 <code class="language-plaintext highlighter-rouge">tmux</code> 包，可以通过包管理器安装。其他安装方式（如编译安装）也可以参考官方文档：<a href="https://github.com/tmux/tmux/wiki/Installing">Installing · tmux/tmux Wiki</a>。</p>
+              <p>在安装 tmux 后的第一步，我们首先创建一个 tmux 会话。运行 <code class="language-plaintext highlighter-rouge">tmux</code> 命令后，会进入 tmux 并创建第一个窗口，在这里你可以像往常一样执行命令。</p>
+              <div class="language-shell highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>tmux
+</code></pre>
+                </div>
+              </div>
+              <p>接着我们介绍最重要的退出话会话和重连会话的方法。按下 <code class="language-plaintext highlighter-rouge">Ctrl-B</code> 后，再按 <code class="language-plaintext highlighter-rouge">d</code> 可以退出（detach）当前会话。这样会回到输入 tmux 前的 shell。</p>
+              <p>通过 <code class="language-plaintext highlighter-rouge">tmux list-sessions</code> 或者 <code class="language-plaintext highlighter-rouge">tmux ls</code> 可以查看当前所有的会话信息。</p>
+              <div class="language-shell highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>➜  ~ tmux <span class="nb">ls
+</span>0: 1 windows <span class="o">(</span>created Thu Jul  3 14:06:05 2025<span class="o">)</span>
+</code></pre>
+                </div>
+              </div>
+              <p>通过 <code class="language-plaintext highlighter-rouge">tmux attach</code> 可以连接回第一个会话。</p>
+              <div class="language-shell highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>tmux a  <span class="c"># attach</span>
+</code></pre>
+                </div>
+              </div>
+              <p>接下来介绍 tmux 最关键的多窗口管理功能，有了它就可以大大提升多任务操作的效率。
+                tmux 有 session（会话）, window（窗口）, pane（窗格）三个粒度。session 是 tmux 最大的一个粒度，session 下可以创建多个 window，window 可以分割成多个 pane。这里重点介绍窗口和窗格相关的快捷键。</p>
+              <h3 id="窗口操作">窗口操作</h3>
+              <div class="language-shell highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="c"># 创建</span>
+Ctrl-B c <span class="c"># 创建新的窗口</span>
+Ctrl-B &amp; <span class="c"># 删除当前窗口</span>
+
+<span class="c"># 切換</span>
+Ctrl-B Tab        <span class="c"># 切换到刚刚的窗口</span>
+Ctrl-B p          <span class="c"># 切换上一个</span>
+Ctrl-B n          <span class="c"># 切换下一个</span>
+Ctrl-B 数字编号    <span class="c"># 切换到指定一个窗口</span>
+
+<span class="c"># 修改窗口名字</span>
+Ctrl-B ,          <span class="c"># 修改当前窗口名字</span>
+</code></pre>
+                </div>
+              </div>
+              <h3 id="窗格操作">窗格操作</h3>
+              <div class="language-shell highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="c"># 创建</span>
+Ctrl-B <span class="se">\"</span>     <span class="c"># 上下切分</span>
+Ctrl-B %      <span class="c"># 左右切分</span>
+Ctrl-B x      <span class="c"># 删除</span>
+
+<span class="c"># 切换</span>
+Ctrl-B 方向键      <span class="c"># 方向键上下左右</span>
+Ctrl-B <span class="o">[</span>hjkl]     <span class="c"># 使用 vi 风格的 hjkl 键切换，分别对应左上下右</span>
+
+Ctrl-B z      <span class="c">#  切换全屏</span>
+</code></pre>
+                </div>
+              </div>
+              <p>相信你操作了这些快捷键后，已经可以感觉到 tmux 的方便和强大了。tmux 也是一个像 vim 那样灵活性很高的软件，很多时候一个你不知道的快捷键就能极大体验。因此需要去更多尝试。<code class="language-plaintext highlighter-rouge">tmux list-keys</code> 可以查看 tmux 的所有快捷键绑定。</p>
+              <p>本文只介绍了 tmux 的快捷键使用方法，tmux 的软件设计非常简洁高效，以上所有快捷键都有对应它的一个子命令，比如垂直划分窗格对应 <code class="language-plaintext highlighter-rouge">tmux split-window -v</code> 命令。如果记不住快捷键，可以直接使用 tmux 命令。tmux man 手册的 <code class="language-plaintext highlighter-rouge">COMMAND</code> 章节提供了所有命令的详细解释。另外本文没有介绍 tmux 的 vi copy 模式，使用该模式可以方便查找、复制程序输出内容，该内容比较进阶，感兴趣的读者可以自行了解。</p>
+              <h2 id="常用配置分享">常用配置分享</h2>
+              <p>tmux 像 vim 一样支持高度定制化，可以通过修改 <code class="language-plaintext highlighter-rouge">~/.tmux.conf</code> 配置各种快捷键，网络上也有 <a href="https://github.com/gpakosz/.tmux">oh-my-tmux</a> 这样的项目来帮你做一些配置。接下来分享一些我长期使用下来，感觉很有必要的配置，完整配置见我的 <a href="https://github.com/TheRainstorm/my-vim-config/blob/master/tmux/.tmux.conf">github</a> 仓库。</p>
+              <blockquote>
+                <p>Bonus：在 <code class="language-plaintext highlighter-rouge">~/.bashrc</code> 或 <code class="language-plaintext highlighter-rouge">~/.zshrc</code> 中设置 <code class="language-plaintext highlighter-rouge">alias t="tmux"</code>，tmux attach 效率立刻提升 300%！</p>
+              </blockquote>
+              <div class="language-shell highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>t      <span class="c"># 创建 sessin</span>
+t a    <span class="c"># attach 到第一个 session</span>
+</code></pre>
+                </div>
+              </div>
+              <h3 id="修改快捷键前缀">修改快捷键前缀</h3>
+              <p><code class="language-plaintext highlighter-rouge">Ctrl-B</code> 按起来距离比较远，很不方便。可以修改成 <code class="language-plaintext highlighter-rouge">Ctrl-X</code>。</p>
+              <div class="language-shell highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="c"># prefix</span>
+<span class="nb">set</span> <span class="nt">-g</span> prefix C-x
+unbind-key C-b        <span class="c"># disable default prefix</span>
+<span class="nb">bind </span>C-x send-prefix
+</code></pre>
+                </div>
+              </div>
+              <h3 id="划分窗格快捷键">划分窗格快捷键</h3>
+              <p>窗格左右划分和上下划分快捷键比较难记。修改为下划线 <code class="language-plaintext highlighter-rouge">_</code> 是上下分屏，<code class="language-plaintext highlighter-rouge">-</code> 是左右分屏。</p>
+              <div class="language-shell highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="c"># @ pane</span>
+<span class="c"># split current window horizontally</span>
+<span class="nb">bind </span>_ split-window <span class="nt">-v</span> <span class="nt">-c</span> <span class="s2">"#{pane_current_path}"</span>
+
+<span class="c"># split current window vertically</span>
+<span class="nb">bind</span> - split-window <span class="nt">-h</span> <span class="nt">-c</span> <span class="s2">"#{pane_current_path}"</span>
+</code></pre>
+                </div>
+              </div>
+              <h3 id="鼠标操作">鼠标操作</h3>
+              <p>tmux 默认没有启用鼠标，导致无法使用鼠标滚动历史记录。启用鼠标后，还可以直接点击切换不同窗格，以及拖动选择文字复制。</p>
+              <div class="language-shell highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>set-option <span class="nt">-g</span> mouse on <span class="c"># open mouse scroll</span>
+</code></pre>
+                </div>
+              </div>
+              <h3 id="打开窗口时默认路径">打开窗口时默认路径</h3>
+              <p>tmux 打开新窗口时，shell 的默认路径是启动 tmux 客户端时的路径。可以通过以下配置实现：</p>
+              <ul>
+                <li><code class="language-plaintext highlighter-rouge">Ctrl-X Alt-C</code> ：更改默认路径为当前路径</li>
+                <li>创建 panel 时，使用当前路径（<code class="language-plaintext highlighter-rouge">-c</code> 参数）</li>
+              </ul>
+              <div class="language-shell highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="nb">bind </span>M-c attach-session <span class="nt">-c</span> <span class="s2">"#{pane_current_path}"</span> <span class="c"># Alt-C, to change current path</span>
+
+<span class="c"># @ pane</span>
+<span class="c"># split current window horizontally</span>
+<span class="nb">bind </span>_ split-window <span class="nt">-v</span> <span class="nt">-c</span> <span class="s2">"#{pane_current_path}"</span>
+
+<span class="c"># split current window vertically</span>
+<span class="nb">bind</span> - split-window <span class="nt">-h</span> <span class="nt">-c</span> <span class="s2">"#{pane_current_path}"</span>
+</code></pre>
+                </div>
+              </div>
+              <h3 id="移动窗口顺序">移动窗口顺序</h3>
+              <p><code class="language-plaintext highlighter-rouge">Ctrl-Shift</code> 加方向键左右，可以调整 window 的顺序。</p>
+              <div class="language-shell highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="nb">bind</span> <span class="nt">-n</span> C-S-Left swap-window <span class="nt">-t</span> <span class="nt">-1</span><span class="se">\;</span> <span class="k">select</span><span class="nt">-window</span> <span class="nt">-t</span> <span class="nt">-1</span>
+<span class="nb">bind</span> <span class="nt">-n</span> C-S-Right swap-window <span class="nt">-t</span> +1<span class="se">\;</span> <span class="k">select</span><span class="nt">-window</span> <span class="nt">-t</span> +1
+</code></pre>
+                </div>
+              </div>
+              <h3 id="session-操作">session 操作</h3>
+              <p>虽然 window 和 pane 已经足够进行多任务管理了。但是 tmux 提供的多 session 操作也有其用处。适合管理若干完全不相关的任务。</p>
+              <p>修改快捷键，使其和 window 快捷键类似：<code class="language-plaintext highlighter-rouge">Ctrl-C</code> 创建新 session，<code class="language-plaintext highlighter-rouge">N</code>/<code class="language-plaintext highlighter-rouge">P</code> （大写）切换上一个和下一个 session。</p>
+              <div class="language-shell highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="c"># create session</span>
+<span class="nb">bind </span>C-c new-session
+
+<span class="c"># session navigation</span>
+<span class="c"># (/)   #move to prev/next session</span>
+<span class="nb">bind</span> <span class="nt">-r</span> BTab switch-client <span class="nt">-l</span>  <span class="c"># move to last session</span>
+<span class="nb">bind</span> <span class="nt">-r</span> N switch-client <span class="nt">-n</span>
+<span class="nb">bind</span> <span class="nt">-r</span> P switch-client <span class="nt">-p</span>
+</code></pre>
+                </div>
+              </div>
+              <h3 id="复制文字后不自动跳到结尾">复制文字后不自动跳到结尾</h3>
+              <p>tmux 鼠标选中文字会自动复制，但是会自动跳到结尾。有时在查看一些很长的输出历史时，并不想回到结尾，可以通过以下配置禁用跳转：</p>
+              <div class="language-shell highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="c"># copy select text, and don't jump to end</span>
+<span class="c"># https://stackoverflow.com/questions/32374907/tmux-mouse-copy-mode-jumps-to-bottom</span>
+<span class="nb">bind</span> <span class="nt">-T</span> copy-mode-vi MouseDragEnd1Pane send-keys <span class="nt">-X</span> copy-selection
+</code></pre>
+                </div>
+              </div>
+              <blockquote>
+                <p>鼠标选中文字后会进入 tmux 的 copy 模式，无法输入命令，此时可以按 <code class="language-plaintext highlighter-rouge">q</code> 退出。</p>
+              </blockquote>
+              <h3 id="tmux-in-tmux">tmux in tmux</h3>
+              <p>有时候想要在 tmux 内再连接另一台服务器，然后也使用 tmux。正常情况下 tmux 快捷键只会传递给外层的 tmux 因此无法工作，但是可以使用以下配置实现按 F12 在内外 tmux 间切换。</p>
+              <div class="language-shell highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code><span class="c"># 按 F12 切换到内嵌 tmux，在 macos 里需要系统设置中取消 F12 占用</span>
+<span class="c"># 1. prefix 为 None，不再拦截快捷键</span>
+<span class="c"># 2. key-table 为 off，下面再绑定 off 下的 F12，使之能退出内嵌模式</span>
+<span class="c"># 3. 改变 statusbar 颜色，以便知道已进入内嵌模式</span>
+<span class="c"># 4. 如果处于特殊模式，退出</span>
+unbind <span class="nt">-T</span> root F12
+<span class="nb">bind</span> <span class="nt">-T</span> root F12 <span class="se">\</span>
+  <span class="nb">set </span>prefix None <span class="se">\;\</span>
+  <span class="nb">set </span>key-table off <span class="se">\;\</span>
+  <span class="nb">set </span>status-style <span class="nb">bg</span><span class="o">=</span>colour235 <span class="se">\;\</span>
+  <span class="k">if</span> <span class="nt">-F</span> <span class="s1">'#{pane_in_mode}'</span> <span class="s1">'send-keys -X cancel'</span> <span class="se">\;\</span>
+  refresh-client <span class="nt">-S</span>
+
+<span class="c"># 在 off 表里绑定 F12，恢复之前的设置，以退出该模式</span>
+<span class="nb">bind</span> <span class="nt">-T</span> off F12 <span class="se">\</span>
+  <span class="nb">set</span> <span class="nt">-u</span> prefix <span class="se">\;\</span>
+  <span class="nb">set</span> <span class="nt">-u</span> key-table <span class="se">\;\</span>
+  <span class="nb">set</span> <span class="nt">-u</span> status-style <span class="se">\;\</span>
+  refresh-client <span class="nt">-S</span>
+</code></pre>
+                </div>
+              </div>
+              <p>另一个小技巧是：连续按两次 <code class="language-plaintext highlighter-rouge">Ctrl-B</code> 时快捷键会传递给内部 tmux。</p>
+              <h2 id="参考资料">参考资料</h2>
+              <ul>
+                <li><a href="https://www.ruanyifeng.com/blog/2019/10/tmux.html">Tmux 使用教程 - 阮一峰的网络日志</a></li>
+                <li><a href="https://hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/">Ham Vocke — A Quick and Easy Guide to tmux - Ham Vocke</a></li>
+                <li><a href="https://fatfatson.github.io/2019/08/11/tmux%E5%86%85%E8%81%94%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/">tmux 内联使用方法</a></li>
+              </ul>
+            </section>
+            <footer class="page__meta">
+              <p class="page__taxonomy">
+                <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 标签: </strong>
+                <span itemprop="keywords">
+                  <a href="/tags/netcat" class="page__taxonomy-item p-category" rel="tag">netcat</a><span class="sep">, </span>
+                  <a href="/tags/tmux" class="page__taxonomy-item p-category" rel="tag">tmux</a>
+                </span>
+              </p>
+              <p class="page__taxonomy">
+                <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 分类: </strong>
+                <span itemprop="keywords">
+                  <a href="/categories/tech-tutorial" class="page__taxonomy-item p-category" rel="tag">Tech Tutorial</a>
+                </span>
+              </p>
+              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2025-07-16">2025 年 7 月 16 日</time></p>
+            </footer>
+            <nav class="pagination">
+              <a href="/planet/2025/02/hackergame-rootless-docker/" class="pagination--pager" title="Rootless Docker in Docker 在 Hackergame 中的实践">上一页</a>
+              <a href="#" class="pagination--pager disabled">下一页</a>
+            </nav>
+          </div>
+        </article>
+        <div class="page__related">
+          <h2 class="page__related-title">猜您还喜欢</h2>
+          <div class="grid__wrapper">
+            <div class="grid__item">
+              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                <h2 class="archive__item-title no_toc" itemprop="headline">
+                  <a href="/planet/2025/02/hackergame-rootless-docker/" rel="permalink">Rootless Docker in Docker 在 Hackergame 中的实践
+                  </a>
+                </h2>
+                <p class="page__meta">
+                  <span class="page__meta-date">
+                    <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                    <time datetime="2025-02-08T00:00:00+08:00">2025 年 2 月 8 日</time>
+                  </span>
+                  <span class="page__meta-sep"></span>
+                  <span class="page__meta-readtime">
+                    <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+                    5 分钟阅读
+                  </span>
+                </p>
+                <p class="archive__item-excerpt" itemprop="description">本文介绍了 2024 年 USTC Hackergame 中 Rootless Docker in Docker 在 Web 类题目容器隔离中的实践。
+                </p>
+              </article>
+            </div>
+            <div class="grid__item">
+              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                <h2 class="archive__item-title no_toc" itemprop="headline">
+                  <a href="/planet/2025/01/local-file-serving/" rel="permalink">快速建立本地 HTTP 文件服务
+                  </a>
+                </h2>
+                <p class="page__meta">
+                  <span class="page__meta-date">
+                    <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                    <time datetime="2025-01-03T00:00:00+08:00">2025 年 1 月 3 日</time>
+                  </span>
+                  <span class="page__meta-sep"></span>
+                  <span class="page__meta-readtime">
+                    <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+                    4 分钟阅读
+                  </span>
+                </p>
+                <p class="archive__item-excerpt" itemprop="description">USTCLUG 的一个重要服务是它的 开源软件镜像。但是我们这里要讨论的，是另一种自己在本地搭建的文件服务，目的是加速对远程静态文件的访问。这篇文章来源于帮同学解决的一个小问题。
+                </p>
+              </article>
+            </div>
+            <div class="grid__item">
+              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                <h2 class="archive__item-title no_toc" itemprop="headline">
+                  <a href="/planet/2024/12/ustc-mirrors-zfs-rebuild/" rel="permalink">镜像站 ZFS 实践
+                  </a>
+                </h2>
+                <p class="page__meta">
+                  <span class="page__meta-date">
+                    <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                    <time datetime="2024-12-09T00:00:00+08:00">2024 年 12 月 9 日</time>
+                  </span>
+                  <span class="page__meta-sep"></span>
+                  <span class="page__meta-readtime">
+                    <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+                    13 分钟阅读
+                  </span>
+                </p>
+                <p class="archive__item-excerpt" itemprop="description">A.K.A. 如何让 2000 元的机械硬盘跑得比 3000 元的固态硬盘还快（
+                </p>
+              </article>
+            </div>
+            <div class="grid__item">
+              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                <h2 class="archive__item-title no_toc" itemprop="headline">
+                  <a href="/planet/2024/05/onedrive-backup-with-rclone/" rel="permalink">使用 Rclone 备份 OneDrive 内容
+                  </a>
+                </h2>
+                <p class="page__meta">
+                  <span class="page__meta-date">
+                    <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+                    <time datetime="2024-05-10T00:00:00+08:00">2024 年 5 月 10 日</time>
+                  </span>
+                  <span class="page__meta-sep"></span>
+                  <span class="page__meta-readtime">
+                    <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+                    3 分钟阅读
+                  </span>
+                </p>
+                <p class="archive__item-excerpt" itemprop="description">本文用于介绍如何使用 Rclone 备份 OneDrive 内容。
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="search-content">
+      <div class="search-content__inner-wrap">
+        <div class="search-searchbar"></div>
+        <div class="search-hits"></div>
+      </div>
+    </div>
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+        <!-- end custom footer snippets -->
+        <div class="footer-row">
+          <div class="footer-block footer__about">
+            <p>中国科学技术大学 Linux 用户协会是由中国科学技术大学在校的 GNU/Linux 爱好者发起并组成的团体，旨在联合科大的 GNU/Linux
+              使用者，搭建信息交流共享的平台，宣传自由软件的价值，提高自由软件社区文化氛围，推广自由软件的应用。</p>
+          </div>
+          <div class="footer-block footer__extras">
+            <div class="footer__contact">
+              <ul>
+                <li>
+                  <a href="/wiki/intro/"><i class="fad fa-fw fa-address-card"></i> 关于我们</a>
+                </li>
+                <li>
+                  <a href="/wiki/lug/contact/"><i class="fas fa-fw fa-phone-alt"></i> 联系我们</a>
+                </li>
+                <li>
+                  <a href="/wiki/lug/contribute/"><i class="fad fa-fw fa-users-medical"></i> 加入我们</a>
+                </li>
+                <li>
+                  <a href="/feed/"><i class="fad fa-fw fa-rss" style="--fa-secondary-opacity: 0.6;"></i> RSS 订阅</a>
+                </li>
+                <li>
+                  <a href="https://github.com/ustclug/website"><i class="fab fa-fw fa-github"></i> 本站仓库</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__logo">
+              <div class="footer__logo-image">
+                <img src="https://lug.ustc.edu.cn/static/logo-white.svg" />
+              </div>
+              <div class="footer__logo-text">
+                <!-- a href="http://www.beian.miit.gov.cn" target="_blank">皖 ICP 备 05002528 号</a -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="/assets/js/main.min.js"></script>
+    <script>
+      // Including InstantSearch.js library and styling
+      const loadSearch = function() {
+        const loadCSS = function(src) {
+          var link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.type = 'text/css';
+          link.href = src;
+          link.media = 'all';
+          document.head.appendChild(link);
+        };
+
+        var script = document.createElement('script');
+        script.setAttribute("type", "text/javascript");
+        script.setAttribute("src", "https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js");
+        script.addEventListener("load", function() {
+          // Instantiating InstantSearch.js with Algolia credentials
+          const search = instantsearch({
+            appId: 'CM5ZKX0CV3',
+            apiKey: 'aa942e5bdda7368300e322cba95f47f6',
+            indexName: 'default',
+            searchParameters: {
+              restrictSearchableAttributes: ['title', 'content']
+            }
+          });
+
+          const hitTemplate = function(hit) {
+            const url = hit.url;
+            const hightlight = hit._highlightResult;
+            const title = hightlight.title && hightlight.title.value  || "";
+            const content = hightlight.html && hightlight.html.value  || "";
+
+            return `
+              <div class="list__item">
+                <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                  <h2 class="archive__item-title" itemprop="headline"><a href="${url}">${title}</a></h2>
+                  <div class="archive__item-excerpt" itemprop="description">${content}</div>
+                </article>
+              </div>
+            `;
+          }
+
+          // Adding searchbar and results widgets
+          search.addWidget(
+            instantsearch.widgets.searchBox({
+              container: '.search-searchbar',
+              poweredBy: true,
+              placeholder: '输入您要搜索的关键词...'
+            })
+          );
+          search.addWidget(
+            instantsearch.widgets.hits({
+              container: '.search-hits',
+              templates: {
+                item: hitTemplate,
+                empty: '无结果',
+              }
+            })
+          );
+
+          if (!search.started) {
+            search.start();
+          }
+        });
+        document.body.appendChild(script);
+
+        loadCSS("https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css");
+        loadCSS("https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css");
+      };
+
+      // Starting the search only when toggle is clicked
+      $(document).ready(function() {
+        var scriptLoaded = false;
+
+        $(".search__toggle").on("click", function() {
+          if (!scriptLoaded) {
+            loadSearch();
+            scriptLoaded = true;
+          }
+        });
+      });
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R7BPZT6779"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-R7BPZT6779', { 'anonymize_ip': false});
+    </script>
+    <img src="/static/USTC_logo.svg" style="position: fixed; bottom: -320px; left: -200px; opacity: 0.1; z-index: -100;" />
+  </body>
+</html>
