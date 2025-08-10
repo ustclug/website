@@ -90,3 +90,11 @@ TheRainstorm:
     - label: GitHub
       icon: fab fa-fw fa-github
       url: https://github.com/TheRainstorm
+
+kermanx:
+  name: _Kerman
+  avatar: "https://avatars.githubusercontent.com/u/63178754?v=4"
+  links:
+    - label: GitHub
+      icon: fab fa-fw fa-github
+      url: https://github.com/kermanx
