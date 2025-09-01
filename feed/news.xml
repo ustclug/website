@@ -1,37 +1,48 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://lug.ustc.edu.cn/feed/news.xml" rel="self" type="application/atom+xml" /><link href="https://lug.ustc.edu.cn/" rel="alternate" type="text/html" /><updated>2025-07-16T10:32:40+08:00</updated><id>https://lug.ustc.edu.cn/feed/news.xml</id><title type="html">LUG @ USTC | News</title><subtitle>中国科学技术大学 Linux 用户协会</subtitle><author><name>USTCLUG</name></author><entry><title type="html">Linux Install Party 2025</title><link href="https://lug.ustc.edu.cn/news/2025/03/Linux101-LIP-2025/" rel="alternate" type="text/html" title="Linux Install Party 2025" /><published>2025-03-16T15:00:00+08:00</published><updated>2025-03-19T15:59:47+08:00</updated><id>https://lug.ustc.edu.cn/news/2025/03/Linux101-LIP-2025</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2025/03/Linux101-LIP-2025/"><![CDATA[<p>2025 年 3 月 16 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C101 教室成功举办 “Linux 101” 系列课程首讲——Linux Install Party。这是 LUG 第八年举办 Linux 101 系列课程、第九年举办 Linux Install Party。本次活动通过理论讲解与实践操作相结合的方式，帮助参与者初步了解 Linux 操作系统并完成安装实践。</p>
-      <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.03.16_Linux_101_%E7%AC%AC%E4%B8%80%E8%AF%BE_Linux_Install_Party/lip-post.jpg" alt="" /></p>
-      <p>在活动中，LUG 会长罗嘉宏同学系统讲解了 Linux 操作系统的基础知识，涵盖其开源特性、技术优势、应用场景及主流发行版本。通过详实的案例分析与技术对比，帮助在场同学对 Linux 系统形成了基本认知框架。</p>
-      <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.03.16_Linux_101_%E7%AC%AC%E4%B8%80%E8%AF%BE_Linux_Install_Party/photo_2025-03-16%2023.46.11.jpeg" alt="" /></p>
-      <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.03.16_Linux_101_%E7%AC%AC%E4%B8%80%E8%AF%BE_Linux_Install_Party/IMG_7520.jpeg" alt="" /></p>
-      <p>在随后的实践环节中，社团成员分组指导参与者进行系统安装。无论是通过校内 Vlab 平台远程体验，还是在虚拟机环境进行安装，亦或是实体设备的双系统部署，工作人员均针对不同需求提供个性化指导。现场同学通过互助协作，亲身体验 Linux 系统的安装流程。</p>
-      <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.03.16_Linux_101_%E7%AC%AC%E4%B8%80%E8%AF%BE_Linux_Install_Party/IMG_7524.jpeg" alt="" /></p>
-      <p>本次活动通过理论普及与动手实践的有效结合，帮助参与者建立起对 Linux 系统的初步认知。相信在未来的活动中，会有更多精彩的内容等待着大家。</p>
-      <p>相关课程资料已同步上传至 FTP：<a href="https://ftp.lug.ustc.edu.cn/活动/2025.03.16_Linux_101_第一课_Linux_Install_Party/101-2025-1.pdf">Linux 101 第一课 &amp; Linux Install Party</a></p>
-      ]]></content><author><name>kermanx</name></author><category term="LUG 活动" /><category term="linux-install-party" /><category term="Linux 101" /><category term="LUG 活动" /><summary type="html"><![CDATA[Linux Install Party 2025]]></summary></entry><entry><title type="html">中国科学技术大学第十一届信息安全大赛圆满落幕</title><link href="https://lug.ustc.edu.cn/news/2024/12/hackergame2024/" rel="alternate" type="text/html" title="中国科学技术大学第十一届信息安全大赛圆满落幕" /><published>2024-12-11T12:00:00+08:00</published><updated>2025-01-03T10:25:20+08:00</updated><id>https://lug.ustc.edu.cn/news/2024/12/hackergame2024</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2024/12/hackergame2024/"><![CDATA[<p>2024 年 11 月 9 日中午 12:00，Hackergame 网站答案提交窗口准时关闭，历时七天的中国科学技术大学第十一届信息安全大赛（Hackergame 2024）圆满落幕。</p>
-    <p>2024 年 12 月 11 日 16:00 至 17:00，中国科学技术大学第十一届信息安全大赛颁奖仪式在西区 3B103 教室举行。网络空间安全学院李卫海副书记、USTC-NEBULA 战队指导老师吴文涛老师、本届比赛负责人、USTC-NEBULA 战队成员、本届比赛参赛选手出席了本次颁奖典礼。</p>
-    <p>李卫海副书记发表了精彩的颁奖致辞。他强调了信息安全在当今社会中的重要性，并对大赛的顺利举办表示由衷的祝贺。李副书记鼓励学子们在未来的道路上不断追求卓越，希望同学们能够结合实践，将在信息安全大赛中所学到的理论知识应用到实际工作中，为保护网络安全贡献自己的力量。</p>
-    <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2024.12.11_Hackergame2024%E9%A2%81%E5%A5%96/whli.jpg" alt="" /></p>
-    <p>根据得分结果，中国科学技术大学第十一届信息安全大赛校内组评选出一等奖 1 名、二等奖 5 名、三等奖 25 名、新生奖 2 名、分类奖 5 名以及一血奖 17 名。李卫海副书记和吴文涛老师为获奖同学颁发了奖项。</p>
-    <p>叶升宇同学荣获一等奖。</p>
-    <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2024.12.11_Hackergame2024%E9%A2%81%E5%A5%96/first-prize.jpg" alt="" /></p>
-    <p>叶知易、吕思源、樊一展、王凯健、杨涛同学荣获二等奖。</p>
-    <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2024.12.11_Hackergame2024%E9%A2%81%E5%A5%96/second-prize.jpg" alt="" /></p>
-    <p>何煜恒、吴远韬、潘兆远、彭博、陈庆禾、向红静、杨岳、李远航、朱一鸣、熊桐睿、张天赫、刘睿博、黄嘉玮、李照阳、曹东皓、于泳昊、周恩帅、吴维卿、杨思汗、赵谱棋、陈锦锐、叶力天同学荣获三等奖。</p>
-    <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2024.12.11_Hackergame2024%E9%A2%81%E5%A5%96/third-prize-1.jpg" alt="" /></p>
-    <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2024.12.11_Hackergame2024%E9%A2%81%E5%A5%96/third-prize-2.jpg" alt="" /></p>
-    <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2024.12.11_Hackergame2024%E9%A2%81%E5%A5%96/third-prize-3.jpg" alt="" /></p>
-    <p>李培锋、许傲施同学荣获新生特别奖。</p>
-    <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2024.12.11_Hackergame2024%E9%A2%81%E5%A5%96/freshman.jpg" alt="" /></p>
-    <p>叶知易、蒋皓、杨锦东、叶升宇、熊桐睿分别在综合技能（general）、人工智能（ai）、程序逆向与漏洞利用（binary）、密码学与数学（math）、网站安全（web）获得分类奖。</p>
-    <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2024.12.11_Hackergame2024%E9%A2%81%E5%A5%96/category.jpg" alt="" /></p>
-    <p>于泳昊、许傲施、吴书让、黄境、田佳嘉、熊桐睿、周瓯翔、陈庆禾、刘成龙、何煜恒、叶升宇、史可、樊一展、袁保杰、叶知易、杨锦东、蒋皓为各题目的首位答对者，荣获一血奖。</p>
-    <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2024.12.11_Hackergame2024%E9%A2%81%E5%A5%96/first-solve-1.jpg" alt="" /></p>
-    <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2024.12.11_Hackergame2024%E9%A2%81%E5%A5%96/first-solve-2.jpg" alt="" /></p>
-    <p>中国科学技术大学第十一届信息安全大赛由中国科学技术大学网络空间安全学院、中国科学技术大学团委、中国科学技术大学学生社团管理指导委员会主办，中国科学技术大学学生 Linux 用户协会、中国科学技术大学微软学生俱乐部、中国科学技术大学 NEBULA 战队和中国科学技术大学信息安全俱乐部承办。此外，复旦大学六星战队、广东海洋大学 Hor1zon 战队、哈尔滨工业大学 Linux 开源学生俱乐部、哈尔滨工业大学紫丁香 CTF 俱乐部、南京航空航天大学 Asuri 战队、吉林大学 Linux 用户协会、吉林大学 Spirit 战队、东北大学 NEX 信息安全创新团队、南方科技大学计算机研究协会、南方科技大学 COMPASS 实验室、中山大学 W4terDr0p 战队、中山大学互联网与开源技术协会、同济大学 CatTrainingForce 战队、西安电子科技大学信息安全协会、厦门理工学院信息安全协会、浙江大学 AAA 战队、上海大学开源社区、南阳理工学院计算机与信息化处理协会、上海交通大学 0ops 战队也参与了此次比赛的协办。</p>
-    <p>本届比赛于 11 月 2 日中午 12:00 正式开启，历时七天，参赛人数达到 2460 人。比赛共设置了约 35 道题目，涵盖了综合技能、程序逆向与漏洞利用、密码学与数学、Web 安全、人工智能等多个方向。命题延续了往届的优良特色，在具有一定教育意义的同时也不失趣味性，同时结合了科大特色、平衡了题目难度，适度增加了题目数量，争取让新生也能领会网络安全的魅力，在更多的方向上探索网络安全的知识、锻炼相关能力。</p>
-    <p>中国科学技术大学第十一届信息安全大赛的成功举办，不仅在学校内部激发了师生们对信息安全的浓厚兴趣，更为整个信息技术社区提供了一个展示实力、交流经验的重要平台，无疑将对同学们未来在信息安全领域的发展产生深远而积极的影响。</p>
-    <p>官方题解和参赛选手的解答公布于 <a href="https://github.com/USTC-Hackergame/hackergame2024-writeups/">hackergame2024-writeups</a> ，欢迎大家学习交流。</p>
-    ]]></content><author><name>luojh</name></author><category term="LUG 活动" /><summary type="html"><![CDATA[2024 年 11 月 9 日中午 12:00，Hackergame 网站答案提交窗口准时关闭，历时七天的中国科学技术大学第十一届信息安全大赛（Hackergame 2024）圆满落幕。]]></summary></entry><entry><title type="html">Slidev 幻灯片制作</title><link href="https://lug.ustc.edu.cn/news/2024/12/slidev/" rel="alternate" type="text/html" title="Slidev 幻灯片制作" /><published>2024-12-04T15:00:00+08:00</published><updated>2024-12-20T20:50:29+08:00</updated><id>https://lug.ustc.edu.cn/news/2024/12/slidev</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2024/12/slidev/"><![CDATA[<p>2024 年 12 月 4 日，校学生 Linux 用户协会在西区第三教学楼 3A306 教室举行小聚。本次小聚是由 Slidev 团队成员 _Kerman 同学带来的 Slidev 幻灯片制作工具介绍。Slidev.js 是一款为开发者设计的开源的幻灯片制作工具，通过简单的 Markdown 语法即可制作出精美的幻灯片，在此基础上也很方便添加交互式的内容、添加动画效果等。它非常适合用于学术报告、技术分享、演讲等场景。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://lug.ustc.edu.cn/feed/news.xml" rel="self" type="application/atom+xml" /><link href="https://lug.ustc.edu.cn/" rel="alternate" type="text/html" /><updated>2025-09-01T13:32:33+08:00</updated><id>https://lug.ustc.edu.cn/feed/news.xml</id><title type="html">LUG @ USTC | News</title><subtitle>中国科学技术大学 Linux 用户协会</subtitle><author><name>USTCLUG</name></author><entry><title type="html">2025 软件自由日 (SFD) 讲座征集</title><link href="https://lug.ustc.edu.cn/news/2025/08/SFD-Prep/" rel="alternate" type="text/html" title="2025 软件自由日 (SFD) 讲座征集" /><published>2025-08-10T11:00:00+08:00</published><updated>2025-09-01T13:31:10+08:00</updated><id>https://lug.ustc.edu.cn/news/2025/08/SFD-Prep</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2025/08/SFD-Prep/"><![CDATA[<p><a href="https://en.wikipedia.org/wiki/Software_Freedom_Day">软件自由日</a>（Software Freedom Day，SFD）是在 Digital Freedom Foundation 的主办下，由自由/开源软件爱好者自发筹集组织非盈利性活动，旨在为自由/开源软件爱好者提供一个信息交流平台、联合各社区举办各种自由/开源软件活动。</p>
+      <p>作为合肥地区最大的 Linux 用户组织，中国科大 Linux 用户协会致力于通过 SFD 普及软件自由思想，凝聚自由软件社区，将优秀的自由软件介绍给更多开源社区的成员，最大限度帮助自由软件作者实现服务于开源社群的价值。</p>
+      <p>今年的软件自由日活动预计于 2025 年 9 月 20 日（九月第三个星期六）于中国科学技术大学（合肥）举行，<strong>现面向校内外所有社区成员公开征集软件自由日讲座或其他与主题有关的活动</strong>，有意愿的社区成员可尽快联系我们。</p>
+      <p><a href="/wiki/lug/contact">联系方式</a></p>
+      <p><a href="/wiki/lug/events/sfd">往届活动和详细介绍</a></p>
+      <ul>
+        <li><a href="/news/2024/09/SFD/">2024 SFD</a></li>
+        <li><a href="/news/2023/09/SFD/">2023 SFD</a></li>
+        <li><a href="/news/2022/09/SFD/">2022 SFD</a></li>
+        <li><a href="/news/2021/09/SFD/">2021 SFD</a></li>
+      </ul>
+      ]]></content><author><name>_Kerman</name></author><category term="LUG 活动" /><summary type="html"><![CDATA[软件自由日（Software Freedom Day，SFD）是在 Digital Freedom Foundation 的主办下，由自由/开源软件爱好者自发筹集组织非盈利性活动，旨在为自由/开源软件爱好者提供一个信息交流平台、联合各社区举办各种自由/开源软件活动。]]></summary></entry><entry><title type="html">Linux Install Party 2025</title><link href="https://lug.ustc.edu.cn/news/2025/03/Linux101-LIP-2025/" rel="alternate" type="text/html" title="Linux Install Party 2025" /><published>2025-03-16T15:00:00+08:00</published><updated>2025-03-19T15:59:47+08:00</updated><id>https://lug.ustc.edu.cn/news/2025/03/Linux101-LIP-2025</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2025/03/Linux101-LIP-2025/"><![CDATA[<p>2025 年 3 月 16 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C101 教室成功举办 “Linux 101” 系列课程首讲——Linux Install Party。这是 LUG 第八年举办 Linux 101 系列课程、第九年举办 Linux Install Party。本次活动通过理论讲解与实践操作相结合的方式，帮助参与者初步了解 Linux 操作系统并完成安装实践。</p>
+    <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.03.16_Linux_101_%E7%AC%AC%E4%B8%80%E8%AF%BE_Linux_Install_Party/lip-post.jpg" alt="" /></p>
+    <p>在活动中，LUG 会长罗嘉宏同学系统讲解了 Linux 操作系统的基础知识，涵盖其开源特性、技术优势、应用场景及主流发行版本。通过详实的案例分析与技术对比，帮助在场同学对 Linux 系统形成了基本认知框架。</p>
+    <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.03.16_Linux_101_%E7%AC%AC%E4%B8%80%E8%AF%BE_Linux_Install_Party/photo_2025-03-16%2023.46.11.jpeg" alt="" /></p>
+    <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.03.16_Linux_101_%E7%AC%AC%E4%B8%80%E8%AF%BE_Linux_Install_Party/IMG_7520.jpeg" alt="" /></p>
+    <p>在随后的实践环节中，社团成员分组指导参与者进行系统安装。无论是通过校内 Vlab 平台远程体验，还是在虚拟机环境进行安装，亦或是实体设备的双系统部署，工作人员均针对不同需求提供个性化指导。现场同学通过互助协作，亲身体验 Linux 系统的安装流程。</p>
+    <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.03.16_Linux_101_%E7%AC%AC%E4%B8%80%E8%AF%BE_Linux_Install_Party/IMG_7524.jpeg" alt="" /></p>
+    <p>本次活动通过理论普及与动手实践的有效结合，帮助参与者建立起对 Linux 系统的初步认知。相信在未来的活动中，会有更多精彩的内容等待着大家。</p>
+    <p>相关课程资料已同步上传至 FTP：<a href="https://ftp.lug.ustc.edu.cn/活动/2025.03.16_Linux_101_第一课_Linux_Install_Party/101-2025-1.pdf">Linux 101 第一课 &amp; Linux Install Party</a></p>
+    ]]></content><author><name>_Kerman</name></author><category term="LUG 活动" /><category term="linux-install-party" /><category term="Linux 101" /><category term="LUG 活动" /><summary type="html"><![CDATA[Linux Install Party 2025]]></summary></entry><entry><title type="html">中国科学技术大学第十一届信息安全大赛圆满落幕</title><link href="https://lug.ustc.edu.cn/news/2024/12/hackergame2024/" rel="alternate" type="text/html" title="中国科学技术大学第十一届信息安全大赛圆满落幕" /><published>2024-12-11T12:00:00+08:00</published><updated>2025-01-03T10:25:20+08:00</updated><id>https://lug.ustc.edu.cn/news/2024/12/hackergame2024</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2024/12/hackergame2024/"><![CDATA[<p>2024 年 11 月 9 日中午 12:00，Hackergame 网站答案提交窗口准时关闭，历时七天的中国科学技术大学第十一届信息安全大赛（Hackergame 2024）圆满落幕。</p>
+  <p>2024 年 12 月 11 日 16:00 至 17:00，中国科学技术大学第十一届信息安全大赛颁奖仪式在西区 3B103 教室举行。网络空间安全学院李卫海副书记、USTC-NEBULA 战队指导老师吴文涛老师、本届比赛负责人、USTC-NEBULA 战队成员、本届比赛参赛选手出席了本次颁奖典礼。</p>
+  <p>李卫海副书记发表了精彩的颁奖致辞。他强调了信息安全在当今社会中的重要性，并对大赛的顺利举办表示由衷的祝贺。李副书记鼓励学子们在未来的道路上不断追求卓越，希望同学们能够结合实践，将在信息安全大赛中所学到的理论知识应用到实际工作中，为保护网络安全贡献自己的力量。</p>
+  <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2024.12.11_Hackergame2024%E9%A2%81%E5%A5%96/whli.jpg" alt="" /></p>
+  <p>根据得分结果，中国科学技术大学第十一届信息安全大赛校内组评选出一等奖 1 名、二等奖 5 名、三等奖 25 名、新生奖 2 名、分类奖 5 名以及一血奖 17 名。李卫海副书记和吴文涛老师为获奖同学颁发了奖项。</p>
+  <p>叶升宇同学荣获一等奖。</p>
+  <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2024.12.11_Hackergame2024%E9%A2%81%E5%A5%96/first-prize.jpg" alt="" /></p>
+  <p>叶知易、吕思源、樊一展、王凯健、杨涛同学荣获二等奖。</p>
+  <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2024.12.11_Hackergame2024%E9%A2%81%E5%A5%96/second-prize.jpg" alt="" /></p>
+  <p>何煜恒、吴远韬、潘兆远、彭博、陈庆禾、向红静、杨岳、李远航、朱一鸣、熊桐睿、张天赫、刘睿博、黄嘉玮、李照阳、曹东皓、于泳昊、周恩帅、吴维卿、杨思汗、赵谱棋、陈锦锐、叶力天同学荣获三等奖。</p>
+  <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2024.12.11_Hackergame2024%E9%A2%81%E5%A5%96/third-prize-1.jpg" alt="" /></p>
+  <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2024.12.11_Hackergame2024%E9%A2%81%E5%A5%96/third-prize-2.jpg" alt="" /></p>
+  <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2024.12.11_Hackergame2024%E9%A2%81%E5%A5%96/third-prize-3.jpg" alt="" /></p>
+  <p>李培锋、许傲施同学荣获新生特别奖。</p>
+  <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2024.12.11_Hackergame2024%E9%A2%81%E5%A5%96/freshman.jpg" alt="" /></p>
+  <p>叶知易、蒋皓、杨锦东、叶升宇、熊桐睿分别在综合技能（general）、人工智能（ai）、程序逆向与漏洞利用（binary）、密码学与数学（math）、网站安全（web）获得分类奖。</p>
+  <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2024.12.11_Hackergame2024%E9%A2%81%E5%A5%96/category.jpg" alt="" /></p>
+  <p>于泳昊、许傲施、吴书让、黄境、田佳嘉、熊桐睿、周瓯翔、陈庆禾、刘成龙、何煜恒、叶升宇、史可、樊一展、袁保杰、叶知易、杨锦东、蒋皓为各题目的首位答对者，荣获一血奖。</p>
+  <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2024.12.11_Hackergame2024%E9%A2%81%E5%A5%96/first-solve-1.jpg" alt="" /></p>
+  <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2024.12.11_Hackergame2024%E9%A2%81%E5%A5%96/first-solve-2.jpg" alt="" /></p>
+  <p>中国科学技术大学第十一届信息安全大赛由中国科学技术大学网络空间安全学院、中国科学技术大学团委、中国科学技术大学学生社团管理指导委员会主办，中国科学技术大学学生 Linux 用户协会、中国科学技术大学微软学生俱乐部、中国科学技术大学 NEBULA 战队和中国科学技术大学信息安全俱乐部承办。此外，复旦大学六星战队、广东海洋大学 Hor1zon 战队、哈尔滨工业大学 Linux 开源学生俱乐部、哈尔滨工业大学紫丁香 CTF 俱乐部、南京航空航天大学 Asuri 战队、吉林大学 Linux 用户协会、吉林大学 Spirit 战队、东北大学 NEX 信息安全创新团队、南方科技大学计算机研究协会、南方科技大学 COMPASS 实验室、中山大学 W4terDr0p 战队、中山大学互联网与开源技术协会、同济大学 CatTrainingForce 战队、西安电子科技大学信息安全协会、厦门理工学院信息安全协会、浙江大学 AAA 战队、上海大学开源社区、南阳理工学院计算机与信息化处理协会、上海交通大学 0ops 战队也参与了此次比赛的协办。</p>
+  <p>本届比赛于 11 月 2 日中午 12:00 正式开启，历时七天，参赛人数达到 2460 人。比赛共设置了约 35 道题目，涵盖了综合技能、程序逆向与漏洞利用、密码学与数学、Web 安全、人工智能等多个方向。命题延续了往届的优良特色，在具有一定教育意义的同时也不失趣味性，同时结合了科大特色、平衡了题目难度，适度增加了题目数量，争取让新生也能领会网络安全的魅力，在更多的方向上探索网络安全的知识、锻炼相关能力。</p>
+  <p>中国科学技术大学第十一届信息安全大赛的成功举办，不仅在学校内部激发了师生们对信息安全的浓厚兴趣，更为整个信息技术社区提供了一个展示实力、交流经验的重要平台，无疑将对同学们未来在信息安全领域的发展产生深远而积极的影响。</p>
+  <p>官方题解和参赛选手的解答公布于 <a href="https://github.com/USTC-Hackergame/hackergame2024-writeups/">hackergame2024-writeups</a> ，欢迎大家学习交流。</p>
+  ]]></content><author><name>luojh</name></author><category term="LUG 活动" /><summary type="html"><![CDATA[2024 年 11 月 9 日中午 12:00，Hackergame 网站答案提交窗口准时关闭，历时七天的中国科学技术大学第十一届信息安全大赛（Hackergame 2024）圆满落幕。]]></summary></entry><entry><title type="html">Slidev 幻灯片制作</title><link href="https://lug.ustc.edu.cn/news/2024/12/slidev/" rel="alternate" type="text/html" title="Slidev 幻灯片制作" /><published>2024-12-04T15:00:00+08:00</published><updated>2024-12-20T20:50:29+08:00</updated><id>https://lug.ustc.edu.cn/news/2024/12/slidev</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2024/12/slidev/"><![CDATA[<p>2024 年 12 月 4 日，校学生 Linux 用户协会在西区第三教学楼 3A306 教室举行小聚。本次小聚是由 Slidev 团队成员 _Kerman 同学带来的 Slidev 幻灯片制作工具介绍。Slidev.js 是一款为开发者设计的开源的幻灯片制作工具，通过简单的 Markdown 语法即可制作出精美的幻灯片，在此基础上也很方便添加交互式的内容、添加动画效果等。它非常适合用于学术报告、技术分享、演讲等场景。</p>
   <p>_Kerman 同学首先向大家介绍了 Slidev 的基本使用方法，包括如何安装、创建项目、添加内容等。他随后演示了如何通过 Markdown 语法添加文本、图片、代码块、表格等内容及一些高级功能，例如添加动画、如何添加交互式的内容等。最后，他还向大家展示了如何将制作好的幻灯片导出为 PDF 文件。在现场，许多同学尝试了 Slidev，创建了自己的第一个 Slidev 幻灯片项目。</p>
   <p>小聚的最后，_Kerman 同学分享了他自己参与相关开源社区的感受，并推荐大家多参与开源社区。本次小聚的幻灯片可以在 <a href="https://ftp.lug.ustc.edu.cn/活动/2024.12.04_Slidev_小聚/slides/">LUG FTP</a> 查看。</p>
   ]]></content><author><name>tiankaima</name></author><category term="LUG 活动" /><category term="LUG 小聚" /><summary type="html"><![CDATA[2024 年 12 月 4 日，校学生 Linux 用户协会在西区第三教学楼 3A306 教室举行小聚。本次小聚是由 Slidev 团队成员 _Kerman 同学带来的 Slidev 幻灯片制作工具介绍。Slidev.js 是一款为开发者设计的开源的幻灯片制作工具，通过简单的 Markdown 语法即可制作出精美的幻灯片，在此基础上也很方便添加交互式的内容、添加动画效果等。它非常适合用于学术报告、技术分享、演讲等场景。]]></summary></entry><entry><title type="html">C/C++ 下 OpenMP 程序设计介绍</title><link href="https://lug.ustc.edu.cn/news/2024/11/gathering-openmp/" rel="alternate" type="text/html" title="C/C++ 下 OpenMP 程序设计介绍" /><published>2024-11-29T10:00:00+08:00</published><updated>2024-12-03T11:21:41+08:00</updated><id>https://lug.ustc.edu.cn/news/2024/11/gathering-openmp</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2024/11/gathering-openmp/"><![CDATA[<p>2024 年 11 月 27 日，校学生 Linux 用户协会在西区第三教学楼 3A306 教室开展了小聚活动。本次小聚主要是由罗嘉宏同学带来的 C/C++ 下 OpenMP 程序设计介绍。<a href="https://www.openmp.org/">OpenMP</a> 是广为运用的并行计算处理框架，为 C/C++ 和 Fortran 编程语言提供支持，提供了简单有效的 CPU 并行处理能力。此外，新版本的 OpenMP 还支持 GPU 计算等功能。</p>
@@ -202,15 +213,4 @@
         <img src="https://ftp.lug.ustc.edu.cn/misc/403/photo_2024-05-28_15-05-25.jpg" alt="" /></p>
     </li>
   </ol>
-  ]]></content><author><name>aka-dag</name></author><summary type="html"><![CDATA[2024 年 4 月中旬，USTCLUG 西区活动室正式搬迁至西区图书馆 403 研讨室。]]></summary></entry><entry><title type="html">Linux 图形堆栈初探</title><link href="https://lug.ustc.edu.cn/news/2024/04/gathering-linux-graphics-journey/" rel="alternate" type="text/html" title="Linux 图形堆栈初探" /><published>2024-04-21T15:00:00+08:00</published><updated>2024-06-16T12:59:53+08:00</updated><id>https://lug.ustc.edu.cn/news/2024/04/gathering-linux-graphics-journey</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2024/04/gathering-linux-graphics-journey/"><![CDATA[<p>2024 年 4 月 21 日，校学生 Linux 用户协会举办了一场小聚活动。本次小聚为刘紫檀同学为我们带来的关于 Linux 图形堆栈的介绍。</p>
-  <p><img src="https://ftp.lug.ustc.edu.cn/weekly_party/2024.04.21_Linux_Graphics_Journey/photo/C674688314E3F9149BAEAD6DE8A024EA.jpg" alt="" /></p>
-  <p>在活动的开始，刘紫檀同学介绍了他本人阅读图形栈程序的心得体会，同时分享了自己编写的一个能够便捷阅读 Archlinux 源码的脚本。刘同学认为在阅读程序时需要了解功能间的界面，并以 Wayland 协议来举例说明。</p>
-  <p><img src="https://ftp.lug.ustc.edu.cn/weekly_party/2024.04.21_Linux_Graphics_Journey/photo/6C0D0AD15BB58A9211D3F4AD0F0F42C8.png" alt="" /></p>
-  <p>随后，刘紫檀介绍了 GUI 程序的基本构成。刘同学向大家展示了 CLI 与 GUI 程序代码，解释了其基本的组成部分，由实现最基础的功能到处理复杂的用户需求。</p>
-  <p><img src="https://ftp.lug.ustc.edu.cn/weekly_party/2024.04.21_Linux_Graphics_Journey/photo/F939405C44EA3364304AE83FA5AF7FAD.png" alt="" /></p>
-  <p>刘紫檀重点介绍了 GUI 程序绘制技术的演进，以 PC /Linux 上的图形显示为主线进行了整理。首先刘同学介绍了帧缓冲设备（fbdev），给大家展示了历代不同产商生产的显卡，并说明了帧缓冲设备的工作流程与基本操作。紧接着，刘同学介绍了历史悠久的 X 窗口系统、早期与现代的 DRI、DRM 框架等，在最后介绍了 Wayland 协议。</p>
-  <p><img src="https://ftp.lug.ustc.edu.cn/weekly_party/2024.04.21_Linux_Graphics_Journey/photo/88F681B958C76D6F349FB070DB260E8D.jpg" alt="" /></p>
-  <p>活动接近尾声，刘同学用一张图表梳理了今天小聚的内容脉络，与现场的同学们展开了相关的交流。</p>
-  <p><img src="https://ftp.lug.ustc.edu.cn/weekly_party/2024.04.21_Linux_Graphics_Journey/photo/D145719FD50F4095BBA726CF654291A3.png" alt="" /></p>
-  <p>小聚录像已上传至 ftp：<a href="https://ftp.lug.ustc.edu.cn/weekly_party/2024.04.21_Linux_Graphics_Journey/video/Linux_Graphics_Journey.mp4">Linux 图形堆栈初探</a></p>
-  ]]></content><author><name>aka-dag</name></author><category term="LUG 活动" /><category term="LUG 小聚" /><summary type="html"><![CDATA[2024 年 4 月 21 日，校学生 Linux 用户协会举办了一场小聚活动。本次小聚为刘紫檀同学为我们带来的关于 Linux 图形堆栈的介绍。]]></summary></entry></feed>
+  ]]></content><author><name>aka-dag</name></author><summary type="html"><![CDATA[2024 年 4 月中旬，USTCLUG 西区活动室正式搬迁至西区图书馆 403 研讨室。]]></summary></entry></feed>
