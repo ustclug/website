@@ -85,8 +85,9 @@ eduroam 是一个全球性的无线网络服务，覆盖了全球 100 多个国�
 可以向：
 
 - [LUG 的讨论群组](/wiki/lug/contact/) 寻求帮助
-- [网络信息中心](https://ustcnet.ustc.edu.cn/) 邮件反馈问题
-- [校园报修大厅](https://xsfw.ustc.edu.cn/) 报修
+- 推荐直接拨打网络信息中心电话 (0551-63600800)，网络问题工程师上门处理
+- [校园报修大厅](https://xsfw.ustc.edu.cn/) 报修（或使用中国科大 APP，搜索【网上报修】应用）
+- [网络信息中心](mailto:nic@ustc.edu.cn) 邮件反馈问题
 
 在反馈时务必提供详细的信息，例如：
 
