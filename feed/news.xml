@@ -1,30 +1,49 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://lug.ustc.edu.cn/feed/news.xml" rel="self" type="application/atom+xml" /><link href="https://lug.ustc.edu.cn/" rel="alternate" type="text/html" /><updated>2025-09-21T01:32:37+08:00</updated><id>https://lug.ustc.edu.cn/feed/news.xml</id><title type="html">LUG @ USTC | News</title><subtitle>中国科学技术大学 Linux 用户协会</subtitle><author><name>USTCLUG</name></author><entry><title type="html">2025 秋季学期 新生活力课堂</title><link href="https://lug.ustc.edu.cn/news/2025/09/2025-freshmen-course/" rel="alternate" type="text/html" title="2025 秋季学期 新生活力课堂" /><published>2025-09-08T18:00:00+08:00</published><updated>2025-09-21T01:31:05+08:00</updated><id>https://lug.ustc.edu.cn/news/2025/09/2025-freshmen-course</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2025/09/2025-freshmen-course/"><![CDATA[<p>中国科学技术大学学生 Linux 用户协会于 9 月 7 日 19:00-21:00 在西区 3A111 教室举办了新生活力课堂。本次 LUG 新生活力课堂参与人数创历史新高，感谢各位同学的热情参与！</p>
-      <p>新生活力课堂主要面向刚入学的新生。在活动的上半场中，王永福同学为大家带来了《实用工具介绍》，并从科大学习生活中的需求出发，介绍了科大网络资源与一些实用工具，包括 Vlab、USTC LaTeX、LUG GitLab、科大网盘等。此外，还针对性地介绍了 LaTeX 与 Markdown，助力同学们更高效地编写作业和报告；以及 GitHub 与 Google Scholar 等平台，助力同学们更高效地进行科研。最后，王永福向新生们介绍了 LUG 与一些近期活动，欢迎大家加入 LUG，一起学习和交流。</p>
-      <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.09.07_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E5%A0%82/photos/photo_1_2025-09-08_16-03-12.jpg" alt="" /></p>
-      <p>中场休息环节，同学们进行了自由交流与提问，气氛热烈。</p>
-      <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.09.07_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E5%A0%82/photos/photo_6_2025-09-08_16-03-12.jpg" alt="" /></p>
-      <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.09.07_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E5%A0%82/photos/photo_8_2025-09-08_16-03-12.jpg" alt="" /></p>
-      <p>活动的下半场是王永福同学带来的《面向高效学习/科研/创作的 AI 工具入门》，他从 AI 工具的意义出发，介绍了多种聊天机器人、AI 编程工具、图像生成工具和视频生成工具。最后，王永福重点介绍了用于 AI 工具的提示工程，包括其重要性、原则与实用技巧，帮助同学们更有效地使用 AI 工具。</p>
-      <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.09.07_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E5%A0%82/photos/photo_10_2025-09-08_16-03-12.jpg" alt="" /></p>
-      <p>活动照片、讲稿等资料可在 <a href="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.09.07_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E5%A0%82/">LUG FTP</a> 上查看：</p>
-      <ul>
-        <li><a href="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.09.07_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E5%A0%82/photos/">现场照片</a></li>
-        <li><a href="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.09.07_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E5%A0%82/video/">视频回放</a></li>
-        <li><a href="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.09.07_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E5%A0%82/%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E7%A8%8B2025_0907.pdf">《实用工具介绍》幻灯片</a></li>
-        <li><a href="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.09.07_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E5%A0%82/%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E7%A8%8B_AI_v2.pdf">《面向高效学习/科研/创作的 AI 工具入门》幻灯片</a></li>
-      </ul>
-      ]]></content><author><name>_Kerman</name></author><category term="LUG 活动" /><summary type="html"><![CDATA[中国科学技术大学学生 Linux 用户协会于 9 月 7 日 19:00-21:00 在西区 3A111 教室举办了新生活力课堂。本次 LUG 新生活力课堂参与人数创历史新高，感谢各位同学的热情参与！]]></summary></entry><entry><title type="html">2025 软件自由日 (SFD) 讲座征集</title><link href="https://lug.ustc.edu.cn/news/2025/08/SFD-Prep/" rel="alternate" type="text/html" title="2025 软件自由日 (SFD) 讲座征集" /><published>2025-08-10T11:00:00+08:00</published><updated>2025-09-01T13:31:10+08:00</updated><id>https://lug.ustc.edu.cn/news/2025/08/SFD-Prep</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2025/08/SFD-Prep/"><![CDATA[<p><a href="https://en.wikipedia.org/wiki/Software_Freedom_Day">软件自由日</a>（Software Freedom Day，SFD）是在 Digital Freedom Foundation 的主办下，由自由/开源软件爱好者自发筹集组织非盈利性活动，旨在为自由/开源软件爱好者提供一个信息交流平台、联合各社区举办各种自由/开源软件活动。</p>
-    <p>作为合肥地区最大的 Linux 用户组织，中国科大 Linux 用户协会致力于通过 SFD 普及软件自由思想，凝聚自由软件社区，将优秀的自由软件介绍给更多开源社区的成员，最大限度帮助自由软件作者实现服务于开源社群的价值。</p>
-    <p>今年的软件自由日活动预计于 2025 年 9 月 20 日（九月第三个星期六）于中国科学技术大学（合肥）举行，<strong>现面向校内外所有社区成员公开征集软件自由日讲座或其他与主题有关的活动</strong>，有意愿的社区成员可尽快联系我们。</p>
-    <p><a href="/wiki/lug/contact">联系方式</a></p>
-    <p><a href="/wiki/lug/events/sfd">往届活动和详细介绍</a></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://lug.ustc.edu.cn/feed/news.xml" rel="self" type="application/atom+xml" /><link href="https://lug.ustc.edu.cn/" rel="alternate" type="text/html" /><updated>2025-10-10T19:41:34+08:00</updated><id>https://lug.ustc.edu.cn/feed/news.xml</id><title type="html">LUG @ USTC | News</title><subtitle>中国科学技术大学 Linux 用户协会</subtitle><author><name>USTCLUG</name></author><entry><title type="html">2025 软件自由日中国科大站</title><link href="https://lug.ustc.edu.cn/news/2025/09/SFD/" rel="alternate" type="text/html" title="2025 软件自由日中国科大站" /><published>2025-09-21T20:00:00+08:00</published><updated>2025-10-10T19:39:59+08:00</updated><id>https://lug.ustc.edu.cn/news/2025/09/SFD</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2025/09/SFD/"><![CDATA[<p>2025 年 9 月 20 日，LUG 举办了软件自由日 (Software Freedom Day) 活动。活动在 14:30-17:30 于西区 3C101 举行，并同步进行了线上直播。本次活动邀请到开源项目 Slidev 维护者 _Kerman 同学，来自少年班学院的田佳嘉同学，LUG 前会长罗嘉宏同学，以及 Pixi 项目的开发者秦慕作为演讲嘉宾。</p>
+      <p>14 时 30 分，校学生 Linux 用户协会会长王永福同学简洁地介绍了活动流程安排和演讲嘉宾后，软件自由日活动正式开始。</p>
+      <p>首先，_Kerman 同学为大家介绍了他参与维护的开源幻灯片制作工具 Slidev。他讲解了 Slidev 的设计理念、功能特点以及使用场景，并现场演示了幻灯片的制作，为同学们制作幻灯片提供了一种更高效的新选择。最后，他鼓励同学们加入到 Slidev 这样的开源项目中来。</p>
+      <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.09.20_%E8%BD%AF%E4%BB%B6%E8%87%AA%E7%94%B1%E6%97%A5/photos/IMG_0823.png" alt="" /></p>
+      <p>接下来，少年班学院的田佳嘉同学带来了《从一到无穷大：Lean4 是如何用程序构建数学世界的》的分享。他从 Lean4 的基本概念入手，介绍了 Lean4 在数学证明中的应用，展示了如何通过编程来构建和验证数学定理。他深刻的讲解给大家带来了许多启发，激发了同学们对形式化数学的兴趣。</p>
+      <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.09.20_%E8%BD%AF%E4%BB%B6%E8%87%AA%E7%94%B1%E6%97%A5/photos/IMG_0828.png" alt="" /></p>
+      <p>茶歇之后，LUG 前会长罗嘉宏为我们分享了开源命令行绘图工具 GNUPlot 的应用场景与使用方式。他详细且直观地介绍了 GNUPlot 的基本功能和常用命令，并通过实际案例展示了如何使用 GNUPlot 进行化学相关数据的作图，让大家感受到了命令行工具的强大与便利。</p>
+      <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.09.20_%E8%BD%AF%E4%BB%B6%E8%87%AA%E7%94%B1%E6%97%A5/photos/IMG_0835.png" alt="" /></p>
+      <p>随后，Pixi 项目的开发者秦慕为我们介绍了包管理器 Pixi。她从各种 Python 包管理器的优缺点与发展历史入手，介绍了 Pixi 的设计理念、功能特点以及使用场景，为同学们在开发、学习与科研中高效可靠地管理代码依赖提供了新选择。</p>
+      <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.09.20_%E8%BD%AF%E4%BB%B6%E8%87%AA%E7%94%B1%E6%97%A5/photos/IMG_0837.png" alt="" /></p>
+      <p>在这之后，闪电演讲拉开帷幕。首先由来自中科大业余无线电协会的缪渠成同学介绍了其领导的卫星项目。该项目旨在挑战技术难点，计划在两年后发射一颗业余无线电卫星。他非常欢迎软件背景的同学参与其中。</p>
+      <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.09.20_%E8%BD%AF%E4%BB%B6%E8%87%AA%E7%94%B1%E6%97%A5/photos/IMG_0840.png" alt="" /></p>
+      <p>闪电演讲压轴登场的是龙芯开发者关系负责人、安同开源社区创始人白铭骢。他介绍了龙芯处理器的发展历程与现状，指出了龙芯生态建设中的成就与挑战，并为同学们提供了参与龙芯生态建设的具体途径。</p>
+      <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.09.20_%E8%BD%AF%E4%BB%B6%E8%87%AA%E7%94%B1%E6%97%A5/photos/IMG_0841.png" alt="" /></p>
+      <p>17 时 35 分，2025 年的软件自由日活动圆满结束。活动中大家积极交流分享，我们希望通过这样的形式，让更多的同学了解到开源社区的魅力。</p>
+      <blockquote>
+        <p>每年的 SFD 活动都在 9 月的第三个周六举行，历年活动在 <a href="/wiki/lug/events/sfd">这里</a> 查看，如果您有意向在下一届的 SFD 活动中分享您的经验，欢迎 <a href="/wiki/lug/contact">联系我们</a>。</p>
+        <p>本次活动幻灯片、录像、照片等资料已经上传 LUG FTP: <a href="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.09.20_%E8%BD%AF%E4%BB%B6%E8%87%AA%E7%94%B1%E6%97%A5/">https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.09.20_%E8%BD%AF%E4%BB%B6%E8%87%AA%E7%94%B1%E6%97%A5/</a></p>
+      </blockquote>
+      ]]></content><author><name>_Kerman</name></author><category term="LUG 活动" /><summary type="html"><![CDATA[2025 年 9 月 20 日，LUG 举办了软件自由日 (Software Freedom Day) 活动。活动在 14:30-17:30 于西区 3C101 举行，并同步进行了线上直播。本次活动邀请到开源项目 Slidev 维护者 _Kerman 同学，来自少年班学院的田佳嘉同学，LUG 前会长罗嘉宏同学，以及 Pixi 项目的开发者秦慕作为演讲嘉宾。]]></summary></entry><entry><title type="html">2025 秋季学期 新生活力课堂</title><link href="https://lug.ustc.edu.cn/news/2025/09/2025-freshmen-course/" rel="alternate" type="text/html" title="2025 秋季学期 新生活力课堂" /><published>2025-09-08T18:00:00+08:00</published><updated>2025-09-21T01:31:05+08:00</updated><id>https://lug.ustc.edu.cn/news/2025/09/2025-freshmen-course</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2025/09/2025-freshmen-course/"><![CDATA[<p>中国科学技术大学学生 Linux 用户协会于 9 月 7 日 19:00-21:00 在西区 3A111 教室举办了新生活力课堂。本次 LUG 新生活力课堂参与人数创历史新高，感谢各位同学的热情参与！</p>
+    <p>新生活力课堂主要面向刚入学的新生。在活动的上半场中，王永福同学为大家带来了《实用工具介绍》，并从科大学习生活中的需求出发，介绍了科大网络资源与一些实用工具，包括 Vlab、USTC LaTeX、LUG GitLab、科大网盘等。此外，还针对性地介绍了 LaTeX 与 Markdown，助力同学们更高效地编写作业和报告；以及 GitHub 与 Google Scholar 等平台，助力同学们更高效地进行科研。最后，王永福向新生们介绍了 LUG 与一些近期活动，欢迎大家加入 LUG，一起学习和交流。</p>
+    <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.09.07_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E5%A0%82/photos/photo_1_2025-09-08_16-03-12.jpg" alt="" /></p>
+    <p>中场休息环节，同学们进行了自由交流与提问，气氛热烈。</p>
+    <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.09.07_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E5%A0%82/photos/photo_6_2025-09-08_16-03-12.jpg" alt="" /></p>
+    <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.09.07_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E5%A0%82/photos/photo_8_2025-09-08_16-03-12.jpg" alt="" /></p>
+    <p>活动的下半场是王永福同学带来的《面向高效学习/科研/创作的 AI 工具入门》，他从 AI 工具的意义出发，介绍了多种聊天机器人、AI 编程工具、图像生成工具和视频生成工具。最后，王永福重点介绍了用于 AI 工具的提示工程，包括其重要性、原则与实用技巧，帮助同学们更有效地使用 AI 工具。</p>
+    <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.09.07_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E5%A0%82/photos/photo_10_2025-09-08_16-03-12.jpg" alt="" /></p>
+    <p>活动照片、讲稿等资料可在 <a href="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.09.07_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E5%A0%82/">LUG FTP</a> 上查看：</p>
     <ul>
-      <li><a href="/news/2024/09/SFD/">2024 SFD</a></li>
-      <li><a href="/news/2023/09/SFD/">2023 SFD</a></li>
-      <li><a href="/news/2022/09/SFD/">2022 SFD</a></li>
-      <li><a href="/news/2021/09/SFD/">2021 SFD</a></li>
+      <li><a href="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.09.07_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E5%A0%82/photos/">现场照片</a></li>
+      <li><a href="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.09.07_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E5%A0%82/video/">视频回放</a></li>
+      <li><a href="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.09.07_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E5%A0%82/%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E7%A8%8B2025_0907.pdf">《实用工具介绍》幻灯片</a></li>
+      <li><a href="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.09.07_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E5%A0%82/%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E7%A8%8B_AI_v2.pdf">《面向高效学习/科研/创作的 AI 工具入门》幻灯片</a></li>
     </ul>
-    ]]></content><author><name>_Kerman</name></author><category term="LUG 活动" /><summary type="html"><![CDATA[软件自由日（Software Freedom Day，SFD）是在 Digital Freedom Foundation 的主办下，由自由/开源软件爱好者自发筹集组织非盈利性活动，旨在为自由/开源软件爱好者提供一个信息交流平台、联合各社区举办各种自由/开源软件活动。]]></summary></entry><entry><title type="html">Linux Install Party 2025</title><link href="https://lug.ustc.edu.cn/news/2025/03/Linux101-LIP-2025/" rel="alternate" type="text/html" title="Linux Install Party 2025" /><published>2025-03-16T15:00:00+08:00</published><updated>2025-03-19T15:59:47+08:00</updated><id>https://lug.ustc.edu.cn/news/2025/03/Linux101-LIP-2025</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2025/03/Linux101-LIP-2025/"><![CDATA[<p>2025 年 3 月 16 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C101 教室成功举办 “Linux 101” 系列课程首讲——Linux Install Party。这是 LUG 第八年举办 Linux 101 系列课程、第九年举办 Linux Install Party。本次活动通过理论讲解与实践操作相结合的方式，帮助参与者初步了解 Linux 操作系统并完成安装实践。</p>
+    ]]></content><author><name>_Kerman</name></author><category term="LUG 活动" /><summary type="html"><![CDATA[中国科学技术大学学生 Linux 用户协会于 9 月 7 日 19:00-21:00 在西区 3A111 教室举办了新生活力课堂。本次 LUG 新生活力课堂参与人数创历史新高，感谢各位同学的热情参与！]]></summary></entry><entry><title type="html">2025 软件自由日 (SFD) 讲座征集</title><link href="https://lug.ustc.edu.cn/news/2025/08/SFD-Prep/" rel="alternate" type="text/html" title="2025 软件自由日 (SFD) 讲座征集" /><published>2025-08-10T11:00:00+08:00</published><updated>2025-09-01T13:31:10+08:00</updated><id>https://lug.ustc.edu.cn/news/2025/08/SFD-Prep</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2025/08/SFD-Prep/"><![CDATA[<p><a href="https://en.wikipedia.org/wiki/Software_Freedom_Day">软件自由日</a>（Software Freedom Day，SFD）是在 Digital Freedom Foundation 的主办下，由自由/开源软件爱好者自发筹集组织非盈利性活动，旨在为自由/开源软件爱好者提供一个信息交流平台、联合各社区举办各种自由/开源软件活动。</p>
+  <p>作为合肥地区最大的 Linux 用户组织，中国科大 Linux 用户协会致力于通过 SFD 普及软件自由思想，凝聚自由软件社区，将优秀的自由软件介绍给更多开源社区的成员，最大限度帮助自由软件作者实现服务于开源社群的价值。</p>
+  <p>今年的软件自由日活动预计于 2025 年 9 月 20 日（九月第三个星期六）于中国科学技术大学（合肥）举行，<strong>现面向校内外所有社区成员公开征集软件自由日讲座或其他与主题有关的活动</strong>，有意愿的社区成员可尽快联系我们。</p>
+  <p><a href="/wiki/lug/contact">联系方式</a></p>
+  <p><a href="/wiki/lug/events/sfd">往届活动和详细介绍</a></p>
+  <ul>
+    <li><a href="/news/2024/09/SFD/">2024 SFD</a></li>
+    <li><a href="/news/2023/09/SFD/">2023 SFD</a></li>
+    <li><a href="/news/2022/09/SFD/">2022 SFD</a></li>
+    <li><a href="/news/2021/09/SFD/">2021 SFD</a></li>
+  </ul>
+  ]]></content><author><name>_Kerman</name></author><category term="LUG 活动" /><summary type="html"><![CDATA[软件自由日（Software Freedom Day，SFD）是在 Digital Freedom Foundation 的主办下，由自由/开源软件爱好者自发筹集组织非盈利性活动，旨在为自由/开源软件爱好者提供一个信息交流平台、联合各社区举办各种自由/开源软件活动。]]></summary></entry><entry><title type="html">Linux Install Party 2025</title><link href="https://lug.ustc.edu.cn/news/2025/03/Linux101-LIP-2025/" rel="alternate" type="text/html" title="Linux Install Party 2025" /><published>2025-03-16T15:00:00+08:00</published><updated>2025-03-19T15:59:47+08:00</updated><id>https://lug.ustc.edu.cn/news/2025/03/Linux101-LIP-2025</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2025/03/Linux101-LIP-2025/"><![CDATA[<p>2025 年 3 月 16 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C101 教室成功举办 “Linux 101” 系列课程首讲——Linux Install Party。这是 LUG 第八年举办 Linux 101 系列课程、第九年举办 Linux Install Party。本次活动通过理论讲解与实践操作相结合的方式，帮助参与者初步了解 Linux 操作系统并完成安装实践。</p>
   <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.03.16_Linux_101_%E7%AC%AC%E4%B8%80%E8%AF%BE_Linux_Install_Party/lip-post.jpg" alt="" /></p>
   <p>在活动中，LUG 会长罗嘉宏同学系统讲解了 Linux 操作系统的基础知识，涵盖其开源特性、技术优势、应用场景及主流发行版本。通过详实的案例分析与技术对比，帮助在场同学对 Linux 系统形成了基本认知框架。</p>
   <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.03.16_Linux_101_%E7%AC%AC%E4%B8%80%E8%AF%BE_Linux_Install_Party/photo_2025-03-16%2023.46.11.jpeg" alt="" /></p>
@@ -203,14 +222,4 @@
     <li><a href="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2024.09.08_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E5%A0%82/sgy-gnuplot.pdf">GNUPlot 介绍</a></li>
     <li><a href="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2024.09.08_%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E5%A0%82/20240908185437-USTCLUG%20%E6%96%B0%E7%94%9F%E6%B4%BB%E5%8A%9B%E8%AF%BE%E5%A0%82%EF%BC%88%E4%B8%9C%E5%8C%BA%E5%9C%BA%E6%AC%A1%EF%BC%89-%E8%A7%86%E9%A2%91-1.mp4">09.08 活动录屏</a></li>
   </ul>
-  ]]></content><author><name>tiankaima</name></author><category term="LUG 活动" /><summary type="html"><![CDATA[中国科学技术大学 Linux 用户协会在秋季学期举办了系列迎新活动，包括新生活力课堂和游园会，时间安排如下：]]></summary></entry><entry><title type="html">2024 软件自由日 (SFD) 讲座征集</title><link href="https://lug.ustc.edu.cn/news/2024/08/SFD-Prep/" rel="alternate" type="text/html" title="2024 软件自由日 (SFD) 讲座征集" /><published>2024-08-15T15:00:00+08:00</published><updated>2024-09-15T01:34:15+08:00</updated><id>https://lug.ustc.edu.cn/news/2024/08/SFD-Prep</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2024/08/SFD-Prep/"><![CDATA[<p><a href="https://en.wikipedia.org/wiki/Software_Freedom_Day">软件自由日</a>（Software Freedom Day，SFD）是在 Digital Freedom Foundation 的主办下，由自由/开源软件爱好者自发筹集组织非盈利性活动，旨在为自由/开源软件爱好者提供一个信息交流平台、联合各社区举办各种自由/开源软件活动。</p>
-  <p>作为合肥地区最大的 Linux 用户组织，中国科大 Linux 用户协会致力于通过 SFD 普及软件自由思想，凝聚自由软件社区，将优秀的自由软件介绍给更多开源社区的成员，最大限度帮助自由软件作者实现服务于开源社群的价值。</p>
-  <p>今年的软件自由日活动预计于 2024 年 9 月 21 日（九月第三个星期六）于中国科学技术大学（合肥）举行，<strong>现面向校内外所有社区成员公开征集软件自由日讲座或其他与主题有关的活动</strong>，有意愿的社区成员可尽快联系我们。</p>
-  <p><a href="/wiki/lug/contact">联系方式</a></p>
-  <p><a href="/wiki/lug/events/sfd">往届活动和详细介绍</a></p>
-  <ul>
-    <li><a href="/news/2023/09/SFD/">2023 SFD</a></li>
-    <li><a href="/news/2022/09/SFD/">2022 SFD</a></li>
-    <li><a href="/news/2021/09/SFD/">2021 SFD</a></li>
-  </ul>
-  ]]></content><author><name>tiankaima</name></author><category term="LUG 活动" /><summary type="html"><![CDATA[软件自由日（Software Freedom Day，SFD）是在 Digital Freedom Foundation 的主办下，由自由/开源软件爱好者自发筹集组织非盈利性活动，旨在为自由/开源软件爱好者提供一个信息交流平台、联合各社区举办各种自由/开源软件活动。]]></summary></entry></feed>
+  ]]></content><author><name>tiankaima</name></author><category term="LUG 活动" /><summary type="html"><![CDATA[中国科学技术大学 Linux 用户协会在秋季学期举办了系列迎新活动，包括新生活力课堂和游园会，时间安排如下：]]></summary></entry></feed>
