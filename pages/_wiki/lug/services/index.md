@@ -19,6 +19,8 @@ permalink: /wiki/lug/services/
 ## B 级服务
 
 - 主页、新闻站、LUG Planet（社团博客）：<https://lug.ustc.edu.cn>
+- Linux 101 在线讲义：<https://101.lug.ustc.edu.cn>
+- Linux 201 进阶教程：<https://201.ustclug.org>
 - [网络启动](pxe.md)：pxe.ustc.edu.cn
 - [图书馆透明计算系统](lib.md)
 - VPN 在线申请系统（校内）
@@ -31,9 +33,8 @@ permalink: /wiki/lug/services/
 ## C 级服务
 
 - [LUG FTP](ftp.md)：<https://ftp.lug.ustc.edu.cn>
-- 旧的 LUG 新闻站：<https://news.ustclug.org>
+- LUG 技术文档：<https://docs.ustclug.org>
 - LUG 服务器新闻：<https://servers.ustclug.org>
-- 备用的 LUG 服务器新闻：<https://status.ustclug.org>
 - Grafana 监控：<https://monitor.ustclug.org>
 - LDAP 配置管理系统（GOsa²）
 
@@ -41,6 +42,8 @@ permalink: /wiki/lug/services/
 
 - 防污染 DNS（校内）
 - 旧的 LUG Planet（社团博客）：planet.ustclug.org
+- 旧的 LUG 新闻站：news.ustclug.org
+- 备用的 LUG 服务器新闻：status.ustclug.org
 
 ## 服务等级与服务标准
 
