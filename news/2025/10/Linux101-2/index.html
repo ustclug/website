@@ -9,18 +9,20 @@
   <head>
     <meta charset="utf-8">
     <!-- begin _includes/seo.html -->
-    <title>Fwd: 读书笔记：关于维护服务器的一些技巧 - LUG @ USTC</title>
-    <meta name="description" content="寒假读了三本书《LINUX SERVER HACKS 卷二》《实战 Nginx：取代 Apache 的高性能 Web 服务器》《Linux 服务器性能调整》，简单地了解了些 linux 服务器维护和管理上的技巧。现在就分别简要谈谈我在读这三本书时的感受吧。">
+    <title>Linux 101 第二课 - LUG @ USTC</title>
+    <meta name="description" content="2025 年 10 月 25 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C104 教室举办 Linux 101 系列活动的第二课：软件安装与文件操作。">
+    <meta name="author" content="_Kerman">
+    <meta property="article:author" content="_Kerman">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="zh_CN">
     <meta property="og:site_name" content="LUG @ USTC">
-    <meta property="og:title" content="Fwd: 读书笔记：关于维护服务器的一些技巧">
-    <meta property="og:url" content="https://lug.ustc.edu.cn/news/2011/04/2011-winter-reading-notes/">
-    <meta property="og:description" content="寒假读了三本书《LINUX SERVER HACKS 卷二》《实战 Nginx：取代 Apache 的高性能 Web 服务器》《Linux 服务器性能调整》，简单地了解了些 linux 服务器维护和管理上的技巧。现在就分别简要谈谈我在读这三本书时的感受吧。">
+    <meta property="og:title" content="Linux 101 第二课">
+    <meta property="og:url" content="https://lug.ustc.edu.cn/news/2025/10/Linux101-2/">
+    <meta property="og:description" content="2025 年 10 月 25 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C104 教室举办 Linux 101 系列活动的第二课：软件安装与文件操作。">
     <meta property="og:image" content="https://lug.ustc.edu.cn/static/splash/autumn-1.jpg">
-    <meta property="article:published_time" content="2011-04-28T18:15:09+08:00">
-    <meta property="article:modified_time" content="2021-02-04T21:53:03+08:00">
-    <link rel="canonical" href="https://lug.ustc.edu.cn/news/2011/04/2011-winter-reading-notes/">
+    <meta property="article:published_time" content="2025-10-25T14:30:00+08:00">
+    <meta property="article:modified_time" content="2025-10-27T11:16:16+08:00">
+    <link rel="canonical" href="https://lug.ustc.edu.cn/news/2025/10/Linux101-2/">
     <!-- end _includes/seo.html -->
     <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="LUG @ USTC Feed">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -125,22 +127,22 @@
 >
         <div class="wrapper">
           <h1 id="page-title" class="page__title" itemprop="headline">
-            Fwd: 读书笔记：关于维护服务器的一些技巧
+            Linux 101 第二课
           </h1>
           <p class="page__meta">
             <span class="page__meta-date">
               <i class="far fa-calendar-alt" aria-hidden="true"></i>
-              <time datetime="2011-04-28T18:15:09+08:00">2011 年 4 月 28 日</time>
+              <time datetime="2025-10-25T14:30:00+08:00">2025 年 10 月 25 日</time>
             </span>
           </p>
         </div>
       </div>
       <div id="main" role="main">
         <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-          <meta itemprop="headline" content="Fwd: 读书笔记：关于维护服务器的一些技巧">
-          <meta itemprop="description" content="寒假读了三本书《LINUX SERVER HACKS 卷二》《实战 Nginx：取代 Apache 的高性能 Web 服务器》《Linux 服务器性能调整》，简单地了解了些 linux 服务器维护和管理上的技巧。现在就分别简要谈谈我在读这三本书时的感受吧。">
-          <meta itemprop="datePublished" content="2011-04-28T18:15:09+08:00">
-          <meta itemprop="dateModified" content="2021-02-04T21:53:03+08:00">
+          <meta itemprop="headline" content="Linux 101 第二课">
+          <meta itemprop="description" content="2025 年 10 月 25 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C104 教室举办 Linux 101 系列活动的第二课：软件安装与文件操作。">
+          <meta itemprop="datePublished" content="2025-10-25T14:30:00+08:00">
+          <meta itemprop="dateModified" content="2025-10-27T11:16:16+08:00">
           <div class="page__inner-wrap">
             <section class="page__content" itemprop="text">
               <aside class="sidebar__right sticky">
@@ -148,59 +150,36 @@
                   <header>
                     <h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4>
                   </header>
-                  <ul class="toc__menu">
-                    <li><a href="#一linux-server-hacks-卷二">一：《LINUX SERVER HACKS 卷二》</a></li>
-                    <li><a href="#二linux-服务器性能调整">二：《Linux 服务器性能调整》</a></li>
-                    <li><a href="#三实战-nginx取代-apache-的高性能-web-服务器">三：《实战 Nginx：取代 Apache 的高性能 Web 服务器》</a></li>
-                  </ul>
                 </nav>
               </aside>
-              <p>寒假读了三本书《<a href="http://book.douban.com/subject/2006913/">LINUX SERVER HACKS 卷二</a>》《<a href="http://book.douban.com/subject/4251875/">实战 Nginx：取代 Apache 的高性能 Web 服务器</a>》《<a href="http://book.douban.com/subject/4027746/">Linux 服务器性能调整</a>》，简单地了解了些 linux 服务器维护和管理上的技巧。现在就分别简要谈谈我在读这三本书时的感受吧。</p>
-              <h3 id="一linux-server-hacks-卷二">一：《LINUX SERVER HACKS 卷二》</h3>
-              <p>首先，这不是一本工具书，而是一本经验集。书内都是很巧妙的一节一节的 linux 服务器维护技巧，主要目的是提高维护 linux 是的速度和鲁棒性。说实话，我不是很习惯这种模式的书，因为如果带着问题去读这本书，读完后还是问题，而本不是关心的部分，读完后也很快就忘了。</p>
-              <p>简言之，我懂这本书里得到的信息有：</p>
-              <p>一：linux 非常灵活，特别是结合 NFS 以及远程终端，可以做非常有想象力的事情。</p>
-              <p>二：在复杂的连线环境中记得使用 screen</p>
-              <p>三：脚本可以做几乎任何维护性质的事，而且事情的解决方案往往比你想得简单。</p>
-              <p>四：注意 uid，gid 重用可能带来的问题</p>
-              <p>五：Google 万岁</p>
-              <h3 id="二linux-服务器性能调整">二：《Linux 服务器性能调整》</h3>
-              <p>这本书翻译的不是很好，文法晦涩，而且介绍的东西偏深，很多是探讨内核级的优化。感觉看得不是很明白，简单写写吧。</p>
-              <p>一：关于服务器文件系统的选择：ReiserFS 鲁棒性很好，而且对小文件有最佳性能。XFS 针对大型文件有最佳性能。</p>
-              <p>二：一块硬盘上读取外侧磁道的速度要快于内侧磁道，所以分区是可以考虑这点将序号小的分区分配给经常读写的目录。譬如分区时第一个为 swap，第二个/var，再者/usr，最后才是根和/home</p>
-              <p>三：mount 文件系统时带上 noatime 可以提高一些性能。</p>
-              <p>四：文件系统在创建的时候可以调教一些参数优化性能</p>
-              <p>五：各类监控/tweak 工具：hdparam, iostats, top, vmstat</p>
-              <h3 id="三实战-nginx取代-apache-的高性能-web-服务器">三：《实战 Nginx：取代 Apache 的高性能 Web 服务器》</h3>
-              <p>这本书灌水的内容比较多，内容实际上也就是作者博客上的一些应用技巧的整理，可以总结的不多，因为按部就班的做就行了。</p>
-              <p>从书中看，nginx 的性能优于 apache，而且在反向代理方面特别有优势，这是它的亮点。Nginx 虽然支持 rewrite，自我感觉还是蛮好用的，但是不兼容 apache 的.htaccess，使用时需注意。</p>
-              <p>Nginx 的组件高度模块化，可定制性比较强，具体可在使用时疯狂 google。</p>
-              <p>对于使用 php+mysql 的场合，注意 php 使用 fastcgi 的方式启动，性能貌似比传统 cgi 要高不少，估计和 apache 的 module 差不多</p>
-              <p>书中没有提到什么值得一提的优化，具体实践的时候多 google 好了。对于硬件环境不好的服务器，减少 nginx 工作进程，打开 gzip 压缩和缓存，为 php 安装加速器并为低配置环境优化，数据库（例如 mysql）在配置时减少内存占用上限。选择 myisam 而不是 innodb。</p>
-              <p>简言之，这本书最大的作用就是让 nginx 变得平易近人大家都可尝试了。</p>
+              <p>2025 年 10 月 25 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C104 教室举办 Linux 101 系列活动的第二课：软件安装与文件操作。</p>
+              <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.10.25_Linux_101_%E7%AC%AC%E4%BA%8C%E8%AF%BE/poster.png" alt="" /></p>
+              <p>分享从“初识命令行”开始，介绍了 Shell（如 bash）的概念、终端的使用，并通过 whoami 等命令进行了演示。此外，还介绍了 tab 补全和复制粘贴等常用快捷键。</p>
+              <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.10.25_Linux_101_%E7%AC%AC%E4%BA%8C%E8%AF%BE/IMG_1093.png" alt="" /></p>
+              <p>随后，分享进入核心。王同学讲解了 Linux 上软件安装方式，包括使用应用商店、apt 包管理器、更换科大镜像源及安装 ripgrep。接着，在“文件操作”单元，他介绍了 ls, cd, mkdir, cp 和 rm 等命令。分享还涵盖了使用 tar 命令进行“归档与压缩”。</p>
+              <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.10.25_Linux_101_%E7%AC%AC%E4%BA%8C%E8%AF%BE/IMG_1092.png" alt="" /></p>
+              <p>在分享的最后，王同学介绍了如何查阅软件的使用文档，演示了 man 和 info 等获取帮助的途径。此外，他还推荐了一系列实用的命令行工具，如 htop, tldr, eza 和 bat，以帮助同学们提高效率。</p>
+              <p>本节课的讲义位于 LUG ftp 上：<a href="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.10.25_Linux_101_%E7%AC%AC%E4%BA%8C%E8%AF%BE/Linux%20101%20Chap%203.pdf">Linux 101 第二课</a></p>
             </section>
             <footer class="page__meta">
               <p class="page__taxonomy">
                 <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 标签: </strong>
                 <span itemprop="keywords">
-                  <a href="/tags/linux-server" class="page__taxonomy-item p-category" rel="tag">linux server</a><span class="sep">, </span>
-                  <a href="/tags/mysql" class="page__taxonomy-item p-category" rel="tag">mysql</a><span class="sep">, </span>
-                  <a href="/tags/nginx" class="page__taxonomy-item p-category" rel="tag">nginx</a><span class="sep">, </span>
-                  <a href="/tags/php" class="page__taxonomy-item p-category" rel="tag">php</a><span class="sep">, </span>
-                  <a href="/tags/reading-notes" class="page__taxonomy-item p-category" rel="tag">reading notes</a>
+                  <a href="/tags/linux-101" class="page__taxonomy-item p-category" rel="tag">Linux 101</a><span class="sep">, </span>
+                  <a href="/tags/lug-%E6%B4%BB%E5%8A%A8" class="page__taxonomy-item p-category" rel="tag">LUG 活动</a>
                 </span>
               </p>
               <p class="page__taxonomy">
                 <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 分类: </strong>
                 <span itemprop="keywords">
-                  <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0" class="page__taxonomy-item p-category" rel="tag">读书笔记</a>
+                  <a href="/categories/lug-%E6%B4%BB%E5%8A%A8" class="page__taxonomy-item p-category" rel="tag">LUG 活动</a>
                 </span>
               </p>
-              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2021-02-04">2021 年 2 月 4 日</time></p>
+              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2025-10-27">2025 年 10 月 27 日</time></p>
             </footer>
             <nav class="pagination">
-              <a href="/news/2011/04/gnome3-launch-party/" class="pagination--pager" title="Color my desktop,Color my life!">上一页</a>
-              <a href="/news/2011/05/ftp-cn-debian-org-comes/" class="pagination--pager" title="Debian 中国官方镜像：ftp.cn.debian.org">下一页</a>
+              <a href="/news/2025/10/VSCode-C/" class="pagination--pager" title="每周小聚：VS Code 与 C 语言开发环境">上一页</a>
+              <a href="#" class="pagination--pager disabled">下一页</a>
             </nav>
           </div>
         </article>
