@@ -446,7 +446,7 @@
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/news/2025/03/Linux101-LIP-2025/</loc>
-      <lastmod>2025-03-19T15:59:47+08:00</lastmod>
+      <lastmod>2025-10-27T10:39:28+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/news/2025/08/SFD-Prep/</loc>
@@ -459,6 +459,10 @@
     <url>
       <loc>https://lug.ustc.edu.cn/news/2025/09/SFD/</loc>
       <lastmod>2025-10-10T19:39:59+08:00</lastmod>
+    </url>
+    <url>
+      <loc>https://lug.ustc.edu.cn/news/2025/10/Linux101-LIP/</loc>
+      <lastmod>2025-10-27T10:39:28+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/planet/2018/08/hello-lug-planet/</loc>
@@ -966,7 +970,7 @@
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/news/2025/03/Linux101-LIP-2025/</loc>
-      <lastmod>2025-03-19T15:59:47+08:00</lastmod>
+      <lastmod>2025-10-27T10:39:28+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/news/2025/08/SFD-Prep/</loc>
@@ -979,6 +983,10 @@
     <url>
       <loc>https://lug.ustc.edu.cn/news/2025/09/SFD/</loc>
       <lastmod>2025-10-10T19:39:59+08:00</lastmod>
+    </url>
+    <url>
+      <loc>https://lug.ustc.edu.cn/news/2025/10/Linux101-LIP/</loc>
+      <lastmod>2025-10-27T10:39:28+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/planet/2018/08/hello-lug-planet/</loc>
@@ -1086,7 +1094,7 @@
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/wiki/greenwarm/xen%E7%AE%80%E4%BB%8B%E4%B8%8E%E4%BD%BF%E7%94%A8/</loc>
-      <lastmod>2025-10-18T02:29:08+08:00</lastmod>
+      <lastmod>2025-10-27T10:40:40+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/wiki/</loc>
@@ -1182,7 +1190,7 @@
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/wiki/lug/events/</loc>
-      <lastmod>2025-10-10T19:39:59+08:00</lastmod>
+      <lastmod>2025-10-27T10:39:28+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/wiki/lug/events/lip/</loc>
@@ -1202,7 +1210,7 @@
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/wiki/lug/events/weeklyparty/</loc>
-      <lastmod>2024-09-17T14:17:15+08:00</lastmod>
+      <lastmod>2025-10-27T10:39:28+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/wiki/lug/finance/archive/</loc>
@@ -1688,6 +1696,10 @@
       <lastmod>2020-08-09T21:27:26+08:00</lastmod>
     </url>
     <url>
+      <loc>https://lug.ustc.edu.cn/news/24/</loc>
+      <lastmod>2020-08-09T21:27:26+08:00</lastmod>
+    </url>
+    <url>
       <loc>https://lug.ustc.edu.cn/planet/</loc>
       <lastmod>2020-08-09T21:27:26+08:00</lastmod>
     </url>
@@ -1701,78 +1713,78 @@
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/_wiki/sec/activity.html</loc>
-      <lastmod>2025-10-18T02:28:36+08:00</lastmod>
+      <lastmod>2025-10-27T10:39:56+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/_wiki/sec/charge.html</loc>
-      <lastmod>2025-10-18T02:28:36+08:00</lastmod>
+      <lastmod>2025-10-27T10:39:56+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/_wiki/sec/codes.html</loc>
-      <lastmod>2025-10-18T02:28:36+08:00</lastmod>
+      <lastmod>2025-10-27T10:39:56+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/_wiki/sec/contact.html</loc>
-      <lastmod>2025-10-18T02:28:36+08:00</lastmod>
+      <lastmod>2025-10-27T10:39:56+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/_wiki/sec/contest.html</loc>
-      <lastmod>2025-10-18T02:28:36+08:00</lastmod>
+      <lastmod>2025-10-27T10:39:56+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/_wiki/sec/crypto.html</loc>
-      <lastmod>2025-10-18T02:28:36+08:00</lastmod>
+      <lastmod>2025-10-27T10:39:56+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/_wiki/sec/ctflab.html</loc>
-      <lastmod>2025-10-18T02:28:36+08:00</lastmod>
+      <lastmod>2025-10-27T10:39:56+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/_wiki/sec/deadline.html</loc>
-      <lastmod>2025-10-18T02:28:36+08:00</lastmod>
+      <lastmod>2025-10-27T10:39:56+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/_wiki/sec/home.html</loc>
-      <lastmod>2025-10-18T02:28:36+08:00</lastmod>
+      <lastmod>2025-10-27T10:39:56+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/_wiki/sec/lecture.html</loc>
-      <lastmod>2025-10-18T02:28:36+08:00</lastmod>
+      <lastmod>2025-10-27T10:39:56+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/_wiki/sec/nationalcontest.html</loc>
-      <lastmod>2025-10-18T02:28:36+08:00</lastmod>
+      <lastmod>2025-10-27T10:39:56+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/_wiki/sec/news.html</loc>
-      <lastmod>2025-10-18T02:28:36+08:00</lastmod>
+      <lastmod>2025-10-27T10:39:56+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/_wiki/sec/professor.html</loc>
-      <lastmod>2025-10-18T02:28:36+08:00</lastmod>
+      <lastmod>2025-10-27T10:39:56+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/_wiki/sec/provincecontest.html</loc>
-      <lastmod>2025-10-18T02:28:36+08:00</lastmod>
+      <lastmod>2025-10-27T10:39:56+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/_wiki/sec/qqgroup.html</loc>
-      <lastmod>2025-10-18T02:28:36+08:00</lastmod>
+      <lastmod>2025-10-27T10:39:56+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/_wiki/sec/report.html</loc>
-      <lastmod>2025-10-18T02:28:36+08:00</lastmod>
+      <lastmod>2025-10-27T10:39:56+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/_wiki/sec/resource.html</loc>
-      <lastmod>2025-10-18T02:28:36+08:00</lastmod>
+      <lastmod>2025-10-27T10:39:56+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/_wiki/sec/studyplan.html</loc>
-      <lastmod>2025-10-18T02:28:36+08:00</lastmod>
+      <lastmod>2025-10-27T10:39:56+08:00</lastmod>
     </url>
     <url>
       <loc>https://lug.ustc.edu.cn/_wiki/sec/subrepresent.html</loc>
-      <lastmod>2025-10-18T02:28:36+08:00</lastmod>
+      <lastmod>2025-10-27T10:39:56+08:00</lastmod>
     </url>
   </urlset>
