@@ -22,4 +22,4 @@ tags:
 
 相信在大家的共同努力下，LUG 会越来越好！
 
-本次大会的幻灯片可以在[这里](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.11.08_%E7%A7%8B%E5%AD%A3%E5%85%A8%E5%91%98%E5%A4%A7%E4%BC%9A/)访问。
+本次大会的幻灯片可以在[这里](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.11.08_%E7%A7%8B%E5%AD%A3%E5%85%A8%E5%91%98%E5%A4%A7%E4%BC%9A/2025%20%E7%A7%8B%E5%AD%A3%E5%85%A8%E5%91%98%E5%A4%A7%E4%BC%9A.pdf)找到。
