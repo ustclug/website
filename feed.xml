@@ -1,20 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://lug.ustc.edu.cn/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lug.ustc.edu.cn/" rel="alternate" type="text/html" /><updated>2025-10-27T11:17:47+08:00</updated><id>https://lug.ustc.edu.cn/feed.xml</id><title type="html">LUG @ USTC</title><subtitle>中国科学技术大学 Linux 用户协会</subtitle><author><name>USTCLUG</name></author><entry><title type="html">Linux 101 第二课</title><link href="https://lug.ustc.edu.cn/news/2025/10/Linux101-2/" rel="alternate" type="text/html" title="Linux 101 第二课" /><published>2025-10-25T14:30:00+08:00</published><updated>2025-10-27T11:16:16+08:00</updated><id>https://lug.ustc.edu.cn/news/2025/10/Linux101-2</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2025/10/Linux101-2/"><![CDATA[<p>2025 年 10 月 25 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C104 教室举办 Linux 101 系列活动的第二课：软件安装与文件操作。</p>
-      <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.10.25_Linux_101_%E7%AC%AC%E4%BA%8C%E8%AF%BE/poster.png" alt="" /></p>
-      <p>分享从“初识命令行”开始，介绍了 Shell（如 bash）的概念、终端的使用，并通过 whoami 等命令进行了演示。此外，还介绍了 tab 补全和复制粘贴等常用快捷键。</p>
-      <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.10.25_Linux_101_%E7%AC%AC%E4%BA%8C%E8%AF%BE/IMG_1093.png" alt="" /></p>
-      <p>随后，分享进入核心。王同学讲解了 Linux 上软件安装方式，包括使用应用商店、apt 包管理器、更换科大镜像源及安装 ripgrep。接着，在“文件操作”单元，他介绍了 ls, cd, mkdir, cp 和 rm 等命令。分享还涵盖了使用 tar 命令进行“归档与压缩”。</p>
-      <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.10.25_Linux_101_%E7%AC%AC%E4%BA%8C%E8%AF%BE/IMG_1092.png" alt="" /></p>
-      <p>在分享的最后，王同学介绍了如何查阅软件的使用文档，演示了 man 和 info 等获取帮助的途径。此外，他还推荐了一系列实用的命令行工具，如 htop, tldr, eza 和 bat，以帮助同学们提高效率。</p>
-      <p>本节课的讲义位于 LUG ftp 上：<a href="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.10.25_Linux_101_%E7%AC%AC%E4%BA%8C%E8%AF%BE/Linux%20101%20Chap%203.pdf">Linux 101 第二课</a></p>
-      ]]></content><author><name>_Kerman</name></author><category term="LUG 活动" /><category term="LUG 活动" /><category term="Linux 101" /><summary type="html"><![CDATA[2025 年 10 月 25 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C104 教室举办 Linux 101 系列活动的第二课：软件安装与文件操作。]]></summary></entry><entry><title type="html">每周小聚：VS Code 与 C 语言开发环境</title><link href="https://lug.ustc.edu.cn/news/2025/10/VSCode-C/" rel="alternate" type="text/html" title="每周小聚：VS Code 与 C 语言开发环境" /><published>2025-10-19T14:30:00+08:00</published><updated>2025-10-27T10:40:10+08:00</updated><id>https://lug.ustc.edu.cn/news/2025/10/VSCode-C</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2025/10/VSCode-C/"><![CDATA[<p>2025 年 10 月 19 日，校学生 Linux 用户协会在西区第三教学楼 3C101 教室开展了每周小聚活动。本次小聚的主题是 VS Code 的入门与使用技巧，以及如何在 VS Code 中配置 C 语言开发环境。</p>
-    <p>首先，由 _Kerman 同学带来关于 VS Code 的基本功能和实用技巧的分享，既帮助第一次使用 VS Code 的同学快速了解必要概念，也介绍了一些关于 VS Code 的有趣细节。</p>
-    <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.10.19_VSCode_C/2c0c74d5b6fe99f4fbe45f4d6438788c.jpg" alt="" /></p>
-    <p>然后，w17 同学为大家现场演示了如何在 VS Code 中配置 C 语言开发环境，包括安装 GCC、配置调试器等步骤，帮助同学们上手使用 VS Code 进行 C 语言编程。</p>
-    <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.10.19_VSCode_C/IMG_20251019_145304.jpg" alt="" /></p>
-    <p>最后是自由的讨论交流环节，大家就 VS Code 的使用经验和 C 语言开发中的问题进行了热烈的讨论。初学的同学在遇到问题时也得到了有经验同学的指导和帮助。</p>
-    <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.10.19_VSCode_C/IMG_20251019_155755.jpg" alt="" /></p>
-    <p>本次小聚的幻灯片可以在 <a href="https://kermanx.com/slides-vscode-c">此处</a> 在线查看。</p>
-    ]]></content><author><name>_Kerman</name></author><category term="LUG 活动" /><category term="LUG 活动" /><category term="LUG 小聚" /><summary type="html"><![CDATA[2025 年 10 月 19 日，校学生 Linux 用户协会在西区第三教学楼 3C101 教室开展了每周小聚活动。本次小聚的主题是 VS Code 的入门与使用技巧，以及如何在 VS Code 中配置 C 语言开发环境。]]></summary></entry><entry><title type="html">Linux Install Party</title><link href="https://lug.ustc.edu.cn/news/2025/10/Linux101-LIP/" rel="alternate" type="text/html" title="Linux Install Party" /><published>2025-10-12T14:30:00+08:00</published><updated>2025-10-27T10:39:28+08:00</updated><id>https://lug.ustc.edu.cn/news/2025/10/Linux101-LIP</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2025/10/Linux101-LIP/"><![CDATA[<p>2025 年 10 月 12 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C101 教室成功举办 Linux Install Party。这是 LUG 第九次，也是今年第二次举办 Linux Install Party。活动旨在通过理论讲解与实践操作相结合的方式，帮助参与者初步了解 Linux 操作系统并完成安装实践。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://lug.ustc.edu.cn/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lug.ustc.edu.cn/" rel="alternate" type="text/html" /><updated>2025-11-16T17:37:06+08:00</updated><id>https://lug.ustc.edu.cn/feed.xml</id><title type="html">LUG @ USTC</title><subtitle>中国科学技术大学 Linux 用户协会</subtitle><author><name>USTCLUG</name></author><entry><title type="html">Linux 101 第三课</title><link href="https://lug.ustc.edu.cn/news/2025/11/Linux101-3/" rel="alternate" type="text/html" title="Linux 101 第三课" /><published>2025-11-15T15:00:00+08:00</published><updated>2025-11-16T17:35:32+08:00</updated><id>https://lug.ustc.edu.cn/news/2025/11/Linux101-3</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2025/11/Linux101-3/"><![CDATA[<p>2025 年 11 月 15 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C101 教室举办 Linux 101 系列活动的第三课：进程、前后台、服务与例行性任务。</p>
+      <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.11.15_Linux_101_%E7%AC%AC%E4%B8%89%E8%AF%BE/poster.png" alt="" /></p>
+      <p>本次活动由吴擎宇同学为大家带来相关内容讲解。首先，通过以 htop 中展示的进程信息为例，吴同学介绍了 Linux 系统中的进程概念和进程的相关属性。</p>
+      <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.11.15_Linux_101_%E7%AC%AC%E4%B8%89%E8%AF%BE/IMG_1179.jpg" alt="" /></p>
+      <p>随后，吴同学讲解了 Linux 上用于控制进程行为的各种信号的作用及其发送方式，以及通过 jobs、fg、bg 等命令对前后台进程的管理，并现场演示了 tmux 的使用。</p>
+      <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.11.15_Linux_101_%E7%AC%AC%E4%B8%89%E8%AF%BE/IMG_1183.jpg" alt="" /></p>
+      <p>最后，吴同学介绍了 Linux 系统中的服务管理工具 systemd 的基本使用方法，并讲解了如何使用 cron 工具来设置例行性任务。</p>
+      <p>本节课的讲义位于 LUG ftp 上：<a href="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.11.15_Linux_101_%E7%AC%AC%E4%B8%89%E8%AF%BE/slides.pdf">Linux 101 第三课</a></p>
+      ]]></content><author><name>_Kerman</name></author><category term="LUG 活动" /><category term="LUG 活动" /><category term="Linux 101" /><summary type="html"><![CDATA[2025 年 11 月 15 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C101 教室举办 Linux 101 系列活动的第三课：进程、前后台、服务与例行性任务。]]></summary></entry><entry><title type="html">2025 年秋季全员大会</title><link href="https://lug.ustc.edu.cn/news/2025/11/General-Meeting/" rel="alternate" type="text/html" title="2025 年秋季全员大会" /><published>2025-11-08T15:00:00+08:00</published><updated>2025-11-16T17:35:32+08:00</updated><id>https://lug.ustc.edu.cn/news/2025/11/General-Meeting</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2025/11/General-Meeting/"><![CDATA[<p>2025 年 11 月 8 日下午 3 点，中国科学技术大学学生 Linux 用户协会在西区 3C101 教室召开了秋季全员大会。</p>
+    <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.11.08_%E7%A7%8B%E5%AD%A3%E5%85%A8%E5%91%98%E5%A4%A7%E4%BC%9A/IMG_20251108_150945.jpg" alt="" /></p>
+    <p>本次大会由会长王永福同学主持。首先，王同学介绍了 LUG 的基本情况和提供的资料与服务，并回顾了本学期以来 LUG 举办的各项活动，包括 Linux 101 系列课程、软件自由日、每周小聚等。接着，他展望了未来一段时间 LUG 计划举办的活动，如 Linux 101 后续课程和 Linux 201、Hackergame、每周小聚等。</p>
+    <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.11.08_%E7%A7%8B%E5%AD%A3%E5%85%A8%E5%91%98%E5%A4%A7%E4%BC%9A/IMG_20251108_151014.jpg" alt="" /></p>
+    <p>随后，大家展开了热烈的讨论，分享了对 LUG 未来发展的建议和想法。</p>
+    <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.11.08_%E7%A7%8B%E5%AD%A3%E5%85%A8%E5%91%98%E5%A4%A7%E4%BC%9A/photo_2025-11-08_20-51-52.jpg" alt="" /></p>
+    <p>相信在大家的共同努力下，LUG 会越来越好！</p>
+    <p>本次大会的幻灯片可以在<a href="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.11.08_%E7%A7%8B%E5%AD%A3%E5%85%A8%E5%91%98%E5%A4%A7%E4%BC%9A/2025%20%E7%A7%8B%E5%AD%A3%E5%85%A8%E5%91%98%E5%A4%A7%E4%BC%9A.pdf">这里</a>找到。</p>
+    ]]></content><author><name>_Kerman</name></author><category term="LUG 活动" /><category term="LUG 活动" /><summary type="html"><![CDATA[2025 年 11 月 8 日下午 3 点，中国科学技术大学学生 Linux 用户协会在西区 3C101 教室召开了秋季全员大会。]]></summary></entry><entry><title type="html">Linux 101 第二课</title><link href="https://lug.ustc.edu.cn/news/2025/10/Linux101-2/" rel="alternate" type="text/html" title="Linux 101 第二课" /><published>2025-10-25T14:30:00+08:00</published><updated>2025-11-16T17:35:32+08:00</updated><id>https://lug.ustc.edu.cn/news/2025/10/Linux101-2</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2025/10/Linux101-2/"><![CDATA[<p>2025 年 10 月 25 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C104 教室举办 Linux 101 系列活动的第二课：软件安装与文件操作。</p>
+  <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.10.25_Linux_101_%E7%AC%AC%E4%BA%8C%E8%AF%BE/poster.png" alt="" /></p>
+  <p>本次活动由王昊元同学为大家带来相关内容讲解。分享从“初识命令行”开始，介绍了 Shell（如 bash）的概念、终端的使用，并通过 whoami 等命令进行了演示。此外，还介绍了 tab 补全和复制粘贴等常用快捷键。</p>
+  <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.10.25_Linux_101_%E7%AC%AC%E4%BA%8C%E8%AF%BE/IMG_1093.png" alt="" /></p>
+  <p>随后，分享进入核心。王同学讲解了 Linux 上软件安装方式，包括使用应用商店、apt 包管理器、更换科大镜像源及安装 ripgrep。接着，在“文件操作”单元，他介绍了 ls, cd, mkdir, cp 和 rm 等命令。分享还涵盖了使用 tar 命令进行“归档与压缩”。</p>
+  <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.10.25_Linux_101_%E7%AC%AC%E4%BA%8C%E8%AF%BE/IMG_1092.png" alt="" /></p>
+  <p>在分享的最后，王同学介绍了如何查阅软件的使用文档，演示了 man 和 info 等获取帮助的途径。此外，他还推荐了一系列实用的命令行工具，如 htop, tldr, eza 和 bat，以帮助同学们提高效率。</p>
+  <p>本节课的讲义位于 LUG ftp 上：<a href="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.10.25_Linux_101_%E7%AC%AC%E4%BA%8C%E8%AF%BE/Linux%20101%20Chap%203.pdf">Linux 101 第二课</a></p>
+  ]]></content><author><name>_Kerman</name></author><category term="LUG 活动" /><category term="LUG 活动" /><category term="Linux 101" /><summary type="html"><![CDATA[2025 年 10 月 25 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C104 教室举办 Linux 101 系列活动的第二课：软件安装与文件操作。]]></summary></entry><entry><title type="html">每周小聚：VS Code 与 C 语言开发环境</title><link href="https://lug.ustc.edu.cn/news/2025/10/VSCode-C/" rel="alternate" type="text/html" title="每周小聚：VS Code 与 C 语言开发环境" /><published>2025-10-19T14:30:00+08:00</published><updated>2025-10-27T10:40:10+08:00</updated><id>https://lug.ustc.edu.cn/news/2025/10/VSCode-C</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2025/10/VSCode-C/"><![CDATA[<p>2025 年 10 月 19 日，校学生 Linux 用户协会在西区第三教学楼 3C101 教室开展了每周小聚活动。本次小聚的主题是 VS Code 的入门与使用技巧，以及如何在 VS Code 中配置 C 语言开发环境。</p>
+  <p>首先，由 _Kerman 同学带来关于 VS Code 的基本功能和实用技巧的分享，既帮助第一次使用 VS Code 的同学快速了解必要概念，也介绍了一些关于 VS Code 的有趣细节。</p>
+  <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.10.19_VSCode_C/2c0c74d5b6fe99f4fbe45f4d6438788c.jpg" alt="" /></p>
+  <p>然后，w17 同学为大家现场演示了如何在 VS Code 中配置 C 语言开发环境，包括安装 GCC、配置调试器等步骤，帮助同学们上手使用 VS Code 进行 C 语言编程。</p>
+  <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.10.19_VSCode_C/IMG_20251019_145304.jpg" alt="" /></p>
+  <p>最后是自由的讨论交流环节，大家就 VS Code 的使用经验和 C 语言开发中的问题进行了热烈的讨论。初学的同学在遇到问题时也得到了有经验同学的指导和帮助。</p>
+  <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.10.19_VSCode_C/IMG_20251019_155755.jpg" alt="" /></p>
+  <p>本次小聚的幻灯片可以在 <a href="https://kermanx.com/slides-vscode-c">此处</a> 在线查看。</p>
+  ]]></content><author><name>_Kerman</name></author><category term="LUG 活动" /><category term="LUG 活动" /><category term="LUG 小聚" /><summary type="html"><![CDATA[2025 年 10 月 19 日，校学生 Linux 用户协会在西区第三教学楼 3C101 教室开展了每周小聚活动。本次小聚的主题是 VS Code 的入门与使用技巧，以及如何在 VS Code 中配置 C 语言开发环境。]]></summary></entry><entry><title type="html">Linux Install Party</title><link href="https://lug.ustc.edu.cn/news/2025/10/Linux101-LIP/" rel="alternate" type="text/html" title="Linux Install Party" /><published>2025-10-12T14:30:00+08:00</published><updated>2025-10-27T10:39:28+08:00</updated><id>https://lug.ustc.edu.cn/news/2025/10/Linux101-LIP</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2025/10/Linux101-LIP/"><![CDATA[<p>2025 年 10 月 12 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C101 教室成功举办 Linux Install Party。这是 LUG 第九次，也是今年第二次举办 Linux Install Party。活动旨在通过理论讲解与实践操作相结合的方式，帮助参与者初步了解 Linux 操作系统并完成安装实践。</p>
   <p>本次活动由 LUG 会长王永福同学主持。首先，LUG 技术部李培锋同学为大家讲解了 Linux 的历史沿革、各大发行版的特点、以及 Linux 在学习生活的应用案例。然后，他介绍了适合同学们的 Linux 的安装方式，包括全新安装、双系统安装、虚拟机安装、通过 WSL 安装，并现场演示了通过学校的 Vlab 平台上手使用 Linux 系统的过程。</p>
   <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.10.12_Linux_101_%E7%AC%AC%E4%B8%80%E8%AF%BE_Linux_Install_Party/photos/6.jpg" alt="" /></p>
   <p>“Talk is Cheap, Let’s Install Linux”，随后，同学们现场动手安装 Linux 系统。本次活动 LUG 准备了 6 块包含多种发行版镜像、虚拟机软件的启动 U 盘，为需要的同学们提供及时的帮助。同学们有的通过校内 Vlab 平台远程体验，有的在 WSL 或虚拟机环境进行安装，有的在实体设备中安装双系统，社员们都耐心地解答同学们的各种问题，帮助大家完成安装过程。</p>
@@ -321,194 +337,4 @@ unbind <span class="nt">-T</span> root F12
   <p><img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2025.03.16_Linux_101_%E7%AC%AC%E4%B8%80%E8%AF%BE_Linux_Install_Party/IMG_7524.jpeg" alt="" /></p>
   <p>本次活动通过理论普及与动手实践的有效结合，帮助参与者建立起对 Linux 系统的初步认知。相信在未来的活动中，会有更多精彩的内容等待着大家。</p>
   <p>相关课程资料已同步上传至 FTP：<a href="https://ftp.lug.ustc.edu.cn/活动/2025.03.16_Linux_101_第一课_Linux_Install_Party/101-2025-1.pdf">Linux 101 第一课 &amp; Linux Install Party</a></p>
-  ]]></content><author><name>_Kerman</name></author><category term="LUG 活动" /><category term="linux-install-party" /><category term="Linux 101" /><category term="LUG 活动" /><summary type="html"><![CDATA[2025 年 3 月 16 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C101 教室成功举办 “Linux 101” 系列课程首讲——Linux Install Party。这是 LUG 第八年举办 Linux 101 系列课程、第九年举办 Linux Install Party。本次活动通过理论讲解与实践操作相结合的方式，帮助参与者初步了解 Linux 操作系统并完成安装实践。]]></summary></entry><entry><title type="html">Rootless Docker in Docker 在 Hackergame 中的实践</title><link href="https://lug.ustc.edu.cn/planet/2025/02/hackergame-rootless-docker/" rel="alternate" type="text/html" title="Rootless Docker in Docker 在 Hackergame 中的实践" /><published>2025-02-08T00:00:00+08:00</published><updated>2025-02-27T16:35:18+08:00</updated><id>https://lug.ustc.edu.cn/planet/2025/02/hackergame-rootless-docker</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2025/02/hackergame-rootless-docker/"><![CDATA[<p>本文介绍了 2024 年 USTC Hackergame 中 Rootless Docker in Docker 在 Web 类题目容器隔离中的实践。</p>
-  <h2 id="背景">背景</h2>
-  <p>USTC Hackergame 长期以来使用 Docker 及 Docker Compose 来部署和管理各种题目。对于 <code class="language-plaintext highlighter-rouge">nc</code> 类题目，我们使用一个<a href="https://github.com/USTC-Hackergame/hackergame-challenge-docker">简单的 Python 管理程序</a>来为每个已验证的传入连接创建一个单独的题目运行环境容器，以保证选手之间的隔离。为了动态创建容器，我们将 <code class="language-plaintext highlighter-rouge">/var/run/docker.sock</code> 暴露给这个 Python 程序，以便它可以调用 Docker API 来创建容器。由于这个 Python 程序足够简单，我们认为这样做是安全的。而对于 Web 类题目，我们要求出题人在题目内部做好隔离，然而这样带来了额外的心智负担，而且容易出错，可能导致非预期解或出现能够干扰其他选手的情况。</p>
-  <p>在 2024 年 Hackergame 中，我们决定实现 Web 类题目的容器隔离方案，北京大学 GeekGame 基于我们的 nc 容器管理方案实现了一个<a href="https://github.com/PKU-GeekGame/web-docker-manager">简单的 Web 类题目容器管理方案</a>，该方案同样通过透传 Docker Socket 实现对 Web 题目的容器管理。然而，Web 题目的反向代理比 nc 复杂得多，这使得我们对该方案的安全性存在较大的担忧，一旦该管理程序被攻破，攻击者可以直接控制整个服务器。因此，我们需要一个更安全的方案，使得即使 Web 题目的容器管理程序被攻破，攻击者也无法轻易控制整个服务器，这就需要在隔离的、低权限的环境中运行 Docker Daemon。</p>
-  <h2 id="rootless-docker-in-docker">Rootless Docker-in-Docker</h2>
-  <p>Rootless Docker 是在低权限环境中运行 Docker 的一种方案。Docker 官方提供了一种 <a href="https://docs.docker.com/engine/security/rootless/#rootless-docker-in-docker">Rootless Docker in Docker</a> 的方案，只需要一行命令即可启动：</p>
-  <div class="language-bash highlighter-rouge">
-    <div class="highlight">
-      <pre class="highlight"><code>docker run <span class="nt">-d</span> <span class="nt">--name</span> dind-rootless <span class="nt">--privileged</span> docker:25.0-dind-rootless
-</code></pre>
-    </div>
-  </div>
-  <p>该方案在容器中以非 <code class="language-plaintext highlighter-rouge">root</code> 用户（UID 1000）创建用户命名空间，并分离其他命名空间和运行 Docker Daemon。然而，该方案存在一些问题：</p>
-  <ol>
-    <li>该方案需要 <code class="language-plaintext highlighter-rouge">--privileged</code> 选项，以禁用 seccomp、AppArmor 和 mount masks，但这意味着容器将获得更高的权限，可能导致安全问题。</li>
-    <li>该方案无法使用 cgroup 来限制容器资源使用，因为 Rootless Docker 需要 systemd 将 cgroup 路径委托给 Docker Daemon 才能执行资源限制。虽然可以用 <code class="language-plaintext highlighter-rouge">rlimit</code> 等方案来限制资源，但其工作在进程粒度而非容器粒度，而且可以被轻松禁用。由于 Hackergame 需要强制执行容器资源限制，该问题是致命的。</li>
-  </ol>
-  <h2 id="基于-systemd-user-instance-的-rootless-docker-in-docker">基于 Systemd User Instance 的 Rootless Docker-in-Docker</h2>
-  <p>为了解决上述问题，我们采用了一个基于 Systemd User Instance 的 Rootless Docker-in-Docker 方案。该方案在 Systemd User Instance 中运行 Rootless Docker Daemon，以实现资源限制和更好的安全性。</p>
-  <h3 id="systemd-in-docker">Systemd in Docker</h3>
-  <p>为了实现该方案，首先需要在容器中运行 <code class="language-plaintext highlighter-rouge">systemd</code>。systemd 的网站上列出了<a href="https://systemd.io/CONTAINER_INTERFACE/">在容器中运行 systemd 的要求</a>，对于 Docker 来说，主要有以下几点：</p>
-  <ol>
-    <li>保留 <code class="language-plaintext highlighter-rouge">CAP_SYS_ADMIN</code> 特权。</li>
-    <li>启用私有 <code class="language-plaintext highlighter-rouge">cgroup</code> 命名空间，并将 <code class="language-plaintext highlighter-rouge">/sys/fs/cgroup</code> 挂载为可写。</li>
-    <li>将 <code class="language-plaintext highlighter-rouge">/tmp</code>, <code class="language-plaintext highlighter-rouge">/run</code>, <code class="language-plaintext highlighter-rouge">/run/lock</code>, <code class="language-plaintext highlighter-rouge">/var/lib/journal</code> 挂载为 <code class="language-plaintext highlighter-rouge">tmpfs</code>。</li>
-    <li>将 <code class="language-plaintext highlighter-rouge">stop_signal</code> 设置为 <code class="language-plaintext highlighter-rouge">SIGRTMIN+3</code>，以便 systemd 可以正确关闭。</li>
-    <li>禁用 AppArmor 或 SELinux。</li>
-  </ol>
-  <p>我们在 <code class="language-plaintext highlighter-rouge">docker-compose.yml</code> 中添加了以下内容来实现这些要求：</p>
-  <div class="language-yaml highlighter-rouge">
-    <div class="highlight">
-      <pre class="highlight"><code><span class="na">cap_add</span><span class="pi">:</span>
-  <span class="pi">-</span> <span class="s">SYS_ADMIN</span>
-  <span class="pi">-</span> <span class="s">NET_ADMIN</span>
-<span class="na">cgroup</span><span class="pi">:</span> <span class="s">private</span>
-<span class="na">devices</span><span class="pi">:</span>
-  <span class="pi">-</span> <span class="s">/dev/net/tun:/dev/net/tun</span>
-<span class="na">tmpfs</span><span class="pi">:</span>
-  <span class="pi">-</span> <span class="s">/tmp</span>
-  <span class="pi">-</span> <span class="s">/run</span>
-  <span class="pi">-</span> <span class="s">/run/lock</span>
-  <span class="pi">-</span> <span class="s">/var/lib/journal</span>
-<span class="na">stop_signal</span><span class="pi">:</span> <span class="s">SIGRTMIN+3</span>
-<span class="na">tty</span><span class="pi">:</span> <span class="kc">true</span>
-<span class="na">security_opt</span><span class="pi">:</span>
-  <span class="pi">-</span> <span class="s">seccomp=seccomp.json</span>
-  <span class="pi">-</span> <span class="s">apparmor=unconfined</span>
-  <span class="pi">-</span> <span class="s">systempaths=unconfined</span>
-</code></pre>
-    </div>
-  </div>
-  <p>其中 <code class="language-plaintext highlighter-rouge">seccomp.json</code> 可以从<a href="https://github.com/USTC-Hackergame/web-docker-manager/raw/refs/heads/main/rootless/seccomp.json">这里</a>获取，该文件在 Docker <a href="https://github.com/moby/moby/raw/refs/heads/master/profiles/seccomp/default.json">默认 seccomp 配置</a>的基础上允许了 <code class="language-plaintext highlighter-rouge">keyctl</code> 和 <code class="language-plaintext highlighter-rouge">pivot_root</code> 系统调用，这些系统调用是 Docker 所需要的。此外，该配置还一并禁用了 mount masks (<code class="language-plaintext highlighter-rouge">systempaths=unconfined</code>)，因为 Docker 启动容器时需要重新挂载 <code class="language-plaintext highlighter-rouge">/sys</code>。此外，我们还保留了 <code class="language-plaintext highlighter-rouge">NET_ADMIN</code> 特权，因为一些 systemd 的组件需要该特权。</p>
-  <p>需要注意的是，<code class="language-plaintext highlighter-rouge">cgroup: private</code> 并不会将 <code class="language-plaintext highlighter-rouge">/sys/fs/cgroup</code> 挂载为可写，因此我们需要在容器启动时手动处理，可以通过一个自定义的 <code class="language-plaintext highlighter-rouge">entrypoint.sh</code> 来实现：</p>
-  <div class="language-bash highlighter-rouge">
-    <div class="highlight">
-      <pre class="highlight"><code><span class="c">#!/bin/bash</span>
-
-<span class="nb">set</span> <span class="nt">-euo</span> pipefail
-
-mount <span class="nt">--make-rshared</span> /
-
-<span class="c"># Remount cgroup</span>
-umount /sys/fs/cgroup
-mount <span class="nt">-t</span> cgroup2 <span class="nt">-o</span> rw,relatime,nsdelegate cgroup2 /sys/fs/cgroup
-
-<span class="nb">exec</span> /lib/systemd/systemd
-</code></pre>
-    </div>
-  </div>
-  <h3 id="rootless-docker-daemon-in-systemd-user-instance">Rootless Docker Daemon in Systemd User Instance</h3>
-  <p>在容器中以非 <code class="language-plaintext highlighter-rouge">root</code> 身份运行 Docker Daemon 非常简单，只需要在容器中安装带 Rooeless 支持的 Docker：</p>
-  <div class="language-dockerfile highlighter-rouge">
-    <div class="highlight">
-      <pre class="highlight"><code><span class="k">RUN </span>apt-get <span class="nb">install</span> <span class="nt">-y</span> ca-certificates curl <span class="o">&amp;&amp;</span> <span class="se">\
-</span>    <span class="nb">install</span> <span class="nt">-m</span> 0755 <span class="nt">-d</span> /etc/apt/keyrings <span class="o">&amp;&amp;</span> <span class="se">\
-</span>    curl <span class="nt">-fsSL</span> https://download.docker.com/linux/debian/gpg <span class="nt">-o</span> /etc/apt/keyrings/docker.asc <span class="o">&amp;&amp;</span> <span class="se">\
-</span>    <span class="nb">chmod </span>a+r /etc/apt/keyrings/docker.asc <span class="o">&amp;&amp;</span> <span class="se">\
-</span>    <span class="nb">echo</span> <span class="s2">"deb [arch=</span><span class="si">$(</span>dpkg <span class="nt">--print-architecture</span><span class="si">)</span><span class="s2"> signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian bookworm stable"</span> <span class="o">&gt;</span> /etc/apt/sources.list.d/docker.list <span class="o">&amp;&amp;</span> <span class="se">\
-</span>    apt-get update <span class="o">&amp;&amp;</span> <span class="se">\
-</span>    apt-get <span class="nb">install</span> <span class="nt">-y</span> docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin uidmap <span class="o">&amp;&amp;</span> <span class="se">\
-</span>    systemctl disable docker.service docker.socket containerd.service
-</code></pre>
-    </div>
-  </div>
-  <p>并创建一个用户，假设名为 <code class="language-plaintext highlighter-rouge">rootless</code>，然后使用 <code class="language-plaintext highlighter-rouge">machinectl shell rootless@</code> 切换到该用户，并运行 <code class="language-plaintext highlighter-rouge">dockerd-rootless-setuptool.sh install</code> 即可安装 Rootless Docker Daemon，安装程序会自动创建 <code class="language-plaintext highlighter-rouge">~/.config/systemd/user/docker.service</code> 并将其安装到 <code class="language-plaintext highlighter-rouge">default.target</code>。设置环境变量 <code class="language-plaintext highlighter-rouge">DOCKER_HOST=unix:///run/user/$UID/docker.sock</code> 即可通过 Docker CLI 工具访问该 Rootless Docker Daemon。</p>
-  <h3 id="wrapping-up">Wrapping Up</h3>
-  <p>将 Rootless Docker Daemon 安装脚本生成的 <code class="language-plaintext highlighter-rouge">~/.config/systemd/user/docker.service</code> 文件复制出来，并创建 <code class="language-plaintext highlighter-rouge">~/.config/systemd/user/default.target.wants</code> 中的相对路径符号链接，并在 Dockerfile 中添加创建用户和将这些文件到用户目录中的内容，最后通过在 <code class="language-plaintext highlighter-rouge">/var/lib/systemd/linger</code> 目录下创建名为用户名的空文件来使对应的 Systemd User Instance 自动启动，即可实现自动启动 Rootless Docker Daemon。</p>
-  <p>该方案最终版本代码位于 <a href="https://github.com/USTC-Hackergame/web-docker-manager">USTC-Hackergame/web-docker-manager</a> 仓库的 <code class="language-plaintext highlighter-rouge">rootless</code> 目录，其中添加了一些用于持久化数据和暴露一些目录到主机的内容。</p>
-  <h3 id="安全性分析">安全性分析</h3>
-  <p>Rootless Docker 通过 <a href="https://github.com/rootless-containers/rootlesskit">RootlessKit</a> 分离用户命名空间，来实现非特权用户的特权操作以创建容器，因此该方案的容器（命名空间）层次结构如下：</p>
-  <div class="language-plaintext highlighter-rouge">
-    <div class="highlight">
-      <pre class="highlight"><code>Host (Full Privilege)
-└── systemd in Docker (UID 0, CAP_SYS_ADMIN, CAP_NET_ADMIN)
-        └── RootlessKit (UID 0 in inner user namespace, with ALL capabilities; UID 1000 in outer user namespace, with no capabilities)
-            └── Manager Container
-            └── Web Challenge Container 1
-            └── Web Challenge Container 2
-</code></pre>
-    </div>
-  </div>
-  <p>若管理程序被攻破，则攻击者可以取得 RootlessKit 所创建的用户命名空间中的特权，但由于 RootlessKit 在外层用户命名空间是非特权用户，且运行在容器中，因此攻击者无法直接控制整个服务器，也无法直接访问 Host 的文件系统其他部分。</p>
-  <h2 id="总结">总结</h2>
-  <p>通过基于 Systemd User Instance 的 Rootless Docker in Docker 方案，我们成功地实现了在隔离的、低权限的环境中运行 Docker Daemon，以实现 Web 类题目的容器隔离。该方案强制执行了容器的资源限制，并通过隔离 Docker Daemon 提高了安全性，使得即使 Web 题目的容器管理程序被攻破，攻击者也无法轻易控制整个服务器。该方案已经在 2024 年 USTC Hackergame 中应用于数道 Web 类题目并稳定运行。</p>
-  <p>尽管如此，该方案仍有改进空间，如当前外层容器仍需 <code class="language-plaintext highlighter-rouge">SYS_ADMIN</code> 特权，这实际上是相当大的权限，而 <a href="https://github.com/nestybox/sysbox">Sysbox</a> 容器运行时可以在创建容器时直接分离用户命名空间，提供了一种不需要这些特权的替代方案，是一个可以探索的方向。此外，我们的方案为了方便直接禁用了 AppArmor Profile，但实际上只需要创建自定义的 AppArmor Profile 放松一些限制（如允许 <code class="language-plaintext highlighter-rouge">mount</code> 和放松一些路径下的限制），而不需要将其完全置于 <code class="language-plaintext highlighter-rouge">unconfined</code> 状态，这样可以进一步提升安全性，但仍需要进一步探索。</p>
-  ]]></content><author><name>RTXUX</name></author><category term="Hackergame" /><category term="Hackergame" /><category term="Docker" /><category term="Container" /><summary type="html"><![CDATA[本文介绍了 2024 年 USTC Hackergame 中 Rootless Docker in Docker 在 Web 类题目容器隔离中的实践。]]></summary></entry><entry><title type="html">快速建立本地 HTTP 文件服务</title><link href="https://lug.ustc.edu.cn/planet/2025/01/local-file-serving/" rel="alternate" type="text/html" title="快速建立本地 HTTP 文件服务" /><published>2025-01-03T00:00:00+08:00</published><updated>2025-01-06T16:32:35+08:00</updated><id>https://lug.ustc.edu.cn/planet/2025/01/local-file-serving</id><content type="html" xml:base="https://lug.ustc.edu.cn/planet/2025/01/local-file-serving/"><![CDATA[<p>USTCLUG 的一个重要服务是它的 <a href="https://mirrors.ustc.edu.cn">开源软件镜像</a>。但是我们这里要讨论的，是另一种自己在本地搭建的文件服务，目的是加速对远程静态文件的访问。这篇文章来源于帮同学解决的一个小问题。</p>
-  <h2 id="目的">目的</h2>
-  <p>某些课程作业附带的代码示例会通过 HTTP 的方式获取运行需要的输入数据，但是如果这个数据不巧放在某台访问速率很低的服务器上（例如不少用 <code class="language-plaintext highlighter-rouge">.edu</code> 域名的国外大学的课程网站上），则会使得作业的运行时间大大加长——通过只有几 KB/s 的网络下载数十 MB 的数据总不是个好主意。更有可能的是，根据作业内容，样例代码还需要做一些修改，这时候每次调试运行代码时都要去下载一次输入数据，简直难以忍受。本文将针对 Windows 用户，讲解如何在手工下载一次相关的文件后，在本地快速搭建一个 HTTP 服务器提供数据文件，以避免反复访问慢速的源地址。对于不能修改访问地址的情况，也提供了相应的对策。</p>
-  <blockquote>
-    <p>为何不写针对 Linux 用户的教程呢？这是因为，由于有 Apache 和 Nginx 这类成熟好用的服务器软件，再加上 Linux 操作系统优秀的包管理器，结合网上的教程，用几分钟的时间在 Linux 平台上快速建立并运行一个 HTTP 服务器应该不是难事。而在 Windows 上，配置 IIS 这类大而笨重的服务器非常麻烦，使用 Apache/Nginx 之类的服务器软件又由于操作习惯的不同，也不方便。</p>
-  </blockquote>
-  <h2 id="使用-python-httpserver">使用 Python <code class="language-plaintext highlighter-rouge">http.server</code></h2>
-  <p><strong>对比下面的（老旧的）<code class="language-plaintext highlighter-rouge">EasyWebSvr</code>，使用 Python 很容易完成一个简单的 HTTP 服务器搭建。</strong></p>
-  <p>如果你已经安装了 Python，则可以直接使用</p>
-  <div class="language-shell highlighter-rouge">
-    <div class="highlight">
-      <pre class="highlight"><code>python3 <span class="nt">-m</span> http.server &lt;port&gt;
-</code></pre>
-    </div>
-  </div>
-  <p>来以当前目录为根目录，<code class="language-plaintext highlighter-rouge">&lt;port&gt;</code> 为端口运行一个 HTTP 服务器。</p>
-  <p>如果需要指定别的目录 <code class="language-plaintext highlighter-rouge">&lt;path&gt;</code> 作为 HTTP 服务的根目录，可以使用</p>
-  <div class="language-shell highlighter-rouge">
-    <div class="highlight">
-      <pre class="highlight"><code>python3 <span class="nt">-m</span> http.server &lt;port&gt; <span class="nt">--directory</span> &lt;path&gt;
-</code></pre>
-    </div>
-  </div>
-  <p>如果需要 bind 到特定的地址（对于本地服务而言，应该使用 <code class="language-plaintext highlighter-rouge">127.0.0.1</code>），可以使用下面的命令。<code class="language-plaintext highlighter-rouge">bind</code> 是指将一个网络地址（IP 和端口）与服务器软件中的套接字关联的过程，使得该服务器能接收指定地址上的网络数据。<strong>Python 的 http.server 默认值为 <code class="language-plaintext highlighter-rouge">0.0.0.0</code>，代表所有人都可以访问</strong>。如果只需要本地访问，则可以使用本地回环地址 <code class="language-plaintext highlighter-rouge">127.0.0.1</code>。</p>
-  <div class="language-shell highlighter-rouge">
-    <div class="highlight">
-      <pre class="highlight"><code>python3 <span class="nt">-m</span> http.server &lt;port&gt; <span class="nt">--bind</span> 127.0.0.1
-</code></pre>
-    </div>
-  </div>
-  <h2 id="使用-easywebserver">使用 EasyWebServer</h2>
-  <h3 id="获取一个-http-服务器">获取一个 HTTP 服务器</h3>
-  <p>首先当然是要获取一个 HTTP 服务器了，这里我们选择的是 <code class="language-plaintext highlighter-rouge">EasyWebSvr</code>。这个服务器是一个体积超小（只有数十 KB）、单文件、几乎不需要配置的小型 HTTP 服务器，甚至支持 CGI 和 PHP。<code class="language-plaintext highlighter-rouge">EasyWebSvr</code> 是一个历史久远的<a href="https://github.com/baojianjob/EasyWebSvr">开源项目</a>，使用 MSVC 作为开发环境，而且很容易下载到它的编译好的版本（搜索 <code class="language-plaintext highlighter-rouge">EasyWebSvr</code> 就可以了）。下载后你将得到一个 <code class="language-plaintext highlighter-rouge">EasyWebSvr.exe</code> 和一些其他的文件。不用理会其他的文件（事实上它们是不必要的），直接将 <code class="language-plaintext highlighter-rouge">EasyWebSvr.exe</code> 复制到一个空文件夹里面就可以了。</p>
-  <blockquote>
-    <p>提示：根据<a href="https://github.com/baojianjob/EasyWebSvr/blob/796448f6b312ad0676add90024940316dfa34299/EasyWebSvr/Socket.cpp#L439">代码</a>，EasyWebSvr 会 bind 到 <code class="language-plaintext highlighter-rouge">0.0.0.0</code>，这可能会导致<strong>安全问题</strong>。如果需要 bind 到 <code class="language-plaintext highlighter-rouge">127.0.0.1</code>，可能需要修改代码并重新构建。</p>
-  </blockquote>
-  <h3 id="准备数据">准备数据</h3>
-  <ul>
-    <li>从原始的地址上手工下载一份要被访问的数据，放到上面所说的那个空文件夹里面。</li>
-    <li>运行 <code class="language-plaintext highlighter-rouge">EasyWebSvr.exe</code>，可以看到一个小窗口。</li>
-    <li>点击右下角的锤子按钮（菜单），选择最下面的 <code class="language-plaintext highlighter-rouge">设置</code> 一项。</li>
-    <li>在弹出的设置对话框里面，选择 <code class="language-plaintext highlighter-rouge">主目录</code> 为当前 <code class="language-plaintext highlighter-rouge">EasyWebSvr.exe</code> 所在的目录。</li>
-    <li>在 <code class="language-plaintext highlighter-rouge">文档</code> 选项卡里面勾选 <code class="language-plaintext highlighter-rouge">允许目录浏览</code> 和 <code class="language-plaintext highlighter-rouge">总是显示目录内容</code>。</li>
-    <li>点击 <code class="language-plaintext highlighter-rouge">确定</code> 结束并保存配置。</li>
-    <li>然后在主窗口里面点击右下方的红色按钮（在菜单按钮的边上），正常应该看到它变成蓝绿色（这时候如果有 Windows 防火墙提示，请选择允许）。</li>
-    <li>此时服务器就配置好了，打开浏览器输入 <code class="language-plaintext highlighter-rouge">http://localhost</code> 即可看到文件列表。</li>
-  </ul>
-  <h3 id="修改原先的代码">修改原先的代码</h3>
-  <ul>
-    <li>例如原先提供的代码中数据文件的 URL 是 <code class="language-plaintext highlighter-rouge">http://some.site.edu/path/to/file/data.csv</code>，而这份数据就和 <code class="language-plaintext highlighter-rouge">EasyWebSvr.exe</code> 在同一文件夹下，则将代码中的地址修改为 <code class="language-plaintext highlighter-rouge">http://localhost/data.csv</code> 就可以使用本地的文件服务了！</li>
-    <li>服务器最小化后会显示一个小托盘图标，右键点击它可以显示各种选项，包括重新显示主窗口。</li>
-    <li>使用完后，点击蓝绿色图标，它会变成红色，此时服务器就关闭了。</li>
-  </ul>
-  <h3 id="特殊情况">特殊情况</h3>
-  <h4 id="代码不支持修改地址">代码不支持修改地址</h4>
-  <p>如果代码不支持修改地址（这很少见），那么也可以按照原来的 URL 在本地建立文件夹，类似下面这样：</p>
-  <div class="language-text highlighter-rouge">
-    <div class="highlight">
-      <pre class="highlight"><code>EasyWebSvr.exe
-path/                -&gt; 建立这个目录
-    to/              -&gt; 建立这个目录
-        file/        -&gt; 建立这个目录
-            data.csv -&gt; 数据文件在这里
-</code></pre>
-    </div>
-  </div>
-  <p>然后修改 <code class="language-plaintext highlighter-rouge">hosts</code> 文件（一般在 <code class="language-plaintext highlighter-rouge">C:\Windows\System32\drivers\etc</code> 里面，需要管理员权限，具体请看相关教程），加上一句</p>
-  <div class="language-text highlighter-rouge">
-    <div class="highlight">
-      <pre class="highlight"><code>127.0.0.1 some.site.edu
-</code></pre>
-    </div>
-  </div>
-  <p>然后以管理员权限运行</p>
-  <div class="language-shell highlighter-rouge">
-    <div class="highlight">
-      <pre class="highlight"><code>ipconfig /flushdns
-</code></pre>
-    </div>
-  </div>
-  <p>即可。可以通过浏览器访问 <code class="language-plaintext highlighter-rouge">http://some.site.edu/path/to/file/data.csv</code> 来确认。这一操作会修改所有对 <code class="language-plaintext highlighter-rouge">some.site.edu</code> 的请求，因此用完后请删去在 <code class="language-plaintext highlighter-rouge">hosts</code> 中加入的那一行，然后再运行一次 <code class="language-plaintext highlighter-rouge">ipconfig /flushdns</code>。</p>
-  <h4 id="原地址有非-80-的端口号">原地址有非 80 的端口号</h4>
-  <p>如果你拿到的地址使用了别的端口（例如 <code class="language-plaintext highlighter-rouge">some.site.edu:8080</code>）且不能修改，那么请在 EasyWebServer 的设置页面 <code class="language-plaintext highlighter-rouge">端口号</code> 处输入对应的端口号 <code class="language-plaintext highlighter-rouge">8080</code>，对应的访问地址就是 <code class="language-plaintext highlighter-rouge">localhost:8080</code>。</p>
-  <h4 id="提示端口已被占用">提示端口已被占用</h4>
-  <p>这可能是因为有其他应用在使用 80 端口。通过 <code class="language-plaintext highlighter-rouge">netstat -ano</code> 命令可以查看机器上正被使用的端口号和对应的进程 ID。如果不希望关闭占用 80 端口的程序，那么和上面非 80 端口一样，将我们的 HTTP 文件服务器换到一个别的端口就好了，例如 <code class="language-plaintext highlighter-rouge">8080</code> 或者 <code class="language-plaintext highlighter-rouge">8000</code>，然后再次点红色圆球图标开启服务器。这时候记得访问地址也要加上对应的端口号。</p>
-  ]]></content><author><name>luojh</name></author><category term="Tech Tutorial" /><category term="Windows" /><category term="HTTP" /><summary type="html"><![CDATA[USTCLUG 的一个重要服务是它的 开源软件镜像。但是我们这里要讨论的，是另一种自己在本地搭建的文件服务，目的是加速对远程静态文件的访问。这篇文章来源于帮同学解决的一个小问题。]]></summary></entry></feed>
+  ]]></content><author><name>_Kerman</name></author><category term="LUG 活动" /><category term="linux-install-party" /><category term="Linux 101" /><category term="LUG 活动" /><summary type="html"><![CDATA[2025 年 3 月 16 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C101 教室成功举办 “Linux 101” 系列课程首讲——Linux Install Party。这是 LUG 第八年举办 Linux 101 系列课程、第九年举办 Linux Install Party。本次活动通过理论讲解与实践操作相结合的方式，帮助参与者初步了解 Linux 操作系统并完成安装实践。]]></summary></entry></feed>
