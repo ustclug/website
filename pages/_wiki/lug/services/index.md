@@ -6,7 +6,7 @@ permalink: /wiki/lug/services/
 
 [LUG 网络服务总则](rules.md)
 
-## S 级服务
+## <span class="s">S</span> 级服务 {#s-tier}
 
 - [开源镜像站](mirrors.md)（HTTP 访问）：<https://mirrors.ustc.edu.cn>
 - 权威 DNS：`ns-a.ustclug.org`, `ns-b.ustclug.org`, `ns-c.ustclug.org`
@@ -52,3 +52,28 @@ permalink: /wiki/lug/services/
 - B 级：关键数据备份
 - C 级：非保障类服务
 - 未列入本列表的服务：实验性服务
+
+<style>
+#s-tier .s {
+    display: inline-flex;
+    transition: color 500ms ease-in-out;
+    overflow: hidden;
+}
+#s-tier .s::after::marker { content: "S"; color: blueviolet; }
+#s-tier .s::after {
+    content: "S";
+    color: orangered;
+    transform-origin: left;
+    display: list-item;
+    list-style-position: inside;
+}
+#s-tier .s::after::marker,
+#s-tier .s::after {
+    max-width: 0;
+    transition: all 500ms ease-in-out;
+    transform: scale(0, 1);
+}
+
+#s-tier:hover .s { color: gold; }
+#s-tier:hover .s::after { transform: scale(1); max-width: 2ch; }
+</style>
