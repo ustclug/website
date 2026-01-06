@@ -6,7 +6,8 @@ permalink: /wiki/lug/services/
 
 [LUG 网络服务总则](rules.md)
 
-## <span class="s">S</span> 级服务 {#s-tier}
+## <span class="s">S</span> 级服务
+{: .s-sss }
 
 - [开源镜像站](mirrors.md)（HTTP 访问）：<https://mirrors.ustc.edu.cn>
 - 权威 DNS：`ns-a.ustclug.org`, `ns-b.ustclug.org`, `ns-c.ustclug.org`
@@ -47,19 +48,19 @@ permalink: /wiki/lug/services/
 
 ## 服务等级与服务标准
 
-- S 级：最优先保障服务可用性，24 小时故障监控，故障自动转移
+- {: .s-sss } <span class="s">S</span> 级：最优先保障服务可用性，24 小时故障监控，故障自动转移
 - A 级：优先保障服务可用性，24 小时故障监控，每日备份
 - B 级：关键数据备份
 - C 级：非保障类服务
 - 未列入本列表的服务：实验性服务
 
 <style>
-#s-tier .s {
+.s-sss .s {
     display: inline-flex;
     transition: color 500ms ease-in-out;
     overflow: hidden;
 }
-#s-tier .s::after {
+.s-sss .s::after {
     content: "SS";
     color: transparent;
     background: linear-gradient(to right, blueviolet 0 50%, orangered 50% 100%);
@@ -71,6 +72,6 @@ permalink: /wiki/lug/services/
     transform-origin: left;
 }
 
-#s-tier:hover .s { color: gold; }
-#s-tier:hover .s::after { transform: scale(1); max-width: 2ch; }
+.s-sss:hover .s { color: gold; }
+.s-sss:hover .s::after { transform: scale(1); max-width: 2ch; }
 </style>
