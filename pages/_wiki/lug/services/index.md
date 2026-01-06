@@ -59,19 +59,16 @@ permalink: /wiki/lug/services/
     transition: color 500ms ease-in-out;
     overflow: hidden;
 }
-#s-tier .s::after::marker { content: "S"; color: blueviolet; }
 #s-tier .s::after {
-    content: "S";
-    color: orangered;
-    transform-origin: left;
-    display: list-item;
-    list-style-position: inside;
-}
-#s-tier .s::after::marker,
-#s-tier .s::after {
+    content: "SS";
+    color: transparent;
+    background: linear-gradient(to right, blueviolet 0 50%, orangered 50% 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
     max-width: 0;
     transition: all 500ms ease-in-out;
     transform: scale(0, 1);
+    transform-origin: left;
 }
 
 #s-tier:hover .s { color: gold; }
