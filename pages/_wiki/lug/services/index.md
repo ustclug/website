@@ -6,9 +6,9 @@ permalink: /wiki/lug/services/
 
 [LUG 网络服务总则](rules.md)
 
-## <span class="s">S</span> 级服务
-
 {: .s-sss }
+
+## <span class="s">S</span> 级服务
 
 - [开源镜像站](mirrors.md)（HTTP 访问）：<https://mirrors.ustc.edu.cn>
 - 权威 DNS：`ns-a.ustclug.org`, `ns-b.ustclug.org`, `ns-c.ustclug.org`
