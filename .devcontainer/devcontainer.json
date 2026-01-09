@@ -1,0 +1,45 @@
+{
+  "name": "USTC LUG Website",
+  "image": "mcr.microsoft.com/devcontainers/base:bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/ruby:1": {
+      "version": "3.2",
+      "installBundler": true
+    },
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "22"
+    },
+    "ghcr.io/devcontainers/features/git:1": {
+      "version": "latest"
+    }
+  },
+  "containerEnv": {
+    "BUNDLE_PATH": "vendor/bundle",
+    "JEKYLL_ENV": "development"
+  },
+  "postCreateCommand": "bundle config set --local path 'vendor/bundle' && bundle install && npm install",
+  "forwardPorts": [4000, 35729],
+  "portsAttributes": {
+    "4000": {
+      "label": "Jekyll site",
+      "onAutoForward": "notify"
+    },
+    "35729": {
+      "label": "LiveReload",
+      "onAutoForward": "silent"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      },
+      "extensions": [
+        "Shopify.ruby-lsp",
+        "esbenp.prettier-vscode",
+        "GitHub.vscode-github-actions"
+      ]
+    }
+  },
+  "remoteUser": "vscode"
+}
