@@ -53,6 +53,8 @@ wiki:
     children:
       - title: '<i class="fas fa-lg fa-fw fa-question-square"></i> 校园网常见问题'
         url: /wiki/doc/ustcnet-faq/
+      - title: '<i class="fas fa-lg fa-fw fa-question-circle"></i> 其他常见问题'
+        url: /wiki/doc/general-faq/
       - title: '<i class="fas fa-lg fa-fw fa-universal-access"></i> 提问指南'
         url: /wiki/doc/howtoask/
       - title: '<i class="fas fa-lg fa-fw fa-pen"></i> 修订指南'
