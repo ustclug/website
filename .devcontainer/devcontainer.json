@@ -18,15 +18,11 @@
     "JEKYLL_ENV": "development"
   },
   "postCreateCommand": "bundle config set --local path 'vendor/bundle' && bundle install && npm install",
-  "forwardPorts": [4000, 35729],
+  "forwardPorts": [4000],
   "portsAttributes": {
     "4000": {
       "label": "Jekyll site",
       "onAutoForward": "notify"
-    },
-    "35729": {
-      "label": "LiveReload",
-      "onAutoForward": "silent"
     }
   },
   "customizations": {
