@@ -141,3 +141,13 @@ li p {
 dd {
   font-size: 1em;
 }
+
+.footnote {
+  &::before {
+    content: "[";
+  }
+
+  &::after {
+    content: "]";
+  }
+}
