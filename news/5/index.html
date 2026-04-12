@@ -1,7 +1,8 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.27.3 by Michael Rose
-  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Minimal Mistakes Jekyll Theme 4.28.0 by Michael Rose
+  Copyright 2013-2026 Michael Rose - mademistakes.com | @mmistakes
+  Copyright 2024-2026 iBug - ibugone.com | @iBug
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
@@ -47,7 +48,7 @@
       window.enable_copy_code_button = true;
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=03be4e9a88">
+    <link rel="stylesheet" href="/assets/css/main.css?v=0bc6a90cbe">
     <link rel="stylesheet" href="/_extra/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <link rel="stylesheet" href="/_extra/open-sans.css" media="invalid" onload="this.media='all'">
     <!-- start custom head snippets -->
@@ -55,7 +56,7 @@
     <!-- end custom head snippets -->
   </head>
   <body class="layout--home" dir="ltr">
-    <nav class="skip-links">
+    <nav class="skip-links" aria-label="Skip links">
       <ul>
         <li><a href="#site-nav" class="screen-reader-shortcut">转到主导航栏</a></li>
         <li><a href="#main" class="screen-reader-shortcut">转到内容</a></li>
@@ -65,7 +66,7 @@
     <div class="masthead">
       <div class="masthead__inner-wrap">
         <div class="masthead__menu">
-          <nav id="site-nav" class="greedy-nav">
+          <nav id="site-nav" class="greedy-nav" aria-label="Primary navigation">
             <a class="site-logo" href="/"><img src="/static/lug-penguin.png" alt="LUG @ USTC"></a>
             <a class="site-title" href="/">
               LUG @ USTC
@@ -136,8 +137,40 @@
           <div class="entries-list">
             <div class="list__item">
               <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                <h2 class="archive__item-title no_toc" itemprop="headline">
-                  <a href="/news/2024/04/gathering-linux-graphics-journey/" rel="permalink">Linux 图形堆栈初探
+                <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                  <a class="u-url" href="/news/2024/08/SFD-Prep/" rel="permalink">2024 软件自由日 (SFD) 讲座征集
+                  </a>
+                </h2>
+                <p class="page__meta">
+                  <span class="page__meta-date">
+                    <i class="far fa-calendar-alt" aria-hidden="true"></i>
+                    <time datetime="2024-08-15T15:00:00+08:00">2024 年 8 月 15 日</time>
+                  </span>
+                </p>
+                <p class="archive__item-excerpt p-summary" itemprop="description">软件自由日（Software Freedom Day，SFD）是在 Digital Freedom Foundation 的主办下，由自由/开源软件爱好者自发筹集组织非盈利性活动，旨在为自由/开源软件爱好者提供一个信息交流平台、联合各社区举办各种自由/开源软件活动。
+                </p>
+              </article>
+            </div>
+            <div class="list__item">
+              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                  <a class="u-url" href="/news/2024/05/403/" rel="permalink">USTCLUG 西区活动室搬迁
+                  </a>
+                </h2>
+                <p class="page__meta">
+                  <span class="page__meta-date">
+                    <i class="far fa-calendar-alt" aria-hidden="true"></i>
+                    <time datetime="2024-05-28T15:00:00+08:00">2024 年 5 月 28 日</time>
+                  </span>
+                </p>
+                <p class="archive__item-excerpt p-summary" itemprop="description">2024 年 4 月中旬，USTCLUG 西区活动室正式搬迁至西区图书馆 403 研讨室。
+                </p>
+              </article>
+            </div>
+            <div class="list__item">
+              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                  <a class="u-url" href="/news/2024/04/gathering-linux-graphics-journey/" rel="permalink">Linux 图形堆栈初探
                   </a>
                 </h2>
                 <p class="page__meta">
@@ -146,14 +179,14 @@
                     <time datetime="2024-04-21T15:00:00+08:00">2024 年 4 月 21 日</time>
                   </span>
                 </p>
-                <p class="archive__item-excerpt" itemprop="description">2024 年 4 月 21 日，校学生 Linux 用户协会举办了一场小聚活动。本次小聚为刘紫檀同学为我们带来的关于 Linux 图形堆栈的介绍。
+                <p class="archive__item-excerpt p-summary" itemprop="description">2024 年 4 月 21 日，校学生 Linux 用户协会举办了一场小聚活动。本次小聚为刘紫檀同学为我们带来的关于 Linux 图形堆栈的介绍。
                 </p>
               </article>
             </div>
             <div class="list__item">
               <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                <h2 class="archive__item-title no_toc" itemprop="headline">
-                  <a href="/news/2024/04/Linux101-3/" rel="permalink">Linux 101 第三课
+                <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                  <a class="u-url" href="/news/2024/04/Linux101-3/" rel="permalink">Linux 101 第三课
                   </a>
                 </h2>
                 <p class="page__meta">
@@ -162,14 +195,14 @@
                     <time datetime="2024-04-14T14:30:00+08:00">2024 年 4 月 14 日</time>
                   </span>
                 </p>
-                <p class="archive__item-excerpt" itemprop="description">2024 年 4 月 14 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C102 教室举办 Linux 101 系列活动的第三课：进程、前后台、服务与例行性任务。
+                <p class="archive__item-excerpt p-summary" itemprop="description">2024 年 4 月 14 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C102 教室举办 Linux 101 系列活动的第三课：进程、前后台、服务与例行性任务。
                 </p>
               </article>
             </div>
             <div class="list__item">
               <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                <h2 class="archive__item-title no_toc" itemprop="headline">
-                  <a href="/news/2024/03/gathering-attack-and-defense-exercise-talk/" rel="permalink">网络安全攻防演练杂谈
+                <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                  <a class="u-url" href="/news/2024/03/gathering-attack-and-defense-exercise-talk/" rel="permalink">网络安全攻防演练杂谈
                   </a>
                 </h2>
                 <p class="page__meta">
@@ -178,43 +211,12 @@
                     <time datetime="2024-03-31T15:00:00+08:00">2024 年 3 月 31 日</time>
                   </span>
                 </p>
-                <p class="archive__item-excerpt" itemprop="description">2024 年 3 月 31 日，校学生 Linux 用户协会举办了一场小聚活动。本次小聚我们有幸邀请到协会指导老师庄严老师来为同学们做一场关于网络安全攻防演练的杂谈。
+                <p class="archive__item-excerpt p-summary" itemprop="description">2024 年 3 月 31 日，校学生 Linux 用户协会举办了一场小聚活动。本次小聚我们有幸邀请到协会指导老师庄严老师来为同学们做一场关于网络安全攻防演练的杂谈。
                 </p>
-              </article>
-            </div>
-            <div class="list__item">
-              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                <h2 class="archive__item-title no_toc" itemprop="headline">
-                  <a href="/news/2024/03/Linux101-2/" rel="permalink">Linux 101 第二课
-                  </a>
-                </h2>
-                <p class="page__meta">
-                  <span class="page__meta-date">
-                    <i class="far fa-calendar-alt" aria-hidden="true"></i>
-                    <time datetime="2024-03-24T14:30:00+08:00">2024 年 3 月 24 日</time>
-                  </span>
-                </p>
-                <p class="archive__item-excerpt" itemprop="description">2024 年 3 月 24 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C102 教室举办 Linux 101 系列活动的第二课：软件安装与文件系统。
-                </p>
-              </article>
-            </div>
-            <div class="list__item">
-              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                <h2 class="archive__item-title no_toc" itemprop="headline">
-                  <a href="/news/2024/03/Linux101-LIP-2024/" rel="permalink">Linux Install Party 2024
-                  </a>
-                </h2>
-                <p class="page__meta">
-                  <span class="page__meta-date">
-                    <i class="far fa-calendar-alt" aria-hidden="true"></i>
-                    <time datetime="2024-03-09T19:00:00+08:00">2024 年 3 月 9 日</time>
-                  </span>
-                </p>
-                <p class="archive__item-excerpt" itemprop="description">2024 年 3 月 9 日下午，中国科学技术大学 Linux 用户协会在西区 3C102 教室举办了 Linux 101 的第一课：Linux Install Party。该系列活动为社团传统活动，旨在为对 Linux 操作系统感兴趣的同学提供一个互动交流的平台，让大家了解 Linux 的基本概念，并亲自体验安...</p>
               </article>
             </div>
           </div>
-          <nav class="pagination">
+          <nav class="pagination" aria-label="Pagination">
             <ul>
               <li><a href="/news/4/">上一页</a></li>
               <li><a href="/news/">1</a></li>

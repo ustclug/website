@@ -1,7 +1,8 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.27.3 by Michael Rose
-  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Minimal Mistakes Jekyll Theme 4.28.0 by Michael Rose
+  Copyright 2013-2026 Michael Rose - mademistakes.com | @mmistakes
+  Copyright 2024-2026 iBug - ibugone.com | @iBug
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
@@ -47,7 +48,7 @@
       window.enable_copy_code_button = true;
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=03be4e9a88">
+    <link rel="stylesheet" href="/assets/css/main.css?v=0bc6a90cbe">
     <link rel="stylesheet" href="/_extra/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <link rel="stylesheet" href="/_extra/open-sans.css" media="invalid" onload="this.media='all'">
     <!-- start custom head snippets -->
@@ -55,7 +56,7 @@
     <!-- end custom head snippets -->
   </head>
   <body class="layout--home" dir="ltr">
-    <nav class="skip-links">
+    <nav class="skip-links" aria-label="Skip links">
       <ul>
         <li><a href="#site-nav" class="screen-reader-shortcut">转到主导航栏</a></li>
         <li><a href="#main" class="screen-reader-shortcut">转到内容</a></li>
@@ -65,7 +66,7 @@
     <div class="masthead">
       <div class="masthead__inner-wrap">
         <div class="masthead__menu">
-          <nav id="site-nav" class="greedy-nav">
+          <nav id="site-nav" class="greedy-nav" aria-label="Primary navigation">
             <a class="site-logo" href="/"><img src="/static/lug-penguin.png" alt="LUG @ USTC"></a>
             <a class="site-title" href="/">
               LUG @ USTC
@@ -136,8 +137,38 @@
           <div class="entries-list">
             <div class="list__item">
               <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                <h2 class="archive__item-title no_toc" itemprop="headline">
-                  <a href="/news/2024/10/Hackergame2024-ad/" rel="permalink">Hackergame 2024 活动安排
+                <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                  <a class="u-url" href="/news/2024/12/slidev/" rel="permalink">Slidev 幻灯片制作
+                  </a>
+                </h2>
+                <p class="page__meta">
+                  <span class="page__meta-date">
+                    <i class="far fa-calendar-alt" aria-hidden="true"></i>
+                    <time datetime="2024-12-04T15:00:00+08:00">2024 年 12 月 4 日</time>
+                  </span>
+                </p>
+                <p class="archive__item-excerpt p-summary" itemprop="description">2024 年 12 月 4 日，校学生 Linux 用户协会在西区第三教学楼 3A306 教室举行小聚。本次小聚是由 Slidev 团队成员 _Kerman 同学带来的 Slidev 幻灯片制作工具介绍。Slidev.js 是一款为开发者设计的开源的幻灯片制作工具，通过简单的 Markdown 语法即可制作出精美...</p>
+              </article>
+            </div>
+            <div class="list__item">
+              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                  <a class="u-url" href="/news/2024/11/gathering-openmp/" rel="permalink">C/C++ 下 OpenMP 程序设计介绍
+                  </a>
+                </h2>
+                <p class="page__meta">
+                  <span class="page__meta-date">
+                    <i class="far fa-calendar-alt" aria-hidden="true"></i>
+                    <time datetime="2024-11-29T10:00:00+08:00">2024 年 11 月 29 日</time>
+                  </span>
+                </p>
+                <p class="archive__item-excerpt p-summary" itemprop="description">2024 年 11 月 27 日，校学生 Linux 用户协会在西区第三教学楼 3A306 教室开展了小聚活动。本次小聚主要是由罗嘉宏同学带来的 C/C++ 下 OpenMP 程序设计介绍。OpenMP 是广为运用的并行计算处理框架，为 C/C++ 和 Fortran 编程语言提供支持，提供了简单有效的 CPU ...</p>
+              </article>
+            </div>
+            <div class="list__item">
+              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                  <a class="u-url" href="/news/2024/10/Hackergame2024-ad/" rel="permalink">Hackergame 2024 活动安排
                   </a>
                 </h2>
                 <p class="page__meta">
@@ -146,14 +177,14 @@
                     <time datetime="2024-10-26T00:00:00+08:00">2024 年 10 月 26 日</time>
                   </span>
                 </p>
-                <p class="archive__item-excerpt" itemprop="description">2024 年度中国科学技术大学第十一届信息安全大赛（Hackergame 2024）即将于 2024.11.02 线上举办，持续一周，下面是详细的活动安排。
+                <p class="archive__item-excerpt p-summary" itemprop="description">2024 年度中国科学技术大学第十一届信息安全大赛（Hackergame 2024）即将于 2024.11.02 线上举办，持续一周，下面是详细的活动安排。
                 </p>
               </article>
             </div>
             <div class="list__item">
               <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                <h2 class="archive__item-title no_toc" itemprop="headline">
-                  <a href="/news/2024/09/SFD/" rel="permalink">2024 软件自由日中国科大站
+                <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                  <a class="u-url" href="/news/2024/09/SFD/" rel="permalink">2024 软件自由日中国科大站
                   </a>
                 </h2>
                 <p class="page__meta">
@@ -162,13 +193,13 @@
                     <time datetime="2024-09-21T20:00:00+08:00">2024 年 9 月 21 日</time>
                   </span>
                 </p>
-                <p class="archive__item-excerpt" itemprop="description">2024 年 9 月 21 日，LUG 举办了软件自由日 (Software Freedom Day), 活动在 14:30-18:30 于西区 3C101 举行，并同步进行了线上直播。本次活动邀请到网络信息中心的张焕杰老师、本届 LUG 的 COO 马天开同学，PLCT 实验室的于波同学，以及 traceexe...</p>
+                <p class="archive__item-excerpt p-summary" itemprop="description">2024 年 9 月 21 日，LUG 举办了软件自由日 (Software Freedom Day), 活动在 14:30-18:30 于西区 3C101 举行，并同步进行了线上直播。本次活动邀请到网络信息中心的张焕杰老师、本届 LUG 的 COO 马天开同学，PLCT 实验室的于波同学，以及 traceexe...</p>
               </article>
             </div>
             <div class="list__item">
               <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                <h2 class="archive__item-title no_toc" itemprop="headline">
-                  <a href="/news/2024/09/2024-freshmen-course/" rel="permalink">2024 秋季学期 新生活力课堂 &amp; 游园会
+                <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                  <a class="u-url" href="/news/2024/09/2024-freshmen-course/" rel="permalink">2024 秋季学期 新生活力课堂 &amp; 游园会
                   </a>
                 </h2>
                 <p class="page__meta">
@@ -177,44 +208,12 @@
                     <time datetime="2024-09-07T18:00:00+08:00">2024 年 9 月 7 日</time>
                   </span>
                 </p>
-                <p class="archive__item-excerpt" itemprop="description">中国科学技术大学 Linux 用户协会在秋季学期举办了系列迎新活动，包括新生活力课堂和游园会，时间安排如下：
-                </p>
-              </article>
-            </div>
-            <div class="list__item">
-              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                <h2 class="archive__item-title no_toc" itemprop="headline">
-                  <a href="/news/2024/08/SFD-Prep/" rel="permalink">2024 软件自由日 (SFD) 讲座征集
-                  </a>
-                </h2>
-                <p class="page__meta">
-                  <span class="page__meta-date">
-                    <i class="far fa-calendar-alt" aria-hidden="true"></i>
-                    <time datetime="2024-08-15T15:00:00+08:00">2024 年 8 月 15 日</time>
-                  </span>
-                </p>
-                <p class="archive__item-excerpt" itemprop="description">软件自由日（Software Freedom Day，SFD）是在 Digital Freedom Foundation 的主办下，由自由/开源软件爱好者自发筹集组织非盈利性活动，旨在为自由/开源软件爱好者提供一个信息交流平台、联合各社区举办各种自由/开源软件活动。
-                </p>
-              </article>
-            </div>
-            <div class="list__item">
-              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                <h2 class="archive__item-title no_toc" itemprop="headline">
-                  <a href="/news/2024/05/403/" rel="permalink">USTCLUG 西区活动室搬迁
-                  </a>
-                </h2>
-                <p class="page__meta">
-                  <span class="page__meta-date">
-                    <i class="far fa-calendar-alt" aria-hidden="true"></i>
-                    <time datetime="2024-05-28T15:00:00+08:00">2024 年 5 月 28 日</time>
-                  </span>
-                </p>
-                <p class="archive__item-excerpt" itemprop="description">2024 年 4 月中旬，USTCLUG 西区活动室正式搬迁至西区图书馆 403 研讨室。
+                <p class="archive__item-excerpt p-summary" itemprop="description">中国科学技术大学 Linux 用户协会在秋季学期举办了系列迎新活动，包括新生活力课堂和游园会，时间安排如下：
                 </p>
               </article>
             </div>
           </div>
-          <nav class="pagination">
+          <nav class="pagination" aria-label="Pagination">
             <ul>
               <li><a href="/news/3/">上一页</a></li>
               <li><a href="/news/">1</a></li>

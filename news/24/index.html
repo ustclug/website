@@ -1,7 +1,8 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.27.3 by Michael Rose
-  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Minimal Mistakes Jekyll Theme 4.28.0 by Michael Rose
+  Copyright 2013-2026 Michael Rose - mademistakes.com | @mmistakes
+  Copyright 2024-2026 iBug - ibugone.com | @iBug
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
@@ -47,7 +48,7 @@
       window.enable_copy_code_button = true;
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=03be4e9a88">
+    <link rel="stylesheet" href="/assets/css/main.css?v=0bc6a90cbe">
     <link rel="stylesheet" href="/_extra/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <link rel="stylesheet" href="/_extra/open-sans.css" media="invalid" onload="this.media='all'">
     <!-- start custom head snippets -->
@@ -55,7 +56,7 @@
     <!-- end custom head snippets -->
   </head>
   <body class="layout--home" dir="ltr">
-    <nav class="skip-links">
+    <nav class="skip-links" aria-label="Skip links">
       <ul>
         <li><a href="#site-nav" class="screen-reader-shortcut">转到主导航栏</a></li>
         <li><a href="#main" class="screen-reader-shortcut">转到内容</a></li>
@@ -65,7 +66,7 @@
     <div class="masthead">
       <div class="masthead__inner-wrap">
         <div class="masthead__menu">
-          <nav id="site-nav" class="greedy-nav">
+          <nav id="site-nav" class="greedy-nav" aria-label="Primary navigation">
             <a class="site-logo" href="/"><img src="/static/lug-penguin.png" alt="LUG @ USTC"></a>
             <a class="site-title" href="/">
               LUG @ USTC
@@ -136,8 +137,39 @@
           <div class="entries-list">
             <div class="list__item">
               <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                <h2 class="archive__item-title no_toc" itemprop="headline">
-                  <a href="/news/2011/05/linux-e7-89-88-e7-89-88-e8-81-9a/" rel="permalink">Linux 版版聚
+                <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                  <a class="u-url" href="/news/2011/06/deepin-linux-dau-2011/" rel="permalink">Deepin Linux DAU ‘2011 大会花絮
+                  </a>
+                </h2>
+                <p class="page__meta">
+                  <span class="page__meta-date">
+                    <i class="far fa-calendar-alt" aria-hidden="true"></i>
+                    <time datetime="2011-06-03T10:36:40+08:00">2011 年 6 月 3 日</time>
+                  </span>
+                </p>
+                <p class="archive__item-excerpt p-summary" itemprop="description">2011 年 5 月 28 日，我有幸受邀代表中科大 LUG 前往武汉参加了 Deepin Linux 开发者和用户大会。此行遇见了很多开源界的知名牛人，收获颇多。由于许多 Linux 站点都已经对此次会议有十分详细的报导，因此我就不再赘述具体的会议过程，而是更多的介绍些花絮吧。
+                </p>
+              </article>
+            </div>
+            <div class="list__item">
+              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                  <a class="u-url" href="/news/2011/05/customize-pxe-live-system/" rel="permalink">定制 PXE Live 系统
+                  </a>
+                </h2>
+                <p class="page__meta">
+                  <span class="page__meta-date">
+                    <i class="far fa-calendar-alt" aria-hidden="true"></i>
+                    <time datetime="2011-05-24T02:03:48+08:00">2011 年 5 月 24 日</time>
+                  </span>
+                </p>
+                <p class="archive__item-excerpt p-summary" itemprop="description">现在已经有上百中 Linux 发行版，很多发行版都提供了通过 PXE 启动的 Live 系统。在科大校园网网络启动服务上，我们部署了很多发行版的 Live 系统，例如 Ubuntu、Debian、Deepin、BackTrack、Knoppix 等，既给一些需要维护系统的同学带来了极大的便利，也使得那些未接触过 ...</p>
+              </article>
+            </div>
+            <div class="list__item">
+              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                  <a class="u-url" href="/news/2011/05/linux-e7-89-88-e7-89-88-e8-81-9a/" rel="permalink">Linux 版版聚
                   </a>
                 </h2>
                 <p class="page__meta">
@@ -146,14 +178,14 @@
                     <time datetime="2011-05-11T01:20:26+08:00">2011 年 5 月 11 日</time>
                   </span>
                 </p>
-                <p class="archive__item-excerpt" itemprop="description">
+                <p class="archive__item-excerpt p-summary" itemprop="description">
                 </p>
               </article>
             </div>
             <div class="list__item">
               <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                <h2 class="archive__item-title no_toc" itemprop="headline">
-                  <a href="/news/2011/05/ftp-cn-debian-org-comes/" rel="permalink">Debian 中国官方镜像：ftp.cn.debian.org
+                <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                  <a class="u-url" href="/news/2011/05/ftp-cn-debian-org-comes/" rel="permalink">Debian 中国官方镜像：ftp.cn.debian.org
                   </a>
                 </h2>
                 <p class="page__meta">
@@ -162,13 +194,13 @@
                     <time datetime="2011-05-05T02:03:26+08:00">2011 年 5 月 5 日</time>
                   </span>
                 </p>
-                <p class="archive__item-excerpt" itemprop="description">祝贺 mirrors.ustc.edu.cn 成为 Debian 中国官方镜像！此前，中国大陆 debian 镜像与主镜像延迟达 24 小时以上，现在，ftp.cn.debian.org 直接从 syncproxy.wna.debian.org 接受推送更新，其延迟降到 6 小时以内。此外，另一国内主力镜像 an...</p>
+                <p class="archive__item-excerpt p-summary" itemprop="description">祝贺 mirrors.ustc.edu.cn 成为 Debian 中国官方镜像！此前，中国大陆 debian 镜像与主镜像延迟达 24 小时以上，现在，ftp.cn.debian.org 直接从 syncproxy.wna.debian.org 接受推送更新，其延迟降到 6 小时以内。此外，另一国内主力镜像 an...</p>
               </article>
             </div>
             <div class="list__item">
               <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                <h2 class="archive__item-title no_toc" itemprop="headline">
-                  <a href="/news/2011/04/2011-winter-reading-notes/" rel="permalink">Fwd: 读书笔记：关于维护服务器的一些技巧
+                <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                  <a class="u-url" href="/news/2011/04/2011-winter-reading-notes/" rel="permalink">Fwd: 读书笔记：关于维护服务器的一些技巧
                   </a>
                 </h2>
                 <p class="page__meta">
@@ -177,44 +209,12 @@
                     <time datetime="2011-04-28T18:15:09+08:00">2011 年 4 月 28 日</time>
                   </span>
                 </p>
-                <p class="archive__item-excerpt" itemprop="description">寒假读了三本书《LINUX SERVER HACKS 卷二》《实战 Nginx：取代 Apache 的高性能 Web 服务器》《Linux 服务器性能调整》，简单地了解了些 linux 服务器维护和管理上的技巧。现在就分别简要谈谈我在读这三本书时的感受吧。
-                </p>
-              </article>
-            </div>
-            <div class="list__item">
-              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                <h2 class="archive__item-title no_toc" itemprop="headline">
-                  <a href="/news/2011/04/gnome3-launch-party/" rel="permalink">Color my desktop,Color my life!
-                  </a>
-                </h2>
-                <p class="page__meta">
-                  <span class="page__meta-date">
-                    <i class="far fa-calendar-alt" aria-hidden="true"></i>
-                    <time datetime="2011-04-16T22:01:38+08:00">2011 年 4 月 16 日</time>
-                  </span>
-                </p>
-                <p class="archive__item-excerpt" itemprop="description">Color my desktop,Color my life!
-                </p>
-              </article>
-            </div>
-            <div class="list__item">
-              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                <h2 class="archive__item-title no_toc" itemprop="headline">
-                  <a href="/news/2011/04/mirrors-ustc-edu-cn-comes/" rel="permalink">mirrors.ustc.edu.cn 开张啦！
-                  </a>
-                </h2>
-                <p class="page__meta">
-                  <span class="page__meta-date">
-                    <i class="far fa-calendar-alt" aria-hidden="true"></i>
-                    <time datetime="2011-04-14T01:55:12+08:00">2011 年 4 月 14 日</time>
-                  </span>
-                </p>
-                <p class="archive__item-excerpt" itemprop="description">经过大半周的迁移和新脚本的测试，现在 mirrors.ustc.edu.cn 已经基本稳定了。
+                <p class="archive__item-excerpt p-summary" itemprop="description">寒假读了三本书《LINUX SERVER HACKS 卷二》《实战 Nginx：取代 Apache 的高性能 Web 服务器》《Linux 服务器性能调整》，简单地了解了些 linux 服务器维护和管理上的技巧。现在就分别简要谈谈我在读这三本书时的感受吧。
                 </p>
               </article>
             </div>
           </div>
-          <nav class="pagination">
+          <nav class="pagination" aria-label="Pagination">
             <ul>
               <li><a href="/news/23/">上一页</a></li>
               <li><a href="/news/">1</a></li>

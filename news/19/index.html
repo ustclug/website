@@ -1,7 +1,8 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.27.3 by Michael Rose
-  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Minimal Mistakes Jekyll Theme 4.28.0 by Michael Rose
+  Copyright 2013-2026 Michael Rose - mademistakes.com | @mmistakes
+  Copyright 2024-2026 iBug - ibugone.com | @iBug
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
@@ -47,7 +48,7 @@
       window.enable_copy_code_button = true;
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=03be4e9a88">
+    <link rel="stylesheet" href="/assets/css/main.css?v=0bc6a90cbe">
     <link rel="stylesheet" href="/_extra/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <link rel="stylesheet" href="/_extra/open-sans.css" media="invalid" onload="this.media='all'">
     <!-- start custom head snippets -->
@@ -55,7 +56,7 @@
     <!-- end custom head snippets -->
   </head>
   <body class="layout--home" dir="ltr">
-    <nav class="skip-links">
+    <nav class="skip-links" aria-label="Skip links">
       <ul>
         <li><a href="#site-nav" class="screen-reader-shortcut">转到主导航栏</a></li>
         <li><a href="#main" class="screen-reader-shortcut">转到内容</a></li>
@@ -65,7 +66,7 @@
     <div class="masthead">
       <div class="masthead__inner-wrap">
         <div class="masthead__menu">
-          <nav id="site-nav" class="greedy-nav">
+          <nav id="site-nav" class="greedy-nav" aria-label="Primary navigation">
             <a class="site-logo" href="/"><img src="/static/lug-penguin.png" alt="LUG @ USTC"></a>
             <a class="site-title" href="/">
               LUG @ USTC
@@ -136,8 +137,40 @@
           <div class="entries-list">
             <div class="list__item">
               <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                <h2 class="archive__item-title no_toc" itemprop="headline">
-                  <a href="/news/2016/06/new-activity-room-in-west-library/" rel="permalink">西区图书馆新活动室启用
+                <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                  <a class="u-url" href="/news/2016/10/visiting_network_center/" rel="permalink">LUG 带同学们走进神秘的网络中心机房
+                  </a>
+                </h2>
+                <p class="page__meta">
+                  <span class="page__meta-date">
+                    <i class="far fa-calendar-alt" aria-hidden="true"></i>
+                    <time datetime="2016-10-25T22:04:43+08:00">2016 年 10 月 25 日</time>
+                  </span>
+                </p>
+                <p class="archive__item-excerpt p-summary" itemprop="description">2016 年 10 月 23 日上午，校学生 Linux 用户协会组织协会的同学们参观了校网络中心和超算中心。23 日 9 点整，就有 40 人等待在东区第五教学楼门口等待出发。
+                </p>
+              </article>
+            </div>
+            <div class="list__item">
+              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                  <a class="u-url" href="/news/2016/09/2016-sfd-ustc/" rel="permalink">2016 软件自由日中国科大站
+                  </a>
+                </h2>
+                <p class="page__meta">
+                  <span class="page__meta-date">
+                    <i class="far fa-calendar-alt" aria-hidden="true"></i>
+                    <time datetime="2016-09-27T20:22:29+08:00">2016 年 9 月 27 日</time>
+                  </span>
+                </p>
+                <p class="archive__item-excerpt p-summary" itemprop="description">2016 年 9 月 15 日下午，2016 年软件自由日（SFD）中国科大站活动在西活学术报告厅成功举办。当天下午，虽然天公不作美，大雨倾盆，又适逢中秋佳节，仍有 70 余位同学冒雨赶来参加我们的活动，现场气氛热烈，效果良好。
+                </p>
+              </article>
+            </div>
+            <div class="list__item">
+              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                  <a class="u-url" href="/news/2016/06/new-activity-room-in-west-library/" rel="permalink">西区图书馆新活动室启用
                   </a>
                 </h2>
                 <p class="page__meta">
@@ -146,14 +179,14 @@
                     <time datetime="2016-06-16T15:28:55+08:00">2016 年 6 月 16 日</time>
                   </span>
                 </p>
-                <p class="archive__item-excerpt" itemprop="description">2016 年 6 月 16 日，LUG 西区新活动室启用，并成为今后唯一的社团活动室。一部分 LUG 成员在当日早上从东区图书馆 605 老活动室与东图一楼将大部分活动材料与各类物品搬迁到了西区活动室。
+                <p class="archive__item-excerpt p-summary" itemprop="description">2016 年 6 月 16 日，LUG 西区新活动室启用，并成为今后唯一的社团活动室。一部分 LUG 成员在当日早上从东区图书馆 605 老活动室与东图一楼将大部分活动材料与各类物品搬迁到了西区活动室。
                 </p>
               </article>
             </div>
             <div class="list__item">
               <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                <h2 class="archive__item-title no_toc" itemprop="headline">
-                  <a href="/news/2016/05/2016-lug-election/" rel="permalink">2016 LUG 社团换届会议
+                <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                  <a class="u-url" href="/news/2016/05/2016-lug-election/" rel="permalink">2016 LUG 社团换届会议
                   </a>
                 </h2>
                 <p class="page__meta">
@@ -162,14 +195,14 @@
                     <time datetime="2016-05-02T22:57:06+08:00">2016 年 5 月 2 日</time>
                   </span>
                 </p>
-                <p class="archive__item-excerpt" itemprop="description">2016 年 4 月 24 日下午 15 时，校学生 Linux 用户协会于东区活动室 (科大东区图书馆 605 室) 召开了换届会议。
+                <p class="archive__item-excerpt p-summary" itemprop="description">2016 年 4 月 24 日下午 15 时，校学生 Linux 用户协会于东区活动室 (科大东区图书馆 605 室) 召开了换届会议。
                 </p>
               </article>
             </div>
             <div class="list__item">
               <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                <h2 class="archive__item-title no_toc" itemprop="headline">
-                  <a href="/news/2015/09/2015sfd/" rel="permalink">2015 软件自由日中国科大站
+                <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                  <a class="u-url" href="/news/2015/09/2015sfd/" rel="permalink">2015 软件自由日中国科大站
                   </a>
                 </h2>
                 <p class="page__meta">
@@ -178,44 +211,12 @@
                     <time datetime="2015-09-21T23:06:08+08:00">2015 年 9 月 21 日</time>
                   </span>
                 </p>
-                <p class="archive__item-excerpt" itemprop="description">2015 年 9 月 19 日是第 12 个软件自由日。当日下午，中国科大学生 Linux 用户协会在西区活动中心学术报告厅举办了软件自由日科大站庆祝活动。共有超过 100 位科大及社会人士参加了本次活动。
-                </p>
-              </article>
-            </div>
-            <div class="list__item">
-              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                <h2 class="archive__item-title no_toc" itemprop="headline">
-                  <a href="/news/2015/09/lug-banshan-commission-guide/" rel="permalink">LUG 版衫制作手册
-                  </a>
-                </h2>
-                <p class="page__meta">
-                  <span class="page__meta-date">
-                    <i class="far fa-calendar-alt" aria-hidden="true"></i>
-                    <time datetime="2015-09-13T21:38:09+08:00">2015 年 9 月 13 日</time>
-                  </span>
-                </p>
-                <p class="archive__item-excerpt" itemprop="description">上学期 5 月 3 日到 6 月 15 日制作了 LUG 2015 版衫，前后花了一个多月的时间，感觉做版衫真是一件十分耗费时间精力的大活动。第一次负责 LUG 版衫的制作，总结一下一个月的工作。主要流程如下，我们逐一讲解。
-                </p>
-              </article>
-            </div>
-            <div class="list__item">
-              <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                <h2 class="archive__item-title no_toc" itemprop="headline">
-                  <a href="/news/2015/08/lug-service-restore-status/" rel="permalink">mirrors.ustc.edu.cn
-                  </a>
-                </h2>
-                <p class="page__meta">
-                  <span class="page__meta-date">
-                    <i class="far fa-calendar-alt" aria-hidden="true"></i>
-                    <time datetime="2015-08-18T16:09:52+08:00">2015 年 8 月 18 日</time>
-                  </span>
-                </p>
-                <p class="archive__item-excerpt" itemprop="description">mirrors.ustc.edu.cn
+                <p class="archive__item-excerpt p-summary" itemprop="description">2015 年 9 月 19 日是第 12 个软件自由日。当日下午，中国科大学生 Linux 用户协会在西区活动中心学术报告厅举办了软件自由日科大站庆祝活动。共有超过 100 位科大及社会人士参加了本次活动。
                 </p>
               </article>
             </div>
           </div>
-          <nav class="pagination">
+          <nav class="pagination" aria-label="Pagination">
             <ul>
               <li><a href="/news/18/">上一页</a></li>
               <li><a href="/news/">1</a></li>

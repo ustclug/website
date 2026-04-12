@@ -1,7 +1,8 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.27.3 by Michael Rose
-  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Minimal Mistakes Jekyll Theme 4.28.0 by Michael Rose
+  Copyright 2013-2026 Michael Rose - mademistakes.com | @mmistakes
+  Copyright 2024-2026 iBug - ibugone.com | @iBug
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
@@ -44,7 +45,7 @@
       window.enable_copy_code_button = true;
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=03be4e9a88">
+    <link rel="stylesheet" href="/assets/css/main.css?v=0bc6a90cbe">
     <link rel="stylesheet" href="/_extra/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <link rel="stylesheet" href="/_extra/open-sans.css" media="invalid" onload="this.media='all'">
     <!-- start custom head snippets -->
@@ -52,7 +53,7 @@
     <!-- end custom head snippets -->
   </head>
   <body class="layout--archive-taxonomy" dir="ltr">
-    <nav class="skip-links">
+    <nav class="skip-links" aria-label="Skip links">
       <ul>
         <li><a href="#site-nav" class="screen-reader-shortcut">转到主导航栏</a></li>
         <li><a href="#main" class="screen-reader-shortcut">转到内容</a></li>
@@ -62,7 +63,7 @@
     <div class="masthead">
       <div class="masthead__inner-wrap">
         <div class="masthead__menu">
-          <nav id="site-nav" class="greedy-nav">
+          <nav id="site-nav" class="greedy-nav" aria-label="Primary navigation">
             <a class="site-logo" href="/"><img src="/static/lug-penguin.png" alt="LUG @ USTC"></a>
             <a class="site-title" href="/">
               LUG @ USTC
@@ -123,8 +124,8 @@
           <h1 id="page-title" class="page__title">linux</h1>
           <div class="list__item">
             <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-              <h2 class="archive__item-title no_toc" itemprop="headline">
-                <a href="/planet/2024/12/ustc-mirrors-zfs-rebuild/" rel="permalink">镜像站 ZFS 实践
+              <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                <a class="u-url" href="/planet/2024/12/ustc-mirrors-zfs-rebuild/" rel="permalink">镜像站 ZFS 实践
                 </a>
               </h2>
               <p class="page__meta">
@@ -138,7 +139,7 @@
                   13 分钟阅读
                 </span>
               </p>
-              <p class="archive__item-excerpt" itemprop="description">A.K.A. 如何让 2000 元的机械硬盘跑得比 3000 元的固态硬盘还快（
+              <p class="archive__item-excerpt p-summary" itemprop="description">A.K.A. 如何让 2000 元的机械硬盘跑得比 3000 元的固态硬盘还快（
               </p>
             </article>
           </div>

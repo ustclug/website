@@ -1,7 +1,8 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.27.3 by Michael Rose
-  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Minimal Mistakes Jekyll Theme 4.28.0 by Michael Rose
+  Copyright 2013-2026 Michael Rose - mademistakes.com | @mmistakes
+  Copyright 2024-2026 iBug - ibugone.com | @iBug
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
@@ -48,7 +49,7 @@
       window.enable_copy_code_button = true;
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=03be4e9a88">
+    <link rel="stylesheet" href="/assets/css/main.css?v=0bc6a90cbe">
     <link rel="stylesheet" href="/_extra/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <link rel="stylesheet" href="/_extra/open-sans.css" media="invalid" onload="this.media='all'">
     <!-- start custom head snippets -->
@@ -56,7 +57,7 @@
     <!-- end custom head snippets -->
   </head>
   <body class="layout--single news" dir="ltr">
-    <nav class="skip-links">
+    <nav class="skip-links" aria-label="Skip links">
       <ul>
         <li><a href="#site-nav" class="screen-reader-shortcut">转到主导航栏</a></li>
         <li><a href="#main" class="screen-reader-shortcut">转到内容</a></li>
@@ -66,7 +67,7 @@
     <div class="masthead">
       <div class="masthead__inner-wrap">
         <div class="masthead__menu">
-          <nav id="site-nav" class="greedy-nav">
+          <nav id="site-nav" class="greedy-nav" aria-label="Primary navigation">
             <a class="site-logo" href="/"><img src="/static/lug-penguin.png" alt="LUG @ USTC"></a>
             <a class="site-title" href="/">
               LUG @ USTC
@@ -138,15 +139,15 @@
         </div>
       </div>
       <div id="main" role="main">
-        <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+        <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
           <meta itemprop="headline" content="首届学生开源年会将在重庆召开！">
           <meta itemprop="description" content="首届学生开源年会将在重庆召开！">
           <meta itemprop="datePublished" content="2018-05-24T00:00:00+08:00">
           <meta itemprop="dateModified" content="2024-09-17T14:00:46+08:00">
           <div class="page__inner-wrap">
-            <section class="page__content" itemprop="text">
+            <section class="page__content e-content" itemprop="text">
               <aside class="sidebar__right sticky">
-                <nav class="toc">
+                <nav class="toc" aria-label="Table of contents">
                   <header>
                     <h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4>
                   </header>
@@ -181,7 +182,7 @@
             <footer class="page__meta">
               <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2024-09-17">2024 年 9 月 17 日</time></p>
             </footer>
-            <nav class="pagination">
+            <nav class="pagination" aria-label="Post pagination">
               <a href="/news/2018/05/lug-logo-collect/" class="pagination--pager" title="LUG LOGO 征集活动">上一页</a>
               <a href="/news/2018/06/server-down/" class="pagination--pager" title="服务器宕机通知">下一页</a>
             </nav>
@@ -192,8 +193,8 @@
           <div class="grid__wrapper">
             <div class="grid__item">
               <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                <h2 class="archive__item-title no_toc" itemprop="headline">
-                  <a href="/planet/2025/07/how-to-use-tmux/" rel="permalink">提升命令行使用体验──tmux 终端复用
+                <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                  <a class="u-url" href="/planet/2025/07/how-to-use-tmux/" rel="permalink">提升命令行使用体验──tmux 终端复用
                   </a>
                 </h2>
                 <p class="page__meta">
@@ -207,14 +208,14 @@
                     7 分钟阅读
                   </span>
                 </p>
-                <p class="archive__item-excerpt" itemprop="description">本文会介绍 tmux 的基础使用方法，以及长期使用下来的一些常用配置。
+                <p class="archive__item-excerpt p-summary" itemprop="description">本文会介绍 tmux 的基础使用方法，以及长期使用下来的一些常用配置。
                 </p>
               </article>
             </div>
             <div class="grid__item">
               <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                <h2 class="archive__item-title no_toc" itemprop="headline">
-                  <a href="/planet/2025/02/hackergame-rootless-docker/" rel="permalink">Rootless Docker in Docker 在 Hackergame 中的实践
+                <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                  <a class="u-url" href="/planet/2025/02/hackergame-rootless-docker/" rel="permalink">Rootless Docker in Docker 在 Hackergame 中的实践
                   </a>
                 </h2>
                 <p class="page__meta">
@@ -228,14 +229,14 @@
                     5 分钟阅读
                   </span>
                 </p>
-                <p class="archive__item-excerpt" itemprop="description">本文介绍了 2024 年 USTC Hackergame 中 Rootless Docker in Docker 在 Web 类题目容器隔离中的实践。
+                <p class="archive__item-excerpt p-summary" itemprop="description">本文介绍了 2024 年 USTC Hackergame 中 Rootless Docker in Docker 在 Web 类题目容器隔离中的实践。
                 </p>
               </article>
             </div>
             <div class="grid__item">
               <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                <h2 class="archive__item-title no_toc" itemprop="headline">
-                  <a href="/planet/2025/01/local-file-serving/" rel="permalink">快速建立本地 HTTP 文件服务
+                <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                  <a class="u-url" href="/planet/2025/01/local-file-serving/" rel="permalink">快速建立本地 HTTP 文件服务
                   </a>
                 </h2>
                 <p class="page__meta">
@@ -249,14 +250,14 @@
                     4 分钟阅读
                   </span>
                 </p>
-                <p class="archive__item-excerpt" itemprop="description">USTCLUG 的一个重要服务是它的 开源软件镜像。但是我们这里要讨论的，是另一种自己在本地搭建的文件服务，目的是加速对远程静态文件的访问。这篇文章来源于帮同学解决的一个小问题。
+                <p class="archive__item-excerpt p-summary" itemprop="description">USTCLUG 的一个重要服务是它的 开源软件镜像。但是我们这里要讨论的，是另一种自己在本地搭建的文件服务，目的是加速对远程静态文件的访问。这篇文章来源于帮同学解决的一个小问题。
                 </p>
               </article>
             </div>
             <div class="grid__item">
               <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                <h2 class="archive__item-title no_toc" itemprop="headline">
-                  <a href="/planet/2024/12/ustc-mirrors-zfs-rebuild/" rel="permalink">镜像站 ZFS 实践
+                <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                  <a class="u-url" href="/planet/2024/12/ustc-mirrors-zfs-rebuild/" rel="permalink">镜像站 ZFS 实践
                   </a>
                 </h2>
                 <p class="page__meta">
@@ -270,7 +271,7 @@
                     13 分钟阅读
                   </span>
                 </p>
-                <p class="archive__item-excerpt" itemprop="description">A.K.A. 如何让 2000 元的机械硬盘跑得比 3000 元的固态硬盘还快（
+                <p class="archive__item-excerpt p-summary" itemprop="description">A.K.A. 如何让 2000 元的机械硬盘跑得比 3000 元的固态硬盘还快（
                 </p>
               </article>
             </div>

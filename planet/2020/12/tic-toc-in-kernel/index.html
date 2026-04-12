@@ -1,7 +1,8 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.27.3 by Michael Rose
-  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Minimal Mistakes Jekyll Theme 4.28.0 by Michael Rose
+  Copyright 2013-2026 Michael Rose - mademistakes.com | @mmistakes
+  Copyright 2024-2026 iBug - ibugone.com | @iBug
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
@@ -48,7 +49,7 @@
       window.enable_copy_code_button = true;
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=03be4e9a88">
+    <link rel="stylesheet" href="/assets/css/main.css?v=0bc6a90cbe">
     <link rel="stylesheet" href="/_extra/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <link rel="stylesheet" href="/_extra/open-sans.css" media="invalid" onload="this.media='all'">
     <script>
@@ -67,7 +68,7 @@
     <!-- end custom head snippets -->
   </head>
   <body class="layout--single" dir="ltr">
-    <nav class="skip-links">
+    <nav class="skip-links" aria-label="Skip links">
       <ul>
         <li><a href="#site-nav" class="screen-reader-shortcut">转到主导航栏</a></li>
         <li><a href="#main" class="screen-reader-shortcut">转到内容</a></li>
@@ -77,7 +78,7 @@
     <div class="masthead">
       <div class="masthead__inner-wrap">
         <div class="masthead__menu">
-          <nav id="site-nav" class="greedy-nav">
+          <nav id="site-nav" class="greedy-nav" aria-label="Primary navigation">
             <a class="site-logo" href="/"><img src="/static/lug-penguin.png" alt="LUG @ USTC"></a>
             <a class="site-title" href="/">
               LUG @ USTC
@@ -180,15 +181,15 @@
             </div>
           </div>
         </div>
-        <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+        <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
           <meta itemprop="headline" content="在 Linux 内核中测试程序性能">
           <meta itemprop="description" content="本学期，我担任了李诚老师编译原理课程的助教。在课程实验中，我们基于 LLVM 构建了一套编译系统，其中一个实验需要编写后端优化算法。为了评估学生们的优化代码，我们需要比较优化前后的代码（在这里是 LLVM IR）的性能。我们通过统计程序运行的时间来比较代码的性能，但是用户程序会受到内核调度。因为不是连续执行程序，所以受到调度造成的延迟会导致统计到的时间出现噪音，这些噪音可能会让测试结果不准确甚至影响到了同学们的分数。最开始，我想到是不是可以统计指令数来评估性能，打算用 perf stat 进行测试。然而，我们提供的实验环境基于虚拟机，VirtualBox 和 WSL 都没有实现相关的虚拟寄存器，要让同学们方便地使用该指令会比较困难，只得作罢。这时，我突然想到，内核线程可以不受到调度，那么使用内核线程是不是可以更精确的测量时间呢？于是我便开始了尝试。">
           <meta itemprop="datePublished" content="2020-12-19T00:00:00+08:00">
           <meta itemprop="dateModified" content="2024-09-17T14:00:46+08:00">
           <div class="page__inner-wrap">
-            <section class="page__content" itemprop="text">
+            <section class="page__content e-content" itemprop="text">
               <aside class="sidebar__right sticky">
-                <nav class="toc">
+                <nav class="toc" aria-label="Table of contents">
                   <header>
                     <h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4>
                   </header>
@@ -455,7 +456,7 @@
               </p>
               <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2024-09-17">2024 年 9 月 17 日</time></p>
             </footer>
-            <nav class="pagination">
+            <nav class="pagination" aria-label="Post pagination">
               <a href="/planet/2020/08/keeping-account-with-beancount/" class="pagination--pager" title="使用 Beancount 进行记账并自动记录一卡通消费">上一页</a>
               <a href="/planet/2021/01/physexp-using-python/" class="pagination--pager" title="用 Python 处理大物实验数据">下一页</a>
             </nav>
@@ -466,8 +467,8 @@
           <div class="grid__wrapper">
             <div class="grid__item">
               <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                <h2 class="archive__item-title no_toc" itemprop="headline">
-                  <a href="/planet/2025/07/how-to-use-tmux/" rel="permalink">提升命令行使用体验──tmux 终端复用
+                <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                  <a class="u-url" href="/planet/2025/07/how-to-use-tmux/" rel="permalink">提升命令行使用体验──tmux 终端复用
                   </a>
                 </h2>
                 <p class="page__meta">
@@ -481,14 +482,14 @@
                     7 分钟阅读
                   </span>
                 </p>
-                <p class="archive__item-excerpt" itemprop="description">本文会介绍 tmux 的基础使用方法，以及长期使用下来的一些常用配置。
+                <p class="archive__item-excerpt p-summary" itemprop="description">本文会介绍 tmux 的基础使用方法，以及长期使用下来的一些常用配置。
                 </p>
               </article>
             </div>
             <div class="grid__item">
               <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                <h2 class="archive__item-title no_toc" itemprop="headline">
-                  <a href="/planet/2025/02/hackergame-rootless-docker/" rel="permalink">Rootless Docker in Docker 在 Hackergame 中的实践
+                <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                  <a class="u-url" href="/planet/2025/02/hackergame-rootless-docker/" rel="permalink">Rootless Docker in Docker 在 Hackergame 中的实践
                   </a>
                 </h2>
                 <p class="page__meta">
@@ -502,14 +503,14 @@
                     5 分钟阅读
                   </span>
                 </p>
-                <p class="archive__item-excerpt" itemprop="description">本文介绍了 2024 年 USTC Hackergame 中 Rootless Docker in Docker 在 Web 类题目容器隔离中的实践。
+                <p class="archive__item-excerpt p-summary" itemprop="description">本文介绍了 2024 年 USTC Hackergame 中 Rootless Docker in Docker 在 Web 类题目容器隔离中的实践。
                 </p>
               </article>
             </div>
             <div class="grid__item">
               <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                <h2 class="archive__item-title no_toc" itemprop="headline">
-                  <a href="/planet/2025/01/local-file-serving/" rel="permalink">快速建立本地 HTTP 文件服务
+                <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                  <a class="u-url" href="/planet/2025/01/local-file-serving/" rel="permalink">快速建立本地 HTTP 文件服务
                   </a>
                 </h2>
                 <p class="page__meta">
@@ -523,14 +524,14 @@
                     4 分钟阅读
                   </span>
                 </p>
-                <p class="archive__item-excerpt" itemprop="description">USTCLUG 的一个重要服务是它的 开源软件镜像。但是我们这里要讨论的，是另一种自己在本地搭建的文件服务，目的是加速对远程静态文件的访问。这篇文章来源于帮同学解决的一个小问题。
+                <p class="archive__item-excerpt p-summary" itemprop="description">USTCLUG 的一个重要服务是它的 开源软件镜像。但是我们这里要讨论的，是另一种自己在本地搭建的文件服务，目的是加速对远程静态文件的访问。这篇文章来源于帮同学解决的一个小问题。
                 </p>
               </article>
             </div>
             <div class="grid__item">
               <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                <h2 class="archive__item-title no_toc" itemprop="headline">
-                  <a href="/planet/2024/12/ustc-mirrors-zfs-rebuild/" rel="permalink">镜像站 ZFS 实践
+                <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                  <a class="u-url" href="/planet/2024/12/ustc-mirrors-zfs-rebuild/" rel="permalink">镜像站 ZFS 实践
                   </a>
                 </h2>
                 <p class="page__meta">
@@ -544,7 +545,7 @@
                     13 分钟阅读
                   </span>
                 </p>
-                <p class="archive__item-excerpt" itemprop="description">A.K.A. 如何让 2000 元的机械硬盘跑得比 3000 元的固态硬盘还快（
+                <p class="archive__item-excerpt p-summary" itemprop="description">A.K.A. 如何让 2000 元的机械硬盘跑得比 3000 元的固态硬盘还快（
                 </p>
               </article>
             </div>

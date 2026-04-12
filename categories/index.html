@@ -1,7 +1,8 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.27.3 by Michael Rose
-  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Minimal Mistakes Jekyll Theme 4.28.0 by Michael Rose
+  Copyright 2013-2026 Michael Rose - mademistakes.com | @mmistakes
+  Copyright 2024-2026 iBug - ibugone.com | @iBug
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
@@ -44,7 +45,7 @@
       window.enable_copy_code_button = true;
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=03be4e9a88">
+    <link rel="stylesheet" href="/assets/css/main.css?v=0bc6a90cbe">
     <link rel="stylesheet" href="/_extra/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <link rel="stylesheet" href="/_extra/open-sans.css" media="invalid" onload="this.media='all'">
     <!-- start custom head snippets -->
@@ -52,7 +53,7 @@
     <!-- end custom head snippets -->
   </head>
   <body class="layout--categories" dir="ltr">
-    <nav class="skip-links">
+    <nav class="skip-links" aria-label="Skip links">
       <ul>
         <li><a href="#site-nav" class="screen-reader-shortcut">转到主导航栏</a></li>
         <li><a href="#main" class="screen-reader-shortcut">转到内容</a></li>
@@ -62,7 +63,7 @@
     <div class="masthead">
       <div class="masthead__inner-wrap">
         <div class="masthead__menu">
-          <nav id="site-nav" class="greedy-nav">
+          <nav id="site-nav" class="greedy-nav" aria-label="Primary navigation">
             <a class="site-logo" href="/"><img src="/static/lug-penguin.png" alt="LUG @ USTC"></a>
             <a class="site-title" href="/">
               LUG @ USTC
@@ -124,7 +125,7 @@
           <ul class="taxonomy__index">
             <li>
               <a href="#lug-活动">
-                <strong>LUG 活动</strong> <span class="taxonomy__count">100</span>
+                <strong>LUG 活动</strong> <span class="taxonomy__count">102</span>
               </a>
             </li>
             <li>
@@ -228,8 +229,40 @@
             <div class="entries-list">
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2025/12/Linux101-5/" rel="permalink">Linux 101 第五课
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2026/03/SSG-Workshop/" rel="permalink">每周小聚：现代静态站点构建
+                    </a>
+                  </h2>
+                  <p class="page__meta">
+                    <span class="page__meta-date">
+                      <i class="far fa-calendar-alt" aria-hidden="true"></i>
+                      <time datetime="2026-03-28T19:00:00+08:00">2026 年 3 月 28 日</time>
+                    </span>
+                  </p>
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2026 年 3 月 28 日晚上，中国科学技术大学学生 Linux 用户协会在西区 3A111 教室开展了每周小聚活动。本次小聚主题是现代静态站点构建，由熊桐睿同学主持。
+                  </p>
+                </article>
+              </div>
+              <div class="list__item">
+                <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2026/03/Linux-Utilities/" rel="permalink">每周小聚：Linux 科研环境实用配置指南
+                    </a>
+                  </h2>
+                  <p class="page__meta">
+                    <span class="page__meta-date">
+                      <i class="far fa-calendar-alt" aria-hidden="true"></i>
+                      <time datetime="2026-03-22T15:00:00+08:00">2026 年 3 月 22 日</time>
+                    </span>
+                  </p>
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2026 年 3 月 22 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C101 教室开展了每周小聚活动。本次小聚的主题是吴擎宇同学带来的 Linux 科研环境实用配置指南。
+                  </p>
+                </article>
+              </div>
+              <div class="list__item">
+                <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2025/12/Linux101-5/" rel="permalink">Linux 101 第五课
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -238,14 +271,14 @@
                       <time datetime="2025-12-20T15:00:00+08:00">2025 年 12 月 20 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2025 年 12 月 20 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C101 教室举办 Linux 101 系列活动的第五课：Linux 上的编程。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2025 年 12 月 20 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C101 教室举办 Linux 101 系列活动的第五课：Linux 上的编程。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2025/12/Typst/" rel="permalink">每周小聚：Typst 介绍
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2025/12/Typst/" rel="permalink">每周小聚：Typst 介绍
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -254,14 +287,14 @@
                       <time datetime="2025-12-07T15:00:00+08:00">2025 年 12 月 7 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2025 年 12 月 07 日，校学生 Linux 用户协会在西区第三教学楼 3C101 教室开展了每周小聚活动。本次小聚的主题吴擎宇同学带来的 Typst 介绍。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2025 年 12 月 07 日，校学生 Linux 用户协会在西区第三教学楼 3C101 教室开展了每周小聚活动。本次小聚的主题是吴擎宇同学带来的 Typst 介绍。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2025/11/Linux101-4/" rel="permalink">Linux 101 第四课
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2025/11/Linux101-4/" rel="permalink">Linux 101 第四课
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -270,14 +303,14 @@
                       <time datetime="2025-11-30T15:00:00+08:00">2025 年 11 月 30 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2025 年 11 月 30 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C101 教室举办 Linux 101 系列活动的第四课：用户与用户组、文件权限、文件系统层次结构。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2025 年 11 月 30 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C101 教室举办 Linux 101 系列活动的第四课：用户与用户组、文件权限、文件系统层次结构。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2025/11/Linux101-3/" rel="permalink">Linux 101 第三课
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2025/11/Linux101-3/" rel="permalink">Linux 101 第三课
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -286,14 +319,14 @@
                       <time datetime="2025-11-15T15:00:00+08:00">2025 年 11 月 15 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2025 年 11 月 15 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C101 教室举办 Linux 101 系列活动的第三课：进程、前后台、服务与例行性任务。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2025 年 11 月 15 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C101 教室举办 Linux 101 系列活动的第三课：进程、前后台、服务与例行性任务。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2025/11/General-Meeting/" rel="permalink">2025 年秋季全员大会
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2025/11/General-Meeting/" rel="permalink">2025 年秋季全员大会
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -302,14 +335,14 @@
                       <time datetime="2025-11-08T15:00:00+08:00">2025 年 11 月 8 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2025 年 11 月 8 日下午 3 点，中国科学技术大学学生 Linux 用户协会在西区 3C101 教室召开了秋季全员大会。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2025 年 11 月 8 日下午 3 点，中国科学技术大学学生 Linux 用户协会在西区 3C101 教室召开了秋季全员大会。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2025/10/Linux101-2/" rel="permalink">Linux 101 第二课
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2025/10/Linux101-2/" rel="permalink">Linux 101 第二课
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -318,14 +351,14 @@
                       <time datetime="2025-10-25T14:30:00+08:00">2025 年 10 月 25 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2025 年 10 月 25 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C104 教室举办 Linux 101 系列活动的第二课：软件安装与文件操作。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2025 年 10 月 25 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C104 教室举办 Linux 101 系列活动的第二课：软件安装与文件操作。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2025/10/VSCode-C/" rel="permalink">每周小聚：VS Code 与 C 语言开发环境
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2025/10/VSCode-C/" rel="permalink">每周小聚：VS Code 与 C 语言开发环境
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -334,14 +367,14 @@
                       <time datetime="2025-10-19T14:30:00+08:00">2025 年 10 月 19 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2025 年 10 月 19 日，校学生 Linux 用户协会在西区第三教学楼 3C101 教室开展了每周小聚活动。本次小聚的主题是 VS Code 的入门与使用技巧，以及如何在 VS Code 中配置 C 语言开发环境。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2025 年 10 月 19 日，校学生 Linux 用户协会在西区第三教学楼 3C101 教室开展了每周小聚活动。本次小聚的主题是 VS Code 的入门与使用技巧，以及如何在 VS Code 中配置 C 语言开发环境。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2025/10/Linux101-LIP/" rel="permalink">Linux Install Party
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2025/10/Linux101-LIP/" rel="permalink">Linux Install Party
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -350,13 +383,13 @@
                       <time datetime="2025-10-12T14:30:00+08:00">2025 年 10 月 12 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2025 年 10 月 12 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C101 教室成功举办 Linux Install Party。这是 LUG 第九次，也是今年第二次举办 Linux Install Party。活动旨在通过理论讲解与实践操作相结合的方式，帮助参与者初步了解 Linux 操...</p>
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2025 年 10 月 12 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C101 教室成功举办 Linux Install Party。这是 LUG 第九次，也是今年第二次举办 Linux Install Party。活动旨在通过理论讲解与实践操作相结合的方式，帮助参与者初步了解 Linux 操...</p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2025/09/SFD/" rel="permalink">2025 软件自由日中国科大站
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2025/09/SFD/" rel="permalink">2025 软件自由日中国科大站
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -365,13 +398,13 @@
                       <time datetime="2025-09-21T20:00:00+08:00">2025 年 9 月 21 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2025 年 9 月 20 日，LUG 举办了软件自由日 (Software Freedom Day) 活动。活动在 14:30-17:30 于西区 3C101 举行，并同步进行了线上直播。本次活动邀请到开源项目 Slidev 维护者 _Kerman 同学，来自少年班学院的田佳嘉同学，LUG 前会长罗嘉宏同学，以...</p>
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2025 年 9 月 20 日，LUG 举办了软件自由日 (Software Freedom Day) 活动。活动在 14:30-17:30 于西区 3C101 举行，并同步进行了线上直播。本次活动邀请到开源项目 Slidev 维护者 _Kerman 同学，来自少年班学院的田佳嘉同学，LUG 前会长罗嘉宏同学，以...</p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2025/09/2025-freshmen-course/" rel="permalink">2025 秋季学期 新生活力课堂
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2025/09/2025-freshmen-course/" rel="permalink">2025 秋季学期 新生活力课堂
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -380,14 +413,14 @@
                       <time datetime="2025-09-08T18:00:00+08:00">2025 年 9 月 8 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">中国科学技术大学学生 Linux 用户协会于 9 月 7 日 19:00-21:00 在西区 3A111 教室举办了新生活力课堂。本次 LUG 新生活力课堂参与人数创历史新高，感谢各位同学的热情参与！
+                  <p class="archive__item-excerpt p-summary" itemprop="description">中国科学技术大学学生 Linux 用户协会于 9 月 7 日 19:00-21:00 在西区 3A111 教室举办了新生活力课堂。本次 LUG 新生活力课堂参与人数创历史新高，感谢各位同学的热情参与！
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2025/08/SFD-Prep/" rel="permalink">2025 软件自由日 (SFD) 讲座征集
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2025/08/SFD-Prep/" rel="permalink">2025 软件自由日 (SFD) 讲座征集
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -396,14 +429,14 @@
                       <time datetime="2025-08-10T11:00:00+08:00">2025 年 8 月 10 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">软件自由日（Software Freedom Day，SFD）是在 Digital Freedom Foundation 的主办下，由自由/开源软件爱好者自发筹集组织非盈利性活动，旨在为自由/开源软件爱好者提供一个信息交流平台、联合各社区举办各种自由/开源软件活动。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">软件自由日（Software Freedom Day，SFD）是在 Digital Freedom Foundation 的主办下，由自由/开源软件爱好者自发筹集组织非盈利性活动，旨在为自由/开源软件爱好者提供一个信息交流平台、联合各社区举办各种自由/开源软件活动。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2025/03/Linux101-LIP-2025/" rel="permalink">Linux Install Party 2025
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2025/03/Linux101-LIP-2025/" rel="permalink">Linux Install Party 2025
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -412,13 +445,13 @@
                       <time datetime="2025-03-16T15:00:00+08:00">2025 年 3 月 16 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2025 年 3 月 16 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C101 教室成功举办 “Linux 101” 系列课程首讲——Linux Install Party。这是 LUG 第八年举办 Linux 101 系列课程、第九年举办 Linux Install Party。本次活动通过理...</p>
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2025 年 3 月 16 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C101 教室成功举办 “Linux 101” 系列课程首讲——Linux Install Party。这是 LUG 第八年举办 Linux 101 系列课程、第九年举办 Linux Install Party。本次活动通过理...</p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2024/12/hackergame2024/" rel="permalink">中国科学技术大学第十一届信息安全大赛圆满落幕
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2024/12/hackergame2024/" rel="permalink">中国科学技术大学第十一届信息安全大赛圆满落幕
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -427,14 +460,14 @@
                       <time datetime="2024-12-11T12:00:00+08:00">2024 年 12 月 11 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2024 年 11 月 9 日中午 12:00，Hackergame 网站答案提交窗口准时关闭，历时七天的中国科学技术大学第十一届信息安全大赛（Hackergame 2024）圆满落幕。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2024 年 11 月 9 日中午 12:00，Hackergame 网站答案提交窗口准时关闭，历时七天的中国科学技术大学第十一届信息安全大赛（Hackergame 2024）圆满落幕。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2024/12/slidev/" rel="permalink">Slidev 幻灯片制作
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2024/12/slidev/" rel="permalink">Slidev 幻灯片制作
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -443,13 +476,13 @@
                       <time datetime="2024-12-04T15:00:00+08:00">2024 年 12 月 4 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2024 年 12 月 4 日，校学生 Linux 用户协会在西区第三教学楼 3A306 教室举行小聚。本次小聚是由 Slidev 团队成员 _Kerman 同学带来的 Slidev 幻灯片制作工具介绍。Slidev.js 是一款为开发者设计的开源的幻灯片制作工具，通过简单的 Markdown 语法即可制作出精美...</p>
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2024 年 12 月 4 日，校学生 Linux 用户协会在西区第三教学楼 3A306 教室举行小聚。本次小聚是由 Slidev 团队成员 _Kerman 同学带来的 Slidev 幻灯片制作工具介绍。Slidev.js 是一款为开发者设计的开源的幻灯片制作工具，通过简单的 Markdown 语法即可制作出精美...</p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2024/11/gathering-openmp/" rel="permalink">C/C++ 下 OpenMP 程序设计介绍
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2024/11/gathering-openmp/" rel="permalink">C/C++ 下 OpenMP 程序设计介绍
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -458,13 +491,13 @@
                       <time datetime="2024-11-29T10:00:00+08:00">2024 年 11 月 29 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2024 年 11 月 27 日，校学生 Linux 用户协会在西区第三教学楼 3A306 教室开展了小聚活动。本次小聚主要是由罗嘉宏同学带来的 C/C++ 下 OpenMP 程序设计介绍。OpenMP 是广为运用的并行计算处理框架，为 C/C++ 和 Fortran 编程语言提供支持，提供了简单有效的 CPU ...</p>
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2024 年 11 月 27 日，校学生 Linux 用户协会在西区第三教学楼 3A306 教室开展了小聚活动。本次小聚主要是由罗嘉宏同学带来的 C/C++ 下 OpenMP 程序设计介绍。OpenMP 是广为运用的并行计算处理框架，为 C/C++ 和 Fortran 编程语言提供支持，提供了简单有效的 CPU ...</p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2024/10/Hackergame2024-ad/" rel="permalink">Hackergame 2024 活动安排
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2024/10/Hackergame2024-ad/" rel="permalink">Hackergame 2024 活动安排
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -473,14 +506,14 @@
                       <time datetime="2024-10-26T00:00:00+08:00">2024 年 10 月 26 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2024 年度中国科学技术大学第十一届信息安全大赛（Hackergame 2024）即将于 2024.11.02 线上举办，持续一周，下面是详细的活动安排。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2024 年度中国科学技术大学第十一届信息安全大赛（Hackergame 2024）即将于 2024.11.02 线上举办，持续一周，下面是详细的活动安排。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2024/09/SFD/" rel="permalink">2024 软件自由日中国科大站
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2024/09/SFD/" rel="permalink">2024 软件自由日中国科大站
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -489,13 +522,13 @@
                       <time datetime="2024-09-21T20:00:00+08:00">2024 年 9 月 21 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2024 年 9 月 21 日，LUG 举办了软件自由日 (Software Freedom Day), 活动在 14:30-18:30 于西区 3C101 举行，并同步进行了线上直播。本次活动邀请到网络信息中心的张焕杰老师、本届 LUG 的 COO 马天开同学，PLCT 实验室的于波同学，以及 traceexe...</p>
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2024 年 9 月 21 日，LUG 举办了软件自由日 (Software Freedom Day), 活动在 14:30-18:30 于西区 3C101 举行，并同步进行了线上直播。本次活动邀请到网络信息中心的张焕杰老师、本届 LUG 的 COO 马天开同学，PLCT 实验室的于波同学，以及 traceexe...</p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2024/09/2024-freshmen-course/" rel="permalink">2024 秋季学期 新生活力课堂 &amp; 游园会
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2024/09/2024-freshmen-course/" rel="permalink">2024 秋季学期 新生活力课堂 &amp; 游园会
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -504,14 +537,14 @@
                       <time datetime="2024-09-07T18:00:00+08:00">2024 年 9 月 7 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">中国科学技术大学 Linux 用户协会在秋季学期举办了系列迎新活动，包括新生活力课堂和游园会，时间安排如下：
+                  <p class="archive__item-excerpt p-summary" itemprop="description">中国科学技术大学 Linux 用户协会在秋季学期举办了系列迎新活动，包括新生活力课堂和游园会，时间安排如下：
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2024/08/SFD-Prep/" rel="permalink">2024 软件自由日 (SFD) 讲座征集
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2024/08/SFD-Prep/" rel="permalink">2024 软件自由日 (SFD) 讲座征集
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -520,14 +553,14 @@
                       <time datetime="2024-08-15T15:00:00+08:00">2024 年 8 月 15 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">软件自由日（Software Freedom Day，SFD）是在 Digital Freedom Foundation 的主办下，由自由/开源软件爱好者自发筹集组织非盈利性活动，旨在为自由/开源软件爱好者提供一个信息交流平台、联合各社区举办各种自由/开源软件活动。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">软件自由日（Software Freedom Day，SFD）是在 Digital Freedom Foundation 的主办下，由自由/开源软件爱好者自发筹集组织非盈利性活动，旨在为自由/开源软件爱好者提供一个信息交流平台、联合各社区举办各种自由/开源软件活动。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2024/04/gathering-linux-graphics-journey/" rel="permalink">Linux 图形堆栈初探
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2024/04/gathering-linux-graphics-journey/" rel="permalink">Linux 图形堆栈初探
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -536,14 +569,14 @@
                       <time datetime="2024-04-21T15:00:00+08:00">2024 年 4 月 21 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2024 年 4 月 21 日，校学生 Linux 用户协会举办了一场小聚活动。本次小聚为刘紫檀同学为我们带来的关于 Linux 图形堆栈的介绍。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2024 年 4 月 21 日，校学生 Linux 用户协会举办了一场小聚活动。本次小聚为刘紫檀同学为我们带来的关于 Linux 图形堆栈的介绍。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2024/04/Linux101-3/" rel="permalink">Linux 101 第三课
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2024/04/Linux101-3/" rel="permalink">Linux 101 第三课
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -552,14 +585,14 @@
                       <time datetime="2024-04-14T14:30:00+08:00">2024 年 4 月 14 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2024 年 4 月 14 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C102 教室举办 Linux 101 系列活动的第三课：进程、前后台、服务与例行性任务。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2024 年 4 月 14 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C102 教室举办 Linux 101 系列活动的第三课：进程、前后台、服务与例行性任务。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2024/03/gathering-attack-and-defense-exercise-talk/" rel="permalink">网络安全攻防演练杂谈
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2024/03/gathering-attack-and-defense-exercise-talk/" rel="permalink">网络安全攻防演练杂谈
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -568,14 +601,14 @@
                       <time datetime="2024-03-31T15:00:00+08:00">2024 年 3 月 31 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2024 年 3 月 31 日，校学生 Linux 用户协会举办了一场小聚活动。本次小聚我们有幸邀请到协会指导老师庄严老师来为同学们做一场关于网络安全攻防演练的杂谈。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2024 年 3 月 31 日，校学生 Linux 用户协会举办了一场小聚活动。本次小聚我们有幸邀请到协会指导老师庄严老师来为同学们做一场关于网络安全攻防演练的杂谈。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2024/03/Linux101-2/" rel="permalink">Linux 101 第二课
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2024/03/Linux101-2/" rel="permalink">Linux 101 第二课
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -584,14 +617,14 @@
                       <time datetime="2024-03-24T14:30:00+08:00">2024 年 3 月 24 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2024 年 3 月 24 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C102 教室举办 Linux 101 系列活动的第二课：软件安装与文件系统。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2024 年 3 月 24 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C102 教室举办 Linux 101 系列活动的第二课：软件安装与文件系统。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2024/03/Linux101-LIP-2024/" rel="permalink">Linux Install Party 2024
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2024/03/Linux101-LIP-2024/" rel="permalink">Linux Install Party 2024
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -600,13 +633,13 @@
                       <time datetime="2024-03-09T19:00:00+08:00">2024 年 3 月 9 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2024 年 3 月 9 日下午，中国科学技术大学 Linux 用户协会在西区 3C102 教室举办了 Linux 101 的第一课：Linux Install Party。该系列活动为社团传统活动，旨在为对 Linux 操作系统感兴趣的同学提供一个互动交流的平台，让大家了解 Linux 的基本概念，并亲自体验安...</p>
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2024 年 3 月 9 日下午，中国科学技术大学 Linux 用户协会在西区 3C102 教室举办了 Linux 101 的第一课：Linux Install Party。该系列活动为社团传统活动，旨在为对 Linux 操作系统感兴趣的同学提供一个互动交流的平台，让大家了解 Linux 的基本概念，并亲自体验安...</p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2023/12/hackergame-2023/" rel="permalink">中国科学技术大学第十届信息安全大赛圆满落幕
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2023/12/hackergame-2023/" rel="permalink">中国科学技术大学第十届信息安全大赛圆满落幕
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -615,14 +648,14 @@
                       <time datetime="2023-12-17T15:00:00+08:00">2023 年 12 月 17 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2023 年 11 月 4 日中午 12:00，Hackergame 网站答案提交窗口如约关闭，历时整整七天的中国科学技术大学第十届信息安全大赛圆满落幕。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2023 年 11 月 4 日中午 12:00，Hackergame 网站答案提交窗口如约关闭，历时整整七天的中国科学技术大学第十届信息安全大赛圆满落幕。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2023/12/gathering-debug/" rel="permalink">LUG 小聚：Debug 原理与演示
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2023/12/gathering-debug/" rel="permalink">LUG 小聚：Debug 原理与演示
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -631,14 +664,14 @@
                       <time datetime="2023-12-09T19:00:00+08:00">2023 年 12 月 9 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2023 年 12 月 9 日，校学生 Linux 用户协会举办了一场小聚活动。本次小聚是由 Linux 用户协会的廖巍同学为我们带来的关于 debug 的原理与演示。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2023 年 12 月 9 日，校学生 Linux 用户协会举办了一场小聚活动。本次小聚是由 Linux 用户协会的廖巍同学为我们带来的关于 debug 的原理与演示。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2023/10/Hackergame2023-pep-rally/" rel="permalink">Hackergame 2023 动员会
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2023/10/Hackergame2023-pep-rally/" rel="permalink">Hackergame 2023 动员会
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -647,14 +680,14 @@
                       <time datetime="2023-10-27T21:00:00+08:00">2023 年 10 月 27 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">校学生 Linux 用户协会于 2023 年 10 月 27 日晚 19:00 举办了中国科学技术大学第十届信息安全大赛（Hackergame 2023）动员会，旨在为参赛者提供比赛规则、流程和常用工具的介绍，帮助大家更好地准备比赛。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">校学生 Linux 用户协会于 2023 年 10 月 27 日晚 19:00 举办了中国科学技术大学第十届信息安全大赛（Hackergame 2023）动员会，旨在为参赛者提供比赛规则、流程和常用工具的介绍，帮助大家更好地准备比赛。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2023/10/gathering-git/" rel="permalink">LUG 小聚：Git 简介与使用心得分享
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2023/10/gathering-git/" rel="permalink">LUG 小聚：Git 简介与使用心得分享
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -663,14 +696,14 @@
                       <time datetime="2023-10-22T21:00:00+08:00">2023 年 10 月 22 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2023 年 10 月 22 日，校学生 Linux 用户协会举办了一场小聚活动。本次小聚是由王永福同学为我们带来的关于 Git 的简介与使用心得分享。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2023 年 10 月 22 日，校学生 Linux 用户协会举办了一场小聚活动。本次小聚是由王永福同学为我们带来的关于 Git 的简介与使用心得分享。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2023/09/SFD/" rel="permalink">2023 软件自由日中国科大站
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2023/09/SFD/" rel="permalink">2023 软件自由日中国科大站
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -679,13 +712,13 @@
                       <time datetime="2023-09-16T20:00:00+08:00">2023 年 9 月 16 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2023 年 9 月 16 日，中国科学技术大学软件自由日（Software Freedom Day）活动于下午 2 时 30 分在西区 3C101 教室及 B 站线上直播同步举行。本次活动邀请来自 PLCT 实验室的项目总监吴伟、来自大连理工大学的胡张治同学、来自 PLCT 实验室的软件开发工程师章翔以及来自墨...</p>
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2023 年 9 月 16 日，中国科学技术大学软件自由日（Software Freedom Day）活动于下午 2 时 30 分在西区 3C101 教室及 B 站线上直播同步举行。本次活动邀请来自 PLCT 实验室的项目总监吴伟、来自大连理工大学的胡张治同学、来自 PLCT 实验室的软件开发工程师章翔以及来自墨...</p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2023/09/2023-freshmen-course/" rel="permalink">2023 秋季学期新生活力课堂
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2023/09/2023-freshmen-course/" rel="permalink">2023 秋季学期新生活力课堂
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -694,14 +727,14 @@
                       <time datetime="2023-09-02T18:00:00+08:00">2023 年 9 月 2 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">在 2023 年 9 月 2 日，中国科学技术大学学生 Linux 用户协会于西校区的 3A102 教室开展了本学期的新生活力课程系列活动与社团宣讲。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">在 2023 年 9 月 2 日，中国科学技术大学学生 Linux 用户协会于西校区的 3A102 教室开展了本学期的新生活力课程系列活动与社团宣讲。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2023/04/Linux_Install_Party_2023/" rel="permalink">Linux Install Party 2023
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2023/04/Linux_Install_Party_2023/" rel="permalink">Linux Install Party 2023
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -710,14 +743,14 @@
                       <time datetime="2023-04-02T19:00:00+08:00">2023 年 4 月 2 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">Linux Install Party 是中国科学技术大学 Linux 用户协会每年必办的活动，通过手把手帮助同学们安装 Linux，来增进大家对 Linux 了解，宣传开源和自由软件精神。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">Linux Install Party 是中国科学技术大学 Linux 用户协会每年必办的活动，通过手把手帮助同学们安装 Linux，来增进大家对 Linux 了解，宣传开源和自由软件精神。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2022/10/gathering-xmake/" rel="permalink">LCPU x USTCLUG 联合沙龙：Xmake 和墨干编辑器
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2022/10/gathering-xmake/" rel="permalink">LCPU x USTCLUG 联合沙龙：Xmake 和墨干编辑器
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -726,14 +759,14 @@
                       <time datetime="2022-10-27T08:00:00+08:00">2022 年 10 月 27 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2022 年 10 月 27 日晚 19:00，北京大学学生 Linux 俱乐部与中国科学技术大学 Linux 用户协会举办了联合沙龙。本次沙龙邀请到了 Xmake 的主要开发者 Ruki 和墨者实验室的开发者们，向参与者们介绍了这两个工具的用途和优势。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2022 年 10 月 27 日晚 19:00，北京大学学生 Linux 俱乐部与中国科学技术大学 Linux 用户协会举办了联合沙龙。本次沙龙邀请到了 Xmake 的主要开发者 Ruki 和墨者实验室的开发者们，向参与者们介绍了这两个工具的用途和优势。
                     Xmake 是广受赞誉的轻量级跨平台自动构建工具，可以帮...</p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2022/10/gathering-nodejs/" rel="permalink">LUG 小聚：Node.js 介绍
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2022/10/gathering-nodejs/" rel="permalink">LUG 小聚：Node.js 介绍
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -742,14 +775,14 @@
                       <time datetime="2022-10-26T08:00:00+08:00">2022 年 10 月 26 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2022 年 10 月 26 日，学生 Linux 用户协会举行了小聚活动。本次小聚是由刘良宇同学为我们带来的关于 Node.js 的技术分享。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2022 年 10 月 26 日，学生 Linux 用户协会举行了小聚活动。本次小聚是由刘良宇同学为我们带来的关于 Node.js 的技术分享。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2022/10/Hackergame2022-pep-rally/" rel="permalink">Hackergame 2022 动员会
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2022/10/Hackergame2022-pep-rally/" rel="permalink">Hackergame 2022 动员会
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -758,14 +791,14 @@
                       <time datetime="2022-10-22T09:00:00+08:00">2022 年 10 月 22 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">学生 Linux 用户协会于 2022 年 10 月 21 日晚 19:00 举办了中国科学技术大学第九届信息安全大赛（Hackergame 2022）动员会，旨在为参赛者提供比赛规则、流程和常用工具的介绍，帮助大家更好地准备比赛。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">学生 Linux 用户协会于 2022 年 10 月 21 日晚 19:00 举办了中国科学技术大学第九届信息安全大赛（Hackergame 2022）动员会，旨在为参赛者提供比赛规则、流程和常用工具的介绍，帮助大家更好地准备比赛。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2022/09/SFD/" rel="permalink">2022 软件自由日中国科大站
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2022/09/SFD/" rel="permalink">2022 软件自由日中国科大站
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -774,13 +807,13 @@
                       <time datetime="2022-09-17T20:00:00+08:00">2022 年 9 月 17 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2022 年 9 月 17 日，中国科学技术大学软件自由日（Software Freedom Day）活动于下午 2 时 30 分在西区 3C101 教室及 B 站线上直播同步举行。本次活动我们邀请到中国科学技术大学网络信息中心总工程师张焕杰老师、PLCT 实验室的创始人及项目总监吴伟、那一科技 CEO 贾枭和中...</p>
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2022 年 9 月 17 日，中国科学技术大学软件自由日（Software Freedom Day）活动于下午 2 时 30 分在西区 3C101 教室及 B 站线上直播同步举行。本次活动我们邀请到中国科学技术大学网络信息中心总工程师张焕杰老师、PLCT 实验室的创始人及项目总监吴伟、那一科技 CEO 贾枭和中...</p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2022/09/2022-freshman-course/" rel="permalink">2022 秋季学期新生系列活动
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2022/09/2022-freshman-course/" rel="permalink">2022 秋季学期新生系列活动
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -789,14 +822,14 @@
                       <time datetime="2022-09-05T09:00:00+08:00">2022 年 9 月 5 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">在 2022 年 8 月 29 日、8 月 31 日、9 月 1 日、9 月 2 日，中国科学技术大学学生 Linux 用户协会分别于西校区的 3C201、203 教室和东校区的 2504、2621 教室开展了本学期的社团宣讲以及新生活力课程系列活动。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">在 2022 年 8 月 29 日、8 月 31 日、9 月 1 日、9 月 2 日，中国科学技术大学学生 Linux 用户协会分别于西校区的 3C201、203 教室和东校区的 2504、2621 教室开展了本学期的社团宣讲以及新生活力课程系列活动。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2022/05/retrocomputing-and-radio-show/" rel="permalink">复古计算与无线电展
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2022/05/retrocomputing-and-radio-show/" rel="permalink">复古计算与无线电展
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -805,14 +838,14 @@
                       <time datetime="2022-05-08T09:00:00+08:00">2022 年 5 月 8 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2022 年 5 月 8 日下午，由中国科学技术大学学生 Linux 用户协会与学生业余无线电协会承办的复古计算和无线电展活动在中区 3 号楼架空层圆满落幕。本次活动中，由学生业余无线电协会社长刘紫檀及两社社员共同筹借的复古设备得以“重见天日”，向我们再次讲述那个曾经属于它们的时代。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2022 年 5 月 8 日下午，由中国科学技术大学学生 Linux 用户协会与学生业余无线电协会承办的复古计算和无线电展活动在中区 3 号楼架空层圆满落幕。本次活动中，由学生业余无线电协会社长刘紫檀及两社社员共同筹借的复古设备得以“重见天日”，向我们再次讲述那个曾经属于它们的时代。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2022/04/linux-101-3/" rel="permalink">Linux 101 第三课
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2022/04/linux-101-3/" rel="permalink">Linux 101 第三课
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -821,14 +854,14 @@
                       <time datetime="2022-04-17T14:30:00+08:00">2022 年 4 月 17 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">4 月 17 日下午，Linux 用户协会线上举办了 Linux 101 系列活动的第三课：Linux 环境下的编程。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">4 月 17 日下午，Linux 用户协会线上举办了 Linux 101 系列活动的第三课：Linux 环境下的编程。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2022/04/linux-101-2/" rel="permalink">Linux 101 第二课
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2022/04/linux-101-2/" rel="permalink">Linux 101 第二课
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -837,14 +870,14 @@
                       <time datetime="2022-04-03T14:30:00+08:00">2022 年 4 月 3 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">4 月 3 日下午，Linux 用户协会于线上举办了 Linux 101 系列活动的第二课：命令行界面的使用。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">4 月 3 日下午，Linux 用户协会于线上举办了 Linux 101 系列活动的第二课：命令行界面的使用。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2022/03/linux-101-1/" rel="permalink">Linux 101 第一课
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2022/03/linux-101-1/" rel="permalink">Linux 101 第一课
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -853,15 +886,15 @@
                       <time datetime="2022-03-13T14:30:00+08:00">2022 年 3 月 13 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">3 月 13 日下午，Linux 用户协会在西区 3C101 教室举办了 Linux 101 系列活动的第一课：
+                  <p class="archive__item-excerpt p-summary" itemprop="description">3 月 13 日下午，Linux 用户协会在西区 3C101 教室举办了 Linux 101 系列活动的第一课：
                     LIP (Linux Install Party)。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2021/12/web-development/" rel="permalink">适合个人开发者的网站开发方案
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2021/12/web-development/" rel="permalink">适合个人开发者的网站开发方案
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -870,14 +903,14 @@
                       <time datetime="2021-12-18T19:30:00+08:00">2021 年 12 月 18 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">12 月 18 日 19:30，本学期的第三次也是最后一次小聚正式拉开序幕，本次小聚由王子博为大家介绍适合个人开发者的网站开发方法，讨论前后端常用框架和常见问题。由于演讲者不方便回校，小聚改为线上举行。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">12 月 18 日 19:30，本学期的第三次也是最后一次小聚正式拉开序幕，本次小聚由王子博为大家介绍适合个人开发者的网站开发方法，讨论前后端常用框架和常见问题。由于演讲者不方便回校，小聚改为线上举行。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2021/12/USTC-resources-LUG-tech-intro/" rel="permalink">网络资源&amp;技术部介绍
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2021/12/USTC-resources-LUG-tech-intro/" rel="permalink">网络资源&amp;技术部介绍
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -886,14 +919,14 @@
                       <time datetime="2021-12-12T14:30:00+08:00">2021 年 12 月 12 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2021 年 12 月 12 日，LUG 社团再一次迎来小聚分享活动，本次小聚由两部分组成，首先由蔡智臻同学为我们带来学校网络资源的介绍，随后由我们社团的技术主力陶柯宇同学为我们分享 LUG 技术部的日常。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2021 年 12 月 12 日，LUG 社团再一次迎来小聚分享活动，本次小聚由两部分组成，首先由蔡智臻同学为我们带来学校网络资源的介绍，随后由我们社团的技术主力陶柯宇同学为我们分享 LUG 技术部的日常。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2021/12/linux-beautify/" rel="permalink">桌面美化
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2021/12/linux-beautify/" rel="permalink">桌面美化
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -902,14 +935,14 @@
                       <time datetime="2021-12-05T14:30:00+08:00">2021 年 12 月 5 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2021 年 12 月 5 日，LUG 社团于 3A212 教室开展了本学期第一次小聚分享活动，本次是由诙谐幽默的赵作竑同学为同学们带来 Linux 桌面美化方案的介绍。（顺带狠狠地捧了一把 Arch Linux 发行版）
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2021 年 12 月 5 日，LUG 社团于 3A212 教室开展了本学期第一次小聚分享活动，本次是由诙谐幽默的赵作竑同学为同学们带来 Linux 桌面美化方案的介绍。（顺带狠狠地捧了一把 Arch Linux 发行版）
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2021/11/hackergame-2021/" rel="permalink">中国科学技术大学第八届信息安全大赛
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2021/11/hackergame-2021/" rel="permalink">中国科学技术大学第八届信息安全大赛
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -918,14 +951,14 @@
                       <time datetime="2021-11-27T22:17:00+08:00">2021 年 11 月 27 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2021 年 10 月 30 日，正午十二时，Hackergame 网站答案提交窗口如约关闭，这场持续七天的属于 hacker 们的盛宴落下帷幕。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2021 年 10 月 30 日，正午十二时，Hackergame 网站答案提交窗口如约关闭，这场持续七天的属于 hacker 们的盛宴落下帷幕。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2021/11/freshman-meeting/" rel="permalink">2021 全员大会
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2021/11/freshman-meeting/" rel="permalink">2021 全员大会
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -934,13 +967,13 @@
                       <time datetime="2021-11-17T16:30:00+08:00">2021 年 11 月 17 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2021 年 11 月 17 日，下午 4:30，校学生 Linux 用户协会秋季学期全员大会如期举行，本届全员大会一如既往，承担着向新成员介绍 LUG 社团内部情况的任务，同时也进行了 LUG 章程讨论环节。指导老师与本届负责人悉数到场，为现场的新同学们答疑解惑。部分社团老人也参与到社团建设的讨论中，时刻关注着...</p>
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2021 年 11 月 17 日，下午 4:30，校学生 Linux 用户协会秋季学期全员大会如期举行，本届全员大会一如既往，承担着向新成员介绍 LUG 社团内部情况的任务，同时也进行了 LUG 章程讨论环节。指导老师与本届负责人悉数到场，为现场的新同学们答疑解惑。部分社团老人也参与到社团建设的讨论中，时刻关注着...</p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2021/09/SFD/" rel="permalink">2021 软件自由日中国科大站
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2021/09/SFD/" rel="permalink">2021 软件自由日中国科大站
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -949,13 +982,13 @@
                       <time datetime="2021-09-25T14:30:00+08:00">2021 年 9 月 25 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2021 年 9 月 25 日，开源社区传统活动软件自由日（Software Freedom Day）于下午 2 点 30 分在西区 3C101 教室如期举行，本次活动我们邀请到来自 TUNA 的 Zenithal 同学，以及 18 级曹嘉琪、19 级蔡智臻同学为我们带来精彩的演讲。除此之外，在闪电演讲环节中 2...</p>
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2021 年 9 月 25 日，开源社区传统活动软件自由日（Software Freedom Day）于下午 2 点 30 分在西区 3C101 教室如期举行，本次活动我们邀请到来自 TUNA 的 Zenithal 同学，以及 18 级曹嘉琪、19 级蔡智臻同学为我们带来精彩的演讲。除此之外，在闪电演讲环节中 2...</p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2021/06/lug-banshan-order/" rel="permalink">2021 Linux 板版衫开始预订！
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2021/06/lug-banshan-order/" rel="permalink">2021 Linux 板版衫开始预订！
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -964,14 +997,14 @@
                       <time datetime="2021-06-15T18:00:00+08:00">2021 年 6 月 15 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">经过版衫方案投票结果（2021 Linux 板版衫候选方案公布与投票），我们最终确定了 2021 Linux 版衫样式，并从即日起开始接受预定。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">经过版衫方案投票结果（2021 Linux 板版衫候选方案公布与投票），我们最终确定了 2021 Linux 版衫样式，并从即日起开始接受预定。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2021/06/pcb/" rel="permalink">PCB 设计与电子制作入门
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2021/06/pcb/" rel="permalink">PCB 设计与电子制作入门
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -980,13 +1013,13 @@
                       <time datetime="2021-06-06T17:30:00+08:00">2021 年 6 月 6 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">6 月 5 日，USTC LUG 与无线电协会在西区 3A108 教室举办了主题为“PCB 设计与电子制作入门”的小聚，由古宜民同学主讲。在介绍了 PCB 设计的基本流程后，他演示了 Altium Designer 和开源工具 KiCAD 的使用，同时分享了自己从设计到联系厂家加工的经验心得。现场同学们积极提问，...</p>
+                  <p class="archive__item-excerpt p-summary" itemprop="description">6 月 5 日，USTC LUG 与无线电协会在西区 3A108 教室举办了主题为“PCB 设计与电子制作入门”的小聚，由古宜民同学主讲。在介绍了 PCB 设计的基本流程后，他演示了 Altium Designer 和开源工具 KiCAD 的使用，同时分享了自己从设计到联系厂家加工的经验心得。现场同学们积极提问，...</p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2021/05/linux-101-4/" rel="permalink">Linux 101 第四课
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2021/05/linux-101-4/" rel="permalink">Linux 101 第四课
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -995,14 +1028,14 @@
                       <time datetime="2021-05-16T17:30:00+08:00">2021 年 5 月 16 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2021 年 5 月 16 日，中国科学技术大学 Linux 用户协会在 3C101 教室举办了本学期第四次 Linux 101 课程，本次课程的主要内容是 Linux 下的进程的概念，由主讲同学刘隆邦同学带来课程。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2021 年 5 月 16 日，中国科学技术大学 Linux 用户协会在 3C101 教室举办了本学期第四次 Linux 101 课程，本次课程的主要内容是 Linux 下的进程的概念，由主讲同学刘隆邦同学带来课程。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2021/04/linux-101-3/" rel="permalink">Linux 101 第三课
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2021/04/linux-101-3/" rel="permalink">Linux 101 第三课
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1011,13 +1044,13 @@
                       <time datetime="2021-04-28T14:30:00+08:00">2021 年 4 月 28 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2021 年 4 月 28 日，中国科学技术大学 Linux 用户协会在 3A211 教室举办了本学期第三次 Linux 101 课程，本次课程的主要内容是 Linux 下的用户管理和权限机制，同时介绍了 Linux 下文件系统层次规范，主讲同学准备了大量操作演示。同时，同学们交流了近期 Linux 使用存在的若...</p>
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2021 年 4 月 28 日，中国科学技术大学 Linux 用户协会在 3A211 教室举办了本学期第三次 Linux 101 课程，本次课程的主要内容是 Linux 下的用户管理和权限机制，同时介绍了 Linux 下文件系统层次规范，主讲同学准备了大量操作演示。同时，同学们交流了近期 Linux 使用存在的若...</p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2021/04/lug-banshan/" rel="permalink">2021 Linux 板版衫设计方案征集
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2021/04/lug-banshan/" rel="permalink">2021 Linux 板版衫设计方案征集
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1026,14 +1059,14 @@
                       <time datetime="2021-04-27T01:01:00+08:00">2021 年 4 月 27 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">经过了去年的疫情，时隔一年，Linux 板 &amp; USTC LUG 版衫企划再次启动啦！
+                  <p class="archive__item-excerpt p-summary" itemprop="description">经过了去年的疫情，时隔一年，Linux 板 &amp; USTC LUG 版衫企划再次启动啦！
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2021/04/linux-101-2/" rel="permalink">Linux 101 第二课
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2021/04/linux-101-2/" rel="permalink">Linux 101 第二课
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1042,14 +1075,14 @@
                       <time datetime="2021-04-18T14:30:00+08:00">2021 年 4 月 18 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2021 年 4 月 18 日下午，USTCLUG 在西区 3C104 教室举办了 Linux 101 活动的第二课：Shell 基础、软件和命令行工具。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2021 年 4 月 18 日下午，USTCLUG 在西区 3C104 教室举办了 Linux 101 活动的第二课：Shell 基础、软件和命令行工具。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2021/04/linux-101-1/" rel="permalink">Linux 101 第一课
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2021/04/linux-101-1/" rel="permalink">Linux 101 第一课
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1058,14 +1091,14 @@
                       <time datetime="2021-04-11T14:30:00+08:00">2021 年 4 月 11 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2021 年 4 月 11 日下午，USTCLUG 在西区 3C104 教室举办了 Linux 101 活动的第一课：LIP（Linux Install Party）。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2021 年 4 月 11 日下午，USTCLUG 在西区 3C104 教室举办了 Linux 101 活动的第一课：LIP（Linux Install Party）。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2021/03/multitopic-party/" rel="permalink">无主题小聚
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2021/03/multitopic-party/" rel="permalink">无主题小聚
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1074,14 +1107,14 @@
                       <time datetime="2021-03-31T17:30:00+08:00">2021 年 3 月 31 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2021 年 3 月 31 日下午，我们在西区 3A108 教室开展了本学期的第一次小聚，由明宇龙和袁一玮两位同学主讲。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2021 年 3 月 31 日下午，我们在西区 3A108 教室开展了本学期的第一次小聚，由明宇龙和袁一玮两位同学主讲。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2020/12/multitopic-party-2/" rel="permalink">无主题小聚
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2020/12/multitopic-party-2/" rel="permalink">无主题小聚
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1090,14 +1123,14 @@
                       <time datetime="2020-12-27T17:30:00+08:00">2020 年 12 月 27 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2020 年 12 月 27 日，USTC LUG 和 MSC 在西区 3C101 教室举办了本年度第二次无主题小聚。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2020 年 12 月 27 日，USTC LUG 和 MSC 在西区 3C101 教室举办了本年度第二次无主题小聚。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2020/12/multitopic-party/" rel="permalink">无主题小聚
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2020/12/multitopic-party/" rel="permalink">无主题小聚
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1106,14 +1139,14 @@
                       <time datetime="2020-12-13T17:30:00+08:00">2020 年 12 月 13 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2020 年 12 月 13 日，USTCLUG 和 MSC 在西区 3A109 教室开展了本年度第一次无主题小聚活动。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2020 年 12 月 13 日，USTCLUG 和 MSC 在西区 3A109 教室开展了本年度第一次无主题小聚活动。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2020/12/hackergame-2020/" rel="permalink">中国科学技术大学第七届信息安全大赛圆满结束
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2020/12/hackergame-2020/" rel="permalink">中国科学技术大学第七届信息安全大赛圆满结束
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1122,14 +1155,14 @@
                       <time datetime="2020-12-06T22:17:00+08:00">2020 年 12 月 6 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2020 年 11 月 7 日中午 12:00，网站提交答案的窗口关闭，也宣布着第七届信息安全大赛落下帷幕。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2020 年 11 月 7 日中午 12:00，网站提交答案的窗口关闭，也宣布着第七届信息安全大赛落下帷幕。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2020/10/freshmen-meeting/" rel="permalink">LUG 全员大会
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2020/10/freshmen-meeting/" rel="permalink">LUG 全员大会
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1138,14 +1171,14 @@
                       <time datetime="2020-10-25T16:40:00+08:00">2020 年 10 月 25 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">在 2020 年 10 月 24 日星期六，USTCLUG 在西校区 3C102 教室召开了 LUG 全员大会，由 LUG 主要成员向新成员介绍 LUG 组织的各项精彩活动、维护的服务等信息。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">在 2020 年 10 月 24 日星期六，USTCLUG 在西校区 3C102 教室召开了 LUG 全员大会，由 LUG 主要成员向新成员介绍 LUG 组织的各项精彩活动、维护的服务等信息。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2020/10/ce-and-reverse/" rel="permalink">游戏安全与 Cheat Engine 核心指北
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2020/10/ce-and-reverse/" rel="permalink">游戏安全与 Cheat Engine 核心指北
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1154,14 +1187,14 @@
                       <time datetime="2020-10-18T16:40:00+08:00">2020 年 10 月 18 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">在 2020 年 10 月 17 日，USTCLUG 在西校区 3C102 教室开展了一次 Linux 用户协会小聚活动，邀请了李晨宇同学分享标题为《游戏安全与 Cheat Engine 核心指北》的演讲。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">在 2020 年 10 月 17 日，USTCLUG 在西校区 3C102 教室开展了一次 Linux 用户协会小聚活动，邀请了李晨宇同学分享标题为《游戏安全与 Cheat Engine 核心指北》的演讲。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2020/09/software-freedom-day/" rel="permalink">2020 软件自由日中国科大站
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2020/09/software-freedom-day/" rel="permalink">2020 软件自由日中国科大站
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1170,14 +1203,14 @@
                       <time datetime="2020-09-28T14:46:58+08:00">2020 年 9 月 28 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2020 年 9 月 26 日，USTCLUG 在西校区 3C103 教室开展了本学期第一个大型活动：软件自由日（Software Freedom Day）。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2020 年 9 月 26 日，USTCLUG 在西校区 3C103 教室开展了本学期第一个大型活动：软件自由日（Software Freedom Day）。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2020/03/linux101-online/" rel="permalink">Linux 101 第一课在线上顺利举行
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2020/03/linux101-online/" rel="permalink">Linux 101 第一课在线上顺利举行
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1186,14 +1219,14 @@
                       <time datetime="2020-03-15T00:00:00+08:00">2020 年 3 月 15 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">Linux 101 第一课在线上顺利举行
+                  <p class="archive__item-excerpt p-summary" itemprop="description">Linux 101 第一课在线上顺利举行
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2019/12/hackergame-2019/" rel="permalink">中国科学技术大学第六届信息安全大赛圆满结束
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2019/12/hackergame-2019/" rel="permalink">中国科学技术大学第六届信息安全大赛圆满结束
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1202,14 +1235,14 @@
                       <time datetime="2019-12-15T22:43:00+08:00">2019 年 12 月 15 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2019 年 10 月 22 日中午 12:00，网站提交答案的窗口关闭，也宣布着第六届信息安全大赛落下帷幕。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2019 年 10 月 22 日中午 12:00，网站提交答案的窗口关闭，也宣布着第六届信息安全大赛落下帷幕。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2019/09/2019-sfd-ustc/" rel="permalink">2019 软件自由日中国科大站
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2019/09/2019-sfd-ustc/" rel="permalink">2019 软件自由日中国科大站
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1218,14 +1251,14 @@
                       <time datetime="2019-09-28T15:22:10+08:00">2019 年 9 月 28 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2019 年 9 月 21 日下午，2019 年软件自由日（SFD）中国科大站活动在西区 3C102 教室顺利举办。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2019 年 9 月 21 日下午，2019 年软件自由日（SFD）中国科大站活动在西区 3C102 教室顺利举办。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2019/09/2019-freshman-course/" rel="permalink">2019 秋季学期新生活力课程
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2019/09/2019-freshman-course/" rel="permalink">2019 秋季学期新生活力课程
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1234,14 +1267,14 @@
                       <time datetime="2019-09-15T12:00:00+08:00">2019 年 9 月 15 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2019 年 8 月 31 日与 9 月 7 日，USTCLUG 在西校区的 3A110 教室开展了本学期的新生活力课程。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2019 年 8 月 31 日与 9 月 7 日，USTCLUG 在西校区的 3A110 教室开展了本学期的新生活力课程。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2019/06/2019-bbs-linux-banshan-preorder-start/" rel="permalink">2019 Linux 版衫预订开始
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2019/06/2019-bbs-linux-banshan-preorder-start/" rel="permalink">2019 Linux 版衫预订开始
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1250,14 +1283,14 @@
                       <time datetime="2019-06-12T20:31:06+08:00">2019 年 6 月 12 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">经过版衫方案投票结果（2019 Linux 板版衫候选方案公布与投票），我们最终确定了 2019 Linux 版衫样式，并从即日起开始接受预定。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">经过版衫方案投票结果（2019 Linux 板版衫候选方案公布与投票），我们最终确定了 2019 Linux 版衫样式，并从即日起开始接受预定。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2019/04/2019-bbs-linux-banshan/" rel="permalink">2019 Linux 板版衫设计方案征集
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2019/04/2019-bbs-linux-banshan/" rel="permalink">2019 Linux 板版衫设计方案征集
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1266,14 +1299,14 @@
                       <time datetime="2019-04-06T21:15:06+08:00">2019 年 4 月 6 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">又是一年毕业季～ Linux 板 &amp; USTC LUG 版衫企划启动啦！
+                  <p class="archive__item-excerpt p-summary" itemprop="description">又是一年毕业季～ Linux 板 &amp; USTC LUG 版衫企划启动啦！
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2019/03/linux-install-party/" rel="permalink">Linux 101 第一课暨 Linux 安装聚会成功举办
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2019/03/linux-install-party/" rel="permalink">Linux 101 第一课暨 Linux 安装聚会成功举办
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1282,14 +1315,14 @@
                       <time datetime="2019-03-14T21:04:29+08:00">2019 年 3 月 14 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2019 年 3 月 10 日下午，由中国科大学生 Linux 用户协会承办的 Linux 101 第一课暨 Linux 安装聚会活动在西区 3C101 教室顺利举行。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2019 年 3 月 10 日下午，由中国科大学生 Linux 用户协会承办的 Linux 101 第一课暨 Linux 安装聚会活动在西区 3C101 教室顺利举行。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2019/01/hackergame-awards/" rel="permalink">中国科学技术大学第五届信息安全大赛圆满结束
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2019/01/hackergame-awards/" rel="permalink">中国科学技术大学第五届信息安全大赛圆满结束
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1298,14 +1331,14 @@
                       <time datetime="2019-01-05T14:47:29+08:00">2019 年 1 月 5 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2018 年 10 月 16 日中午，随着分针滴答滴答地与时针在 12 点处重合，网站提交答案的窗口关闭，也宣布着第五届信息安全大赛落下帷幕。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2018 年 10 月 16 日中午，随着分针滴答滴答地与时针在 12 点处重合，网站提交答案的窗口关闭，也宣布着第五届信息安全大赛落下帷幕。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2018/09/2018-sfd-ustc/" rel="permalink">2018 软件自由日中国科大站
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2018/09/2018-sfd-ustc/" rel="permalink">2018 软件自由日中国科大站
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1314,14 +1347,14 @@
                       <time datetime="2018-09-26T18:56:58+08:00">2018 年 9 月 26 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2018 年 9 月 15 日下午，2018 年软件自由日（SFD）中国科大站活动在西校区 3C103 教室成功举办。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2018 年 9 月 15 日下午，2018 年软件自由日（SFD）中国科大站活动在西校区 3C103 教室成功举办。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2018/09/lug-logo-collect-result/" rel="permalink">LUG LOGO 征集结果
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2018/09/lug-logo-collect-result/" rel="permalink">LUG LOGO 征集结果
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1330,14 +1363,14 @@
                       <time datetime="2018-09-08T21:10:26+08:00">2018 年 9 月 8 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">感谢同学们和开源社区的朋友们对我们 LOGO 征集活动的支持！
+                  <p class="archive__item-excerpt p-summary" itemprop="description">感谢同学们和开源社区的朋友们对我们 LOGO 征集活动的支持！
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2018/08/freshman-course/" rel="permalink">2018 秋季学期新生活力课程
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2018/08/freshman-course/" rel="permalink">2018 秋季学期新生活力课程
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1346,14 +1379,14 @@
                       <time datetime="2018-08-26T17:10:50+08:00">2018 年 8 月 26 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2018 年 8 月 25 号（星期六）晚，中国科学技术大学学生 Linux 用户协会（简称“协会”）在我校西校区 3A306 教室开展了本学期第一次新生活力课程，约 100 名同学参与了本次活动。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2018 年 8 月 25 号（星期六）晚，中国科学技术大学学生 Linux 用户协会（简称“协会”）在我校西校区 3A306 教室开展了本学期第一次新生活力课程，约 100 名同学参与了本次活动。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2018/05/lug-logo-collect/" rel="permalink">LUG LOGO 征集活动
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2018/05/lug-logo-collect/" rel="permalink">LUG LOGO 征集活动
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1362,14 +1395,14 @@
                       <time datetime="2018-05-09T10:06:50+08:00">2018 年 5 月 9 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">中国科学技术大学校学生 Linux 用户协会（简称 LUG）拟更换社团 LOGO，现采用征集活动的形式向全校师生，校友及所有开源社区的朋友征集 LOGO 设计方案，欢迎大家积极参与！
+                  <p class="archive__item-excerpt p-summary" itemprop="description">中国科学技术大学校学生 Linux 用户协会（简称 LUG）拟更换社团 LOGO，现采用征集活动的形式向全校师生，校友及所有开源社区的朋友征集 LOGO 设计方案，欢迎大家积极参与！
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2017/06/2017-linux-banshan-preorder-start/" rel="permalink">2017 Linux 板版衫预订开始！
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2017/06/2017-linux-banshan-preorder-start/" rel="permalink">2017 Linux 板版衫预订开始！
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1378,14 +1411,14 @@
                       <time datetime="2017-06-01T09:20:27+08:00">2017 年 6 月 1 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">经过紧张的投票，我们决定使用方案 1 作为今年版衫。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">经过紧张的投票，我们决定使用方案 1 作为今年版衫。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2017/05/2017-bbs-linux-banshan-voteresult/" rel="permalink">2017 Linux 板版衫投票结果公示
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2017/05/2017-bbs-linux-banshan-voteresult/" rel="permalink">2017 Linux 板版衫投票结果公示
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1394,14 +1427,14 @@
                       <time datetime="2017-05-26T11:42:28+08:00">2017 年 5 月 26 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">经统计，2017 年版衫投票结果如下：
+                  <p class="archive__item-excerpt p-summary" itemprop="description">经统计，2017 年版衫投票结果如下：
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2017/05/2017-bbs-linux-banshan-voting/" rel="permalink">2017 Linux 板版衫候选方案公布与投票
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2017/05/2017-bbs-linux-banshan-voting/" rel="permalink">2017 Linux 板版衫候选方案公布与投票
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1410,14 +1443,14 @@
                       <time datetime="2017-05-17T10:49:31+08:00">2017 年 5 月 17 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2017 年 Linux 板版衫设计方案出炉啦！经过一周的征集，本次共获得了两份投稿的设计方案，将通过投票决定最终制作的版衫样式。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2017 年 Linux 板版衫设计方案出炉啦！经过一周的征集，本次共获得了两份投稿的设计方案，将通过投票决定最终制作的版衫样式。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2017/05/2017-bbs-linux-banshan/" rel="permalink">2017 Linux 板版衫设计方案征集
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2017/05/2017-bbs-linux-banshan/" rel="permalink">2017 Linux 板版衫设计方案征集
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1426,14 +1459,14 @@
                       <time datetime="2017-05-01T16:41:06+08:00">2017 年 5 月 1 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">又是一年毕业季～ Linux 板 &amp; USTC LUG 版衫企划启动啦！
+                  <p class="archive__item-excerpt p-summary" itemprop="description">又是一年毕业季～ Linux 板 &amp; USTC LUG 版衫企划启动啦！
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2016/10/visiting_network_center/" rel="permalink">LUG 带同学们走进神秘的网络中心机房
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2016/10/visiting_network_center/" rel="permalink">LUG 带同学们走进神秘的网络中心机房
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1442,14 +1475,14 @@
                       <time datetime="2016-10-25T22:04:43+08:00">2016 年 10 月 25 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2016 年 10 月 23 日上午，校学生 Linux 用户协会组织协会的同学们参观了校网络中心和超算中心。23 日 9 点整，就有 40 人等待在东区第五教学楼门口等待出发。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2016 年 10 月 23 日上午，校学生 Linux 用户协会组织协会的同学们参观了校网络中心和超算中心。23 日 9 点整，就有 40 人等待在东区第五教学楼门口等待出发。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2016/09/2016-sfd-ustc/" rel="permalink">2016 软件自由日中国科大站
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2016/09/2016-sfd-ustc/" rel="permalink">2016 软件自由日中国科大站
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1458,14 +1491,14 @@
                       <time datetime="2016-09-27T20:22:29+08:00">2016 年 9 月 27 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2016 年 9 月 15 日下午，2016 年软件自由日（SFD）中国科大站活动在西活学术报告厅成功举办。当天下午，虽然天公不作美，大雨倾盆，又适逢中秋佳节，仍有 70 余位同学冒雨赶来参加我们的活动，现场气氛热烈，效果良好。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2016 年 9 月 15 日下午，2016 年软件自由日（SFD）中国科大站活动在西活学术报告厅成功举办。当天下午，虽然天公不作美，大雨倾盆，又适逢中秋佳节，仍有 70 余位同学冒雨赶来参加我们的活动，现场气氛热烈，效果良好。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2016/06/new-activity-room-in-west-library/" rel="permalink">西区图书馆新活动室启用
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2016/06/new-activity-room-in-west-library/" rel="permalink">西区图书馆新活动室启用
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1474,14 +1507,14 @@
                       <time datetime="2016-06-16T15:28:55+08:00">2016 年 6 月 16 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2016 年 6 月 16 日，LUG 西区新活动室启用，并成为今后唯一的社团活动室。一部分 LUG 成员在当日早上从东区图书馆 605 老活动室与东图一楼将大部分活动材料与各类物品搬迁到了西区活动室。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2016 年 6 月 16 日，LUG 西区新活动室启用，并成为今后唯一的社团活动室。一部分 LUG 成员在当日早上从东区图书馆 605 老活动室与东图一楼将大部分活动材料与各类物品搬迁到了西区活动室。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2015/09/2015sfd/" rel="permalink">2015 软件自由日中国科大站
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2015/09/2015sfd/" rel="permalink">2015 软件自由日中国科大站
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1490,14 +1523,14 @@
                       <time datetime="2015-09-21T23:06:08+08:00">2015 年 9 月 21 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2015 年 9 月 19 日是第 12 个软件自由日。当日下午，中国科大学生 Linux 用户协会在西区活动中心学术报告厅举办了软件自由日科大站庆祝活动。共有超过 100 位科大及社会人士参加了本次活动。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2015 年 9 月 19 日是第 12 个软件自由日。当日下午，中国科大学生 Linux 用户协会在西区活动中心学术报告厅举办了软件自由日科大站庆祝活动。共有超过 100 位科大及社会人士参加了本次活动。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2015/09/lug-banshan-commission-guide/" rel="permalink">LUG 版衫制作手册
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2015/09/lug-banshan-commission-guide/" rel="permalink">LUG 版衫制作手册
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1506,14 +1539,14 @@
                       <time datetime="2015-09-13T21:38:09+08:00">2015 年 9 月 13 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">上学期 5 月 3 日到 6 月 15 日制作了 LUG 2015 版衫，前后花了一个多月的时间，感觉做版衫真是一件十分耗费时间精力的大活动。第一次负责 LUG 版衫的制作，总结一下一个月的工作。主要流程如下，我们逐一讲解。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">上学期 5 月 3 日到 6 月 15 日制作了 LUG 2015 版衫，前后花了一个多月的时间，感觉做版衫真是一件十分耗费时间精力的大活动。第一次负责 LUG 版衫的制作，总结一下一个月的工作。主要流程如下，我们逐一讲解。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2015/05/2015-linux-tshirt-voting-result-and-order/" rel="permalink">投票结果
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2015/05/2015-linux-tshirt-voting-result-and-order/" rel="permalink">投票结果
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1522,14 +1555,14 @@
                       <time datetime="2015-05-29T11:39:02+08:00">2015 年 5 月 29 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">投票结果
+                  <p class="archive__item-excerpt p-summary" itemprop="description">投票结果
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2015/05/2015-linux-user-group-banshan/" rel="permalink">2015 瀚海星云 BBS 板板衫方案
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2015/05/2015-linux-user-group-banshan/" rel="permalink">2015 瀚海星云 BBS 板板衫方案
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1538,14 +1571,14 @@
                       <time datetime="2015-05-21T18:23:11+08:00">2015 年 5 月 21 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">版衫设计方案征集帖：
+                  <p class="archive__item-excerpt p-summary" itemprop="description">版衫设计方案征集帖：
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2014/12/2014-linux-user-party/" rel="permalink">2014 Linux User Party 暨 Freeshell 用户交流会
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2014/12/2014-linux-user-party/" rel="permalink">2014 Linux User Party 暨 Freeshell 用户交流会
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1554,14 +1587,14 @@
                       <time datetime="2014-12-09T17:52:41+08:00">2014 年 12 月 9 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2014 Linux User Party 暨 Freeshell 用户交流会，于今年 12 月 7 日（周日）14 时 30 分，在西活学术报告厅成功举行。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2014 Linux User Party 暨 Freeshell 用户交流会，于今年 12 月 7 日（周日）14 时 30 分，在西活学术报告厅成功举行。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2014/10/2014-autumn-kaiintaikai/" rel="permalink">2014 秋季学期会员大会
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2014/10/2014-autumn-kaiintaikai/" rel="permalink">2014 秋季学期会员大会
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1570,14 +1603,14 @@
                       <time datetime="2014-10-03T11:40:51+08:00">2014 年 10 月 3 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2014 社团招新业已结束，为了让新生更好地了解社团情况、增进社员间相互交流，Linux 用户协会于 2014 年 9 月 26 日晚在西区 3A203 教室举行会员大会，邀请所有新会员参加。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2014 社团招新业已结束，为了让新生更好地了解社团情况、增进社员间相互交流，Linux 用户协会于 2014 年 9 月 26 日晚在西区 3A203 教室举行会员大会，邀请所有新会员参加。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2014/09/2014-sfd/" rel="permalink">2014 自由软件日中国科大站
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2014/09/2014-sfd/" rel="permalink">2014 自由软件日中国科大站
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1586,14 +1619,14 @@
                       <time datetime="2014-09-23T11:09:36+08:00">2014 年 9 月 23 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">SFD 自由软件日是一个关于自由软件和开源软件的全球性庆祝活动。9 月 20 日下午，2014 自由软件日中国科大站活动与全世界 190 个活动站点一道正式拉开序幕。此次活动宣传充分，准备到位，吸引了许多 Linux 爱好者们参加。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">SFD 自由软件日是一个关于自由软件和开源软件的全球性庆祝活动。9 月 20 日下午，2014 自由软件日中国科大站活动与全世界 190 个活动站点一道正式拉开序幕。此次活动宣传充分，准备到位，吸引了许多 Linux 爱好者们参加。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2014/08/2013-software-freedom-day/" rel="permalink">2013 Software Freedom Day 合肥站
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2014/08/2013-software-freedom-day/" rel="permalink">2013 Software Freedom Day 合肥站
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1602,14 +1635,14 @@
                       <time datetime="2014-08-25T17:21:18+08:00">2014 年 8 月 25 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2013 年 9 月 21 日下午 2:30，中国科学技术大学校 Linux 用户协会在合肥市与全球几百所高校和组织一道，举办了 2013 年软件自由日庆祝活动。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2013 年 9 月 21 日下午 2:30，中国科学技术大学校 Linux 用户协会在合肥市与全球几百所高校和组织一道，举办了 2013 年软件自由日庆祝活动。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2013/12/2013-e7-a7-91-e5-a4-a7lug-software-freedom-day/" rel="permalink">2013 科大 LUG Linux User Party
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2013/12/2013-e7-a7-91-e5-a4-a7lug-software-freedom-day/" rel="permalink">2013 科大 LUG Linux User Party
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1618,14 +1651,14 @@
                       <time datetime="2013-12-16T22:26:34+08:00">2013 年 12 月 16 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2013 年 12 月 1 日，中国科学技术大学校学生 Linux 用户协会在科大西区活动中心学术报告厅举办了一年一度的 Linux User Party。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2013 年 12 月 1 日，中国科学技术大学校学生 Linux 用户协会在科大西区活动中心学术报告厅举办了一年一度的 Linux User Party。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2013/04/linux-make-everything-easy/" rel="permalink">“Linux 让一切变得简单”活动
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2013/04/linux-make-everything-easy/" rel="permalink">“Linux 让一切变得简单”活动
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1634,14 +1667,14 @@
                       <time datetime="2013-04-22T18:10:33+08:00">2013 年 4 月 22 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2013 年 4 月 21 日下午，科大 LUG 与计算机学院学生会合办的“Linux 让一切变得简单”活动在 3121 教室举行。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2013 年 4 月 21 日下午，科大 LUG 与计算机学院学生会合办的“Linux 让一切变得简单”活动在 3121 教室举行。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2012/11/ustclug-going-online-going-native/" rel="permalink">科大 LUG Linux User Party 活动成功举行
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2012/11/ustclug-going-online-going-native/" rel="permalink">科大 LUG Linux User Party 活动成功举行
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1650,13 +1683,13 @@
                       <time datetime="2012-11-26T00:21:14+08:00">2012 年 11 月 26 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">高速发展的互联网改变着人类的生活方式，而基于 Linux 的 Web 技术支撑起了当今互联网的大厦。“Let’s Build – Building the Next-generation Web &amp; Architecture”的大标题投影在东区水上报告厅，2012 年 11 月 24 日下午，科大 LUG...</p>
+                  <p class="archive__item-excerpt p-summary" itemprop="description">高速发展的互联网改变着人类的生活方式，而基于 Linux 的 Web 技术支撑起了当今互联网的大厦。“Let’s Build – Building the Next-generation Web &amp; Architecture”的大标题投影在东区水上报告厅，2012 年 11 月 24 日下午，科大 LUG...</p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2012/09/sfd-2012-hefei-ustc/" rel="permalink">软件自由日 SFD 2012 合肥站活动（附带网上直播地址）
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2012/09/sfd-2012-hefei-ustc/" rel="permalink">软件自由日 SFD 2012 合肥站活动（附带网上直播地址）
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1665,14 +1698,14 @@
                       <time datetime="2012-09-14T01:42:35+08:00">2012 年 9 月 14 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">SFD 就是传说中的软件自由日（Software Freedom Day），今年的合肥站庆祝活动将在本周六（9 月 15 日）于中国科学技术大学举办。这是一个推广和宣传自由/开源软件的全球性庆祝活动，合肥是全球 282 个活动举办地之一。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">SFD 就是传说中的软件自由日（Software Freedom Day），今年的合肥站庆祝活动将在本周六（9 月 15 日）于中国科学技术大学举办。这是一个推广和宣传自由/开源软件的全球性庆祝活动，合肥是全球 282 个活动举办地之一。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2011/12/linux-install-party2011/" rel="permalink">Linux Install Party 又来了，就在本周日！
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2011/12/linux-install-party2011/" rel="permalink">Linux Install Party 又来了，就在本周日！
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1681,14 +1714,14 @@
                       <time datetime="2011-12-02T22:54:26+08:00">2011 年 12 月 2 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">Linux Install Party，一个人人都可以参加的 linux 盛会，Let’s Introduce
+                  <p class="archive__item-excerpt p-summary" itemprop="description">Linux Install Party，一个人人都可以参加的 linux 盛会，Let’s Introduce
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2011/06/linux-tshirt-2011/" rel="permalink">中科大 Linux 文化衫开始接受预定啦！
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2011/06/linux-tshirt-2011/" rel="permalink">中科大 Linux 文化衫开始接受预定啦！
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1697,14 +1730,14 @@
                       <time datetime="2011-06-05T11:28:55+08:00">2011 年 6 月 5 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">1、圆领样式
+                  <p class="archive__item-excerpt p-summary" itemprop="description">1、圆领样式
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2011/06/deepin-linux-dau-2011/" rel="permalink">Deepin Linux DAU ‘2011 大会花絮
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2011/06/deepin-linux-dau-2011/" rel="permalink">Deepin Linux DAU ‘2011 大会花絮
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1713,14 +1746,14 @@
                       <time datetime="2011-06-03T10:36:40+08:00">2011 年 6 月 3 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2011 年 5 月 28 日，我有幸受邀代表中科大 LUG 前往武汉参加了 Deepin Linux 开发者和用户大会。此行遇见了很多开源界的知名牛人，收获颇多。由于许多 Linux 站点都已经对此次会议有十分详细的报导，因此我就不再赘述具体的会议过程，而是更多的介绍些花絮吧。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2011 年 5 月 28 日，我有幸受邀代表中科大 LUG 前往武汉参加了 Deepin Linux 开发者和用户大会。此行遇见了很多开源界的知名牛人，收获颇多。由于许多 Linux 站点都已经对此次会议有十分详细的报导，因此我就不再赘述具体的会议过程，而是更多的介绍些花絮吧。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2011/05/linux-e7-89-88-e7-89-88-e8-81-9a/" rel="permalink">Linux 版版聚
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2011/05/linux-e7-89-88-e7-89-88-e8-81-9a/" rel="permalink">Linux 版版聚
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1729,14 +1762,14 @@
                       <time datetime="2011-05-11T01:20:26+08:00">2011 年 5 月 11 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">
+                  <p class="archive__item-excerpt p-summary" itemprop="description">
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2011/05/ftp-cn-debian-org-comes/" rel="permalink">Debian 中国官方镜像：ftp.cn.debian.org
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2011/05/ftp-cn-debian-org-comes/" rel="permalink">Debian 中国官方镜像：ftp.cn.debian.org
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1745,13 +1778,13 @@
                       <time datetime="2011-05-05T02:03:26+08:00">2011 年 5 月 5 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">祝贺 mirrors.ustc.edu.cn 成为 Debian 中国官方镜像！此前，中国大陆 debian 镜像与主镜像延迟达 24 小时以上，现在，ftp.cn.debian.org 直接从 syncproxy.wna.debian.org 接受推送更新，其延迟降到 6 小时以内。此外，另一国内主力镜像 an...</p>
+                  <p class="archive__item-excerpt p-summary" itemprop="description">祝贺 mirrors.ustc.edu.cn 成为 Debian 中国官方镜像！此前，中国大陆 debian 镜像与主镜像延迟达 24 小时以上，现在，ftp.cn.debian.org 直接从 syncproxy.wna.debian.org 接受推送更新，其延迟降到 6 小时以内。此外，另一国内主力镜像 an...</p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2011/04/gnome3-launch-party/" rel="permalink">Color my desktop,Color my life!
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2011/04/gnome3-launch-party/" rel="permalink">Color my desktop,Color my life!
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1760,14 +1793,14 @@
                       <time datetime="2011-04-16T22:01:38+08:00">2011 年 4 月 16 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">Color my desktop,Color my life!
+                  <p class="archive__item-excerpt p-summary" itemprop="description">Color my desktop,Color my life!
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2011/04/mirrors-ustc-edu-cn-comes/" rel="permalink">mirrors.ustc.edu.cn 开张啦！
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2011/04/mirrors-ustc-edu-cn-comes/" rel="permalink">mirrors.ustc.edu.cn 开张啦！
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1776,14 +1809,14 @@
                       <time datetime="2011-04-14T01:55:12+08:00">2011 年 4 月 14 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">经过大半周的迁移和新脚本的测试，现在 mirrors.ustc.edu.cn 已经基本稳定了。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">经过大半周的迁移和新脚本的测试，现在 mirrors.ustc.edu.cn 已经基本稳定了。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2010/12/2010-04-linux-install-party/" rel="permalink">2010 年 4 月 Linux Install Party
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2010/12/2010-04-linux-install-party/" rel="permalink">2010 年 4 月 Linux Install Party
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1792,14 +1825,14 @@
                       <time datetime="2010-12-10T00:15:47+08:00">2010 年 12 月 10 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">
+                  <p class="archive__item-excerpt p-summary" itemprop="description">
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2010/09/2010-software-freedom-day/" rel="permalink">2010 年自由软件日（合肥站）
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2010/09/2010-software-freedom-day/" rel="permalink">2010 年自由软件日（合肥站）
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1808,7 +1841,7 @@
                       <time datetime="2010-09-29T00:45:36+08:00">2010 年 9 月 29 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2010 年 9 月 18 日在中国科大西区 3112 教室，中国科学技术大学 Linux User Group(USTC@LUG) 组织了以“人人为我，我为人人”为主题的自由软件日活动，本次活动得到了龙芯梦兰、龙芯俱乐部、中标软件、中科红旗、中国开源软件推进联盟等公司、开源社区，以及合肥工业大学，安徽大学等兄弟...</p>
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2010 年 9 月 18 日在中国科大西区 3112 教室，中国科学技术大学 Linux User Group(USTC@LUG) 组织了以“人人为我，我为人人”为主题的自由软件日活动，本次活动得到了龙芯梦兰、龙芯俱乐部、中标软件、中科红旗、中国开源软件推进联盟等公司、开源社区，以及合肥工业大学，安徽大学等兄弟...</p>
                 </article>
               </div>
             </div>
@@ -1819,8 +1852,8 @@
             <div class="entries-list">
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2024/04/Linux101-3/" rel="permalink">Linux 101 第三课
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2024/04/Linux101-3/" rel="permalink">Linux 101 第三课
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1829,14 +1862,14 @@
                       <time datetime="2024-04-14T14:30:00+08:00">2024 年 4 月 14 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2024 年 4 月 14 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C102 教室举办 Linux 101 系列活动的第三课：进程、前后台、服务与例行性任务。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2024 年 4 月 14 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C102 教室举办 Linux 101 系列活动的第三课：进程、前后台、服务与例行性任务。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2024/03/Linux101-2/" rel="permalink">Linux 101 第二课
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2024/03/Linux101-2/" rel="permalink">Linux 101 第二课
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1845,14 +1878,14 @@
                       <time datetime="2024-03-24T14:30:00+08:00">2024 年 3 月 24 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2024 年 3 月 24 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C102 教室举办 Linux 101 系列活动的第二课：软件安装与文件系统。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2024 年 3 月 24 日下午，中国科学技术大学学生 Linux 用户协会在西区 3C102 教室举办 Linux 101 系列活动的第二课：软件安装与文件系统。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2022/04/linux-101-3/" rel="permalink">Linux 101 第三课
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2022/04/linux-101-3/" rel="permalink">Linux 101 第三课
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1861,14 +1894,14 @@
                       <time datetime="2022-04-17T14:30:00+08:00">2022 年 4 月 17 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">4 月 17 日下午，Linux 用户协会线上举办了 Linux 101 系列活动的第三课：Linux 环境下的编程。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">4 月 17 日下午，Linux 用户协会线上举办了 Linux 101 系列活动的第三课：Linux 环境下的编程。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2022/04/linux-101-2/" rel="permalink">Linux 101 第二课
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2022/04/linux-101-2/" rel="permalink">Linux 101 第二课
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1877,14 +1910,14 @@
                       <time datetime="2022-04-03T14:30:00+08:00">2022 年 4 月 3 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">4 月 3 日下午，Linux 用户协会于线上举办了 Linux 101 系列活动的第二课：命令行界面的使用。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">4 月 3 日下午，Linux 用户协会于线上举办了 Linux 101 系列活动的第二课：命令行界面的使用。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2022/03/linux-101-1/" rel="permalink">Linux 101 第一课
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2022/03/linux-101-1/" rel="permalink">Linux 101 第一课
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1893,15 +1926,15 @@
                       <time datetime="2022-03-13T14:30:00+08:00">2022 年 3 月 13 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">3 月 13 日下午，Linux 用户协会在西区 3C101 教室举办了 Linux 101 系列活动的第一课：
+                  <p class="archive__item-excerpt p-summary" itemprop="description">3 月 13 日下午，Linux 用户协会在西区 3C101 教室举办了 Linux 101 系列活动的第一课：
                     LIP (Linux Install Party)。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2021/05/linux-101-4/" rel="permalink">Linux 101 第四课
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2021/05/linux-101-4/" rel="permalink">Linux 101 第四课
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1910,14 +1943,14 @@
                       <time datetime="2021-05-16T17:30:00+08:00">2021 年 5 月 16 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2021 年 5 月 16 日，中国科学技术大学 Linux 用户协会在 3C101 教室举办了本学期第四次 Linux 101 课程，本次课程的主要内容是 Linux 下的进程的概念，由主讲同学刘隆邦同学带来课程。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2021 年 5 月 16 日，中国科学技术大学 Linux 用户协会在 3C101 教室举办了本学期第四次 Linux 101 课程，本次课程的主要内容是 Linux 下的进程的概念，由主讲同学刘隆邦同学带来课程。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2021/04/linux-101-3/" rel="permalink">Linux 101 第三课
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2021/04/linux-101-3/" rel="permalink">Linux 101 第三课
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1926,13 +1959,13 @@
                       <time datetime="2021-04-28T14:30:00+08:00">2021 年 4 月 28 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2021 年 4 月 28 日，中国科学技术大学 Linux 用户协会在 3A211 教室举办了本学期第三次 Linux 101 课程，本次课程的主要内容是 Linux 下的用户管理和权限机制，同时介绍了 Linux 下文件系统层次规范，主讲同学准备了大量操作演示。同时，同学们交流了近期 Linux 使用存在的若...</p>
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2021 年 4 月 28 日，中国科学技术大学 Linux 用户协会在 3A211 教室举办了本学期第三次 Linux 101 课程，本次课程的主要内容是 Linux 下的用户管理和权限机制，同时介绍了 Linux 下文件系统层次规范，主讲同学准备了大量操作演示。同时，同学们交流了近期 Linux 使用存在的若...</p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2021/04/linux-101-2/" rel="permalink">Linux 101 第二课
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2021/04/linux-101-2/" rel="permalink">Linux 101 第二课
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1941,14 +1974,14 @@
                       <time datetime="2021-04-18T14:30:00+08:00">2021 年 4 月 18 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2021 年 4 月 18 日下午，USTCLUG 在西区 3C104 教室举办了 Linux 101 活动的第二课：Shell 基础、软件和命令行工具。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2021 年 4 月 18 日下午，USTCLUG 在西区 3C104 教室举办了 Linux 101 活动的第二课：Shell 基础、软件和命令行工具。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2021/04/linux-101-1/" rel="permalink">Linux 101 第一课
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2021/04/linux-101-1/" rel="permalink">Linux 101 第一课
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1957,7 +1990,7 @@
                       <time datetime="2021-04-11T14:30:00+08:00">2021 年 4 月 11 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2021 年 4 月 11 日下午，USTCLUG 在西区 3C104 教室举办了 Linux 101 活动的第一课：LIP（Linux Install Party）。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2021 年 4 月 11 日下午，USTCLUG 在西区 3C104 教室举办了 Linux 101 活动的第一课：LIP（Linux Install Party）。
                   </p>
                 </article>
               </div>
@@ -1969,8 +2002,8 @@
             <div class="entries-list">
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2024/12/slidev/" rel="permalink">Slidev 幻灯片制作
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2024/12/slidev/" rel="permalink">Slidev 幻灯片制作
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1979,13 +2012,13 @@
                       <time datetime="2024-12-04T15:00:00+08:00">2024 年 12 月 4 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2024 年 12 月 4 日，校学生 Linux 用户协会在西区第三教学楼 3A306 教室举行小聚。本次小聚是由 Slidev 团队成员 _Kerman 同学带来的 Slidev 幻灯片制作工具介绍。Slidev.js 是一款为开发者设计的开源的幻灯片制作工具，通过简单的 Markdown 语法即可制作出精美...</p>
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2024 年 12 月 4 日，校学生 Linux 用户协会在西区第三教学楼 3A306 教室举行小聚。本次小聚是由 Slidev 团队成员 _Kerman 同学带来的 Slidev 幻灯片制作工具介绍。Slidev.js 是一款为开发者设计的开源的幻灯片制作工具，通过简单的 Markdown 语法即可制作出精美...</p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2024/11/gathering-openmp/" rel="permalink">C/C++ 下 OpenMP 程序设计介绍
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2024/11/gathering-openmp/" rel="permalink">C/C++ 下 OpenMP 程序设计介绍
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -1994,13 +2027,13 @@
                       <time datetime="2024-11-29T10:00:00+08:00">2024 年 11 月 29 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2024 年 11 月 27 日，校学生 Linux 用户协会在西区第三教学楼 3A306 教室开展了小聚活动。本次小聚主要是由罗嘉宏同学带来的 C/C++ 下 OpenMP 程序设计介绍。OpenMP 是广为运用的并行计算处理框架，为 C/C++ 和 Fortran 编程语言提供支持，提供了简单有效的 CPU ...</p>
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2024 年 11 月 27 日，校学生 Linux 用户协会在西区第三教学楼 3A306 教室开展了小聚活动。本次小聚主要是由罗嘉宏同学带来的 C/C++ 下 OpenMP 程序设计介绍。OpenMP 是广为运用的并行计算处理框架，为 C/C++ 和 Fortran 编程语言提供支持，提供了简单有效的 CPU ...</p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2024/04/gathering-linux-graphics-journey/" rel="permalink">Linux 图形堆栈初探
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2024/04/gathering-linux-graphics-journey/" rel="permalink">Linux 图形堆栈初探
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -2009,14 +2042,14 @@
                       <time datetime="2024-04-21T15:00:00+08:00">2024 年 4 月 21 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2024 年 4 月 21 日，校学生 Linux 用户协会举办了一场小聚活动。本次小聚为刘紫檀同学为我们带来的关于 Linux 图形堆栈的介绍。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2024 年 4 月 21 日，校学生 Linux 用户协会举办了一场小聚活动。本次小聚为刘紫檀同学为我们带来的关于 Linux 图形堆栈的介绍。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2024/03/gathering-attack-and-defense-exercise-talk/" rel="permalink">网络安全攻防演练杂谈
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2024/03/gathering-attack-and-defense-exercise-talk/" rel="permalink">网络安全攻防演练杂谈
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -2025,14 +2058,14 @@
                       <time datetime="2024-03-31T15:00:00+08:00">2024 年 3 月 31 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2024 年 3 月 31 日，校学生 Linux 用户协会举办了一场小聚活动。本次小聚我们有幸邀请到协会指导老师庄严老师来为同学们做一场关于网络安全攻防演练的杂谈。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2024 年 3 月 31 日，校学生 Linux 用户协会举办了一场小聚活动。本次小聚我们有幸邀请到协会指导老师庄严老师来为同学们做一场关于网络安全攻防演练的杂谈。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2023/12/gathering-debug/" rel="permalink">LUG 小聚：Debug 原理与演示
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2023/12/gathering-debug/" rel="permalink">LUG 小聚：Debug 原理与演示
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -2041,14 +2074,14 @@
                       <time datetime="2023-12-09T19:00:00+08:00">2023 年 12 月 9 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2023 年 12 月 9 日，校学生 Linux 用户协会举办了一场小聚活动。本次小聚是由 Linux 用户协会的廖巍同学为我们带来的关于 debug 的原理与演示。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2023 年 12 月 9 日，校学生 Linux 用户协会举办了一场小聚活动。本次小聚是由 Linux 用户协会的廖巍同学为我们带来的关于 debug 的原理与演示。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2023/10/gathering-git/" rel="permalink">LUG 小聚：Git 简介与使用心得分享
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2023/10/gathering-git/" rel="permalink">LUG 小聚：Git 简介与使用心得分享
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -2057,14 +2090,14 @@
                       <time datetime="2023-10-22T21:00:00+08:00">2023 年 10 月 22 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2023 年 10 月 22 日，校学生 Linux 用户协会举办了一场小聚活动。本次小聚是由王永福同学为我们带来的关于 Git 的简介与使用心得分享。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2023 年 10 月 22 日，校学生 Linux 用户协会举办了一场小聚活动。本次小聚是由王永福同学为我们带来的关于 Git 的简介与使用心得分享。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2022/10/gathering-xmake/" rel="permalink">LCPU x USTCLUG 联合沙龙：Xmake 和墨干编辑器
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2022/10/gathering-xmake/" rel="permalink">LCPU x USTCLUG 联合沙龙：Xmake 和墨干编辑器
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -2073,14 +2106,14 @@
                       <time datetime="2022-10-27T08:00:00+08:00">2022 年 10 月 27 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2022 年 10 月 27 日晚 19:00，北京大学学生 Linux 俱乐部与中国科学技术大学 Linux 用户协会举办了联合沙龙。本次沙龙邀请到了 Xmake 的主要开发者 Ruki 和墨者实验室的开发者们，向参与者们介绍了这两个工具的用途和优势。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2022 年 10 月 27 日晚 19:00，北京大学学生 Linux 俱乐部与中国科学技术大学 Linux 用户协会举办了联合沙龙。本次沙龙邀请到了 Xmake 的主要开发者 Ruki 和墨者实验室的开发者们，向参与者们介绍了这两个工具的用途和优势。
                     Xmake 是广受赞誉的轻量级跨平台自动构建工具，可以帮...</p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2022/10/gathering-nodejs/" rel="permalink">LUG 小聚：Node.js 介绍
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2022/10/gathering-nodejs/" rel="permalink">LUG 小聚：Node.js 介绍
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -2089,7 +2122,7 @@
                       <time datetime="2022-10-26T08:00:00+08:00">2022 年 10 月 26 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2022 年 10 月 26 日，学生 Linux 用户协会举行了小聚活动。本次小聚是由刘良宇同学为我们带来的关于 Node.js 的技术分享。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2022 年 10 月 26 日，学生 Linux 用户协会举行了小聚活动。本次小聚是由刘良宇同学为我们带来的关于 Node.js 的技术分享。
                   </p>
                 </article>
               </div>
@@ -2101,8 +2134,8 @@
             <div class="entries-list">
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2016/05/2016-lug-election/" rel="permalink">2016 LUG 社团换届会议
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2016/05/2016-lug-election/" rel="permalink">2016 LUG 社团换届会议
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -2111,14 +2144,14 @@
                       <time datetime="2016-05-02T22:57:06+08:00">2016 年 5 月 2 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2016 年 4 月 24 日下午 15 时，校学生 Linux 用户协会于东区活动室 (科大东区图书馆 605 室) 召开了换届会议。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2016 年 4 月 24 日下午 15 时，校学生 Linux 用户协会于东区活动室 (科大东区图书馆 605 室) 召开了换届会议。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2015/04/2015-lug-election/" rel="permalink">2015 LUG 社团换届会议
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2015/04/2015-lug-election/" rel="permalink">2015 LUG 社团换届会议
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -2127,14 +2160,14 @@
                       <time datetime="2015-04-30T19:55:43+08:00">2015 年 4 月 30 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2015 年 4 月 25 日晚 19 时 30 分，校学生 Linux 用户协会于东区活动室（科大东区图书馆 118 室）召开了换届会议。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2015 年 4 月 25 日晚 19 时 30 分，校学生 Linux 用户协会于东区活动室（科大东区图书馆 118 室）召开了换届会议。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2014/08/2014-e5-b9-b48-e6-9c-88-sfd-e5-b7-a5-e4-bd-9c-e8-a7-84-e5-88-92-e6-9a-a8-e6-96-b0-e5-ad-a6-e6-9c-9f-lug-e5-b7-a5-e4-bd-9c-e4-bc-9a-e8-ae-ae/" rel="permalink">2014 年 8 月 SFD 工作规划暨新学期 LUG 工作会议
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2014/08/2014-e5-b9-b48-e6-9c-88-sfd-e5-b7-a5-e4-bd-9c-e8-a7-84-e5-88-92-e6-9a-a8-e6-96-b0-e5-ad-a6-e6-9c-9f-lug-e5-b7-a5-e4-bd-9c-e4-bc-9a-e8-ae-ae/" rel="permalink">2014 年 8 月 SFD 工作规划暨新学期 LUG 工作会议
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -2143,14 +2176,14 @@
                       <time datetime="2014-08-31T16:18:10+08:00">2014 年 8 月 31 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2014 年 8 月 30 日下午 2:30，一部分 LUG 活跃会员在东区活动室聚会，讨论即将到来的 SFD 活动的安排事项以及其它 LUG 的工作事项。与会人员包括：张荣葳、杨博远、崔灏、张光宇、朱晟菁、李子天、高一凡、罗秀哲。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2014 年 8 月 30 日下午 2:30，一部分 LUG 活跃会员在东区活动室聚会，讨论即将到来的 SFD 活动的安排事项以及其它 LUG 的工作事项。与会人员包括：张荣葳、杨博远、崔灏、张光宇、朱晟菁、李子天、高一凡、罗秀哲。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2013/04/lug/" rel="permalink">2013 LUG 换届会议
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2013/04/lug/" rel="permalink">2013 LUG 换届会议
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -2159,14 +2192,14 @@
                       <time datetime="2013-04-29T00:33:38+08:00">2013 年 4 月 29 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2013 年 4 月 28 日晚上，LUG 在活动室召开了换届会议。LUG 新老会员齐聚一堂，商定了 LUG 下届主要负责人，一起讨论了 LUG 发展大计。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2013 年 4 月 28 日晚上，LUG 在活动室召开了换届会议。LUG 新老会员齐聚一堂，商定了 LUG 下届主要负责人，一起讨论了 LUG 发展大计。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2010/10/2010-lug-server-dev-meeting/" rel="permalink">2010 年 LUG 服务器维护计划研讨会
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2010/10/2010-lug-server-dev-meeting/" rel="permalink">2010 年 LUG 服务器维护计划研讨会
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -2175,7 +2208,7 @@
                       <time datetime="2010-10-19T00:37:50+08:00">2010 年 10 月 19 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2010 年 10 月 15 日晚上，LUG 在科大西区图书馆组织了服务器维护小组第一次例会，会议由 LUG 协会现任副会长张成同学主持，集中讨论了发展现有网络服务的计划。20 余位 LUG 志愿者参加了本次会议。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2010 年 10 月 15 日晚上，LUG 在科大西区图书馆组织了服务器维护小组第一次例会，会议由 LUG 协会现任副会长张成同学主持，集中讨论了发展现有网络服务的计划。20 余位 LUG 志愿者参加了本次会议。
                   </p>
                 </article>
               </div>
@@ -2187,8 +2220,8 @@
             <div class="entries-list">
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2015/08/lug-service-restore-status/" rel="permalink">mirrors.ustc.edu.cn
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2015/08/lug-service-restore-status/" rel="permalink">mirrors.ustc.edu.cn
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -2197,14 +2230,14 @@
                       <time datetime="2015-08-18T16:09:52+08:00">2015 年 8 月 18 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">mirrors.ustc.edu.cn
+                  <p class="archive__item-excerpt p-summary" itemprop="description">mirrors.ustc.edu.cn
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2015/06/gitlab-emergency-maintenance/" rel="permalink">GitLab 服务器紧急维护通知
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2015/06/gitlab-emergency-maintenance/" rel="permalink">GitLab 服务器紧急维护通知
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -2213,14 +2246,14 @@
                       <time datetime="2015-06-01T18:49:53+08:00">2015 年 6 月 1 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">接到用户反馈，无法 git clone 项目。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">接到用户反馈，无法 git clone 项目。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2015/06/201406-server-fault-announce/" rel="permalink">5 月 30 日服务器宕机说明
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2015/06/201406-server-fault-announce/" rel="permalink">5 月 30 日服务器宕机说明
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -2229,14 +2262,14 @@
                       <time datetime="2015-06-01T16:22:02+08:00">2015 年 6 月 1 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">blog 服务器于 5 月 30 日凌晨起宕机。目前技术人员正在尝试修复，暂时没有修复 ETA。您的博客数据均有备份，暂时无需担心数据丢失问题。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">blog 服务器于 5 月 30 日凌晨起宕机。目前技术人员正在尝试修复，暂时没有修复 ETA。您的博客数据均有备份，暂时无需担心数据丢失问题。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2014/12/blog-server-down/" rel="permalink">Blog 服务器宕机
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2014/12/blog-server-down/" rel="permalink">Blog 服务器宕机
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -2245,7 +2278,7 @@
                       <time datetime="2014-12-18T09:20:22+08:00">2014 年 12 月 18 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">由于维护人员失误与遭受攻击，Blog 服务器于 2014 年 12 月 18 日凌晨宕机，已基本恢复服务。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">由于维护人员失误与遭受攻击，Blog 服务器于 2014 年 12 月 18 日凌晨宕机，已基本恢复服务。
                   </p>
                 </article>
               </div>
@@ -2257,8 +2290,8 @@
             <div class="entries-list">
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/planet/2020/12/tic-toc-in-kernel/" rel="permalink">在 Linux 内核中测试程序性能
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/planet/2020/12/tic-toc-in-kernel/" rel="permalink">在 Linux 内核中测试程序性能
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -2272,13 +2305,13 @@
                       8 分钟阅读
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">本学期，我担任了李诚老师编译原理课程的助教。在课程实验中，我们基于 LLVM 构建了一套编译系统，其中一个实验需要编写后端优化算法。为了评估学生们的优化代码，我们需要比较优化前后的代码（在这里是 LLVM IR）的性能。我们通过统计程序运行的时间来比较代码的性能，但是用户程序会受到内核调度。因为不是连续执行程序，...</p>
+                  <p class="archive__item-excerpt p-summary" itemprop="description">本学期，我担任了李诚老师编译原理课程的助教。在课程实验中，我们基于 LLVM 构建了一套编译系统，其中一个实验需要编写后端优化算法。为了评估学生们的优化代码，我们需要比较优化前后的代码（在这里是 LLVM IR）的性能。我们通过统计程序运行的时间来比较代码的性能，但是用户程序会受到内核调度。因为不是连续执行程序，...</p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/planet/2019/09/raspberry-4/" rel="permalink">【译稿】树莓派 4 评测与基准测试：与树莓派 3B+ 相比的改进
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/planet/2019/09/raspberry-4/" rel="permalink">【译稿】树莓派 4 评测与基准测试：与树莓派 3B+ 相比的改进
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -2292,14 +2325,14 @@
                       8 分钟阅读
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">原文地址：https://ibugone.com/blog/2019/09/raspberry-pi-4-review-benchmark/，作者为 @iBug 同学。以下为翻译部分。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">原文地址：https://ibugone.com/blog/2019/09/raspberry-pi-4-review-benchmark/，作者为 @iBug 同学。以下为翻译部分。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/planet/2019/08/NFS-intro/" rel="permalink">一个 NFS 的简介
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/planet/2019/08/NFS-intro/" rel="permalink">一个 NFS 的简介
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -2313,14 +2346,14 @@
                       5 分钟阅读
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">NFS（网络文件系统，Network File System）是一个分布式的文件系统，可以用于在局域网中共享文件。它通常运用在 Unix 与类 Unix 操作系统中。对于 Linux 服务器之间的文件共享来说，NFS 相比于其他的方案（如 Samba）更加方便，性能也更好。对于应用程序来说，NFS 也是透明的。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">NFS（网络文件系统，Network File System）是一个分布式的文件系统，可以用于在局域网中共享文件。它通常运用在 Unix 与类 Unix 操作系统中。对于 Linux 服务器之间的文件共享来说，NFS 相比于其他的方案（如 Samba）更加方便，性能也更好。对于应用程序来说，NFS 也是透明的。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/planet/2018/10/PXE-intro/" rel="permalink">一根网线安装 Linux——PXE 介绍
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/planet/2018/10/PXE-intro/" rel="permalink">一根网线安装 Linux——PXE 介绍
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -2334,7 +2367,7 @@
                       5 分钟阅读
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">预启动执行环境（Preboot eXecution Environment，PXE，也被称为预执行环境) 提供了一种使用网络接口（Network Interface）启动计算机的机制。这种机制让计算机的启动可以不依赖本地数据存储设备（如硬盘）或本地已安装的操作系统。——摘自 Archwiki
+                  <p class="archive__item-excerpt p-summary" itemprop="description">预启动执行环境（Preboot eXecution Environment，PXE，也被称为预执行环境) 提供了一种使用网络接口（Network Interface）启动计算机的机制。这种机制让计算机的启动可以不依赖本地数据存储设备（如硬盘）或本地已安装的操作系统。——摘自 Archwiki
                   </p>
                 </article>
               </div>
@@ -2346,8 +2379,8 @@
             <div class="entries-list">
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/planet/2025/07/how-to-use-tmux/" rel="permalink">提升命令行使用体验──tmux 终端复用
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/planet/2025/07/how-to-use-tmux/" rel="permalink">提升命令行使用体验──tmux 终端复用
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -2361,14 +2394,14 @@
                       7 分钟阅读
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">本文会介绍 tmux 的基础使用方法，以及长期使用下来的一些常用配置。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">本文会介绍 tmux 的基础使用方法，以及长期使用下来的一些常用配置。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/planet/2025/01/local-file-serving/" rel="permalink">快速建立本地 HTTP 文件服务
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/planet/2025/01/local-file-serving/" rel="permalink">快速建立本地 HTTP 文件服务
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -2382,14 +2415,14 @@
                       4 分钟阅读
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">USTCLUG 的一个重要服务是它的 开源软件镜像。但是我们这里要讨论的，是另一种自己在本地搭建的文件服务，目的是加速对远程静态文件的访问。这篇文章来源于帮同学解决的一个小问题。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">USTCLUG 的一个重要服务是它的 开源软件镜像。但是我们这里要讨论的，是另一种自己在本地搭建的文件服务，目的是加速对远程静态文件的访问。这篇文章来源于帮同学解决的一个小问题。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/planet/2024/05/onedrive-backup-with-rclone/" rel="permalink">使用 Rclone 备份 OneDrive 内容
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/planet/2024/05/onedrive-backup-with-rclone/" rel="permalink">使用 Rclone 备份 OneDrive 内容
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -2403,14 +2436,14 @@
                       3 分钟阅读
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">本文用于介绍如何使用 Rclone 备份 OneDrive 内容。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">本文用于介绍如何使用 Rclone 备份 OneDrive 内容。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/planet/2019/09/how-to-use-nc/" rel="permalink">萌新入门手册：如何使用 nc/ncat？
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/planet/2019/09/how-to-use-nc/" rel="permalink">萌新入门手册：如何使用 nc/ncat？
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -2424,7 +2457,7 @@
                       3 分钟阅读
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">本文用于介绍信息安全大赛中不少题目需要使用的 nc/ncat 工具。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">本文用于介绍信息安全大赛中不少题目需要使用的 nc/ncat 工具。
                   </p>
                 </article>
               </div>
@@ -2436,8 +2469,8 @@
             <div class="entries-list">
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2020/05/servers-down/" rel="permalink">近期部分服务中断通知（已修复）
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2020/05/servers-down/" rel="permalink">近期部分服务中断通知（已修复）
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -2446,14 +2479,14 @@
                       <time datetime="2020-05-26T23:00:00+08:00">2020 年 5 月 26 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2020-06-05 10:27 Update 5
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2020-06-05 10:27 Update 5
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2020/01/server-down/" rel="permalink">服务器宕机通知（已恢复）
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2020/01/server-down/" rel="permalink">服务器宕机通知（已恢复）
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -2462,14 +2495,14 @@
                       <time datetime="2020-01-06T23:34:34+08:00">2020 年 1 月 6 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2020-01-07 Update 3
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2020-01-07 Update 3
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2018/06/server-down/" rel="permalink">服务器宕机通知
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2018/06/server-down/" rel="permalink">服务器宕机通知
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -2478,7 +2511,7 @@
                       <time datetime="2018-06-14T01:10:50+08:00">2018 年 6 月 14 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2018-06-16 UPDATE3:
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2018-06-16 UPDATE3:
                   </p>
                 </article>
               </div>
@@ -2490,8 +2523,8 @@
             <div class="entries-list">
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2022/03/linux-101-1/" rel="permalink">Linux 101 第一课
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2022/03/linux-101-1/" rel="permalink">Linux 101 第一课
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -2500,15 +2533,15 @@
                       <time datetime="2022-03-13T14:30:00+08:00">2022 年 3 月 13 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">3 月 13 日下午，Linux 用户协会在西区 3C101 教室举办了 Linux 101 系列活动的第一课：
+                  <p class="archive__item-excerpt p-summary" itemprop="description">3 月 13 日下午，Linux 用户协会在西区 3C101 教室举办了 Linux 101 系列活动的第一课：
                     LIP (Linux Install Party)。
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2021/04/linux-101-1/" rel="permalink">Linux 101 第一课
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2021/04/linux-101-1/" rel="permalink">Linux 101 第一课
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -2517,7 +2550,7 @@
                       <time datetime="2021-04-11T14:30:00+08:00">2021 年 4 月 11 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2021 年 4 月 11 日下午，USTCLUG 在西区 3C104 教室举办了 Linux 101 活动的第一课：LIP（Linux Install Party）。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2021 年 4 月 11 日下午，USTCLUG 在西区 3C104 教室举办了 Linux 101 活动的第一课：LIP（Linux Install Party）。
                   </p>
                 </article>
               </div>
@@ -2529,8 +2562,8 @@
             <div class="entries-list">
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/planet/2021/01/physexp-using-python/" rel="permalink">用 Python 处理大物实验数据
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/planet/2021/01/physexp-using-python/" rel="permalink">用 Python 处理大物实验数据
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -2544,14 +2577,14 @@
                       6 分钟阅读
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">身为某世界一流退学的学生，大物实验自然是逃不过。本人有幸选择了大物实验最多的专业方向，从一级做到六级，直到上学期刚刚结束。大物实验里数据处理是占了很多时间的，那么怎么才能「优雅」地完成这一工作呢？
+                  <p class="archive__item-excerpt p-summary" itemprop="description">身为某世界一流退学的学生，大物实验自然是逃不过。本人有幸选择了大物实验最多的专业方向，从一级做到六级，直到上学期刚刚结束。大物实验里数据处理是占了很多时间的，那么怎么才能「优雅」地完成这一工作呢？
                   </p>
                 </article>
               </div>
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/planet/2020/08/keeping-account-with-beancount/" rel="permalink">使用 Beancount 进行记账并自动记录一卡通消费
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/planet/2020/08/keeping-account-with-beancount/" rel="permalink">使用 Beancount 进行记账并自动记录一卡通消费
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -2565,7 +2598,7 @@
                       9 分钟阅读
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">本文首发于 https://charlesliu7.github.io/blackboard/2019/07/24/beancount/
+                  <p class="archive__item-excerpt p-summary" itemprop="description">本文首发于 https://charlesliu7.github.io/blackboard/2019/07/24/beancount/
                   </p>
                 </article>
               </div>
@@ -2577,8 +2610,8 @@
             <div class="entries-list">
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2011/04/2011-winter-reading-notes/" rel="permalink">Fwd: 读书笔记：关于维护服务器的一些技巧
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2011/04/2011-winter-reading-notes/" rel="permalink">Fwd: 读书笔记：关于维护服务器的一些技巧
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -2587,7 +2620,7 @@
                       <time datetime="2011-04-28T18:15:09+08:00">2011 年 4 月 28 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">寒假读了三本书《LINUX SERVER HACKS 卷二》《实战 Nginx：取代 Apache 的高性能 Web 服务器》《Linux 服务器性能调整》，简单地了解了些 linux 服务器维护和管理上的技巧。现在就分别简要谈谈我在读这三本书时的感受吧。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">寒假读了三本书《LINUX SERVER HACKS 卷二》《实战 Nginx：取代 Apache 的高性能 Web 服务器》《Linux 服务器性能调整》，简单地了解了些 linux 服务器维护和管理上的技巧。现在就分别简要谈谈我在读这三本书时的感受吧。
                   </p>
                 </article>
               </div>
@@ -2599,8 +2632,8 @@
             <div class="entries-list">
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2011/05/customize-pxe-live-system/" rel="permalink">定制 PXE Live 系统
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2011/05/customize-pxe-live-system/" rel="permalink">定制 PXE Live 系统
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -2609,7 +2642,7 @@
                       <time datetime="2011-05-24T02:03:48+08:00">2011 年 5 月 24 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">现在已经有上百中 Linux 发行版，很多发行版都提供了通过 PXE 启动的 Live 系统。在科大校园网网络启动服务上，我们部署了很多发行版的 Live 系统，例如 Ubuntu、Debian、Deepin、BackTrack、Knoppix 等，既给一些需要维护系统的同学带来了极大的便利，也使得那些未接触过 ...</p>
+                  <p class="archive__item-excerpt p-summary" itemprop="description">现在已经有上百中 Linux 发行版，很多发行版都提供了通过 PXE 启动的 Live 系统。在科大校园网网络启动服务上，我们部署了很多发行版的 Live 系统，例如 Ubuntu、Debian、Deepin、BackTrack、Knoppix 等，既给一些需要维护系统的同学带来了极大的便利，也使得那些未接触过 ...</p>
                 </article>
               </div>
             </div>
@@ -2620,8 +2653,8 @@
             <div class="entries-list">
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2011/05/customize-pxe-live-system/" rel="permalink">定制 PXE Live 系统
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2011/05/customize-pxe-live-system/" rel="permalink">定制 PXE Live 系统
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -2630,7 +2663,7 @@
                       <time datetime="2011-05-24T02:03:48+08:00">2011 年 5 月 24 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">现在已经有上百中 Linux 发行版，很多发行版都提供了通过 PXE 启动的 Live 系统。在科大校园网网络启动服务上，我们部署了很多发行版的 Live 系统，例如 Ubuntu、Debian、Deepin、BackTrack、Knoppix 等，既给一些需要维护系统的同学带来了极大的便利，也使得那些未接触过 ...</p>
+                  <p class="archive__item-excerpt p-summary" itemprop="description">现在已经有上百中 Linux 发行版，很多发行版都提供了通过 PXE 启动的 Live 系统。在科大校园网网络启动服务上，我们部署了很多发行版的 Live 系统，例如 Ubuntu、Debian、Deepin、BackTrack、Knoppix 等，既给一些需要维护系统的同学带来了极大的便利，也使得那些未接触过 ...</p>
                 </article>
               </div>
             </div>
@@ -2641,8 +2674,8 @@
             <div class="entries-list">
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2020/08/new-website/" rel="permalink">新网站上线啦
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2020/08/new-website/" rel="permalink">新网站上线啦
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -2651,7 +2684,7 @@
                       <time datetime="2020-08-09T00:00:00+08:00">2020 年 8 月 9 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">经过多位成员连续多日的努力，Linux 用户协会的网站焕然一新。现在你所看到的页面正是我们新网站上线后的第一篇新闻。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">经过多位成员连续多日的努力，Linux 用户协会的网站焕然一新。现在你所看到的页面正是我们新网站上线后的第一篇新闻。
                   </p>
                 </article>
               </div>
@@ -2663,8 +2696,8 @@
             <div class="entries-list">
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/news/2022/05/retrocomputing-and-radio-show/" rel="permalink">复古计算与无线电展
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/news/2022/05/retrocomputing-and-radio-show/" rel="permalink">复古计算与无线电展
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -2673,7 +2706,7 @@
                       <time datetime="2022-05-08T09:00:00+08:00">2022 年 5 月 8 日</time>
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">2022 年 5 月 8 日下午，由中国科学技术大学学生 Linux 用户协会与学生业余无线电协会承办的复古计算和无线电展活动在中区 3 号楼架空层圆满落幕。本次活动中，由学生业余无线电协会社长刘紫檀及两社社员共同筹借的复古设备得以“重见天日”，向我们再次讲述那个曾经属于它们的时代。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">2022 年 5 月 8 日下午，由中国科学技术大学学生 Linux 用户协会与学生业余无线电协会承办的复古计算和无线电展活动在中区 3 号楼架空层圆满落幕。本次活动中，由学生业余无线电协会社长刘紫檀及两社社员共同筹借的复古设备得以“重见天日”，向我们再次讲述那个曾经属于它们的时代。
                   </p>
                 </article>
               </div>
@@ -2685,8 +2718,8 @@
             <div class="entries-list">
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/planet/2018/08/USTC-Linux-user-guide/" rel="permalink">USTC Linux 用户生存指南
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/planet/2018/08/USTC-Linux-user-guide/" rel="permalink">USTC Linux 用户生存指南
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -2700,7 +2733,7 @@
                       8 分钟阅读
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">本指南指导中科大 Linux 用户如何使用 Linux 完成各门课程、处理学业事项，以及运行需要的专业软件。“兼容性”仅代表使用 Linux 完成任务的难易程度，与其他指标（如课程本身质量和难度）无关。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">本指南指导中科大 Linux 用户如何使用 Linux 完成各门课程、处理学业事项，以及运行需要的专业软件。“兼容性”仅代表使用 Linux 完成任务的难易程度，与其他指标（如课程本身质量和难度）无关。
                   </p>
                 </article>
               </div>
@@ -2712,8 +2745,8 @@
             <div class="entries-list">
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/planet/2019/09/raspberry-4/" rel="permalink">【译稿】树莓派 4 评测与基准测试：与树莓派 3B+ 相比的改进
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/planet/2019/09/raspberry-4/" rel="permalink">【译稿】树莓派 4 评测与基准测试：与树莓派 3B+ 相比的改进
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -2727,7 +2760,7 @@
                       8 分钟阅读
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">原文地址：https://ibugone.com/blog/2019/09/raspberry-pi-4-review-benchmark/，作者为 @iBug 同学。以下为翻译部分。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">原文地址：https://ibugone.com/blog/2019/09/raspberry-pi-4-review-benchmark/，作者为 @iBug 同学。以下为翻译部分。
                   </p>
                 </article>
               </div>
@@ -2739,8 +2772,8 @@
             <div class="entries-list">
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/planet/2021/09/nethack-gitgud/" rel="permalink">菜鸡写给菜鸡的 NetHack 入门教程
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/planet/2021/09/nethack-gitgud/" rel="permalink">菜鸡写给菜鸡的 NetHack 入门教程
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -2754,7 +2787,7 @@
                       13 分钟阅读
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">
+                  <p class="archive__item-excerpt p-summary" itemprop="description">
                   </p>
                 </article>
               </div>
@@ -2766,8 +2799,8 @@
             <div class="entries-list">
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/planet/2024/12/ustc-mirrors-zfs-rebuild/" rel="permalink">镜像站 ZFS 实践
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/planet/2024/12/ustc-mirrors-zfs-rebuild/" rel="permalink">镜像站 ZFS 实践
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -2781,7 +2814,7 @@
                       13 分钟阅读
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">A.K.A. 如何让 2000 元的机械硬盘跑得比 3000 元的固态硬盘还快（
+                  <p class="archive__item-excerpt p-summary" itemprop="description">A.K.A. 如何让 2000 元的机械硬盘跑得比 3000 元的固态硬盘还快（
                   </p>
                 </article>
               </div>
@@ -2793,8 +2826,8 @@
             <div class="entries-list">
               <div class="list__item">
                 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-                  <h2 class="archive__item-title no_toc" itemprop="headline">
-                    <a href="/planet/2025/02/hackergame-rootless-docker/" rel="permalink">Rootless Docker in Docker 在 Hackergame 中的实践
+                  <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+                    <a class="u-url" href="/planet/2025/02/hackergame-rootless-docker/" rel="permalink">Rootless Docker in Docker 在 Hackergame 中的实践
                     </a>
                   </h2>
                   <p class="page__meta">
@@ -2808,7 +2841,7 @@
                       5 分钟阅读
                     </span>
                   </p>
-                  <p class="archive__item-excerpt" itemprop="description">本文介绍了 2024 年 USTC Hackergame 中 Rootless Docker in Docker 在 Web 类题目容器隔离中的实践。
+                  <p class="archive__item-excerpt p-summary" itemprop="description">本文介绍了 2024 年 USTC Hackergame 中 Rootless Docker in Docker 在 Web 类题目容器隔离中的实践。
                   </p>
                 </article>
               </div>
