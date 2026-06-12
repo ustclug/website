@@ -16,7 +16,7 @@
 | :----------- | :----- | :----------------------- |
 | 社长         | 熊桐睿 | kermanx AT ustclug.org   |
 | 团支书       | 王永福 | rtxux AT ustclug.org     |
-| 技术部负责人 | 吴擎宇 |                          |
+| 技术部负责人 | 吴擎宇 | vertsineu AT ustclug.org |
 | 技术部负责人 | 李培锋 | xiaoh1024 AT ustclug.org |
 | 运营部负责人 | 袁康成 |                          |
 | 运营部负责人 | 吕思源 |                          |
