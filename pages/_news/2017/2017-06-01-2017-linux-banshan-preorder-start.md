@@ -37,7 +37,7 @@ BBS 相同文章联动：[点我](https://bbs.ustc.edu.cn/cgi/bbscon?bn=Linux&fn
 
 #### 预订方法
 
-1.  转账到支付宝帐号 crtmike (At) hotmail.com 姓名：马凯；头像为浑天仪。建议备注姓名 + 手机号以便追溯！
+1.  转账到支付宝帐号 姓名：马凯；头像为浑天仪。建议备注姓名 + 手机号以便追溯！
 1.  [填写表单 https://t.cn/RSfG5md](https://t.cn/RSfG5md) 如果购买多件烦请分别多次填写！
 
 #### 预订说明
