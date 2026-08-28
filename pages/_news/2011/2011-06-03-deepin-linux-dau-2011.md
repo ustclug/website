@@ -241,6 +241,6 @@ comments:
 
 - Linux Deepin 武汉技术交流会后记（Wayback Machine）（笨兔兔）
 - [Linux Deepin 2011 开发者和用户大会实录](http://news.mydrivers.com/1/195/195039.htm)（驱动之家）
-- Linux Deepin 2011 开发者和用户大会实录（Wayback Machine）（OwnLinux.cn）
+- Linux Deepin 2011 开发者和用户大会实录（Wayback Machine）
 - [国产 Linux 发行版面临的机遇和挑战](http://os.51cto.com/art/201106/266358.htm)（51CTO）
 - 武汉 Deepin DAU 会议见闻（Wayback Machine）（basic coder）
