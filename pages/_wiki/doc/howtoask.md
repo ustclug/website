@@ -225,18 +225,18 @@ apt update 输出 E: Could not open lock file /var/lib/apt/lists/lock - open (13
 
 另一个我们遇到的真实例子（已大幅简化）：
 
-  ```text
-  Q: 有没有人在导入的时候遇到 TypeError: Can't create an SSLContext object without an ssl module? 的报错？
-  A1: 你编译的时候没加 ssl 模块吗
-  Q: 加了，我看了 csdn 上的教程 [截图]
-  A2: 你这教程怎么把源代码目录移动到 /usr/lib 下面啊，换个教程吧
-  A3: 等等，为什么你要自己编译 python？你在用什么发行版？
-  Q: Ubuntu 20.04，我没找到 python3 在哪里
-  A3: 20.04 不是自带的 Python 3.8 吗？这个不够用吗？
-  Q: 不是，我直接跑 python 出来的是 python2
-  A2: 装 python-is-python3
-  A3: 20.04 源里面也有 3.9，可以直接 install python3.9
-  ```
+```text
+Q: 有没有人在导入的时候遇到 TypeError: Can't create an SSLContext object without an ssl module? 的报错？
+A1: 你编译的时候没加 ssl 模块吗
+Q: 加了，我看了 csdn 上的教程 [截图]
+A2: 你这教程怎么把源代码目录移动到 /usr/lib 下面啊，换个教程吧
+A3: 等等，为什么你要自己编译 python？你在用什么发行版？
+Q: Ubuntu 20.04，我没找到 python3 在哪里
+A3: 20.04 不是自带的 Python 3.8 吗？这个不够用吗？
+Q: 不是，我直接跑 python 出来的是 python2
+A2: 装 python-is-python3
+A3: 20.04 源里面也有 3.9，可以直接 install python3.9
+```
 
 ### 直接提问，避免使用「在吗」/「有人吗」 {#ask-directly}
 
