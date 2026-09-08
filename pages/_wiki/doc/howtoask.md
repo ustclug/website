@@ -21,7 +21,7 @@ License: CC-BY-NC-SA 4.0
 
 在求助他人之前，可以先分析一下问题。这样既能问得更准确、节省他人的时间，也能加深对问题的理解。
 
-### 阅读已有的信息 {#read-existing-info}
+### 读懂错误信息 {#read-existing-info}
 
 多数错误伴随着错误信息（error message），想要帮助你的人通常也需要这些信息，解读这些信息是解决问题的第一步。一些基本的心得和技巧包括：
 
@@ -96,7 +96,7 @@ License: CC-BY-NC-SA 4.0
 
   可以看到，输出中的报错信息明确指出了 `No such file or directory`（没有对应的文件或文件夹），说明程序找不到指定的文件。仔细检查便可发现是命令里面把文件名敲错了。
 
-### 利用搜索引擎等工具 {#use-search-engine}
+### 使用搜索引擎 {#use-search-engine}
 
 尽管近几年大语言模型发展迅速，但是搜索引擎在解决问题方面仍然不可或缺。
 
@@ -113,7 +113,7 @@ License: CC-BY-NC-SA 4.0
   - 使用 [Debian Code Search](https://codesearch.debian.net/) 查找 Debian 上所有软件包的源代码，也可用 [GitHub](https://github.com) 搜索其存放的公开代码
   - 部分站点或服务会拒绝通用搜索引擎索引，需要使用其手机 App 或合作方网站搜索（例如微信公众号、小红书等）
 
-#### 搜索相关项目的手册/FAQ 等信息 {#search-docs}
+#### 查阅项目文档 {#search-docs}
 
 在某些场景下，搜索对应项目的帮助文档、手册、FAQ 等是比直接搜索报错信息更好的选择。例如，在使用 Python 的 `argparse` 模块遇到问题时，最好先查阅手册寻找答案：
 
@@ -357,7 +357,7 @@ LC_ALL=zh_CN.UTF-8 你的命令
 
 - GitHub 对应 [GitHub Gist](https://gist.github.com/)
 - GitLab 对应其 [Snippets](https://gitlab.com/dashboard/snippets) 功能
-- 独立的 Pastebin 类服务，例如 <s>[Ubuntu pastebin](https://paste.ubuntu.com/)</s>（已结束服务），[Pastebin.com](http://Pastebin.com) 等
+- 独立的 Pastebin 类服务，例如 <s>[Ubuntu pastebin](https://paste.ubuntu.com/)</s>（已结束服务），[Pastebin.com](https://pastebin.com/) 等
 
 科大校内的同学可以使用校内 GitLab（[超算中心](https://git.ustc.edu.cn/) 或 [LUG](https://git.lug.ustc.edu.cn/)）的 Snippets。
 
@@ -505,11 +505,11 @@ LC_ALL=zh_CN.UTF-8 你的命令
 
 ## 附录：如何正确向大语言模型提问 {#llm}
 
-### 请先阅读正文内容，再阅读本部分 {#read-main-content-first}
-
-对人类有效的提问策略，大多对大语言模型（LLM）也有效。
+对人类有效的提问策略，大多对大语言模型（LLM）也有效，因此建议先阅读本文的正文部分，再阅读这一节。
 
 ### 提供足够的上下文信息 {#provide-context}
+
+大语言模型只能看到你给出的信息，因此上下文是否充分，很大程度上决定了回答的质量。
 
 #### 对话式大语言模型 {#chatbot-context}
 
