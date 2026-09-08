@@ -49,7 +49,8 @@ License: CC-BY-NC-SA 4.0
 
 - 例 2：为什么我装不了 `pytorch`
 
-  执行的命令与错误信息：
+  <details markdown="1">
+  <summary>查看执行的命令与完整错误信息</summary>
 
   ```console
   $ pip install pytorch
@@ -80,6 +81,8 @@ License: CC-BY-NC-SA 4.0
   [notice] A new release of pip is available: 23.2.1 -> 24.0
   [notice] To update, run: pip install --upgrade pip
   ```
+
+  </details>
 
   错误提示显示异常（exception）的内容是 `You tried to install "pytorch". The package named for PyTorch is "torch"`，说明要安装的软件包的名字是 `torch`，而非 `pytorch`，因此将命令从 `pip install pytorch` 改成 `pip install torch` 即可。
 
@@ -529,7 +532,8 @@ LC_ALL=zh_CN.UTF-8 你的命令
 
 向对话式大语言模型提问时，和向人类提问类似，也需要提供足够的上下文，帮助它理解问题。下面沿用前文在命令行中下载文件的例子。
 
-原始例子：
+<details markdown="1">
+<summary>查看原始提问与大语言模型的完整回答</summary>
 
 ````text
 Human: 怎么在命令行里面下载一个 url？
@@ -610,6 +614,8 @@ sudo apt install wget
 
 如果你告诉我你是用 Windows / Linux / macOS，我可以给你更具体的命令。
 ````
+
+</details>
 
 改进后的例子：
 
