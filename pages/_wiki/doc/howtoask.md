@@ -359,7 +359,7 @@ LC_ALL=zh_CN.UTF-8 你的命令
 - GitLab 对应其 [Snippets](https://gitlab.com/dashboard/snippets) 功能
 - 独立的 Pastebin 类服务，例如 <s>[Ubuntu pastebin](https://paste.ubuntu.com/)</s>（已结束服务），[Pastebin.com](https://pastebin.com/) 等
 
-科大校内的同学可以使用校内 GitLab（[超算中心](https://git.ustc.edu.cn/) 或 [LUG](https://git.lug.ustc.edu.cn/)）的 Snippets。
+科大校内的同学可以使用校内 [GitLab](https://git.ustc.edu.cn/) 的 Snippets。
 
 #### 避免拍屏 {#use-screenshots}
 
