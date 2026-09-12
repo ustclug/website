@@ -21,7 +21,7 @@
     <meta property="og:url" content="https://lug.ustc.edu.cn/wiki/doc/howtoask/">
     <meta property="og:description" content="提问指南">
     <meta property="article:published_time" content="2024-06-11T13:28:09+08:00">
-    <meta property="article:modified_time" content="2025-04-17T00:02:32+08:00">
+    <meta property="article:modified_time" content="2026-09-12T18:08:11+08:00">
     <link rel="canonical" href="https://lug.ustc.edu.cn/wiki/doc/howtoask/">
     <!-- end _includes/seo.html -->
     <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="LUG @ USTC Feed">
@@ -48,7 +48,7 @@
       window.enable_copy_code_button = true;
     </script>
     <!-- For all browsers -->
-    <link rel="stylesheet" href="/assets/css/main.css?v=87859160dd">
+    <link rel="stylesheet" href="/assets/css/main.css?v=c0f7f0783e">
     <link rel="stylesheet" href="/_extra/fontawesome/css/all.min.css" media="invalid" onload="this.media='all'">
     <link rel="stylesheet" href="/_extra/open-sans.css" media="invalid" onload="this.media='all'">
     <!-- start custom head snippets -->
@@ -179,7 +179,7 @@
           <meta itemprop="headline" content="提问指南">
           <meta itemprop="description" content="提问指南">
           <meta itemprop="datePublished" content="2024-06-11T13:28:09+08:00">
-          <meta itemprop="dateModified" content="2025-04-17T00:02:32+08:00">
+          <meta itemprop="dateModified" content="2026-09-12T18:08:11+08:00">
           <div class="page__inner-wrap">
             <header>
               <h1 id="page-title" class="page__title p-name" itemprop="headline">
@@ -197,36 +197,57 @@
                     <li><a href="#why-this-guide">为什么需要再写一份这样的指南</a></li>
                     <li><a href="#before-asking">提问之前</a>
                       <ul>
-                        <li><a href="#read-existing-info">阅读已有的信息</a></li>
-                        <li><a href="#use-search-engine">利用搜索引擎等工具</a>
+                        <li><a href="#read-existing-info">读懂错误信息</a></li>
+                        <li><a href="#use-search-engine">使用搜索引擎</a>
                           <ul>
                             <li><a href="#choose-search-engine">选择搜索引擎</a></li>
-                            <li><a href="#search-docs">搜索相关项目的手册/FAQ 等信息</a></li>
+                            <li><a href="#search-docs">查阅项目文档</a></li>
                             <li><a href="#use-proper-query">使用合适的查询</a></li>
                             <li><a href="#filter-results">筛选结果</a></li>
                           </ul>
                         </li>
-                        <li><a href="#other-info">其他信息</a></li>
+                        <li><a href="#ask-llm">询问大语言模型</a></li>
                       </ul>
                     </li>
                     <li><a href="#when-asking">提问时的注意事项</a>
                       <ul>
-                        <li><a href="#avoid-xy">避免 X-Y 型问题</a></li>
-                        <li><a href="#ask-directly">直接提问，避免使用「在吗」/「有人吗」</a></li>
-                        <li><a href="#justask">避免「有没有人懂」</a></li>
-                        <li><a href="#mre">尽可能提供「最小可复现样例」</a></li>
-                        <li><a href="#provide-necessary-info">提供必要的问题描述与相关信息</a></li>
-                        <li><a href="#use-pastebin">使用代码片段服务分享问题相关的代码与报错</a></li>
-                        <li><a href="#use-screenshots">避免拍屏</a></li>
+                        <li><a href="#avoid-xy">提出原问题</a></li>
+                        <li><a href="#ask-directly">直接提问</a></li>
+                        <li><a href="#provide-necessary-info">提供必要的信息</a>
+                          <ul>
+                            <li><a href="#mre">提供「最小可复现样例」</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#share-info">用合适的方式分享信息</a>
+                          <ul>
+                            <li><a href="#use-pastebin">使用在线剪贴板</a></li>
+                            <li><a href="#use-screenshots">避免拍屏</a></li>
+                          </ul>
+                        </li>
                       </ul>
                     </li>
-                    <li><a href="#if-no-answer">无人应答</a></li>
+                    <li><a href="#if-no-answer">其他咨询方式</a></li>
+                    <li><a href="#for-answerers">附录：给回答者的建议</a>
+                      <ul>
+                        <li><a href="#respect-questioners">尊重提问者</a></li>
+                        <li><a href="#friendly-to-goal">友好沟通、推进目标解决</a></li>
+                        <li><a href="#check-your-assumptions">检查自己的误区</a></li>
+                        <li><a href="#no-copy-paste-llm-answer">不要直接复制粘贴大语言模型的回答</a></li>
+                      </ul>
+                    </li>
                     <li><a href="#llm">附录：如何正确向大语言模型提问</a>
                       <ul>
-                        <li><a href="#read-main-content-first">请先阅读正文内容，再阅读本部分</a></li>
-                        <li><a href="#provide-context">提供足够的上下文信息</a></li>
+                        <li><a href="#provide-context">提供足够的上下文信息</a>
+                          <ul>
+                            <li><a href="#chatbot-context">对话式大语言模型</a></li>
+                            <li><a href="#agent-context">Agent</a></li>
+                          </ul>
+                        </li>
                         <li><a href="#ask-language">提问语言</a></li>
                         <li><a href="#avoid-long-dialog">避免超长的对话</a></li>
+                        <li><a href="#verify-answer">核验回答</a></li>
+                        <li><a href="#llm-privacy">隐私问题</a></li>
+                        <li><a href="#llm-command-security">小心执行大语言模型生成的命令</a></li>
                       </ul>
                     </li>
                   </ul>
@@ -234,30 +255,30 @@
               </aside>
               <p>License: CC-BY-NC-SA 4.0</p>
               <h2 id="why-this-guide">为什么需要再写一份这样的指南</h2>
-              <p>网上已经有一些关于如何提问的文档，例如：</p>
+              <p>网上已有一些关于如何提问的文档，例如：</p>
               <ul>
                 <li>提问的智慧（<a href="http://www.catb.org/~esr/faqs/smart-questions.html">原文</a>，<a href="/wiki/doc/smart-questions/">中文</a>）</li>
                 <li><a href="https://github.com/tangx/Stop-Ask-Questions-The-Stupid-Ways/blob/master/README.md">别傻傻地提问</a></li>
               </ul>
-              <p>本文不是这些文档的翻版。我们希望通过更加简洁、清晰、友好的语言，帮助同学们快速了解提问注意事项。</p>
-              <p>本文涉及到的真实例子会做匿名化处理。我们希望读者在遇到类似问题时，能够结合自己的实际情况进行思考，而不是机械地执行检查单。</p>
+              <p>本文希望通过更加简洁、清晰、友好的语言，帮助同学们快速了解提问注意事项。</p>
+              <p>请不要把本文当作检查单，我们希望你在遇到类似问题时能够结合实际情况进行思考。</p>
               <h2 id="before-asking">提问之前</h2>
-              <p>在求助他人之前，不妨先自己分析一下问题，这样既能问得更准确，节省他人时间，也能加深对问题的理解。</p>
-              <h3 id="read-existing-info">阅读已有的信息</h3>
-              <p>多数错误伴随着错误信息（error message），这是解决问题的第一步。想要帮助你的人通常也需要这些信息，所以不妨自己先行阅读它们。一些基本的技巧包括：</p>
+              <p>在求助他人之前，可以先分析一下问题。这样既能问得更准确、节省他人的时间，也能加深对问题的理解。</p>
+              <h3 id="read-existing-info">读懂错误信息</h3>
+              <p>多数错误伴随着错误信息（error message），想要帮助你的人通常也需要这些信息，解读这些信息是解决问题的第一步。一些基本的心得和技巧包括：</p>
               <ul>
-                <li>错误信息多为英文，不过无需担心，开发者通常不会使用太复杂的语法或词汇（不妨这样想：很多开发者的英文水平可能并不如你）
+                <li>错误信息多为英文，不过无需担心，开发者通常不会使用太复杂的语法或词汇（很多开发者的英文水平可能并不如你）
                   <blockquote>
                     <p>如果你实在克服不了语言障碍，不妨尝试使用 DeepL、Google Translate 等翻译软件，或者借助大语言模型来帮助理解错误信息。</p>
                   </blockquote>
                 </li>
                 <li>
-                  <p>程序日志一般分为 info、warn（warning、W）、error（E）等级别。通常情况下，请优先关注<strong>第一个出现的 error/warning</strong> 信息，因为后续错误往往只是前面的延伸。</p>
+                  <p>程序日志一般分为 info、warn（warning、W）、error（E）等级别。通常情况下，请优先关注<strong>第一个出现的 error/warning</strong> 信息，因为后续错误往往只是前面的延续。</p>
                   <blockquote>
-                    <p>有些程序前置的错误信息内容可能信息量较低，例如 <code class="language-plaintext highlighter-rouge">subprocess xxx returned error code xxx</code> 这类提示，只能表明某个进程出错了，但是不包含具体原因。直接搜索的话效果会很差，故需要定位并搜索最初发出的错误信息。</p>
+                    <p>有些程序较早出现的错误提示可能信息量较低。例如 <code class="language-plaintext highlighter-rouge">subprocess xxx returned error code xxx</code> 这类提示，只能表明某个进程出错了，但是不包含具体原因。直接搜索的话效果会很差，因此定位并搜索有效的错误信息十分重要。</p>
                   </blockquote>
                 </li>
-                <li>如果你不知道在哪里找到日志，那么建议先解决日志的问题，毕竟没有这些信息，其他人也只能摸着水晶球来猜测到底发生什么了。</li>
+                <li>如果你不知道在哪里找到日志，那么请先解决这个问题。没有这些信息，其他人也只能摸着水晶球猜测到底发生什么了。</li>
               </ul>
               <p>下面是这个过程中一些错误示范：</p>
               <ul>
@@ -272,14 +293,15 @@ E: 有几个软件包无法下载，要不运行 apt-get update 或者加上 --f
 </span></code></pre>
                     </div>
     </div>
-                  <p>可以看到，这里的输出已经给出很清晰的建议了，需要执行一下 <code class="language-plaintext highlighter-rouge">apt-get update</code> 命令。把这样的错误信息截图发到群里，也许是一件不太负责的事情。</p>
+                  <p>可以看到，这里的日志已经给出很清晰的建议了，需要执行一下 <code class="language-plaintext highlighter-rouge">apt-get update</code> 命令。如果你没有仔细阅读就把这样的错误信息截图发到群里，那很坏了。</p>
                 </li>
                 <li>
                   <p>例 2：为什么我装不了 <code class="language-plaintext highlighter-rouge">pytorch</code></p>
-                  <p>执行的命令与错误信息：</p>
-                  <div class="language-console highlighter-rouge">
-                    <div class="highlight">
-                      <pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>pip <span class="nb">install </span>pytorch
+                  <details>
+                    <summary>查看执行的命令与完整错误信息</summary>
+                    <div class="language-console highlighter-rouge">
+                      <div class="highlight">
+                        <pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>pip <span class="nb">install </span>pytorch
 <span class="go">Collecting pytorch
   Downloading pytorch-1.0.2.tar.gz (689 bytes)
   Preparing metadata (setup.py) ... done
@@ -307,12 +329,13 @@ ERROR: Could not build wheels for pytorch, which is required to install pyprojec
 </span><span class="gp">[notice] A new release of pip is available: 23.2.1 -&gt;</span><span class="w"> </span>24.0
 <span class="go">[notice] To update, run: pip install --upgrade pip
 </span></code></pre>
-                    </div>
-    </div>
+                      </div>
+      </div>
+                  </details>
                   <p>错误提示显示异常（exception）的内容是 <code class="language-plaintext highlighter-rouge">You tried to install "pytorch". The package named for PyTorch is "torch"</code>，说明要安装的软件包的名字是 <code class="language-plaintext highlighter-rouge">torch</code>，而非 <code class="language-plaintext highlighter-rouge">pytorch</code>，因此将命令从 <code class="language-plaintext highlighter-rouge">pip install pytorch</code> 改成 <code class="language-plaintext highlighter-rouge">pip install torch</code> 即可。</p>
                 </li>
                 <li>
-                  <p>反例：为什么我的程序编译不了</p>
+                  <p>例 3：为什么我的程序编译不了</p>
                   <div class="language-console highlighter-rouge">
                     <div class="highlight">
                       <pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>gcc myporgram.c
@@ -321,14 +344,14 @@ compilation terminated.
 </span></code></pre>
                     </div>
     </div>
-                  <p>可以看到，输出中报错信息明确了是 <code class="language-plaintext highlighter-rouge">No such file or directory</code>（没有对应的文件或文件夹），说明程序找不到指定的文件。仔细检查便可发现是命令里面把文件名敲错了。</p>
+                  <p>可以看到，输出中的报错信息明确指出了 <code class="language-plaintext highlighter-rouge">No such file or directory</code>（没有对应的文件或文件夹），说明程序找不到指定的文件。仔细检查便可发现是命令里面把文件名敲错了。</p>
                 </li>
               </ul>
-              <h3 id="use-search-engine">利用搜索引擎等工具</h3>
+              <h3 id="use-search-engine">使用搜索引擎</h3>
               <p>尽管近几年大语言模型发展迅速，但是搜索引擎在解决问题方面仍然不可或缺。</p>
               <h4 id="choose-search-engine">选择搜索引擎</h4>
-              <p>作为业界不成文的「共识」，对常用搜索引擎的排序是：谷歌 &gt; 必应国际版 &gt; 必应国内版 &gt; 百度。可以都试试，根据自己的实际情况选择。</p>
-              <p>以下主要介绍通用搜索引擎的信息。在特定场景下，以下方式可能会更加合理：</p>
+              <p>对于通用搜索引擎，业界不成文的「共识」是：谷歌 &gt; 必应国际版 &gt; 必应国内版 &gt; 百度。可以都尝试一遍再根据自己的实际情况选择。</p>
+              <p>在特定场景下，以下方式可能会更加合理：</p>
               <ul>
                 <li>使用包含网页搜索功能的大语言模型（例如 <a href="https://chat.deepseek.com">Deepseek 联网搜索</a>）直接询问</li>
                 <li>使用特定领域的搜索引擎，例如：
@@ -340,27 +363,28 @@ compilation terminated.
                   </ul>
                 </li>
               </ul>
-              <h4 id="search-docs">搜索相关项目的手册/FAQ 等信息</h4>
-              <p>在某些场景下，直接搜索对应项目的帮助文档、手册、FAQ 等是比搜索报错信息更好的选择。例如，在使用 Python 的 <code class="language-plaintext highlighter-rouge">argparse</code> 模块遇到问题时，最好先查阅手册寻找答案：</p>
+              <h4 id="search-docs">查阅项目文档</h4>
+              <p>在某些场景下，搜索对应项目的帮助文档、手册、FAQ 等是比直接搜索报错信息更好的选择。例如，在使用 Python 的 <code class="language-plaintext highlighter-rouge">argparse</code> 模块遇到问题时，最好先查阅手册寻找答案：</p>
               <div class="language-text highlighter-rouge">
                 <div class="highlight">
                   <pre class="highlight"><code>python argparse
 </code></pre>
                 </div>
               </div>
-              <p>在搜索这类关键字时，合格的搜索引擎应该能将相关手册等关键信息优先显示。当然，日积月累，你也会对这些手册的位置有一个大致的了解。作为参考，以下列举了一些手册与文档信息：</p>
+              <p>在搜索这类关键字时，合格的搜索引擎应该能优先显示相关手册等关键信息。作为参考，以下是一些常用手册与文档信息：</p>
               <ul>
                 <li>Linux 命令：<code class="language-plaintext highlighter-rouge">man 需要查询的命令</code></li>
                 <li>Arch Linux：<a href="https://wiki.archlinux.org/">Arch Wiki</a></li>
                 <li>Python：<a href="https://docs.python.org/3/">Python 官方文档</a></li>
                 <li>C 与 C++：<a href="https://en.cppreference.com/w/">cppreference</a></li>
               </ul>
+              <p>当然，日积月累，你也会对手册的位置有所了解。</p>
               <h4 id="use-proper-query">使用合适的查询</h4>
               <p>最简单的几个技巧：</p>
               <ul>
-                <li>去掉「为什么」之类的副词与「的」等助词（尽管现代搜索引擎通常会忽略这些内容）</li>
+                <li>去掉「为什么」之类的副词与「的」等助词，搜索信息密度最高的名词和动词（虽然现代搜索引擎通常会帮你优化）</li>
                 <li>使用空格分割关键词</li>
-                <li>去掉不具备普遍性的内容：例如用户名、文件名、变量名等不会影响问题的信息</li>
+                <li>去掉不具备普遍性的内容，例如用户名、文件名、变量名等不影响问题的信息</li>
                 <li>
                   <p>善于使用搜索引擎的特殊功能。大部分搜索引擎都支持下述功能：</p>
                   <ul>
@@ -374,7 +398,7 @@ compilation terminated.
                   </ul>
                 </li>
                 <li>当工具出现错误代码时，直接搜索 <code class="language-plaintext highlighter-rouge">工具名称 错误代码</code> 比搜索错误提示更有效。</li>
-                <li>使用英语：支持多语言的工具（比如上文的 <code class="language-plaintext highlighter-rouge">apt</code>）在互联网上往往是英文内容比中文多。如果中文结果无法解决问题，不妨试试将工具语言切换回英文。</li>
+                <li>使用英语：支持多语言的工具（比如上文的 <code class="language-plaintext highlighter-rouge">apt</code>）往往有更多的英文结果。如果中文搜索无法解决问题，不妨试试将工具语言切换回英文。</li>
               </ul>
               <p>以这个问题为例：</p>
               <div class="language-text highlighter-rouge">
@@ -388,34 +412,34 @@ W: Problem unlinking the file /var/cache/apt/srcpkgcache.bin - RemoveCaches (13:
 </code></pre>
                 </div>
               </div>
-              <p>首先判断最重要的信息，进行调整：</p>
+              <p>首先判断并保留最重要的信息：</p>
               <div class="language-text highlighter-rouge">
                 <div class="highlight">
                   <pre class="highlight"><code>为什么我运行 apt update 会输出这个：E: Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)
 </code></pre>
                 </div>
               </div>
-              <p>接下来可以用上述简单策略来处理查询：</p>
+              <p>接着用上述策略来简化查询：</p>
               <div class="language-text highlighter-rouge">
                 <div class="highlight">
                   <pre class="highlight"><code>apt update 输出 E: Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)
 </code></pre>
                 </div>
               </div>
-              <p>（连「输出」这两个字甚至也可以不要）</p>
-              <p>直接贴到任何搜索引擎，无论是必应、谷歌还是百度，都能找到对应的解决方法。</p>
+              <p>（甚至「输出」这两个字也可以去掉）</p>
+              <p>最后直接贴到任何搜索引擎，无论是必应、谷歌还是百度，都能返回对应的解决方法。</p>
               <h4 id="filter-results">筛选结果</h4>
               <p>部分搜索引擎会在结果中返回广告，可以在浏览器中安装去广告扩展（例如 uBlock Origin）来屏蔽这些内容。</p>
-              <p>有一小部分网站（大多出于商业目的）会不加选择地收集垃圾内容，甚至想方设法欺骗搜索引擎，使其误判为有效信息。这些网站被称为「内容农场」。这些网站提供的信息对解决问题没什么帮助。有关内容农场的特征等信息，可以阅读这篇「少数派」的文章：<a href="https://sspai.com/post/69407">清理「内容农场」，还你清爽的 Google 中文搜索体验</a>。</p>
-              <p>对于搜索得到的结果，目前普遍不成文的认识是：一些网站的内容质量（例如 CSDN）相对更低，中文结果的平均质量也不如英文（很遗憾，这也是更推荐使用英文搜索的原因之一）。在读者逐渐熟练使用搜索引擎后，应该能对不同质量的结果有一个更清晰的判断。</p>
-              <h3 id="other-info">其他信息</h3>
-              <p>自 2023 年初大语言模型（GPT 等）逐渐普及以来，询问大语言模型已成为解决问题的有效途径，而且比真人更有耐心。不过这同样需要技巧，请参考本文「<a href="#llm">附录：如何正确向大语言模型提问</a>」。</p>
+              <p>有一小部分网站（大多出于商业目的）会不加选择地收集垃圾内容，甚至想方设法欺骗搜索引擎，使其误判为有效信息。这些网站被称为「内容农场」。这些网站提供的信息对解决问题没什么帮助。如果想了解内容农场的特征等信息，可以阅读这篇「少数派」的文章：<a href="https://sspai.com/post/69407">清理「内容农场」，还你清爽的 Google 中文搜索体验</a>。</p>
+              <p>目前对搜索结果不成文但普遍的认识是：一些网站（例如 CSDN）的内容质量相对更低，中文结果的平均质量也不如英文（很遗憾，这也是更推荐使用英文搜索的原因之一）。在你逐渐熟练使用搜索引擎后，应该能对不同质量的结果有一个更清晰的判断。</p>
+              <h3 id="ask-llm">询问大语言模型</h3>
+              <p>自 2023 年初大语言模型（GPT 等）逐渐普及以来，向大语言模型求助已成为解决问题的一种途径。与真人交流相比，你通常可以更反复、细致地追问。不过这同样需要技巧，请参考本文「<a href="#llm">附录：如何正确向大语言模型提问</a>」。</p>
               <h2 id="when-asking">提问时的注意事项</h2>
-              <h3 id="avoid-xy">避免 X-Y 型问题</h3>
-              <p>X-Y 型问题指代这类情况：</p>
+              <h3 id="avoid-xy">提出原问题</h3>
+              <p>提问时经常出现的一种情况是只询问自己设想的方案，却没有说明原始目标。例如：</p>
               <ol>
                 <li>你遇到了 X 问题，你认为用 Y 方法可以解决 X 问题</li>
-                <li>但是你遇到了阻碍，因此向别人提问关于 Y 的问题，而不告诉其他人最原本的 X 问题</li>
+                <li>但是你遇到了阻碍，因此向别人提问关于 Y 的问题，而不告诉其他人最初的 X 问题</li>
                 <li>如果用 Y 方法解决 X 问题的思路本身便是错误的，那么这样的提问也是无效的</li>
               </ol>
               <p>以下摘录了陈皓先生在他的博客中介绍 X-Y 型问题（<a href="https://web.archive.org/web/20240309145853/https://coolshell.cn/articles/10804.html">Web Archive</a>）时的例子：</p>
@@ -453,11 +477,11 @@ A2: 用 rsync 啊，你妹！
                     </div>
     </div>
                 </li>
-                <li>
-                  <p>我们补充另一个真实的例子（经过大幅简化）：</p>
-                  <div class="language-text highlighter-rouge">
-                    <div class="highlight">
-                      <pre class="highlight"><code>Q: 有没有人在导入的时候遇到 TypeError: Can't create an SSLContext object without an ssl module? 的报错？
+              </ul>
+              <p>另一个我们遇到的真实例子（已大幅简化）：</p>
+              <div class="language-text highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>Q: 有没有人在导入的时候遇到 TypeError: Can't create an SSLContext object without an ssl module? 的报错？
 A1: 你编译的时候没加 ssl 模块吗
 Q: 加了，我看了 csdn 上的教程 [截图]
 A2: 你这教程怎么把源代码目录移动到 /usr/lib 下面啊，换个教程吧
@@ -468,12 +492,11 @@ Q: 不是，我直接跑 python 出来的是 python2
 A2: 装 python-is-python3
 A3: 20.04 源里面也有 3.9，可以直接 install python3.9
 </code></pre>
-                    </div>
-    </div>
-                </li>
-              </ul>
-              <h3 id="ask-directly">直接提问，避免使用「在吗」/「有人吗」</h3>
-              <p>在私聊中，直接提问比先只问「在吗」更高效。考虑这个虚构的例子：</p>
+                </div>
+              </div>
+              <h3 id="ask-directly">直接提问</h3>
+              <p>不要先问「在吗」「有人吗」，也不要问「有没有人懂 XX」，直接把问题说出来即可。</p>
+              <p>在私聊中，直接提问比先问一句「在吗」高效得多。考虑这个虚构的例子：</p>
               <div class="language-text highlighter-rouge">
                 <div class="highlight">
                   <pre class="highlight"><code>A (8:00): 在吗？
@@ -491,22 +514,21 @@ B (13:00): 这样，你应该 ZZZZZZZ
 </code></pre>
                 </div>
               </div>
-              <p>群聊中也是如此，只是出于礼貌的话，额外“握手”一次反而显得浪费时间。</p>
-              <h3 id="justask">避免「有没有人懂」</h3>
-              <p>不要在群聊里面这样问：</p>
+              <p>群聊中也是如此，出于礼貌额外「握手」一次反而浪费时间。</p>
+              <p>在群聊里先问领域，也是类似的情况：</p>
               <div class="language-text highlighter-rouge">
                 <div class="highlight">
                   <pre class="highlight"><code>有没有人懂 C++？有个问题想问问
 </code></pre>
                 </div>
               </div>
-              <p>原因如下：</p>
+              <p>这样问的问题在于：</p>
               <ul>
                 <li>C++ 是非常复杂的，没有多少人真的懂/精通 C++。对很多别的领域也是类似的。</li>
                 <li>就算真的有人懂，懂的人很可能也不想在群里显摆自己。不太懂的人就更没有兴趣看你的问题了。</li>
-                <li>这类问题往往属于常识范畴，不精通相关领域的人也可以回答。</li>
+                <li>具体问题未必需要精通整个领域才能回答，这样问会降低获得解答的可能性。</li>
               </ul>
-              <p>一个改善后相对好一些的提问是：</p>
+              <p>一个相对好一些的问题是：</p>
               <div class="language-text highlighter-rouge">
                 <div class="highlight">
                   <pre class="highlight"><code>我遇到了一个问题，我的 C++ 程序需要运行一个 CUDA kernel，我要怎么写 cmake 来编译这个 kernel 并且让我的程序调用？
@@ -514,19 +536,13 @@ B (13:00): 这样，你应该 ZZZZZZZ
                 </div>
               </div>
               <p>相关论述可参考 <a href="https://fars.ee/~justask.html">不要问有没有人，请直接问</a>。</p>
-              <h3 id="mre">尽可能提供「最小可复现样例」</h3>
-              <p><strong>最小可复现样例</strong>（Minimal reproducible example，MRE）是一段<strong>完整、精简</strong>的程序代码或者执行流程，<strong>不包含与错误无关的部分</strong>。这通常只包含出现问题的核心几行代码、命令、以及最小依赖项。你可以复制当前的工程，通过二分法逐步删除无关部分，并保留原有错误来制作 MRE。和上面自行阅读错误信息的过程类似，你自己可能就会发现其中的问题。</p>
-              <p>不妨换个角度思考：当提问者只提供一段冗长代码，包含大量第三方库和自定义结构体、类方法时，缺少这些关键信息会让回答者无从下手。提问者若直接提供全部代码，恐怕很少有人愿意帮忙调试几百行的程序，更不用说配置复杂的运行环境了。</p>
-              <blockquote>
-                <p>MRE 的提供能平衡提问者和回答者的时间，虽然需要提问者花费更多准备时间和一定技巧，但有助于准确定位问题。</p>
-              </blockquote>
-              <h3 id="provide-necessary-info">提供必要的问题描述与相关信息</h3>
+              <h3 id="provide-necessary-info">提供必要的信息</h3>
               <p>需要说明的内容包括：</p>
               <ul>
                 <li>具体问题是什么</li>
                 <li>引发问题的命令/代码</li>
-                <li>报错信息（注：如上文所述，通常只有前几条报错信息是关键的，建议先从前面的有效报错开始提问）</li>
-                <li>自己尝试过用什么方法解决</li>
+                <li>报错信息（如上文所述，通常只有前几条报错信息较为关键，可以从这些信息开始提问）</li>
+                <li>尝试过的解决方法</li>
                 <li>系统与软件的版本信息（例如，如果你想在一个主要讨论 Linux 的群里面问 Windows 下的问题，务必把这一点说清楚）</li>
               </ul>
               <p>这是一个在 Linux 讨论群里的反例：</p>
@@ -549,7 +565,7 @@ A2: 要用 curl.exe 调用才行
                 </div>
               </div>
               <p>如果提问者在一开始就说清楚自己在 Windows 下，那么这个问题可能会更快得到解决。</p>
-              <p>报告错误时请直接提供原始输出，不要自行翻译。建议在开发者的语言（通常是英语）环境下复现错误，获得更准确的提示信息，帮助其他人定位你的问题。建议将错误信息复制后发送，而不是自己手动对着敲一遍；如果原文内容过长，可以参考下一节内容来使用 Pastebin 等工具分享完整文本。</p>
+              <p>报告错误时请直接提供原始输出，不要自行翻译。建议在开发者的语言（通常是英语）环境下复现错误，这样提示信息更准确，也方便其他人定位问题；最好直接复制错误信息，而不是对着日志手动敲一遍；如果内容太长，可以参考<a href="#share-info">用合适的方式分享信息</a>。</p>
               <p>在 Linux 系统中，可以使用以下方法设置程序运行的语言：</p>
               <div class="language-shell highlighter-rouge">
                 <div class="highlight">
@@ -560,64 +576,170 @@ A2: 要用 curl.exe 调用才行
 </code></pre>
                 </div>
               </div>
-              <h3 id="use-pastebin">使用代码片段服务分享问题相关的代码与报错</h3>
-              <p>代码和报错信息如果太长，直接截图或贴到群聊里可能不太合适：</p>
-              <ul>
-                <li>截图里的代码不方便他人直接使用，既难以 OCR 识别，也没人愿意手动转录。</li>
-                <li>较长的信息直接发送会影响他人阅读前面内容，也不够美观（尤其在不支持代码块的 QQ、微信等聊天软件中）</li>
-                <li>某些聊天软件会把特殊字符自动转换成表情符号，使得文本难以阅读</li>
-              </ul>
-              <p>虽然聊天等场景支持上传文件，但在某些场合（如群聊）直接上传文件可能不太合适，管理员通常不希望群共享里堆满杂乱代码。部分网站提供了存储长文本的功能（注意一些网站可能无法直接访问）：</p>
-              <ul>
-                <li>GitHub 对应 <a href="https://gist.github.com/">GitHub Gist</a></li>
-                <li>GitLab 对应其 <a href="https://gitlab.com/dashboard/snippets">Snippets</a> 功能</li>
-                <li>独立的 Pastebin 类服务，例如 <a href="https://paste.ubuntu.com/">Ubuntu pastebin</a>，<a href="http://Pastebin.com">Pastebin.com</a> 等</li>
-              </ul>
-              <p>科大校内的同学可以使用校内 GitLab（<a href="https://git.ustc.edu.cn/">超算中心</a> 或 <a href="https://git.lug.ustc.edu.cn/">LUG</a>）的 Snippets。</p>
-              <p>一个反例是：</p>
+              <p>再看一个信息不足的反例：</p>
               <div class="language-text highlighter-rouge">
                 <div class="highlight">
                   <pre class="highlight"><code>我的 vulkan 程序在 wayland 下没有显示出来，托盘那里有程序的图标，怎么回事？
 </code></pre>
                 </div>
               </div>
-              <p>这个问题的反例原因在于：</p>
+              <p>这个例子的问题在于：</p>
               <ul>
                 <li>没有提供任何代码，要知道 Vulkan 画个三角形都要写一千多行代码</li>
                 <li>环境信息不够详细：比如 Wayland 主要依赖混成器实现，建议说明具体使用的桌面环境，如 KDE；Vulkan 作为图形接口较为宽泛，最好补充相关图形库信息，例如是否使用了 GLFW 绘制窗口。</li>
               </ul>
-              <h3 id="use-screenshots">避免拍屏</h3>
+              <h4 id="mre">提供「最小可复现样例」</h4>
+              <p><strong>最小可复现样例</strong>（Minimal reproducible example，MRE）是一段<strong>完整、精简</strong>的程序代码或者执行流程，<strong>不包含与错误无关的部分</strong>。这通常只包含出现问题的核心几行代码、命令、以及最小依赖项。你可以复制当前的工程，通过二分法逐步删除无关部分，并保留原有错误来制作 MRE。和上面自行阅读错误信息的过程类似，你自己可能就会发现其中的问题。</p>
+              <p>不妨换个角度思考：如果提问者提供的代码依赖第三方库、自定义结构体或类方法，却没有提供依赖信息和相关定义，回答者就很难复现问题。此外，哪怕有全部代码，恐怕也很少有人愿意帮忙调试几百行的程序，更不用说配置复杂的运行环境了。</p>
+              <blockquote>
+                <p>提供 MRE 能平衡提问者和回答者的时间。制作 MRE 虽然需要一些技巧和时间，但有助于准确定位问题。</p>
+              </blockquote>
+              <h3 id="share-info">用合适的方式分享信息</h3>
+              <p>代码和报错信息如果太长，直接截图或者贴到群聊里可能不太合适：</p>
+              <ul>
+                <li>截图既难以用 OCR 识别，也没人愿意手动转录，不方便他人直接使用</li>
+                <li>直接发送较长的信息会影响他人浏览之前的内容，也不便阅读（尤其在不支持代码块的 QQ、微信等聊天软件中）</li>
+                <li>某些聊天软件会把特殊字符自动转换成表情符号，使得文本更难以阅读</li>
+              </ul>
+              <h4 id="use-pastebin">使用在线剪贴板</h4>
+              <p>虽然聊天软件一般都支持上传文件，但在某些场合（如群聊）直接上传文件可能不太合适，管理员通常不希望群共享里堆满杂乱代码。此时可以使用在线剪贴板（也叫 Pastebin，一些网站可能无法直接访问）：</p>
+              <ul>
+                <li>GitHub 对应 <a href="https://gist.github.com/">GitHub Gist</a></li>
+                <li>GitLab 对应其 <a href="https://gitlab.com/dashboard/snippets">Snippets</a> 功能</li>
+                <li>独立的 Pastebin 类服务，例如 <s>[Ubuntu pastebin](https://paste.ubuntu.com/)</s>（已结束服务），<a href="https://pastebin.com/">Pastebin.com</a> 等</li>
+              </ul>
+              <p>科大校内的同学可以使用校内 <a href="https://git.ustc.edu.cn/">GitLab</a> 的 Snippets。</p>
+              <h4 id="use-screenshots">避免拍屏</h4>
               <p>除非实在无法截图（例如系统启动阶段），否则不要拍屏，因为：</p>
               <ul>
-                <li>不美观</li>
                 <li>因为<a href="https://en.wikipedia.org/wiki/Moir%C3%A9_pattern">莫尔纹</a>现象，字/图像可能会拍不清楚</li>
                 <li>其他人可能得歪着头才能看清内容</li>
                 <li>不利于其他人搜索类似问题</li>
+                <li>不美观</li>
               </ul>
-              <h2 id="if-no-answer">无人应答</h2>
-              <p>没人回答问题不等于被无视。在群聊中，认真提问却无人回应，往往只是因为看到问题的人都不知道答案罢了。也要注意，群聊或论坛里的陌生人并没有义务回答你的问题。</p>
-              <p>可以考虑从以下一些方式解决问题：</p>
+              <h2 id="if-no-answer">其他咨询方式</h2>
+              <p>没人回答不等于问题被无视。在群聊中认真提问却无人回应，往往只是因为看到问题的人都不知道答案罢了。其次，群聊或论坛里的陌生人并没有义务回答你的问题。</p>
+              <p>可以尝试通过以下方式求助：</p>
               <ul>
                 <li>线下咨询。
                   <ul>
-                    <li>Tip: <a href="/wiki/lug/contact/#%E9%9D%A2%E5%AF%B9%E9%9D%A2%E4%BA%A4%E6%B5%81">LUG 在西区与高新区的活动室</a>，只要房间里有人就可以进来，来之前建议先在群里问一下</li>
+                    <li>见 <a href="/wiki/lug/contact/#%E9%9D%A2%E5%AF%B9%E9%9D%A2%E4%BA%A4%E6%B5%81">LUG 在西区与高新区的活动室</a>，来之前建议先在群里问一下，只要房间里有人就可以进</li>
                   </ul>
                 </li>
                 <li>向对应服务/软件的维护人员提交工单
                   <ul>
-                    <li>Tip: 科大网络信息中心报修系统 <a href="https://baoxiu.ustc.edu.cn/">https://baoxiu.ustc.edu.cn/</a></li>
+                    <li>见科大网络信息中心报修系统 <a href="https://baoxiu.ustc.edu.cn/">https://baoxiu.ustc.edu.cn/</a></li>
                   </ul>
                 </li>
               </ul>
+              <h2 id="for-answerers">附录：给回答者的建议</h2>
+              <p>有效的回答由提问者和回答者共同完成，问题没有得到解决也未必都是提问者的责任。我们见过不少讨论变成了单方面的嘲讽或者相互争吵，也见过回答者甩下一个「提问的智慧」的链接就草草了事。</p>
+              <p>提问者很多时候是新手，不确定哪些信息是重要的，也可能不熟悉相关的术语；回答者同样可能误解提问者的意思，或者把个人的经历与习惯当作普遍结论。当然，回答者<strong>不需要、也没有义务回答每个问题，在没有头绪的时候完全可以保持沉默</strong>。但如果决定参与讨论，那么不妨实际推进问题的解决，而不是去审判提问者有没有资格提问。</p>
+              <p>好的回答不一定能立刻解决问题：澄清目标、给出可靠的依据、指出下一步，并且尊重提问者的合理选择，就已经能显著降低解决问题的难度。</p>
+              <h3 id="respect-questioners">尊重提问者</h3>
+              <p>绝大部分提问者不是来找茬的，也不是故意来浪费其他人的时间的。他们可能因为缺乏经验漏掉一些重要的信息，或者提出一些看起来无厘头的需求。<strong>除非对方之前已经多次不提供足够信息、随意提问，否则请不要在一开始就假设对方的提问有问题</strong>；即使如此，也建议直接不再回答，或者明确指出缺少哪些信息，而不是做没有建设性的回复。</p>
+              <p>作为对照：</p>
+              <ul>
+                <li>
+                  <p>避免：「你连这个都不知道吗？」</p>
+                  <p>建议：「这里 A 和 B 可能会混淆，你用的是哪一种？」</p>
+                </li>
+                <li>
+                  <p>避免：「看你这个问法，你根本不懂什么叫 XX。」</p>
+                  <p>建议：「我们对 XX 的定义可能不同，你更关心的是 XXXXX 还是 YYYYY？」</p>
+                </li>
+              </ul>
+              <p><strong>应当避免的说法都在评价提问者本人，而不是在解决问题</strong>，这样只会让交流气氛更加紧张。如果不愿继续投入时间，直接礼貌退出讨论即可。</p>
+              <p>群聊里也常出现拿问题开玩笑的情况。熟人之间的玩笑不一定带有恶意，但在问题尚未解决时，多人接连玩梗，提问者收到的其实是「你的需求很可笑」这种极不友好的信息：</p>
+              <blockquote>
+                <p>Q: 怎样关闭某个桌面功能？</p>
+                <p>…………</p>
+                <p>A: 那建议卸载系统哦。</p>
+                <p>B: 卸载桌面也可以。</p>
+                <p>C: 干脆不要用图形界面。</p>
+              </blockquote>
+              <p><strong>请不要对提问者开这种玩笑。</strong></p>
+              <h3 id="friendly-to-goal">友好沟通、推进目标解决</h3>
+              <p>可以从三个方面理解一个问题：目标、已有方案，以及约束条件与偏好。这些信息起初往往并不明确，需要双方在交流中逐步澄清，排除不符合要求的方案。</p>
+              <p>询问提问者「为什么要做这件事」，可以发现潜在的 <a href="#avoid-xy">X-Y 型问题</a>。例如：</p>
+              <blockquote>
+                <p>Q: 我准备把某个 Linux 发行版作为工作环境，应该选择稳定版还是测试版？</p>
+                <p>A: 你主要需要用它完成什么工作？</p>
+                <p>Q: 我的工作依赖一款没有 Linux 版本的专业软件，本来准备通过兼容层运行。</p>
+              </blockquote>
+              <p>到这里，实际的问题就不再是单纯的「稳定版和测试版哪个更好」，而是在「可靠完成工作」的约束下比较两者；脱离这个背景继续讨论软件包新旧，就不太妥当了。</p>
+              <p>不过，问「为什么」也很容易滑向要求提问者「自证需求合理」，在提问者的偏好与你不同时尤其如此：</p>
+              <blockquote>
+                <p>Q: 选择文本时会自动进入剪贴板，请问怎样关闭？</p>
+                <p>A: 它造成了什么问题？</p>
+                <p>Q: 这不符合我的使用习惯，我只想关闭它。</p>
+                <p>A: 我觉得这个功能很方便。为什么要关闭？</p>
+              </blockquote>
+              <p>最后一句只是在质疑提问者的偏好：「某功能对某些人有用」并不能代替关闭它的方法。如果问题涉及提问者可能不了解的概念，比起在群里追问，或者要求对方读完一大篇 wiki 再来描述需求，给出链接加一句简单的说明通常更有效：</p>
+              <blockquote>
+                <p>A: 这里其实有「鼠标选区」和普通剪贴板两套机制，可以先看看 <a href="https://wiki.archlinux.org/title/Clipboard#Selections">https://wiki.archlinux.org/title/Clipboard#Selections</a>，你的意思是要关掉 PRIMARY 这个剪贴板，还是说选中的内容进入了 CLIPBOARD 这个剪贴板？</p>
+              </blockquote>
+              <div class="notice--info">
+                <p>许多文档类站点在点击标题，或者标题旁边的标记（一般称为 anchor）的时候，都会在浏览器显示的 URL 后添加类似 <code class="language-plaintext highlighter-rouge">#some-thing</code> 的内容，这被称为「片段标识符」（Fragment Identifier）。<strong>推荐在分享的 URL 中添加片段标识符，这样点击链接的人就能立刻跳到你希望他阅读的地方。</strong></p>
+                <p>此外，Firefox、Chrome 等浏览器也都支持复制指向当前选中的文本的链接的功能，会在 URL 后添加类似 <code class="language-plaintext highlighter-rouge">#:~:text=xxxx</code> 的内容，支持的浏览器可以直接跳转到你选中的内容。</p>
+              </div>
+              <p><strong>有用的回答需要让讨论向前推进。</strong> 一种常见的问题是只讨论个人经历，却不说明它和当前问题有什么关系，比如「这不是挺方便吗」「别搞了」「我用了很多年，你参考不了」。相比之下，这样的回答是有效的：</p>
+              <ul>
+                <li>解决方法是……</li>
+                <li>先看一下 XXX 的输出（来区分原因）</li>
+                <li>你的 XXX 软件版本是？（补充信息）</li>
+                <li>官方文档：……</li>
+                <li>可以试一下 XXX 来验证是否正确</li>
+                <li>如果 XXX 不可以的话，那么就试一下 YYY 替代方案</li>
+                <li>我不知道，但是可以去 XXX 问一下</li>
+              </ul>
+              <h3 id="check-your-assumptions">检查自己的误区</h3>
+              <p>回答者的经验既是优势，也可能是误区：<strong>把经验和推测当作事实</strong>，以及<strong>默认提问者能像自己一样处理后果</strong>。</p>
+              <p>第一种误区：</p>
+              <blockquote>
+                <p>A: Linux 肯定不支持你这个软件啊！</p>
+                <p>Q: 啊？wine 呢？</p>
+                <p>A: 别想了，肯定不支持。</p>
+                <p>Q: 我以为 wine 能跑呢。</p>
+                <p>A: 我有几年没试过了，不过我不抱希望。</p>
+              </blockquote>
+              <p>这里的问题在于没有<strong>区分「事实」、「经验」和「推测」</strong>。一种更好的回答：</p>
+              <blockquote>
+                <p>A: 这个软件没有官方 Linux 支持，wine 上面前几年我没跑成功。即使目前可以跑，我也不建议拿它来正式做工作，有可能会有数据问题。</p>
+              </blockquote>
+              <p>如果没有把握，退出讨论也是一种选择：承认自己不知道，通常比给出绝对结论更可靠。即使对答案没有把握，解释相关概念、指出需要确认的信息或者推荐合适的资料，都可能帮助提问者继续调查。</p>
+              <p>第二种误区常出现在讨论风险的时候。对提问者来说，重要的不是回答者有多少年资历，而是哪些问题可能发生、如何发现，以及发生之后需要怎么处理：</p>
+              <blockquote>
+                <p>避免：我用了很多年，这些问题我都能处理，你参考不了。</p>
+                <p>建议：我能接受使用测试版，是因为我能解决依赖冲突，也知道如何进入救援环境回退。如果你还不熟悉这些操作，可以先考虑：升级后一旦无法进入桌面或者用不了工作软件，你能否处理？</p>
+              </blockquote>
+              <p>提问者有时候会想做一些危险的事情，此时同样需要说清楚风险在哪里、怎样安全地验证（如果可以），以及回退的方案：</p>
+              <blockquote>
+                <p>避免：不支持。如果和同事做出来的东西不一样，出了问题别来找我们。</p>
+                <p>建议：即使能够通过兼容层启动，有些地方也可能存在兼容问题。如果需要正式交付，不建议在未经验证的情况下把它作为唯一环境。你可以保留原系统，先测试常用情况的导出结果是否正确，之后再决定哪些工作可以迁移。</p>
+              </blockquote>
+              <h3 id="no-copy-paste-llm-answer">不要直接复制粘贴大语言模型的回答</h3>
+              <p>大语言模型是非常方便的工具，很多时候也是回答问题的高手。不过这不等于在其他人提问时，回答者可以直接复制粘贴大语言模型的回答给对方，考虑以下几点原因：</p>
+              <ul>
+                <li>如果只是把提问者的问题复制、粘贴给大语言模型，然后再把模型的回答复制、粘贴给对方，那么对方为什么不亲自去问大语言模型呢？</li>
+                <li>大语言模型的回答很多时候比较冗长，并且风格很可能显得生硬（比如说被一些大语言模型滥用，经常被吐槽的「不是……而是……」），反而不便于阅读和理解。</li>
+                <li>回答者不做核验的话，辨别模型是否产生幻觉（提供错误回答）的责任就不合理地转移到了其他人身上。</li>
+              </ul>
+              <p>如果回答者核对确认了大语言模型的回答，并且明确标注来源，那么引用关键的一小部分一般来说是可以接受的，例如这样：</p>
+              <blockquote>
+                <p>我把你的问题问了 LLM，它说可能的原因是：XXXXXXXXX。我测试了对应的命令，看起来是可以使用的。</p>
+              </blockquote>
               <h2 id="llm">附录：如何正确向大语言模型提问</h2>
-              <h3 id="read-main-content-first">请先阅读正文内容，再阅读本部分</h3>
-              <p>对人类有效的提问策略，大多对大语言模型（LLM）也有效。</p>
+              <p>对人类有效的提问策略，大多对大语言模型（LLM）也有效，因此建议先阅读本文的正文部分，再阅读这一节。</p>
               <h3 id="provide-context">提供足够的上下文信息</h3>
-              <p>和向人类提问类似，提供足够的上下文信息可以更好帮助大语言模型理解问题，给出更好的回答。以刚才的例子为例。</p>
-              <p>原始例子：</p>
-              <div class="language-text highlighter-rouge">
-                <div class="highlight">
-                  <pre class="highlight"><code>Human: 怎么在命令行里面下载一个 url？
+              <p>大语言模型只能看到你给出的信息，因此上下文是否充分，很大程度上决定了回答的质量。</p>
+              <h4 id="chatbot-context">对话式大语言模型</h4>
+              <p>向对话式大语言模型提问时，和向人类提问类似，也需要提供足够的上下文，帮助它理解问题。下面沿用前文在命令行中下载文件的例子。</p>
+              <details>
+                <summary>查看原始提问与大语言模型的完整回答</summary>
+                <div class="language-text highlighter-rouge">
+                  <div class="highlight">
+                    <pre class="highlight"><code>Human: 怎么在命令行里面下载一个 url？
 LLM: 在命令行里下载一个 URL，常用的两个工具是 `curl` 和 `wget`。以下是它们的基本用法：
 
 ---
@@ -695,8 +817,9 @@ sudo apt install wget
 
 如果你告诉我你是用 Windows / Linux / macOS，我可以给你更具体的命令。
 </code></pre>
-                </div>
-              </div>
+                  </div>
+  </div>
+              </details>
               <p>改进后的例子：</p>
               <div class="language-text highlighter-rouge">
                 <div class="highlight">
@@ -716,19 +839,59 @@ Invoke-WebRequest -Uri "https://example.com/file.zip" -OutFile "file.zip"
                 <li>环境是 Windows PowerShell</li>
                 <li>希望 LLM 直接输出命令</li>
               </ul>
-              <p>得到的结果就更加简洁，也更加符合用户需求，毕竟很多 Windows 用户的电脑里可能根本没有 wget 或 curl。</p>
+              <p>得到的结果就更加简洁，也更加符合用户需求。</p>
+              <h4 id="agent-context">Agent</h4>
+              <p>从 2025 年开始，以编程 Agent 为代表的 Agent 软件开始广泛应用（包括但不限于 Claude Code、Codex 等）。Agent 与传统的对话式大语言模型不同，它可以利用工具调用在你的电脑上读取和修改文件、执行命令、搜索信息等。当 Agent 在出现问题的环境中运行时，很多时候它能够自行获取到需要的上下文信息，但是它无法直接获取的信息，仍需要你补充（例如修改的目标、无法直接获取的环境信息等等）。</p>
               <h3 id="ask-language">提问语言</h3>
-              <p>在大语言模型的训练语料中往往英文占比更高，因此用英文提问可能效果更好。国产的大语言模型可能可以缓解这个问题。</p>
-              <h3 id="avoid-long-dialog">避免超长的对话</h3>
-              <p>大语言模型的工作模式很简单：每次用户发送消息时，LLM 都会从头分析内容，直到用户本次信息结束才开始生成。这带来了两个问题：</p>
+              <p>在大语言模型发展的早期，使用英文提问相比中文可能会有更好的效果。不过，当前主流模型的中文能力已经足以处理大多数日常技术问题。因此目前的建议是：</p>
               <ul>
-                <li>对于超长的对话，每一次继续对话都会浪费不少的钱。假设当前的对话前，LLM 分析了一个很长的网页，花费了一块钱，那么基于这段对话作为背景，<strong>每次</strong>发送一条消息，都会再花至少一块钱。</li>
-                <li>相比于短文本，LLM 对长文本更容易产生「<strong>幻觉</strong>」，即输出与实际情况不相符的内容。</li>
+                <li>优先使用能够准确、流畅表达问题的语言。对本文读者来说一般是中文。</li>
+                <li>错误信息、命令、专有名词等应保留原文，不要自行翻译。</li>
+              </ul>
+              <p>根据模型分词器（Tokenizer）的不同，在表达相同的含义时，不同模型处理中文与英文的效率也不同。如果有降低使用成本的需求，需要自行测试。</p>
+              <h3 id="avoid-long-dialog">避免超长的对话</h3>
+              <p>大语言模型在对话时，先前的消息通常仍会作为上下文提供给模型。目前模型服务商不少都配置了<strong>缓存</strong>，在对话追加内容时，前面的内容如果命中了缓存，就能大幅减小计算量，节约成本（具体机制取决于使用的产品）；如果没有命中的话，先前的消息就需要重新计算。不过仍然需要注意：</p>
+              <ul>
+                <li>大语言模型的上下文长度是有限制的。当内容量接近上下文长度上限时，服务可能停止接受新消息、丢弃较早的内容，或压缩已有内容后继续对话，具体取决于实现。如果重要的内容在这个过程中丢失，模型的表现可能会受到很大的影响。</li>
+                <li>相比于短文本，LLM 对长文本更容易产生「<strong>幻觉</strong>」，即输出与实际情况不相符的内容。特别是在上下文中出现无关、过时、或者相互矛盾的信息时，这种现象会更加严重。</li>
               </ul>
               <p>如果发现 LLM 工作异常，可以重启会话。重新开始后，更应该调整提问的策略。</p>
+              <h3 id="verify-answer">核验回答</h3>
+              <p>由于幻觉问题的存在，大语言模型可能会以自信的语气给出详细但错误的回答。如果不了解对应的领域，而贸然使用 LLM 的回答，就可能轻则浪费时间，重则带来严重的麻烦。对新手来说，我们有一些建议：</p>
+              <ul>
+                <li>根据环境的不同，LLM 可能无法访问互联网、了解最新信息。在提问前需要先确认。</li>
+                <li>在提问时，明确要求 LLM 提供可以用于核验回答的来源信息。</li>
+                <li>对代码类问题，可以根据 LLM 的建议制作 <a href="#mre">MRE</a>，来验证结论的可靠性。</li>
+                <li>对于可能导致数据丢失、设备损坏甚至人身伤害的操作，务必不要将 LLM 的回答作为唯一参考。</li>
+              </ul>
+              <h3 id="llm-privacy">隐私问题</h3>
+              <p>使用大语言模型，特别是 Agent 的时候，如果正在处理非公开的信息，那么就需要尤其注意隐私问题。不同的大语言模型服务商有不同的隐私策略，在一些情况下可能会留存用户提供的信息用于训练新的模型，或者改进产品。你大概不会把自己的秘密告诉陌生人，但是在向大语言模型提问的时候，可能会不知不觉泄露相关的信息。因此，在提问的时候需要注意：</p>
+              <ul>
+                <li>使用大语言模型前，确认服务商的隐私策略、服务条款等内容。</li>
+                <li>谨慎使用「中转站」类大模型服务，此类服务商可能会存储对话数据并出售给其他人。</li>
+                <li>不要直接向模型提供密码、Cookie、私钥等敏感数据。</li>
+                <li>可能包含个人信息的日志，以及未公开的代码等在提问时需要小心处理。</li>
+                <li>在网页端删除对话不代表对应的信息就从服务商的服务器上立刻删除了。</li>
+              </ul>
+              <p>如果对隐私问题极度敏感，那么可能必须要本地自建大模型服务，使用完全本地运行的工具处理信息。相关内容超出了本文的范畴。</p>
+              <h3 id="llm-command-security">小心执行大语言模型生成的命令</h3>
+              <p>大语言模型很多时候能给出可以运行的命令，并且看起来能够解决问题。但是这些命令不一定是安全的，也不一定是最佳的选择。例如在<a href="#chatbot-context">上文</a>的例子里面，LLM 提供了跳过证书检查的命令：</p>
+              <div class="language-text highlighter-rouge">
+                <div class="highlight">
+                  <pre class="highlight"><code>如果是需要跳过 SSL 检查的网站，可以加上 `-k`：
+
+```bash
+curl -k -O https://example.com/filename.zip
+```
+</code></pre>
+                </div>
+              </div>
+              <p>但是这是不恰当的——用户的提问中并不包含 SSL 检查失败的场景，并且 LLM 也完全没有说明对应的风险（恶意的中间人可以将下载下来的文件替换为自己的）。尽管这条命令确实能跑，而且「大部分时候」都能用，但是能用不代表是正确的选择。</p>
+              <p>在一些更恶劣的情况下，执行 LLM 的命令会导致数据丢失。例如在<a href="https://www.zhihu.com/question/1974854700256944776">这个知乎问题中</a>，LLM 生成的命令就意外删除了 800G 的数据。</p>
+              <p>因此，在执行 LLM 的命令之前，需要理解命令实际的功能。对 Agent 来说，不同 Agent 软件的隔离、命令批准等机制不同，即使命令没有出现批准提示，也不代表对应的命令绝对安全。在使用 Agent 前，需要确认 Agent 下 LLM 能够访问的数据范围，并在使用时检查其实际的修改操作，做到心中有数。</p>
             </section>
             <footer class="page__meta">
-              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2025-04-17">2025 年 4 月 17 日</time></p>
+              <p class="page__date"><strong><i class="fad fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2026-09-12">2026 年 9 月 12 日</time></p>
             </footer>
             <nav class="pagination" aria-label="Post pagination">
               <a href="/wiki/doc/general-faq/" class="pagination--pager" title="常见问题">上一页</a>
