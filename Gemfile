@@ -28,7 +28,7 @@ group :jekyll_plugins do
   gem 'jekyll-data'
   gem 'jekyll-environment-variables'
   gem 'jekyll-tidy'
-  gem 'jekyll-last-modified', '>= 1.0.3'
+  gem 'jekyll-last-modified', '>= 1.0.5'
   gem 'jekyll-assets'
   gem 'jekyll-archives', '>= 2.2.1'
   gem 'jekyll-paginate-v2', '>= 3.0.0'
