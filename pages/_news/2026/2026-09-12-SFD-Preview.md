@@ -11,12 +11,7 @@ categories:
 tags: []
 ---
 
-<!-- Workaround for jekyll-titles-from-headings -->
-
-# 软件自由日
-
-<!-- prettier-ignore -->
-9 月的第三个周六，软件自由日如约而至！今年的软件自由日将于 **2026 年 9 月 19 日 14:00-17:30** 在**西区 3C101** 举行。活动亮点一览：
+九月的第三个周六，软件自由日如约而至！今年的软件自由日将于 **2026 年 9 月 19 日 14:00-17:30** 在**西区 3C101** 举行，包含由六位同学带来的精彩分享，以及闪电演讲环节。欢迎同学们参加！
 
 ## OSS in Minecraft
 
@@ -28,11 +23,11 @@ tags: []
 
 ## Mastodon 与 Matrix：当社交网络由社区运行
 
-Hanako 在 nightcord.de 运行着去中心化社交与聊天服务 Mastodon 和 Matrix/Synapse。她将结合实例运营经历，聊聊不同的联邦方式，看看自由软件如何让社区自己搭建服务、与其他社区互通。如果你已熟悉 Mastodon 或 Matrix，可以把这次分享当作一份真实的实例运营记录；如果还没接触过 Federation，Hanako 会从 nightcord.de 上实际发生的通信讲起。
+Hanako 在 [nightcord.de](https://nightcord.de) 运行着去中心化社交与聊天服务 Mastodon 和 Matrix/Synapse。她将结合实例运营经历，聊聊不同的联邦方式，看看自由软件如何让社区自己搭建服务、与其他社区互通。如果你已熟悉 Mastodon 或 Matrix，可以把这次分享当作一份真实的实例运营记录；如果还没接触过 Federation，Hanako 会从 nightcord.de 上实际发生的通信讲起。
 
 ## llm.ustc.edu.cn 的 AI Infra 实践
 
-去年年初，chat.ustc.edu.cn 只提供对话服务；如今，llm.ustc.edu.cn 为广大师生的 Agent 提供 1M 长上下文的前沿开源模型。本次分享中，深度参与平台建设的王永福同学将介绍平台的架构演进，讲述从部署开源项目，到修改推理引擎、补齐所需功能、向上游提交补丁的经历。分享也会聊到 GPU 算子的优化、并发死锁，以及有趣的自指问题。
+去年年初，[chat.ustc.edu.cn](https://chat.ustc.edu.cn) 只提供对话服务；如今，[llm.ustc.edu.cn](https://llm.ustc.edu.cn) 为广大师生的 Agent 提供 1M 长上下文的前沿开源模型。本次分享中，深度参与平台建设的王永福同学将介绍平台的架构演进，讲述从部署开源项目，到修改推理引擎、补齐所需功能、向上游提交补丁的经历。分享也会聊到 GPU 算子的优化、并发死锁，以及有趣的自指问题。
 
 ## 2026 年 9 月的 (Coding) Agent
 
@@ -40,6 +35,6 @@ Hanako 在 nightcord.de 运行着去中心化社交与聊天服务 Mastodon 和 
 
 ## 闪电演讲！
 
-闪电演讲一直是 SFD 活动的重要环节。欢迎现场报名，分享你与自由软件的故事！
+主题演讲之后的闪电演讲一直是 SFD 活动的重要环节。欢迎现场报名，分享你与自由软件的故事！
 
-**除了有趣的分享外，现场亦设有茶歇，欢迎同学们前来参加！**
+> 本次活动的二课正在审核中，稍后会在此处公布报名二维码。
