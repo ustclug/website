@@ -1,7 +1,7 @@
 ---
 title: "2026 软件自由日 (SFD) 活动预告"
 header:
-  image: /assets/images/news/2026-sfd-preview.png
+  image: https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2026.09.19_%E8%BD%AF%E4%BB%B6%E8%87%AA%E7%94%B1%E6%97%A5/photos/2026-sfd-preview.png
   image_description: "2026 软件自由日（Software Freedom Day）活动预告"
   overlay_image: false
 author: "kermanx"
