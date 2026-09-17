@@ -37,4 +37,8 @@ Hanako 在 [nightcord.de](https://nightcord.de) 运行着去中心化社交与�
 
 主题演讲之后的闪电演讲一直是 SFD 活动的重要环节。欢迎现场报名，分享你与自由软件的故事！
 
-> 本次活动的二课正在审核中，稍后会在此处公布报名二维码。
+## 活动信息
+
+- **时间**：2026 年 9 月 19 日 14:00-17:30
+- **地点**：西区 3C101
+- **二课报名二维码**：![二课报名二维码](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2026.09.19_%E8%BD%AF%E4%BB%B6%E8%87%AA%E7%94%B1%E6%97%A5/photos/2026-sfd-registration.png){:width="110" style="display: inline-block; margin: 0; vertical-align: top;"}
