@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://lug.ustc.edu.cn/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lug.ustc.edu.cn/" rel="alternate" type="text/html" /><updated>2026-09-14T21:58:29+08:00</updated><id>https://lug.ustc.edu.cn/feed.xml</id><title type="html">LUG @ USTC</title><subtitle>中国科学技术大学 Linux 用户协会</subtitle><author><name>USTCLUG</name></author><entry><title type="html">2026 软件自由日 (SFD) 活动预告</title><link href="https://lug.ustc.edu.cn/news/2026/09/SFD-Preview/" rel="alternate" type="text/html" title="2026 软件自由日 (SFD) 活动预告" /><published>2026-09-12T17:30:00+08:00</published><updated>2026-09-14T20:34:58+08:00</updated><id>https://lug.ustc.edu.cn/news/2026/09/SFD-Preview</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2026/09/SFD-Preview/"><![CDATA[<p>九月的第三个周六，软件自由日如约而至！今年的软件自由日将于 <strong>2026 年 9 月 19 日 14:00-17:30</strong> 在<strong>西区 3C101</strong> 举行，包含由六位同学带来的精彩分享，以及闪电演讲环节。欢迎同学们参加！</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://lug.ustc.edu.cn/feed.xml" rel="self" type="application/atom+xml" /><link href="https://lug.ustc.edu.cn/" rel="alternate" type="text/html" /><updated>2026-09-17T15:29:47+08:00</updated><id>https://lug.ustc.edu.cn/feed.xml</id><title type="html">LUG @ USTC</title><subtitle>中国科学技术大学 Linux 用户协会</subtitle><author><name>USTCLUG</name></author><entry><title type="html">2026 软件自由日 (SFD) 活动预告</title><link href="https://lug.ustc.edu.cn/news/2026/09/SFD-Preview/" rel="alternate" type="text/html" title="2026 软件自由日 (SFD) 活动预告" /><published>2026-09-12T17:30:00+08:00</published><updated>2026-09-17T15:28:54+08:00</updated><id>https://lug.ustc.edu.cn/news/2026/09/SFD-Preview</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2026/09/SFD-Preview/"><![CDATA[<p>九月的第三个周六，软件自由日如约而至！今年的软件自由日将于 <strong>2026 年 9 月 19 日 14:00-17:30</strong> 在<strong>西区 3C101</strong> 举行，包含由六位同学带来的精彩分享，以及闪电演讲环节。欢迎同学们参加！</p>
       <h2 id="oss-in-minecraft">OSS in Minecraft</h2>
       <p>十七年来，Minecraft 的生命力离不开背后的自由软件生态。从去年在校园建起基于 Fabric 的服务器，到今年搭建独立的材质与登录平台，来自 USTC Minecraft 的 Lylighte/李沅达 将分享这个全球流行的游戏如何让十年老玩家找到新事情做，让一群普通玩家开始搭服务器、写代码、做开源、维护社区。</p>
       <h2 id="linux-桌面上的-hdr历史与现状">Linux 桌面上的 HDR：历史与现状</h2>
@@ -11,9 +11,12 @@
       <p>在这个大模型发展中的时期，时间的速度比以往快三到五倍。Kimi Code 和 DeepSeek Harness 的 _Kerman 想和你分享一些见闻，以及在各种 Agent 项目层出不穷的时刻，什么可能是有价值的？_Kerman 也没有答案，欢迎现场提问交流。</p>
       <h2 id="闪电演讲">闪电演讲！</h2>
       <p>主题演讲之后的闪电演讲一直是 SFD 活动的重要环节。欢迎现场报名，分享你与自由软件的故事！</p>
-      <blockquote>
-        <p>本次活动的二课正在审核中，稍后会在此处公布报名二维码。</p>
-      </blockquote>
+      <h2 id="活动信息">活动信息</h2>
+      <ul>
+        <li><strong>时间</strong>：2026 年 9 月 19 日 14:00-17:30</li>
+        <li><strong>地点</strong>：西区 3C101</li>
+        <li><strong>二课报名二维码</strong>：<img src="https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2026.09.19_%E8%BD%AF%E4%BB%B6%E8%87%AA%E7%94%B1%E6%97%A5/photos/2026-sfd-registration.png" alt="二课报名二维码" width="110" style="display: inline-block; margin: 0; vertical-align: top;" /></li>
+      </ul>
       ]]></content><author><name>_Kerman</name></author><category term="LUG 活动" /><summary type="html"><![CDATA[九月的第三个周六，软件自由日如约而至！今年的软件自由日将于 2026 年 9 月 19 日 14:00-17:30 在西区 3C101 举行，包含由六位同学带来的精彩分享，以及闪电演讲环节。欢迎同学们参加！]]></summary></entry><entry><title type="html">2026 软件自由日 (SFD) 讲座征集</title><link href="https://lug.ustc.edu.cn/news/2026/07/SFD-Prep/" rel="alternate" type="text/html" title="2026 软件自由日 (SFD) 讲座征集" /><published>2026-07-11T11:00:00+08:00</published><updated>2026-09-14T21:57:25+08:00</updated><id>https://lug.ustc.edu.cn/news/2026/07/SFD-Prep</id><content type="html" xml:base="https://lug.ustc.edu.cn/news/2026/07/SFD-Prep/"><![CDATA[<p><a href="https://en.wikipedia.org/wiki/Software_Freedom_Day">软件自由日</a>（Software Freedom Day，SFD）是在 Digital Freedom Foundation 的主办下，由自由/开源软件爱好者自发筹集组织非营利性活动，旨在为自由/开源软件爱好者提供一个信息交流平台、联合各社区举办各种自由/开源软件活动。</p>
     <p>作为合肥地区最大的 Linux 用户组织，中国科大 Linux 用户协会致力于通过 SFD 普及软件自由思想，凝聚自由软件社区，将优秀的自由软件介绍给更多开源社区的成员，最大限度帮助自由软件作者实现服务于开源社群的价值。</p>
     <p>今年的软件自由日活动预计于 2026 年 9 月 19 日（九月第三个星期六）于中国科学技术大学（合肥）举行，<strong>现面向校内外所有社区成员公开征集软件自由日讲座或其他与主题有关的活动</strong>，有意愿的社区成员可尽快联系我们。</p>
