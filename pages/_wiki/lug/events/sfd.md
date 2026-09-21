@@ -13,6 +13,24 @@
 
 ## 活动记录
 
+### 2026 年 SFD
+
+2026 年 SFD 于 2026 年 9 月 19 日举办
+
+**时间：2026 年 9 月 19 日（周六）下午 2:00**
+
+**地点：中国科大西区 3C101**
+
+**回放（剪辑版，不含 \_Kerman 的分享）：[LUG FTP](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2026.09.19_%E8%BD%AF%E4%BB%B6%E8%87%AA%E7%94%B1%E6%97%A5/2026-09-19_%E8%BD%AF%E4%BB%B6%E8%87%AA%E7%94%B1%E6%97%A5_%E5%9B%9E%E6%94%BE_%E5%89%AA%E8%BE%91%E7%89%88.mp4)**
+
+| 讲者     | 主题                                         | 资料                                                                                                                                                   |
+| :------- | :------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Lylighte | 《OSS in Minecraft》                         | [Slides](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2026.09.19_%E8%BD%AF%E4%BB%B6%E8%87%AA%E7%94%B1%E6%97%A5/slides/oss-in-minecraft.pdf)          |
+| 吴维卿   | 《Linux 桌面上的 HDR：历史与现状》           | [Slides](https://rrtt217.github.io/HDR-Discussion/)                                                                                                    |
+| Hanako   | 《Mastodon 与 Matrix：当社交网络由社区运行》 | [Slides](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2026.09.19_%E8%BD%AF%E4%BB%B6%E8%87%AA%E7%94%B1%E6%97%A5/slides/nightcord-mastodon-matrix.pdf) |
+| 王永福   | 《llm.ustc.edu.cn 的 AI Infra 实践》         | [Slides](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2026.09.19_%E8%BD%AF%E4%BB%B6%E8%87%AA%E7%94%B1%E6%97%A5/slides/llm-ustc-ai-infra.pdf)         |
+| \_Kerman | 《2026 年 9 月的 (Coding) Agent》            | [Slides](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2026.09.19_%E8%BD%AF%E4%BB%B6%E8%87%AA%E7%94%B1%E6%97%A5/slides/coding-agent-2026-09.pdf)      |
+
 ### 2025 年 SFD
 
 2025 年 SFD 于 2025 年 9 月 20 日举办
