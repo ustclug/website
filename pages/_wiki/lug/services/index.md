@@ -15,7 +15,7 @@ permalink: /wiki/lug/services/
 
 ## A 级服务
 
-- [代码托管平台](gitlab.md)：[https://git.lug.ustc.edu.cn](https://git.lug.ustc.edu.cn/)
+- [中国科大 Git 服务](gitlab.md)：<https://git.ustc.edu.cn>
 - 回校访问服务
 
 ## B 级服务
@@ -25,6 +25,7 @@ permalink: /wiki/lug/services/
 - Linux 201 进阶教程：<https://201.ustclug.org>
 - [网络启动](pxe.md)：pxe.ustc.edu.cn
 - [图书馆透明计算系统](lib.md)
+- LUG GitLab：<https://git.lug.ustc.edu.cn>
 - VPN 在线申请系统（校内）
 - 轻量级网络加速服务（校内）
 - 开源镜像站（定时同步；rsync 访问；帮助页面）：<https://mirrors.ustc.edu.cn>
