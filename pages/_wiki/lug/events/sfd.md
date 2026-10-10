@@ -3,7 +3,7 @@
 
 # 软件自由日 Software Freedom Day
 
-[软件自由日](https://en.wikipedia.org/wiki/Software_Freedom_Day)（Software Freedom Day，SFD）是在 Digital Freedom Foundation 的主办下，由自由/开源软件爱好者自发筹集组织非盈利性活动，旨在为自由/开源软件爱好者提供一个信息交流平台、联合各社区举办各种自由/开源软件活动。
+[软件自由日](https://en.wikipedia.org/wiki/Software_Freedom_Day)（Software Freedom Day，SFD）是在 Digital Freedom Foundation 的主办下，由自由/开源软件爱好者自发筹集组织非营利性活动，旨在为自由/开源软件爱好者提供一个信息交流平台、联合各社区举办各种自由/开源软件活动。
 
 科大 LUG 已经成功的连续几届举办了合肥站的自由软件日活动。活动得到了龙芯梦兰、龙芯俱乐部、中标软件、中科红旗、中国开源软件推进联盟、深度科技等公司、开源社区，以及合肥工业大学，安徽大学等兄弟院校的大力支持。活动邀请过多个在国内开源软件领域非常有影响力的嘉宾，如科大网络中心的张焕杰老师，北京 GUG 主席李震宁先生，上海 LUG 主席姚欣宇，从事 MIPS 开发的刘世伟先生等，带来了各种内容的主题演讲。
 
@@ -12,6 +12,24 @@
 -->
 
 ## 活动记录
+
+### 2026 年 SFD
+
+2026 年 SFD 于 2026 年 9 月 19 日举办
+
+**时间：2026 年 9 月 19 日（周六）下午 2:00**
+
+**地点：中国科大西区 3C101**
+
+**回放（剪辑版，不含 \_Kerman 的分享）：[LUG FTP](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2026.09.19_%E8%BD%AF%E4%BB%B6%E8%87%AA%E7%94%B1%E6%97%A5/2026-09-19_%E8%BD%AF%E4%BB%B6%E8%87%AA%E7%94%B1%E6%97%A5_%E5%9B%9E%E6%94%BE_%E5%89%AA%E8%BE%91%E7%89%88.mp4)**
+
+| 讲者     | 主题                                         | 资料                                                                                                                                                   |
+| :------- | :------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Lylighte | 《OSS in Minecraft》                         | [Slides](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2026.09.19_%E8%BD%AF%E4%BB%B6%E8%87%AA%E7%94%B1%E6%97%A5/slides/oss-in-minecraft.pdf)          |
+| 吴维卿   | 《Linux 桌面上的 HDR：历史与现状》           | [Slides](https://rrtt217.github.io/HDR-Discussion/)                                                                                                    |
+| Hanako   | 《Mastodon 与 Matrix：当社交网络由社区运行》 | [Slides](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2026.09.19_%E8%BD%AF%E4%BB%B6%E8%87%AA%E7%94%B1%E6%97%A5/slides/nightcord-mastodon-matrix.pdf) |
+| 王永福   | 《llm.ustc.edu.cn 的 AI Infra 实践》         | [Slides](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2026.09.19_%E8%BD%AF%E4%BB%B6%E8%87%AA%E7%94%B1%E6%97%A5/slides/llm-ustc-ai-infra.pdf)         |
+| \_Kerman | 《2026 年 9 月的 (Coding) Agent》            | [Slides](https://ftp.lug.ustc.edu.cn/%E6%B4%BB%E5%8A%A8/2026.09.19_%E8%BD%AF%E4%BB%B6%E8%87%AA%E7%94%B1%E6%97%A5/slides/coding-agent-2026-09.pdf)      |
 
 ### 2025 年 SFD
 
@@ -229,7 +247,7 @@
 - [2012 自由软件日](/news/2012/09/sfd-2012-hefei-ustc/)
 - [2010 年自由软件日（合肥站）](/news/2010/09/2010-software-freedom-day/)
 
-您可以在[这里](/news/tag/sfd/) 找到更多历史活动记录。
+您可以在[这里](/tags/sfd/) 找到更多历史活动记录。
 
 ---
 

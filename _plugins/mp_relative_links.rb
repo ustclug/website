@@ -1,9 +1,17 @@
 module JekyllRelativeLinks
-  class Generator
+  module PreserveUserLinks
     def path_from_root(relative_path, url_base)
-      relative_path.sub!(%r{\A/}, '') unless relative_path.start_with? '/~'
-      absolute_path = File.expand_path(relative_path, url_base)
-      absolute_path.sub(%r{\A#{Regexp.escape(Dir.pwd)}/}, '')
+      # Keep legacy /~user URLs from expanding into local home directories.
+      return relative_path if relative_path.start_with? '/~'
+
+      super
     end
+  end
+
+  # jekyll-relative-links 0.9 moved path resolution out of Generator.
+  if const_defined?(:Resolver, false)
+    Resolver.singleton_class.prepend(PreserveUserLinks)
+  else
+    Generator.prepend(PreserveUserLinks)
   end
 end
