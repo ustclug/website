@@ -39,8 +39,8 @@ class ThumbnailSrcsetTest
 
     assert_equal(
       '<img class="photo" src="https://ftp.lug.ustc.edu.cn/photos/a.JPG" alt="A > B" ' \
-      'srcset="https://ftp.lug.ustc.edu.cn/photos/a.JPG@640w 640w, ' \
-      'https://ftp.lug.ustc.edu.cn/photos/a.JPG@1024w 1024w">',
+      'srcset="https://ftp.lug.ustc.edu.cn/photos/a.JPG@640w.JPG 640w, ' \
+      'https://ftp.lug.ustc.edu.cn/photos/a.JPG@1024w.JPG 1024w">',
       Jekyll::ThumbnailSrcset.rewrite(input, CONFIG)
     )
   end
@@ -49,7 +49,7 @@ class ThumbnailSrcsetTest
     input = '<img src="http://ftp.lug.ustc.edu.cn/a.png?download=1#preview" />'
     output = Jekyll::ThumbnailSrcset.rewrite(input, CONFIG)
 
-    assert_includes output, 'http://ftp.lug.ustc.edu.cn/a.png@640w?download=1#preview 640w'
+    assert_includes output, 'http://ftp.lug.ustc.edu.cn/a.png@640w.png?download=1#preview 640w'
     assert output.end_with?(' />')
   end
 
