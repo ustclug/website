@@ -48,8 +48,9 @@ module Jekyll
     end
 
     def thumbnail_url(src, width)
-      path, suffix = src.split(/(?=[?#])/, 2)
-      "#{path}@#{width}w#{suffix}"
+      path, trailing = src.split(/(?=[?#])/, 2)
+      extension = File.extname(path)
+      "#{path}@#{width}w#{extension}#{trailing}"
     end
   end
 end
