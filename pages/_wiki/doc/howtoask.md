@@ -1,5 +1,7 @@
 ---
-redirect_from: /wiki/user/taoky/howtoask/
+redirect_from:
+  - /wiki/user/taoky/howtoask/
+  - /wiki/doc/howtoask/>/
 ---
 
 # 提问指南
