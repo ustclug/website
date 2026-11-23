@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     env:
       LSI: "true"
     steps:
@@ -50,6 +50,10 @@ jobs:
         run: |
           bundle config set --local path vendor/bundle
           bundle config set without 'development'
+          # GSL's old-style function declarations need the pre-C23 semantics.
+          # Ruby's headers also need stdbool.h when extensions use an older C standard.
+          bundle config set --local build.gsl '--with-cflags=-std=gnu17 --with-cppflags=-includestdbool.h'
+          bundle config set --local build.liquid-c '--with-cppflags=-includestdbool.h'
           bundle install --jobs=4 --retry=3
           bundle clean
 

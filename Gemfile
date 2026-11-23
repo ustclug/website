@@ -8,7 +8,8 @@ if ENV['LSI'] == 'true'
   gem 'classifier-reborn'
 
   if Gem::Version.new(RUBY_VERSION) >= Gem::Version.new('3.0.0')
-    gem 'gsl', git: 'https://github.com/SciRuby/rb-gsl.git', ref: '103a3e1'
+    # Ruby function signatures and GSL 2.8 compatibility: SciRuby/rb-gsl#76.
+    gem 'gsl', git: 'https://github.com/SciRuby/rb-gsl.git', ref: '22bbb646d918aa80ee9e6b154d2ccd6538fe0ed8'
   else
     gem 'gsl'
   end
