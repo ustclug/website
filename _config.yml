@@ -270,6 +270,13 @@ relative_links:
   collections: true
 
 
+# yatex-powered thumbnails
+thumbnail_srcset:
+  host: ftp.lug.ustc.edu.cn
+  widths: [640, 800, 1024, 1152, 1200, 1366, 1440, 1536, 1920]
+  formats: [jpg, jpeg, png, webp]
+
+
 # Defaults
 defaults:
   # _posts
